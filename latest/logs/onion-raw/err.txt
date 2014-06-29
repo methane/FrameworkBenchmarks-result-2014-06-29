@@ -1,0 +1,11 @@
+restart: Unknown instance: 
+zmalloc: Out of memory trying to allocate 800000040 bytes
+-bash: line 20: 11087 Aborted                 (core dumped) wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c $c --timeout $c -t "$(($c>4?4:$c))" http://127.0.0.1:8080/fortune -s ~/pipeline.lua --
+zmalloc: Out of memory trying to allocate 800000040 bytes
+-bash: line 20: 11091 Aborted                 (core dumped) wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c $c --timeout $c -t "$(($c>4?4:$c))" http://127.0.0.1:8080/fortune -s ~/pipeline.lua --
+zmalloc: Out of memory trying to allocate 800000040 bytes
+-bash: line 20: 11094 Aborted                 (core dumped) wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c $c --timeout $c -t "$(($c>4?4:$c))" http://127.0.0.1:8080/fortune -s ~/pipeline.lua --
+zmalloc: Out of memory trying to allocate 800000040 bytes
+-bash: line 20: 11097 Aborted                 (core dumped) wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c $c --timeout $c -t "$(($c>4?4:$c))" http://127.0.0.1:8080/fortune -s ~/pipeline.lua --
+zmalloc: Out of memory trying to allocate 800000040 bytes
+-bash: line 20: 11100 Aborted                 (core dumped) wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c $c --timeout $c -t "$(($c>4?4:$c))" http://127.0.0.1:8080/fortune -s ~/pipeline.lua --

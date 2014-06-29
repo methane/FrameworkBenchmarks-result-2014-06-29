@@ -1,0 +1,111 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+0 packages can be updated.
+0 updates are security updates.
+
+
+
+---------------------------------------------------------
+ Running Primer urweb-mysql
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/queries/2
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/queries/2
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.55ms  243.93us   6.36ms   94.65%
+    Req/Sec   682.27     93.16     1.22k    63.15%
+  25717 requests in 5.00s, 4.62MB read
+Requests/sec:   5143.55
+Transfer/sec:      0.92MB
+
+---------------------------------------------------------
+ Running Warmup urweb-mysql
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/queries/2
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/queries/2
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    50.96ms    2.02ms  66.56ms   85.47%
+    Req/Sec     1.26k    95.03     1.49k    61.16%
+  75087 requests in 15.00s, 13.50MB read
+Requests/sec:   5004.63
+Transfer/sec:      0.90MB
+
+---------------------------------------------------------
+ Queries: 1 for urweb-mysql
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/queries/1
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/queries/1
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    31.29ms    1.39ms  42.15ms   92.60%
+    Req/Sec     2.06k    95.30     2.27k    86.49%
+  122722 requests in 15.00s, 18.35MB read
+Requests/sec:   8184.03
+Transfer/sec:      1.22MB
+
+---------------------------------------------------------
+ Queries: 5 for urweb-mysql
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/queries/5
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/queries/5
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   105.27ms    3.28ms 126.79ms   83.83%
+    Req/Sec   609.19     24.19   671.00     80.29%
+  36506 requests in 15.00s, 9.92MB read
+Requests/sec:   2433.12
+Transfer/sec:    676.90KB
+
+---------------------------------------------------------
+ Queries: 10 for urweb-mysql
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/queries/10
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/queries/10
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   194.80ms    5.99ms 236.27ms   90.54%
+    Req/Sec   328.58     12.82   348.00     91.22%
+  19725 requests in 15.05s, 8.35MB read
+Requests/sec:   1310.78
+Transfer/sec:    568.02KB
+
+---------------------------------------------------------
+ Queries: 15 for urweb-mysql
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/queries/15
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/queries/15
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   284.08ms    6.58ms 319.49ms   82.86%
+    Req/Sec   224.59      5.34   242.00     72.28%
+  13517 requests in 15.03s, 7.77MB read
+Requests/sec:    899.04
+Transfer/sec:    529.08KB
+
+---------------------------------------------------------
+ Queries: 20 for urweb-mysql
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/queries/20
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/queries/20
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   372.00ms    4.27ms 397.89ms   79.46%
+    Req/Sec   171.29     25.47   220.00     74.39%
+  10310 requests in 15.08s, 7.49MB read
+Requests/sec:    683.54
+Transfer/sec:    508.28KB

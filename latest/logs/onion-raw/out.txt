@@ -1,0 +1,235 @@
+test.os.lower() = linux  test.database_os.lower() = linux
+self.results['frameworks'] != None: True
+test.name: onion-raw
+self.results['completed']: {}
+
+=====================================================
+  Beginning onion-raw
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Starting onion-raw
+-----------------------------------------------------
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Sun Jun 29 00:23:47 UTC 2014
+
+  System load:  0.6                Processes:           137
+  Usage of /:   67.9% of 19.55GB   Users logged in:     0
+  Memory usage: 24%                IP address for eth0: 10.227.136.45
+  Swap usage:   0%
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+mysql start/running, process 10250
+ * Restarting PostgreSQL 9.3 database server
+   ...done.
+cc -O2 -Ionion/src/   -c -o hello.o hello.c
+(cd onion/build/tools/otemplate/; make)
+make[1]: Entering directory `/home/ubuntu/FrameworkBenchmarks/onion/onion/build/tools/otemplate'
+make[2]: Entering directory `/home/ubuntu/FrameworkBenchmarks/installs/onion/build'
+make[3]: Entering directory `/home/ubuntu/FrameworkBenchmarks/installs/onion/build'
+make[3]: Leaving directory `/home/ubuntu/FrameworkBenchmarks/installs/onion/build'
+[ 90%] Built target otemplate
+make[3]: Entering directory `/home/ubuntu/FrameworkBenchmarks/installs/onion/build'
+make[3]: Leaving directory `/home/ubuntu/FrameworkBenchmarks/installs/onion/build'
+[100%] Built target i18n
+make[2]: Leaving directory `/home/ubuntu/FrameworkBenchmarks/installs/onion/build'
+make[1]: Leaving directory `/home/ubuntu/FrameworkBenchmarks/onion/onion/build/tools/otemplate'
+onion/build/tools/otemplate/otemplate base.html base_html.c
+cc -O2 -Ionion/src/   -c -o base_html.o base_html.c
+onion/build/tools/otemplate/otemplate fortunes.html fortunes_html.c
+cc -O2 -Ionion/src/   -c -o fortunes_html.o fortunes_html.c
+cc hello.o base_html.o fortunes_html.o libonion_static.a -o hello -lpthread `mysql_config --libs` `pkg-config json --libs` -lgnutls -lgcrypt -lrt
+
+-----------------------------------------------------
+  VERIFYING DB (/db)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Content-Length: 41
+Content-Type: application/json
+Date: Sun, 29 Jun 2014 00:26:36 UTC
+Server: libonion v0.7 - coralbits.com
+
+{ "id": 9384, "randomNumber": 527910075 }
+
+VALIDATING DB ... PASS
+
+
+-----------------------------------------------------
+  VERIFYING QUERY (/queries?queries=2)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Content-Length: 89
+Content-Type: application/json
+Date: Sun, 29 Jun 2014 00:26:36 UTC
+Server: libonion v0.7 - coralbits.com
+
+[ { "id": 2778, "randomNumber": -421488825 }, { "id": 6916, "randomNumber": 499448189 } ]
+
+/queries?queries=2 - PASS
+
+-----------------------------------------------------
+
+HTTP/1.1 200 OK
+Content-Length: 46
+Content-Type: application/json
+Date: Sun, 29 Jun 2014 00:26:36 UTC
+Server: libonion v0.7 - coralbits.com
+
+[ { "id": 5387, "randomNumber": 1440625717 } ]
+
+/queries?queries=0 - PASS
+
+-----------------------------------------------------
+
+HTTP/1.1 200 OK
+Content-Length: 43
+Content-Type: application/json
+Date: Sun, 29 Jun 2014 00:26:36 UTC
+Server: libonion v0.7 - coralbits.com
+
+[ { "id": 6650, "randomNumber": 3553315 } ]
+
+/queries?queries=foo - PASS
+
+-----------------------------------------------------
+
+HTTP/1.1 200 OK
+Content-Length: 21919
+Content-Type: application/json
+Date: Sun, 29 Jun 2014 00:26:36 UTC
+Server: libonion v0.7 - coralbits.com
+
+[ { "id": 2363, "randomNumber": 247916817 }, { "id": 28, "randomNumber": -1873823345 }, { "id": 8691, "randomNumber": -1134311580 }, { "id": 60, "randomNumber": 1735446600 }, { "id": 7764, "randomNumber": 650585855 }, { "id": 3927, "randomNumber": 1797269682 }, { "id": 541, "randomNumber": 1540719443 }, { "id": 3427, "randomNumber": 903749336 }, { "id": 9173, "randomNumber": -1193119525 }, { "id": 5737, "randomNumber": -154986702 }, { "id": 5212, "randomNumber": 227521904 }, { "id": 5369, "randomNumber": 1759756403 }, { "id": 2568, "randomNumber": 1726053415 }, { "id": 6430, "randomNumber": -2069700331 }, { "id": 5783, "randomNumber": -1734655046 }, { "id": 1531, "randomNumber": -1269487520 }, { "id": 2863, "randomNumber": 1780155253 }, { "id": 5124, "randomNumber": 952064258 }, { "id": 4068, "randomNumber": 2026950878 }, { "id": 3136, "randomNumber": -756872745 }, { "id": 3930, "randomNumber": -1127586097 }, { "id": 9803, "randomNumber": 1049784236 }, { "id": 4023, "randomNumber": 2022012482 }, { "id": 3059, "randomNumber": -989738653 }, { "id": 3070, "randomNumber": -1295290145 }, { "id": 8168, "randomNumber": -745011667 }, { "id": 1394, "randomNumber": 142443165 }, { "id": 8457, "randomNumber": -1822254612 }, { "id": 5012, "randomNumber": -843452929 }, { "id": 8043, "randomNumber": 1732899461 }, { "id": 6230, "randomNumber": 1258087306 }, { "id": 7374, "randomNumber": 1133678043 }, { "id": 4422, "randomNumber": 244345256 }, { "id": 4920, "randomNumber": -183668049 }, { "id": 3785, "randomNumber": -1418063816 }, { "id": 8538, "randomNumber": -928088418 }, { "id": 5199, "randomNumber": 1496518368 }, { "id": 4325, "randomNumber": -1016544491 }, { "id": 8316, "randomNumber": 2061338836 }, { "id": 4371, "randomNumber": -370696758 }, { "id": 6414, "randomNumber": -1855900839 }, { "id": 3527, "randomNumber": 299209474 }, { "id": 6092, "randomNumber": 471391652 }, { "id": 8981, "randomNumber": -1209600281 }, { "id": 9957, "randomNumber": -63982674 }, { "id": 1874, "randomNumber": 2097103033 }, { "id": 6863, "randomNumber": -554917 }, { "id": 9171, "randomNumber": 447195489 }, { "id": 6997, "randomNumber": 550860995 }, { "id": 7282, "randomNumber": 804196290 }, { "id": 2306, "randomNumber": -1747149359 }, { "id": 926, "randomNumber": -2086726194 }, { "id": 7085, "randomNumber": 486162004 }, { "id": 6328, "randomNumber": -1369796025 }, { "id": 337, "randomNumber": 1946060464 }, { "id": 6506, "randomNumber": -1137519591 }, { "id": 847, "randomNumber": -1024723285 }, { "id": 1730, "randomNumber": -514215610 }, { "id": 1314, "randomNumber": 1109110130 }, { "id": 5858, "randomNumber": -1967458412 }, { "id": 6125, "randomNumber": -1592956198 }, { "id": 3896, "randomNumber": 998574040 }, { "id": 9583, "randomNumber": 2005818367 }, { "id": 546, "randomNumber": -536343930 }, { "id": 8815, "randomNumber": 1653514190 }, { "id": 3368, "randomNumber": 1535765969 }, { "id": 5435, "randomNumber": -2031325020 }, { "id": 365, "randomNumber": 640394034 }, { "id": 4044, "randomNumber": -485876568 }, { "id": 3751, "randomNumber": 931786478 }, { "id": 1088, "randomNumber": 208737476 }, { "id": 6809, "randomNumber": 984818609 }, { "id": 7277, "randomNumber": -945746886 }, { "id": 7179, "randomNumber": -773484118 }, { "id": 5789, "randomNumber": -1115895209 }, { "id": 3585, "randomNumber": -2048547250 }, { "id": 5404, "randomNumber": 730401723 }, { "id": 2652, "randomNumber": -1593719720 }, { "id": 2755, "randomNumber": -1107157648 }, { "id": 2400, "randomNumber": -999386803 }, { "id": 9933, "randomNumber": 768682142 }, { "id": 5061, "randomNumber": 1874302761 }, { "id": 9677, "randomNumber": -613119400 }, { "id": 3369, "randomNumber": -980631065 }, { "id": 7740, "randomNumber": -800096184 }, { "id": 13, "randomNumber": 811410441 }, { "id": 6227, "randomNumber": -752668760 }, { "id": 8587, "randomNumber": 64101986 }, { "id": 8095, "randomNumber": 2132152878 }, { "id": 7540, "randomNumber": -733965903 }, { "id": 796, "randomNumber": 1943658162 }, { "id": 571, "randomNumber": -829120306 }, { "id": 1435, "randomNumber": 1990727699 }, { "id": 379, "randomNumber": -1839848615 }, { "id": 7468, "randomNumber": 1445135727 }, { "id": 6602, "randomNumber": -562610449 }, { "id": 98, "randomNumber": 727682677 }, { "id": 2903, "randomNumber": 1636822767 }, { "id": 3318, "randomNumber": -1171339751 }, { "id": 493, "randomNumber": 217524876 }, { "id": 6653, "randomNumber": 2138209214 }, { "id": 757, "randomNumber": 205463671 }, { "id": 7302, "randomNumber": -427495719 }, { "id": 281, "randomNumber": 1869630420 }, { "id": 4287, "randomNumber": -1211730899 }, { "id": 9442, "randomNumber": 105080563 }, { "id": 3866, "randomNumber": -472484746 }, { "id": 9690, "randomNumber": -670868493 }, { "id": 8445, "randomNumber": -2028524609 }, { "id": 6620, "randomNumber": -1572996041 }, { "id": 8441, "randomNumber": 651139359 }, { "id": 4730, "randomNumber": -505307456 }, { "id": 8032, "randomNumber": -884590002 }, { "id": 8118, "randomNumber": 1437226649 }, { "id": 8098, "randomNumber": 2099695574 }, { "id": 5772, "randomNumber": 1487232944 }, { "id": 4482, "randomNumber": -1369307134 }, { "id": 676, "randomNumber": 345500211 }, { "id": 710, "randomNumber": 1433019693 }, { "id": 8928, "randomNumber": -1395914815 }, { "id": 4568, "randomNumber": -743048000 }, { "id": 7857, "randomNumber": -996940420 }, { "id": 9498, "randomNumber": 1975170498 }, { "id": 2354, "randomNumber": -78310601 }, { "id": 4587, "randomNumber": -326693065 }, { "id": 6966, "randomNumber": -734200712 }, { "id": 5307, "randomNumber": -267962055 }, { "id": 4684, "randomNumber": 403600344 }, { "id": 6220, "randomNumber": -830918734 }, { "id": 8625, "randomNumber": 1910922565 }, { "id": 1529, "randomNumber": 1134692376 }, { "id": 2872, "randomNumber": -250722915 }, { "id": 5733, "randomNumber": 769473911 }, { "id": 8830, "randomNumber": 1670744341 }, { "id": 9504, "randomNumber": -198391992 }, { "id": 20, "randomNumber": -1652838118 }, { "id": 8271, "randomNumber": -1920275604 }, { "id": 3369, "randomNumber": -980631065 }, { "id": 9709, "randomNumber": 1148076417 }, { "id": 6716, "randomNumber": 1769089494 }, { "id": 6341, "randomNumber": 1730070551 }, { "id": 8150, "randomNumber": -1075575079 }, { "id": 7797, "randomNumber": 1217697529 }, { "id": 724, "randomNumber": -543817501 }, { "id": 2619, "randomNumber": -955703406 }, { "id": 2246, "randomNumber": 398332943 }, { "id": 2847, "randomNumber": -190146979 }, { "id": 3452, "randomNumber": 878514811 }, { "id": 2922, "randomNumber": -787032450 }, { "id": 3556, "randomNumber": -1193835917 }, { "id": 2380, "randomNumber": -255130898 }, { "id": 7489, "randomNumber": -1161685576 }, { "id": 7765, "randomNumber": 729576739 }, { "id": 8229, "randomNumber": -66071857 }, { "id": 9842, "randomNumber": 976341847 }, { "id": 2351, "randomNumber": 2069712598 }, { "id": 5194, "randomNumber": 436285894 }, { "id": 1501, "randomNumber": -1163760277 }, { "id": 7035, "randomNumber": 1324536153 }, { "id": 7765, "randomNumber": 729576739 }, { "id": 125, "randomNumber": 1269803342 }, { "id": 4915, "randomNumber": 1859207691 }, { "id": 6988, "randomNumber": 745920909 }, { "id": 5857, "randomNumber": 309727166 }, { "id": 3744, "randomNumber": 1802994210 }, { "id": 6492, "randomNumber": -1624072950 }, { "id": 2228, "randomNumber": -1044675824 }, { "id": 8366, "randomNumber": 1504864451 }, { "id": 9860, "randomNumber": 1841084977 }, { "id": 1937, "randomNumber": 1076649476 }, { "id": 1433, "randomNumber": -1587971721 }, { "id": 2552, "randomNumber": 1086880499 }, { "id": 6438, "randomNumber": -1870551279 }, { "id": 9229, "randomNumber": -941846227 }, { "id": 3276, "randomNumber": -1354626362 }, { "id": 5408, "randomNumber": 1823734164 }, { "id": 1475, "randomNumber": 1909585282 }, { "id": 6122, "randomNumber": -812186059 }, { "id": 8859, "randomNumber": -1967724344 }, { "id": 4396, "randomNumber": -1479044181 }, { "id": 6030, "randomNumber": -1753138014 }, { "id": 1238, "randomNumber": -1374482580 }, { "id": 8236, "randomNumber": 24322900 }, { "id": 3794, "randomNumber": -521693793 }, { "id": 5819, "randomNumber": -1550459963 }, { "id": 4429, "randomNumber": -1325648569 }, { "id": 6144, "randomNumber": 332375638 }, { "id": 1012, "randomNumber": -994193726 }, { "id": 5929, "randomNumber": 1177354730 }, { "id": 9530, "randomNumber": 236883885 }, { "id": 8777, "randomNumber": -1720932863 }, { "id": 2405, "randomNumber": 1180357597 }, { "id": 4444, "randomNumber": -114381433 }, { "id": 5764, "randomNumber": 557739725 }, { "id": 4614, "randomNumber": 445492045 }, { "id": 4539, "randomNumber": 1593496230 }, { "id": 8607, "randomNumber": 900214706 }, { "id": 6841, "randomNumber": -1448105926 }, { "id": 2905, "randomNumber": -1384304625 }, { "id": 4819, "randomNumber": -33082002 }, { "id": 5129, "randomNumber": 566388465 }, { "id": 689, "randomNumber": 2076476721 }, { "id": 7370, "randomNumber": -2030905441 }, { "id": 7918, "randomNumber": -2119993139 }, { "id": 9918, "randomNumber": -2061596824 }, { "id": 6997, "randomNumber": 550860995 }, { "id": 3325, "randomNumber": -1670135131 }, { "id": 7744, "randomNumber": 729749874 }, { "id": 9471, "randomNumber": 242814473 }, { "id": 2184, "randomNumber": 1172888935 }, { "id": 8491, "randomNumber": 1570125708 }, { "id": 5500, "randomNumber": 289915703 }, { "id": 9773, "randomNumber": 1662524615 }, { "id": 6726, "randomNumber": -1249758435 }, { "id": 5645, "randomNumber": -952913837 }, { "id": 5591, "randomNumber": -1290828473 }, { "id": 7506, "randomNumber": -1459146848 }, { "id": 8140, "randomNumber": -1811779454 }, { "id": 2955, "randomNumber": 1917885638 }, { "id": 9787, "randomNumber": 1639445844 }, { "id": 7670, "randomNumber": 238521108 }, { "id": 8083, "randomNumber": 1260070113 }, { "id": 8543, "randomNumber": 923696214 }, { "id": 8465, "randomNumber": 763042186 }, { "id": 198, "randomNumber": 326209011 }, { "id": 9508, "randomNumber": -276732987 }, { "id": 9356, "randomNumber": 1390028186 }, { "id": 8805, "randomNumber": 1385610189 }, { "id": 6349, "randomNumber": -243756648 }, { "id": 8612, "randomNumber": -1325553386 }, { "id": 3623, "randomNumber": -317182477 }, { "id": 7829, "randomNumber": -967492935 }, { "id": 9300, "randomNumber": -773778105 }, { "id": 7344, "randomNumber": 1740334776 }, { "id": 5747, "randomNumber": 330634512 }, { "id": 5569, "randomNumber": 1941730050 }, { "id": 4341, "randomNumber": 84195761 }, { "id": 5423, "randomNumber": 262023546 }, { "id": 3312, "randomNumber": -1608338095 }, { "id": 3811, "randomNumber": -47909129 }, { "id": 7606, "randomNumber": 396283847 }, { "id": 1802, "randomNumber": -451441944 }, { "id": 5662, "randomNumber": -468108901 }, { "id": 3731, "randomNumber": -824906850 }, { "id": 4879, "randomNumber": 529980486 }, { "id": 1306, "randomNumber": 1645435300 }, { "id": 9321, "randomNumber": -1132676445 }, { "id": 8737, "randomNumber": 313624302 }, { "id": 9445, "randomNumber": 239349766 }, { "id": 8627, "randomNumber": 686535845 }, { "id": 8523, "randomNumber": 1067479320 }, { "id": 3466, "randomNumber": -932402446 }, { "id": 6709, "randomNumber": -375187781 }, { "id": 3417, "randomNumber": 811300885 }, { "id": 8283, "randomNumber": -2128374202 }, { "id": 3259, "randomNumber": 1219230979 }, { "id": 2925, "randomNumber": -2058190044 }, { "id": 7638, "randomNumber": 582530106 }, { "id": 2063, "randomNumber": 136904468 }, { "id": 5625, "randomNumber": 1121157341 }, { "id": 2601, "randomNumber": 707660741 }, { "id": 2037, "randomNumber": -1188084634 }, { "id": 3453, "randomNumber": 1425014804 }, { "id": 1900, "randomNumber": 384971280 }, { "id": 9380, "randomNumber": 1533921692 }, { "id": 5551, "randomNumber": 1228725531 }, { "id": 7469, "randomNumber": -1740380866 }, { "id": 72, "randomNumber": 733425751 }, { "id": 974, "randomNumber": 1745980688 }, { "id": 7132, "randomNumber": -1799168460 }, { "id": 3882, "randomNumber": -435486100 }, { "id": 4931, "randomNumber": 55440204 }, { "id": 8934, "randomNumber": -479891950 }, { "id": 5895, "randomNumber": 2028147414 }, { "id": 8661, "randomNumber": -1582149759 }, { "id": 164, "randomNumber": 798510834 }, { "id": 7200, "randomNumber": -116123128 }, { "id": 7982, "randomNumber": -2031820201 }, { "id": 8900, "randomNumber": 1629607201 }, { "id": 2997, "randomNumber": 725140718 }, { "id": 2960, "randomNumber": 952674975 }, { "id": 3774, "randomNumber": -347392722 }, { "id": 2814, "randomNumber": -1817403962 }, { "id": 9669, "randomNumber": 394571993 }, { "id": 7191, "randomNumber": -450130231 }, { "id": 1096, "randomNumber": 514170008 }, { "id": 2927, "randomNumber": 206152233 }, { "id": 6467, "randomNumber": -642396912 }, { "id": 5085, "randomNumber": -1546094479 }, { "id": 1341, "randomNumber": 729276439 }, { "id": 2091, "randomNumber": -831633173 }, { "id": 7685, "randomNumber": 351020981 }, { "id": 3377, "randomNumber": -306362179 }, { "id": 5543, "randomNumber": 1218684414 }, { "id": 5937, "randomNumber": -1018898980 }, { "id": 9108, "randomNumber": 974648947 }, { "id": 7446, "randomNumber": -396279302 }, { "id": 9757, "randomNumber": -1727101889 }, { "id": 9180, "randomNumber": 1615378465 }, { "id": 8419, "randomNumber": 1639651659 }, { "id": 6888, "randomNumber": 848800102 }, { "id": 9413, "randomNumber": 2032448520 }, { "id": 3349, "randomNumber": -852082430 }, { "id": 2173, "randomNumber": 1159395730 }, { "id": 1660, "randomNumber": -1987212831 }, { "id": 2010, "randomNumber": 165014112 }, { "id": 2337, "randomNumber": -1435039118 }, { "id": 5211, "randomNumber": 1727473657 }, { "id": 6343, "randomNumber": -896742762 }, { "id": 7588, "randomNumber": 333323290 }, { "id": 8207, "randomNumber": -1909322112 }, { "id": 9302, "randomNumber": 1976830235 }, { "id": 7714, "randomNumber": 816410443 }, { "id": 7373, "randomNumber": -1592337035 }, { "id": 5322, "randomNumber": 2112973745 }, { "id": 1256, "randomNumber": -1017815095 }, { "id": 4820, "randomNumber": -453804366 }, { "id": 4600, "randomNumber": 1069621170 }, { "id": 7722, "randomNumber": -1196504514 }, { "id": 9905, "randomNumber": -1452175259 }, { "id": 5940, "randomNumber": -2055566160 }, { "id": 9812, "randomNumber": 922290429 }, { "id": 3941, "randomNumber": 1027109309 }, { "id": 5668, "randomNumber": -1351072139 }, { "id": 1706, "randomNumber": -302329214 }, { "id": 6229, "randomNumber": 1330328832 }, { "id": 1128, "randomNumber": -589915816 }, { "id": 9151, "randomNumber": 1879405981 }, { "id": 5985, "randomNumber": 995607416 }, { "id": 6659, "randomNumber": 1613319751 }, { "id": 3921, "randomNumber": -1304967615 }, { "id": 9225, "randomNumber": -895712228 }, { "id": 2423, "randomNumber": -907127245 }, { "id": 7270, "randomNumber": -860447322 }, { "id": 1397, "randomNumber": 1607335152 }, { "id": 4082, "randomNumber": -1852178498 }, { "id": 5631, "randomNumber": -750202458 }, { "id": 85, "randomNumber": 65210342 }, { "id": 9293, "randomNumber": -341269501 }, { "id": 1973, "randomNumber": 83680759 }, { "id": 7673, "randomNumber": 114306512 }, { "id": 3851, "randomNumber": -1857705869 }, { "id": 7626, "randomNumber": -1501713861 }, { "id": 5386, "randomNumber": -1923734204 }, { "id": 1223, "randomNumber": -382971011 }, { "id": 9300, "randomNumber": -773778105 }, { "id": 6641, "randomNumber": 1426762063 }, { "id": 6043, "randomNumber": 2069865126 }, { "id": 3899, "randomNumber": 447359289 }, { "id": 714, "randomNumber": 1335462380 }, { "id": 2299, "randomNumber": 214313333 }, { "id": 6191, "randomNumber": 1661942752 }, { "id": 525, "randomNumber": 1577046601 }, { "id": 2591, "randomNumber": 631943648 }, { "id": 8210, "randomNumber": -1751916642 }, { "id": 8582, "randomNumber": 1855611054 }, { "id": 8820, "randomNumber": 732355760 }, { "id": 9337, "randomNumber": 1146262235 }, { "id": 7733, "randomNumber": -333110575 }, { "id": 1156, "randomNumber": -771844097 }, { "id": 5995, "randomNumber": -1965149822 }, { "id": 8005, "randomNumber": 711780403 }, { "id": 380, "randomNumber": -1878300620 }, { "id": 4770, "randomNumber": 155262304 }, { "id": 5274, "randomNumber": 635442548 }, { "id": 1777, "randomNumber": 1673302941 }, { "id": 8851, "randomNumber": 1569386665 }, { "id": 7256, "randomNumber": 1895316827 }, { "id": 1861, "randomNumber": -57240595 }, { "id": 8143, "randomNumber": -1861044897 }, { "id": 5580, "randomNumber": 1529919434 }, { "id": 5885, "randomNumber": 1122556697 }, { "id": 1994, "randomNumber": 775106662 }, { "id": 3206, "randomNumber": -1358323846 }, { "id": 7622, "randomNumber": -615187819 }, { "id": 9568, "randomNumber": -1294415729 }, { "id": 2505, "randomNumber": -1249680264 }, { "id": 614, "randomNumber": -1191185475 }, { "id": 1962, "randomNumber": 127902162 }, { "id": 2755, "randomNumber": -1107157648 }, { "id": 1327, "randomNumber": 68992519 }, { "id": 4260, "randomNumber": 1373304469 }, { "id": 8945, "randomNumber": -894269891 }, { "id": 8203, "randomNumber": 334892188 }, { "id": 3203, "randomNumber": -2003438446 }, { "id": 3507, "randomNumber": -1620922852 }, { "id": 6785, "randomNumber": 1236160442 }, { "id": 2022, "randomNumber": 640673481 }, { "id": 2843, "randomNumber": -686639916 }, { "id": 869, "randomNumber": 125268455 }, { "id": 9529, "randomNumber": -571966539 }, { "id": 5190, "randomNumber": 1797915805 }, { "id": 8873, "randomNumber": 51188996 }, { "id": 9909, "randomNumber": -672435763 }, { "id": 9959, "randomNumber": 1109903261 }, { "id": 499, "randomNumber": -291361697 }, { "id": 8037, "randomNumber": 1732403665 }, { "id": 8809, "randomNumber": -479615817 }, { "id": 7754, "randomNumber": 2093158227 }, { "id": 6249, "randomNumber": -671687706 }, { "id": 3304, "randomNumber": 188367678 }, { "id": 3334, "randomNumber": 2079568177 }, { "id": 2134, "randomNumber": -863159198 }, { "id": 1649, "randomNumber": 1884078165 }, { "id": 2891, "randomNumber": -312748801 }, { "id": 9755, "randomNumber": -80361335 }, { "id": 7568, "randomNumber": -288835760 }, { "id": 1747, "randomNumber": 1253110676 }, { "id": 369, "randomNumber": 740102129 }, { "id": 9530, "randomNumber": 236883885 }, { "id": 4501, "randomNumber": -747611636 }, { "id": 8047, "randomNumber": -306220901 }, { "id": 3789, "randomNumber": -554473756 }, { "id": 9798, "randomNumber": -1069871681 }, { "id": 6250, "randomNumber": 711397494 }, { "id": 6991, "randomNumber": 348417451 }, { "id": 3304, "randomNumber": 188367678 }, { "id": 3034, "randomNumber": -703483363 }, { "id": 5364, "randomNumber": 1813914027 }, { "id": 2498, "randomNumber": 1272373282 }, { "id": 254, "randomNumber": 142148399 }, { "id": 4893, "randomNumber": 303188417 }, { "id": 7687, "randomNumber": -588615727 }, { "id": 9126, "randomNumber": -919382808 }, { "id": 1153, "randomNumber": 1192576440 }, { "id": 3997, "randomNumber": -1423856964 }, { "id": 5976, "randomNumber": -1647884824 }, { "id": 9189, "randomNumber": 819194087 }, { "id": 9158, "randomNumber": -1161263775 }, { "id": 3730, "randomNumber": -1080605382 }, { "id": 5437, "randomNumber": 412290842 }, { "id": 2461, "randomNumber": 547782485 }, { "id": 3415, "randomNumber": -2105577218 }, { "id": 3922, "randomNumber": 72272780 }, { "id": 461, "randomNumber": -1502108962 }, { "id": 6305, "randomNumber": 1119764115 }, { "id": 29, "randomNumber": -1960594754 }, { "id": 8028, "randomNumber": 1054874854 }, { "id": 8051, "randomNumber": -1080781939 }, { "id": 6749, "randomNumber": 1828341077 }, { "id": 7557, "randomNumber": 238466659 }, { "id": 8903, "randomNumber": 193032170 }, { "id": 4795, "randomNumber": -1856935862 }, { "id": 7698, "randomNumber": 1927604362 }, { "id": 8700, "randomNumber": 624480130 }, { "id": 1044, "randomNumber": -1383492144 }, { "id": 1040, "randomNumber": -786809124 }, { "id": 2003, "randomNumber": -1263285223 }, { "id": 429, "randomNumber": -1692202253 }, { "id": 6404, "randomNumber": 176266952 }, { "id": 4501, "randomNumber": -747611636 }, { "id": 682, "randomNumber": -533224576 }, { "id": 7648, "randomNumber": -661066957 }, { "id": 8539, "randomNumber": 654052180 }, { "id": 6160, "randomNumber": 1438321881 }, { "id": 5152, "randomNumber": -1185348317 }, { "id": 2536, "randomNumber": -1816304135 }, { "id": 2135, "randomNumber": 789135256 }, { "id": 4340, "randomNumber": -1737688777 }, { "id": 1693, "randomNumber": 1342884997 }, { "id": 2216, "randomNumber": 1193113244 }, { "id": 6128, "randomNumber": 1195149246 }, { "id": 505, "randomNumber": 432316698 }, { "id": 5630, "randomNumber": -245368037 }, { "id": 50, "randomNumber": -878718131 }, { "id": 965, "randomNumber": -1381769607 }, { "id": 8286, "randomNumber": 33391062 }, { "id": 6430, "randomNumber": -2069700331 }, { "id": 5344, "randomNumber": -472394382 }, { "id": 6336, "randomNumber": -1524801629 }, { "id": 3178, "randomNumber": -1921773630 }, { "id": 2901, "randomNumber": -582508514 }, { "id": 5239, "randomNumber": 804924300 }, { "id": 7972, "randomNumber": 1285046280 }, { "id": 6950, "randomNumber": -899183713 }, { "id": 290, "randomNumber": -343160203 }, { "id": 5368, "randomNumber": -1572857174 }, { "id": 7989, "randomNumber": -1497000870 }, { "id": 2293, "randomNumber": 617444952 }, { "id": 5796, "randomNumber": 1866026607 }, { "id": 744, "randomNumber": -295241197 }, { "id": 3145, "randomNumber": 570568411 }, { "id": 2830, "randomNumber": -1075755665 }, { "id": 8391, "randomNumber": 560855982 }, { "id": 1683, "randomNumber": 611310320 }, { "id": 5341, "randomNumber": -270010910 }, { "id": 3542, "randomNumber": -466961742 }, { "id": 570, "randomNumber": -675902322 }, { "id": 3827, "randomNumber": -1884791498 }, { "id": 4233, "randomNumber": 352696106 }, { "id": 2262, "randomNumber": -651157087 }, { "id": 6043, "randomNumber": 2069865126 }, { "id": 361, "randomNumber": -85641107 }, { "id": 9118, "randomNumber": 463144431 }, { "id": 8024, "randomNumber": 402131192 }, { "id": 6762, "randomNumber": -1203430991 }, { "id": 82, "randomNumber": 1006454797 }, { "id": 6310, "randomNumber": 1582788715 }, { "id": 3191, "randomNumber": 1627319002 }, { "id": 5426, "randomNumber": 286526333 } ]
+
+/queries?queries=501 - PASS
+
+-----------------------------------------------------
+
+
+VALIDATING QUERY ... PASS
+
+
+-----------------------------------------------------
+  VERIFYING FORTUNE (/fortune)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Content-Length: 1322
+Content-Type: text/html
+Date: Sun, 29 Jun 2014 00:26:36 UTC
+Server: libonion v0.7 - coralbits.com
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fortunes</title>
+  </head>
+  <body>
+
+<table>
+<tr>
+<th>id</th>
+<th>message</th>
+</tr>
+
+<tr>
+<td>11</td>
+<td>&lt;script&gt;alert(&quot;This should not be displayed in a browser alert box.&quot;);&lt;/script&gt;</td>
+</tr>
+
+<tr>
+<td>4</td>
+<td>A bad random number generator: 1, 1, 1, 1, 1, 4.33e+67, 1, 1, 1</td>
+</tr>
+
+<tr>
+<td>5</td>
+<td>A computer program does what you tell it to do, not what you want it to do.</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>A computer scientist is someone who fixes things that aren&#39;t broken.</td>
+</tr>
+
+<tr>
+<td>8</td>
+<td>A list is only as strong as its weakest link. — Donald Knuth</td>
+</tr>
+
+<tr>
+<td>0</td>
+<td>Additional fortune added at request time.</td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>After enough decimal places, nobody gives a damn.</td>
+</tr>
+
+<tr>
+<td>7</td>
+<td>Any program that runs right is obsolete.</td>
+</tr>
+
+<tr>
+<td>10</td>
+<td>Computers make very fast, very accurate mistakes.</td>
+</tr>
+
+<tr>
+<td>6</td>
+<td>Emacs is a nice operating system, but I prefer UNIX. — Tom Christaensen</td>
+</tr>
+
+<tr>
+<td>9</td>
+<td>Feature: A bug with seniority.</td>
+</tr>
+
+<tr>
+<td>1</td>
+<td>fortune: No such file or directory</td>
+</tr>
+
+<tr>
+<td>12</td>
+<td>フレームワークのベンチマーク</td>
+</tr>
+
+</table>
+  
+  </body>
+</html>
+
+
+VALIDATING FORTUNE ... PASS
+
+
+-----------------------------------------------------
+  Benchmarking onion-raw ...
+-----------------------------------------------------
+BENCHMARKING DB ... Complete
+BENCHMARKING Query ... Complete
+BENCHMARKING Fortune ... Complete
+
+-----------------------------------------------------
+  Stopping onion-raw
+-----------------------------------------------------
+Listening at http://localhost:8080/
+
+-----------------------------------------------------
+  Stopped onion-raw
+-----------------------------------------------------
+
+----------------------------------------------------
+Saving results through onion-raw
+----------------------------------------------------

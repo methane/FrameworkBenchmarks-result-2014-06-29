@@ -1,0 +1,139 @@
+test.os.lower() = linux  test.database_os.lower() = linux
+self.results['frameworks'] != None: True
+test.name: spray
+self.results['completed']: {}
+
+=====================================================
+  Beginning spray
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Starting spray
+-----------------------------------------------------
+[0m[[0minfo[0m] [0mLoading project definition from /home/ubuntu/FrameworkBenchmarks/spray/project[0m
+[0m[[0minfo[0m] [0mSet current project to spray-benchmark (in build file:/home/ubuntu/FrameworkBenchmarks/spray/)[0m
+[0m[[0minfo[0m] [0mNo tests to run for test:test[0m
+[0m[[0minfo[0m] [0mIncluding scala-library.jar[0m
+[0m[[0minfo[0m] [0mIncluding spray-http-1.1-20130619.jar[0m
+[0m[[0minfo[0m] [0mIncluding akka-actor_2.10-2.1.2.jar[0m
+[0m[[0minfo[0m] [0mIncluding spray-util-1.1-20130619.jar[0m
+[0m[[0minfo[0m] [0mIncluding parboiled-core-1.1.5.jar[0m
+[0m[[0minfo[0m] [0mIncluding parboiled-scala_2.10-1.1.5.jar[0m
+[0m[[0minfo[0m] [0mIncluding slf4j-api-1.7.4.jar[0m
+[0m[[0minfo[0m] [0mIncluding config-1.0.0.jar[0m
+[0m[[0minfo[0m] [0mIncluding spray-can-1.1-20130619.jar[0m
+[0m[[0minfo[0m] [0mIncluding spray-io-1.1-20130619.jar[0m
+[0m[[0minfo[0m] [0mIncluding logback-classic-1.0.12.jar[0m
+[0m[[0minfo[0m] [0mIncluding logback-core-1.0.12.jar[0m
+[0m[[0minfo[0m] [0mIncluding spray-json_2.10-1.2.4.jar[0m
+[0m[[0minfo[0m] [0mIncluding akka-slf4j_2.10-2.1.2.jar[0m
+[0m[[33mwarn[0m] [0mMerging 'META-INF/MANIFEST.MF' with strategy 'discard'[0m
+[0m[[33mwarn[0m] [0mMerging 'reference.conf' with strategy 'concat'[0m
+[0m[[33mwarn[0m] [0mStrategy 'concat' was applied to a file[0m
+[0m[[33mwarn[0m] [0mStrategy 'discard' was applied to a file[0m
+[0m[[0minfo[0m] [0mPackaging /home/ubuntu/FrameworkBenchmarks/spray/target/scala-2.10/spray-benchmark-assembly-1.0.jar ...[0m
+[0m[[0minfo[0m] [0mDone packaging.[0m
+[0m[[32msuccess[0m] [0mTotal time: 6 s, completed Jun 29, 2014 4:35:25 AM[0m
+06/29 04:35:26.012 INFO [lt-dispatcher-4] a.e.s.Slf4jEventHandler - Slf4jEventHandler started
+06/29 04:35:26.607 INFO [lt-dispatcher-3] akka://default/user/IO-HTTP/listener-0 - Bound to /0.0.0.0:8080
+
+-----------------------------------------------------
+  VERIFYING JSON (/json)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Server: spray-can/1.1-20130619
+Date: Sun, 29 Jun 2014 04:35:40 GMT
+Content-Type: application/json; charset=UTF-8
+Content-Length: 27
+
+{"message":"Hello, World!"}
+
+VALIDATING JSON ... PASS
+
+
+-----------------------------------------------------
+  VERIFYING PLAINTEXT (/plaintext)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Server: spray-can/1.1-20130619
+Date: Sun, 29 Jun 2014 04:35:40 GMT
+Content-Type: text/plain
+Content-Length: 13
+
+Hello, World!
+
+VALIDATING PLAINTEXT ... PASS
+
+
+-----------------------------------------------------
+  Benchmarking spray ...
+-----------------------------------------------------
+BENCHMARKING JSON ... Complete
+BENCHMARKING Plaintext ... 06/29 04:39:28.767 WARN [t-dispatcher-11] akka://default/user/IO-HTTP/listener-0/7987 - Configured registration timeout of 1 second expired, stopping
+06/29 04:39:28.767 WARN [t-dispatcher-11] akka://default/user/IO-HTTP/listener-0/7989 - Configured registration timeout of 1 second expired, stopping
+06/29 04:39:28.767 WARN [t-dispatcher-11] akka://default/user/IO-HTTP/listener-0/7993 - Configured registration timeout of 1 second expired, stopping
+06/29 04:39:28.767 WARN [t-dispatcher-11] akka://default/user/IO-HTTP/listener-0/7992 - Configured registration timeout of 1 second expired, stopping
+06/29 04:39:28.767 WARN [t-dispatcher-11] akka://default/user/IO-HTTP/listener-0/7984 - Configured registration timeout of 1 second expired, stopping
+06/29 04:39:28.805 WARN [lt-dispatcher-6] akka://default/user/IO-HTTP/listener-0/7994 - Configured registration timeout of 1 second expired, stopping
+06/29 04:39:28.805 WARN [lt-dispatcher-6] akka://default/user/IO-HTTP/listener-0/7988 - Configured registration timeout of 1 second expired, stopping
+06/29 04:39:28.805 WARN [lt-dispatcher-6] akka://default/user/IO-HTTP/listener-0/7986 - Configured registration timeout of 1 second expired, stopping
+06/29 04:39:28.805 WARN [lt-dispatcher-6] akka://default/user/IO-HTTP/listener-0/7991 - Configured registration timeout of 1 second expired, stopping
+06/29 04:39:28.805 WARN [lt-dispatcher-6] akka://default/user/IO-HTTP/listener-0/7982 - Configured registration timeout of 1 second expired, stopping
+06/29 04:39:28.806 WARN [lt-dispatcher-6] akka://default/user/IO-HTTP/listener-0/7981 - Configured registration timeout of 1 second expired, stopping
+06/29 04:39:28.806 WARN [lt-dispatcher-6] akka://default/user/IO-HTTP/listener-0/7985 - Configured registration timeout of 1 second expired, stopping
+06/29 04:39:28.806 WARN [lt-dispatcher-6] akka://default/user/IO-HTTP/listener-0/7990 - Configured registration timeout of 1 second expired, stopping
+06/29 04:39:28.806 WARN [lt-dispatcher-6] akka://default/user/IO-HTTP/listener-0/7983 - Configured registration timeout of 1 second expired, stopping
+06/29 04:39:28.893 WARN [t-dispatcher-12] akka://default/user/IO-HTTP/listener-0/7996 - Configured registration timeout of 1 second expired, stopping
+06/29 04:39:28.894 WARN [t-dispatcher-12] akka://default/user/IO-HTTP/listener-0/8001 - Configured registration timeout of 1 second expired, stopping
+06/29 04:39:28.894 WARN [t-dispatcher-12] akka://default/user/IO-HTTP/listener-0/7999 - Configured registration timeout of 1 second expired, stopping
+06/29 04:39:28.894 WARN [t-dispatcher-12] akka://default/user/IO-HTTP/listener-0/8002 - Configured registration timeout of 1 second expired, stopping
+06/29 04:39:28.894 WARN [t-dispatcher-12] akka://default/user/IO-HTTP/listener-0/7997 - Configured registration timeout of 1 second expired, stopping
+06/29 04:39:28.967 WARN [t-dispatcher-10] akka://default/user/IO-HTTP/listener-0/8003 - Configured registration timeout of 1 second expired, stopping
+06/29 04:39:28.967 WARN [t-dispatcher-10] akka://default/user/IO-HTTP/listener-0/7995 - Configured registration timeout of 1 second expired, stopping
+06/29 04:39:28.971 WARN [t-dispatcher-10] akka://default/user/IO-HTTP/listener-0/8000 - Configured registration timeout of 1 second expired, stopping
+06/29 04:39:28.972 WARN [t-dispatcher-10] akka://default/user/IO-HTTP/listener-0/8004 - Configured registration timeout of 1 second expired, stopping
+06/29 04:39:28.972 WARN [t-dispatcher-10] akka://default/user/IO-HTTP/listener-0/7998 - Configured registration timeout of 1 second expired, stopping
+06/29 04:39:28.972 WARN [t-dispatcher-12] akka://default/user/IO-HTTP/listener-0/8005 - Configured registration timeout of 1 second expired, stopping
+06/29 04:39:28.972 WARN [t-dispatcher-12] akka://default/user/IO-HTTP/listener-0/8006 - Configured registration timeout of 1 second expired, stopping
+06/29 04:39:28.972 WARN [t-dispatcher-12] akka://default/user/IO-HTTP/listener-0/8008 - Configured registration timeout of 1 second expired, stopping
+06/29 04:39:29.073 WARN [t-dispatcher-11] akka://default/user/IO-HTTP/listener-0/8007 - Configured registration timeout of 1 second expired, stopping
+06/29 04:39:29.073 WARN [t-dispatcher-11] akka://default/user/IO-HTTP/listener-0/8015 - Configured registration timeout of 1 second expired, stopping
+06/29 04:39:29.073 WARN [t-dispatcher-11] akka://default/user/IO-HTTP/listener-0/8012 - Configured registration timeout of 1 second expired, stopping
+06/29 04:39:29.073 WARN [t-dispatcher-11] akka://default/user/IO-HTTP/listener-0/8018 - Configured registration timeout of 1 second expired, stopping
+06/29 04:39:29.073 WARN [t-dispatcher-11] akka://default/user/IO-HTTP/listener-0/8009 - Configured registration timeout of 1 second expired, stopping
+06/29 04:39:29.129 WARN [lt-dispatcher-6] akka://default/user/IO-HTTP/listener-0/8014 - Configured registration timeout of 1 second expired, stopping
+06/29 04:39:29.129 WARN [lt-dispatcher-6] akka://default/user/IO-HTTP/listener-0/8019 - Configured registration timeout of 1 second expired, stopping
+06/29 04:39:29.129 WARN [lt-dispatcher-6] akka://default/user/IO-HTTP/listener-0/8020 - Configured registration timeout of 1 second expired, stopping
+06/29 04:39:29.129 WARN [lt-dispatcher-6] akka://default/user/IO-HTTP/listener-0/8017 - Configured registration timeout of 1 second expired, stopping
+06/29 04:39:29.129 WARN [lt-dispatcher-6] akka://default/user/IO-HTTP/listener-0/8016 - Configured registration timeout of 1 second expired, stopping
+06/29 04:39:29.135 WARN [t-dispatcher-11] akka://default/user/IO-HTTP/listener-0/8013 - Configured registration timeout of 1 second expired, stopping
+06/29 04:39:29.135 WARN [t-dispatcher-11] akka://default/user/IO-HTTP/listener-0/8010 - Configured registration timeout of 1 second expired, stopping
+06/29 04:39:29.136 WARN [t-dispatcher-11] akka://default/user/IO-HTTP/listener-0/8011 - Configured registration timeout of 1 second expired, stopping
+06/29 04:39:29.136 WARN [t-dispatcher-11] akka://default/user/IO-HTTP/listener-0/8035 - Configured registration timeout of 1 second expired, stopping
+06/29 04:39:29.136 WARN [t-dispatcher-11] akka://default/user/IO-HTTP/listener-0/8025 - Configured registration timeout of 1 second expired, stopping
+06/29 04:39:29.191 WARN [t-dispatcher-10] akka://default/user/IO-HTTP/listener-0/8030 - Configured registration timeout of 1 second expired, stopping
+06/29 04:39:29.191 WARN [t-dispatcher-10] akka://default/user/IO-HTTP/listener-0/8029 - Configured registration timeout of 1 second expired, stopping
+06/29 04:39:29.192 WARN [t-dispatcher-10] akka://default/user/IO-HTTP/listener-0/8026 - Configured registration timeout of 1 second expired, stopping
+06/29 04:39:29.192 WARN [t-dispatcher-10] akka://default/user/IO-HTTP/listener-0/8034 - Configured registration timeout of 1 second expired, stopping
+06/29 04:39:29.192 WARN [t-dispatcher-10] akka://default/user/IO-HTTP/listener-0/8024 - Configured registration timeout of 1 second expired, stopping
+06/29 04:39:29.206 WARN [t-dispatcher-12] akka://default/user/IO-HTTP/listener-0/8021 - Configured registration timeout of 1 second expired, stopping
+06/29 04:39:29.207 WARN [t-dispatcher-12] akka://default/user/IO-HTTP/listener-0/8032 - Configured registration timeout of 1 second expired, stopping
+06/29 04:39:29.207 WARN [t-dispatcher-12] akka://default/user/IO-HTTP/listener-0/8023 - Configured registration timeout of 1 second expired, stopping
+06/29 04:39:29.207 WARN [t-dispatcher-12] akka://default/user/IO-HTTP/listener-0/8028 - Configured registration timeout of 1 second expired, stopping
+06/29 04:39:29.207 WARN [t-dispatcher-12] akka://default/user/IO-HTTP/listener-0/8033 - Configured registration timeout of 1 second expired, stopping
+06/29 04:39:29.207 WARN [t-dispatcher-12] akka://default/user/IO-HTTP/listener-0/8031 - Configured registration timeout of 1 second expired, stopping
+06/29 04:39:29.207 WARN [t-dispatcher-12] akka://default/user/IO-HTTP/listener-0/8022 - Configured registration timeout of 1 second expired, stopping
+06/29 04:39:29.208 WARN [t-dispatcher-12] akka://default/user/IO-HTTP/listener-0/8027 - Configured registration timeout of 1 second expired, stopping
+Complete
+
+-----------------------------------------------------
+  Stopping spray
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Stopped spray
+-----------------------------------------------------
+
+----------------------------------------------------
+Saving results through spray
+----------------------------------------------------

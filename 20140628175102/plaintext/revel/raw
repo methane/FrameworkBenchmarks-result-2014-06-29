@@ -1,0 +1,94 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer revel
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/plaintext
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/plaintext
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   550.46us    2.50ms  23.89ms   97.07%
+    Req/Sec     4.96k     1.83k   10.33k    69.79%
+  187504 requests in 5.00s, 23.25MB read
+Requests/sec:  37525.74
+Transfer/sec:      4.65MB
+
+---------------------------------------------------------
+ Running Warmup revel
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/plaintext
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/plaintext
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     5.10ms    3.77ms 163.94ms   86.90%
+    Req/Sec    12.94k     2.63k   27.06k    68.12%
+  750182 requests in 15.00s, 93.01MB read
+Requests/sec:  50005.80
+Transfer/sec:      6.20MB
+
+---------------------------------------------------------
+ Concurrency: 256 for revel
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/plaintext
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    66.25ms   53.43ms 612.91ms   69.64%
+    Req/Sec    16.01k     2.32k   20.28k    64.57%
+  954029 requests in 15.00s, 118.28MB read
+Requests/sec:  63593.01
+Transfer/sec:      7.88MB
+
+---------------------------------------------------------
+ Concurrency: 1024 for revel
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 1024 --timeout 1024 -t 4 http://127.0.0.1:8080/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/plaintext
+  4 threads and 1024 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   300.59ms  321.94ms   2.36s    79.46%
+    Req/Sec    13.38k     1.33k   17.44k    73.33%
+  799916 requests in 14.99s, 99.17MB read
+Requests/sec:  53371.09
+Transfer/sec:      6.62MB
+
+---------------------------------------------------------
+ Concurrency: 4096 for revel
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 4096 --timeout 4096 -t 4 http://127.0.0.1:8080/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/plaintext
+  4 threads and 4096 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.12s     1.79s   12.54s    89.46%
+    Req/Sec    13.24k     3.50k   20.22k    74.42%
+  777260 requests in 15.00s, 96.36MB read
+Requests/sec:  51819.55
+Transfer/sec:      6.42MB
+
+---------------------------------------------------------
+ Concurrency: 16384 for revel
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16384 --timeout 16384 -t 4 http://127.0.0.1:8080/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/plaintext
+  4 threads and 16384 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     7.49s     6.17s   13.75s    60.67%
+    Req/Sec    12.80k     4.56k   22.97k    68.87%
+  763481 requests in 15.00s, 94.65MB read
+Requests/sec:  50885.54
+Transfer/sec:      6.31MB

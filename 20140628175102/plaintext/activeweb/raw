@@ -1,0 +1,95 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer activeweb
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/activeweb/plaintext
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/activeweb/plaintext
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   208.13us  118.42us   4.07ms   78.52%
+    Req/Sec     4.91k     2.75k   10.78k    78.60%
+  182038 requests in 5.00s, 26.39MB read
+Requests/sec:  36421.27
+Transfer/sec:      5.28MB
+
+---------------------------------------------------------
+ Running Warmup activeweb
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/activeweb/plaintext
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/activeweb/plaintext
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     8.72ms   44.73ms 977.54ms   98.22%
+    Req/Sec     9.44k     2.27k   39.33k    84.05%
+  544643 requests in 15.00s, 78.95MB read
+Requests/sec:  36311.06
+Transfer/sec:      5.26MB
+
+---------------------------------------------------------
+ Concurrency: 256 for activeweb
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/activeweb/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/activeweb/plaintext
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    95.58ms  175.31ms   1.11s    85.86%
+    Req/Sec    10.96k     1.21k   13.55k    70.97%
+  660422 requests in 15.00s, 95.73MB read
+Requests/sec:  44032.69
+Transfer/sec:      6.38MB
+
+---------------------------------------------------------
+ Concurrency: 1024 for activeweb
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 1024 --timeout 1024 -t 4 http://127.0.0.1:8080/activeweb/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/activeweb/plaintext
+  4 threads and 1024 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   155.97ms  542.03ms  13.41s    96.35%
+    Req/Sec    13.13k     3.96k   24.28k    77.39%
+  622938 requests in 15.00s, 90.30MB read
+Requests/sec:  41539.18
+Transfer/sec:      6.02MB
+
+---------------------------------------------------------
+ Concurrency: 4096 for activeweb
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 4096 --timeout 4096 -t 4 http://127.0.0.1:8080/activeweb/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/activeweb/plaintext
+  4 threads and 4096 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   246.59ms  621.28ms  14.62s    92.87%
+    Req/Sec    15.16k     4.03k   22.97k    63.04%
+  649425 requests in 15.13s, 94.14MB read
+Requests/sec:  42917.74
+Transfer/sec:      6.22MB
+
+---------------------------------------------------------
+ Concurrency: 16384 for activeweb
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16384 --timeout 16384 -t 4 http://127.0.0.1:8080/activeweb/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/activeweb/plaintext
+  4 threads and 16384 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     8.96s     7.02s   14.82s    61.25%
+    Req/Sec    14.08k     4.46k   27.40k    64.04%
+  640156 requests in 15.00s, 92.80MB read
+  Socket errors: connect 0, read 112, write 0, timeout 57295
+Requests/sec:  42675.89
+Transfer/sec:      6.19MB

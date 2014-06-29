@@ -1,0 +1,108 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer bottle-nginx-uwsgi
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/db?queries=2
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/db?queries=2
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     6.00ms    2.72ms  33.78ms   65.07%
+    Req/Sec   185.03     61.71   388.00     62.99%
+  7209 requests in 5.00s, 1.50MB read
+Requests/sec:   1441.35
+Transfer/sec:    306.15KB
+
+---------------------------------------------------------
+ Running Warmup bottle-nginx-uwsgi
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/db?queries=2
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db?queries=2
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   174.67ms    3.16ms 222.59ms   69.33%
+    Req/Sec   366.54     13.08   400.00     62.82%
+  21959 requests in 15.00s, 4.56MB read
+Requests/sec:   1463.66
+Transfer/sec:    310.96KB
+
+---------------------------------------------------------
+ Queries: 1 for bottle-nginx-uwsgi
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/db?queries=1
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db?queries=1
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   114.33ms    2.49ms 125.01ms   69.91%
+    Req/Sec   560.67      9.53   591.00     72.69%
+  33572 requests in 15.00s, 5.95MB read
+Requests/sec:   2237.86
+Transfer/sec:    405.92KB
+
+---------------------------------------------------------
+ Queries: 5 for bottle-nginx-uwsgi
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/db?queries=5
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db?queries=5
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   350.29ms   14.02ms 546.97ms   97.80%
+    Req/Sec   182.71     15.59   207.00     65.93%
+  10974 requests in 15.02s, 3.29MB read
+Requests/sec:    730.85
+Transfer/sec:    224.03KB
+
+---------------------------------------------------------
+ Queries: 10 for bottle-nginx-uwsgi
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/db?queries=10
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db?queries=10
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   671.31ms   21.87ms 701.09ms   79.85%
+    Req/Sec   101.23    139.15   551.00     79.58%
+  5959 requests in 15.23s, 2.69MB read
+Requests/sec:    391.16
+Transfer/sec:    180.60KB
+
+---------------------------------------------------------
+ Queries: 15 for bottle-nginx-uwsgi
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/db?queries=15
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db?queries=15
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   931.16ms   40.70ms   1.11s    94.69%
+    Req/Sec    67.24      7.58    81.00     63.79%
+  4101 requests in 15.32s, 2.47MB read
+Requests/sec:    267.76
+Transfer/sec:    165.17KB
+
+---------------------------------------------------------
+ Queries: 20 for bottle-nginx-uwsgi
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/db?queries=20
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db?queries=20
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.22s   101.54ms   1.32s    96.41%
+    Req/Sec    51.62     26.30   102.00     73.33%
+  3130 requests in 15.59s, 2.36MB read
+Requests/sec:    200.78
+Transfer/sec:    154.99KB

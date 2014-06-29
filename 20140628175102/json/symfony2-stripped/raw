@@ -1,0 +1,130 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer symfony2-stripped
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/json
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/json
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    32.62ms   53.61ms 416.22ms   92.06%
+    Req/Sec    45.31     22.74   104.00     65.48%
+  1775 requests in 5.07s, 500.61KB read
+  Non-2xx or 3xx responses: 884
+Requests/sec:    350.28
+Transfer/sec:     98.79KB
+
+---------------------------------------------------------
+ Running Warmup symfony2-stripped
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/json
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   707.84ms  589.72ms   2.36s    55.36%
+    Req/Sec    90.18     17.82   126.00     75.00%
+  5316 requests in 15.02s, 1.46MB read
+  Non-2xx or 3xx responses: 2638
+Requests/sec:    353.85
+Transfer/sec:     99.76KB
+
+---------------------------------------------------------
+ Concurrency: 8 for symfony2-stripped
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    28.58ms   49.58ms 499.60ms   96.52%
+    Req/Sec    93.63     34.86   241.00     67.32%
+  5616 requests in 15.03s, 1.55MB read
+  Non-2xx or 3xx responses: 2802
+Requests/sec:    373.71
+Transfer/sec:    105.42KB
+
+---------------------------------------------------------
+ Concurrency: 16 for symfony2-stripped
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    44.56ms   58.78ms 773.79ms   89.41%
+    Req/Sec    90.64     34.45   187.00     68.22%
+  5481 requests in 15.00s, 1.51MB read
+  Non-2xx or 3xx responses: 2732
+Requests/sec:    365.34
+Transfer/sec:    103.05KB
+
+---------------------------------------------------------
+ Concurrency: 32 for symfony2-stripped
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    88.18ms  114.74ms 854.39ms   87.99%
+    Req/Sec    90.86     24.44   155.00     68.18%
+  5515 requests in 15.01s, 1.52MB read
+  Non-2xx or 3xx responses: 2745
+Requests/sec:    367.41
+Transfer/sec:    103.62KB
+
+---------------------------------------------------------
+ Concurrency: 64 for symfony2-stripped
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   175.95ms  243.92ms   2.03s    88.32%
+    Req/Sec    91.93     26.72   184.00     71.74%
+  5528 requests in 15.03s, 1.52MB read
+  Non-2xx or 3xx responses: 2752
+Requests/sec:    367.91
+Transfer/sec:    103.77KB
+
+---------------------------------------------------------
+ Concurrency: 128 for symfony2-stripped
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   349.92ms  315.31ms   2.46s    74.41%
+    Req/Sec    90.42     20.36   159.00     73.63%
+  5457 requests in 15.01s, 1.50MB read
+  Non-2xx or 3xx responses: 2716
+Requests/sec:    363.44
+Transfer/sec:    102.51KB
+
+---------------------------------------------------------
+ Concurrency: 256 for symfony2-stripped
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.89s     1.27s    3.10s    72.83%
+    Req/Sec    92.14     55.00   467.00     76.95%
+  5361 requests in 15.01s, 1.48MB read
+  Non-2xx or 3xx responses: 2650
+Requests/sec:    357.21
+Transfer/sec:    100.66KB

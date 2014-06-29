@@ -1,0 +1,122 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer revel-qbs
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/db
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/db
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   644.55us  815.19us  14.95ms   95.31%
+    Req/Sec     1.74k   356.36     2.78k    71.32%
+  65586 requests in 5.00s, 9.62MB read
+Requests/sec:  13120.84
+Transfer/sec:      1.92MB
+
+---------------------------------------------------------
+ Running Warmup revel-qbs
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/db
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    18.33ms   17.46ms 642.98ms   93.70%
+    Req/Sec     3.60k   318.15     4.81k    69.79%
+  212464 requests in 15.00s, 31.16MB read
+Requests/sec:  14163.74
+Transfer/sec:      2.08MB
+
+---------------------------------------------------------
+ Concurrency: 8 for revel-qbs
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:8080/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   605.41us  824.60us  30.43ms   96.45%
+    Req/Sec     3.57k   614.89     6.33k    69.91%
+  202756 requests in 15.00s, 29.73MB read
+Requests/sec:  13517.63
+Transfer/sec:      1.98MB
+
+---------------------------------------------------------
+ Concurrency: 16 for revel-qbs
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:8080/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.13ms    1.14ms  25.78ms   92.33%
+    Req/Sec     3.76k   659.74     6.78k    68.68%
+  214107 requests in 15.00s, 31.40MB read
+Requests/sec:  14275.31
+Transfer/sec:      2.09MB
+
+---------------------------------------------------------
+ Concurrency: 32 for revel-qbs
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:8080/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     2.23ms    1.83ms  26.38ms   87.87%
+    Req/Sec     3.83k   600.97     7.00k    68.14%
+  217417 requests in 15.00s, 31.88MB read
+Requests/sec:  14496.53
+Transfer/sec:      2.13MB
+
+---------------------------------------------------------
+ Concurrency: 64 for revel-qbs
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:8080/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     4.46ms    2.97ms  42.08ms   79.51%
+    Req/Sec     3.75k   500.17     6.00k    70.65%
+  216804 requests in 15.00s, 31.79MB read
+Requests/sec:  14453.22
+Transfer/sec:      2.12MB
+
+---------------------------------------------------------
+ Concurrency: 128 for revel-qbs
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:8080/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     8.85ms    4.76ms  47.47ms   73.48%
+    Req/Sec     3.67k   340.35     4.70k    68.89%
+  216288 requests in 15.00s, 31.72MB read
+Requests/sec:  14421.94
+Transfer/sec:      2.11MB
+
+---------------------------------------------------------
+ Concurrency: 256 for revel-qbs
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    18.17ms   10.59ms  85.46ms   67.01%
+    Req/Sec     3.57k   233.93     4.41k    69.03%
+  211947 requests in 15.00s, 31.08MB read
+Requests/sec:  14128.78
+Transfer/sec:      2.07MB

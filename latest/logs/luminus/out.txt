@@ -1,0 +1,95 @@
+test.os.lower() = linux  test.database_os.lower() = linux
+self.results['frameworks'] != None: True
+test.name: luminus
+self.results['completed']: {}
+
+=====================================================
+  Beginning luminus
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Starting luminus
+-----------------------------------------------------
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+mysql start/running, process 31939
+ * Restarting PostgreSQL 9.3 database server
+   ...done.
+Created /home/ubuntu/FrameworkBenchmarks/luminus/hello/target/hello-luminus-standalone.war
+
+-----------------------------------------------------
+  VERIFYING JSON (/luminus/json)
+-----------------------------------------------------
+VALIDATING JSON ... FAIL
+
+
+-----------------------------------------------------
+  VERIFYING DB (/luminus/db)
+-----------------------------------------------------
+VALIDATING DB ... FAIL
+
+
+-----------------------------------------------------
+  VERIFYING QUERY (/luminus/db/2)
+-----------------------------------------------------
+/luminus/db/2 - FAIL
+
+-----------------------------------------------------
+
+/luminus/db/0 - WARNING
+
+-----------------------------------------------------
+
+/luminus/db/foo - WARNING
+
+-----------------------------------------------------
+
+/luminus/db/501 - WARNING
+
+-----------------------------------------------------
+
+
+VALIDATING QUERY ... FAIL
+
+
+-----------------------------------------------------
+  VERIFYING FORTUNE (/luminus/fortune)
+-----------------------------------------------------
+VALIDATING FORTUNE ... FAIL
+
+
+-----------------------------------------------------
+  VERIFYING PLAINTEXT (/luminus/plaintext)
+-----------------------------------------------------
+VALIDATING PLAINTEXT ... FAIL
+
+
+-----------------------------------------------------
+  Benchmarking luminus ...
+-----------------------------------------------------
+BENCHMARKING JSON ... Complete
+BENCHMARKING DB ... Complete
+BENCHMARKING Query ... Complete
+BENCHMARKING Fortune ... Complete
+BENCHMARKING Plaintext ... Complete
+
+-----------------------------------------------------
+  Stopping luminus
+-----------------------------------------------------
+Resin/4.0.36 shutdown watchdog at 127.0.0.1:6600
+
+-----------------------------------------------------
+  Stopped luminus
+-----------------------------------------------------
+
+----------------------------------------------------
+Saving results through luminus
+----------------------------------------------------

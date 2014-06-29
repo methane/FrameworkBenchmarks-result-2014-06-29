@@ -1,0 +1,122 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer grizzly
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/json
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/json
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   778.93us    2.47ms  29.91ms   96.63%
+    Req/Sec     2.97k     1.89k   14.89k    73.38%
+  104402 requests in 5.01s, 16.33MB read
+Requests/sec:  20846.29
+Transfer/sec:      3.26MB
+
+---------------------------------------------------------
+ Running Warmup grizzly
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/json
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     2.71ms    1.77ms  28.74ms   79.64%
+    Req/Sec    22.86k     2.75k   36.88k    81.85%
+  1309197 requests in 15.00s, 204.76MB read
+Requests/sec:  87299.40
+Transfer/sec:     13.65MB
+
+---------------------------------------------------------
+ Concurrency: 8 for grizzly
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   128.19us   65.77us   9.86ms   92.27%
+    Req/Sec    14.90k     2.36k   28.11k    87.49%
+  843435 requests in 15.00s, 131.92MB read
+Requests/sec:  56233.62
+Transfer/sec:      8.80MB
+
+---------------------------------------------------------
+ Concurrency: 16 for grizzly
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   197.15us  178.50us  24.30ms   95.80%
+    Req/Sec    18.97k     3.25k   32.89k    88.29%
+  1072183 requests in 15.00s, 167.69MB read
+Requests/sec:  71484.20
+Transfer/sec:     11.18MB
+
+---------------------------------------------------------
+ Concurrency: 32 for grizzly
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   383.88us  289.50us   7.25ms   80.21%
+    Req/Sec    20.42k     5.97k   38.22k    67.67%
+  1157887 requests in 14.99s, 181.10MB read
+Requests/sec:  77220.90
+Transfer/sec:     12.08MB
+
+---------------------------------------------------------
+ Concurrency: 64 for grizzly
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   712.50us  594.80us  22.09ms   83.95%
+    Req/Sec    21.97k     4.68k   40.44k    70.71%
+  1249155 requests in 15.00s, 195.37MB read
+Requests/sec:  83279.34
+Transfer/sec:     13.03MB
+
+---------------------------------------------------------
+ Concurrency: 128 for grizzly
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.38ms    0.96ms  15.76ms   74.48%
+    Req/Sec    22.60k     4.30k   40.78k    71.49%
+  1288205 requests in 15.00s, 201.48MB read
+Requests/sec:  85883.47
+Transfer/sec:     13.43MB
+
+---------------------------------------------------------
+ Concurrency: 256 for grizzly
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     2.74ms    1.48ms  23.03ms   69.20%
+    Req/Sec    22.95k     2.49k   44.60k    80.48%
+  1306941 requests in 15.00s, 204.41MB read
+Requests/sec:  87124.39
+Transfer/sec:     13.63MB

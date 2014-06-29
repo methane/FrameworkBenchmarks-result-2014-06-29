@@ -1,0 +1,122 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer flask
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/json
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/json
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     2.30ms    3.09ms  29.85ms   93.33%
+    Req/Sec   694.85    418.15     1.67k    70.12%
+  26505 requests in 4.99s, 4.65MB read
+Requests/sec:   5307.30
+Transfer/sec:      0.93MB
+
+---------------------------------------------------------
+ Running Warmup flask
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/json
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    47.17ms   22.43ms 144.85ms   68.61%
+    Req/Sec     1.44k   362.05     2.14k    67.67%
+  84768 requests in 15.00s, 14.87MB read
+Requests/sec:   5650.44
+Transfer/sec:      0.99MB
+
+---------------------------------------------------------
+ Concurrency: 8 for flask
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.65ms    1.14ms  20.56ms   93.00%
+    Req/Sec     1.45k   574.84     3.22k    78.78%
+  82330 requests in 15.02s, 14.45MB read
+Requests/sec:   5483.08
+Transfer/sec:      0.96MB
+
+---------------------------------------------------------
+ Concurrency: 16 for flask
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     3.08ms    3.17ms  33.91ms   91.38%
+    Req/Sec     1.57k   495.24     3.00k    62.03%
+  89852 requests in 15.00s, 15.77MB read
+Requests/sec:   5990.84
+Transfer/sec:      1.05MB
+
+---------------------------------------------------------
+ Concurrency: 32 for flask
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     5.61ms    4.24ms  29.42ms   76.76%
+    Req/Sec     1.55k   413.99     2.76k    69.67%
+  89079 requests in 15.00s, 15.63MB read
+Requests/sec:   5938.77
+Transfer/sec:      1.04MB
+
+---------------------------------------------------------
+ Concurrency: 64 for flask
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    11.47ms    9.67ms  59.94ms   59.60%
+    Req/Sec     1.60k   578.90     3.14k    58.55%
+  89715 requests in 15.00s, 15.74MB read
+Requests/sec:   5980.84
+Transfer/sec:      1.05MB
+
+---------------------------------------------------------
+ Concurrency: 128 for flask
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    22.26ms   12.67ms  82.32ms   68.98%
+    Req/Sec     1.52k   333.38     2.27k    60.29%
+  89224 requests in 15.00s, 15.66MB read
+Requests/sec:   5947.28
+Transfer/sec:      1.04MB
+
+---------------------------------------------------------
+ Concurrency: 256 for flask
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    43.62ms   14.71ms 150.72ms   68.97%
+    Req/Sec     1.48k   109.65     2.31k    79.19%
+  88698 requests in 15.00s, 15.56MB read
+Requests/sec:   5913.05
+Transfer/sec:      1.04MB

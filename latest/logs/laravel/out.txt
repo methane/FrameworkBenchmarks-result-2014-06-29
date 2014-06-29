@@ -1,0 +1,48 @@
+test.os.lower() = linux  test.database_os.lower() = linux
+self.results['frameworks'] != None: True
+test.name: laravel
+self.results['completed']: {}
+
+=====================================================
+  Beginning laravel
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Starting laravel
+-----------------------------------------------------
+
+-----------------------------------------------------
+  VERIFYING JSON (/json)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Server: nginx/1.4.1
+Content-Type: application/json; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: PHP/5.4.13
+cache-control: no-cache
+date: Sat, 28 Jun 2014 23:23:18 GMT
+Set-Cookie: session_payload=9f9c41ee2291f08e62723748042483adcfe0ff78%2Bl8oTPJReSFqjx8OFZlKN1%2FEzTgwkox2UZn5nR6Ak4SOc2EmlD2JWMT%2BcMZ4LWuvZrDuiZE6%2F3sc2WZWdU2%2B9VLvsA%2Bni9g6egnpFPAhtE4Bu9ZQxCT95roZtHEz9pLB%2BjIeMYAsAigyHTKCx1VJHiVAZinIpHE5sZyw8gXi1FY7TQmqbnt%2FrFO%2BEazM59060QLT0R2oWw2DP4eWCxU5WD3zE41QfWPAmHAqtBo2leceDLd4Cz5rU7FiWUQnDqd6XtFJlhNguvxnAznibmmyXXPfnH%2FHj5NtnQrPh%2BJATFH%2FXTHKRd4n1js6OQ1rGfvdwRroxX3cnmy4ZuB6rVXqSKw%3D%3D; expires=Sun, 29-Jun-2014 00:23:18 GMT; path=/; httponly
+Set-Cookie: laravel_session=eebb82a5478be613ae81ea5ff638d089115a55f9%2B84bPrmsz9neWjk7HtxTY5TxobHpoesFL6QEZVdc3; expires=Sun, 29-Jun-2014 00:23:18 GMT; path=/; httponly
+
+{"message":"Hello, World!"}
+
+VALIDATING JSON ... PASS
+
+
+-----------------------------------------------------
+  Benchmarking laravel ...
+-----------------------------------------------------
+BENCHMARKING JSON ... Complete
+
+-----------------------------------------------------
+  Stopping laravel
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Stopped laravel
+-----------------------------------------------------
+
+----------------------------------------------------
+Saving results through laravel
+----------------------------------------------------

@@ -1,0 +1,60 @@
+test.os.lower() = linux  test.database_os.lower() = linux
+self.results['frameworks'] != None: True
+test.name: falcon
+self.results['completed']: {}
+
+=====================================================
+  Beginning falcon
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Starting falcon
+-----------------------------------------------------
+
+-----------------------------------------------------
+  VERIFYING JSON (/json)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Server: meinheld/0.5.6
+Date: Sat, 28 Jun 2014 21:01:30 GMT
+content-length: 28
+content-type: application/json; charset=utf-8
+Connection: Keep-Alive
+
+{"message": "Hello, world!"}
+
+VALIDATING JSON ... PASS
+
+
+-----------------------------------------------------
+  VERIFYING PLAINTEXT (/plaintext)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Server: meinheld/0.5.6
+Date: Sat, 28 Jun 2014 21:01:30 GMT
+content-length: 13
+content-type: text/plain
+Connection: Keep-Alive
+
+Hello, world!
+
+VALIDATING PLAINTEXT ... PASS
+
+
+-----------------------------------------------------
+  Benchmarking falcon ...
+-----------------------------------------------------
+BENCHMARKING JSON ... Complete
+BENCHMARKING Plaintext ... Complete
+
+-----------------------------------------------------
+  Stopping falcon
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Stopped falcon
+-----------------------------------------------------
+
+----------------------------------------------------
+Saving results through falcon
+----------------------------------------------------

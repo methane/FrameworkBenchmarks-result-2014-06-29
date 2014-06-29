@@ -1,0 +1,123 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer curacao
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/json
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/json
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     2.24ms    3.12ms  31.77ms   93.11%
+    Req/Sec   642.62    306.54     2.11k    68.31%
+  23292 requests in 5.00s, 4.02MB read
+Requests/sec:   4658.55
+Transfer/sec:    823.43KB
+
+---------------------------------------------------------
+ Running Warmup curacao
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/json
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    12.22ms   35.05ms 737.46ms   98.91%
+    Req/Sec     5.98k     1.16k    8.21k    85.32%
+  345605 requests in 15.00s, 59.66MB read
+  Socket errors: connect 0, read 0, write 0, timeout 31
+Requests/sec:  23043.42
+Transfer/sec:      3.98MB
+
+---------------------------------------------------------
+ Concurrency: 8 for curacao
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   495.54us  523.19us  10.33ms   88.64%
+    Req/Sec     4.29k   646.21     6.55k    72.05%
+  243665 requests in 15.00s, 42.06MB read
+Requests/sec:  16245.91
+Transfer/sec:      2.80MB
+
+---------------------------------------------------------
+ Concurrency: 16 for curacao
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     0.91ms    1.00ms  16.83ms   88.56%
+    Req/Sec     4.78k   791.46     7.44k    75.79%
+  271497 requests in 15.00s, 46.86MB read
+Requests/sec:  18100.75
+Transfer/sec:      3.12MB
+
+---------------------------------------------------------
+ Concurrency: 32 for curacao
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.68ms    1.90ms  23.46ms   87.86%
+    Req/Sec     5.22k     0.93k    8.78k    74.59%
+  296607 requests in 15.00s, 51.20MB read
+Requests/sec:  19777.21
+Transfer/sec:      3.41MB
+
+---------------------------------------------------------
+ Concurrency: 64 for curacao
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     3.01ms    3.00ms  34.95ms   88.00%
+    Req/Sec     5.64k     1.00k   11.09k    73.58%
+  323570 requests in 14.99s, 55.85MB read
+Requests/sec:  21580.35
+Transfer/sec:      3.73MB
+
+---------------------------------------------------------
+ Concurrency: 128 for curacao
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     5.63ms    4.83ms  73.31ms   86.55%
+    Req/Sec     5.87k   682.74     8.91k    75.99%
+  343773 requests in 15.00s, 59.34MB read
+Requests/sec:  22921.41
+Transfer/sec:      3.96MB
+
+---------------------------------------------------------
+ Concurrency: 256 for curacao
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    10.87ms   10.25ms 470.83ms   89.83%
+    Req/Sec     5.93k   763.18    11.22k    84.62%
+  348236 requests in 15.00s, 60.11MB read
+Requests/sec:  23219.13
+Transfer/sec:      4.01MB

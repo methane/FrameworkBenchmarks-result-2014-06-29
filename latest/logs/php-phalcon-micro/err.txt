@@ -1,0 +1,157 @@
+restart: Unknown instance: 
+2014/06/29 00:48:39 [error] 15250#0: *4 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] No such file or directory' in /home/ubuntu/FrameworkBenchmarks/php-phalcon-micro/public/index.php:15
+Stack trace:
+#0 [internal function]: PDO->__construct('mysql:host=loca...', 'benchmarkdbuser', 'benchmarkdbpass', Array)
+#1 [internal function]: Phalcon\Db\Adapter\Pdo->connect(Array)
+#2 /home/ubuntu/FrameworkBenchmarks/php-phalcon-micro/public/index.php(15): Phalcon\Db\Adapter\Pdo->__construct(Array)
+#3 [internal function]: {closure}()
+#4 [internal function]: Phalcon\DI\Service->resolve(NULL, Object(Phalcon\DI\FactoryDefault))
+#5 [internal function]: Phalcon\DI->get('db')
+#6 /home/ubuntu/FrameworkBenchmarks/php-phalcon-micro/public/index.php(51): Phalcon\Mvc\Micro->offsetGet('db')
+#7 [internal function]: {closure}()
+#8 /home/ubuntu/FrameworkBenchmarks/php-phalcon-micro/public/index.php(100): Phalcon\Mvc\Micro->handle()
+#9 {main}
+  thrown in /home/ubuntu/FrameworkBenchmarks/php-phalcon-micro/public/index.p" while reading response header from upstream, client: 127.0.0.1, server: localhost, request: "GET /db HTTP/1.1", upstream: "fastcgi://127.0.0.1:9001", host: "127.0.0.1:8080"
+2014/06/29 00:48:39 [error] 15250#0: *5 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] No such file or directory' in /home/ubuntu/FrameworkBenchmarks/php-phalcon-micro/public/index.php:15
+Stack trace:
+#0 [internal function]: PDO->__construct('mysql:host=loca...', 'benchmarkdbuser', 'benchmarkdbpass', Array)
+#1 [internal function]: Phalcon\Db\Adapter\Pdo->connect(Array)
+#2 /home/ubuntu/FrameworkBenchmarks/php-phalcon-micro/public/index.php(15): Phalcon\Db\Adapter\Pdo->__construct(Array)
+#3 [internal function]: {closure}()
+#4 [internal function]: Phalcon\DI\Service->resolve(NULL, Object(Phalcon\DI\FactoryDefault))
+#5 [internal function]: Phalcon\DI->get('db')
+#6 /home/ubuntu/FrameworkBenchmarks/php-phalcon-micro/public/index.php(51): Phalcon\Mvc\Micro->offsetGet('db')
+#7 [internal function]: {closure}()
+#8 /home/ubuntu/FrameworkBenchmarks/php-phalcon-micro/public/index.php(100): Phalcon\Mvc\Micro->handle()
+#9 {main}
+  thrown in /home/ubuntu/FrameworkBenchmarks/php-phalcon-micro/public/index.p" while reading response header from upstream, client: 127.0.0.1, server: localhost, request: "GET /db HTTP/1.1", upstream: "fastcgi://127.0.0.1:9001", host: "127.0.0.1:8080"
+2014/06/29 00:48:39 [error] 15250#0: *6 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] No such file or directory' in /home/ubuntu/FrameworkBenchmarks/php-phalcon-micro/public/index.php:15
+Stack trace:
+#0 [internal function]: PDO->__construct('mysql:host=loca...', 'benchmarkdbuser', 'benchmarkdbpass', Array)
+#1 [internal function]: Phalcon\Db\Adapter\Pdo->connect(Array)
+#2 /home/ubuntu/FrameworkBenchmarks/php-phalcon-micro/public/index.php(15): Phalcon\Db\Adapter\Pdo->__construct(Array)
+#3 [internal function]: {closure}()
+#4 [internal function]: Phalcon\DI\Service->resolve(NULL, Object(Phalcon\DI\FactoryDefault))
+#5 [internal function]: Phalcon\DI->get('db')
+#6 /home/ubuntu/FrameworkBenchmarks/php-phalcon-micro/public/index.php(51): Phalcon\Mvc\Micro->offsetGet('db')
+#7 [internal function]: {closure}()
+#8 /home/ubuntu/FrameworkBenchmarks/php-phalcon-micro/public/index.php(100): Phalcon\Mvc\Micro->handle()
+#9 {main}
+  thrown in /home/ubuntu/FrameworkBenchmarks/php-phalcon-micro/public/index.p" while reading response header from upstream, client: 127.0.0.1, server: localhost, request: "GET /db?queries=2 HTTP/1.1", upstream: "fastcgi://127.0.0.1:9001", host: "127.0.0.1:8080"
+2014/06/29 00:48:39 [error] 15250#0: *7 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] No such file or directory' in /home/ubuntu/FrameworkBenchmarks/php-phalcon-micro/public/index.php:15
+Stack trace:
+#0 [internal function]: PDO->__construct('mysql:host=loca...', 'benchmarkdbuser', 'benchmarkdbpass', Array)
+#1 [internal function]: Phalcon\Db\Adapter\Pdo->connect(Array)
+#2 /home/ubuntu/FrameworkBenchmarks/php-phalcon-micro/public/index.php(15): Phalcon\Db\Adapter\Pdo->__construct(Array)
+#3 [internal function]: {closure}()
+#4 [internal function]: Phalcon\DI\Service->resolve(NULL, Object(Phalcon\DI\FactoryDefault))
+#5 [internal function]: Phalcon\DI->get('db')
+#6 /home/ubuntu/FrameworkBenchmarks/php-phalcon-micro/public/index.php(51): Phalcon\Mvc\Micro->offsetGet('db')
+#7 [internal function]: {closure}()
+#8 /home/ubuntu/FrameworkBenchmarks/php-phalcon-micro/public/index.php(100): Phalcon\Mvc\Micro->handle()
+#9 {main}
+  thrown in /home/ubuntu/FrameworkBenchmarks/php-phalcon-micro/public/index.p" while reading response header from upstream, client: 127.0.0.1, server: localhost, request: "GET /db?queries=2 HTTP/1.1", upstream: "fastcgi://127.0.0.1:9001", host: "127.0.0.1:8080"
+2014/06/29 00:48:39 [error] 15250#0: *8 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] No such file or directory' in /home/ubuntu/FrameworkBenchmarks/php-phalcon-micro/public/index.php:15
+Stack trace:
+#0 [internal function]: PDO->__construct('mysql:host=loca...', 'benchmarkdbuser', 'benchmarkdbpass', Array)
+#1 [internal function]: Phalcon\Db\Adapter\Pdo->connect(Array)
+#2 /home/ubuntu/FrameworkBenchmarks/php-phalcon-micro/public/index.php(15): Phalcon\Db\Adapter\Pdo->__construct(Array)
+#3 [internal function]: {closure}()
+#4 [internal function]: Phalcon\DI\Service->resolve(NULL, Object(Phalcon\DI\FactoryDefault))
+#5 [internal function]: Phalcon\DI->get('db')
+#6 /home/ubuntu/FrameworkBenchmarks/php-phalcon-micro/public/index.php(51): Phalcon\Mvc\Micro->offsetGet('db')
+#7 [internal function]: {closure}()
+#8 /home/ubuntu/FrameworkBenchmarks/php-phalcon-micro/public/index.php(100): Phalcon\Mvc\Micro->handle()
+#9 {main}
+  thrown in /home/ubuntu/FrameworkBenchmarks/php-phalcon-micro/public/index.p" while reading response header from upstream, client: 127.0.0.1, server: localhost, request: "GET /db?queries=0 HTTP/1.1", upstream: "fastcgi://127.0.0.1:9001", host: "127.0.0.1:8080"
+2014/06/29 00:48:39 [error] 15250#0: *9 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] No such file or directory' in /home/ubuntu/FrameworkBenchmarks/php-phalcon-micro/public/index.php:15
+Stack trace:
+#0 [internal function]: PDO->__construct('mysql:host=loca...', 'benchmarkdbuser', 'benchmarkdbpass', Array)
+#1 [internal function]: Phalcon\Db\Adapter\Pdo->connect(Array)
+#2 /home/ubuntu/FrameworkBenchmarks/php-phalcon-micro/public/index.php(15): Phalcon\Db\Adapter\Pdo->__construct(Array)
+#3 [internal function]: {closure}()
+#4 [internal function]: Phalcon\DI\Service->resolve(NULL, Object(Phalcon\DI\FactoryDefault))
+#5 [internal function]: Phalcon\DI->get('db')
+#6 /home/ubuntu/FrameworkBenchmarks/php-phalcon-micro/public/index.php(51): Phalcon\Mvc\Micro->offsetGet('db')
+#7 [internal function]: {closure}()
+#8 /home/ubuntu/FrameworkBenchmarks/php-phalcon-micro/public/index.php(100): Phalcon\Mvc\Micro->handle()
+#9 {main}
+  thrown in /home/ubuntu/FrameworkBenchmarks/php-phalcon-micro/public/index.p" while reading response header from upstream, client: 127.0.0.1, server: localhost, request: "GET /db?queries=0 HTTP/1.1", upstream: "fastcgi://127.0.0.1:9001", host: "127.0.0.1:8080"
+2014/06/29 00:48:39 [error] 15250#0: *10 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] No such file or directory' in /home/ubuntu/FrameworkBenchmarks/php-phalcon-micro/public/index.php:15
+Stack trace:
+#0 [internal function]: PDO->__construct('mysql:host=loca...', 'benchmarkdbuser', 'benchmarkdbpass', Array)
+#1 [internal function]: Phalcon\Db\Adapter\Pdo->connect(Array)
+#2 /home/ubuntu/FrameworkBenchmarks/php-phalcon-micro/public/index.php(15): Phalcon\Db\Adapter\Pdo->__construct(Array)
+#3 [internal function]: {closure}()
+#4 [internal function]: Phalcon\DI\Service->resolve(NULL, Object(Phalcon\DI\FactoryDefault))
+#5 [internal function]: Phalcon\DI->get('db')
+#6 /home/ubuntu/FrameworkBenchmarks/php-phalcon-micro/public/index.php(51): Phalcon\Mvc\Micro->offsetGet('db')
+#7 [internal function]: {closure}()
+#8 /home/ubuntu/FrameworkBenchmarks/php-phalcon-micro/public/index.php(100): Phalcon\Mvc\Micro->handle()
+#9 {main}
+  thrown in /home/ubuntu/FrameworkBenchmarks/php-phalcon-micro/public/index.p" while reading response header from upstream, client: 127.0.0.1, server: localhost, request: "GET /db?queries=foo HTTP/1.1", upstream: "fastcgi://127.0.0.1:9001", host: "127.0.0.1:8080"
+2014/06/29 00:48:39 [error] 15250#0: *11 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] No such file or directory' in /home/ubuntu/FrameworkBenchmarks/php-phalcon-micro/public/index.php:15
+Stack trace:
+#0 [internal function]: PDO->__construct('mysql:host=loca...', 'benchmarkdbuser', 'benchmarkdbpass', Array)
+#1 [internal function]: Phalcon\Db\Adapter\Pdo->connect(Array)
+#2 /home/ubuntu/FrameworkBenchmarks/php-phalcon-micro/public/index.php(15): Phalcon\Db\Adapter\Pdo->__construct(Array)
+#3 [internal function]: {closure}()
+#4 [internal function]: Phalcon\DI\Service->resolve(NULL, Object(Phalcon\DI\FactoryDefault))
+#5 [internal function]: Phalcon\DI->get('db')
+#6 /home/ubuntu/FrameworkBenchmarks/php-phalcon-micro/public/index.php(51): Phalcon\Mvc\Micro->offsetGet('db')
+#7 [internal function]: {closure}()
+#8 /home/ubuntu/FrameworkBenchmarks/php-phalcon-micro/public/index.php(100): Phalcon\Mvc\Micro->handle()
+#9 {main}
+  thrown in /home/ubuntu/FrameworkBenchmarks/php-phalcon-micro/public/index.p" while reading response header from upstream, client: 127.0.0.1, server: localhost, request: "GET /db?queries=foo HTTP/1.1", upstream: "fastcgi://127.0.0.1:9001", host: "127.0.0.1:8080"
+2014/06/29 00:48:39 [error] 15250#0: *12 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] No such file or directory' in /home/ubuntu/FrameworkBenchmarks/php-phalcon-micro/public/index.php:15
+Stack trace:
+#0 [internal function]: PDO->__construct('mysql:host=loca...', 'benchmarkdbuser', 'benchmarkdbpass', Array)
+#1 [internal function]: Phalcon\Db\Adapter\Pdo->connect(Array)
+#2 /home/ubuntu/FrameworkBenchmarks/php-phalcon-micro/public/index.php(15): Phalcon\Db\Adapter\Pdo->__construct(Array)
+#3 [internal function]: {closure}()
+#4 [internal function]: Phalcon\DI\Service->resolve(NULL, Object(Phalcon\DI\FactoryDefault))
+#5 [internal function]: Phalcon\DI->get('db')
+#6 /home/ubuntu/FrameworkBenchmarks/php-phalcon-micro/public/index.php(51): Phalcon\Mvc\Micro->offsetGet('db')
+#7 [internal function]: {closure}()
+#8 /home/ubuntu/FrameworkBenchmarks/php-phalcon-micro/public/index.php(100): Phalcon\Mvc\Micro->handle()
+#9 {main}
+  thrown in /home/ubuntu/FrameworkBenchmarks/php-phalcon-micro/public/index.p" while reading response header from upstream, client: 127.0.0.1, server: localhost, request: "GET /db?queries=501 HTTP/1.1", upstream: "fastcgi://127.0.0.1:9001", host: "127.0.0.1:8080"
+2014/06/29 00:48:39 [error] 15250#0: *13 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] No such file or directory' in /home/ubuntu/FrameworkBenchmarks/php-phalcon-micro/public/index.php:15
+Stack trace:
+#0 [internal function]: PDO->__construct('mysql:host=loca...', 'benchmarkdbuser', 'benchmarkdbpass', Array)
+#1 [internal function]: Phalcon\Db\Adapter\Pdo->connect(Array)
+#2 /home/ubuntu/FrameworkBenchmarks/php-phalcon-micro/public/index.php(15): Phalcon\Db\Adapter\Pdo->__construct(Array)
+#3 [internal function]: {closure}()
+#4 [internal function]: Phalcon\DI\Service->resolve(NULL, Object(Phalcon\DI\FactoryDefault))
+#5 [internal function]: Phalcon\DI->get('db')
+#6 /home/ubuntu/FrameworkBenchmarks/php-phalcon-micro/public/index.php(51): Phalcon\Mvc\Micro->offsetGet('db')
+#7 [internal function]: {closure}()
+#8 /home/ubuntu/FrameworkBenchmarks/php-phalcon-micro/public/index.php(100): Phalcon\Mvc\Micro->handle()
+#9 {main}
+  thrown in /home/ubuntu/FrameworkBenchmarks/php-phalcon-micro/public/index.p" while reading response header from upstream, client: 127.0.0.1, server: localhost, request: "GET /db?queries=501 HTTP/1.1", upstream: "fastcgi://127.0.0.1:9001", host: "127.0.0.1:8080"
+2014/06/29 00:48:39 [error] 15250#0: *14 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] No such file or directory' in /home/ubuntu/FrameworkBenchmarks/php-phalcon-micro/public/index.php:15
+Stack trace:
+#0 [internal function]: PDO->__construct('mysql:host=loca...', 'benchmarkdbuser', 'benchmarkdbpass', Array)
+#1 [internal function]: Phalcon\Db\Adapter\Pdo->connect(Array)
+#2 /home/ubuntu/FrameworkBenchmarks/php-phalcon-micro/public/index.php(15): Phalcon\Db\Adapter\Pdo->__construct(Array)
+#3 [internal function]: {closure}()
+#4 [internal function]: Phalcon\DI\Service->resolve(NULL, Object(Phalcon\DI\FactoryDefault))
+#5 [internal function]: Phalcon\DI->get('db')
+#6 /home/ubuntu/FrameworkBenchmarks/php-phalcon-micro/public/index.php(71): Phalcon\Mvc\Micro->offsetGet('db')
+#7 [internal function]: {closure}()
+#8 /home/ubuntu/FrameworkBenchmarks/php-phalcon-micro/public/index.php(100): Phalcon\Mvc\Micro->handle()
+#9 {main}
+  thrown in /home/ubuntu/FrameworkBenchmarks/php-phalcon-micro/public/index.p" while reading response header from upstream, client: 127.0.0.1, server: localhost, request: "GET /fortunes HTTP/1.1", upstream: "fastcgi://127.0.0.1:9001", host: "127.0.0.1:8080"
+2014/06/29 00:48:39 [error] 15250#0: *15 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] No such file or directory' in /home/ubuntu/FrameworkBenchmarks/php-phalcon-micro/public/index.php:15
+Stack trace:
+#0 [internal function]: PDO->__construct('mysql:host=loca...', 'benchmarkdbuser', 'benchmarkdbpass', Array)
+#1 [internal function]: Phalcon\Db\Adapter\Pdo->connect(Array)
+#2 /home/ubuntu/FrameworkBenchmarks/php-phalcon-micro/public/index.php(15): Phalcon\Db\Adapter\Pdo->__construct(Array)
+#3 [internal function]: {closure}()
+#4 [internal function]: Phalcon\DI\Service->resolve(NULL, Object(Phalcon\DI\FactoryDefault))
+#5 [internal function]: Phalcon\DI->get('db')
+#6 /home/ubuntu/FrameworkBenchmarks/php-phalcon-micro/public/index.php(71): Phalcon\Mvc\Micro->offsetGet('db')
+#7 [internal function]: {closure}()
+#8 /home/ubuntu/FrameworkBenchmarks/php-phalcon-micro/public/index.php(100): Phalcon\Mvc\Micro->handle()
+#9 {main}
+  thrown in /home/ubuntu/FrameworkBenchmarks/php-phalcon-micro/public/index.p" while reading response header from upstream, client: 127.0.0.1, server: localhost, request: "GET /fortunes HTTP/1.1", upstream: "fastcgi://127.0.0.1:9001", host: "127.0.0.1:8080"

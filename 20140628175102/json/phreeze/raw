@@ -1,0 +1,122 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer phreeze
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/index.php?json
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/index.php?json
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   536.22ms  664.27ms   1.51s    70.62%
+    Req/Sec    52.76    106.19     0.89k    86.88%
+  2713 requests in 6.00s, 1.09MB read
+Requests/sec:    451.90
+Transfer/sec:    185.33KB
+
+---------------------------------------------------------
+ Running Warmup phreeze
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/index.php?json
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/index.php?json
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    70.95ms  105.21ms 379.92ms   84.62%
+    Req/Sec    94.50      2.38    97.00     50.00%
+  6228 requests in 16.01s, 2.49MB read
+Requests/sec:    388.89
+Transfer/sec:    159.51KB
+
+---------------------------------------------------------
+ Concurrency: 8 for phreeze
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:8080/index.php?json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/index.php?json
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     2.55s   712.16ms   2.76s    92.75%
+    Req/Sec    28.86    111.56     0.95k    93.09%
+  1750 requests in 16.00s, 717.70KB read
+Requests/sec:    109.36
+Transfer/sec:     44.85KB
+
+---------------------------------------------------------
+ Concurrency: 16 for phreeze
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:8080/index.php?json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/index.php?json
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     3.38s   993.39ms   3.68s    91.91%
+    Req/Sec    38.91    137.10     0.88k    92.07%
+  2660 requests in 16.00s, 1.07MB read
+Requests/sec:    166.23
+Transfer/sec:     68.18KB
+
+---------------------------------------------------------
+ Concurrency: 32 for phreeze
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:8080/index.php?json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/index.php?json
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   108.05ms  434.16ms   2.37s    96.43%
+    Req/Sec    79.07     25.12   129.00     67.86%
+  4476 requests in 16.00s, 1.79MB read
+Requests/sec:    279.67
+Transfer/sec:    114.70KB
+
+---------------------------------------------------------
+ Concurrency: 64 for phreeze
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:8080/index.php?json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/index.php?json
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     2.00s   973.76ms   2.48s    80.50%
+    Req/Sec    70.74    168.48   639.00     87.50%
+  5114 requests in 16.00s, 2.05MB read
+Requests/sec:    319.54
+Transfer/sec:    131.06KB
+
+---------------------------------------------------------
+ Concurrency: 128 for phreeze
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:8080/index.php?json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/index.php?json
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   856.01ms    1.15s    2.65s    70.88%
+    Req/Sec   106.12     81.69   234.00     50.00%
+  7260 requests in 16.01s, 2.91MB read
+Requests/sec:    453.56
+Transfer/sec:    186.03KB
+
+---------------------------------------------------------
+ Concurrency: 256 for phreeze
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/index.php?json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/index.php?json
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   542.58ms  971.99ms   2.67s    80.77%
+    Req/Sec   110.00     16.23   139.00     83.33%
+  6585 requests in 15.62s, 2.64MB read
+Requests/sec:    421.45
+Transfer/sec:    172.86KB

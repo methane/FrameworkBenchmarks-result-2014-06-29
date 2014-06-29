@@ -1,0 +1,108 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer servlet-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/servlet/update?queries=2
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/servlet/update?queries=2
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     2.61ms    4.91ms  64.31ms   96.60%
+    Req/Sec   556.84    175.21     1.33k    76.95%
+  20987 requests in 5.00s, 3.89MB read
+Requests/sec:   4199.28
+Transfer/sec:    797.82KB
+
+---------------------------------------------------------
+ Running Warmup servlet-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/servlet/update?queries=2
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/servlet/update?queries=2
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    60.34ms   59.10ms 492.64ms   86.29%
+    Req/Sec     1.06k    87.20     1.35k    71.59%
+  63311 requests in 15.00s, 11.75MB read
+Requests/sec:   4221.12
+Transfer/sec:    802.00KB
+
+---------------------------------------------------------
+ Queries: 1 for servlet-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/servlet/update?queries=1
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/servlet/update?queries=1
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    35.71ms   45.38ms 378.73ms   86.30%
+    Req/Sec     1.82k   160.89     2.35k    69.21%
+  108717 requests in 15.00s, 16.88MB read
+Requests/sec:   7248.33
+Transfer/sec:      1.13MB
+
+---------------------------------------------------------
+ Queries: 5 for servlet-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/servlet/update?queries=5
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/servlet/update?queries=5
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   135.61ms  109.04ms 762.98ms   68.98%
+    Req/Sec   475.98     30.39   569.00     74.38%
+  28407 requests in 15.00s, 7.88MB read
+Requests/sec:   1893.32
+Transfer/sec:    537.83KB
+
+---------------------------------------------------------
+ Queries: 10 for servlet-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/servlet/update?queries=10
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/servlet/update?queries=10
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   250.54ms  129.51ms 901.24ms   70.55%
+    Req/Sec   251.58     10.29   285.00     73.44%
+  14953 requests in 15.01s, 6.41MB read
+Requests/sec:    996.07
+Transfer/sec:    437.52KB
+
+---------------------------------------------------------
+ Queries: 15 for servlet-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/servlet/update?queries=15
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/servlet/update?queries=15
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   380.14ms  188.87ms   1.32s    66.39%
+    Req/Sec   169.34      9.52   196.00     75.38%
+  10056 requests in 15.02s, 5.84MB read
+Requests/sec:    669.50
+Transfer/sec:    397.97KB
+
+---------------------------------------------------------
+ Queries: 20 for servlet-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/servlet/update?queries=20
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/servlet/update?queries=20
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   495.75ms  200.76ms   1.24s    69.11%
+    Req/Sec   130.25      6.41   147.00     76.19%
+  7710 requests in 15.01s, 5.64MB read
+Requests/sec:    513.64
+Transfer/sec:    385.01KB

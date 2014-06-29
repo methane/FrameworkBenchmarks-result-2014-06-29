@@ -1,0 +1,130 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer laravel
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/json
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/json
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    10.15ms   14.49ms  86.43ms   81.80%
+    Req/Sec   104.25     45.64   323.00     71.52%
+  4015 requests in 5.01s, 2.42MB read
+  Non-2xx or 3xx responses: 1996
+Requests/sec:    801.91
+Transfer/sec:    495.56KB
+
+---------------------------------------------------------
+ Running Warmup laravel
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/json
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   276.84ms  342.80ms   1.32s    77.62%
+    Req/Sec   213.15     11.75   245.00     71.21%
+  12804 requests in 15.02s, 7.71MB read
+  Non-2xx or 3xx responses: 6393
+Requests/sec:    852.66
+Transfer/sec:    525.90KB
+
+---------------------------------------------------------
+ Concurrency: 8 for laravel
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    10.09ms   13.99ms  69.26ms   81.54%
+    Req/Sec   216.28     67.39   452.00     67.63%
+  12876 requests in 15.00s, 7.76MB read
+  Non-2xx or 3xx responses: 6414
+Requests/sec:    858.16
+Transfer/sec:    529.77KB
+
+---------------------------------------------------------
+ Concurrency: 16 for laravel
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    19.47ms   29.66ms 174.13ms   78.91%
+    Req/Sec   211.90     56.18   446.00     71.68%
+  12688 requests in 15.01s, 7.65MB read
+  Non-2xx or 3xx responses: 6315
+Requests/sec:    845.50
+Transfer/sec:    522.27KB
+
+---------------------------------------------------------
+ Concurrency: 32 for laravel
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    35.17ms   61.80ms 341.00ms   79.96%
+    Req/Sec   212.86     39.97   336.00     65.65%
+  12762 requests in 15.01s, 7.70MB read
+  Non-2xx or 3xx responses: 6351
+Requests/sec:    850.33
+Transfer/sec:    525.33KB
+
+---------------------------------------------------------
+ Concurrency: 64 for laravel
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    71.46ms  110.26ms 588.14ms   76.05%
+    Req/Sec   212.23     27.79   297.00     67.83%
+  12723 requests in 15.00s, 7.67MB read
+  Non-2xx or 3xx responses: 6339
+Requests/sec:    848.10
+Transfer/sec:    523.64KB
+
+---------------------------------------------------------
+ Concurrency: 128 for laravel
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   150.20ms  208.78ms 751.05ms   85.37%
+    Req/Sec   213.59     18.82   259.00     74.70%
+  12799 requests in 15.01s, 7.72MB read
+  Non-2xx or 3xx responses: 6379
+Requests/sec:    852.89
+Transfer/sec:    526.47KB
+
+---------------------------------------------------------
+ Concurrency: 256 for laravel
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   307.29ms  367.60ms   1.82s    92.42%
+    Req/Sec   215.81     15.93   260.00     74.29%
+  12834 requests in 15.02s, 7.73MB read
+  Non-2xx or 3xx responses: 6406
+Requests/sec:    854.37
+Transfer/sec:    527.05KB

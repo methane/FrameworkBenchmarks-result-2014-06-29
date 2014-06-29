@@ -1,0 +1,109 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer bottle
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/updates?queries=2
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/updates?queries=2
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    10.03ms    4.60ms  51.78ms   65.18%
+    Req/Sec   124.56     63.48   312.00     67.73%
+  4789 requests in 5.00s, 1.01MB read
+Requests/sec:    957.35
+Transfer/sec:    206.21KB
+
+---------------------------------------------------------
+ Running Warmup bottle
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/updates?queries=2
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/updates?queries=2
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   266.48ms  131.52ms 859.38ms   80.27%
+    Req/Sec   237.99     13.85   283.00     66.30%
+  14248 requests in 15.01s, 3.00MB read
+Requests/sec:    949.47
+Transfer/sec:    204.51KB
+
+---------------------------------------------------------
+ Queries: 1 for bottle
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/updates?queries=1
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/updates?queries=1
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   169.54ms   86.17ms 483.02ms   71.35%
+    Req/Sec   379.46     25.82   450.00     63.79%
+  22748 requests in 15.00s, 4.10MB read
+Requests/sec:   1516.29
+Transfer/sec:    279.53KB
+
+---------------------------------------------------------
+ Queries: 5 for bottle
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/updates?queries=5
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/updates?queries=5
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   576.21ms  138.91ms   1.22s    77.04%
+    Req/Sec   111.45     12.17   147.00     76.56%
+  6679 requests in 15.01s, 2.02MB read
+Requests/sec:    444.88
+Transfer/sec:    137.68KB
+
+---------------------------------------------------------
+ Queries: 10 for bottle
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/updates?queries=10
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/updates?queries=10
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.07s   229.61ms   2.60s    79.54%
+    Req/Sec    59.11      6.50    75.00     76.60%
+  3543 requests in 15.04s, 1.61MB read
+Requests/sec:    235.54
+Transfer/sec:    109.45KB
+
+---------------------------------------------------------
+ Queries: 15 for bottle
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/updates?queries=15
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/updates?queries=15
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.52s   381.56ms   2.97s    76.03%
+    Req/Sec    41.28     12.97    79.00     69.77%
+  2416 requests in 15.00s, 1.46MB read
+Requests/sec:    161.01
+Transfer/sec:     99.81KB
+
+---------------------------------------------------------
+ Queries: 20 for bottle
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/updates?queries=20
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/updates?queries=20
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.67s   982.91ms   4.90s    72.60%
+    Req/Sec    30.84     10.62    69.00     87.50%
+  1817 requests in 15.12s, 1.45MB read
+  Socket errors: connect 0, read 437, write 0, timeout 0
+Requests/sec:    120.15
+Transfer/sec:     97.98KB

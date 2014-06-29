@@ -1,0 +1,138 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Sun Jun 29 04:55:13 UTC 2014
+
+  System load:  1.02               Processes:           140
+  Usage of /:   69.0% of 19.55GB   Users logged in:     1
+  Memory usage: 27%                IP address for eth0: 10.227.136.45
+  Swap usage:   0%
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer symfony2
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/json
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/json
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    47.45ms   97.27ms 628.73ms   93.38%
+    Req/Sec    44.51     23.20   118.00     69.85%
+  1788 requests in 5.03s, 504.01KB read
+  Non-2xx or 3xx responses: 887
+Requests/sec:    355.61
+Transfer/sec:    100.24KB
+
+---------------------------------------------------------
+ Running Warmup symfony2
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/json
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   675.13ms  586.75ms   2.85s    57.76%
+    Req/Sec    90.54     16.17   126.00     70.18%
+  5324 requests in 15.01s, 1.47MB read
+  Non-2xx or 3xx responses: 2644
+Requests/sec:    354.75
+Transfer/sec:    100.03KB
+
+---------------------------------------------------------
+ Concurrency: 8 for symfony2
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    29.55ms   66.66ms 888.75ms   96.86%
+    Req/Sec    93.36     35.57   210.00     69.42%
+  5596 requests in 15.03s, 1.54MB read
+  Non-2xx or 3xx responses: 2792
+Requests/sec:    372.21
+Transfer/sec:    105.00KB
+
+---------------------------------------------------------
+ Concurrency: 16 for symfony2
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    52.89ms   79.12ms 974.60ms   93.35%
+    Req/Sec    90.98     33.20   207.00     67.67%
+  5535 requests in 15.01s, 1.52MB read
+  Non-2xx or 3xx responses: 2758
+Requests/sec:    368.69
+Transfer/sec:    103.99KB
+
+---------------------------------------------------------
+ Concurrency: 32 for symfony2
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   100.89ms  144.91ms   1.11s    87.30%
+    Req/Sec    92.13     32.00   195.00     66.49%
+  5567 requests in 15.01s, 1.53MB read
+  Non-2xx or 3xx responses: 2775
+Requests/sec:    370.95
+Transfer/sec:    104.64KB
+
+---------------------------------------------------------
+ Concurrency: 64 for symfony2
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   169.30ms  217.58ms   1.64s    86.75%
+    Req/Sec    91.79     24.84   163.00     74.00%
+  5516 requests in 15.01s, 1.52MB read
+  Non-2xx or 3xx responses: 2743
+Requests/sec:    367.40
+Transfer/sec:    103.61KB
+
+---------------------------------------------------------
+ Concurrency: 128 for symfony2
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   349.08ms  310.89ms   2.03s    76.08%
+    Req/Sec    89.24     10.81   117.00     70.93%
+  5419 requests in 15.04s, 1.49MB read
+  Non-2xx or 3xx responses: 2689
+Requests/sec:    360.28
+Transfer/sec:    101.58KB
+
+---------------------------------------------------------
+ Concurrency: 256 for symfony2
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   698.28ms  615.75ms   2.72s    63.05%
+    Req/Sec    90.82     33.84   197.00     78.69%
+  5347 requests in 15.02s, 1.47MB read
+  Non-2xx or 3xx responses: 2653
+Requests/sec:    356.10
+Transfer/sec:    100.40KB

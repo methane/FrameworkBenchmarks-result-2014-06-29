@@ -1,0 +1,122 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer play1siena
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/play1/json
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/play1/json
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     5.88ms   11.52ms  55.47ms   90.79%
+    Req/Sec   570.77    430.21     3.33k    73.30%
+  20953 requests in 5.00s, 8.67MB read
+Requests/sec:   4191.32
+Transfer/sec:      1.73MB
+
+---------------------------------------------------------
+ Running Warmup play1siena
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/play1/json
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/play1/json
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    46.41ms  217.43ms   2.82s    96.51%
+    Req/Sec     5.51k     2.39k   15.56k    69.28%
+  289447 requests in 14.99s, 119.80MB read
+Requests/sec:  19308.06
+Transfer/sec:      7.99MB
+
+---------------------------------------------------------
+ Concurrency: 8 for play1siena
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:8080/play1/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/play1/json
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   353.35us  362.50us  14.08ms   99.23%
+    Req/Sec     6.08k     1.21k   12.22k    87.75%
+  345390 requests in 15.00s, 142.96MB read
+Requests/sec:  23028.11
+Transfer/sec:      9.53MB
+
+---------------------------------------------------------
+ Concurrency: 16 for play1siena
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:8080/play1/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/play1/json
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   694.69us  490.41us  13.56ms   96.30%
+    Req/Sec     6.12k   800.06    12.33k    92.89%
+  346986 requests in 15.00s, 143.62MB read
+Requests/sec:  23134.09
+Transfer/sec:      9.58MB
+
+---------------------------------------------------------
+ Concurrency: 32 for play1siena
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:8080/play1/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/play1/json
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.55ms    3.46ms  95.82ms   97.82%
+    Req/Sec     5.97k     1.35k   14.78k    81.58%
+  338941 requests in 15.00s, 140.29MB read
+Requests/sec:  22598.10
+Transfer/sec:      9.35MB
+
+---------------------------------------------------------
+ Concurrency: 64 for play1siena
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:8080/play1/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/play1/json
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     5.65ms   26.06ms 243.24ms   96.24%
+    Req/Sec     5.65k     2.18k   17.00k    71.94%
+  320666 requests in 15.00s, 132.72MB read
+Requests/sec:  21379.59
+Transfer/sec:      8.85MB
+
+---------------------------------------------------------
+ Concurrency: 128 for play1siena
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:8080/play1/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/play1/json
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    15.32ms   71.42ms 549.07ms   95.46%
+    Req/Sec     5.60k     2.26k   15.70k    70.53%
+  317747 requests in 15.00s, 131.51MB read
+Requests/sec:  21185.05
+Transfer/sec:      8.77MB
+
+---------------------------------------------------------
+ Concurrency: 256 for play1siena
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/play1/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/play1/json
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    46.08ms  166.56ms 924.11ms   93.32%
+    Req/Sec     5.47k     2.40k   17.11k    69.96%
+  310287 requests in 15.00s, 128.43MB read
+Requests/sec:  20691.70
+Transfer/sec:      8.56MB

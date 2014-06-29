@@ -1,0 +1,183 @@
+test.os.lower() = linux  test.database_os.lower() = linux
+self.results['frameworks'] != None: True
+test.name: jester
+self.results['completed']: {}
+
+=====================================================
+  Beginning jester
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Starting jester
+-----------------------------------------------------
+config/nimrod.cfg(36, 2) Hint: added path: '/home/ubuntu/.babel/pkgs/' [Path]
+Hint: used config file '/home/ubuntu/FrameworkBenchmarks/installs/nimrod/config/nimrod.cfg' [Conf]
+Hint: system [Processing]
+Hint: hello [Processing]
+Hint: jester [Processing]
+Hint: httpserver [Processing]
+Hint: parseutils [Processing]
+Hint: strutils [Processing]
+Hint: os [Processing]
+Hint: times [Processing]
+Hint: posix [Processing]
+Hint: osproc [Processing]
+Hint: strtabs [Processing]
+Hint: hashes [Processing]
+Hint: streams [Processing]
+Hint: sockets [Processing]
+Hint: unsigned [Processing]
+Hint: asyncio [Processing]
+Hint: re [Processing]
+Hint: pcre [Processing]
+Hint: tables [Processing]
+Hint: math [Processing]
+Hint: uri [Processing]
+Hint: scgi [Processing]
+Hint: cookies [Processing]
+Hint: mimetypes [Processing]
+Hint: patterns [Processing]
+Hint: errorpages [Processing]
+Hint: htmlgen [Processing]
+Hint: macros [Processing]
+Hint: utils [Processing]
+Hint: cgi [Processing]
+/home/ubuntu/FrameworkBenchmarks/installs/jester/jester/jester.nim(402, 5) Hint: 'jester.controlCHook()' is declared but not used [XDeclaredButNotUsed]
+Hint: json [Processing]
+Hint: lexbase [Processing]
+Hint: unicode [Processing]
+gcc -c -w -O3 -fno-strict-aliasing -I/home/ubuntu/FrameworkBenchmarks/installs/nimrod/lib -o /home/ubuntu/FrameworkBenchmarks/jester/nimcache/jester_hello.o /home/ubuntu/FrameworkBenchmarks/jester/nimcache/jester_hello.c
+gcc -c -w -O3 -fno-strict-aliasing -I/home/ubuntu/FrameworkBenchmarks/installs/nimrod/lib -o /home/ubuntu/FrameworkBenchmarks/jester/nimcache/pure_httpserver.o /home/ubuntu/FrameworkBenchmarks/jester/nimcache/pure_httpserver.c
+gcc -c -w -O3 -fno-strict-aliasing -I/home/ubuntu/FrameworkBenchmarks/installs/nimrod/lib -o /home/ubuntu/FrameworkBenchmarks/jester/nimcache/pure_parseutils.o /home/ubuntu/FrameworkBenchmarks/jester/nimcache/pure_parseutils.c
+gcc -c -w -O3 -fno-strict-aliasing -I/home/ubuntu/FrameworkBenchmarks/installs/nimrod/lib -o /home/ubuntu/FrameworkBenchmarks/jester/nimcache/pure_strutils.o /home/ubuntu/FrameworkBenchmarks/jester/nimcache/pure_strutils.c
+gcc -c -w -O3 -fno-strict-aliasing -I/home/ubuntu/FrameworkBenchmarks/installs/nimrod/lib -o /home/ubuntu/FrameworkBenchmarks/jester/nimcache/pure_os.o /home/ubuntu/FrameworkBenchmarks/jester/nimcache/pure_os.c
+gcc -c -w -O3 -fno-strict-aliasing -I/home/ubuntu/FrameworkBenchmarks/installs/nimrod/lib -o /home/ubuntu/FrameworkBenchmarks/jester/nimcache/pure_times.o /home/ubuntu/FrameworkBenchmarks/jester/nimcache/pure_times.c
+gcc -c -w -O3 -fno-strict-aliasing -I/home/ubuntu/FrameworkBenchmarks/installs/nimrod/lib -o /home/ubuntu/FrameworkBenchmarks/jester/nimcache/posix_posix.o /home/ubuntu/FrameworkBenchmarks/jester/nimcache/posix_posix.c
+gcc -c -w -O3 -fno-strict-aliasing -I/home/ubuntu/FrameworkBenchmarks/installs/nimrod/lib -o /home/ubuntu/FrameworkBenchmarks/jester/nimcache/pure_osproc.o /home/ubuntu/FrameworkBenchmarks/jester/nimcache/pure_osproc.c
+gcc   -o /home/ubuntu/FrameworkBenchmarks/jester/hello  /home/ubuntu/FrameworkBenchmarks/jester/nimcache/pure_unicode.o /home/ubuntu/FrameworkBenchmarks/jester/nimcache/pure_lexbase.o /home/ubuntu/FrameworkBenchmarks/jester/nimcache/pure_json.o /home/ubuntu/FrameworkBenchmarks/jester/nimcache/pure_cgi.o /home/ubuntu/FrameworkBenchmarks/jester/nimcache/jester_utils.o /home/ubuntu/FrameworkBenchmarks/jester/nimcache/core_macros.o /home/ubuntu/FrameworkBenchmarks/jester/nimcache/pure_htmlgen.o /home/ubuntu/FrameworkBenchmarks/jester/nimcache/jester_errorpages.o /home/ubuntu/FrameworkBenchmarks/jester/nimcache/jester_patterns.o /home/ubuntu/FrameworkBenchmarks/jester/nimcache/pure_mimetypes.o /home/ubuntu/FrameworkBenchmarks/jester/nimcache/pure_cookies.o /home/ubuntu/FrameworkBenchmarks/jester/nimcache/pure_scgi.o /home/ubuntu/FrameworkBenchmarks/jester/nimcache/pure_uri.o /home/ubuntu/FrameworkBenchmarks/jester/nimcache/pure_math.o /home/ubuntu/FrameworkBenchmarks/jester/nimcache/collections_tables.o /home/ubuntu/FrameworkBenchmarks/jester/nimcache/wrappers_pcre.o /home/ubuntu/FrameworkBenchmarks/jester/nimcache/impure_re.o /home/ubuntu/FrameworkBenchmarks/jester/nimcache/pure_asyncio.o /home/ubuntu/FrameworkBenchmarks/jester/nimcache/core_unsigned.o /home/ubuntu/FrameworkBenchmarks/jester/nimcache/pure_sockets.o /home/ubuntu/FrameworkBenchmarks/jester/nimcache/pure_streams.o /home/ubuntu/FrameworkBenchmarks/jester/nimcache/pure_hashes.o /home/ubuntu/FrameworkBenchmarks/jester/nimcache/pure_strtabs.o /home/ubuntu/FrameworkBenchmarks/jester/nimcache/pure_osproc.o /home/ubuntu/FrameworkBenchmarks/jester/nimcache/posix_posix.o /home/ubuntu/FrameworkBenchmarks/jester/nimcache/pure_times.o /home/ubuntu/FrameworkBenchmarks/jester/nimcache/pure_os.o /home/ubuntu/FrameworkBenchmarks/jester/nimcache/pure_strutils.o /home/ubuntu/FrameworkBenchmarks/jester/nimcache/pure_parseutils.o /home/ubuntu/FrameworkBenchmarks/jester/nimcache/pure_httpserver.o /home/ubuntu/FrameworkBenchmarks/jester/nimcache/jester_jester.o /home/ubuntu/FrameworkBenchmarks/jester/nimcache/nimrod_system.o /home/ubuntu/FrameworkBenchmarks/jester/nimcache/jester_hello.o  -ldl -lm
+Hint: operation successful (27034 lines compiled; 1.438 sec total; 39.399MB) [SuccessX]
+
+-----------------------------------------------------
+  VERIFYING JSON (/json)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Server: nginx/1.4.1
+Date: Sat, 28 Jun 2014 23:02:50 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+
+{ "message": "Hello, World!"}
+
+
+VALIDATING JSON ... PASS
+
+
+-----------------------------------------------------
+  Benchmarking jester ...
+-----------------------------------------------------
+BENCHMARKING JSON ... Jester is making jokes for scgi at localhost:9000
+GET /json
+  200 OK {Content-Type: application/json}
+GET /json
+  200 OK {Content-Type: application/json}
+GET /json
+  200 OK {Content-Type: application/json}
+GET /json
+  200 OK {Content-Type: application/json}
+GET /json
+  200 OK {Content-Type: application/json}
+GET /json
+  200 OK {Content-Type: application/json}
+GET /json
+  200 OK {Content-Type: application/json}
+GET /json
+  200 OK {Content-Type: application/json}
+GET /json
+  200 OK {Content-Type: application/json}
+GET /json
+  200 OK {Content-Type: application/json}
+GET /json
+  200 OK {Content-Type: application/json}
+GET /json
+  200 OK {Content-Type: application/json}
+GET /json
+  200 OK {Content-Type: application/json}
+GET /json
+  200 OK {Content-Type: application/json}
+GET /json
+  200 OK {Content-Type: application/json}
+GET /json
+  200 OK {Content-Type: application/json}
+GET /json
+  200 OK {Content-Type: application/json}
+GET /json
+  200 OK {Content-Type: application/json}
+GET /json
+  200 OK {Content-Type: application/json}
+GET /json
+  200 OK {Content-Type: application/json}
+GET /json
+  200 OK {Content-Type: application/json}
+GET /json
+  200 OK {Content-Type: application/json}
+GET /json
+  200 OK {Content-Type: application/json}
+GET /json
+  200 OK {Content-Type: application/json}
+GET /json
+  200 OK {Content-Type: application/json}
+GET /json
+  200 OK {Content-Type: application/json}
+GET /json
+  200 OK {Content-Type: application/json}
+GET /json
+  200 OK {Content-Type: application/json}
+GET /json
+  200 OK {Content-Type: application/json}
+GET /json
+  200 OK {Content-Type: application/json}
+GET /json
+  200 OK {Content-Type: application/json}
+GET /json
+  200 OK {Content-Type: application/json}
+GET /json
+  200 OK {Content-Type: application/json}
+GET /json
+  200 OK {Content-Type: application/json}
+GET /json
+  200 OK {Content-Type: application/json}
+GET /json
+  200 OK {Content-Type: application/json}
+GET /json
+  200 OK {Content-Type: application/json}
+GET /json
+  200 OK {Content-Type: application/json}
+GET /json
+  200 OK {Content-Type: application/json}
+GET /json
+  200 OK {Content-Type: application/json}
+GET /json
+  200 OK {Content-Type: application/json}
+GET /json
+  200 OK {Content-Type: application/json}
+GET /json
+  200 OK {Content-Type: application/json}
+...
+  200 OK {Content-Type: application/json}
+GET /json
+  200 OK {Content-Type: application/json}
+GET /json
+  200 OK {Content-Complete
+
+-----------------------------------------------------
+  Stopping jester
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Stopped jester
+-----------------------------------------------------
+
+----------------------------------------------------
+Saving results through jester
+----------------------------------------------------

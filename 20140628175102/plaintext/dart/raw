@@ -1,0 +1,100 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer dart
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/plaintext
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/plaintext
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   622.44us  340.62us   7.51ms   82.63%
+    Req/Sec     1.69k   214.76     2.44k    75.45%
+  63952 requests in 5.00s, 10.67MB read
+Requests/sec:  12792.85
+Transfer/sec:      2.13MB
+
+---------------------------------------------------------
+ Running Warmup dart
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/plaintext
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/plaintext
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    15.36ms   22.58ms 410.07ms   94.87%
+    Req/Sec     4.35k   407.58     5.63k    67.66%
+  257686 requests in 15.00s, 42.99MB read
+Requests/sec:  17179.54
+Transfer/sec:      2.87MB
+
+---------------------------------------------------------
+ Concurrency: 256 for dart
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/plaintext
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   225.13ms   79.33ms 630.96ms   71.39%
+    Req/Sec     4.53k   288.77     5.12k    78.65%
+  270940 requests in 15.00s, 45.21MB read
+Requests/sec:  18064.47
+Transfer/sec:      3.01MB
+
+---------------------------------------------------------
+ Concurrency: 1024 for dart
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 1024 --timeout 1024 -t 4 http://127.0.0.1:8080/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/plaintext
+  4 threads and 1024 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   876.57ms  968.80ms   7.35s    87.97%
+    Req/Sec     4.52k   345.64     5.10k    68.25%
+  266757 requests in 15.00s, 44.57MB read
+  Socket errors: connect 0, read 9225, write 0, timeout 0
+  Non-2xx or 3xx responses: 337
+Requests/sec:  17789.06
+Transfer/sec:      2.97MB
+
+---------------------------------------------------------
+ Concurrency: 4096 for dart
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 4096 --timeout 4096 -t 4 http://127.0.0.1:8080/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/plaintext
+  4 threads and 4096 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     8.54s     5.94s   14.46s    67.83%
+    Req/Sec     2.23k     1.26k    5.45k    68.33%
+  136793 requests in 15.01s, 23.49MB read
+  Socket errors: connect 0, read 377123, write 0, timeout 801
+  Non-2xx or 3xx responses: 3914
+Requests/sec:   9115.65
+Transfer/sec:      1.57MB
+
+---------------------------------------------------------
+ Concurrency: 16384 for dart
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16384 --timeout 16384 -t 4 http://127.0.0.1:8080/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/plaintext
+  4 threads and 16384 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    12.98s     3.25s   14.32s    91.35%
+    Req/Sec     1.77k   675.36     4.48k    74.60%
+  110718 requests in 15.08s, 18.99MB read
+  Socket errors: connect 0, read 418055, write 0, timeout 17456
+  Non-2xx or 3xx responses: 3000
+Requests/sec:   7344.22
+Transfer/sec:      1.26MB

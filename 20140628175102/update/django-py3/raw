@@ -1,0 +1,110 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer django-py3
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/update?queries=2
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/update?queries=2
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    12.74ms    5.94ms  42.57ms   66.76%
+    Req/Sec    97.71     47.75   250.00     65.35%
+  3606 requests in 5.00s, 843.55KB read
+Requests/sec:    720.50
+Transfer/sec:    168.55KB
+
+---------------------------------------------------------
+ Running Warmup django-py3
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/update?queries=2
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/update?queries=2
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   346.99ms  143.91ms 906.52ms   66.63%
+    Req/Sec   181.21     12.87   211.00     73.75%
+  10873 requests in 15.01s, 2.48MB read
+Requests/sec:    724.50
+Transfer/sec:    169.49KB
+
+---------------------------------------------------------
+ Queries: 1 for django-py3
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/update?queries=1
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/update?queries=1
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   220.83ms  111.89ms 757.46ms   68.78%
+    Req/Sec   284.67     23.24   331.00     61.76%
+  17211 requests in 15.01s, 3.41MB read
+Requests/sec:   1146.62
+Transfer/sec:    232.66KB
+
+---------------------------------------------------------
+ Queries: 5 for django-py3
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/update?queries=5
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/update?queries=5
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   746.53ms  212.92ms   1.59s    68.11%
+    Req/Sec    86.44      6.35   102.00     83.64%
+  5168 requests in 15.02s, 1.65MB read
+Requests/sec:    344.14
+Transfer/sec:    112.54KB
+
+---------------------------------------------------------
+ Queries: 10 for django-py3
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/update?queries=10
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/update?queries=10
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.33s   352.75ms   2.77s    74.31%
+    Req/Sec    46.57      8.56    70.00     66.07%
+  2791 requests in 15.04s, 1.32MB read
+Requests/sec:    185.53
+Transfer/sec:     89.65KB
+
+---------------------------------------------------------
+ Queries: 15 for django-py3
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/update?queries=15
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/update?queries=15
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.66s   719.23ms   5.44s    64.42%
+    Req/Sec    31.72      8.25    55.00     71.88%
+  1888 requests in 15.03s, 1.23MB read
+  Socket errors: connect 0, read 310, write 0, timeout 0
+Requests/sec:    125.64
+Transfer/sec:     83.69KB
+
+---------------------------------------------------------
+ Queries: 20 for django-py3
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/update?queries=20
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/update?queries=20
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.87s   963.79ms   4.45s    65.90%
+    Req/Sec    24.24      7.55    48.00     70.27%
+  1435 requests in 15.04s, 1.20MB read
+  Socket errors: connect 0, read 542, write 0, timeout 0
+Requests/sec:     95.39
+Transfer/sec:     81.79KB

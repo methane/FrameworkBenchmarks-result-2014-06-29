@@ -1,0 +1,130 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Sun Jun 29 02:46:50 UTC 2014
+
+  System load:  3.93               Processes:           135
+  Usage of /:   68.5% of 19.55GB   Users logged in:     0
+  Memory usage: 26%                IP address for eth0: 10.227.136.45
+  Swap usage:   0%
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer rails-stripped-ruby
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/hello_world/json
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/hello_world/json
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    15.03ms   34.00ms 116.49ms   88.01%
+    Req/Sec   370.47    165.39   777.00     72.18%
+  14138 requests in 5.02s, 5.22MB read
+Requests/sec:   2818.61
+Transfer/sec:      1.04MB
+
+---------------------------------------------------------
+ Running Warmup rails-stripped-ruby
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/hello_world/json
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/hello_world/json
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    90.93ms    9.81ms 210.18ms   77.51%
+    Req/Sec   708.06     46.19     0.85k    72.52%
+  42425 requests in 15.00s, 15.66MB read
+Requests/sec:   2827.73
+Transfer/sec:      1.04MB
+
+---------------------------------------------------------
+ Concurrency: 8 for rails-stripped-ruby
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:8080/hello_world/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/hello_world/json
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     3.99ms   13.31ms 142.96ms   98.70%
+    Req/Sec   745.99    230.19     1.44k    63.39%
+  42390 requests in 15.00s, 15.64MB read
+Requests/sec:   2826.10
+Transfer/sec:      1.04MB
+
+---------------------------------------------------------
+ Concurrency: 16 for rails-stripped-ruby
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:8080/hello_world/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/hello_world/json
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     5.79ms    6.88ms 116.72ms   98.76%
+    Req/Sec   743.44    140.99     1.08k    72.63%
+  43000 requests in 15.00s, 15.87MB read
+Requests/sec:   2866.64
+Transfer/sec:      1.06MB
+
+---------------------------------------------------------
+ Concurrency: 32 for rails-stripped-ruby
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:8080/hello_world/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/hello_world/json
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    11.38ms    5.85ms 164.76ms   97.52%
+    Req/Sec   724.95    105.78     0.96k    66.29%
+  42700 requests in 15.00s, 15.76MB read
+Requests/sec:   2846.70
+Transfer/sec:      1.05MB
+
+---------------------------------------------------------
+ Concurrency: 64 for rails-stripped-ruby
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:8080/hello_world/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/hello_world/json
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    22.81ms    6.90ms 161.13ms   95.93%
+    Req/Sec   718.48     88.14     0.92k    68.91%
+  42718 requests in 15.00s, 15.76MB read
+Requests/sec:   2847.81
+Transfer/sec:      1.05MB
+
+---------------------------------------------------------
+ Concurrency: 128 for rails-stripped-ruby
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:8080/hello_world/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/hello_world/json
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    44.77ms    7.03ms 174.27ms   90.07%
+    Req/Sec   720.22     68.19     0.91k    68.55%
+  43082 requests in 15.00s, 15.90MB read
+Requests/sec:   2872.12
+Transfer/sec:      1.06MB
+
+---------------------------------------------------------
+ Concurrency: 256 for rails-stripped-ruby
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/hello_world/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/hello_world/json
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    90.48ms    9.42ms 226.16ms   79.10%
+    Req/Sec   709.66     47.86   849.00     74.35%
+  42530 requests in 15.00s, 15.70MB read
+Requests/sec:   2835.36
+Transfer/sec:      1.05MB

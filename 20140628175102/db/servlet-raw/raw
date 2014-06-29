@@ -1,0 +1,122 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer servlet-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/servlet/db
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/servlet/db
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.66ms    3.90ms  32.92ms   96.28%
+    Req/Sec     1.11k   547.88     3.00k    65.34%
+  40214 requests in 5.00s, 6.17MB read
+Requests/sec:   8047.35
+Transfer/sec:      1.23MB
+
+---------------------------------------------------------
+ Running Warmup servlet-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/servlet/db
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/servlet/db
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    61.90ms  341.66ms   3.45s    98.43%
+    Req/Sec     2.92k     0.86k    8.89k    81.95%
+  159545 requests in 14.99s, 24.46MB read
+Requests/sec:  10643.82
+Transfer/sec:      1.63MB
+
+---------------------------------------------------------
+ Concurrency: 8 for servlet-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:8080/servlet/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/servlet/db
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   712.46us    2.08ms  30.76ms   99.12%
+    Req/Sec     3.61k   516.60     5.67k    83.07%
+  205310 requests in 15.00s, 31.48MB read
+Requests/sec:  13688.16
+Transfer/sec:      2.10MB
+
+---------------------------------------------------------
+ Concurrency: 16 for servlet-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:8080/servlet/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/servlet/db
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.14ms    1.70ms  42.58ms   93.26%
+    Req/Sec     3.84k   642.58     6.33k    74.51%
+  218648 requests in 15.00s, 33.52MB read
+Requests/sec:  14577.16
+Transfer/sec:      2.24MB
+
+---------------------------------------------------------
+ Concurrency: 32 for servlet-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:8080/servlet/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/servlet/db
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     2.23ms    3.58ms 112.42ms   91.96%
+    Req/Sec     3.88k   753.47     7.22k    70.07%
+  220617 requests in 15.00s, 33.83MB read
+Requests/sec:  14711.12
+Transfer/sec:      2.26MB
+
+---------------------------------------------------------
+ Concurrency: 64 for servlet-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:8080/servlet/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/servlet/db
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     4.51ms    5.70ms 217.49ms   90.53%
+    Req/Sec     3.72k   561.57     5.92k    75.29%
+  215871 requests in 14.99s, 33.10MB read
+Requests/sec:  14396.25
+Transfer/sec:      2.21MB
+
+---------------------------------------------------------
+ Concurrency: 128 for servlet-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:8080/servlet/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/servlet/db
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     9.10ms    8.80ms 231.04ms   94.70%
+    Req/Sec     3.67k   377.81     6.56k    81.91%
+  216649 requests in 15.00s, 33.22MB read
+Requests/sec:  14443.86
+Transfer/sec:      2.21MB
+
+---------------------------------------------------------
+ Concurrency: 256 for servlet-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/servlet/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/servlet/db
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    18.34ms   23.48ms 782.02ms   96.11%
+    Req/Sec     3.60k   470.13     7.71k    83.58%
+  212721 requests in 15.00s, 32.62MB read
+Requests/sec:  14182.72
+Transfer/sec:      2.17MB

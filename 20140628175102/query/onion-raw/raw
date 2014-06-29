@@ -1,0 +1,114 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer onion-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/queries?queries=2
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/queries?queries=2
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   696.34us  362.66us   3.84ms   77.98%
+    Req/Sec     1.50k   220.31     2.22k    72.43%
+  56951 requests in 5.00s, 12.86MB read
+Requests/sec:  11392.72
+Transfer/sec:      2.57MB
+
+---------------------------------------------------------
+ Running Warmup onion-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/queries?queries=2
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/queries?queries=2
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    41.69ms  200.34ms   1.77s    98.62%
+    Req/Sec     2.99k     1.08k    5.59k    74.41%
+  176214 requests in 15.00s, 39.78MB read
+  Socket errors: connect 0, read 80, write 0, timeout 89
+Requests/sec:  11748.04
+Transfer/sec:      2.65MB
+
+---------------------------------------------------------
+ Queries: 1 for onion-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/queries?queries=1
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/queries?queries=1
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    82.08ms  462.08ms   3.47s    97.28%
+    Req/Sec     5.56k     3.22k   19.20k    70.13%
+  292030 requests in 15.00s, 53.71MB read
+  Socket errors: connect 0, read 205, write 0, timeout 0
+Requests/sec:  19468.99
+Transfer/sec:      3.58MB
+
+---------------------------------------------------------
+ Queries: 5 for onion-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/queries?queries=5
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/queries?queries=5
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    37.90ms   59.86ms   3.44s    99.90%
+    Req/Sec     1.60k   265.43     2.53k    72.40%
+  83594 requests in 15.00s, 29.44MB read
+  Socket errors: connect 0, read 74, write 0, timeout 77
+Requests/sec:   5572.14
+Transfer/sec:      1.96MB
+
+---------------------------------------------------------
+ Queries: 10 for onion-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/queries?queries=10
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/queries?queries=10
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    83.07ms  221.11ms   3.80s    98.80%
+    Req/Sec   762.96    318.17     1.46k    69.23%
+  45380 requests in 15.00s, 25.48MB read
+  Socket errors: connect 0, read 27, write 0, timeout 384
+Requests/sec:   3024.46
+Transfer/sec:      1.70MB
+
+---------------------------------------------------------
+ Queries: 15 for onion-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/queries?queries=15
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/queries?queries=15
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   109.62ms   54.95ms   1.91s    99.76%
+    Req/Sec   585.16     91.41   768.00     79.91%
+  31105 requests in 15.00s, 23.97MB read
+  Socket errors: connect 0, read 55, write 0, timeout 64
+Requests/sec:   2073.76
+Transfer/sec:      1.60MB
+
+---------------------------------------------------------
+ Queries: 20 for onion-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/queries?queries=20
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/queries?queries=20
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   328.71ms  878.37ms   3.80s    91.46%
+    Req/Sec   410.88    247.83     1.00k    58.46%
+  23636 requests in 15.00s, 23.16MB read
+  Socket errors: connect 0, read 284, write 0, timeout 5
+Requests/sec:   1575.82
+Transfer/sec:      1.54MB

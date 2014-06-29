@@ -1,0 +1,122 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer bottle-py3
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/fortune
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/fortune
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     5.66ms    2.83ms  40.21ms   96.45%
+    Req/Sec   194.09     49.50   454.00     75.81%
+  7435 requests in 5.00s, 10.34MB read
+Requests/sec:   1486.46
+Transfer/sec:      2.07MB
+
+---------------------------------------------------------
+ Running Warmup bottle-py3
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/fortune
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortune
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   172.80ms   24.30ms 339.29ms   69.58%
+    Req/Sec   370.14     22.53   440.00     69.17%
+  22112 requests in 15.00s, 30.75MB read
+Requests/sec:   1473.77
+Transfer/sec:      2.05MB
+
+---------------------------------------------------------
+ Concurrency: 8 for bottle-py3
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:8080/fortune -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortune
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     6.00ms    2.86ms  36.88ms   62.45%
+    Req/Sec   387.52    142.73     0.92k    65.80%
+  22395 requests in 15.00s, 31.14MB read
+Requests/sec:   1492.79
+Transfer/sec:      2.08MB
+
+---------------------------------------------------------
+ Concurrency: 16 for bottle-py3
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:8080/fortune -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortune
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    11.42ms    6.69ms  37.44ms   81.10%
+    Req/Sec   382.41    121.71   709.00     70.07%
+  22489 requests in 15.00s, 31.27MB read
+Requests/sec:   1498.97
+Transfer/sec:      2.08MB
+
+---------------------------------------------------------
+ Concurrency: 32 for bottle-py3
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:8080/fortune -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortune
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    23.54ms   11.84ms  80.63ms   69.34%
+    Req/Sec   374.80    117.08   714.00     69.01%
+  22306 requests in 15.00s, 31.02MB read
+Requests/sec:   1486.96
+Transfer/sec:      2.07MB
+
+---------------------------------------------------------
+ Concurrency: 64 for bottle-py3
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:8080/fortune -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortune
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    42.80ms   21.61ms 137.01ms   78.63%
+    Req/Sec   388.51     72.55   500.00     62.82%
+  22130 requests in 15.00s, 30.77MB read
+Requests/sec:   1475.01
+Transfer/sec:      2.05MB
+
+---------------------------------------------------------
+ Concurrency: 128 for bottle-py3
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:8080/fortune -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortune
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    86.79ms   34.24ms 181.57ms   41.61%
+    Req/Sec   369.63     35.77   440.00     68.06%
+  22150 requests in 15.00s, 30.80MB read
+Requests/sec:   1476.49
+Transfer/sec:      2.05MB
+
+---------------------------------------------------------
+ Concurrency: 256 for bottle-py3
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/fortune -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortune
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   173.13ms   26.28ms 320.96ms   64.01%
+    Req/Sec   369.49     11.15   388.00     63.48%
+  22157 requests in 15.00s, 30.81MB read
+Requests/sec:   1477.06
+Transfer/sec:      2.05MB

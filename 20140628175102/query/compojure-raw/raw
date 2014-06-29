@@ -1,0 +1,108 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer compojure-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/compojure/dbraw/2
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/compojure/dbraw/2
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.87ms    2.11ms  30.89ms   97.05%
+    Req/Sec   639.32    151.39     1.22k    78.41%
+  23821 requests in 5.00s, 4.76MB read
+Requests/sec:   4765.80
+Transfer/sec:      0.95MB
+
+---------------------------------------------------------
+ Running Warmup compojure-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/compojure/dbraw/2
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/compojure/dbraw/2
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    54.19ms   61.36ms 403.10ms   86.05%
+    Req/Sec     1.19k    84.76     1.43k    66.05%
+  70865 requests in 15.00s, 14.16MB read
+Requests/sec:   4723.99
+Transfer/sec:      0.94MB
+
+---------------------------------------------------------
+ Queries: 1 for compojure-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/compojure/dbraw/1
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/compojure/dbraw/1
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    32.66ms   54.88ms 686.17ms   89.25%
+    Req/Sec     1.92k   183.38     2.46k    67.77%
+  114693 requests in 15.00s, 19.45MB read
+Requests/sec:   7646.22
+Transfer/sec:      1.30MB
+
+---------------------------------------------------------
+ Queries: 5 for compojure-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/compojure/dbraw/5
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/compojure/dbraw/5
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   114.44ms   84.56ms 614.26ms   72.66%
+    Req/Sec   565.79     26.55   645.00     68.18%
+  33640 requests in 15.00s, 9.81MB read
+Requests/sec:   2241.95
+Transfer/sec:    669.76KB
+
+---------------------------------------------------------
+ Queries: 10 for compojure-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/compojure/dbraw/10
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/compojure/dbraw/10
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   213.49ms  114.66ms 667.19ms   67.69%
+    Req/Sec   297.86     13.26   324.00     72.22%
+  17755 requests in 15.00s, 7.87MB read
+Requests/sec:   1183.63
+Transfer/sec:    537.29KB
+
+---------------------------------------------------------
+ Queries: 15 for compojure-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/compojure/dbraw/15
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/compojure/dbraw/15
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   308.17ms  140.31ms 844.07ms   67.19%
+    Req/Sec   203.87      8.11   229.00     67.65%
+  12112 requests in 15.00s, 7.20MB read
+Requests/sec:    807.36
+Transfer/sec:    491.74KB
+
+---------------------------------------------------------
+ Queries: 20 for compojure-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/compojure/dbraw/20
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/compojure/dbraw/20
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   416.21ms  158.17ms 982.45ms   68.99%
+    Req/Sec   155.02      6.16   170.00     77.78%
+  9182 requests in 15.01s, 6.85MB read
+Requests/sec:    611.65
+Transfer/sec:    467.47KB

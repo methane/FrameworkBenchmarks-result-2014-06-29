@@ -1,0 +1,122 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer flask-mysql-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/dbsraw
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/dbsraw
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     2.56ms    1.39ms  23.08ms   87.44%
+    Req/Sec   473.37    204.07     1.11k    85.87%
+  17860 requests in 5.00s, 3.23MB read
+Requests/sec:   3571.40
+Transfer/sec:    661.89KB
+
+---------------------------------------------------------
+ Running Warmup flask-mysql-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/dbsraw
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/dbsraw
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    74.23ms   21.89ms 220.31ms   66.56%
+    Req/Sec     0.87k    68.47     1.08k    69.43%
+  52137 requests in 15.00s, 9.44MB read
+Requests/sec:   3475.69
+Transfer/sec:    644.16KB
+
+---------------------------------------------------------
+ Concurrency: 8 for flask-mysql-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:8080/dbsraw -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/dbsraw
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     2.32ms    1.25ms  21.48ms   87.74%
+    Req/Sec     0.94k   191.19     1.55k    76.76%
+  53601 requests in 15.02s, 9.70MB read
+Requests/sec:   3569.59
+Transfer/sec:    661.56KB
+
+---------------------------------------------------------
+ Concurrency: 16 for flask-mysql-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:8080/dbsraw -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/dbsraw
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     4.45ms    3.17ms  31.97ms   79.82%
+    Req/Sec     0.98k   273.80     1.78k    64.27%
+  53360 requests in 15.00s, 9.66MB read
+Requests/sec:   3557.69
+Transfer/sec:    659.35KB
+
+---------------------------------------------------------
+ Concurrency: 32 for flask-mysql-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:8080/dbsraw -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/dbsraw
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     9.33ms    6.10ms  33.16ms   61.09%
+    Req/Sec     0.98k   351.20     1.68k    67.67%
+  53830 requests in 15.00s, 9.74MB read
+Requests/sec:   3588.55
+Transfer/sec:    665.08KB
+
+---------------------------------------------------------
+ Concurrency: 64 for flask-mysql-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:8080/dbsraw -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/dbsraw
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    17.86ms    6.35ms  47.46ms   64.28%
+    Req/Sec     0.91k    86.37     1.12k    56.58%
+  53602 requests in 15.00s, 9.70MB read
+Requests/sec:   3572.80
+Transfer/sec:    662.15KB
+
+---------------------------------------------------------
+ Concurrency: 128 for flask-mysql-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:8080/dbsraw -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/dbsraw
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    37.04ms   17.05ms 135.42ms   68.63%
+    Req/Sec     0.88k   104.51     1.19k    69.49%
+  52294 requests in 15.00s, 9.46MB read
+Requests/sec:   3486.09
+Transfer/sec:    646.10KB
+
+---------------------------------------------------------
+ Concurrency: 256 for flask-mysql-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/dbsraw -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/dbsraw
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    73.56ms   21.21ms 128.95ms   61.62%
+    Req/Sec     0.87k    46.86     0.99k    70.67%
+  51985 requests in 15.00s, 9.41MB read
+Requests/sec:   3464.79
+Transfer/sec:    642.14KB

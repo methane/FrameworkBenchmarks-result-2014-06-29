@@ -1,0 +1,122 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer cpoll_cppsp-raw
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:16969/fortune
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:16969/fortune
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.29ms    5.87ms  55.50ms   97.74%
+    Req/Sec     2.19k     1.10k    5.22k    72.67%
+  83185 requests in 5.00s, 111.86MB read
+Requests/sec:  16644.08
+Transfer/sec:     22.38MB
+
+---------------------------------------------------------
+ Running Warmup cpoll_cppsp-raw
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:16969/fortune
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:16969/fortune
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    15.60ms   12.03ms 217.36ms   79.28%
+    Req/Sec     4.12k   371.24     5.51k    70.30%
+  243938 requests in 15.00s, 328.02MB read
+Requests/sec:  16262.50
+Transfer/sec:     21.87MB
+
+---------------------------------------------------------
+ Concurrency: 8 for cpoll_cppsp-raw
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:16969/fortune -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:16969/fortune
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    27.75ms  161.99ms   1.05s    97.20%
+    Req/Sec     4.64k     1.56k    9.78k    71.83%
+  262775 requests in 15.00s, 353.35MB read
+Requests/sec:  17519.59
+Transfer/sec:     23.56MB
+
+---------------------------------------------------------
+ Concurrency: 16 for cpoll_cppsp-raw
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:16969/fortune -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:16969/fortune
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     0.87ms  527.56us  27.28ms   88.54%
+    Req/Sec     4.84k   715.25     8.00k    71.36%
+  275327 requests in 15.00s, 370.23MB read
+Requests/sec:  18355.76
+Transfer/sec:     24.68MB
+
+---------------------------------------------------------
+ Concurrency: 32 for cpoll_cppsp-raw
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:16969/fortune -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:16969/fortune
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.72ms    1.06ms  17.68ms   82.92%
+    Req/Sec     4.93k   662.04     8.22k    71.49%
+  280567 requests in 15.00s, 377.27MB read
+Requests/sec:  18704.91
+Transfer/sec:     25.15MB
+
+---------------------------------------------------------
+ Concurrency: 64 for cpoll_cppsp-raw
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:16969/fortune -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:16969/fortune
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     3.43ms    2.36ms  45.19ms   83.72%
+    Req/Sec     4.93k   715.71     8.33k    67.90%
+  280599 requests in 15.00s, 377.32MB read
+Requests/sec:  18707.27
+Transfer/sec:     25.16MB
+
+---------------------------------------------------------
+ Concurrency: 128 for cpoll_cppsp-raw
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:16969/fortune -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:16969/fortune
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     7.36ms    6.25ms 105.17ms   81.26%
+    Req/Sec     4.44k   462.01     6.04k    69.50%
+  261267 requests in 15.00s, 351.32MB read
+Requests/sec:  17419.04
+Transfer/sec:     23.42MB
+
+---------------------------------------------------------
+ Concurrency: 256 for cpoll_cppsp-raw
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:16969/fortune -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:16969/fortune
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    15.89ms   12.45ms 220.73ms   80.83%
+    Req/Sec     4.06k   394.41     5.55k    69.24%
+  241522 requests in 15.00s, 324.77MB read
+Requests/sec:  16102.57
+Transfer/sec:     21.65MB

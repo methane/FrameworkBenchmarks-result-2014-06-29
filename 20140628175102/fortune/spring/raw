@@ -1,0 +1,122 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer spring
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/fortunes
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/fortunes
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    10.73ms   10.50ms  71.04ms   86.10%
+    Req/Sec   137.29     80.20   347.00     63.41%
+  5123 requests in 5.00s, 8.80MB read
+Requests/sec:   1024.26
+Transfer/sec:      1.76MB
+
+---------------------------------------------------------
+ Running Warmup spring
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/fortunes
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortunes
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   111.49ms   16.72ms 180.20ms   83.40%
+    Req/Sec   585.37     74.37   705.00     74.01%
+  34998 requests in 15.00s, 60.11MB read
+Requests/sec:   2333.00
+Transfer/sec:      4.01MB
+
+---------------------------------------------------------
+ Concurrency: 8 for spring
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:8080/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortunes
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     3.52ms    2.40ms  21.34ms   85.74%
+    Req/Sec   619.73    152.63     1.20k    69.08%
+  35659 requests in 15.00s, 61.25MB read
+Requests/sec:   2377.35
+Transfer/sec:      4.08MB
+
+---------------------------------------------------------
+ Concurrency: 16 for spring
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:8080/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortunes
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     6.44ms    2.80ms  19.54ms   72.16%
+    Req/Sec   651.16     94.96     1.00k    70.38%
+  38042 requests in 15.00s, 65.34MB read
+Requests/sec:   2536.19
+Transfer/sec:      4.36MB
+
+---------------------------------------------------------
+ Concurrency: 32 for spring
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:8080/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortunes
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    12.62ms    2.98ms  27.97ms   74.72%
+    Req/Sec   644.73     56.03   838.00     72.38%
+  38097 requests in 15.00s, 65.43MB read
+Requests/sec:   2539.99
+Transfer/sec:      4.36MB
+
+---------------------------------------------------------
+ Concurrency: 64 for spring
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:8080/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortunes
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    25.39ms    3.33ms  44.53ms   75.49%
+    Req/Sec   636.22     43.37   767.00     75.00%
+  37875 requests in 15.00s, 65.05MB read
+Requests/sec:   2524.71
+Transfer/sec:      4.34MB
+
+---------------------------------------------------------
+ Concurrency: 128 for spring
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:8080/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortunes
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    50.51ms    3.40ms  72.65ms   71.77%
+    Req/Sec   635.84     23.29   710.00     66.42%
+  38000 requests in 15.00s, 65.27MB read
+Requests/sec:   2533.03
+Transfer/sec:      4.35MB
+
+---------------------------------------------------------
+ Concurrency: 256 for spring
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortunes
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   101.44ms    4.29ms 120.21ms   67.42%
+    Req/Sec   632.50     18.01   693.00     68.01%
+  37861 requests in 15.00s, 65.03MB read
+Requests/sec:   2523.79
+Transfer/sec:      4.33MB

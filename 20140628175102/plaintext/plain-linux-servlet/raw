@@ -1,0 +1,102 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Sun Jun 29 01:35:43 UTC 2014
+
+  System load:  3.85               Processes:           142
+  Usage of /:   69.6% of 19.55GB   Users logged in:     1
+  Memory usage: 38%                IP address for eth0: 10.227.136.45
+  Swap usage:   0%
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer plain-linux-servlet
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/web-apps/servlet/plaintext
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/web-apps/servlet/plaintext
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   202.99us  383.15us   8.30ms   99.18%
+    Req/Sec     5.33k     1.25k    9.22k    72.97%
+  199285 requests in 5.00s, 28.70MB read
+Requests/sec:  39865.62
+Transfer/sec:      5.74MB
+
+---------------------------------------------------------
+ Running Warmup plain-linux-servlet
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/web-apps/servlet/plaintext
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/web-apps/servlet/plaintext
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     3.43ms    2.22ms  26.56ms   69.07%
+    Req/Sec    19.82k     5.90k   52.20k    69.38%
+  1128585 requests in 15.00s, 162.52MB read
+Requests/sec:  75243.65
+Transfer/sec:     10.84MB
+
+---------------------------------------------------------
+ Concurrency: 256 for plain-linux-servlet
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/web-apps/servlet/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/web-apps/servlet/plaintext
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     9.26ms    5.45ms 516.30ms   76.55%
+    Req/Sec   105.54k    18.85k  198.40k    66.33%
+  6183568 requests in 15.00s, 0.87GB read
+Requests/sec: 412220.77
+Transfer/sec:     59.36MB
+
+---------------------------------------------------------
+ Concurrency: 1024 for plain-linux-servlet
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 1024 --timeout 1024 -t 4 http://127.0.0.1:8080/web-apps/servlet/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/web-apps/servlet/plaintext
+  4 threads and 1024 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    45.82ms  245.80ms  11.27s    99.54%
+    Req/Sec   138.72k    47.13k  341.47k    71.63%
+  5954800 requests in 15.00s, 857.52MB read
+Requests/sec: 397020.25
+Transfer/sec:     57.17MB
+
+---------------------------------------------------------
+ Concurrency: 4096 for plain-linux-servlet
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 4096 --timeout 4096 -t 4 http://127.0.0.1:8080/web-apps/servlet/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/web-apps/servlet/plaintext
+  4 threads and 4096 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   320.83ms    2.04s   14.92s    97.97%
+    Req/Sec   130.51k    35.47k  236.72k    65.00%
+  5940704 requests in 15.00s, 855.49MB read
+Requests/sec: 395942.22
+Transfer/sec:     57.02MB
+
+---------------------------------------------------------
+ Concurrency: 16384 for plain-linux-servlet
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16384 --timeout 16384 -t 4 http://127.0.0.1:8080/web-apps/servlet/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/web-apps/servlet/plaintext
+  4 threads and 16384 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.77s     4.42s   14.71s    87.22%
+    Req/Sec    96.37k    51.00k  167.18k    52.40%
+  5770432 requests in 15.01s, 830.97MB read
+Requests/sec: 384519.41
+Transfer/sec:     55.37MB

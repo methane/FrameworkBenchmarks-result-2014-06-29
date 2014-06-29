@@ -1,0 +1,122 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer rails-ruby
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/fortune
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/fortune
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    19.98ms   36.51ms 146.40ms   89.03%
+    Req/Sec   130.61     57.63   304.00     73.42%
+  5081 requests in 5.00s, 8.09MB read
+Requests/sec:   1015.47
+Transfer/sec:      1.62MB
+
+---------------------------------------------------------
+ Running Warmup rails-ruby
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/fortune
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortune
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   249.95ms   16.33ms 385.12ms   76.17%
+    Req/Sec   256.15     16.86   293.00     69.03%
+  15366 requests in 15.01s, 24.46MB read
+Requests/sec:   1023.85
+Transfer/sec:      1.63MB
+
+---------------------------------------------------------
+ Concurrency: 8 for rails-ruby
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:8080/fortune -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortune
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     9.12ms   15.29ms 152.29ms   97.97%
+    Req/Sec   263.19     80.43   500.00     69.18%
+  15413 requests in 15.00s, 24.53MB read
+Requests/sec:   1027.28
+Transfer/sec:      1.64MB
+
+---------------------------------------------------------
+ Concurrency: 16 for rails-ruby
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:8080/fortune -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortune
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    15.72ms   10.26ms 128.29ms   98.46%
+    Req/Sec   262.70     50.62   400.00     72.40%
+  15575 requests in 15.01s, 24.79MB read
+Requests/sec:   1037.97
+Transfer/sec:      1.65MB
+
+---------------------------------------------------------
+ Concurrency: 32 for rails-ruby
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:8080/fortune -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortune
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    31.25ms    9.34ms 134.94ms   96.93%
+    Req/Sec   258.24     34.60   342.00     68.80%
+  15420 requests in 15.00s, 24.54MB read
+Requests/sec:   1028.24
+Transfer/sec:      1.64MB
+
+---------------------------------------------------------
+ Concurrency: 64 for rails-ruby
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:8080/fortune -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortune
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    62.54ms   11.90ms 192.51ms   92.67%
+    Req/Sec   258.49     24.26   315.00     64.66%
+  15464 requests in 15.00s, 24.61MB read
+Requests/sec:   1030.71
+Transfer/sec:      1.64MB
+
+---------------------------------------------------------
+ Concurrency: 128 for rails-ruby
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:8080/fortune -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortune
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   124.50ms   14.17ms 256.80ms   84.85%
+    Req/Sec   257.44     18.22   328.00     70.09%
+  15433 requests in 15.01s, 24.56MB read
+Requests/sec:   1028.24
+Transfer/sec:      1.64MB
+
+---------------------------------------------------------
+ Concurrency: 256 for rails-ruby
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/fortune -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortune
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   249.04ms   16.23ms 356.56ms   75.53%
+    Req/Sec   256.96     10.53   292.00     83.62%
+  15418 requests in 15.01s, 24.54MB read
+Requests/sec:   1027.28
+Transfer/sec:      1.64MB

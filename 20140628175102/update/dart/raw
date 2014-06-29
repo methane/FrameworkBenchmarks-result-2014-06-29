@@ -1,0 +1,108 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer dart
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/updates?queries=2
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/updates?queries=2
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     9.93ms    2.46ms  23.83ms   85.05%
+    Req/Sec   104.56     21.99   166.00     64.38%
+  4053 requests in 5.02s, 860.95KB read
+Requests/sec:    807.84
+Transfer/sec:    171.60KB
+
+---------------------------------------------------------
+ Running Warmup dart
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/updates?queries=2
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/updates?queries=2
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   108.30ms   95.20ms 661.36ms   81.94%
+    Req/Sec   614.79     39.94   734.00     70.83%
+  36762 requests in 15.00s, 7.63MB read
+Requests/sec:   2450.82
+Transfer/sec:    520.63KB
+
+---------------------------------------------------------
+ Queries: 1 for dart
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/updates?queries=1
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/updates?queries=1
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    62.20ms   60.59ms 656.89ms   90.81%
+    Req/Sec     1.02k    68.01     1.18k    68.83%
+  61013 requests in 15.00s, 10.81MB read
+Requests/sec:   4067.46
+Transfer/sec:    737.78KB
+
+---------------------------------------------------------
+ Queries: 5 for dart
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/updates?queries=5
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/updates?queries=5
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   225.17ms  202.86ms   1.71s    81.56%
+    Req/Sec   286.53     20.61   338.00     69.32%
+  17077 requests in 15.00s, 5.11MB read
+Requests/sec:   1138.52
+Transfer/sec:    349.00KB
+
+---------------------------------------------------------
+ Queries: 10 for dart
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/updates?queries=10
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/updates?queries=10
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   438.77ms  367.35ms   2.72s    72.33%
+    Req/Sec   151.66     10.52   172.00     67.16%
+  8998 requests in 15.01s, 4.06MB read
+Requests/sec:    599.36
+Transfer/sec:    276.73KB
+
+---------------------------------------------------------
+ Queries: 15 for dart
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/updates?queries=15
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/updates?queries=15
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   596.84ms  532.18ms   3.44s    73.90%
+    Req/Sec   103.08      8.83   128.00     65.57%
+  6106 requests in 15.02s, 3.68MB read
+Requests/sec:    406.45
+Transfer/sec:    250.72KB
+
+---------------------------------------------------------
+ Queries: 20 for dart
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/updates?queries=20
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/updates?queries=20
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   846.27ms  641.59ms   3.95s    64.62%
+    Req/Sec    78.21      7.42    96.00     64.29%
+  4597 requests in 15.02s, 3.47MB read
+Requests/sec:    306.16
+Transfer/sec:    236.36KB

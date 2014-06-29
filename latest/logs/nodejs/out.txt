@@ -1,0 +1,46 @@
+test.os.lower() = linux  test.database_os.lower() = linux
+self.results['frameworks'] != None: True
+test.name: nodejs
+self.results['completed']: {}
+
+=====================================================
+  Beginning nodejs
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Starting nodejs
+-----------------------------------------------------
+worker undefined died
+worker undefined died
+worker undefined died
+worker undefined died
+
+-----------------------------------------------------
+  VERIFYING JSON (/json)
+-----------------------------------------------------
+VALIDATING JSON ... FAIL
+
+
+-----------------------------------------------------
+  VERIFYING PLAINTEXT (/plaintext)
+-----------------------------------------------------
+VALIDATING PLAINTEXT ... FAIL
+
+
+-----------------------------------------------------
+  Benchmarking nodejs ...
+-----------------------------------------------------
+BENCHMARKING JSON ... Complete
+BENCHMARKING Plaintext ... Complete
+
+-----------------------------------------------------
+  Stopping nodejs
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Stopped nodejs
+-----------------------------------------------------
+
+----------------------------------------------------
+Saving results through nodejs
+----------------------------------------------------

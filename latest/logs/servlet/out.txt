@@ -1,0 +1,101 @@
+test.os.lower() = linux  test.database_os.lower() = linux
+self.results['frameworks'] != None: True
+test.name: servlet
+self.results['completed']: {}
+
+=====================================================
+  Beginning servlet
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Starting servlet
+-----------------------------------------------------
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for hello.world:world:war:1.0.0-BUILD-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ line 64, column 21
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-war-plugin is missing. @ line 72, column 21
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Servlet 1.0.0-BUILD-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ world ---
+[INFO] Deleting /home/ubuntu/FrameworkBenchmarks/servlet/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.3:resources (default-resources) @ world ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /home/ubuntu/FrameworkBenchmarks/servlet/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.0.2:compile (default-compile) @ world ---
+[INFO] Compiling 10 source files to /home/ubuntu/FrameworkBenchmarks/servlet/target/classes
+[INFO] 
+[INFO] --- maven-war-plugin:2.1.1:war (default-cli) @ world ---
+[INFO] Packaging webapp
+[INFO] Assembling webapp [world] in [/home/ubuntu/FrameworkBenchmarks/servlet/target/world-1.0.0-BUILD-SNAPSHOT]
+[INFO] Processing war project
+[INFO] Copying webapp resources [/home/ubuntu/FrameworkBenchmarks/servlet/src/main/webapp]
+[INFO] Webapp assembled in [114 msecs]
+[INFO] Building war: /home/ubuntu/FrameworkBenchmarks/servlet/target/servlet.war
+[INFO] WEB-INF/web.xml already added, skipping
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 2.716s
+[INFO] Finished at: Sun Jun 29 03:51:01 UTC 2014
+[INFO] Final Memory: 10M/116M
+[INFO] ------------------------------------------------------------------------
+Resin/4.0.36 launching watchdog at 127.0.0.1:6600
+Resin/4.0.36 started -server 'default' with watchdog at 127.0.0.1:6600
+
+-----------------------------------------------------
+  VERIFYING JSON (/servlet/json)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Server: Resin/4.0.36
+Content-Type: application/json
+Content-Length: 27
+Date: Sun, 29 Jun 2014 03:51:15 GMT
+
+{"message":"Hello, World!"}
+
+VALIDATING JSON ... PASS
+
+
+-----------------------------------------------------
+  VERIFYING PLAINTEXT (/servlet/plaintext)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Server: Resin/4.0.36
+Content-Type: text/plain; charset=utf-8
+Content-Length: 13
+Date: Sun, 29 Jun 2014 03:51:15 GMT
+
+Hello, World!
+
+VALIDATING PLAINTEXT ... PASS
+
+
+-----------------------------------------------------
+  Benchmarking servlet ...
+-----------------------------------------------------
+BENCHMARKING JSON ... Complete
+BENCHMARKING Plaintext ... Complete
+
+-----------------------------------------------------
+  Stopping servlet
+-----------------------------------------------------
+Resin/4.0.36 shutdown watchdog at 127.0.0.1:6600
+
+-----------------------------------------------------
+  Stopped servlet
+-----------------------------------------------------
+
+----------------------------------------------------
+Saving results through servlet
+----------------------------------------------------

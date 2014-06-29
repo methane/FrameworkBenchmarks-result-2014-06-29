@@ -1,0 +1,130 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Sat Jun 28 19:44:09 UTC 2014
+
+  System load:  0.72               Processes:           137
+  Usage of /:   67.5% of 19.55GB   Users logged in:     0
+  Memory usage: 24%                IP address for eth0: 10.227.136.45
+  Swap usage:   0%
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer cpoll_cppsp-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:16969/db
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:16969/db
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.64ms    9.83ms  88.30ms   98.23%
+    Req/Sec     2.69k     0.99k    6.11k    82.99%
+  102039 requests in 5.00s, 17.98MB read
+Requests/sec:  20412.58
+Transfer/sec:      3.60MB
+
+---------------------------------------------------------
+ Running Warmup cpoll_cppsp-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:16969/db
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:16969/db
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    11.37ms    9.65ms 206.24ms   78.99%
+    Req/Sec     5.75k     0.92k    8.26k    63.15%
+  339764 requests in 15.00s, 59.87MB read
+Requests/sec:  22655.82
+Transfer/sec:      3.99MB
+
+---------------------------------------------------------
+ Concurrency: 8 for cpoll_cppsp-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:16969/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:16969/db
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     6.80ms   63.78ms   1.17s    98.78%
+    Req/Sec     5.17k     1.48k   10.67k    73.53%
+  294267 requests in 15.00s, 51.86MB read
+Requests/sec:  19618.48
+Transfer/sec:      3.46MB
+
+---------------------------------------------------------
+ Concurrency: 16 for cpoll_cppsp-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:16969/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:16969/db
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   771.65us    0.98ms  91.54ms   96.42%
+    Req/Sec     5.50k     0.95k   10.00k    69.62%
+  312926 requests in 15.00s, 55.14MB read
+Requests/sec:  20863.62
+Transfer/sec:      3.68MB
+
+---------------------------------------------------------
+ Concurrency: 32 for cpoll_cppsp-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:16969/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:16969/db
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.48ms    1.09ms  38.09ms   87.23%
+    Req/Sec     5.74k     0.86k    9.67k    71.93%
+  325884 requests in 15.00s, 57.43MB read
+Requests/sec:  21727.63
+Transfer/sec:      3.83MB
+
+---------------------------------------------------------
+ Concurrency: 64 for cpoll_cppsp-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:16969/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:16969/db
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     2.89ms    2.29ms  40.40ms   88.91%
+    Req/Sec     5.85k     0.97k   10.56k    71.59%
+  332812 requests in 15.00s, 58.65MB read
+Requests/sec:  22187.68
+Transfer/sec:      3.91MB
+
+---------------------------------------------------------
+ Concurrency: 128 for cpoll_cppsp-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:16969/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:16969/db
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     5.69ms    5.13ms 110.06ms   86.81%
+    Req/Sec     5.82k   706.35     8.70k    70.30%
+  339333 requests in 15.00s, 59.80MB read
+Requests/sec:  22622.55
+Transfer/sec:      3.99MB
+
+---------------------------------------------------------
+ Concurrency: 256 for cpoll_cppsp-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:16969/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:16969/db
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    11.66ms   12.28ms 342.12ms   86.30%
+    Req/Sec     5.58k     1.02k    8.27k    58.78%
+  330300 requests in 15.00s, 58.21MB read
+Requests/sec:  22022.69
+Transfer/sec:      3.88MB

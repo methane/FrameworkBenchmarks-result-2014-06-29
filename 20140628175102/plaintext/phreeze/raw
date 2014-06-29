@@ -1,0 +1,98 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer phreeze
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/index.php?plaintext
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/index.php?plaintext
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    42.44ms   68.48ms 189.09ms   81.77%
+    Req/Sec   127.54    198.70     1.11k    78.17%
+  4152 requests in 5.83s, 1.58MB read
+Requests/sec:    712.70
+Transfer/sec:    277.67KB
+
+---------------------------------------------------------
+ Running Warmup phreeze
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/index.php?plaintext
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/index.php?plaintext
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   636.56ms    2.15s   10.27s    94.51%
+    Req/Sec   590.05    205.35   805.00     86.01%
+  35913 requests in 15.63s, 13.66MB read
+Requests/sec:   2297.67
+Transfer/sec:      0.87MB
+
+---------------------------------------------------------
+ Concurrency: 256 for phreeze
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/index.php?plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/index.php?plaintext
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.83s   743.12ms   4.33s    68.96%
+    Req/Sec   534.14    128.11   742.00     57.14%
+  32635 requests in 15.69s, 12.42MB read
+Requests/sec:   2080.54
+Transfer/sec:    810.61KB
+
+---------------------------------------------------------
+ Concurrency: 1024 for phreeze
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 1024 --timeout 1024 -t 4 http://127.0.0.1:8080/index.php?plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/index.php?plaintext
+  4 threads and 1024 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     7.00s     6.08s   14.78s    59.79%
+    Req/Sec   716.86    587.63     1.74k    45.45%
+  34394 requests in 15.01s, 13.09MB read
+  Socket errors: connect 0, read 5001, write 0, timeout 0
+Requests/sec:   2291.08
+Transfer/sec:      0.87MB
+
+---------------------------------------------------------
+ Concurrency: 4096 for phreeze
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 4096 --timeout 4096 -t 4 http://127.0.0.1:8080/index.php?plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/index.php?plaintext
+  4 threads and 4096 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     8.71s     2.77s   11.42s    78.43%
+    Req/Sec   314.22    320.63     0.97k    77.78%
+  18997 requests in 15.00s, 7.23MB read
+  Socket errors: connect 0, read 175385, write 0, timeout 352
+Requests/sec:   1266.32
+Transfer/sec:    493.42KB
+
+---------------------------------------------------------
+ Concurrency: 16384 for phreeze
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16384 --timeout 16384 -t 4 http://127.0.0.1:8080/index.php?plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/index.php?plaintext
+  4 threads and 16384 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    12.77s     2.41s   14.01s    82.56%
+    Req/Sec   283.00    233.35   448.00    100.00%
+  10466 requests in 15.09s, 3.98MB read
+  Socket errors: connect 0, read 412936, write 0, timeout 7534
+  Non-2xx or 3xx responses: 10
+Requests/sec:    693.48
+Transfer/sec:    270.17KB

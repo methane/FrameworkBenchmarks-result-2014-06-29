@@ -1,0 +1,122 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer openresty
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/json
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/json
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   206.81us  685.16us  14.11ms   98.35%
+    Req/Sec     6.78k     2.01k   14.22k    75.43%
+  251093 requests in 5.00s, 49.08MB read
+Requests/sec:  50234.45
+Transfer/sec:      9.82MB
+
+---------------------------------------------------------
+ Running Warmup openresty
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/json
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     3.03ms    2.53ms  37.29ms   82.02%
+    Req/Sec    22.14k     6.95k   50.57k    56.66%
+  1266215 requests in 15.00s, 247.49MB read
+Requests/sec:  84411.40
+Transfer/sec:     16.50MB
+
+---------------------------------------------------------
+ Concurrency: 8 for openresty
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   156.07us  438.76us  14.53ms   98.72%
+    Req/Sec    14.54k     3.47k   31.00k    76.22%
+  811397 requests in 14.98s, 158.59MB read
+Requests/sec:  54151.09
+Transfer/sec:     10.58MB
+
+---------------------------------------------------------
+ Concurrency: 16 for openresty
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   256.29us  626.25us  18.83ms   97.07%
+    Req/Sec    16.75k     5.66k   38.78k    69.65%
+  934058 requests in 15.00s, 182.57MB read
+Requests/sec:  62274.30
+Transfer/sec:     12.17MB
+
+---------------------------------------------------------
+ Concurrency: 32 for openresty
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   417.38us  573.53us  17.74ms   94.81%
+    Req/Sec    20.34k     5.86k   43.44k    69.64%
+  1143422 requests in 15.00s, 223.49MB read
+Requests/sec:  76231.62
+Transfer/sec:     14.90MB
+
+---------------------------------------------------------
+ Concurrency: 64 for openresty
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   771.10us  788.33us  21.95ms   92.06%
+    Req/Sec    21.25k     5.94k   45.56k    70.27%
+  1186147 requests in 15.00s, 231.84MB read
+Requests/sec:  79078.97
+Transfer/sec:     15.46MB
+
+---------------------------------------------------------
+ Concurrency: 128 for openresty
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.50ms    1.32ms  18.85ms   82.84%
+    Req/Sec    21.91k     7.09k   53.89k    67.97%
+  1217980 requests in 15.00s, 238.06MB read
+Requests/sec:  81203.66
+Transfer/sec:     15.87MB
+
+---------------------------------------------------------
+ Concurrency: 256 for openresty
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     3.05ms    2.59ms  47.24ms   82.66%
+    Req/Sec    21.61k     6.45k   48.00k    61.60%
+  1234445 requests in 15.00s, 241.28MB read
+Requests/sec:  82294.23
+Transfer/sec:     16.08MB

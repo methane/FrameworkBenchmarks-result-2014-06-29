@@ -1,0 +1,858 @@
+test.os.lower() = linux  test.database_os.lower() = linux
+self.results['frameworks'] != None: True
+test.name: ninja-standalone
+self.results['completed']: {}
+
+=====================================================
+  Beginning ninja-standalone
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Starting ninja-standalone
+-----------------------------------------------------
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+mysql start/running, process 6773
+ * Restarting PostgreSQL 9.3 database server
+   ...done.
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building ninja-standalone 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ ninja-standalone ---
+[INFO] Deleting /home/ubuntu/FrameworkBenchmarks/ninja-standalone/target
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.0:enforce (enforce-banned-dependencies) @ ninja-standalone ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.3:resources (default-resources) @ ninja-standalone ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 5 resources
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ ninja-standalone ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 11 source files to /home/ubuntu/FrameworkBenchmarks/ninja-standalone/target/classes
+[WARNING] /home/ubuntu/FrameworkBenchmarks/ninja-standalone/src/main/java/dao/FortuneDao.java: /home/ubuntu/FrameworkBenchmarks/ninja-standalone/src/main/java/dao/FortuneDao.java uses unchecked or unsafe operations.
+[WARNING] /home/ubuntu/FrameworkBenchmarks/ninja-standalone/src/main/java/dao/FortuneDao.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-assembly-plugin:2.4:single (default-cli) @ ninja-standalone ---
+[INFO] Building jar: /home/ubuntu/FrameworkBenchmarks/ninja-standalone/target/ninja-standalone-0.0.1-SNAPSHOT-jar-with-dependencies.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 12.742s
+[INFO] Finished at: Sun Jun 29 00:08:21 UTC 2014
+[INFO] Final Memory: 42M/704M
+[INFO] ------------------------------------------------------------------------
+ _______  .___ _______        ____.  _____   
+ \      \ |   |\      \      |    | /  _  \  
+ /   |   \|   |/   |   \     |    |/  /_\  \ 
+/    |    \   /    |    \/\__|    /    |    \  http://www.ninjaframework.org
+\____|__  /___\____|__  /\________\____|__  /  @ninjaframework
+     web\/framework   \/                  \/   2.5.1
+
+
+-----------------------------------------------------
+  VERIFYING JSON (/json)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Date: Sun, 29 Jun 2014 00:08:31 GMT
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Content-Type: application/json;charset=UTF-8
+Content-Length: 27
+Server: Jetty(9.0.z-SNAPSHOT)
+
+{"message":"Hello, World!"}
+
+VALIDATING JSON ... PASS
+
+
+-----------------------------------------------------
+  VERIFYING DB (/db)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Date: Sun, 29 Jun 2014 00:08:31 GMT
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Content-Type: application/json;charset=UTF-8
+Content-Length: 31
+Server: Jetty(9.0.z-SNAPSHOT)
+
+{"id":5119,"randomNumber":1382}
+
+VALIDATING DB ... PASS
+
+
+-----------------------------------------------------
+  VERIFYING QUERY (/queries?queries=2)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Date: Sun, 29 Jun 2014 00:08:31 GMT
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Content-Type: application/json;charset=UTF-8
+Content-Length: 64
+Server: Jetty(9.0.z-SNAPSHOT)
+
+[{"id":9397,"randomNumber":653},{"id":8423,"randomNumber":6330}]
+
+/queries?queries=2 - PASS
+
+-----------------------------------------------------
+
+HTTP/1.1 200 OK
+Date: Sun, 29 Jun 2014 00:08:31 GMT
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Content-Type: application/json;charset=UTF-8
+Content-Length: 33
+Server: Jetty(9.0.z-SNAPSHOT)
+
+[{"id":7123,"randomNumber":4580}]
+
+/queries?queries=0 - PASS
+
+-----------------------------------------------------
+
+HTTP/1.1 200 OK
+Date: Sun, 29 Jun 2014 00:08:31 GMT
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Content-Type: application/json;charset=UTF-8
+Content-Length: 33
+Server: Jetty(9.0.z-SNAPSHOT)
+
+[{"id":8960,"randomNumber":4045}]
+
+/queries?queries=foo - PASS
+
+-----------------------------------------------------
+
+HTTP/1.1 200 OK
+Date: Sun, 29 Jun 2014 00:08:32 GMT
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Content-Type: application/json;charset=UTF-8
+Content-Length: 15905
+Server: Jetty(9.0.z-SNAPSHOT)
+
+[{"id":3175,"randomNumber":1479},{"id":6651,"randomNumber":9043},{"id":6357,"randomNumber":6687},{"id":7877,"randomNumber":7256},{"id":1475,"randomNumber":912},{"id":492,"randomNumber":7093},{"id":9717,"randomNumber":3276},{"id":8821,"randomNumber":7744},{"id":9022,"randomNumber":8824},{"id":3662,"randomNumber":8190},{"id":1302,"randomNumber":3829},{"id":5159,"randomNumber":5378},{"id":8,"randomNumber":8627},{"id":8834,"randomNumber":6068},{"id":3602,"randomNumber":261},{"id":773,"randomNumber":8751},{"id":7402,"randomNumber":6225},{"id":6873,"randomNumber":698},{"id":6555,"randomNumber":3405},{"id":1045,"randomNumber":7478},{"id":2923,"randomNumber":7805},{"id":9551,"randomNumber":6743},{"id":4732,"randomNumber":4727},{"id":830,"randomNumber":8346},{"id":3920,"randomNumber":9293},{"id":3361,"randomNumber":7281},{"id":3786,"randomNumber":4715},{"id":1749,"randomNumber":6070},{"id":1355,"randomNumber":5141},{"id":3116,"randomNumber":241},{"id":3609,"randomNumber":1049},{"id":6803,"randomNumber":9088},{"id":8772,"randomNumber":6506},{"id":532,"randomNumber":3725},{"id":3355,"randomNumber":3999},{"id":2324,"randomNumber":9934},{"id":6165,"randomNumber":4175},{"id":125,"randomNumber":7128},{"id":8195,"randomNumber":509},{"id":9087,"randomNumber":5759},{"id":8430,"randomNumber":252},{"id":3994,"randomNumber":186},{"id":2616,"randomNumber":5026},{"id":189,"randomNumber":3715},{"id":2249,"randomNumber":1155},{"id":5120,"randomNumber":7894},{"id":245,"randomNumber":3929},{"id":4152,"randomNumber":2067},{"id":5081,"randomNumber":8168},{"id":2117,"randomNumber":5697},{"id":4493,"randomNumber":4795},{"id":6977,"randomNumber":5145},{"id":203,"randomNumber":9099},{"id":5035,"randomNumber":5485},{"id":9851,"randomNumber":1140},{"id":4734,"randomNumber":7460},{"id":1823,"randomNumber":8667},{"id":5123,"randomNumber":1493},{"id":2760,"randomNumber":8452},{"id":2078,"randomNumber":8340},{"id":7936,"randomNumber":2728},{"id":1919,"randomNumber":6690},{"id":230,"randomNumber":4492},{"id":6843,"randomNumber":9622},{"id":1629,"randomNumber":4001},{"id":7433,"randomNumber":4938},{"id":1417,"randomNumber":7906},{"id":6139,"randomNumber":9387},{"id":5356,"randomNumber":5966},{"id":4073,"randomNumber":1834},{"id":6549,"randomNumber":428},{"id":8818,"randomNumber":8196},{"id":1157,"randomNumber":6029},{"id":6055,"randomNumber":3434},{"id":6739,"randomNumber":4472},{"id":8423,"randomNumber":6330},{"id":2026,"randomNumber":7049},{"id":1005,"randomNumber":3963},{"id":2957,"randomNumber":669},{"id":3633,"randomNumber":5157},{"id":1542,"randomNumber":1926},{"id":1080,"randomNumber":7154},{"id":8568,"randomNumber":2876},{"id":9774,"randomNumber":668},{"id":4083,"randomNumber":4657},{"id":1707,"randomNumber":8576},{"id":7794,"randomNumber":7753},{"id":4881,"randomNumber":4380},{"id":294,"randomNumber":714},{"id":4336,"randomNumber":8287},{"id":4721,"randomNumber":8107},{"id":2758,"randomNumber":6888},{"id":1333,"randomNumber":4738},{"id":92,"randomNumber":4115},{"id":7899,"randomNumber":6922},{"id":4114,"randomNumber":4517},{"id":3432,"randomNumber":1836},{"id":1374,"randomNumber":5871},{"id":3092,"randomNumber":8528},{"id":780,"randomNumber":1507},{"id":6381,"randomNumber":9140},{"id":404,"randomNumber":5253},{"id":4593,"randomNumber":8344},{"id":577,"randomNumber":5807},{"id":1398,"randomNumber":1430},{"id":5961,"randomNumber":2445},{"id":7019,"randomNumber":5851},{"id":2361,"randomNumber":5371},{"id":8813,"randomNumber":5771},{"id":5951,"randomNumber":2174},{"id":4319,"randomNumber":6827},{"id":8532,"randomNumber":3717},{"id":4695,"randomNumber":8021},{"id":9829,"randomNumber":6278},{"id":5763,"randomNumber":1266},{"id":880,"randomNumber":8225},{"id":3110,"randomNumber":2407},{"id":3749,"randomNumber":2975},{"id":8355,"randomNumber":2989},{"id":1899,"randomNumber":7267},{"id":4953,"randomNumber":4544},{"id":7949,"randomNumber":3199},{"id":8057,"randomNumber":1604},{"id":671,"randomNumber":3671},{"id":1182,"randomNumber":2117},{"id":6839,"randomNumber":9445},{"id":9275,"randomNumber":6775},{"id":2462,"randomNumber":6009},{"id":9896,"randomNumber":9288},{"id":5047,"randomNumber":6480},{"id":6030,"randomNumber":3284},{"id":8731,"randomNumber":5131},{"id":8027,"randomNumber":6022},{"id":6753,"randomNumber":6213},{"id":4921,"randomNumber":814},{"id":7587,"randomNumber":9352},{"id":7156,"randomNumber":3135},{"id":5925,"randomNumber":7424},{"id":3684,"randomNumber":6007},{"id":3542,"randomNumber":6426},{"id":6742,"randomNumber":4919},{"id":1704,"randomNumber":5711},{"id":9727,"randomNumber":5047},{"id":9990,"randomNumber":6203},{"id":7871,"randomNumber":2356},{"id":3504,"randomNumber":2843},{"id":4463,"randomNumber":2354},{"id":6347,"randomNumber":4230},{"id":6297,"randomNumber":3612},{"id":6492,"randomNumber":5691},{"id":3939,"randomNumber":1622},{"id":3616,"randomNumber":4890},{"id":6172,"randomNumber":7994},{"id":7565,"randomNumber":3194},{"id":2597,"randomNumber":1899},{"id":7789,"randomNumber":6312},{"id":2993,"randomNumber":6752},{"id":8212,"randomNumber":9632},{"id":92,"randomNumber":4115},{"id":930,"randomNumber":6629},{"id":721,"randomNumber":9444},{"id":3722,"randomNumber":4673},{"id":2045,"randomNumber":276},{"id":6077,"randomNumber":607},{"id":1131,"randomNumber":4241},{"id":7014,"randomNumber":3935},{"id":1570,"randomNumber":1233},{"id":3497,"randomNumber":8983},{"id":7253,"randomNumber":277},{"id":7038,"randomNumber":544},{"id":1923,"randomNumber":5095},{"id":8115,"randomNumber":5387},{"id":3850,"randomNumber":6343},{"id":8254,"randomNumber":7615},{"id":7601,"randomNumber":5423},{"id":3225,"randomNumber":5648},{"id":4610,"randomNumber":3865},{"id":6958,"randomNumber":7874},{"id":9554,"randomNumber":8634},{"id":6098,"randomNumber":459},{"id":5583,"randomNumber":3169},{"id":5139,"randomNumber":2174},{"id":6662,"randomNumber":6444},{"id":6916,"randomNumber":3504},{"id":7763,"randomNumber":3308},{"id":7732,"randomNumber":9608},{"id":5096,"randomNumber":5541},{"id":6726,"randomNumber":8399},{"id":3407,"randomNumber":5289},{"id":7383,"randomNumber":1354},{"id":4720,"randomNumber":7273},{"id":322,"randomNumber":6882},{"id":1015,"randomNumber":4971},{"id":968,"randomNumber":2216},{"id":2741,"randomNumber":3804},{"id":2086,"randomNumber":1486},{"id":1889,"randomNumber":6282},{"id":3957,"randomNumber":7426},{"id":1968,"randomNumber":2973},{"id":8072,"randomNumber":3442},{"id":5260,"randomNumber":9111},{"id":1289,"randomNumber":6453},{"id":8347,"randomNumber":1289},{"id":5876,"randomNumber":3809},{"id":4221,"randomNumber":2448},{"id":1363,"randomNumber":167},{"id":2120,"randomNumber":2953},{"id":6627,"randomNumber":1029},{"id":2052,"randomNumber":856},{"id":2850,"randomNumber":667},{"id":4047,"randomNumber":714},{"id":297,"randomNumber":2100},{"id":9101,"randomNumber":8984},{"id":4111,"randomNumber":6608},{"id":1551,"randomNumber":802},{"id":7099,"randomNumber":1830},{"id":8658,"randomNumber":9600},{"id":2615,"randomNumber":6414},{"id":5782,"randomNumber":2644},{"id":2428,"randomNumber":2151},{"id":1726,"randomNumber":6639},{"id":8356,"randomNumber":9864},{"id":2348,"randomNumber":4777},{"id":2787,"randomNumber":4454},{"id":1165,"randomNumber":1214},{"id":4519,"randomNumber":8356},{"id":2601,"randomNumber":8273},{"id":4234,"randomNumber":4161},{"id":4176,"randomNumber":5084},{"id":4340,"randomNumber":3654},{"id":5894,"randomNumber":2066},{"id":7636,"randomNumber":566},{"id":5452,"randomNumber":6666},{"id":5577,"randomNumber":3084},{"id":369,"randomNumber":7217},{"id":8252,"randomNumber":9160},{"id":7170,"randomNumber":7785},{"id":9612,"randomNumber":5078},{"id":1130,"randomNumber":6475},{"id":2759,"randomNumber":7956},{"id":2873,"randomNumber":4543},{"id":6193,"randomNumber":4053},{"id":9082,"randomNumber":6259},{"id":3830,"randomNumber":7662},{"id":2598,"randomNumber":8522},{"id":7765,"randomNumber":9385},{"id":1316,"randomNumber":4588},{"id":8586,"randomNumber":1075},{"id":5198,"randomNumber":2426},{"id":6266,"randomNumber":5368},{"id":6964,"randomNumber":8676},{"id":9139,"randomNumber":4321},{"id":7874,"randomNumber":5288},{"id":1038,"randomNumber":844},{"id":3011,"randomNumber":378},{"id":8135,"randomNumber":3347},{"id":8185,"randomNumber":8815},{"id":4890,"randomNumber":8241},{"id":5005,"randomNumber":8320},{"id":236,"randomNumber":4070},{"id":6476,"randomNumber":6672},{"id":3461,"randomNumber":9922},{"id":6105,"randomNumber":9220},{"id":2242,"randomNumber":648},{"id":4875,"randomNumber":4820},{"id":2003,"randomNumber":4463},{"id":8551,"randomNumber":2435},{"id":7056,"randomNumber":3462},{"id":2029,"randomNumber":8073},{"id":8429,"randomNumber":7027},{"id":1033,"randomNumber":4146},{"id":8089,"randomNumber":6956},{"id":5012,"randomNumber":4780},{"id":1630,"randomNumber":8677},{"id":8712,"randomNumber":5460},{"id":8698,"randomNumber":8962},{"id":847,"randomNumber":3657},{"id":7143,"randomNumber":9108},{"id":6391,"randomNumber":8556},{"id":5828,"randomNumber":3212},{"id":3705,"randomNumber":4178},{"id":4927,"randomNumber":5097},{"id":5396,"randomNumber":9015},{"id":1872,"randomNumber":3970},{"id":5679,"randomNumber":2941},{"id":2331,"randomNumber":3922},{"id":5995,"randomNumber":901},{"id":8596,"randomNumber":6316},{"id":94,"randomNumber":7363},{"id":5078,"randomNumber":5373},{"id":2997,"randomNumber":4127},{"id":7280,"randomNumber":1929},{"id":6874,"randomNumber":1535},{"id":4093,"randomNumber":4187},{"id":4077,"randomNumber":5719},{"id":437,"randomNumber":6360},{"id":5660,"randomNumber":1885},{"id":1098,"randomNumber":1598},{"id":3635,"randomNumber":4704},{"id":9475,"randomNumber":2362},{"id":2803,"randomNumber":5176},{"id":1866,"randomNumber":1390},{"id":634,"randomNumber":5717},{"id":9229,"randomNumber":3647},{"id":2651,"randomNumber":2295},{"id":3645,"randomNumber":4512},{"id":4812,"randomNumber":6880},{"id":76,"randomNumber":6108},{"id":4507,"randomNumber":3644},{"id":938,"randomNumber":2318},{"id":1837,"randomNumber":1689},{"id":6380,"randomNumber":6470},{"id":840,"randomNumber":5015},{"id":2940,"randomNumber":5399},{"id":4956,"randomNumber":2729},{"id":1255,"randomNumber":2236},{"id":5303,"randomNumber":3462},{"id":4109,"randomNumber":3763},{"id":2550,"randomNumber":2040},{"id":6652,"randomNumber":1091},{"id":4480,"randomNumber":8248},{"id":7486,"randomNumber":6937},{"id":5685,"randomNumber":9803},{"id":2044,"randomNumber":3921},{"id":4414,"randomNumber":371},{"id":2160,"randomNumber":3982},{"id":7286,"randomNumber":5162},{"id":3329,"randomNumber":4408},{"id":2387,"randomNumber":2041},{"id":1458,"randomNumber":9299},{"id":7480,"randomNumber":1082},{"id":187,"randomNumber":1691},{"id":1000,"randomNumber":7632},{"id":4071,"randomNumber":4406},{"id":8192,"randomNumber":2350},{"id":6824,"randomNumber":2613},{"id":4033,"randomNumber":9976},{"id":1267,"randomNumber":2175},{"id":7722,"randomNumber":4635},{"id":6622,"randomNumber":1691},{"id":5087,"randomNumber":7518},{"id":2354,"randomNumber":5053},{"id":5994,"randomNumber":4167},{"id":664,"randomNumber":3105},{"id":3424,"randomNumber":1780},{"id":9733,"randomNumber":6601},{"id":3072,"randomNumber":5001},{"id":3836,"randomNumber":5907},{"id":5585,"randomNumber":3406},{"id":9930,"randomNumber":7630},{"id":7465,"randomNumber":251},{"id":1317,"randomNumber":1952},{"id":2803,"randomNumber":5176},{"id":1110,"randomNumber":763},{"id":3986,"randomNumber":1430},{"id":5074,"randomNumber":2515},{"id":9595,"randomNumber":5855},{"id":3010,"randomNumber":6688},{"id":9976,"randomNumber":117},{"id":7322,"randomNumber":774},{"id":2660,"randomNumber":185},{"id":9488,"randomNumber":6322},{"id":7739,"randomNumber":6417},{"id":2410,"randomNumber":3299},{"id":7519,"randomNumber":3623},{"id":5800,"randomNumber":3804},{"id":2017,"randomNumber":9472},{"id":4316,"randomNumber":322},{"id":5130,"randomNumber":3263},{"id":2995,"randomNumber":9360},{"id":4310,"randomNumber":7887},{"id":1621,"randomNumber":1359},{"id":8063,"randomNumber":3887},{"id":1123,"randomNumber":9156},{"id":8689,"randomNumber":6666},{"id":3884,"randomNumber":8107},{"id":7795,"randomNumber":8182},{"id":9597,"randomNumber":9135},{"id":8274,"randomNumber":5500},{"id":7522,"randomNumber":5721},{"id":4575,"randomNumber":9489},{"id":5924,"randomNumber":8994},{"id":8600,"randomNumber":597},{"id":2082,"randomNumber":3512},{"id":9819,"randomNumber":3442},{"id":5011,"randomNumber":2087},{"id":3759,"randomNumber":9173},{"id":4071,"randomNumber":4406},{"id":5574,"randomNumber":8329},{"id":3751,"randomNumber":703},{"id":2630,"randomNumber":3794},{"id":1556,"randomNumber":9594},{"id":2466,"randomNumber":5851},{"id":5543,"randomNumber":1112},{"id":7391,"randomNumber":4490},{"id":6084,"randomNumber":1537},{"id":3661,"randomNumber":9583},{"id":9681,"randomNumber":7229},{"id":2511,"randomNumber":8006},{"id":591,"randomNumber":3269},{"id":6506,"randomNumber":4119},{"id":3522,"randomNumber":8523},{"id":7173,"randomNumber":5782},{"id":5813,"randomNumber":4438},{"id":1518,"randomNumber":2550},{"id":7905,"randomNumber":3575},{"id":7560,"randomNumber":4301},{"id":5450,"randomNumber":4938},{"id":9590,"randomNumber":9474},{"id":5128,"randomNumber":9349},{"id":3400,"randomNumber":4966},{"id":2478,"randomNumber":3583},{"id":4581,"randomNumber":4445},{"id":7712,"randomNumber":3764},{"id":7847,"randomNumber":4196},{"id":3064,"randomNumber":8385},{"id":6044,"randomNumber":3069},{"id":153,"randomNumber":4971},{"id":8289,"randomNumber":1560},{"id":2606,"randomNumber":2736},{"id":4978,"randomNumber":2461},{"id":7811,"randomNumber":3073},{"id":2229,"randomNumber":7763},{"id":1188,"randomNumber":2490},{"id":6771,"randomNumber":820},{"id":7483,"randomNumber":9397},{"id":8952,"randomNumber":9287},{"id":5934,"randomNumber":68},{"id":4709,"randomNumber":2251},{"id":3221,"randomNumber":5884},{"id":2223,"randomNumber":8505},{"id":3028,"randomNumber":1884},{"id":6021,"randomNumber":5381},{"id":5139,"randomNumber":2174},{"id":7610,"randomNumber":6480},{"id":5505,"randomNumber":357},{"id":1872,"randomNumber":3970},{"id":5471,"randomNumber":2904},{"id":7569,"randomNumber":1395},{"id":1511,"randomNumber":4435},{"id":3998,"randomNumber":1564},{"id":7227,"randomNumber":8681},{"id":4502,"randomNumber":8918},{"id":932,"randomNumber":5431},{"id":2584,"randomNumber":935},{"id":7730,"randomNumber":3749},{"id":185,"randomNumber":6572},{"id":2121,"randomNumber":329},{"id":6154,"randomNumber":8796},{"id":362,"randomNumber":8531},{"id":4634,"randomNumber":5279},{"id":444,"randomNumber":9789},{"id":6612,"randomNumber":8409},{"id":9209,"randomNumber":7240},{"id":7561,"randomNumber":6937},{"id":1852,"randomNumber":2673},{"id":9354,"randomNumber":5332},{"id":1569,"randomNumber":1449},{"id":3418,"randomNumber":9795},{"id":3004,"randomNumber":9431},{"id":1820,"randomNumber":8934},{"id":3402,"randomNumber":5385},{"id":8293,"randomNumber":8336},{"id":7135,"randomNumber":383},{"id":3792,"randomNumber":9243},{"id":3770,"randomNumber":821},{"id":2569,"randomNumber":4717},{"id":9678,"randomNumber":6014},{"id":9722,"randomNumber":1422},{"id":9699,"randomNumber":6071},{"id":8640,"randomNumber":5388},{"id":4168,"randomNumber":5742},{"id":893,"randomNumber":1235},{"id":521,"randomNumber":3690},{"id":7166,"randomNumber":3422},{"id":423,"randomNumber":1341},{"id":2572,"randomNumber":3461},{"id":590,"randomNumber":9714},{"id":5107,"randomNumber":8790},{"id":1115,"randomNumber":9608},{"id":9609,"randomNumber":9654},{"id":6124,"randomNumber":9923},{"id":7312,"randomNumber":3332},{"id":8229,"randomNumber":8868},{"id":1167,"randomNumber":9057},{"id":3775,"randomNumber":3401},{"id":3558,"randomNumber":4653},{"id":9970,"randomNumber":2418},{"id":587,"randomNumber":6079},{"id":1581,"randomNumber":4653},{"id":6714,"randomNumber":675},{"id":8786,"randomNumber":4394},{"id":6485,"randomNumber":1278},{"id":3474,"randomNumber":6388},{"id":9252,"randomNumber":1836},{"id":9300,"randomNumber":6623},{"id":3933,"randomNumber":9650},{"id":7804,"randomNumber":8071},{"id":1591,"randomNumber":9958},{"id":7776,"randomNumber":2783}]
+
+/queries?queries=501 - PASS
+
+-----------------------------------------------------
+
+
+VALIDATING QUERY ... PASS
+
+
+-----------------------------------------------------
+  VERIFYING FORTUNE (/fortunes)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Date: Sun, 29 Jun 2014 00:08:32 GMT
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Content-Type: text/html; charset=UTF-8
+Transfer-Encoding: chunked
+Server: Jetty(9.0.z-SNAPSHOT)
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fortunes</title>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <th>id</th>
+                <th>message</th>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>&lt;script&gt;alert(&quot;This should not be displayed in a browser alert box.&quot;);&lt;/script&gt;</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>A bad random number generator: 1, 1, 1, 1, 1, 4.33e+67, 1, 1, 1</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>A computer program does what you tell it to do, not what you want it to do.</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>A computer scientist is someone who fixes things that aren&#39;t broken.</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>A list is only as strong as its weakest link. — Donald Knuth</td>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>Additional fortune added at request time.</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>After enough decimal places, nobody gives a damn.</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Any program that runs right is obsolete.</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>Computers make very fast, very accurate mistakes.</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Emacs is a nice operating system, but I prefer UNIX. — Tom Christaensen</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>Feature: A bug with seniority.</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>fortune: No such file or directory</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>フレームワークのベンチマーク</td>
+            </tr>
+        </table>
+    </body>
+</html>
+
+VALIDATING FORTUNE ... PASS
+
+
+-----------------------------------------------------
+  VERIFYING UPDATE (/update?queries=)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Date: Sun, 29 Jun 2014 00:08:32 GMT
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Content-Type: application/json;charset=UTF-8
+Content-Length: 78
+Server: Jetty(9.0.z-SNAPSHOT)
+
+[{"id":6207,"randomNumber":-1356678045},{"id":2737,"randomNumber":2124395125}]
+
+VALIDATING UPDATE ... PASS
+
+
+-----------------------------------------------------
+  VERIFYING PLAINTEXT (/plaintext)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Content-Type: text/plain; charset=UTF-8
+Content-Length: 13
+Server: Jetty(9.0.z-SNAPSHOT)
+
+Hello, world!
+
+VALIDATING PLAINTEXT ... PASS
+
+
+-----------------------------------------------------
+  Benchmarking ninja-standalone ...
+-----------------------------------------------------
+BENCHMARKING JSON ... Complete
+BENCHMARKING DB ... Complete
+BENCHMARKING Query ... Complete
+BENCHMARKING Fortune ... Complete
+BENCHMARKING Update ... 00:18:03.945 [qtp705088827-100] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:09.743 [qtp705088827-152] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:12.245 [qtp705088827-189] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:14.969 [qtp705088827-91] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:16.976 [qtp705088827-195] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:17.503 [qtp705088827-192] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:18.402 [qtp705088827-57] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:20.306 [qtp705088827-112] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:21.143 [qtp705088827-97] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:21.442 [qtp705088827-91] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:24.353 [qtp705088827-78] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:26.720 [qtp705088827-112] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:26.737 [qtp705088827-142] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:27.039 [qtp705088827-73] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:27.159 [qtp705088827-216] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:27.372 [qtp705088827-136] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:27.384 [qtp705088827-147] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:27.470 [qtp705088827-225] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:28.194 [qtp705088827-196] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:28.407 [qtp705088827-172] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:28.451 [qtp705088827-75] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:28.560 [qtp705088827-166] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:28.676 [qtp705088827-123] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:28.914 [qtp705088827-195] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:29.078 [qtp705088827-151] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:29.366 [qtp705088827-159] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:29.426 [qtp705088827-199] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:29.488 [qtp705088827-45] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:29.573 [qtp705088827-198] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:29.606 [qtp705088827-61] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:29.914 [qtp705088827-138] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:30.083 [qtp705088827-211] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:30.123 [qtp705088827-224] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:30.262 [qtp705088827-125] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:30.498 [qtp705088827-227] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:30.648 [qtp705088827-225] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:30.666 [qtp705088827-128] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:30.684 [qtp705088827-163] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:30.697 [qtp705088827-54] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:30.713 [qtp705088827-64] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:30.982 [qtp705088827-65] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:31.085 [qtp705088827-209] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:31.113 [qtp705088827-81] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:31.174 [qtp705088827-41] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:31.315 [qtp705088827-203] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:31.767 [qtp705088827-190] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:32.346 [qtp705088827-100] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:32.360 [qtp705088827-113] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:32.498 [qtp705088827-209] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:32.658 [qtp705088827-198] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:32.828 [qtp705088827-224] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:33.058 [qtp705088827-89] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:33.673 [qtp705088827-153] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:34.436 [qtp705088827-129] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:34.468 [qtp705088827-165] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:34.528 [qtp705088827-46] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:34.683 [qtp705088827-147] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:34.738 [qtp705088827-129] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:35.111 [qtp705088827-137] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:36.086 [qtp705088827-195] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:36.214 [qtp705088827-151] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:36.434 [qtp705088827-228] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:36.543 [qtp705088827-116] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:36.614 [qtp705088827-136] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:36.792 [qtp705088827-156] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:36.951 [qtp705088827-136] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:37.139 [qtp705088827-163] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:37.171 [qtp705088827-203] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:37.195 [qtp705088827-106] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:37.268 [qtp705088827-177] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:37.724 [qtp705088827-191] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:37.832 [qtp705088827-54] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:37.873 [qtp705088827-207] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:38.052 [qtp705088827-80] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:38.097 [qtp705088827-191] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:38.528 [qtp705088827-103] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:38.622 [qtp705088827-205] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:38.936 [qtp705088827-124] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:39.166 [qtp705088827-165] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:39.499 [qtp705088827-209] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:39.602 [qtp705088827-139] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:39.730 [qtp705088827-94] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:39.968 [qtp705088827-62] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:40.246 [qtp705088827-36] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:40.332 [qtp705088827-106] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:40.360 [qtp705088827-182] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:40.384 [qtp705088827-60] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:40.399 [qtp705088827-196] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:40.505 [qtp705088827-70] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:40.849 [qtp705088827-220] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:40.988 [qtp705088827-188] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:41.012 [qtp705088827-200] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:41.050 [qtp705088827-119] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:41.062 [qtp705088827-162] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:41.140 [qtp705088827-113] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:41.188 [qtp705088827-149] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:41.209 [qtp705088827-102] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:41.211 [qtp705088827-151] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:41.302 [qtp705088827-46] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:41.382 [qtp705088827-214] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:41.618 [qtp705088827-178] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:41.643 [qtp705088827-223] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:43.661 [qtp705088827-60] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:43.677 [qtp705088827-114] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:43.772 [qtp705088827-40] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:43.781 [qtp705088827-118] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:43.796 [qtp705088827-186] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:43.802 [qtp705088827-221] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:43.820 [qtp705088827-81] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:43.856 [qtp705088827-85] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:43.882 [qtp705088827-116] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:43.892 [qtp705088827-138] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:43.899 [qtp705088827-136] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:43.907 [qtp705088827-43] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:43.930 [qtp705088827-204] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:43.939 [qtp705088827-90] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:43.964 [qtp705088827-193] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:44.011 [qtp705088827-132] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:44.013 [qtp705088827-171] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:44.024 [qtp705088827-216] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:44.030 [qtp705088827-164] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:44.122 [qtp705088827-124] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:44.137 [qtp705088827-147] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:44.158 [qtp705088827-54] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:44.177 [qtp705088827-150] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:44.177 [qtp705088827-122] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:44.183 [qtp705088827-45] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:44.191 [qtp705088827-232] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:44.201 [qtp705088827-213] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:44.245 [qtp705088827-146] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:44.247 [qtp705088827-71] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:44.263 [qtp705088827-163] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:44.267 [qtp705088827-111] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:44.285 [qtp705088827-37] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:44.295 [qtp705088827-167] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:44.339 [qtp705088827-97] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:44.361 [qtp705088827-137] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:44.387 [qtp705088827-161] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:44.421 [qtp705088827-136] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:44.460 [qtp705088827-56] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:44.513 [qtp705088827-45] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:44.517 [qtp705088827-154] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:44.539 [qtp705088827-71] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:44.546 [qtp705088827-149] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:44.558 [qtp705088827-152] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:44.580 [qtp705088827-57] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:44.602 [qtp705088827-132] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:44.703 [qtp705088827-172] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:44.750 [qtp705088827-81] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:44.811 [qtp705088827-102] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:44.835 [qtp705088827-119] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:44.880 [qtp705088827-191] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:44.954 [qtp705088827-128] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:44.989 [qtp705088827-103] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:44.996 [qtp705088827-146] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:45.009 [qtp705088827-97] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:45.025 [qtp705088827-37] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:45.035 [qtp705088827-77] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:45.054 [qtp705088827-39] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:45.057 [qtp705088827-100] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:45.072 [qtp705088827-200] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:45.087 [qtp705088827-126] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:45.088 [qtp705088827-57] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:45.167 [qtp705088827-216] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:45.181 [qtp705088827-111] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:45.262 [qtp705088827-43] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:45.319 [qtp705088827-170] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:45.355 [qtp705088827-59] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:45.562 [qtp705088827-176] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:45.569 [qtp705088827-209] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:45.588 [qtp705088827-94] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:45.633 [qtp705088827-160] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:45.688 [qtp705088827-48] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:45.694 [qtp705088827-197] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:45.701 [qtp705088827-214] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:45.760 [qtp705088827-36] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:45.773 [qtp705088827-126] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:45.796 [qtp705088827-189] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:45.802 [qtp705088827-178] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:45.807 [qtp705088827-71] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:45.841 [qtp705088827-225] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:45.848 [qtp705088827-138] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:45.879 [qtp705088827-72] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:45.883 [qtp705088827-71] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:45.914 [qtp705088827-195] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:46.009 [qtp705088827-214] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:46.011 [qtp705088827-92] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:46.057 [qtp705088827-75] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:46.087 [qtp705088827-40] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:46.153 [qtp705088827-67] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:46.186 [qtp705088827-81] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:46.189 [qtp705088827-113] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:46.195 [qtp705088827-104] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:46.205 [qtp705088827-46] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:46.210 [qtp705088827-100] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:46.214 [qtp705088827-79] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:46.254 [qtp705088827-172] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:46.310 [qtp705088827-190] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:46.314 [qtp705088827-212] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:46.340 [qtp705088827-46] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:46.357 [qtp705088827-207] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:46.367 [qtp705088827-82] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:46.492 [qtp705088827-90] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:46.612 [qtp705088827-205] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:46.638 [qtp705088827-103] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:46.655 [qtp705088827-133] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:46.659 [qtp705088827-198] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:46.690 [qtp705088827-136] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:46.702 [qtp705088827-114] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:46.707 [qtp705088827-62] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:46.713 [qtp705088827-197] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:46.839 [qtp705088827-229] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:46.855 [qtp705088827-226] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:46.954 [qtp705088827-145] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:46.967 [qtp705088827-125] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:46.985 [qtp705088827-69] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:47.029 [qtp705088827-106] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:47.044 [qtp705088827-215] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:47.126 [qtp705088827-171] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:47.131 [qtp705088827-175] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:47.134 [qtp705088827-40] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:47.156 [qtp705088827-102] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:47.163 [qtp705088827-43] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:47.174 [qtp705088827-118] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:47.202 [qtp705088827-178] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:47.203 [qtp705088827-173] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:47.210 [qtp705088827-52] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:47.222 [qtp705088827-204] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:47.240 [qtp705088827-226] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:47.268 [qtp705088827-71] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:47.277 [qtp705088827-217] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:47.323 [qtp705088827-215] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:47.331 [qtp705088827-174] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:47.357 [qtp705088827-213] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:47.380 [qtp705088827-57] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:47.381 [qtp705088827-50] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:47.524 [qtp705088827-71] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:47.583 [qtp705088827-209] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:47.644 [qtp705088827-129] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:47.663 [qtp705088827-55] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:47.700 [qtp705088827-140] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:47.728 [qtp705088827-81] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:47.771 [qtp705088827-119] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:47.777 [qtp705088827-135] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:47.780 [qtp705088827-211] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:47.788 [qtp705088827-152] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:47.800 [qtp705088827-182] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:47.802 [qtp705088827-183] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:47.805 [qtp705088827-205] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:47.901 [qtp705088827-96] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:47.923 [qtp705088827-159] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:47.928 [qtp705088827-105] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:47.942 [qtp705088827-91] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:47.962 [qtp705088827-137] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:48.001 [qtp705088827-119] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:48.020 [qtp705088827-179] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:48.029 [qtp705088827-88] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:48.078 [qtp705088827-91] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:48.157 [qtp705088827-58] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:48.165 [qtp705088827-40] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:48.194 [qtp705088827-52] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:48.216 [qtp705088827-186] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:48.223 [qtp705088827-116] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:48.264 [qtp705088827-217] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:48.294 [qtp705088827-52] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:48.314 [qtp705088827-98] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:48.316 [qtp705088827-37] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:48.318 [qtp705088827-229] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:48.397 [qtp705088827-95] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:48.425 [qtp705088827-49] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:48.452 [qtp705088827-182] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:48.456 [qtp705088827-66] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:48.477 [qtp705088827-232] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:48.545 [qtp705088827-123] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:48.546 [qtp705088827-92] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:48.591 [qtp705088827-42] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:48.703 [qtp705088827-117] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:48.728 [qtp705088827-112] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:48.765 [qtp705088827-214] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:48.777 [qtp705088827-148] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:48.791 [qtp705088827-215] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:48.791 [qtp705088827-213] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:48.805 [qtp705088827-154] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:48.810 [qtp705088827-166] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:48.862 [qtp705088827-173] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:48.903 [qtp705088827-70] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:48.916 [qtp705088827-48] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:48.927 [qtp705088827-199] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:48.951 [qtp705088827-181] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:48.959 [qtp705088827-186] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:48.994 [qtp705088827-34] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:49.000 [qtp705088827-69] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:49.058 [qtp705088827-45] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:49.086 [qtp705088827-225] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:49.167 [qtp705088827-221] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:49.188 [qtp705088827-77] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:49.207 [qtp705088827-67] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:49.251 [qtp705088827-186] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:49.258 [qtp705088827-216] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:49.389 [qtp705088827-117] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:49.427 [qtp705088827-97] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:49.474 [qtp705088827-114] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:49.506 [qtp705088827-36] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:49.522 [qtp705088827-204] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:49.527 [qtp705088827-125] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:49.541 [qtp705088827-91] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:49.577 [qtp705088827-108] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:49.586 [qtp705088827-218] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:49.867 [qtp705088827-34] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:49.870 [qtp705088827-142] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:49.875 [qtp705088827-54] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:49.932 [qtp705088827-212] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:49.970 [qtp705088827-91] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:50.075 [qtp705088827-111] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:50.083 [qtp705088827-59] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:50.124 [qtp705088827-207] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:50.210 [qtp705088827-143] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:50.213 [qtp705088827-165] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:50.234 [qtp705088827-93] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:50.343 [qtp705088827-61] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:50.381 [qtp705088827-37] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:50.433 [qtp705088827-104] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:50.556 [qtp705088827-197] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:50.563 [qtp705088827-195] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:50.596 [qtp705088827-98] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:50.734 [qtp705088827-79] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:50.758 [qtp705088827-173] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:50.838 [qtp705088827-231] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:50.838 [qtp705088827-208] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:50.839 [qtp705088827-40] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:50.858 [qtp705088827-157] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:50.943 [qtp705088827-80] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:50.976 [qtp705088827-193] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:50.988 [qtp705088827-170] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:51.001 [qtp705088827-189] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:51.060 [qtp705088827-57] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:51.124 [qtp705088827-199] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:51.205 [qtp705088827-43] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:51.208 [qtp705088827-116] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:51.229 [qtp705088827-64] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:51.302 [qtp705088827-124] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:51.336 [qtp705088827-193] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:51.356 [qtp705088827-106] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:51.374 [qtp705088827-121] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:51.386 [qtp705088827-222] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:51.421 [qtp705088827-163] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:51.457 [qtp705088827-134] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:51.514 [qtp705088827-95] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:51.534 [qtp705088827-71] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:51.541 [qtp705088827-212] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:51.556 [qtp705088827-164] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:51.633 [qtp705088827-214] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:51.644 [qtp705088827-220] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:51.679 [qtp705088827-95] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:51.737 [qtp705088827-89] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:51.744 [qtp705088827-121] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:51.752 [qtp705088827-205] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:51.774 [qtp705088827-219] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:51.827 [qtp705088827-138] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:51.848 [qtp705088827-76] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:51.858 [qtp705088827-168] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:51.870 [qtp705088827-47] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:51.873 [qtp705088827-149] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:51.893 [qtp705088827-188] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:51.949 [qtp705088827-61] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:51.974 [qtp705088827-165] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:51.976 [qtp705088827-75] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:52.008 [qtp705088827-39] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:52.038 [qtp705088827-142] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:52.071 [qtp705088827-75] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:52.089 [qtp705088827-183] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:52.092 [qtp705088827-182] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:52.099 [qtp705088827-117] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:52.106 [qtp705088827-62] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:52.291 [qtp705088827-157] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:52.374 [qtp705088827-219] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:52.421 [qtp705088827-199] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:52.436 [qtp705088827-202] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:52.452 [qtp705088827-184] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:52.598 [qtp705088827-129] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:52.693 [qtp705088827-122] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:52.718 [qtp705088827-58] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:52.779 [qtp705088827-131] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:52.818 [qtp705088827-163] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:52.879 [qtp705088827-180] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:52.886 [qtp705088827-132] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:52.893 [qtp705088827-225] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:52.896 [qtp705088827-109] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:52.942 [qtp705088827-130] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:52.972 [qtp705088827-213] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:52.986 [qtp705088827-167] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:52.992 [qtp705088827-51] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:52.999 [qtp705088827-168] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:53.044 [qtp705088827-102] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:53.062 [qtp705088827-142] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:53.072 [qtp705088827-209] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:53.079 [qtp705088827-178] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:53.092 [qtp705088827-200] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:53.095 [qtp705088827-219] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:53.139 [qtp705088827-84] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:53.143 [qtp705088827-154] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:53.165 [qtp705088827-138] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:53.173 [qtp705088827-201] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:53.200 [qtp705088827-139] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:53.205 [qtp705088827-115] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:53.303 [qtp705088827-132] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:53.305 [qtp705088827-155] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:53.356 [qtp705088827-148] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:53.375 [qtp705088827-158] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:53.396 [qtp705088827-125] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:53.405 [qtp705088827-41] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:53.428 [qtp705088827-153] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:53.430 [qtp705088827-173] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:53.503 [qtp705088827-222] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:53.544 [qtp705088827-193] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:53.570 [qtp705088827-180] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:53.575 [qtp705088827-142] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:53.599 [qtp705088827-200] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:53.665 [qtp705088827-132] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:53.669 [qtp705088827-40] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:53.696 [qtp705088827-147] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:53.760 [qtp705088827-175] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:53.807 [qtp705088827-140] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:53.816 [qtp705088827-80] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:53.856 [qtp705088827-189] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:53.914 [qtp705088827-34] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:53.960 [qtp705088827-125] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:53.981 [qtp705088827-197] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:53.999 [qtp705088827-231] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:54.036 [qtp705088827-34] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:54.048 [qtp705088827-178] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:54.062 [qtp705088827-229] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:54.208 [qtp705088827-89] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:54.281 [qtp705088827-43] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:54.318 [qtp705088827-226] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:54.330 [qtp705088827-171] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:54.339 [qtp705088827-200] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:54.357 [qtp705088827-71] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:54.460 [qtp705088827-46] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:54.522 [qtp705088827-180] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:54.630 [qtp705088827-155] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:54.639 [qtp705088827-116] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:54.651 [qtp705088827-197] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:54.668 [qtp705088827-188] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:54.671 [qtp705088827-144] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:54.679 [qtp705088827-42] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:54.701 [qtp705088827-158] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:54.889 [qtp705088827-47] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:54.983 [qtp705088827-107] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:55.036 [qtp705088827-52] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:55.091 [qtp705088827-157] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:55.103 [qtp705088827-215] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:55.145 [qtp705088827-158] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:55.146 [qtp705088827-81] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:55.195 [qtp705088827-94] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:55.308 [qtp705088827-196] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:55.324 [qtp705088827-66] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:55.348 [qtp705088827-139] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:55.407 [qtp705088827-168] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:55.454 [qtp705088827-94] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:55.463 [qtp705088827-142] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:55.476 [qtp705088827-137] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:55.489 [qtp705088827-95] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:55.492 [qtp705088827-230] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:55.502 [qtp705088827-124] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:55.546 [qtp705088827-184] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:55.641 [qtp705088827-91] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:55.675 [qtp705088827-108] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:55.709 [qtp705088827-91] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:55.728 [qtp705088827-137] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:55.787 [qtp705088827-230] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:55.874 [qtp705088827-138] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:55.884 [qtp705088827-38] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:55.889 [qtp705088827-187] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:55.909 [qtp705088827-156] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:55.922 [qtp705088827-54] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:55.945 [qtp705088827-50] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:55.961 [qtp705088827-145] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:56.003 [qtp705088827-173] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:56.033 [qtp705088827-154] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:56.043 [qtp705088827-164] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:56.051 [qtp705088827-66] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:56.069 [qtp705088827-128] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:56.073 [qtp705088827-134] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:56.075 [qtp705088827-120] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:56.087 [qtp705088827-152] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:56.115 [qtp705088827-196] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:56.125 [qtp705088827-177] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:56.150 [qtp705088827-142] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:56.157 [qtp705088827-163] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:56.188 [qtp705088827-157] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:56.193 [qtp705088827-125] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:56.206 [qtp705088827-51] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:56.235 [qtp705088827-48] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:56.246 [qtp705088827-218] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:56.361 [qtp705088827-152] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:56.369 [qtp705088827-178] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:56.383 [qtp705088827-158] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:56.412 [qtp705088827-151] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:56.465 [qtp705088827-191] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:56.494 [qtp705088827-135] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:56.509 [qtp705088827-97] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:56.526 [qtp705088827-120] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:56.568 [qtp705088827-150] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:56.633 [qtp705088827-41] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:56.642 [qtp705088827-43] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:56.670 [qtp705088827-214] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:56.772 [qtp705088827-113] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:56.801 [qtp705088827-226] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:56.828 [qtp705088827-207] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:56.913 [qtp705088827-128] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:56.976 [qtp705088827-191] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:57.011 [qtp705088827-42] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:57.038 [qtp705088827-59] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:57.090 [qtp705088827-209] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:57.108 [qtp705088827-186] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:57.144 [qtp705088827-201] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:57.145 [qtp705088827-196] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:57.192 [qtp705088827-92] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:57.196 [qtp705088827-225] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:57.229 [qtp705088827-78] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:57.247 [qtp705088827-178] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:57.295 [qtp705088827-91] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:57.339 [qtp705088827-65] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:57.354 [qtp705088827-187] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:57.386 [qtp705088827-131] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:57.453 [qtp705088827-130] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:57.457 [qtp705088827-209] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:57.544 [qtp705088827-218] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:57.555 [qtp705088827-52] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:57.559 [qtp705088827-146] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:57.579 [qtp705088827-186] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:57.582 [qtp705088827-125] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:57.592 [qtp705088827-168] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:57.603 [qtp705088827-96] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:57.636 [qtp705088827-107] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:57.752 [qtp705088827-95] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:57.825 [qtp705088827-56] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:57.892 [qtp705088827-103] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:57.918 [qtp705088827-227] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:57.952 [qtp705088827-68] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:58.081 [qtp705088827-192] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:58.097 [qtp705088827-83] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:58.226 [qtp705088827-111] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:58.304 [qtp705088827-195] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:58.326 [qtp705088827-115] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:58.335 [qtp705088827-41] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:58.351 [qtp705088827-62] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:58.364 [qtp705088827-79] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:58.403 [qtp705088827-109] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:58.414 [qtp705088827-161] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:58.418 [qtp705088827-200] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:58.427 [qtp705088827-232] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:58.437 [qtp705088827-132] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:58.474 [qtp705088827-232] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:58.485 [qtp705088827-42] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:58.491 [qtp705088827-169] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:58.498 [qtp705088827-170] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:58.503 [qtp705088827-60] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:58.513 [qtp705088827-204] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:58.536 [qtp705088827-113] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:58.582 [qtp705088827-198] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:58.590 [qtp705088827-116] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:58.642 [qtp705088827-144] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:58.699 [qtp705088827-227] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:58.754 [qtp705088827-123] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:58.760 [qtp705088827-119] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+00:18:58.777 [qtp705088827-166] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+Complete
+BENCHMARKING Plaintext ... Complete
+
+-----------------------------------------------------
+  Stopping ninja-standalone
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Stopped ninja-standalone
+-----------------------------------------------------
+
+----------------------------------------------------
+Saving results through ninja-standalone
+----------------------------------------------------

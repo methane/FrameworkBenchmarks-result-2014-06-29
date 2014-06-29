@@ -1,0 +1,14 @@
+test.os.lower() = linux  test.database_os.lower() = linux
+self.results['frameworks'] != None: True
+test.name: wai
+self.results['completed']: {}
+
+=====================================================
+  Beginning wai
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Starting wai
+-----------------------------------------------------
+Downloading the latest package list from hackage.haskell.org
+Resolving dependencies...

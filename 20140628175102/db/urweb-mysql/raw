@@ -1,0 +1,125 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+0 packages can be updated.
+0 updates are security updates.
+
+
+
+---------------------------------------------------------
+ Running Primer urweb-mysql
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/db
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/db
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.11ms  392.50us  11.49ms   75.13%
+    Req/Sec     1.06k   457.46     2.22k    81.31%
+  40202 requests in 5.00s, 5.93MB read
+Requests/sec:   8041.88
+Transfer/sec:      1.19MB
+
+---------------------------------------------------------
+ Running Warmup urweb-mysql
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/db
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    32.27ms    1.22ms  46.10ms   83.54%
+    Req/Sec     2.00k    84.14     2.44k    71.12%
+  118910 requests in 15.00s, 17.55MB read
+Requests/sec:   7929.35
+Transfer/sec:      1.17MB
+
+---------------------------------------------------------
+ Concurrency: 8 for urweb-mysql
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:8080/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     0.99ms  246.64us   8.84ms   81.10%
+    Req/Sec     2.17k   330.22     4.44k    81.05%
+  122066 requests in 15.00s, 18.02MB read
+Requests/sec:   8138.17
+Transfer/sec:      1.20MB
+
+---------------------------------------------------------
+ Concurrency: 16 for urweb-mysql
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:8080/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.97ms  472.52us  15.42ms   81.63%
+    Req/Sec     2.13k   175.16     2.78k    70.44%
+  121294 requests in 15.00s, 17.90MB read
+Requests/sec:   8086.79
+Transfer/sec:      1.19MB
+
+---------------------------------------------------------
+ Concurrency: 32 for urweb-mysql
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:8080/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     4.08ms  510.92us  11.84ms   81.52%
+    Req/Sec     2.07k   180.80     2.67k    77.45%
+  117563 requests in 15.00s, 17.35MB read
+Requests/sec:   7838.58
+Transfer/sec:      1.16MB
+
+---------------------------------------------------------
+ Concurrency: 64 for urweb-mysql
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:8080/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     8.07ms  543.08us  18.37ms   82.46%
+    Req/Sec     2.04k   101.30     2.44k    75.03%
+  118799 requests in 15.00s, 17.54MB read
+Requests/sec:   7920.51
+Transfer/sec:      1.17MB
+
+---------------------------------------------------------
+ Concurrency: 128 for urweb-mysql
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:8080/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    15.87ms    0.93ms  29.71ms   86.56%
+    Req/Sec     2.04k   117.01     2.34k    73.32%
+  120761 requests in 15.00s, 17.82MB read
+Requests/sec:   8050.86
+Transfer/sec:      1.19MB
+
+---------------------------------------------------------
+ Concurrency: 256 for urweb-mysql
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    32.13ms    1.68ms  44.20ms   86.96%
+    Req/Sec     2.00k   132.76     2.42k    75.00%
+  118846 requests in 15.00s, 17.54MB read
+Requests/sec:   7923.33
+Transfer/sec:      1.17MB

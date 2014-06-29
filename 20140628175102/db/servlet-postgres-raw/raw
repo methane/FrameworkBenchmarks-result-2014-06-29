@@ -1,0 +1,122 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer servlet-postgres-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/servlet/postgres
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/servlet/postgres
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     2.40ms    8.49ms  66.85ms   97.76%
+    Req/Sec     1.03k   521.48     2.78k    62.59%
+  37303 requests in 4.99s, 5.72MB read
+Requests/sec:   7474.56
+Transfer/sec:      1.15MB
+
+---------------------------------------------------------
+ Running Warmup servlet-postgres-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/servlet/postgres
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/servlet/postgres
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   304.16ms    1.23s    6.08s    94.09%
+    Req/Sec     3.31k     1.36k    8.21k    70.20%
+  173276 requests in 15.00s, 26.57MB read
+Requests/sec:  11554.83
+Transfer/sec:      1.77MB
+
+---------------------------------------------------------
+ Concurrency: 8 for servlet-postgres-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:8080/servlet/postgres -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/servlet/postgres
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     3.02ms   15.81ms 113.97ms   97.95%
+    Req/Sec     2.78k   543.41     4.22k    83.72%
+  158306 requests in 15.00s, 24.27MB read
+Requests/sec:  10554.20
+Transfer/sec:      1.62MB
+
+---------------------------------------------------------
+ Concurrency: 16 for servlet-postgres-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:8080/servlet/postgres -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/servlet/postgres
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     2.54ms    8.24ms  67.47ms   98.21%
+    Req/Sec     2.90k   681.92     5.60k    75.45%
+  165295 requests in 15.00s, 25.34MB read
+Requests/sec:  11020.51
+Transfer/sec:      1.69MB
+
+---------------------------------------------------------
+ Concurrency: 32 for servlet-postgres-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:8080/servlet/postgres -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/servlet/postgres
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     4.06ms    9.62ms  84.21ms   98.00%
+    Req/Sec     2.95k   768.01     5.55k    72.32%
+  169216 requests in 15.00s, 25.95MB read
+Requests/sec:  11282.51
+Transfer/sec:      1.73MB
+
+---------------------------------------------------------
+ Concurrency: 64 for servlet-postgres-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:8080/servlet/postgres -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/servlet/postgres
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     6.95ms   13.20ms 112.80ms   97.13%
+    Req/Sec     3.07k   662.53     5.70k    79.32%
+  179699 requests in 14.99s, 27.55MB read
+Requests/sec:  11984.98
+Transfer/sec:      1.84MB
+
+---------------------------------------------------------
+ Concurrency: 128 for servlet-postgres-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:8080/servlet/postgres -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/servlet/postgres
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    12.57ms   20.79ms 170.05ms   97.00%
+    Req/Sec     3.17k   709.72     5.97k    80.29%
+  186867 requests in 15.00s, 28.65MB read
+Requests/sec:  12457.10
+Transfer/sec:      1.91MB
+
+---------------------------------------------------------
+ Concurrency: 256 for servlet-postgres-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/servlet/postgres -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/servlet/postgres
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    34.91ms  128.32ms   1.28s    98.52%
+    Req/Sec     3.10k   543.52     5.55k    90.09%
+  183607 requests in 15.00s, 28.15MB read
+Requests/sec:  12238.94
+Transfer/sec:      1.88MB

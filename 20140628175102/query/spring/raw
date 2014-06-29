@@ -1,0 +1,108 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer spring
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/queries?queries=2
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/queries?queries=2
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     3.83ms    3.43ms  44.17ms   95.60%
+    Req/Sec   313.17     88.21   600.00     74.28%
+  11914 requests in 5.00s, 2.48MB read
+Requests/sec:   2382.97
+Transfer/sec:    508.58KB
+
+---------------------------------------------------------
+ Running Warmup spring
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/queries?queries=2
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/queries?queries=2
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    93.07ms    3.37ms 108.65ms   72.88%
+    Req/Sec   688.91     27.80   787.00     73.57%
+  41216 requests in 15.00s, 8.59MB read
+Requests/sec:   2747.56
+Transfer/sec:    586.39KB
+
+---------------------------------------------------------
+ Queries: 1 for spring
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/queries?queries=1
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/queries?queries=1
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    62.32ms    2.95ms  74.43ms   77.63%
+    Req/Sec     1.03k    42.05     1.16k    67.39%
+  61513 requests in 15.00s, 10.96MB read
+Requests/sec:   4101.14
+Transfer/sec:    748.04KB
+
+---------------------------------------------------------
+ Queries: 5 for spring
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/queries?queries=5
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/queries?queries=5
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   181.19ms    3.48ms 192.75ms   68.98%
+    Req/Sec   353.41      9.01   395.00     79.35%
+  21178 requests in 15.00s, 6.34MB read
+Requests/sec:   1412.00
+Transfer/sec:    432.81KB
+
+---------------------------------------------------------
+ Queries: 10 for spring
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/queries?queries=10
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/queries?queries=10
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   324.15ms    3.85ms 338.36ms   69.86%
+    Req/Sec   197.34      6.82   226.00     78.82%
+  11834 requests in 15.16s, 5.35MB read
+Requests/sec:    780.86
+Transfer/sec:    361.27KB
+
+---------------------------------------------------------
+ Queries: 15 for spring
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/queries?queries=15
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/queries?queries=15
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   468.89ms    4.49ms 484.61ms   68.56%
+    Req/Sec   135.90     15.14   167.00     58.75%
+  8178 requests in 15.03s, 4.93MB read
+Requests/sec:    544.08
+Transfer/sec:    336.13KB
+
+---------------------------------------------------------
+ Queries: 20 for spring
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/queries?queries=20
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/queries?queries=20
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   602.44ms    9.08ms 618.60ms   75.08%
+    Req/Sec   106.32     60.69   206.00     65.62%
+  6387 requests in 15.19s, 4.82MB read
+Requests/sec:    420.49
+Transfer/sec:    325.02KB

@@ -1,0 +1,110 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer undertow-edge-postgresql
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/queries/postgresql?queries=2
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/queries/postgresql?queries=2
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     4.12ms   16.68ms 104.89ms   97.25%
+    Req/Sec   832.54    257.05     1.89k    73.19%
+  31228 requests in 5.00s, 6.03MB read
+Requests/sec:   6247.08
+Transfer/sec:      1.21MB
+
+---------------------------------------------------------
+ Running Warmup undertow-edge-postgresql
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/queries/postgresql?queries=2
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/queries/postgresql?queries=2
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    33.46ms   50.94ms 933.59ms   94.27%
+    Req/Sec     2.12k   362.84     3.24k    90.07%
+  126060 requests in 15.00s, 24.35MB read
+Requests/sec:   8404.18
+Transfer/sec:      1.62MB
+
+---------------------------------------------------------
+ Queries: 1 for undertow-edge-postgresql
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/queries/postgresql?queries=1
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/queries/postgresql?queries=1
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    21.74ms   35.83ms 519.29ms   94.35%
+    Req/Sec     3.38k   539.58     5.30k    90.48%
+  200421 requests in 15.00s, 32.64MB read
+Requests/sec:  13361.70
+Transfer/sec:      2.18MB
+
+---------------------------------------------------------
+ Queries: 5 for undertow-edge-postgresql
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/queries/postgresql?queries=5
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/queries/postgresql?queries=5
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    63.99ms   85.84ms   2.51s    92.48%
+    Req/Sec     1.01k   195.30     1.94k    86.28%
+  58072 requests in 15.00s, 16.55MB read
+Requests/sec:   3872.17
+Transfer/sec:      1.10MB
+
+---------------------------------------------------------
+ Queries: 10 for undertow-edge-postgresql
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/queries/postgresql?queries=10
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/queries/postgresql?queries=10
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   104.28ms  127.95ms   2.73s    90.71%
+    Req/Sec   622.60    129.49     1.18k    84.17%
+  34441 requests in 15.00s, 15.04MB read
+  Socket errors: connect 0, read 0, write 0, timeout 7
+Requests/sec:   2295.70
+Transfer/sec:      1.00MB
+
+---------------------------------------------------------
+ Queries: 15 for undertow-edge-postgresql
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/queries/postgresql?queries=15
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/queries/postgresql?queries=15
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   147.07ms  181.83ms   2.12s    91.61%
+    Req/Sec   464.04    106.95     0.88k    84.09%
+  26435 requests in 15.01s, 15.55MB read
+Requests/sec:   1761.51
+Transfer/sec:      1.04MB
+
+---------------------------------------------------------
+ Queries: 20 for undertow-edge-postgresql
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/queries/postgresql?queries=20
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/queries/postgresql?queries=20
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   154.92ms  307.17ms   6.54s    94.99%
+    Req/Sec   433.87    102.44   805.00     77.38%
+  21853 requests in 15.00s, 16.16MB read
+  Socket errors: connect 0, read 0, write 0, timeout 13
+Requests/sec:   1456.69
+Transfer/sec:      1.08MB

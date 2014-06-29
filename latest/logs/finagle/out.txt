@@ -1,0 +1,72 @@
+test.os.lower() = linux  test.database_os.lower() = linux
+self.results['frameworks'] != None: True
+test.name: finagle
+self.results['completed']: {}
+
+=====================================================
+  Beginning finagle
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Starting finagle
+-----------------------------------------------------
+[0m[[0minfo[0m] [0mLoading project definition from /home/ubuntu/FrameworkBenchmarks/finagle/project[0m
+[0m[[0minfo[0m] [0mSet current project to finagle (in build file:/home/ubuntu/FrameworkBenchmarks/finagle/)[0m
+[0m[[0minfo[0m] [0mUpdating {file:/home/ubuntu/FrameworkBenchmarks/finagle/}default-b3f286...[0m
+[0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.10.3 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving com.twitter#finagle-http_2.10;6.+ ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving com.twitter#finagle-core_2.10;6.18.0 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving io.netty#netty;3.9.1.Final ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving com.twitter#util-app_2.10;6.18.0 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving com.twitter#util-core_2.10;6.18.0 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving com.twitter#util-collection_2.10;6.18.0 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving com.google.code.findbugs#jsr305;2.0.1 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving javax.inject#javax.inject;1 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving com.google.guava#guava;16.0.1 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving commons-collections#commons-collections;3.2.1 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving com.twitter#util-hashing_2.10;6.18.0 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving com.twitter#util-jvm_2.10;6.18.0 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving com.twitter#util-logging_2.10;6.18.0 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving com.twitter#util-codec_2.10;6.18.0 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving commons-codec#commons-codec;1.6 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving commons-lang#commons-lang;2.6 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving com.twitter#finagle-mysql_2.10;6.+ ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving com.fasterxml.jackson.module#jackson-module-scala_2.10;2.+ ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.scala-lang#scala-reflect;2.10.4 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving com.fasterxml.jackson.core#jackson-core;2.4.1 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving com.fasterxml.jackson.core#jackson-annotations;2.4.1 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving com.fasterxml.jackson.core#jackson-databind;2.4.1.1 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving com.thoughtworks.paranamer#paranamer;2.6 ...[0m
+[0m[[0minfo[0m] [0mDone updating.[0m
+[0m[[32msuccess[0m] [0mTotal time: 3 s, completed Jun 28, 2014 9:10:47 PM[0m
+[0m[[32msuccess[0m] [0mTotal time: 1 s, completed Jun 28, 2014 9:10:48 PM[0m
+[0m[[0minfo[0m] [0mLoading project definition from /home/ubuntu/FrameworkBenchmarks/finagle/project[0m
+[0m[[0minfo[0m] [0mSet current project to finagle (in build file:/home/ubuntu/FrameworkBenchmarks/finagle/)[0m
+[0m[[0minfo[0m] [0mRunning com.falmarri.finagle.FinagleBenchmark [0m
+
+-----------------------------------------------------
+  VERIFYING JSON (/json)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+
+{"message":"Hello, World!"}
+
+VALIDATING JSON ... PASS
+
+
+-----------------------------------------------------
+  Benchmarking finagle ...
+-----------------------------------------------------
+BENCHMARKING JSON ... Complete
+
+-----------------------------------------------------
+  Stopping finagle
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Stopped finagle
+-----------------------------------------------------
+
+----------------------------------------------------
+Saving results through finagle
+----------------------------------------------------

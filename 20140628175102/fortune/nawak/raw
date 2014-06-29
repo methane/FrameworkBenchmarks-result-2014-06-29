@@ -1,0 +1,122 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer nawak
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:6767/fortunes
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:6767/fortunes
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     0.89ms  409.19us   8.48ms   84.38%
+    Req/Sec     1.18k   165.81     2.00k    67.95%
+  44690 requests in 4.99s, 59.54MB read
+Requests/sec:   8950.00
+Transfer/sec:     11.92MB
+
+---------------------------------------------------------
+ Running Warmup nawak
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:6767/fortunes
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:6767/fortunes
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    21.21ms   32.66ms 242.94ms   88.85%
+    Req/Sec     3.12k   286.67     3.97k    68.36%
+  185786 requests in 15.00s, 247.52MB read
+Requests/sec:  12385.86
+Transfer/sec:     16.50MB
+
+---------------------------------------------------------
+ Concurrency: 8 for nawak
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:6767/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:6767/fortunes
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     0.87ms  379.14us   8.83ms   82.17%
+    Req/Sec     2.39k   230.04     3.22k    71.08%
+  135724 requests in 15.00s, 180.82MB read
+Requests/sec:   9048.78
+Transfer/sec:     12.06MB
+
+---------------------------------------------------------
+ Concurrency: 16 for nawak
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:6767/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:6767/fortunes
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.55ms    0.96ms  10.56ms   84.80%
+    Req/Sec     2.72k   341.21     4.11k    71.01%
+  154591 requests in 15.00s, 205.96MB read
+Requests/sec:  10306.92
+Transfer/sec:     13.73MB
+
+---------------------------------------------------------
+ Concurrency: 32 for nawak
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:6767/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:6767/fortunes
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     2.85ms    2.16ms  19.86ms   86.91%
+    Req/Sec     2.97k   426.93     4.67k    68.54%
+  169225 requests in 15.00s, 225.46MB read
+Requests/sec:  11282.49
+Transfer/sec:     15.03MB
+
+---------------------------------------------------------
+ Concurrency: 64 for nawak
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:6767/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:6767/fortunes
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     5.57ms    5.78ms  62.11ms   88.38%
+    Req/Sec     3.07k   345.19     4.48k    69.00%
+  180293 requests in 15.00s, 240.20MB read
+Requests/sec:  12020.34
+Transfer/sec:     16.01MB
+
+---------------------------------------------------------
+ Concurrency: 128 for nawak
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:6767/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:6767/fortunes
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    10.24ms   15.53ms 180.25ms   90.81%
+    Req/Sec     3.11k   311.43     4.44k    70.63%
+  184782 requests in 15.00s, 246.18MB read
+Requests/sec:  12319.24
+Transfer/sec:     16.41MB
+
+---------------------------------------------------------
+ Concurrency: 256 for nawak
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:6767/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:6767/fortunes
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    21.27ms   29.05ms 298.28ms   89.58%
+    Req/Sec     3.12k   235.57     4.30k    73.68%
+  185958 requests in 15.00s, 247.75MB read
+Requests/sec:  12398.36
+Transfer/sec:     16.52MB

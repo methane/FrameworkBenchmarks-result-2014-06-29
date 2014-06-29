@@ -1,0 +1,122 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer falcon-py3
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/json
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/json
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.13ms    3.01ms  25.09ms   95.85%
+    Req/Sec     1.81k     0.94k    5.55k    66.07%
+  68665 requests in 5.00s, 13.03MB read
+Requests/sec:  13735.59
+Transfer/sec:      2.61MB
+
+---------------------------------------------------------
+ Running Warmup falcon-py3
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/json
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    19.18ms    9.57ms  60.51ms   62.58%
+    Req/Sec     3.54k   831.69     5.08k    53.08%
+  205001 requests in 15.00s, 38.91MB read
+Requests/sec:  13667.05
+Transfer/sec:      2.59MB
+
+---------------------------------------------------------
+ Concurrency: 8 for falcon-py3
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   612.86us  666.98us  15.79ms   99.63%
+    Req/Sec     3.60k   715.10     5.89k    65.65%
+  204463 requests in 15.01s, 38.80MB read
+Requests/sec:  13620.75
+Transfer/sec:      2.58MB
+
+---------------------------------------------------------
+ Concurrency: 16 for falcon-py3
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.28ms    2.72ms  37.70ms   96.59%
+    Req/Sec     3.53k     1.31k    8.89k    70.18%
+  200620 requests in 15.00s, 38.07MB read
+Requests/sec:  13375.55
+Transfer/sec:      2.54MB
+
+---------------------------------------------------------
+ Concurrency: 32 for falcon-py3
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     2.60ms    1.12ms  16.72ms   73.27%
+    Req/Sec     3.36k   719.59     6.78k    71.03%
+  191172 requests in 15.00s, 36.28MB read
+Requests/sec:  12744.78
+Transfer/sec:      2.42MB
+
+---------------------------------------------------------
+ Concurrency: 64 for falcon-py3
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     5.28ms    5.41ms  29.99ms   83.19%
+    Req/Sec     4.00k     1.79k    8.53k    51.68%
+  206225 requests in 15.00s, 39.14MB read
+Requests/sec:  13748.90
+Transfer/sec:      2.61MB
+
+---------------------------------------------------------
+ Concurrency: 128 for falcon-py3
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     9.53ms    9.65ms  69.77ms   75.86%
+    Req/Sec     3.43k   328.59     5.00k    70.90%
+  203500 requests in 15.00s, 38.62MB read
+Requests/sec:  13568.64
+Transfer/sec:      2.58MB
+
+---------------------------------------------------------
+ Concurrency: 256 for falcon-py3
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    17.47ms    7.18ms  61.38ms   77.16%
+    Req/Sec     3.70k   320.92     5.28k    67.84%
+  219859 requests in 15.00s, 41.73MB read
+Requests/sec:  14657.80
+Transfer/sec:      2.78MB

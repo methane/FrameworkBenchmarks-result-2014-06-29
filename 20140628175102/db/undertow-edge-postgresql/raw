@@ -1,0 +1,122 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer undertow-edge-postgresql
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/db/postgresql
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/db/postgresql
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     3.07ms    7.58ms  62.36ms   94.61%
+    Req/Sec   826.30    476.64     2.17k    61.27%
+  29748 requests in 5.00s, 4.79MB read
+Requests/sec:   5951.61
+Transfer/sec:      0.96MB
+
+---------------------------------------------------------
+ Running Warmup undertow-edge-postgresql
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/db/postgresql
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db/postgresql
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    19.44ms   20.39ms 419.81ms   88.93%
+    Req/Sec     3.40k   525.74     5.85k    90.64%
+  196609 requests in 15.00s, 31.65MB read
+Requests/sec:  13107.58
+Transfer/sec:      2.11MB
+
+---------------------------------------------------------
+ Concurrency: 8 for undertow-edge-postgresql
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:8080/db/postgresql -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db/postgresql
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    11.39ms   60.09ms 354.61ms   96.99%
+    Req/Sec     2.61k   682.77     4.89k    83.24%
+  148263 requests in 15.00s, 23.86MB read
+Requests/sec:   9884.61
+Transfer/sec:      1.59MB
+
+---------------------------------------------------------
+ Concurrency: 16 for undertow-edge-postgresql
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:8080/db/postgresql -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db/postgresql
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     5.50ms   24.48ms 160.33ms   97.48%
+    Req/Sec     2.88k     0.88k    6.78k    75.06%
+  163891 requests in 15.00s, 26.38MB read
+Requests/sec:  10926.13
+Transfer/sec:      1.76MB
+
+---------------------------------------------------------
+ Concurrency: 32 for undertow-edge-postgresql
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:8080/db/postgresql -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db/postgresql
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     5.14ms   18.30ms 143.45ms   98.15%
+    Req/Sec     3.10k   744.98     5.90k    78.16%
+  177038 requests in 15.00s, 28.50MB read
+Requests/sec:  11803.63
+Transfer/sec:      1.90MB
+
+---------------------------------------------------------
+ Concurrency: 64 for undertow-edge-postgresql
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:8080/db/postgresql -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db/postgresql
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     7.35ms   17.75ms 146.57ms   97.37%
+    Req/Sec     3.17k   576.40     4.57k    82.75%
+  185398 requests in 15.00s, 29.84MB read
+Requests/sec:  12360.01
+Transfer/sec:      1.99MB
+
+---------------------------------------------------------
+ Concurrency: 128 for undertow-edge-postgresql
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:8080/db/postgresql -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db/postgresql
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    12.24ms   23.11ms 193.46ms   95.96%
+    Req/Sec     3.31k   499.50     4.26k    91.17%
+  195830 requests in 15.00s, 31.52MB read
+Requests/sec:  13055.83
+Transfer/sec:      2.10MB
+
+---------------------------------------------------------
+ Concurrency: 256 for undertow-edge-postgresql
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/db/postgresql -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db/postgresql
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    21.95ms   34.34ms 337.61ms   93.83%
+    Req/Sec     3.49k   664.87     6.46k    91.35%
+  200483 requests in 15.00s, 32.27MB read
+Requests/sec:  13366.16
+Transfer/sec:      2.15MB

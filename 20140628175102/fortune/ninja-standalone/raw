@@ -1,0 +1,122 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer ninja-standalone
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/fortunes
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/fortunes
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     8.98ms    8.16ms  50.75ms   84.76%
+    Req/Sec   158.85     94.69   540.00     69.77%
+  5989 requests in 5.00s, 13.62MB read
+Requests/sec:   1197.58
+Transfer/sec:      2.72MB
+
+---------------------------------------------------------
+ Running Warmup ninja-standalone
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/fortunes
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortunes
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   105.57ms  144.34ms   2.02s    89.23%
+    Req/Sec   599.34    127.65     1.07k    83.75%
+  35667 requests in 14.99s, 81.13MB read
+Requests/sec:   2378.61
+Transfer/sec:      5.41MB
+
+---------------------------------------------------------
+ Concurrency: 8 for ninja-standalone
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:8080/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortunes
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     3.43ms    3.65ms  53.01ms   90.54%
+    Req/Sec   687.32    215.53     1.45k    64.95%
+  39473 requests in 15.00s, 89.78MB read
+Requests/sec:   2631.51
+Transfer/sec:      5.99MB
+
+---------------------------------------------------------
+ Concurrency: 16 for ninja-standalone
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:8080/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortunes
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     6.24ms    7.93ms 161.03ms   89.26%
+    Req/Sec   698.72    180.57     1.32k    67.74%
+  41093 requests in 15.00s, 93.47MB read
+Requests/sec:   2739.26
+Transfer/sec:      6.23MB
+
+---------------------------------------------------------
+ Concurrency: 32 for ninja-standalone
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:8080/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortunes
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    11.92ms   16.55ms 127.59ms   88.52%
+    Req/Sec   700.92    147.21     1.12k    67.89%
+  41694 requests in 15.00s, 94.84MB read
+Requests/sec:   2779.38
+Transfer/sec:      6.32MB
+
+---------------------------------------------------------
+ Concurrency: 64 for ninja-standalone
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:8080/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortunes
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    22.77ms   35.60ms 254.77ms   86.96%
+    Req/Sec   688.19    111.50     1.07k    71.43%
+  41214 requests in 15.00s, 93.74MB read
+Requests/sec:   2747.75
+Transfer/sec:      6.25MB
+
+---------------------------------------------------------
+ Concurrency: 128 for ninja-standalone
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:8080/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortunes
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    48.98ms   98.63ms 872.05ms   90.38%
+    Req/Sec   673.19    101.06     1.06k    69.26%
+  40359 requests in 15.00s, 91.80MB read
+Requests/sec:   2690.88
+Transfer/sec:      6.12MB
+
+---------------------------------------------------------
+ Concurrency: 256 for ninja-standalone
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortunes
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    90.75ms  160.34ms   1.94s    92.05%
+    Req/Sec   665.35     74.41     0.86k    68.33%
+  39893 requests in 15.00s, 90.74MB read
+Requests/sec:   2660.39
+Transfer/sec:      6.05MB

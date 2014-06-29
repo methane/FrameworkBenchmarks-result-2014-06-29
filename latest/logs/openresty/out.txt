@@ -1,0 +1,104 @@
+test.os.lower() = linux  test.database_os.lower() = linux
+self.results['frameworks'] != None: True
+test.name: openresty
+self.results['completed']: {}
+
+=====================================================
+  Beginning openresty
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Starting openresty
+-----------------------------------------------------
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+mysql start/running, process 11228
+ * Restarting PostgreSQL 9.3 database server
+   ...done.
+
+-----------------------------------------------------
+  VERIFYING JSON (/json)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Server: openresty/1.5.8.1
+Date: Sun, 29 Jun 2014 00:32:29 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+
+{"message":"Hello, World!"}
+
+VALIDATING JSON ... PASS
+
+
+-----------------------------------------------------
+  VERIFYING DB (/db)
+-----------------------------------------------------
+VALIDATING DB ... FAIL
+
+
+-----------------------------------------------------
+  VERIFYING QUERY (/db?queries=2)
+-----------------------------------------------------
+/db?queries=2 - FAIL
+
+-----------------------------------------------------
+
+/db?queries=0 - WARNING
+
+-----------------------------------------------------
+
+/db?queries=foo - WARNING
+
+-----------------------------------------------------
+
+/db?queries=501 - WARNING
+
+-----------------------------------------------------
+
+
+VALIDATING QUERY ... FAIL
+
+
+-----------------------------------------------------
+  VERIFYING PLAINTEXT (/plaintext)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Server: openresty/1.5.8.1
+Date: Sun, 29 Jun 2014 00:33:44 GMT
+Content-Type: text/plain
+Transfer-Encoding: chunked
+Connection: keep-alive
+
+Hello, world!
+
+VALIDATING PLAINTEXT ... PASS
+
+
+-----------------------------------------------------
+  Benchmarking openresty ...
+-----------------------------------------------------
+BENCHMARKING JSON ... Complete
+BENCHMARKING DB ... Complete
+BENCHMARKING Query ... Complete
+BENCHMARKING Plaintext ... Complete
+
+-----------------------------------------------------
+  Stopping openresty
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Stopped openresty
+-----------------------------------------------------
+
+----------------------------------------------------
+Saving results through openresty
+----------------------------------------------------

@@ -1,0 +1,122 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer rack-ruby
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/json
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/json
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.00ms    2.94ms  29.49ms   96.96%
+    Req/Sec     1.74k   585.47     3.67k    70.98%
+  65428 requests in 5.00s, 13.41MB read
+Requests/sec:  13089.28
+Transfer/sec:      2.68MB
+
+---------------------------------------------------------
+ Running Warmup rack-ruby
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/json
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    13.51ms    3.12ms  67.14ms   80.71%
+    Req/Sec     4.82k   418.01     6.26k    67.18%
+  284955 requests in 15.00s, 58.41MB read
+Requests/sec:  18997.37
+Transfer/sec:      3.89MB
+
+---------------------------------------------------------
+ Concurrency: 8 for rack-ruby
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   780.58us    2.18ms  33.10ms   97.24%
+    Req/Sec     3.35k     0.93k    8.44k    70.72%
+  190608 requests in 15.00s, 39.07MB read
+Requests/sec:  12708.02
+Transfer/sec:      2.61MB
+
+---------------------------------------------------------
+ Concurrency: 16 for rack-ruby
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.08ms    1.30ms  24.70ms   93.40%
+    Req/Sec     3.97k     0.86k    7.10k    69.18%
+  225672 requests in 15.00s, 46.26MB read
+Requests/sec:  15045.36
+Transfer/sec:      3.08MB
+
+---------------------------------------------------------
+ Concurrency: 32 for rack-ruby
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.91ms    2.11ms  50.52ms   94.64%
+    Req/Sec     4.44k   779.87     8.40k    71.09%
+  252536 requests in 15.00s, 51.77MB read
+Requests/sec:  16836.21
+Transfer/sec:      3.45MB
+
+---------------------------------------------------------
+ Concurrency: 64 for rack-ruby
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     3.54ms    2.37ms  59.06ms   92.01%
+    Req/Sec     4.74k   619.56     7.00k    68.69%
+  272211 requests in 15.00s, 55.80MB read
+Requests/sec:  18148.25
+Transfer/sec:      3.72MB
+
+---------------------------------------------------------
+ Concurrency: 128 for rack-ruby
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     7.01ms    2.83ms  60.51ms   86.21%
+    Req/Sec     4.71k   543.97     7.67k    69.15%
+  275314 requests in 15.00s, 56.44MB read
+Requests/sec:  18354.74
+Transfer/sec:      3.76MB
+
+---------------------------------------------------------
+ Concurrency: 256 for rack-ruby
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    13.68ms    3.66ms  71.03ms   82.88%
+    Req/Sec     4.76k   457.39     6.97k    73.88%
+  281435 requests in 15.00s, 57.69MB read
+Requests/sec:  18762.44
+Transfer/sec:      3.85MB

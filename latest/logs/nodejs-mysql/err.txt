@@ -1,0 +1,61 @@
+restart: Unknown instance: 
+npm WARN package.json application-name@0.0.1 No repository field.
+npm WARN package.json mapper@0.2.4-pre No repository field.
+npm WARN package.json ms@0.1.0 No repository field.
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: failed to connect to [localhost:27017]
+    at null.<anonymous> (/home/ubuntu/FrameworkBenchmarks/nodejs/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/server.js:564:74)
+    at EventEmitter.emit (events.js:106:17)
+    at null.<anonymous> (/home/ubuntu/FrameworkBenchmarks/nodejs/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection_pool.js:124:15)
+    at EventEmitter.emit (events.js:98:17)
+    at Socket.<anonymous> (/home/ubuntu/FrameworkBenchmarks/nodejs/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection.js:465:10)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at net.js:426:14
+    at process._tickCallback (node.js:415:13)
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+
+events.js:72
+Error: failed to connect to [localhost:27017]
+    at null.<anonymous> (/home/ubuntu/FrameworkBenchmarks/nodejs/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/server.js:564:74)
+    at EventEmitter.emit (events.js:106:17)
+    at null.<anonymous> (/home/ubuntu/FrameworkBenchmarks/nodejs/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection_pool.js:124:15)
+    at EventEmitter.emit (events.js:98:17)
+    at Socket.<anonymous> (/home/ubuntu/FrameworkBenchmarks/nodejs/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection.js:465:10)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at net.js:426:14
+    at process._tickCallback (node.js:415:13)
+        throw er; // Unhandled 'error' event
+              ^
+Error: failed to connect to [localhost:27017]
+    at null.<anonymous> (/home/ubuntu/FrameworkBenchmarks/nodejs/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/server.js:564:74)
+    at EventEmitter.emit (events.js:106:17)
+    at null.<anonymous> (/home/ubuntu/FrameworkBenchmarks/nodejs/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection_pool.js:124:15)
+    at EventEmitter.emit (events.js:98:17)
+    at Socket.<anonymous> (/home/ubuntu/FrameworkBenchmarks/nodejs/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection.js:465:10)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at net.js:426:14
+    at process._tickCallback (node.js:415:13)
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: failed to connect to [localhost:27017]
+    at null.<anonymous> (/home/ubuntu/FrameworkBenchmarks/nodejs/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/server.js:564:74)
+    at EventEmitter.emit (events.js:106:17)
+    at null.<anonymous> (/home/ubuntu/FrameworkBenchmarks/nodejs/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection_pool.js:124:15)
+    at EventEmitter.emit (events.js:98:17)
+    at Socket.<anonymous> (/home/ubuntu/FrameworkBenchmarks/nodejs/node_modules/mongoose/node_modules/mongodb/lib/mongodb/connection/connection.js:465:10)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at net.js:426:14
+    at process._tickCallback (node.js:415:13)
+curl: (7) Failed to connect to 127.0.0.1 port 8080: Connection refused
+curl: (7) Failed to connect to 127.0.0.1 port 8080: Connection refused
+curl: (7) Failed to connect to 127.0.0.1 port 8080: Connection refused
+curl: (7) Failed to connect to 127.0.0.1 port 8080: Connection refused
+curl: (7) Failed to connect to 127.0.0.1 port 8080: Connection refused

@@ -1,0 +1,108 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer cpoll_cppsp-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:16969/update?queries=2
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:16969/update?queries=2
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.74ms    3.46ms  46.15ms   97.92%
+    Req/Sec   796.07    213.30     1.89k    85.21%
+  30288 requests in 5.00s, 6.26MB read
+Requests/sec:   6059.59
+Transfer/sec:      1.25MB
+
+---------------------------------------------------------
+ Running Warmup cpoll_cppsp-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:16969/update?queries=2
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:16969/update?queries=2
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    46.83ms   57.90ms 956.76ms   87.16%
+    Req/Sec     1.39k   138.55     1.94k    70.22%
+  83086 requests in 15.00s, 17.16MB read
+Requests/sec:   5539.12
+Transfer/sec:      1.14MB
+
+---------------------------------------------------------
+ Queries: 1 for cpoll_cppsp-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:16969/update?queries=1
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:16969/update?queries=1
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    26.65ms   30.58ms 380.38ms   87.95%
+    Req/Sec     2.45k   345.50     3.81k    72.50%
+  146525 requests in 15.00s, 25.82MB read
+Requests/sec:   9771.57
+Transfer/sec:      1.72MB
+
+---------------------------------------------------------
+ Queries: 5 for cpoll_cppsp-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:16969/update?queries=5
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:16969/update?queries=5
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   104.76ms   81.33ms 496.85ms   67.71%
+    Req/Sec   617.56     43.74   736.00     72.54%
+  37118 requests in 15.00s, 11.08MB read
+Requests/sec:   2474.21
+Transfer/sec:    756.02KB
+
+---------------------------------------------------------
+ Queries: 10 for cpoll_cppsp-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:16969/update?queries=10
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:16969/update?queries=10
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   199.79ms  126.45ms 675.13ms   66.98%
+    Req/Sec   317.55     25.46   372.00     71.72%
+  19042 requests in 15.00s, 8.57MB read
+Requests/sec:   1269.23
+Transfer/sec:    584.77KB
+
+---------------------------------------------------------
+ Queries: 15 for cpoll_cppsp-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:16969/update?queries=15
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:16969/update?queries=15
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   289.66ms  169.47ms 952.80ms   66.87%
+    Req/Sec   222.31     13.84   250.00     70.67%
+  13235 requests in 15.02s, 7.96MB read
+Requests/sec:    881.29
+Transfer/sec:    542.78KB
+
+---------------------------------------------------------
+ Queries: 20 for cpoll_cppsp-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:16969/update?queries=20
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:16969/update?queries=20
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   382.31ms  203.69ms   1.37s    68.86%
+    Req/Sec   168.68     12.50   203.00     67.07%
+  10047 requests in 15.00s, 7.57MB read
+Requests/sec:    669.79
+Transfer/sec:    516.44KB

@@ -1,0 +1,122 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer bottle-nginx-uwsgi
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/fortune
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/fortune
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     5.72ms    3.79ms  46.38ms   91.84%
+    Req/Sec   200.39     63.83   461.00     69.59%
+  7739 requests in 5.00s, 10.74MB read
+Requests/sec:   1547.07
+Transfer/sec:      2.15MB
+
+---------------------------------------------------------
+ Running Warmup bottle-nginx-uwsgi
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/fortune
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortune
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   162.81ms    4.13ms 178.40ms   69.23%
+    Req/Sec   393.09      9.33   418.00     75.72%
+  23551 requests in 15.01s, 32.68MB read
+Requests/sec:   1569.48
+Transfer/sec:      2.18MB
+
+---------------------------------------------------------
+ Concurrency: 8 for bottle-nginx-uwsgi
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:8080/fortune -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortune
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     5.29ms    2.66ms  51.12ms   72.35%
+    Req/Sec   399.91     85.96   750.00     70.22%
+  23280 requests in 15.00s, 32.30MB read
+Requests/sec:   1551.81
+Transfer/sec:      2.15MB
+
+---------------------------------------------------------
+ Concurrency: 16 for bottle-nginx-uwsgi
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:8080/fortune -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortune
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    10.14ms    2.61ms  56.69ms   82.79%
+    Req/Sec   403.23     38.06   538.00     65.00%
+  23773 requests in 15.00s, 32.99MB read
+Requests/sec:   1585.01
+Transfer/sec:      2.20MB
+
+---------------------------------------------------------
+ Concurrency: 32 for bottle-nginx-uwsgi
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:8080/fortune -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortune
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    20.35ms    3.23ms  74.08ms   70.78%
+    Req/Sec   397.63     27.61   479.00     72.45%
+  23639 requests in 15.00s, 32.80MB read
+Requests/sec:   1575.90
+Transfer/sec:      2.19MB
+
+---------------------------------------------------------
+ Concurrency: 64 for bottle-nginx-uwsgi
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:8080/fortune -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortune
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    40.42ms    2.62ms  84.14ms   71.32%
+    Req/Sec   397.83     17.08   455.00     68.22%
+  23754 requests in 15.00s, 32.96MB read
+Requests/sec:   1584.03
+Transfer/sec:      2.20MB
+
+---------------------------------------------------------
+ Concurrency: 128 for bottle-nginx-uwsgi
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:8080/fortune -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortune
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    80.44ms    3.03ms 112.02ms   68.62%
+    Req/Sec   398.06     13.00   445.00     66.37%
+  23821 requests in 15.00s, 33.05MB read
+Requests/sec:   1587.67
+Transfer/sec:      2.20MB
+
+---------------------------------------------------------
+ Concurrency: 256 for bottle-nginx-uwsgi
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/fortune -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortune
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   161.11ms    2.64ms 191.05ms   70.45%
+    Req/Sec   397.29      9.22   428.00     82.39%
+  23800 requests in 15.02s, 33.02MB read
+Requests/sec:   1584.26
+Transfer/sec:      2.20MB

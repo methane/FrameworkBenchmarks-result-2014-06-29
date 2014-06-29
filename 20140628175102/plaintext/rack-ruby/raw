@@ -1,0 +1,106 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Sun Jun 29 02:27:24 UTC 2014
+
+  System load:  3.96               Processes:           152
+  Usage of /:   68.5% of 19.55GB   Users logged in:     0
+  Memory usage: 26%                IP address for eth0: 10.227.136.45
+  Swap usage:   0%
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer rack-ruby
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/plaintext
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/plaintext
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     3.34ms    7.66ms  25.89ms   88.59%
+    Req/Sec     1.66k     0.86k    4.20k    68.94%
+  66359 requests in 6.00s, 12.27MB read
+Requests/sec:  11059.56
+Transfer/sec:      2.05MB
+
+---------------------------------------------------------
+ Running Warmup rack-ruby
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/plaintext
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/plaintext
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    12.38ms    3.64ms  77.27ms   78.21%
+    Req/Sec     5.25k   432.60     6.97k    69.91%
+  310610 requests in 15.00s, 57.45MB read
+Requests/sec:  20707.50
+Transfer/sec:      3.83MB
+
+---------------------------------------------------------
+ Concurrency: 256 for rack-ruby
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/plaintext
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   184.47ms   17.17ms 265.89ms   74.16%
+    Req/Sec     5.55k   174.59     6.07k    77.70%
+  332392 requests in 15.00s, 61.48MB read
+Requests/sec:  22160.70
+Transfer/sec:      4.10MB
+
+---------------------------------------------------------
+ Concurrency: 1024 for rack-ruby
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 1024 --timeout 1024 -t 4 http://127.0.0.1:8080/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/plaintext
+  4 threads and 1024 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   775.96ms  122.32ms   1.21s    76.60%
+    Req/Sec     5.29k   198.43     5.88k    80.00%
+  315931 requests in 15.00s, 58.44MB read
+  Socket errors: connect 0, read 17, write 0, timeout 0
+Requests/sec:  21065.13
+Transfer/sec:      3.90MB
+
+---------------------------------------------------------
+ Concurrency: 4096 for rack-ruby
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 4096 --timeout 4096 -t 4 http://127.0.0.1:8080/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/plaintext
+  4 threads and 4096 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     3.05s   670.23ms   4.15s    84.40%
+    Req/Sec     5.21k   174.34     5.40k    87.18%
+  310598 requests in 15.01s, 57.46MB read
+  Socket errors: connect 0, read 2122, write 0, timeout 242
+Requests/sec:  20690.67
+Transfer/sec:      3.83MB
+
+---------------------------------------------------------
+ Concurrency: 16384 for rack-ruby
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16384 --timeout 16384 -t 4 http://127.0.0.1:8080/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/plaintext
+  4 threads and 16384 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     9.26s     4.37s   13.85s    70.20%
+    Req/Sec     5.61k     0.86k    6.45k    87.10%
+  308188 requests in 14.99s, 60.16MB read
+  Socket errors: connect 0, read 8276, write 0, timeout 9762
+  Non-2xx or 3xx responses: 25757
+Requests/sec:  20561.27
+Transfer/sec:      4.01MB

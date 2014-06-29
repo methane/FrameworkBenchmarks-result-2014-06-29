@@ -1,0 +1,128 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer lift-stateless
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/db
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/db
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    19.40ms    8.78ms  69.82ms   75.46%
+    Req/Sec    57.04     16.76   106.00     61.35%
+  2189 requests in 5.01s, 694.31KB read
+Requests/sec:    436.62
+Transfer/sec:    138.49KB
+
+---------------------------------------------------------
+ Running Warmup lift-stateless
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/db
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   236.46ms   61.15ms 612.26ms   85.64%
+    Req/Sec   266.08     51.81   465.00     84.38%
+  15073 requests in 15.00s, 4.67MB read
+  Socket errors: connect 0, read 0, write 0, timeout 75
+  Non-2xx or 3xx responses: 1
+Requests/sec:   1004.62
+Transfer/sec:    318.64KB
+
+---------------------------------------------------------
+ Concurrency: 8 for lift-stateless
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:8080/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     6.41ms    3.39ms  38.26ms   79.05%
+    Req/Sec   332.84     82.31   736.00     68.45%
+  19475 requests in 15.00s, 6.03MB read
+  Non-2xx or 3xx responses: 2
+Requests/sec:   1298.15
+Transfer/sec:    411.74KB
+
+---------------------------------------------------------
+ Concurrency: 16 for lift-stateless
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:8080/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    12.91ms    7.35ms  60.06ms   78.59%
+    Req/Sec   328.05     63.02   562.00     77.21%
+  19638 requests in 15.19s, 6.08MB read
+Requests/sec:   1292.75
+Transfer/sec:    410.03KB
+
+---------------------------------------------------------
+ Concurrency: 32 for lift-stateless
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:8080/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    25.18ms   10.73ms 126.53ms   70.36%
+    Req/Sec   320.11     32.61   411.00     72.07%
+  19039 requests in 15.00s, 5.90MB read
+  Non-2xx or 3xx responses: 3
+Requests/sec:   1269.15
+Transfer/sec:    402.55KB
+
+---------------------------------------------------------
+ Concurrency: 64 for lift-stateless
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:8080/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    49.74ms   16.17ms 147.23ms   76.22%
+    Req/Sec   319.51     18.96   372.00     69.93%
+  19042 requests in 15.00s, 5.90MB read
+  Non-2xx or 3xx responses: 2
+Requests/sec:   1269.31
+Transfer/sec:    402.59KB
+
+---------------------------------------------------------
+ Concurrency: 128 for lift-stateless
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:8080/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   101.54ms   32.95ms 385.60ms   90.34%
+    Req/Sec   314.23     27.88   352.00     93.64%
+  18820 requests in 15.00s, 5.83MB read
+Requests/sec:   1254.40
+Transfer/sec:    397.85KB
+
+---------------------------------------------------------
+ Concurrency: 256 for lift-stateless
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   197.83ms   39.08ms 536.42ms   85.37%
+    Req/Sec   318.97     36.18   675.00     94.74%
+  18940 requests in 15.00s, 5.87MB read
+  Non-2xx or 3xx responses: 1
+Requests/sec:   1262.90
+Transfer/sec:    400.56KB

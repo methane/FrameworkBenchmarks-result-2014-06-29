@@ -1,0 +1,122 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer flask-py3
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/fortunes
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/fortunes
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     8.06ms    5.61ms  73.24ms   91.15%
+    Req/Sec   174.53     98.69   444.00     74.77%
+  6522 requests in 5.00s, 9.14MB read
+Requests/sec:   1305.42
+Transfer/sec:      1.83MB
+
+---------------------------------------------------------
+ Running Warmup flask-py3
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/fortunes
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortunes
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   223.27ms   54.49ms 453.08ms   66.71%
+    Req/Sec   291.54     16.20   336.00     67.26%
+  17491 requests in 15.00s, 24.52MB read
+Requests/sec:   1165.69
+Transfer/sec:      1.63MB
+
+---------------------------------------------------------
+ Concurrency: 8 for flask-py3
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:8080/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortunes
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     6.48ms    3.70ms  24.51ms   70.06%
+    Req/Sec   369.93    156.05   833.00     74.09%
+  19963 requests in 15.00s, 27.99MB read
+Requests/sec:   1330.62
+Transfer/sec:      1.87MB
+
+---------------------------------------------------------
+ Concurrency: 16 for flask-py3
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:8080/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortunes
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    13.17ms    9.15ms  89.75ms   84.41%
+    Req/Sec   324.11     81.78   641.00     77.17%
+  19167 requests in 15.00s, 26.87MB read
+Requests/sec:   1277.47
+Transfer/sec:      1.79MB
+
+---------------------------------------------------------
+ Concurrency: 32 for flask-py3
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:8080/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortunes
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    28.00ms   18.35ms 128.90ms   78.57%
+    Req/Sec   299.70     54.07   397.00     66.61%
+  17678 requests in 15.00s, 24.78MB read
+Requests/sec:   1178.85
+Transfer/sec:      1.65MB
+
+---------------------------------------------------------
+ Concurrency: 64 for flask-py3
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:8080/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortunes
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    56.61ms   30.89ms 200.81ms   85.03%
+    Req/Sec   294.26     36.49   380.00     66.42%
+  17598 requests in 15.00s, 24.67MB read
+Requests/sec:   1172.94
+Transfer/sec:      1.64MB
+
+---------------------------------------------------------
+ Concurrency: 128 for flask-py3
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:8080/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortunes
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   109.07ms   35.65ms 216.83ms   60.34%
+    Req/Sec   293.68     18.58   334.00     64.38%
+  17651 requests in 15.00s, 24.74MB read
+Requests/sec:   1176.43
+Transfer/sec:      1.65MB
+
+---------------------------------------------------------
+ Concurrency: 256 for flask-py3
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortunes
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   213.95ms   55.50ms 512.32ms   65.90%
+    Req/Sec   298.00     10.80   323.00     72.12%
+  17879 requests in 15.00s, 25.06MB read
+Requests/sec:   1191.86
+Transfer/sec:      1.67MB

@@ -1,0 +1,58 @@
+test.os.lower() = linux  test.database_os.lower() = linux
+self.results['frameworks'] != None: True
+test.name: urweb
+self.results['completed']: {}
+
+=====================================================
+  Beginning urweb
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Starting urweb
+-----------------------------------------------------
+
+-----------------------------------------------------
+  VERIFYING JSON (/json)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Content-Type: application/json
+Content-length: 27
+Date: Sun, 29 Jun 2014 06:42:38 GMT
+Server: Ur/Web
+
+{"message":"Hello, World!"}
+
+VALIDATING JSON ... PASS
+
+
+-----------------------------------------------------
+  VERIFYING PLAINTEXT (/plaintext)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Content-Type: text/plain
+Content-length: 13
+Date: Sun, 29 Jun 2014 06:42:38 GMT
+Server: Ur/Web
+
+Hello, World!
+
+VALIDATING PLAINTEXT ... PASS
+
+
+-----------------------------------------------------
+  Benchmarking urweb ...
+-----------------------------------------------------
+BENCHMARKING JSON ... Complete
+BENCHMARKING Plaintext ... Complete
+
+-----------------------------------------------------
+  Stopping urweb
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Stopped urweb
+-----------------------------------------------------
+
+----------------------------------------------------
+Saving results through urweb
+----------------------------------------------------

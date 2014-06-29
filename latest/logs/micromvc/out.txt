@@ -1,0 +1,802 @@
+test.os.lower() = linux  test.database_os.lower() = linux
+self.results['frameworks'] != None: True
+test.name: micromvc
+self.results['completed']: {}
+
+=====================================================
+  Beginning micromvc
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Starting micromvc
+-----------------------------------------------------
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+mysql start/running, process 670
+ * Restarting PostgreSQL 9.3 database server
+   ...done.
+
+-----------------------------------------------------
+  VERIFYING JSON (/json)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Server: nginx/1.4.1
+Date: Sat, 28 Jun 2014 23:38:58 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: PHP/5.4.13
+
+{"message":"Hello, World!"}
+
+VALIDATING JSON ... PASS
+
+
+-----------------------------------------------------
+  VERIFYING DB (/db)
+-----------------------------------------------------
+HTTP/1.1 500 Internal Server Error
+Server: nginx/1.4.1
+Date: Sat, 28 Jun 2014 23:38:58 GMT
+Content-Type: text/html
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: PHP/5.4.13
+
+<style type="text/css">
+.system_error {
+	border:1px solid #990000;
+	padding:10px 20px;
+	margin:10px;
+	font: 13px/1.4em verdana;
+	background: #fff;
+}
+code.source {
+	white-space: pre;
+	background: #fff;
+	padding: 1em;
+	display: block;
+	margin: 1em 0;
+	border: 1px solid #bedbeb;
+}
+.system_error .box {
+	margin: 1em 0;
+	background: #ebf2fa;
+	padding: 10px;
+	border: 1px solid #bedbeb;
+}
+code.source em {background: #ffc;}
+</style>
+
+<div class="system_error">
+
+	<b style="color: #990000">PDOException</b>
+	<p>SQLSTATE[HY000] [2002] No such file or directory</p>
+
+
+	<div class="box"> in /home/ubuntu/FrameworkBenchmarks/php-micromvc/vendor/micro/micro/Micro/Database.php [62]<code class="source"><b>57</b> 
+<b>58</b> 		// Clear config for security reasons
+<b>59</b> 		$this-&gt;config = NULL;
+<b>60</b> 
+<b>61</b> 		// Connect to PDO
+<b>62</b> <em>		$this-&gt;pdo = new \PDO($dns, $username, $password, $params);
+</em><b>63</b> 
+<b>64</b> 		// PDO should throw exceptions
+<b>65</b> 		$this-&gt;pdo-&gt;setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
+<b>66</b> 	}
+<b>67</b> 
+</code><b>Function Arguments</b><pre>Array
+(
+    [0] =&gt; mysql:host=localhost;port=3306;dbname=hello_world
+    [1] =&gt; benchmarkdbuser
+    [2] =&gt; benchmarkdbpass
+    [3] =&gt; Array
+        (
+        )
+
+)
+</pre>
+</div><div class="box"><b>Called by Micro\Database->connect()</b> in /home/ubuntu/FrameworkBenchmarks/php-micromvc/vendor/micro/micro/Micro/Database.php [153]<code class="source"><b>148</b> 		$time = microtime(TRUE);
+<b>149</b> 
+<b>150</b> 		self::$last_query = $sql;
+<b>151</b> 
+<b>152</b> 		// Connect if needed
+<b>153</b> <em>		if( ! $this-&gt;pdo) $this-&gt;connect();
+</em><b>154</b> 
+<b>155</b> 		// Should we cached PDOStatements? (Best for batch inserts/updates)
+<b>156</b> 		if($cache_statement)
+<b>157</b> 		{
+<b>158</b> 			$hash = md5($sql);
+</code><b>Function Arguments</b><pre>Array
+(
+)
+</pre>
+</div><div class="box"><b>Called by Micro\Database->query()</b> in /home/ubuntu/FrameworkBenchmarks/php-micromvc/vendor/micro/micro/Micro/Database.php [93]<code class="source"><b>88</b> 	 * @return mixed
+<b>89</b> 	 */
+<b>90</b> 	public function column($sql, array $params = NULL, $column = 0)
+<b>91</b> 	{
+<b>92</b> 		// If the query succeeds, fetch the column
+<b>93</b> <em>		return ($statement = $this-&gt;query($sql, $params)) ? $statement-&gt;fetchColumn($column) : NULL;
+</em><b>94</b> 	}
+<b>95</b> 
+<b>96</b> 
+<b>97</b> 	/**
+<b>98</b> 	 * Run a SQL query and return a single row object
+</code><b>Function Arguments</b><pre>Array
+(
+    [0] =&gt; SELECT id FROM `World` WHERE `id` = ?
+    [1] =&gt; Array
+        (
+            [0] =&gt; 741
+        )
+
+)
+</pre>
+</div><div class="box"><b>Called by Micro\Database->column()</b> in /home/ubuntu/FrameworkBenchmarks/php-micromvc/vendor/micro/micro/Micro/ORM.php [415]<code class="source"><b>410</b> 		}
+<b>411</b> 
+<b>412</b> 		// Generate select statement SQL
+<b>413</b> 		list($sql, $params) = static::$db-&gt;select(($column ? $column : &#039;COUNT(*)&#039;), $model::$table, $where, $limit, $offset, $order);
+<b>414</b> 
+<b>415</b> <em>		return static::$db-&gt;$func($sql, $params, ($column == &#039;*&#039; ? NULL : 0));
+</em><b>416</b> 	}
+<b>417</b> 
+<b>418</b> 
+<b>419</b> 	/**
+<b>420</b> 	 * Fetch an array of objects from this table
+</code><b>Function Arguments</b><pre>Array
+(
+    [0] =&gt; SELECT id FROM `World` WHERE `id` = ?
+    [1] =&gt; Array
+        (
+            [0] =&gt; 741
+        )
+
+    [2] =&gt; 0
+)
+</pre>
+</div><div class="box"><b>Called by Micro\ORM::select()</b> in /home/ubuntu/FrameworkBenchmarks/php-micromvc/vendor/micro/micro/Micro/ORM.php [466]<code class="source"><b>461</b> 	 * @param array $where conditions
+<b>462</b> 	 * @return int
+<b>463</b> 	 */
+<b>464</b> 	public static function row(array $where = NULL)
+<b>465</b> 	{
+<b>466</b> <em>		if($id = self::select(&#039;column&#039;, static::$key, NULL, $where))
+</em><b>467</b> 		{
+<b>468</b> 			$class = get_called_class();
+<b>469</b> 			return new $class($id);
+<b>470</b> 		}
+<b>471</b> 	}
+</code><b>Function Arguments</b><pre>Array
+(
+    [0] =&gt; column
+    [1] =&gt; id
+    [2] =&gt; 
+    [3] =&gt; Array
+        (
+            [id] =&gt; 741
+        )
+
+)
+</pre>
+</div><div class="box"><b>Called by Micro\ORM::row()</b> in /home/ubuntu/FrameworkBenchmarks/php-micromvc/Class/Controller/Benchmark/Db.php [16]<code class="source"><b>11</b>         $queries = get(&#039;queries&#039;, 1);
+<b>12</b>         $this-&gt;worlds = array();
+<b>13</b>         $this-&gt;load_database();
+<b>14</b> 
+<b>15</b>         for ($i = 0; $i &lt; $queries; ++$i) {
+<b>16</b> <em>            $this-&gt;worlds[] = World::row(array(&#039;id&#039; =&gt; mt_rand(1, 10000)))-&gt;to_array();
+</em><b>17</b>         }
+<b>18</b> 
+<b>19</b>         if ($queries == 1) {
+<b>20</b>             $this-&gt;worlds = $this-&gt;worlds[0];
+<b>21</b>         }
+</code><b>Function Arguments</b><pre>Array
+(
+    [0] =&gt; Array
+        (
+            [id] =&gt; 741
+        )
+
+)
+</pre>
+</div><div class="box"><b>Called by call_user_func_array()</b> in /home/ubuntu/FrameworkBenchmarks/php-micromvc/vendor/micro/micro/Micro/Dispatch.php [51]<code class="source"><b>46</b> 		// Controller setup here
+<b>47</b> 		$controller-&gt;initialize($method);
+<b>48</b> 
+<b>49</b> 		if($params)
+<b>50</b> 		{
+<b>51</b> <em>			call_user_func_array(array($controller, $method), $params);
+</em><b>52</b> 		}
+<b>53</b> 		else
+<b>54</b> 		{
+<b>55</b> 			$controller-&gt;$method();
+<b>56</b> 		}
+</code><b>Function Arguments</b><pre>Array
+(
+    [0] =&gt; Array
+        (
+            [0] =&gt; Controller\Benchmark\Db Object
+                (
+                    [template] =&gt; Layout
+                    [route] =&gt; db
+                    [dispatch] =&gt; Micro\Dispatch Object
+                        (
+                            [routes] =&gt; Array
+                                (
+                                    [] =&gt; \Controller\Index
+                                    [404] =&gt; \Controller\Page404
+                                    [school] =&gt; \Controller\School
+                                    [json] =&gt; \Controller\Benchmark\Json
+                                    [db] =&gt; \Controller\Benchmark\Db
+                                )
+
+                        )
+
+                    [worlds] =&gt; Array
+                        (
+                        )
+
+                )
+
+            [1] =&gt; run
+        )
+
+    [1] =&gt; Array
+        (
+            [0] =&gt; 
+        )
+
+)
+</pre>
+</div><div class="box"><b>Called by Micro\Dispatch->controller()</b> in /home/ubuntu/FrameworkBenchmarks/php-micromvc/Public/index.php [26]<code class="source"><b>21</b> 
+<b>22</b> 	// Load controller dispatch passing URL routes
+<b>23</b> 	$dispatch = new \Micro\Dispatch(config(&#039;Route&#039;)-&gt;routes);
+<b>24</b> 
+<b>25</b> 	// Run controller based on URL path and HTTP request method
+<b>26</b> <em>	$controller = $dispatch-&gt;controller(PATH, getenv(&#039;REQUEST_METHOD&#039;));
+</em><b>27</b> 
+<b>28</b> 	// Send the controller response
+<b>29</b> 	$controller-&gt;send();
+<b>30</b> 
+<b>31</b> 	// One last chance to do something
+</code><b>Function Arguments</b><pre>Array
+(
+    [0] =&gt; /db
+    [1] =&gt; GET
+)
+</pre>
+</div>
+</div>
+
+
+VALIDATING DB ... FAIL
+
+
+-----------------------------------------------------
+  VERIFYING QUERY (/db?queries=2)
+-----------------------------------------------------
+HTTP/1.1 500 Internal Server Error
+Server: nginx/1.4.1
+Date: Sat, 28 Jun 2014 23:38:58 GMT
+Content-Type: text/html
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: PHP/5.4.13
+
+<style type="text/css">
+.system_error {
+	border:1px solid #990000;
+	padding:10px 20px;
+	margin:10px;
+	font: 13px/1.4em verdana;
+	background: #fff;
+}
+code.source {
+	white-space: pre;
+	background: #fff;
+	padding: 1em;
+	display: block;
+	margin: 1em 0;
+	border: 1px solid #bedbeb;
+}
+.system_error .box {
+	margin: 1em 0;
+	background: #ebf2fa;
+	padding: 10px;
+	border: 1px solid #bedbeb;
+}
+code.source em {background: #ffc;}
+</style>
+
+<div class="system_error">
+
+	<b style="color: #990000">PDOException</b>
+	<p>SQLSTATE[HY000] [2002] No such file or directory</p>
+
+
+	<div class="box"> in /home/ubuntu/FrameworkBenchmarks/php-micromvc/vendor/micro/micro/Micro/Database.php [62]<code class="source"><b>57</b> 
+<b>58</b> 		// Clear config for security reasons
+<b>59</b> 		$this-&gt;config = NULL;
+<b>60</b> 
+<b>61</b> 		// Connect to PDO
+<b>62</b> <em>		$this-&gt;pdo = new \PDO($dns, $username, $password, $params);
+</em><b>63</b> 
+<b>64</b> 		// PDO should throw exceptions
+<b>65</b> 		$this-&gt;pdo-&gt;setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
+<b>66</b> 	}
+<b>67</b> 
+</code><b>Function Arguments</b><pre>Array
+(
+    [0] =&gt; mysql:host=localhost;port=3306;dbname=hello_world
+    [1] =&gt; benchmarkdbuser
+    [2] =&gt; benchmarkdbpass
+    [3] =&gt; Array
+        (
+        )
+
+)
+</pre>
+</div><div class="box"><b>Called by Micro\Database->connect()</b> in /home/ubuntu/FrameworkBenchmarks/php-micromvc/vendor/micro/micro/Micro/Database.php [153]<code class="source"><b>148</b> 		$time = microtime(TRUE);
+<b>149</b> 
+<b>150</b> 		self::$last_query = $sql;
+<b>151</b> 
+<b>152</b> 		// Connect if needed
+<b>153</b> <em>		if( ! $this-&gt;pdo) $this-&gt;connect();
+</em><b>154</b> 
+<b>155</b> 		// Should we cached PDOStatements? (Best for batch inserts/updates)
+<b>156</b> 		if($cache_statement)
+<b>157</b> 		{
+<b>158</b> 			$hash = md5($sql);
+</code><b>Function Arguments</b><pre>Array
+(
+)
+</pre>
+</div><div class="box"><b>Called by Micro\Database->query()</b> in /home/ubuntu/FrameworkBenchmarks/php-micromvc/vendor/micro/micro/Micro/Database.php [93]<code class="source"><b>88</b> 	 * @return mixed
+<b>89</b> 	 */
+<b>90</b> 	public function column($sql, array $params = NULL, $column = 0)
+<b>91</b> 	{
+<b>92</b> 		// If the query succeeds, fetch the column
+<b>93</b> <em>		return ($statement = $this-&gt;query($sql, $params)) ? $statement-&gt;fetchColumn($column) : NULL;
+</em><b>94</b> 	}
+<b>95</b> 
+<b>96</b> 
+<b>97</b> 	/**
+<b>98</b> 	 * Run a SQL query and return a single row object
+</code><b>Function Arguments</b><pre>Array
+(
+    [0] =&gt; SELECT id FROM `World` WHERE `id` = ?
+    [1] =&gt; Array
+        (
+            [0] =&gt; 4944
+        )
+
+)
+</pre>
+</div><div class="box"><b>Called by Micro\Database->column()</b> in /home/ubuntu/FrameworkBenchmarks/php-micromvc/vendor/micro/micro/Micro/ORM.php [415]<code class="source"><b>410</b> 		}
+<b>411</b> 
+<b>412</b> 		// Generate select statement SQL
+<b>413</b> 		list($sql, $params) = static::$db-&gt;select(($column ? $column : &#039;COUNT(*)&#039;), $model::$table, $where, $limit, $offset, $order);
+<b>414</b> 
+<b>415</b> <em>		return static::$db-&gt;$func($sql, $params, ($column == &#039;*&#039; ? NULL : 0));
+</em><b>416</b> 	}
+<b>417</b> 
+<b>418</b> 
+<b>419</b> 	/**
+<b>420</b> 	 * Fetch an array of objects from this table
+</code><b>Function Arguments</b><pre>Array
+(
+    [0] =&gt; SELECT id FROM `World` WHERE `id` = ?
+    [1] =&gt; Array
+        (
+            [0] =&gt; 4944
+        )
+
+    [2] =&gt; 0
+)
+</pre>
+</div><div class="box"><b>Called by Micro\ORM::select()</b> in /home/ubuntu/FrameworkBenchmarks/php-micromvc/vendor/micro/micro/Micro/ORM.php [466]<code class="source"><b>461</b> 	 * @param array $where conditions
+<b>462</b> 	 * @return int
+<b>463</b> 	 */
+<b>464</b> 	public static function row(array $where = NULL)
+<b>465</b> 	{
+<b>466</b> <em>		if($id = self::select(&#039;column&#039;, static::$key, NULL, $where))
+</em><b>467</b> 		{
+<b>468</b> 			$class = get_called_class();
+<b>469</b> 			return new $class($id);
+<b>470</b> 		}
+<b>471</b> 	}
+</code><b>Function Arguments</b><pre>Array
+(
+    [0] =&gt; column
+    [1] =&gt; id
+    [2] =&gt; 
+    [3] =&gt; Array
+        (
+            [id] =&gt; 4944
+        )
+
+)
+</pre>
+</div><div class="box"><b>Called by Micro\ORM::row()</b> in /home/ubuntu/FrameworkBenchmarks/php-micromvc/Class/Controller/Benchmark/Db.php [16]<code class="source"><b>11</b>         $queries = get(&#039;queries&#039;, 1);
+<b>12</b>         $this-&gt;worlds = array();
+<b>13</b>         $this-&gt;load_database();
+<b>14</b> 
+<b>15</b>         for ($i = 0; $i &lt; $queries; ++$i) {
+<b>16</b> <em>            $this-&gt;worlds[] = World::row(array(&#039;id&#039; =&gt; mt_rand(1, 10000)))-&gt;to_array();
+</em><b>17</b>         }
+<b>18</b> 
+<b>19</b>         if ($queries == 1) {
+<b>20</b>             $this-&gt;worlds = $this-&gt;worlds[0];
+<b>21</b>         }
+</code><b>Function Arguments</b><pre>Array
+(
+    [0] =&gt; Array
+        (
+            [id] =&gt; 4944
+        )
+
+)
+</pre>
+</div><div class="box"><b>Called by call_user_func_array()</b> in /home/ubuntu/FrameworkBenchmarks/php-micromvc/vendor/micro/micro/Micro/Dispatch.php [51]<code class="source"><b>46</b> 		// Controller setup here
+<b>47</b> 		$controller-&gt;initialize($method);
+<b>48</b> 
+<b>49</b> 		if($params)
+<b>50</b> 		{
+<b>51</b> <em>			call_user_func_array(array($controller, $method), $params);
+</em><b>52</b> 		}
+<b>53</b> 		else
+<b>54</b> 		{
+<b>55</b> 			$controller-&gt;$method();
+<b>56</b> 		}
+</code><b>Function Arguments</b><pre>Array
+(
+    [0] =&gt; Array
+        (
+            [0] =&gt; Controller\Benchmark\Db Object
+                (
+                    [template] =&gt; Layout
+                    [route] =&gt; db
+                    [dispatch] =&gt; Micro\Dispatch Object
+                        (
+                            [routes] =&gt; Array
+                                (
+                                    [] =&gt; \Controller\Index
+                                    [404] =&gt; \Controller\Page404
+                                    [school] =&gt; \Controller\School
+                                    [json] =&gt; \Controller\Benchmark\Json
+                                    [db] =&gt; \Controller\Benchmark\Db
+                                )
+
+                        )
+
+                    [worlds] =&gt; Array
+                        (
+                        )
+
+                )
+
+            [1] =&gt; run
+        )
+
+    [1] =&gt; Array
+        (
+            [0] =&gt; 
+        )
+
+)
+</pre>
+</div><div class="box"><b>Called by Micro\Dispatch->controller()</b> in /home/ubuntu/FrameworkBenchmarks/php-micromvc/Public/index.php [26]<code class="source"><b>21</b> 
+<b>22</b> 	// Load controller dispatch passing URL routes
+<b>23</b> 	$dispatch = new \Micro\Dispatch(config(&#039;Route&#039;)-&gt;routes);
+<b>24</b> 
+<b>25</b> 	// Run controller based on URL path and HTTP request method
+<b>26</b> <em>	$controller = $dispatch-&gt;controller(PATH, getenv(&#039;REQUEST_METHOD&#039;));
+</em><b>27</b> 
+<b>28</b> 	// Send the controller response
+<b>29</b> 	$controller-&gt;send();
+<b>30</b> 
+<b>31</b> 	// One last chance to do something
+</code><b>Function Arguments</b><pre>Array
+(
+    [0] =&gt; /db
+    [1] =&gt; GET
+)
+</pre>
+</div>
+</div>
+
+
+/db?queries=2 - FAIL
+
+-----------------------------------------------------
+
+HTTP/1.1 200 OK
+Server: nginx/1.4.1
+Date: Sat, 28 Jun 2014 23:38:58 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: PHP/5.4.13
+
+[]
+
+/db?queries=0 - WARNING
+
+-----------------------------------------------------
+
+HTTP/1.1 200 OK
+Server: nginx/1.4.1
+Date: Sat, 28 Jun 2014 23:38:58 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: PHP/5.4.13
+
+[]
+
+/db?queries=foo - WARNING
+
+-----------------------------------------------------
+
+HTTP/1.1 500 Internal Server Error
+Server: nginx/1.4.1
+Date: Sat, 28 Jun 2014 23:38:58 GMT
+Content-Type: text/html
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: PHP/5.4.13
+
+<style type="text/css">
+.system_error {
+	border:1px solid #990000;
+	padding:10px 20px;
+	margin:10px;
+	font: 13px/1.4em verdana;
+	background: #fff;
+}
+code.source {
+	white-space: pre;
+	background: #fff;
+	padding: 1em;
+	display: block;
+	margin: 1em 0;
+	border: 1px solid #bedbeb;
+}
+.system_error .box {
+	margin: 1em 0;
+	background: #ebf2fa;
+	padding: 10px;
+	border: 1px solid #bedbeb;
+}
+code.source em {background: #ffc;}
+</style>
+
+<div class="system_error">
+
+	<b style="color: #990000">PDOException</b>
+	<p>SQLSTATE[HY000] [2002] No such file or directory</p>
+
+
+	<div class="box"> in /home/ubuntu/FrameworkBenchmarks/php-micromvc/vendor/micro/micro/Micro/Database.php [62]<code class="source"><b>57</b> 
+<b>58</b> 		// Clear config for security reasons
+<b>59</b> 		$this-&gt;config = NULL;
+<b>60</b> 
+<b>61</b> 		// Connect to PDO
+<b>62</b> <em>		$this-&gt;pdo = new \PDO($dns, $username, $password, $params);
+</em><b>63</b> 
+<b>64</b> 		// PDO should throw exceptions
+<b>65</b> 		$this-&gt;pdo-&gt;setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
+<b>66</b> 	}
+<b>67</b> 
+</code><b>Function Arguments</b><pre>Array
+(
+    [0] =&gt; mysql:host=localhost;port=3306;dbname=hello_world
+    [1] =&gt; benchmarkdbuser
+    [2] =&gt; benchmarkdbpass
+    [3] =&gt; Array
+        (
+        )
+
+)
+</pre>
+</div><div class="box"><b>Called by Micro\Database->connect()</b> in /home/ubuntu/FrameworkBenchmarks/php-micromvc/vendor/micro/micro/Micro/Database.php [153]<code class="source"><b>148</b> 		$time = microtime(TRUE);
+<b>149</b> 
+<b>150</b> 		self::$last_query = $sql;
+<b>151</b> 
+<b>152</b> 		// Connect if needed
+<b>153</b> <em>		if( ! $this-&gt;pdo) $this-&gt;connect();
+</em><b>154</b> 
+<b>155</b> 		// Should we cached PDOStatements? (Best for batch inserts/updates)
+<b>156</b> 		if($cache_statement)
+<b>157</b> 		{
+<b>158</b> 			$hash = md5($sql);
+</code><b>Function Arguments</b><pre>Array
+(
+)
+</pre>
+</div><div class="box"><b>Called by Micro\Database->query()</b> in /home/ubuntu/FrameworkBenchmarks/php-micromvc/vendor/micro/micro/Micro/Database.php [93]<code class="source"><b>88</b> 	 * @return mixed
+<b>89</b> 	 */
+<b>90</b> 	public function column($sql, array $params = NULL, $column = 0)
+<b>91</b> 	{
+<b>92</b> 		// If the query succeeds, fetch the column
+<b>93</b> <em>		return ($statement = $this-&gt;query($sql, $params)) ? $statement-&gt;fetchColumn($column) : NULL;
+</em><b>94</b> 	}
+<b>95</b> 
+<b>96</b> 
+<b>97</b> 	/**
+<b>98</b> 	 * Run a SQL query and return a single row object
+</code><b>Function Arguments</b><pre>Array
+(
+    [0] =&gt; SELECT id FROM `World` WHERE `id` = ?
+    [1] =&gt; Array
+        (
+            [0] =&gt; 8581
+        )
+
+)
+</pre>
+</div><div class="box"><b>Called by Micro\Database->column()</b> in /home/ubuntu/FrameworkBenchmarks/php-micromvc/vendor/micro/micro/Micro/ORM.php [415]<code class="source"><b>410</b> 		}
+<b>411</b> 
+<b>412</b> 		// Generate select statement SQL
+<b>413</b> 		list($sql, $params) = static::$db-&gt;select(($column ? $column : &#039;COUNT(*)&#039;), $model::$table, $where, $limit, $offset, $order);
+<b>414</b> 
+<b>415</b> <em>		return static::$db-&gt;$func($sql, $params, ($column == &#039;*&#039; ? NULL : 0));
+</em><b>416</b> 	}
+<b>417</b> 
+<b>418</b> 
+<b>419</b> 	/**
+<b>420</b> 	 * Fetch an array of objects from this table
+</code><b>Function Arguments</b><pre>Array
+(
+    [0] =&gt; SELECT id FROM `World` WHERE `id` = ?
+    [1] =&gt; Array
+        (
+            [0] =&gt; 8581
+        )
+
+    [2] =&gt; 0
+)
+</pre>
+</div><div class="box"><b>Called by Micro\ORM::select()</b> in /home/ubuntu/FrameworkBenchmarks/php-micromvc/vendor/micro/micro/Micro/ORM.php [466]<code class="source"><b>461</b> 	 * @param array $where conditions
+<b>462</b> 	 * @return int
+<b>463</b> 	 */
+<b>464</b> 	public static function row(array $where = NULL)
+<b>465</b> 	{
+<b>466</b> <em>		if($id = self::select(&#039;column&#039;, static::$key, NULL, $where))
+</em><b>467</b> 		{
+<b>468</b> 			$class = get_called_class();
+<b>469</b> 			return new $class($id);
+<b>470</b> 		}
+<b>471</b> 	}
+</code><b>Function Arguments</b><pre>Array
+(
+    [0] =&gt; column
+    [1] =&gt; id
+    [2] =&gt; 
+    [3] =&gt; Array
+        (
+            [id] =&gt; 8581
+        )
+
+)
+</pre>
+</div><div class="box"><b>Called by Micro\ORM::row()</b> in /home/ubuntu/FrameworkBenchmarks/php-micromvc/Class/Controller/Benchmark/Db.php [16]<code class="source"><b>11</b>         $queries = get(&#039;queries&#039;, 1);
+<b>12</b>         $this-&gt;worlds = array();
+<b>13</b>         $this-&gt;load_database();
+<b>14</b> 
+<b>15</b>         for ($i = 0; $i &lt; $queries; ++$i) {
+<b>16</b> <em>            $this-&gt;worlds[] = World::row(array(&#039;id&#039; =&gt; mt_rand(1, 10000)))-&gt;to_array();
+</em><b>17</b>         }
+<b>18</b> 
+<b>19</b>         if ($queries == 1) {
+<b>20</b>             $this-&gt;worlds = $this-&gt;worlds[0];
+<b>21</b>         }
+</code><b>Function Arguments</b><pre>Array
+(
+    [0] =&gt; Array
+        (
+            [id] =&gt; 8581
+        )
+
+)
+</pre>
+</div><div class="box"><b>Called by call_user_func_array()</b> in /home/ubuntu/FrameworkBenchmarks/php-micromvc/vendor/micro/micro/Micro/Dispatch.php [51]<code class="source"><b>46</b> 		// Controller setup here
+<b>47</b> 		$controller-&gt;initialize($method);
+<b>48</b> 
+<b>49</b> 		if($params)
+<b>50</b> 		{
+<b>51</b> <em>			call_user_func_array(array($controller, $method), $params);
+</em><b>52</b> 		}
+<b>53</b> 		else
+<b>54</b> 		{
+<b>55</b> 			$controller-&gt;$method();
+<b>56</b> 		}
+</code><b>Function Arguments</b><pre>Array
+(
+    [0] =&gt; Array
+        (
+            [0] =&gt; Controller\Benchmark\Db Object
+                (
+                    [template] =&gt; Layout
+                    [route] =&gt; db
+                    [dispatch] =&gt; Micro\Dispatch Object
+                        (
+                            [routes] =&gt; Array
+                                (
+                                    [] =&gt; \Controller\Index
+                                    [404] =&gt; \Controller\Page404
+                                    [school] =&gt; \Controller\School
+                                    [json] =&gt; \Controller\Benchmark\Json
+                                    [db] =&gt; \Controller\Benchmark\Db
+                                )
+
+                        )
+
+                    [worlds] =&gt; Array
+                        (
+                        )
+
+                )
+
+            [1] =&gt; run
+        )
+
+    [1] =&gt; Array
+        (
+            [0] =&gt; 
+        )
+
+)
+</pre>
+</div><div class="box"><b>Called by Micro\Dispatch->controller()</b> in /home/ubuntu/FrameworkBenchmarks/php-micromvc/Public/index.php [26]<code class="source"><b>21</b> 
+<b>22</b> 	// Load controller dispatch passing URL routes
+<b>23</b> 	$dispatch = new \Micro\Dispatch(config(&#039;Route&#039;)-&gt;routes);
+<b>24</b> 
+<b>25</b> 	// Run controller based on URL path and HTTP request method
+<b>26</b> <em>	$controller = $dispatch-&gt;controller(PATH, getenv(&#039;REQUEST_METHOD&#039;));
+</em><b>27</b> 
+<b>28</b> 	// Send the controller response
+<b>29</b> 	$controller-&gt;send();
+<b>30</b> 
+<b>31</b> 	// One last chance to do something
+</code><b>Function Arguments</b><pre>Array
+(
+    [0] =&gt; /db
+    [1] =&gt; GET
+)
+</pre>
+</div>
+</div>
+
+
+/db?queries=501 - WARNING
+
+-----------------------------------------------------
+
+
+VALIDATING QUERY ... FAIL
+
+
+-----------------------------------------------------
+  Benchmarking micromvc ...
+-----------------------------------------------------
+BENCHMARKING JSON ... Complete
+BENCHMARKING DB ... Complete
+BENCHMARKING Query ... Complete
+
+-----------------------------------------------------
+  Stopping micromvc
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Stopped micromvc
+-----------------------------------------------------
+
+----------------------------------------------------
+Saving results through micromvc
+----------------------------------------------------

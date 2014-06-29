@@ -1,0 +1,49 @@
+restart: Unknown instance: 
+2014/06/28 23:34:16 [error] 31276#0: *4 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] No such file or directory' in /home/ubuntu/FrameworkBenchmarks/php-lithium/libraries/lithium/data/source/Database.php:272
+Stack trace:
+#0 /home/ubuntu/FrameworkBenchmarks/php-lithium/libraries/lithium/data/source/Database.php(272): PDO->__construct('mysql:host=loca...', 'benchmarkdbuser', 'benchmarkdbpass', Array)
+#1 /home/ubuntu/FrameworkBenchmarks/php-lithium/libraries/lithium/data/source/database/adapter/MySql.php(118): lithium\data\source\Database->connect()
+#2 /home/ubuntu/FrameworkBenchmarks/php-lithium/libraries/lithium/data/Source.php(90): lithium\data\source\database\adapter\MySql->connect()
+#3 /home/ubuntu/FrameworkBenchmarks/php-lithium/libraries/lithium/core/Object.php(94): lithium\data\Source->_init()
+#4 /home/ubuntu/FrameworkBenchmarks/php-lithium/libraries/lithium/data/Source.php(73): lithium\core\Object->__construct(Array)
+#5 /home/ubuntu/FrameworkBenchmarks/php-lithium/libraries/lithium/d" while reading response header from upstream, client: 127.0.0.1, server: localhost, request: "GET /db HTTP/1.1", upstream: "fastcgi://127.0.0.1:9001", host: "127.0.0.1:8080"
+2014/06/28 23:34:16 [error] 31276#0: *5 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] No such file or directory' in /home/ubuntu/FrameworkBenchmarks/php-lithium/libraries/lithium/data/source/Database.php:272
+Stack trace:
+#0 /home/ubuntu/FrameworkBenchmarks/php-lithium/libraries/lithium/data/source/Database.php(272): PDO->__construct('mysql:host=loca...', 'benchmarkdbuser', 'benchmarkdbpass', Array)
+#1 /home/ubuntu/FrameworkBenchmarks/php-lithium/libraries/lithium/data/source/database/adapter/MySql.php(118): lithium\data\source\Database->connect()
+#2 /home/ubuntu/FrameworkBenchmarks/php-lithium/libraries/lithium/data/Source.php(90): lithium\data\source\database\adapter\MySql->connect()
+#3 /home/ubuntu/FrameworkBenchmarks/php-lithium/libraries/lithium/core/Object.php(94): lithium\data\Source->_init()
+#4 /home/ubuntu/FrameworkBenchmarks/php-lithium/libraries/lithium/data/Source.php(73): lithium\core\Object->__construct(Array)
+#5 /home/ubuntu/FrameworkBenchmarks/php-lithium/libraries/lithium/d" while reading response header from upstream, client: 127.0.0.1, server: localhost, request: "GET /db HTTP/1.1", upstream: "fastcgi://127.0.0.1:9001", host: "127.0.0.1:8080"
+2014/06/28 23:34:16 [error] 31276#0: *6 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] No such file or directory' in /home/ubuntu/FrameworkBenchmarks/php-lithium/libraries/lithium/data/source/Database.php:272
+Stack trace:
+#0 /home/ubuntu/FrameworkBenchmarks/php-lithium/libraries/lithium/data/source/Database.php(272): PDO->__construct('mysql:host=loca...', 'benchmarkdbuser', 'benchmarkdbpass', Array)
+#1 /home/ubuntu/FrameworkBenchmarks/php-lithium/libraries/lithium/data/source/database/adapter/MySql.php(118): lithium\data\source\Database->connect()
+#2 /home/ubuntu/FrameworkBenchmarks/php-lithium/libraries/lithium/data/Source.php(90): lithium\data\source\database\adapter\MySql->connect()
+#3 /home/ubuntu/FrameworkBenchmarks/php-lithium/libraries/lithium/core/Object.php(94): lithium\data\Source->_init()
+#4 /home/ubuntu/FrameworkBenchmarks/php-lithium/libraries/lithium/data/Source.php(73): lithium\core\Object->__construct(Array)
+#5 /home/ubuntu/FrameworkBenchmarks/php-lithium/libraries/lithium/d" while reading response header from upstream, client: 127.0.0.1, server: localhost, request: "GET /db?queries=2 HTTP/1.1", upstream: "fastcgi://127.0.0.1:9001", host: "127.0.0.1:8080"
+2014/06/28 23:34:16 [error] 31276#0: *7 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] No such file or directory' in /home/ubuntu/FrameworkBenchmarks/php-lithium/libraries/lithium/data/source/Database.php:272
+Stack trace:
+#0 /home/ubuntu/FrameworkBenchmarks/php-lithium/libraries/lithium/data/source/Database.php(272): PDO->__construct('mysql:host=loca...', 'benchmarkdbuser', 'benchmarkdbpass', Array)
+#1 /home/ubuntu/FrameworkBenchmarks/php-lithium/libraries/lithium/data/source/database/adapter/MySql.php(118): lithium\data\source\Database->connect()
+#2 /home/ubuntu/FrameworkBenchmarks/php-lithium/libraries/lithium/data/Source.php(90): lithium\data\source\database\adapter\MySql->connect()
+#3 /home/ubuntu/FrameworkBenchmarks/php-lithium/libraries/lithium/core/Object.php(94): lithium\data\Source->_init()
+#4 /home/ubuntu/FrameworkBenchmarks/php-lithium/libraries/lithium/data/Source.php(73): lithium\core\Object->__construct(Array)
+#5 /home/ubuntu/FrameworkBenchmarks/php-lithium/libraries/lithium/d" while reading response header from upstream, client: 127.0.0.1, server: localhost, request: "GET /db?queries=2 HTTP/1.1", upstream: "fastcgi://127.0.0.1:9001", host: "127.0.0.1:8080"
+2014/06/28 23:34:16 [error] 31276#0: *12 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] No such file or directory' in /home/ubuntu/FrameworkBenchmarks/php-lithium/libraries/lithium/data/source/Database.php:272
+Stack trace:
+#0 /home/ubuntu/FrameworkBenchmarks/php-lithium/libraries/lithium/data/source/Database.php(272): PDO->__construct('mysql:host=loca...', 'benchmarkdbuser', 'benchmarkdbpass', Array)
+#1 /home/ubuntu/FrameworkBenchmarks/php-lithium/libraries/lithium/data/source/database/adapter/MySql.php(118): lithium\data\source\Database->connect()
+#2 /home/ubuntu/FrameworkBenchmarks/php-lithium/libraries/lithium/data/Source.php(90): lithium\data\source\database\adapter\MySql->connect()
+#3 /home/ubuntu/FrameworkBenchmarks/php-lithium/libraries/lithium/core/Object.php(94): lithium\data\Source->_init()
+#4 /home/ubuntu/FrameworkBenchmarks/php-lithium/libraries/lithium/data/Source.php(73): lithium\core\Object->__construct(Array)
+#5 /home/ubuntu/FrameworkBenchmarks/php-lithium/libraries/lithium/d" while reading response header from upstream, client: 127.0.0.1, server: localhost, request: "GET /db?queries=501 HTTP/1.1", upstream: "fastcgi://127.0.0.1:9001", host: "127.0.0.1:8080"
+2014/06/28 23:34:16 [error] 31276#0: *13 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] No such file or directory' in /home/ubuntu/FrameworkBenchmarks/php-lithium/libraries/lithium/data/source/Database.php:272
+Stack trace:
+#0 /home/ubuntu/FrameworkBenchmarks/php-lithium/libraries/lithium/data/source/Database.php(272): PDO->__construct('mysql:host=loca...', 'benchmarkdbuser', 'benchmarkdbpass', Array)
+#1 /home/ubuntu/FrameworkBenchmarks/php-lithium/libraries/lithium/data/source/database/adapter/MySql.php(118): lithium\data\source\Database->connect()
+#2 /home/ubuntu/FrameworkBenchmarks/php-lithium/libraries/lithium/data/Source.php(90): lithium\data\source\database\adapter\MySql->connect()
+#3 /home/ubuntu/FrameworkBenchmarks/php-lithium/libraries/lithium/core/Object.php(94): lithium\data\Source->_init()
+#4 /home/ubuntu/FrameworkBenchmarks/php-lithium/libraries/lithium/data/Source.php(73): lithium\core\Object->__construct(Array)
+#5 /home/ubuntu/FrameworkBenchmarks/php-lithium/libraries/lithium/d" while reading response header from upstream, client: 127.0.0.1, server: localhost, request: "GET /db?queries=501 HTTP/1.1", upstream: "fastcgi://127.0.0.1:9001", host: "127.0.0.1:8080"

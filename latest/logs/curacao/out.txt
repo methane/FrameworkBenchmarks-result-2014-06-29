@@ -1,0 +1,95 @@
+test.os.lower() = linux  test.database_os.lower() = linux
+self.results['frameworks'] != None: True
+test.name: curacao
+self.results['completed']: {}
+
+=====================================================
+  Beginning curacao
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Starting curacao
+-----------------------------------------------------
+[0m[[0minfo[0m] [0mLoading project definition from /home/ubuntu/FrameworkBenchmarks/curacao/project[0m
+[0m[[0minfo[0m] [0mSet current project to curacao-benchmark (in build file:/home/ubuntu/FrameworkBenchmarks/curacao/)[0m
+[0m[[0minfo[0m] [0mIncluding from cache: curacao-2.6.2.jar[0m
+[0m[[0minfo[0m] [0mIncluding from cache: gson-2.2.4.jar[0m
+[0m[[0minfo[0m] [0mIncluding from cache: commons-lang3-3.1.jar[0m
+[0m[[0minfo[0m] [0mIncluding from cache: jetty-server-9.2.0.v20140526.jar[0m
+[0m[[0minfo[0m] [0mIncluding from cache: jetty-webapp-9.2.0.v20140526.jar[0m
+[0m[[0minfo[0m] [0mIncluding from cache: reflections-0.9.9-RC1.jar[0m
+[0m[[0minfo[0m] [0mIncluding from cache: commons-io-2.4.jar[0m
+[0m[[0minfo[0m] [0mIncluding from cache: jetty-xml-9.2.0.v20140526.jar[0m
+[0m[[0minfo[0m] [0mIncluding from cache: javax.servlet-api-3.1.0.jar[0m
+[0m[[0minfo[0m] [0mIncluding from cache: commons-codec-1.6.jar[0m
+[0m[[0minfo[0m] [0mIncluding from cache: jetty-util-9.2.0.v20140526.jar[0m
+[0m[[0minfo[0m] [0mIncluding from cache: jsr305-2.0.3.jar[0m
+[0m[[0minfo[0m] [0mIncluding from cache: jetty-http-9.2.0.v20140526.jar[0m
+[0m[[0minfo[0m] [0mIncluding from cache: jetty-servlet-9.2.0.v20140526.jar[0m
+[0m[[0minfo[0m] [0mIncluding from cache: config-1.2.1.jar[0m
+[0m[[0minfo[0m] [0mIncluding from cache: guava-17.0.jar[0m
+[0m[[0minfo[0m] [0mIncluding from cache: jetty-io-9.2.0.v20140526.jar[0m
+[0m[[0minfo[0m] [0mIncluding from cache: curacao-gson-2.6.2.jar[0m
+[0m[[0minfo[0m] [0mIncluding from cache: jetty-security-9.2.0.v20140526.jar[0m
+[0m[[0minfo[0m] [0mIncluding from cache: logback-core-1.0.7.jar[0m
+[0m[[0minfo[0m] [0mIncluding from cache: javassist-3.16.1-GA.jar[0m
+[0m[[0minfo[0m] [0mIncluding from cache: slf4j-api-1.7.7.jar[0m
+[0m[[0minfo[0m] [0mIncluding from cache: logback-classic-1.0.7.jar[0m
+[0m[[0minfo[0m] [0mChecking every *.class/*.jar file's SHA-1.[0m
+[0m[[0minfo[0m] [0mMerging files...[0m
+[0m[[33mwarn[0m] [0mMerging 'META-INF/MANIFEST.MF' with strategy 'discard'[0m
+[0m[[33mwarn[0m] [0mStrategy 'discard' was applied to a file[0m
+[0m[[0minfo[0m] [0mAssembly up to date: /home/ubuntu/FrameworkBenchmarks/curacao/dist/curacao-standalone.jar[0m
+[0m[[32msuccess[0m] [0mTotal time: 2 s, completed Jun 28, 2014 7:53:54 PM[0m
+06/28 19:53:54.976 INFO [main] o.e.j.u.log - Logging initialized @72ms
+06/28 19:53:55.073 INFO [main] o.e.j.s.Server - jetty-9.2.z-SNAPSHOT
+06/28 19:53:55.154 INFO [main] o.e.j.w.StandardDescriptorProcessor - NO JSP Support for /, did not find org.apache.jasper.servlet.JspServlet
+06/28 19:53:57.329 INFO [main] o.e.j.s.h.ContextHandler - Started o.e.j.w.WebAppContext@6e5ed41e{/,file:/home/ubuntu/FrameworkBenchmarks/curacao/,AVAILABLE}
+06/28 19:53:57.363 INFO [main] o.e.j.s.ServerConnector - Started ServerConnector@506208e4{HTTP/1.1}{0.0.0.0:8080}
+06/28 19:53:57.363 INFO [main] o.e.j.s.Server - Started @2673ms
+
+-----------------------------------------------------
+  VERIFYING JSON (/json)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Date: Sat, 28 Jun 2014 19:54:09 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 27
+Server: Jetty(9.2.z-SNAPSHOT)
+
+{"message":"Hello, World!"}
+
+VALIDATING JSON ... PASS
+
+
+-----------------------------------------------------
+  VERIFYING PLAINTEXT (/plaintext)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Date: Sat, 28 Jun 2014 19:54:09 GMT
+Content-Type: text/plain; charset=UTF-8
+Content-Length: 13
+Server: Jetty(9.2.z-SNAPSHOT)
+
+Hello, World!
+
+VALIDATING PLAINTEXT ... PASS
+
+
+-----------------------------------------------------
+  Benchmarking curacao ...
+-----------------------------------------------------
+BENCHMARKING JSON ... Complete
+BENCHMARKING Plaintext ... Complete
+
+-----------------------------------------------------
+  Stopping curacao
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Stopped curacao
+-----------------------------------------------------
+
+----------------------------------------------------
+Saving results through curacao
+----------------------------------------------------

@@ -1,0 +1,161 @@
+test.os.lower() = linux  test.database_os.lower() = linux
+self.results['frameworks'] != None: True
+test.name: silex
+self.results['completed']: {}
+
+=====================================================
+  Beginning silex
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Starting silex
+-----------------------------------------------------
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+mysql start/running, process 25534
+ * Restarting PostgreSQL 9.3 database server
+   ...done.
+Loading composer repositories with package information
+Installing dependencies (including require-dev) from lock file
+  - Removing doctrine/collections (v1.1)
+  - Installing doctrine/collections (v1.2)
+    Loading from cache
+
+  - Removing doctrine/cache (v1.2.0)
+  - Installing doctrine/cache (v1.3.0)
+    Loading from cache
+
+  - Removing doctrine/common (v2.4.1)
+  - Installing doctrine/common (v2.4.2)
+    Loading from cache
+
+  - Removing pimple/pimple (v1.0.2)
+  - Installing pimple/pimple (v1.1.1)
+    Loading from cache
+
+  - Removing symfony/http-foundation (v2.3.5)
+  - Installing symfony/http-foundation (v2.3.16)
+    Loading from cache
+
+  - Removing symfony/event-dispatcher (v2.3.5)
+  - Installing symfony/event-dispatcher (v2.3.16)
+    Loading from cache
+
+  - Removing symfony/debug (v2.3.5)
+  - Installing symfony/debug (v2.5.0)
+    Loading from cache
+
+  - Removing symfony/http-kernel (v2.3.5)
+  - Installing symfony/http-kernel (v2.3.16)
+    Loading from cache
+
+  - Removing symfony/routing (v2.3.5)
+  - Installing symfony/routing (v2.3.16)
+    Loading from cache
+
+Generating optimized autoload files
+
+-----------------------------------------------------
+  VERIFYING DB (/db)
+-----------------------------------------------------
+HTTP/1.1 500 Internal Server Error
+Server: nginx/1.4.1
+Date: Sun, 29 Jun 2014 04:11:37 GMT
+Content-Type: text/html
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: PHP/5.4.13
+
+
+
+VALIDATING DB ... FAIL
+
+
+-----------------------------------------------------
+  VERIFYING QUERY (/db?queries=2)
+-----------------------------------------------------
+HTTP/1.1 500 Internal Server Error
+Server: nginx/1.4.1
+Date: Sun, 29 Jun 2014 04:11:37 GMT
+Content-Type: text/html
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: PHP/5.4.13
+
+
+
+/db?queries=2 - FAIL
+
+-----------------------------------------------------
+
+HTTP/1.1 500 Internal Server Error
+Server: nginx/1.4.1
+Date: Sun, 29 Jun 2014 04:11:37 GMT
+Content-Type: text/html
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: PHP/5.4.13
+
+
+
+/db?queries=0 - WARNING
+
+-----------------------------------------------------
+
+HTTP/1.1 500 Internal Server Error
+Server: nginx/1.4.1
+Date: Sun, 29 Jun 2014 04:11:37 GMT
+Content-Type: text/html
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: PHP/5.4.13
+
+
+
+/db?queries=foo - WARNING
+
+-----------------------------------------------------
+
+HTTP/1.1 500 Internal Server Error
+Server: nginx/1.4.1
+Date: Sun, 29 Jun 2014 04:11:38 GMT
+Content-Type: text/html
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: PHP/5.4.13
+
+
+
+/db?queries=501 - WARNING
+
+-----------------------------------------------------
+
+
+VALIDATING QUERY ... FAIL
+
+
+-----------------------------------------------------
+  Benchmarking silex ...
+-----------------------------------------------------
+BENCHMARKING DB ... Complete
+BENCHMARKING Query ... Complete
+
+-----------------------------------------------------
+  Stopping silex
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Stopped silex
+-----------------------------------------------------
+
+----------------------------------------------------
+Saving results through silex
+----------------------------------------------------

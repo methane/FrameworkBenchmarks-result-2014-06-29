@@ -1,0 +1,112 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer ninja-standalone
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/update?queries=2
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/update?queries=2
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     6.81ms    7.57ms  49.85ms   91.53%
+    Req/Sec   217.29     97.51   583.00     71.45%
+  8334 requests in 5.00s, 2.64MB read
+Requests/sec:   1667.31
+Transfer/sec:    541.80KB
+
+---------------------------------------------------------
+ Running Warmup ninja-standalone
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/update?queries=2
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/update?queries=2
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   107.69ms   84.49ms 957.90ms   87.92%
+    Req/Sec   593.40     55.47   748.00     75.97%
+  35459 requests in 14.99s, 11.25MB read
+Requests/sec:   2365.20
+Transfer/sec:    768.57KB
+
+---------------------------------------------------------
+ Queries: 1 for ninja-standalone
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/update?queries=1
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/update?queries=1
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    67.02ms   58.01ms 654.19ms   87.46%
+    Req/Sec     0.93k    91.40     1.34k    75.66%
+  55518 requests in 15.00s, 15.61MB read
+Requests/sec:   3701.59
+Transfer/sec:      1.04MB
+
+---------------------------------------------------------
+ Queries: 5 for ninja-standalone
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/update?queries=5
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/update?queries=5
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   207.26ms  141.94ms   1.77s    86.24%
+    Req/Sec   300.69     21.81   423.00     76.56%
+  17969 requests in 15.00s, 7.67MB read
+  Non-2xx or 3xx responses: 1
+Requests/sec:   1197.56
+Transfer/sec:    523.17KB
+
+---------------------------------------------------------
+ Queries: 10 for ninja-standalone
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/update?queries=10
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/update?queries=10
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   376.23ms  268.29ms   2.44s    86.79%
+    Req/Sec   164.65     19.38   247.00     83.02%
+  9677 requests in 15.01s, 5.88MB read
+  Non-2xx or 3xx responses: 9
+Requests/sec:    644.81
+Transfer/sec:    400.87KB
+
+---------------------------------------------------------
+ Queries: 15 for ninja-standalone
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/update?queries=15
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/update?queries=15
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   555.36ms  445.07ms   3.81s    88.37%
+    Req/Sec   108.95     12.59   184.00     86.90%
+  6488 requests in 15.01s, 5.09MB read
+  Non-2xx or 3xx responses: 87
+Requests/sec:    432.37
+Transfer/sec:    347.12KB
+
+---------------------------------------------------------
+ Queries: 20 for ninja-standalone
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/update?queries=20
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/update?queries=20
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   738.42ms  632.10ms   4.88s    88.03%
+    Req/Sec    84.27      5.99    98.00     69.84%
+  5009 requests in 15.01s, 4.64MB read
+  Non-2xx or 3xx responses: 442
+Requests/sec:    333.70
+Transfer/sec:    316.83KB

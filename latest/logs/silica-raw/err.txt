@@ -1,0 +1,11 @@
+restart: Unknown instance: 
+2014/06/29 04:13:27 [error] 27561#0: *1 rewrite or internal redirection cycle while redirect to named location "@rewriteapp", client: 127.0.0.1, server: localhost, request: "GET /db HTTP/1.1", host: "127.0.0.1:8080"
+2014/06/29 04:13:27 [error] 27561#0: *2 rewrite or internal redirection cycle while redirect to named location "@rewriteapp", client: 127.0.0.1, server: localhost, request: "GET /db HTTP/1.1", host: "127.0.0.1:8080"
+2014/06/29 04:13:27 [error] 27561#0: *3 rewrite or internal redirection cycle while redirect to named location "@rewriteapp", client: 127.0.0.1, server: localhost, request: "GET /db?queries=2 HTTP/1.1", host: "127.0.0.1:8080"
+2014/06/29 04:13:27 [error] 27561#0: *4 rewrite or internal redirection cycle while redirect to named location "@rewriteapp", client: 127.0.0.1, server: localhost, request: "GET /db?queries=2 HTTP/1.1", host: "127.0.0.1:8080"
+2014/06/29 04:13:27 [error] 27561#0: *5 rewrite or internal redirection cycle while redirect to named location "@rewriteapp", client: 127.0.0.1, server: localhost, request: "GET /db?queries=0 HTTP/1.1", host: "127.0.0.1:8080"
+2014/06/29 04:13:27 [error] 27561#0: *6 rewrite or internal redirection cycle while redirect to named location "@rewriteapp", client: 127.0.0.1, server: localhost, request: "GET /db?queries=0 HTTP/1.1", host: "127.0.0.1:8080"
+2014/06/29 04:13:27 [error] 27561#0: *7 rewrite or internal redirection cycle while redirect to named location "@rewriteapp", client: 127.0.0.1, server: localhost, request: "GET /db?queries=foo HTTP/1.1", host: "127.0.0.1:8080"
+2014/06/29 04:13:27 [error] 27561#0: *8 rewrite or internal redirection cycle while redirect to named location "@rewriteapp", client: 127.0.0.1, server: localhost, request: "GET /db?queries=foo HTTP/1.1", host: "127.0.0.1:8080"
+2014/06/29 04:13:27 [error] 27561#0: *9 rewrite or internal redirection cycle while redirect to named location "@rewriteapp", client: 127.0.0.1, server: localhost, request: "GET /db?queries=501 HTTP/1.1", host: "127.0.0.1:8080"
+2014/06/29 04:13:27 [error] 27561#0: *10 rewrite or internal redirection cycle while redirect to named location "@rewriteapp", client: 127.0.0.1, server: localhost, request: "GET /db?queries=501 HTTP/1.1", host: "127.0.0.1:8080"

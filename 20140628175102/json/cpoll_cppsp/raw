@@ -1,0 +1,122 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer cpoll_cppsp
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:16969/json
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:16969/json
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   104.26us  295.28us  12.67ms   99.66%
+    Req/Sec    10.29k     2.55k   15.70k    67.97%
+  389414 requests in 5.00s, 67.59MB read
+Requests/sec:  77910.10
+Transfer/sec:     13.52MB
+
+---------------------------------------------------------
+ Running Warmup cpoll_cppsp
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:16969/json
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:16969/json
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.91ms    2.00ms  24.25ms   92.66%
+    Req/Sec    31.96k     7.20k   74.11k    79.10%
+  1808331 requests in 15.00s, 313.87MB read
+Requests/sec: 120557.09
+Transfer/sec:     20.92MB
+
+---------------------------------------------------------
+ Concurrency: 8 for cpoll_cppsp
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:16969/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:16969/json
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    96.82us  561.17us  19.26ms   99.72%
+    Req/Sec    21.04k     3.98k   46.00k    74.85%
+  1186922 requests in 15.00s, 206.01MB read
+Requests/sec:  79131.06
+Transfer/sec:     13.73MB
+
+---------------------------------------------------------
+ Concurrency: 16 for cpoll_cppsp
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:16969/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:16969/json
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   173.44us  340.66us  16.08ms   96.40%
+    Req/Sec    25.35k     9.24k   56.00k    67.24%
+  1431645 requests in 15.00s, 248.49MB read
+Requests/sec:  95450.14
+Transfer/sec:     16.57MB
+
+---------------------------------------------------------
+ Concurrency: 32 for cpoll_cppsp
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:16969/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:16969/json
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   303.80us  691.09us  24.09ms   96.84%
+    Req/Sec    28.72k    11.28k   61.22k    64.03%
+  1620578 requests in 15.00s, 281.28MB read
+Requests/sec: 108041.39
+Transfer/sec:     18.75MB
+
+---------------------------------------------------------
+ Concurrency: 64 for cpoll_cppsp
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:16969/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:16969/json
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   748.06us    1.36ms  20.12ms   88.16%
+    Req/Sec    30.85k    17.46k   64.22k    50.60%
+  1706063 requests in 15.00s, 296.12MB read
+Requests/sec: 113741.09
+Transfer/sec:     19.74MB
+
+---------------------------------------------------------
+ Concurrency: 128 for cpoll_cppsp
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:16969/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:16969/json
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.03ms    1.52ms  28.23ms   93.74%
+    Req/Sec    31.42k     9.13k   67.44k    72.83%
+  1764307 requests in 15.00s, 306.23MB read
+Requests/sec: 117627.06
+Transfer/sec:     20.42MB
+
+---------------------------------------------------------
+ Concurrency: 256 for cpoll_cppsp
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:16969/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:16969/json
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.89ms    1.80ms  35.02ms   92.53%
+    Req/Sec    31.64k     7.30k   68.67k    76.27%
+  1783664 requests in 14.99s, 309.59MB read
+Requests/sec: 118966.41
+Transfer/sec:     20.65MB

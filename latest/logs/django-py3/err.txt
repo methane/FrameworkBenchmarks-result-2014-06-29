@@ -1,0 +1,15 @@
+restart: Unknown instance: 
+ERROR Internal Server Error: /db
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py3/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/FrameworkBenchmarks/django/hello/world/views.py", line 24, in db
+    queries = int(request.GET.get('queries', 1))
+ValueError: invalid literal for int() with base 10: 'foo'
+ERROR Internal Server Error: /db
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py3/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/FrameworkBenchmarks/django/hello/world/views.py", line 24, in db
+    queries = int(request.GET.get('queries', 1))
+ValueError: invalid literal for int() with base 10: 'foo'

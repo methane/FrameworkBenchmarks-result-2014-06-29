@@ -1,0 +1,122 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer django-py3
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/fortunes
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/fortunes
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     9.06ms    3.65ms  48.64ms   70.83%
+    Req/Sec   126.88     56.04   300.00     74.07%
+  4713 requests in 5.00s, 6.71MB read
+Requests/sec:    941.82
+Transfer/sec:      1.34MB
+
+---------------------------------------------------------
+ Running Warmup django-py3
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/fortunes
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortunes
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   276.42ms   68.24ms 522.80ms   77.74%
+    Req/Sec   233.14      9.85   252.00     64.71%
+  14019 requests in 15.01s, 19.96MB read
+Requests/sec:    934.21
+Transfer/sec:      1.33MB
+
+---------------------------------------------------------
+ Concurrency: 8 for django-py3
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:8080/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortunes
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     9.18ms    4.19ms  44.13ms   68.45%
+    Req/Sec   241.56     77.75   500.00     74.33%
+  14156 requests in 15.00s, 20.16MB read
+Requests/sec:    943.72
+Transfer/sec:      1.34MB
+
+---------------------------------------------------------
+ Concurrency: 16 for django-py3
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:8080/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortunes
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    17.18ms   10.38ms  58.89ms   87.28%
+    Req/Sec   246.20     49.61   382.00     69.81%
+  14221 requests in 15.00s, 20.25MB read
+Requests/sec:    947.77
+Transfer/sec:      1.35MB
+
+---------------------------------------------------------
+ Concurrency: 32 for django-py3
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:8080/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortunes
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    35.03ms   12.96ms  89.95ms   73.85%
+    Req/Sec   236.62     39.41   326.00     55.50%
+  14028 requests in 15.00s, 19.97MB read
+Requests/sec:    934.92
+Transfer/sec:      1.33MB
+
+---------------------------------------------------------
+ Concurrency: 64 for django-py3
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:8080/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortunes
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    70.09ms   21.93ms 157.74ms   60.53%
+    Req/Sec   234.73     22.94   285.00     60.53%
+  14063 requests in 15.01s, 20.02MB read
+Requests/sec:    936.89
+Transfer/sec:      1.33MB
+
+---------------------------------------------------------
+ Concurrency: 128 for django-py3
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:8080/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortunes
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   135.08ms   31.57ms 237.67ms   67.51%
+    Req/Sec   234.69     10.87   258.00     67.68%
+  14056 requests in 15.02s, 20.02MB read
+Requests/sec:    935.56
+Transfer/sec:      1.33MB
+
+---------------------------------------------------------
+ Concurrency: 256 for django-py3
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortunes
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   271.37ms   26.06ms 488.30ms   72.04%
+    Req/Sec   234.69     10.46   256.00     73.96%
+  14112 requests in 15.02s, 20.10MB read
+Requests/sec:    939.75
+Transfer/sec:      1.34MB

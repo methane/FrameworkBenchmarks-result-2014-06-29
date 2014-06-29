@@ -1,0 +1,107 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Sun Jun 29 07:16:54 UTC 2014
+
+  System load:  1.66               Processes:           135
+  Usage of /:   69.3% of 19.55GB   Users logged in:     0
+  Memory usage: 27%                IP address for eth0: 10.227.136.45
+  Swap usage:   0%
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+0 packages can be updated.
+0 updates are security updates.
+
+
+
+---------------------------------------------------------
+ Running Primer weber
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/plaintext
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/plaintext
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   454.41us  720.46us  20.62ms   96.95%
+    Req/Sec     2.87k     1.34k    6.78k    69.57%
+  108408 requests in 5.00s, 16.02MB read
+Requests/sec:  21689.48
+Transfer/sec:      3.21MB
+
+---------------------------------------------------------
+ Running Warmup weber
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/plaintext
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/plaintext
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    12.40ms   12.46ms 157.15ms   84.71%
+    Req/Sec     5.34k   707.48     8.20k    71.94%
+  317423 requests in 15.00s, 46.91MB read
+Requests/sec:  21163.00
+Transfer/sec:      3.13MB
+
+---------------------------------------------------------
+ Concurrency: 256 for weber
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/plaintext
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   161.07ms  104.83ms 559.31ms   64.08%
+    Req/Sec     6.59k   479.09     8.05k    66.98%
+  395295 requests in 15.00s, 58.41MB read
+Requests/sec:  26354.76
+Transfer/sec:      3.89MB
+
+---------------------------------------------------------
+ Concurrency: 1024 for weber
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 1024 --timeout 1024 -t 4 http://127.0.0.1:8080/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/plaintext
+  4 threads and 1024 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   668.59ms  463.88ms   2.79s    81.10%
+    Req/Sec     6.53k     1.33k   10.86k    69.81%
+  388393 requests in 14.99s, 57.40MB read
+Requests/sec:  25914.50
+Transfer/sec:      3.83MB
+
+---------------------------------------------------------
+ Concurrency: 4096 for weber
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 4096 --timeout 4096 -t 4 http://127.0.0.1:8080/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/plaintext
+  4 threads and 4096 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     2.22s     3.52s   11.52s    87.84%
+    Req/Sec     7.43k     2.52k   12.07k    58.46%
+  390307 requests in 14.98s, 57.68MB read
+  Socket errors: connect 0, read 86, write 0, timeout 6983
+Requests/sec:  26055.21
+Transfer/sec:      3.85MB
+
+---------------------------------------------------------
+ Concurrency: 16384 for weber
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16384 --timeout 16384 -t 4 http://127.0.0.1:8080/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/plaintext
+  4 threads and 16384 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     6.19s     6.29s   13.98s    65.26%
+    Req/Sec     6.89k     3.51k   13.67k    52.27%
+  383834 requests in 15.00s, 56.72MB read
+  Socket errors: connect 0, read 2431, write 0, timeout 82691
+Requests/sec:  25586.00
+Transfer/sec:      3.78MB

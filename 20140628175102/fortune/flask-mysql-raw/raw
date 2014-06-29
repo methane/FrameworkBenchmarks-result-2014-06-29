@@ -1,0 +1,122 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer flask-mysql-raw
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/fortunesraw
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/fortunesraw
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     3.55ms    1.58ms  19.28ms   70.27%
+    Req/Sec   336.14    140.73   777.00     83.62%
+  12830 requests in 5.00s, 17.99MB read
+Requests/sec:   2565.68
+Transfer/sec:      3.60MB
+
+---------------------------------------------------------
+ Running Warmup flask-mysql-raw
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/fortunesraw
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortunesraw
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   104.51ms   14.10ms 171.28ms   88.07%
+    Req/Sec   613.09     30.04   700.00     72.69%
+  36713 requests in 15.01s, 51.47MB read
+Requests/sec:   2446.68
+Transfer/sec:      3.43MB
+
+---------------------------------------------------------
+ Concurrency: 8 for flask-mysql-raw
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:8080/fortunesraw -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortunesraw
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     3.44ms    2.30ms  39.19ms   80.76%
+    Req/Sec   691.57    238.01     1.22k    68.06%
+  39187 requests in 15.00s, 54.94MB read
+Requests/sec:   2612.77
+Transfer/sec:      3.66MB
+
+---------------------------------------------------------
+ Concurrency: 16 for flask-mysql-raw
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:8080/fortunesraw -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortunesraw
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     6.36ms    2.00ms  23.53ms   71.96%
+    Req/Sec   656.46    100.62     0.94k    64.36%
+  38171 requests in 15.00s, 53.51MB read
+Requests/sec:   2544.68
+Transfer/sec:      3.57MB
+
+---------------------------------------------------------
+ Concurrency: 32 for flask-mysql-raw
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:8080/fortunesraw -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortunesraw
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    13.47ms   12.19ms  60.76ms   84.52%
+    Req/Sec   776.76    345.76     1.36k    40.29%
+  38257 requests in 15.00s, 53.63MB read
+Requests/sec:   2549.94
+Transfer/sec:      3.57MB
+
+---------------------------------------------------------
+ Concurrency: 64 for flask-mysql-raw
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:8080/fortunesraw -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortunesraw
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    26.57ms   14.95ms  73.75ms   60.76%
+    Req/Sec   652.06    211.20     1.13k    66.26%
+  38248 requests in 15.00s, 53.62MB read
+Requests/sec:   2550.66
+Transfer/sec:      3.58MB
+
+---------------------------------------------------------
+ Concurrency: 128 for flask-mysql-raw
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:8080/fortunesraw -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortunesraw
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    50.46ms   23.77ms 111.06ms   55.58%
+    Req/Sec   649.76     99.29   832.00     52.99%
+  38855 requests in 15.00s, 54.47MB read
+Requests/sec:   2589.81
+Transfer/sec:      3.63MB
+
+---------------------------------------------------------
+ Concurrency: 256 for flask-mysql-raw
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/fortunesraw -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortunesraw
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   100.84ms   28.65ms 175.31ms   74.18%
+    Req/Sec   647.50     16.21   689.00     67.33%
+  38826 requests in 15.01s, 54.43MB read
+Requests/sec:   2587.26
+Transfer/sec:      3.63MB

@@ -1,0 +1,122 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer undertow-edge-postgresql
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/fortunes/postgresql
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/fortunes/postgresql
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.09ms    2.20ms  21.01ms   97.32%
+    Req/Sec     1.29k   363.40     4.11k    74.49%
+  47140 requests in 5.00s, 84.02MB read
+Requests/sec:   9429.00
+Transfer/sec:     16.81MB
+
+---------------------------------------------------------
+ Running Warmup undertow-edge-postgresql
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/fortunes/postgresql
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortunes/postgresql
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    19.69ms   23.86ms 830.07ms   89.52%
+    Req/Sec     3.30k   400.48     4.48k    85.73%
+  195912 requests in 15.00s, 349.20MB read
+Requests/sec:  13062.94
+Transfer/sec:     23.28MB
+
+---------------------------------------------------------
+ Concurrency: 8 for undertow-edge-postgresql
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:8080/fortunes/postgresql -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortunes/postgresql
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.02ms    2.41ms  28.52ms   98.10%
+    Req/Sec     2.62k   542.91     4.67k    81.07%
+  148920 requests in 15.00s, 265.44MB read
+Requests/sec:   9928.49
+Transfer/sec:     17.70MB
+
+---------------------------------------------------------
+ Concurrency: 16 for undertow-edge-postgresql
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:8080/fortunes/postgresql -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortunes/postgresql
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.85ms    3.40ms  35.66ms   96.20%
+    Req/Sec     2.87k   785.66     8.78k    74.98%
+  163252 requests in 15.00s, 290.98MB read
+Requests/sec:  10884.01
+Transfer/sec:     19.40MB
+
+---------------------------------------------------------
+ Concurrency: 32 for undertow-edge-postgresql
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:8080/fortunes/postgresql -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortunes/postgresql
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     3.16ms    4.85ms  52.09ms   93.94%
+    Req/Sec     3.08k   718.15     5.55k    74.66%
+  175486 requests in 15.00s, 312.79MB read
+Requests/sec:  11700.16
+Transfer/sec:     20.85MB
+
+---------------------------------------------------------
+ Concurrency: 64 for undertow-edge-postgresql
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:8080/fortunes/postgresql -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortunes/postgresql
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     5.37ms    6.20ms  89.21ms   90.38%
+    Req/Sec     3.14k   466.46     4.60k    81.56%
+  184032 requests in 15.00s, 328.02MB read
+Requests/sec:  12268.76
+Transfer/sec:     21.87MB
+
+---------------------------------------------------------
+ Concurrency: 128 for undertow-edge-postgresql
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:8080/fortunes/postgresql -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortunes/postgresql
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    10.16ms   10.28ms 130.24ms   88.84%
+    Req/Sec     3.25k   365.65     4.18k    85.19%
+  192813 requests in 15.00s, 343.67MB read
+Requests/sec:  12856.17
+Transfer/sec:     22.92MB
+
+---------------------------------------------------------
+ Concurrency: 256 for undertow-edge-postgresql
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/fortunes/postgresql -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortunes/postgresql
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    19.13ms   19.77ms 471.70ms   88.86%
+    Req/Sec     3.35k   534.51     5.61k    89.06%
+  196319 requests in 15.00s, 349.92MB read
+Requests/sec:  13087.99
+Transfer/sec:     23.33MB

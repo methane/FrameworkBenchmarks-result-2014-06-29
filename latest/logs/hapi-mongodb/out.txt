@@ -1,0 +1,79 @@
+test.os.lower() = linux  test.database_os.lower() = linux
+self.results['frameworks'] != None: True
+test.name: hapi-mongodb
+self.results['completed']: {}
+
+=====================================================
+  Beginning hapi-mongodb
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Starting hapi-mongodb
+-----------------------------------------------------
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+mysql start/running, process 31700
+ * Restarting PostgreSQL 9.3 database server
+   ...done.
+
+-----------------------------------------------------
+  VERIFYING DB (/mongoose/)
+-----------------------------------------------------
+VALIDATING DB ... FAIL
+
+
+-----------------------------------------------------
+  VERIFYING QUERY (/mongoose/2)
+-----------------------------------------------------
+/mongoose/2 - FAIL
+
+-----------------------------------------------------
+
+/mongoose/0 - WARNING
+
+-----------------------------------------------------
+
+/mongoose/foo - WARNING
+
+-----------------------------------------------------
+
+/mongoose/501 - WARNING
+
+-----------------------------------------------------
+
+
+VALIDATING QUERY ... FAIL
+
+
+-----------------------------------------------------
+  VERIFYING UPDATE (/mongoose-update/)
+-----------------------------------------------------
+VALIDATING UPDATE ... FAIL
+
+
+-----------------------------------------------------
+  Benchmarking hapi-mongodb ...
+-----------------------------------------------------
+BENCHMARKING DB ... Complete
+BENCHMARKING Query ... Complete
+BENCHMARKING Update ... Complete
+
+-----------------------------------------------------
+  Stopping hapi-mongodb
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Stopped hapi-mongodb
+-----------------------------------------------------
+
+----------------------------------------------------
+Saving results through hapi-mongodb
+----------------------------------------------------

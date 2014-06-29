@@ -1,0 +1,130 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Sat Jun 28 17:51:30 UTC 2014
+
+  System load:  0.12               Processes:           399
+  Usage of /:   67.1% of 19.55GB   Users logged in:     0
+  Memory usage: 25%                IP address for eth0: 10.227.136.45
+  Swap usage:   0%
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer activeweb
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/activeweb/json
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/activeweb/json
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     6.64ms   12.60ms  55.43ms   88.09%
+    Req/Sec   544.32    368.04     2.22k    72.28%
+  20230 requests in 5.00s, 3.32MB read
+Requests/sec:   4044.81
+Transfer/sec:    679.40KB
+
+---------------------------------------------------------
+ Running Warmup activeweb
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/activeweb/json
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/activeweb/json
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   127.38ms  766.29ms   6.20s    96.57%
+    Req/Sec     6.81k     2.60k   20.60k    72.93%
+  376771 requests in 15.00s, 61.80MB read
+Requests/sec:  25120.79
+Transfer/sec:      4.12MB
+
+---------------------------------------------------------
+ Concurrency: 8 for activeweb
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:8080/activeweb/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/activeweb/json
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   276.20us  138.18us   9.19ms   88.78%
+    Req/Sec     7.53k     1.62k   14.67k    87.61%
+  427634 requests in 15.00s, 70.15MB read
+Requests/sec:  28510.23
+Transfer/sec:      4.68MB
+
+---------------------------------------------------------
+ Concurrency: 16 for activeweb
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:8080/activeweb/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/activeweb/json
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   604.63us    2.00ms  70.35ms   99.76%
+    Req/Sec     7.64k   826.65    14.56k    94.10%
+  433900 requests in 15.00s, 71.17MB read
+Requests/sec:  28933.82
+Transfer/sec:      4.75MB
+
+---------------------------------------------------------
+ Concurrency: 32 for activeweb
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:8080/activeweb/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/activeweb/json
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.15ms  493.13us  19.74ms   87.55%
+    Req/Sec     7.51k     1.42k   16.11k    88.61%
+  428985 requests in 15.00s, 70.37MB read
+Requests/sec:  28602.17
+Transfer/sec:      4.69MB
+
+---------------------------------------------------------
+ Concurrency: 64 for activeweb
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:8080/activeweb/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/activeweb/json
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     2.45ms    6.11ms 225.15ms   98.32%
+    Req/Sec     7.27k     1.24k   17.67k    84.73%
+  411946 requests in 15.00s, 67.57MB read
+Requests/sec:  27472.02
+Transfer/sec:      4.51MB
+
+---------------------------------------------------------
+ Concurrency: 128 for activeweb
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:8080/activeweb/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/activeweb/json
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     7.14ms   36.20ms 542.51ms   98.18%
+    Req/Sec     7.23k     1.76k   19.44k    81.72%
+  410824 requests in 15.00s, 67.39MB read
+Requests/sec:  27389.35
+Transfer/sec:      4.49MB
+
+---------------------------------------------------------
+ Concurrency: 256 for activeweb
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/activeweb/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/activeweb/json
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    20.94ms  115.35ms   1.10s    96.99%
+    Req/Sec     7.00k     2.33k   23.08k    74.62%
+  401703 requests in 15.00s, 65.89MB read
+Requests/sec:  26782.49
+Transfer/sec:      4.39MB

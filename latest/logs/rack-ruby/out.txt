@@ -1,0 +1,73 @@
+test.os.lower() = linux  test.database_os.lower() = linux
+self.results['frameworks'] != None: True
+test.name: rack-ruby
+self.results['completed']: {}
+
+=====================================================
+  Beginning rack-ruby
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Starting rack-ruby
+-----------------------------------------------------
+Using rake 10.3.2
+Using daemon_controller 1.2.0
+Using json 1.7.6
+Using kgio 2.9.2
+Using rack 1.5.1
+Using passenger 4.0.19
+Using raindrops 0.13.0
+Using unicorn 4.6.2
+Using bundler 1.6.3
+Your bundle is complete!
+Use `bundle show [gemname]` to see where a bundled gem is installed.
+
+-----------------------------------------------------
+  VERIFYING JSON (/json)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Server: nginx/1.4.1
+Date: Sun, 29 Jun 2014 02:27:24 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Status: 200 OK
+
+{"message":"Hello, World!"}
+
+VALIDATING JSON ... PASS
+
+
+-----------------------------------------------------
+  VERIFYING PLAINTEXT (/plaintext)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Server: nginx/1.4.1
+Date: Sun, 29 Jun 2014 02:27:24 GMT
+Content-Type: text/plain
+Transfer-Encoding: chunked
+Connection: keep-alive
+Status: 200 OK
+
+Hello, World!
+
+VALIDATING PLAINTEXT ... PASS
+
+
+-----------------------------------------------------
+  Benchmarking rack-ruby ...
+-----------------------------------------------------
+BENCHMARKING JSON ... Complete
+BENCHMARKING Plaintext ... Complete
+
+-----------------------------------------------------
+  Stopping rack-ruby
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Stopped rack-ruby
+-----------------------------------------------------
+
+----------------------------------------------------
+Saving results through rack-ruby
+----------------------------------------------------

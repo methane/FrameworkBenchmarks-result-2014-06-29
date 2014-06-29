@@ -1,0 +1,108 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer lift-stateless
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/db/2
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/db/2
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     7.65ms    4.27ms  35.46ms   81.43%
+    Req/Sec   148.29     50.10   318.00     65.31%
+  5816 requests in 5.00s, 1.99MB read
+Requests/sec:   1162.46
+Transfer/sec:    407.04KB
+
+---------------------------------------------------------
+ Running Warmup lift-stateless
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/db/2
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db/2
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   219.18ms   56.67ms 851.09ms   91.37%
+    Req/Sec   293.74     15.78   333.00     60.00%
+  17618 requests in 15.01s, 6.02MB read
+Requests/sec:   1174.12
+Transfer/sec:    411.12KB
+
+---------------------------------------------------------
+ Queries: 1 for lift-stateless
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/db/1
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db/1
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   202.83ms   48.80ms 644.80ms   85.88%
+    Req/Sec   307.62     34.34   478.00     86.08%
+  18446 requests in 15.00s, 5.75MB read
+Requests/sec:   1229.50
+Transfer/sec:    392.36KB
+
+---------------------------------------------------------
+ Queries: 5 for lift-stateless
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/db/5
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db/5
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   225.70ms   47.07ms 542.65ms   86.77%
+    Req/Sec   282.86     14.21   336.00     79.44%
+  16930 requests in 15.00s, 7.34MB read
+Requests/sec:   1128.70
+Transfer/sec:    501.38KB
+
+---------------------------------------------------------
+ Queries: 10 for lift-stateless
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/db/10
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db/10
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   241.61ms   46.38ms 546.16ms   85.90%
+    Req/Sec   259.97     21.32   374.00     93.33%
+  15587 requests in 15.01s, 9.12MB read
+Requests/sec:   1038.43
+Transfer/sec:    622.31KB
+
+---------------------------------------------------------
+ Queries: 15 for lift-stateless
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/db/15
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db/15
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   259.95ms   51.45ms 566.65ms   85.63%
+    Req/Sec   242.42     13.67   322.00     89.26%
+  14510 requests in 15.00s, 10.69MB read
+Requests/sec:    967.42
+Transfer/sec:    729.69KB
+
+---------------------------------------------------------
+ Queries: 20 for lift-stateless
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/db/20
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db/20
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   278.34ms   61.64ms 727.75ms   87.87%
+    Req/Sec   225.38     27.87   333.00     94.62%
+  13514 requests in 15.01s, 12.00MB read
+Requests/sec:    900.25
+Transfer/sec:    818.47KB

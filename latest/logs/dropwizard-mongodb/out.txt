@@ -1,0 +1,342 @@
+test.os.lower() = linux  test.database_os.lower() = linux
+self.results['frameworks'] != None: True
+test.name: dropwizard-mongodb
+self.results['completed']: {}
+
+=====================================================
+  Beginning dropwizard-mongodb
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Starting dropwizard-mongodb
+-----------------------------------------------------
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+mysql start/running, process 15163
+ * Restarting PostgreSQL 9.3 database server
+   ...done.
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building dropwizard-mongodb 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ dropwizard-mongodb ---
+[INFO] Deleting /home/ubuntu/FrameworkBenchmarks/dropwizard-mongodb/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.3:resources (default-resources) @ dropwizard-mongodb ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /home/ubuntu/FrameworkBenchmarks/dropwizard-mongodb/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.2:compile (default-compile) @ dropwizard-mongodb ---
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 7 source files to /home/ubuntu/FrameworkBenchmarks/dropwizard-mongodb/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.3:testResources (default-testResources) @ dropwizard-mongodb ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /home/ubuntu/FrameworkBenchmarks/dropwizard-mongodb/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.2:testCompile (default-testCompile) @ dropwizard-mongodb ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.10:test (default-test) @ dropwizard-mongodb ---
+[INFO] No tests to run.
+[INFO] Surefire report directory: /home/ubuntu/FrameworkBenchmarks/dropwizard-mongodb/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+
+Results :
+
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] --- maven-jar-plugin:2.3.2:jar (default-jar) @ dropwizard-mongodb ---
+[INFO] Building jar: /home/ubuntu/FrameworkBenchmarks/dropwizard-mongodb/target/dropwizard-mongodb-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- maven-shade-plugin:1.6:shade (default) @ dropwizard-mongodb ---
+[INFO] Including com.yammer.dropwizard:dropwizard-core:jar:0.6.2 in the shaded jar.
+[INFO] Including com.sun.jersey:jersey-core:jar:1.17.1 in the shaded jar.
+[INFO] Including com.sun.jersey:jersey-server:jar:1.17.1 in the shaded jar.
+[INFO] Including asm:asm:jar:3.1 in the shaded jar.
+[INFO] Including com.sun.jersey:jersey-servlet:jar:1.17.1 in the shaded jar.
+[INFO] Including com.yammer.metrics:metrics-core:jar:2.2.0 in the shaded jar.
+[INFO] Including com.yammer.metrics:metrics-servlet:jar:2.2.0 in the shaded jar.
+[INFO] Including com.yammer.metrics:metrics-jetty:jar:2.2.0 in the shaded jar.
+[INFO] Including com.yammer.metrics:metrics-logback:jar:2.2.0 in the shaded jar.
+[INFO] Including com.yammer.metrics:metrics-jersey:jar:2.2.0 in the shaded jar.
+[INFO] Including com.yammer.metrics:metrics-annotation:jar:2.2.0 in the shaded jar.
+[INFO] Including com.fasterxml.jackson.core:jackson-databind:jar:2.1.4 in the shaded jar.
+[INFO] Including com.fasterxml.jackson.core:jackson-annotations:jar:2.1.4 in the shaded jar.
+[INFO] Including com.fasterxml.jackson.core:jackson-core:jar:2.1.4 in the shaded jar.
+[INFO] Including com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:jar:2.1.4 in the shaded jar.
+[INFO] Including com.fasterxml.jackson.module:jackson-module-jaxb-annotations:jar:2.1.4 in the shaded jar.
+[INFO] Including com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:jar:2.1.4 in the shaded jar.
+[INFO] Including com.fasterxml.jackson.datatype:jackson-datatype-guava:jar:2.1.2 in the shaded jar.
+[INFO] Including net.sourceforge.argparse4j:argparse4j:jar:0.4.0 in the shaded jar.
+[INFO] Including org.slf4j:slf4j-api:jar:1.7.4 in the shaded jar.
+[INFO] Including org.slf4j:jul-to-slf4j:jar:1.7.4 in the shaded jar.
+[INFO] Including ch.qos.logback:logback-core:jar:1.0.10 in the shaded jar.
+[INFO] Including ch.qos.logback:logback-classic:jar:1.0.10 in the shaded jar.
+[INFO] Including org.slf4j:log4j-over-slf4j:jar:1.7.4 in the shaded jar.
+[INFO] Including org.eclipse.jetty:jetty-server:jar:8.1.10.v20130312 in the shaded jar.
+[INFO] Including org.eclipse.jetty.orbit:javax.servlet:jar:3.0.0.v201112011016 in the shaded jar.
+[INFO] Including org.eclipse.jetty:jetty-continuation:jar:8.1.10.v20130312 in the shaded jar.
+[INFO] Including org.eclipse.jetty:jetty-servlet:jar:8.1.10.v20130312 in the shaded jar.
+[INFO] Including org.eclipse.jetty:jetty-security:jar:8.1.10.v20130312 in the shaded jar.
+[INFO] Including org.eclipse.jetty:jetty-http:jar:8.1.10.v20130312 in the shaded jar.
+[INFO] Including org.eclipse.jetty:jetty-io:jar:8.1.10.v20130312 in the shaded jar.
+[INFO] Including org.eclipse.jetty:jetty-util:jar:8.1.10.v20130312 in the shaded jar.
+[INFO] Including com.google.guava:guava:jar:14.0.1 in the shaded jar.
+[INFO] Including com.google.code.findbugs:jsr305:jar:2.0.1 in the shaded jar.
+[INFO] Including org.hibernate:hibernate-validator:jar:4.3.1.Final in the shaded jar.
+[INFO] Including javax.validation:validation-api:jar:1.0.0.GA in the shaded jar.
+[INFO] Including org.jboss.logging:jboss-logging:jar:3.1.0.CR2 in the shaded jar.
+[INFO] Including joda-time:joda-time:jar:2.2 in the shaded jar.
+[INFO] Including com.fasterxml.jackson.datatype:jackson-datatype-joda:jar:2.1.2 in the shaded jar.
+[INFO] Including org.mongojack:mongojack:jar:2.0.0 in the shaded jar.
+[INFO] Including org.mongodb:mongo-java-driver:jar:2.11.3 in the shaded jar.
+[INFO] Including de.undercouch:bson4jackson:jar:2.2.0 in the shaded jar.
+[INFO] Including javax.persistence:persistence-api:jar:1.0.2 in the shaded jar.
+[INFO] Including commons-io:commons-io:jar:2.4 in the shaded jar.
+[INFO] Replacing original artifact with shaded artifact.
+[INFO] Replacing /home/ubuntu/FrameworkBenchmarks/dropwizard-mongodb/target/dropwizard-mongodb-0.0.1-SNAPSHOT.jar with /home/ubuntu/FrameworkBenchmarks/dropwizard-mongodb/target/dropwizard-mongodb-0.0.1-SNAPSHOT-shaded.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 5.976s
+[INFO] Finished at: Sat Jun 28 20:52:38 UTC 2014
+[INFO] Final Memory: 26M/200M
+[INFO] ------------------------------------------------------------------------
+
+-----------------------------------------------------
+  VERIFYING JSON (/json)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Date: Sat, 28 Jun 2014 20:52:48 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+
+{"message":"Hello, World!"}
+
+VALIDATING JSON ... PASS
+
+
+-----------------------------------------------------
+  VERIFYING DB (/db)
+-----------------------------------------------------
+HTTP/1.1 500 Server Error
+Date: Sat, 28 Jun 2014 20:52:49 GMT
+Content-Type: text/html
+Transfer-Encoding: chunked
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
+<title>Error 500 There was an error processing your request. It has been logged (ID c6d4c7e7426750c1).
+</title>
+</head>
+<body><h2>HTTP ERROR 500</h2>
+<p>Problem accessing /db. Reason:
+<pre>    There was an error processing your request. It has been logged (ID c6d4c7e7426750c1).
+</pre></p><br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+
+</body>
+</html>
+
+
+VALIDATING DB ... FAIL
+
+
+-----------------------------------------------------
+  VERIFYING QUERY (/db?queries=2)
+-----------------------------------------------------
+HTTP/1.1 500 Server Error
+Date: Sat, 28 Jun 2014 20:52:49 GMT
+Content-Type: text/html
+Transfer-Encoding: chunked
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
+<title>Error 500 There was an error processing your request. It has been logged (ID 4d3cdef36ca93861).
+</title>
+</head>
+<body><h2>HTTP ERROR 500</h2>
+<p>Problem accessing /db. Reason:
+<pre>    There was an error processing your request. It has been logged (ID 4d3cdef36ca93861).
+</pre></p><br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+
+</body>
+</html>
+
+
+/db?queries=2 - FAIL
+
+-----------------------------------------------------
+
+HTTP/1.1 200 OK
+Date: Sat, 28 Jun 2014 20:52:49 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+
+[]
+
+/db?queries=0 - WARNING
+
+-----------------------------------------------------
+
+HTTP/1.1 404 Not Found
+Date: Sat, 28 Jun 2014 20:52:49 GMT
+Content-Type: text/html;charset=ISO-8859-1
+Cache-Control: must-revalidate,no-cache,no-store
+Content-Length: 1320
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
+<title>Error 404 Not Found</title>
+</head>
+<body><h2>HTTP ERROR 404</h2>
+<p>Problem accessing /db. Reason:
+<pre>    Not Found</pre></p><br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+
+</body>
+</html>
+
+
+/db?queries=foo - WARNING
+
+-----------------------------------------------------
+
+HTTP/1.1 500 Server Error
+Date: Sat, 28 Jun 2014 20:52:49 GMT
+Content-Type: text/html
+Transfer-Encoding: chunked
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
+<title>Error 500 There was an error processing your request. It has been logged (ID 1174b3b4e2426a6b).
+</title>
+</head>
+<body><h2>HTTP ERROR 500</h2>
+<p>Problem accessing /db. Reason:
+<pre>    There was an error processing your request. It has been logged (ID 1174b3b4e2426a6b).
+</pre></p><br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+
+</body>
+</html>
+
+
+/db?queries=501 - WARNING
+
+-----------------------------------------------------
+
+
+VALIDATING QUERY ... FAIL
+
+
+-----------------------------------------------------
+  Benchmarking dropwizard-mongodb ...
+-----------------------------------------------------
+BENCHMARKING JSON ... Complete
+BENCHMARKING DB ... Complete
+BENCHMARKING Query ... Complete
+
+-----------------------------------------------------
+  Stopping dropwizard-mongodb
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Stopped dropwizard-mongodb
+-----------------------------------------------------
+
+----------------------------------------------------
+Saving results through dropwizard-mongodb
+----------------------------------------------------

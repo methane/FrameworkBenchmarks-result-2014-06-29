@@ -1,0 +1,61 @@
+restart: Unknown instance: 
+2014/06/29 04:12:14 [error] 26394#0: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] No such file or directory' in /home/ubuntu/FrameworkBenchmarks/php-silex-orm/web/index.php:19
+Stack trace:
+#0 /home/ubuntu/FrameworkBenchmarks/php-silex-orm/web/index.php(19): PDO->__construct('mysql:host=loca...', 'benchmarkdbuser', 'benchmarkdbpass', Array)
+#1 {main}
+  thrown in /home/ubuntu/FrameworkBenchmarks/php-silex-orm/web/index.php on line 19" while reading response header from upstream, client: 127.0.0.1, server: localhost, request: "GET /json HTTP/1.1", upstream: "fastcgi://127.0.0.1:9001", host: "127.0.0.1:8080"
+2014/06/29 04:12:14 [error] 26400#0: *3 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] No such file or directory' in /home/ubuntu/FrameworkBenchmarks/php-silex-orm/web/index.php:19
+Stack trace:
+#0 /home/ubuntu/FrameworkBenchmarks/php-silex-orm/web/index.php(19): PDO->__construct('mysql:host=loca...', 'benchmarkdbuser', 'benchmarkdbpass', Array)
+#1 {main}
+  thrown in /home/ubuntu/FrameworkBenchmarks/php-silex-orm/web/index.php on line 19" while reading response header from upstream, client: 127.0.0.1, server: localhost, request: "GET /json HTTP/1.1", upstream: "fastcgi://127.0.0.1:9001", host: "127.0.0.1:8080"
+2014/06/29 04:12:14 [error] 26400#0: *5 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] No such file or directory' in /home/ubuntu/FrameworkBenchmarks/php-silex-orm/web/index.php:19
+Stack trace:
+#0 /home/ubuntu/FrameworkBenchmarks/php-silex-orm/web/index.php(19): PDO->__construct('mysql:host=loca...', 'benchmarkdbuser', 'benchmarkdbpass', Array)
+#1 {main}
+  thrown in /home/ubuntu/FrameworkBenchmarks/php-silex-orm/web/index.php on line 19" while reading response header from upstream, client: 127.0.0.1, server: localhost, request: "GET /db HTTP/1.1", upstream: "fastcgi://127.0.0.1:9001", host: "127.0.0.1:8080"
+2014/06/29 04:12:14 [error] 26400#0: *6 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] No such file or directory' in /home/ubuntu/FrameworkBenchmarks/php-silex-orm/web/index.php:19
+Stack trace:
+#0 /home/ubuntu/FrameworkBenchmarks/php-silex-orm/web/index.php(19): PDO->__construct('mysql:host=loca...', 'benchmarkdbuser', 'benchmarkdbpass', Array)
+#1 {main}
+  thrown in /home/ubuntu/FrameworkBenchmarks/php-silex-orm/web/index.php on line 19" while reading response header from upstream, client: 127.0.0.1, server: localhost, request: "GET /db HTTP/1.1", upstream: "fastcgi://127.0.0.1:9001", host: "127.0.0.1:8080"
+2014/06/29 04:12:14 [error] 26400#0: *7 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] No such file or directory' in /home/ubuntu/FrameworkBenchmarks/php-silex-orm/web/index.php:19
+Stack trace:
+#0 /home/ubuntu/FrameworkBenchmarks/php-silex-orm/web/index.php(19): PDO->__construct('mysql:host=loca...', 'benchmarkdbuser', 'benchmarkdbpass', Array)
+#1 {main}
+  thrown in /home/ubuntu/FrameworkBenchmarks/php-silex-orm/web/index.php on line 19" while reading response header from upstream, client: 127.0.0.1, server: localhost, request: "GET /db?queries=2 HTTP/1.1", upstream: "fastcgi://127.0.0.1:9001", host: "127.0.0.1:8080"
+2014/06/29 04:12:14 [error] 26400#0: *8 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] No such file or directory' in /home/ubuntu/FrameworkBenchmarks/php-silex-orm/web/index.php:19
+Stack trace:
+#0 /home/ubuntu/FrameworkBenchmarks/php-silex-orm/web/index.php(19): PDO->__construct('mysql:host=loca...', 'benchmarkdbuser', 'benchmarkdbpass', Array)
+#1 {main}
+  thrown in /home/ubuntu/FrameworkBenchmarks/php-silex-orm/web/index.php on line 19" while reading response header from upstream, client: 127.0.0.1, server: localhost, request: "GET /db?queries=2 HTTP/1.1", upstream: "fastcgi://127.0.0.1:9001", host: "127.0.0.1:8080"
+2014/06/29 04:12:14 [error] 26400#0: *9 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] No such file or directory' in /home/ubuntu/FrameworkBenchmarks/php-silex-orm/web/index.php:19
+Stack trace:
+#0 /home/ubuntu/FrameworkBenchmarks/php-silex-orm/web/index.php(19): PDO->__construct('mysql:host=loca...', 'benchmarkdbuser', 'benchmarkdbpass', Array)
+#1 {main}
+  thrown in /home/ubuntu/FrameworkBenchmarks/php-silex-orm/web/index.php on line 19" while reading response header from upstream, client: 127.0.0.1, server: localhost, request: "GET /db?queries=0 HTTP/1.1", upstream: "fastcgi://127.0.0.1:9001", host: "127.0.0.1:8080"
+2014/06/29 04:12:14 [error] 26400#0: *10 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] No such file or directory' in /home/ubuntu/FrameworkBenchmarks/php-silex-orm/web/index.php:19
+Stack trace:
+#0 /home/ubuntu/FrameworkBenchmarks/php-silex-orm/web/index.php(19): PDO->__construct('mysql:host=loca...', 'benchmarkdbuser', 'benchmarkdbpass', Array)
+#1 {main}
+  thrown in /home/ubuntu/FrameworkBenchmarks/php-silex-orm/web/index.php on line 19" while reading response header from upstream, client: 127.0.0.1, server: localhost, request: "GET /db?queries=0 HTTP/1.1", upstream: "fastcgi://127.0.0.1:9001", host: "127.0.0.1:8080"
+2014/06/29 04:12:14 [error] 26400#0: *11 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] No such file or directory' in /home/ubuntu/FrameworkBenchmarks/php-silex-orm/web/index.php:19
+Stack trace:
+#0 /home/ubuntu/FrameworkBenchmarks/php-silex-orm/web/index.php(19): PDO->__construct('mysql:host=loca...', 'benchmarkdbuser', 'benchmarkdbpass', Array)
+#1 {main}
+  thrown in /home/ubuntu/FrameworkBenchmarks/php-silex-orm/web/index.php on line 19" while reading response header from upstream, client: 127.0.0.1, server: localhost, request: "GET /db?queries=foo HTTP/1.1", upstream: "fastcgi://127.0.0.1:9001", host: "127.0.0.1:8080"
+2014/06/29 04:12:14 [error] 26400#0: *12 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] No such file or directory' in /home/ubuntu/FrameworkBenchmarks/php-silex-orm/web/index.php:19
+Stack trace:
+#0 /home/ubuntu/FrameworkBenchmarks/php-silex-orm/web/index.php(19): PDO->__construct('mysql:host=loca...', 'benchmarkdbuser', 'benchmarkdbpass', Array)
+#1 {main}
+  thrown in /home/ubuntu/FrameworkBenchmarks/php-silex-orm/web/index.php on line 19" while reading response header from upstream, client: 127.0.0.1, server: localhost, request: "GET /db?queries=foo HTTP/1.1", upstream: "fastcgi://127.0.0.1:9001", host: "127.0.0.1:8080"
+2014/06/29 04:12:14 [error] 26400#0: *13 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] No such file or directory' in /home/ubuntu/FrameworkBenchmarks/php-silex-orm/web/index.php:19
+Stack trace:
+#0 /home/ubuntu/FrameworkBenchmarks/php-silex-orm/web/index.php(19): PDO->__construct('mysql:host=loca...', 'benchmarkdbuser', 'benchmarkdbpass', Array)
+#1 {main}
+  thrown in /home/ubuntu/FrameworkBenchmarks/php-silex-orm/web/index.php on line 19" while reading response header from upstream, client: 127.0.0.1, server: localhost, request: "GET /db?queries=501 HTTP/1.1", upstream: "fastcgi://127.0.0.1:9001", host: "127.0.0.1:8080"
+2014/06/29 04:12:14 [error] 26400#0: *14 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] No such file or directory' in /home/ubuntu/FrameworkBenchmarks/php-silex-orm/web/index.php:19
+Stack trace:
+#0 /home/ubuntu/FrameworkBenchmarks/php-silex-orm/web/index.php(19): PDO->__construct('mysql:host=loca...', 'benchmarkdbuser', 'benchmarkdbpass', Array)
+#1 {main}
+  thrown in /home/ubuntu/FrameworkBenchmarks/php-silex-orm/web/index.php on line 19" while reading response header from upstream, client: 127.0.0.1, server: localhost, request: "GET /db?queries=501 HTTP/1.1", upstream: "fastcgi://127.0.0.1:9001", host: "127.0.0.1:8080"

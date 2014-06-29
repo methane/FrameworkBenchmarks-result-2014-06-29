@@ -1,0 +1,60 @@
+test.os.lower() = linux  test.database_os.lower() = linux
+self.results['frameworks'] != None: True
+test.name: weber
+self.results['completed']: {}
+
+=====================================================
+  Beginning weber
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Starting weber
+-----------------------------------------------------
+All dependencies up to date
+Compiled lib/config.ex
+Compiled lib/route.ex
+Compiled lib/controllers/main.ex
+Compiled lib/app.ex
+Generated WeberFramework.app
+All dependencies up to date
+
+-----------------------------------------------------
+  VERIFYING JSON (/json)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+connection: keep-alive
+server: Cowboy
+date: Sun, 29 Jun 2014 07:16:53 GMT
+content-length: 27
+Content-Type: application/json
+Content-type: application/json
+
+{"message":"Hello, world!"}
+
+VALIDATING JSON ... PASS
+
+
+-----------------------------------------------------
+  VERIFYING PLAINTEXT (/plaintext)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+connection: keep-alive
+server: Cowboy
+date: Sun, 29 Jun 2014 07:16:53 GMT
+content-length: 13
+Content-type: text/plain
+
+Hello, world!
+
+VALIDATING PLAINTEXT ... PASS
+
+
+-----------------------------------------------------
+  Benchmarking weber ...
+-----------------------------------------------------
+BENCHMARKING JSON ... Complete
+BENCHMARKING Plaintext ... Complete
+
+-----------------------------------------------------
+  Stopping weber
+-----------------------------------------------------

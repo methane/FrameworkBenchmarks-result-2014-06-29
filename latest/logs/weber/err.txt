@@ -1,0 +1,14 @@
+[31m[1mwarning: the dependency plug requires Elixir "~> 0.14.0" but you are running on v0.13.3[0m
+[31m[1mwarning: the dependency weberContrib requires Elixir "~> 0.14.1" but you are running on v0.13.3[0m
+warning: the dependency plug requires Elixir "~> 0.14.0" but you are running on v0.13.3
+warning: the dependency weberContrib requires Elixir "~> 0.14.1" but you are running on v0.13.3
+yes: standard output: Broken pipe
+yes: write error
+[31m[1mwarning: the dependency plug requires Elixir "~> 0.14.0" but you are running on v0.13.3[0m
+[31m[1mwarning: the dependency weberContrib requires Elixir "~> 0.14.1" but you are running on v0.13.3[0m
+[31m[1mwarning: the dependency plug requires Elixir "~> 0.14.0" but you are running on v0.13.3[0m
+[31m[1mwarning: the dependency weberContrib requires Elixir "~> 0.14.1" but you are running on v0.13.3[0m
+
+-----------------------------------------------------
+  Error: Port 8080 was not released by stop weber
+-----------------------------------------------------

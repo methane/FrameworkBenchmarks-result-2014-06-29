@@ -1,0 +1,139 @@
+test.os.lower() = linux  test.database_os.lower() = linux
+self.results['frameworks'] != None: True
+test.name: lithium
+self.results['completed']: {}
+
+=====================================================
+  Beginning lithium
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Starting lithium
+-----------------------------------------------------
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+mysql start/running, process 31063
+ * Restarting PostgreSQL 9.3 database server
+   ...done.
+
+-----------------------------------------------------
+  VERIFYING JSON (/json)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Server: nginx/1.4.1
+Date: Sat, 28 Jun 2014 23:34:16 GMT
+Content-Type: application/json; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: PHP/5.4.13
+
+{"message":"Hello, World!"}
+
+VALIDATING JSON ... PASS
+
+
+-----------------------------------------------------
+  VERIFYING DB (/db)
+-----------------------------------------------------
+HTTP/1.1 500 Internal Server Error
+Server: nginx/1.4.1
+Date: Sat, 28 Jun 2014 23:34:16 GMT
+Content-Type: text/html
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: PHP/5.4.13
+
+
+
+VALIDATING DB ... FAIL
+
+
+-----------------------------------------------------
+  VERIFYING QUERY (/db?queries=2)
+-----------------------------------------------------
+HTTP/1.1 500 Internal Server Error
+Server: nginx/1.4.1
+Date: Sat, 28 Jun 2014 23:34:16 GMT
+Content-Type: text/html
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: PHP/5.4.13
+
+
+
+/db?queries=2 - FAIL
+
+-----------------------------------------------------
+
+HTTP/1.1 200 OK
+Server: nginx/1.4.1
+Date: Sat, 28 Jun 2014 23:34:16 GMT
+Content-Type: application/json; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: PHP/5.4.13
+
+[]
+
+/db?queries=0 - WARNING
+
+-----------------------------------------------------
+
+HTTP/1.1 200 OK
+Server: nginx/1.4.1
+Date: Sat, 28 Jun 2014 23:34:16 GMT
+Content-Type: application/json; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: PHP/5.4.13
+
+[]
+
+/db?queries=foo - WARNING
+
+-----------------------------------------------------
+
+HTTP/1.1 500 Internal Server Error
+Server: nginx/1.4.1
+Date: Sat, 28 Jun 2014 23:34:16 GMT
+Content-Type: text/html
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: PHP/5.4.13
+
+
+
+/db?queries=501 - WARNING
+
+-----------------------------------------------------
+
+
+VALIDATING QUERY ... FAIL
+
+
+-----------------------------------------------------
+  Benchmarking lithium ...
+-----------------------------------------------------
+BENCHMARKING JSON ... Complete
+BENCHMARKING DB ... Complete
+BENCHMARKING Query ... Complete
+
+-----------------------------------------------------
+  Stopping lithium
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Stopped lithium
+-----------------------------------------------------
+
+----------------------------------------------------
+Saving results through lithium
+----------------------------------------------------

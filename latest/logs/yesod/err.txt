@@ -1,0 +1,20 @@
+restart: Unknown instance: 
+cabal: Could not resolve dependencies:
+trying: bench-0.0.0
+rejecting: aeson-0.7.0.6/installed-eee... (conflict: aeson =>
+text==1.1.1.3/installed-816..., bench => text>=0.11 && <0.12)
+trying: aeson-0.7.0.6
+trying: unordered-containers-0.2.4.0/installed-3c4...
+rejecting: hashable-1.2.2.0/installed-4d5... (conflict: hashable =>
+text==1.1.1.3/installed-816..., bench => text>=0.11 && <0.12)
+rejecting: hashable-1.2.2.0, 1.2.1.0, 1.2.0.10, 1.2.0.9, 1.2.0.8, 1.2.0.7,
+1.2.0.6, 1.2.0.5, 1.2.0.4, 1.2.0.3, 1.2.0.2, 1.2.0.1, 1.2.0.0, 1.1.2.5,
+1.1.2.4, 1.1.2.3, 1.1.2.2, 1.1.2.1, 1.1.2.0, 1.1.1.0, 1.1.0.0, 1.0.1.1,
+1.0.1.0, 1.0.0 (conflict: unordered-containers =>
+hashable==1.2.2.0/installed-4d5...)
+
+-----------------------------------------------------
+  Subprocess Error yesod
+-----------------------------------------------------
+Command 'cabal install' returned non-zero exit status 1
+(<class 'subprocess.CalledProcessError'>, CalledProcessError())

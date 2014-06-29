@@ -1,0 +1,7 @@
+restart: Unknown instance: 
+beam.smp: no process found
+ERROR: Problem starting elli
+
+-----------------------------------------------------
+  Stopped elli
+-----------------------------------------------------

@@ -1,0 +1,4 @@
+Jun 28, 2014 9:10:52 PM com.twitter.finagle.Init$ apply
+INFO: Finagle version 6.18.0 (rev=a12a6ab5ce5d213c3753ad5884daa712df1b973b) built at 20140625-103953
+Jun 28, 2014 9:11:16 PM com.twitter.jvm.Jvm$$anonfun$sample$1$2 apply
+WARNING: Missed 1 collections for 0.PSScavenge due to sampling

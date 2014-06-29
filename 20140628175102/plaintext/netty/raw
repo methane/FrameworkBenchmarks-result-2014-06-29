@@ -1,0 +1,96 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer netty
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/plaintext
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/plaintext
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   118.28us   96.13us   5.33ms   95.21%
+    Req/Sec     8.57k     2.24k   18.78k    79.18%
+  320606 requests in 5.00s, 44.33MB read
+Requests/sec:  64140.66
+Transfer/sec:      8.87MB
+
+---------------------------------------------------------
+ Running Warmup netty
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/plaintext
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/plaintext
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     2.16ms    3.12ms  48.66ms   88.16%
+    Req/Sec    30.71k     8.41k   65.20k    70.82%
+  1748389 requests in 15.00s, 241.77MB read
+Requests/sec: 116562.59
+Transfer/sec:     16.12MB
+
+---------------------------------------------------------
+ Concurrency: 256 for netty
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/plaintext
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     8.16ms    6.30ms  68.44ms   81.48%
+    Req/Sec   119.36k    12.56k  160.52k    71.44%
+  7006544 requests in 15.01s, 0.95GB read
+Requests/sec: 466921.08
+Transfer/sec:     64.57MB
+
+---------------------------------------------------------
+ Concurrency: 1024 for netty
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 1024 --timeout 1024 -t 4 http://127.0.0.1:8080/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/plaintext
+  4 threads and 1024 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    35.13ms   17.01ms 139.00ms   64.79%
+    Req/Sec   115.84k     6.44k  138.62k    71.00%
+  6884112 requests in 15.00s, 0.93GB read
+Requests/sec: 458893.78
+Transfer/sec:     63.46MB
+
+---------------------------------------------------------
+ Concurrency: 4096 for netty
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 4096 --timeout 4096 -t 4 http://127.0.0.1:8080/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/plaintext
+  4 threads and 4096 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   126.86ms   57.27ms 485.78ms   66.18%
+    Req/Sec   114.46k    14.97k  156.63k    74.13%
+  6727216 requests in 15.01s, 0.91GB read
+  Socket errors: connect 0, read 0, write 0, timeout 2715
+Requests/sec: 448294.01
+Transfer/sec:     61.99MB
+
+---------------------------------------------------------
+ Concurrency: 16384 for netty
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16384 --timeout 16384 -t 4 http://127.0.0.1:8080/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/plaintext
+  4 threads and 16384 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   238.59ms   95.20ms   1.12s    66.60%
+    Req/Sec   110.30k    11.74k  149.02k    74.65%
+  6552720 requests in 15.00s, 0.88GB read
+  Socket errors: connect 0, read 0, write 0, timeout 66924
+Requests/sec: 436887.93
+Transfer/sec:     60.41MB

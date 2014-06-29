@@ -1,0 +1,95 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer spark
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/spark/plaintext
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/spark/plaintext
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   532.47us    3.33ms  43.53ms   98.96%
+    Req/Sec     5.22k     2.41k   11.89k    80.07%
+  191295 requests in 5.00s, 27.73MB read
+Requests/sec:  38267.81
+Transfer/sec:      5.55MB
+
+---------------------------------------------------------
+ Running Warmup spark
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/spark/plaintext
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/spark/plaintext
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    32.11ms  156.77ms   1.09s    96.11%
+    Req/Sec    10.07k     3.84k   34.80k    76.73%
+  577224 requests in 15.00s, 83.67MB read
+Requests/sec:  38484.08
+Transfer/sec:      5.58MB
+
+---------------------------------------------------------
+ Concurrency: 256 for spark
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/spark/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/spark/plaintext
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    88.44ms  153.05ms   1.03s    86.51%
+    Req/Sec    12.04k     3.00k   25.17k    71.36%
+  728847 requests in 15.00s, 105.65MB read
+Requests/sec:  48595.87
+Transfer/sec:      7.04MB
+
+---------------------------------------------------------
+ Concurrency: 1024 for spark
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 1024 --timeout 1024 -t 4 http://127.0.0.1:8080/spark/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/spark/plaintext
+  4 threads and 1024 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    11.42s     5.86s   14.45s    78.88%
+    Req/Sec     5.77k     9.36k   40.18k    88.65%
+  714787 requests in 15.23s, 103.61MB read
+Requests/sec:  46919.45
+Transfer/sec:      6.80MB
+
+---------------------------------------------------------
+ Concurrency: 4096 for spark
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 4096 --timeout 4096 -t 4 http://127.0.0.1:8080/spark/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/spark/plaintext
+  4 threads and 4096 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.81s     4.23s   13.11s    87.72%
+    Req/Sec    12.12k     5.81k   22.73k    76.19%
+  607460 requests in 15.00s, 88.06MB read
+Requests/sec:  40508.13
+Transfer/sec:      5.87MB
+
+---------------------------------------------------------
+ Concurrency: 16384 for spark
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16384 --timeout 16384 -t 4 http://127.0.0.1:8080/spark/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/spark/plaintext
+  4 threads and 16384 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    10.42s     6.40s   14.76s    71.87%
+    Req/Sec    14.22k     4.60k   28.24k    71.84%
+  693281 requests in 15.00s, 100.50MB read
+  Socket errors: connect 0, read 0, write 0, timeout 67184
+Requests/sec:  46218.64
+Transfer/sec:      6.70MB

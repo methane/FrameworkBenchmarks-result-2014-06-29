@@ -1,0 +1,256 @@
+test.os.lower() = linux  test.database_os.lower() = linux
+self.results['frameworks'] != None: True
+test.name: lift-stateless
+self.results['completed']: {}
+
+=====================================================
+  Beginning lift-stateless
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Starting lift-stateless
+-----------------------------------------------------
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+mysql start/running, process 29897
+ * Restarting PostgreSQL 9.3 database server
+   ...done.
+[0m[[0minfo[0m] [0mLoading project definition from /home/ubuntu/FrameworkBenchmarks/lift-stateless/project[0m
+[0m[[0minfo[0m] [0mSet current project to lift-stateless (in build file:/home/ubuntu/FrameworkBenchmarks/lift-stateless/)[0m
+[0m[[0minfo[0m] [0mUpdating {file:/home/ubuntu/FrameworkBenchmarks/lift-stateless/}lift-stateless...[0m
+[0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.10.1 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.streum#configrity-core_2.10;1.0.0 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.scalatest#scalatest_2.10;1.9.1 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.scala-lang#scala-actors;2.10.0 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.scala-lang#scala-reflect;2.10.0 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.rogach#scallop_2.10;0.8.1 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving commons-dbcp#commons-dbcp;1.4 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving commons-pool#commons-pool;1.5.4 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving mysql#mysql-connector-java;5.1.21 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving com.typesafe.slick#slick_2.10;1.0.0 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.slf4j#slf4j-api;1.6.4 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving ch.qos.logback#logback-classic;1.0.9 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving ch.qos.logback#logback-core;1.0.9 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.slf4j#slf4j-api;1.7.2 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.eintr.loglady#loglady_2.10;1.1.0 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.eclipse.jetty#jetty-server;8.1.9.v20130131 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.eclipse.jetty.orbit#javax.servlet;3.0.0.v201112011016 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.eclipse.jetty#jetty-continuation;8.1.9.v20130131 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.eclipse.jetty#jetty-http;8.1.9.v20130131 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.eclipse.jetty#jetty-io;8.1.9.v20130131 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.eclipse.jetty#jetty-util;8.1.9.v20130131 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.eclipse.jetty#jetty-webapp;8.1.9.v20130131 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.eclipse.jetty#jetty-xml;8.1.9.v20130131 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.eclipse.jetty#jetty-servlet;8.1.9.v20130131 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.eclipse.jetty#jetty-security;8.1.9.v20130131 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving net.liftweb#lift-webkit_2.10;2.5-RC2 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving net.liftweb#lift-util_2.10;2.5-RC2 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving net.liftweb#lift-actor_2.10;2.5-RC2 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving net.liftweb#lift-common_2.10;2.5-RC2 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving net.liftweb#lift-json_2.10;2.5-RC2 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.scala-lang#scalap;2.10.0 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.scala-lang#scala-compiler;2.10.1 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.scala-lang#scala-reflect;2.10.1 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving com.thoughtworks.paranamer#paranamer;2.4.1 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving joda-time#joda-time;2.1 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.joda#joda-convert;1.2 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving commons-codec#commons-codec;1.6 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving javax.mail#mail;1.4.4 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving javax.activation#activation;1.1 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving nu.validator.htmlparser#htmlparser;1.4 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving commons-fileupload#commons-fileupload;1.2.2 ...[0m
+[0m[[0minfo[0m] [0mDone updating.[0m
+[0m[[33mwarn[0m] [0mPotentially incompatible versions of dependencies of {file:/home/ubuntu/FrameworkBenchmarks/lift-stateless/}lift-stateless:[0m
+[0m[[33mwarn[0m] [0m   org.scala-lang: 2.10.1, 2.10.0[0m
+[0m[[32msuccess[0m] [0mTotal time: 3 s, completed Jun 28, 2014 11:26:40 PM[0m
+[0m[[33mwarn[0m] [0mPotentially incompatible versions of dependencies of {file:/home/ubuntu/FrameworkBenchmarks/lift-stateless/}lift-stateless:[0m
+[0m[[33mwarn[0m] [0m   org.scala-lang: 2.10.1, 2.10.0[0m
+[0m[[0minfo[0m] [0mCompiling 6 Scala sources to /home/ubuntu/FrameworkBenchmarks/lift-stateless/target/scala-2.10/classes...[0m
+[0m[[0minfo[0m] [0mNo tests to run for test:test[0m
+[0m[[0minfo[0m] [0mIncluding scala-compiler.jar[0m
+[0m[[0minfo[0m] [0mIncluding scala-library.jar[0m
+[0m[[0minfo[0m] [0mIncluding logback-classic-1.0.9.jar[0m
+[0m[[0minfo[0m] [0mIncluding logback-core-1.0.9.jar[0m
+[0m[[0minfo[0m] [0mIncluding paranamer-2.4.1.jar[0m
+[0m[[0minfo[0m] [0mIncluding slick_2.10-1.0.0.jar[0m
+[0m[[0minfo[0m] [0mIncluding commons-codec-1.6.jar[0m
+[0m[[0minfo[0m] [0mIncluding commons-dbcp-1.4.jar[0m
+[0m[[0minfo[0m] [0mIncluding commons-fileupload-1.2.2.jar[0m
+[0m[[0minfo[0m] [0mIncluding commons-pool-1.5.4.jar[0m
+[0m[[0minfo[0m] [0mIncluding activation-1.1.jar[0m
+[0m[[0minfo[0m] [0mIncluding mail-1.4.4.jar[0m
+[0m[[0minfo[0m] [0mIncluding joda-time-2.1.jar[0m
+[0m[[0minfo[0m] [0mIncluding mysql-connector-java-5.1.21.jar[0m
+[0m[[0minfo[0m] [0mIncluding lift-actor_2.10-2.5-RC2.jar[0m
+[0m[[0minfo[0m] [0mIncluding lift-common_2.10-2.5-RC2.jar[0m
+[0m[[0minfo[0m] [0mIncluding lift-json_2.10-2.5-RC2.jar[0m
+[0m[[0minfo[0m] [0mIncluding lift-util_2.10-2.5-RC2.jar[0m
+[0m[[0minfo[0m] [0mIncluding lift-webkit_2.10-2.5-RC2.jar[0m
+[0m[[0minfo[0m] [0mIncluding htmlparser-1.4.jar[0m
+[0m[[0minfo[0m] [0mIncluding javax.servlet-3.0.0.v201112011016.jar[0m
+[0m[[0minfo[0m] [0mIncluding jetty-continuation-8.1.9.v20130131.jar[0m
+[0m[[0minfo[0m] [0mIncluding jetty-http-8.1.9.v20130131.jar[0m
+[0m[[0minfo[0m] [0mIncluding jetty-io-8.1.9.v20130131.jar[0m
+[0m[[0minfo[0m] [0mIncluding jetty-security-8.1.9.v20130131.jar[0m
+[0m[[0minfo[0m] [0mIncluding jetty-server-8.1.9.v20130131.jar[0m
+[0m[[0minfo[0m] [0mIncluding jetty-servlet-8.1.9.v20130131.jar[0m
+[0m[[0minfo[0m] [0mIncluding jetty-util-8.1.9.v20130131.jar[0m
+[0m[[0minfo[0m] [0mIncluding jetty-webapp-8.1.9.v20130131.jar[0m
+[0m[[0minfo[0m] [0mIncluding jetty-xml-8.1.9.v20130131.jar[0m
+[0m[[0minfo[0m] [0mIncluding loglady_2.10-1.1.0.jar[0m
+[0m[[0minfo[0m] [0mIncluding joda-convert-1.2.jar[0m
+[0m[[0minfo[0m] [0mIncluding scallop_2.10-0.8.1.jar[0m
+[0m[[0minfo[0m] [0mIncluding scala-actors-2.10.0.jar[0m
+[0m[[0minfo[0m] [0mIncluding scala-reflect-2.10.1.jar[0m
+[0m[[0minfo[0m] [0mIncluding scalap-2.10.0.jar[0m
+[0m[[0minfo[0m] [0mIncluding scalatest_2.10-1.9.1.jar[0m
+[0m[[0minfo[0m] [0mIncluding slf4j-api-1.7.2.jar[0m
+[0m[[0minfo[0m] [0mIncluding configrity-core_2.10-1.0.0.jar[0m
+[0m[[0minfo[0m] [0mMerging 'META-INF/NOTICE.txt' with strategy 'rename'[0m
+[0m[[0minfo[0m] [0mMerging 'toserve/blueprint/LICENSE' with strategy 'rename'[0m
+[0m[[0minfo[0m] [0mMerging 'META-INF/LICENSE.txt' with strategy 'rename'[0m
+[0m[[0minfo[0m] [0mMerging 'META-INF/MANIFEST.MF' with strategy 'discard'[0m
+[0m[[0minfo[0m] [0mMerging 'META-INF/ECLIPSEF.SF' with strategy 'discard'[0m
+[0m[[0minfo[0m] [0mMerging 'META-INF/INDEX.LIST' with strategy 'discard'[0m
+[0m[[0minfo[0m] [0mMerging 'about.html' with strategy 'discard'[0m
+[0m[[0minfo[0m] [0mPackaging /home/ubuntu/FrameworkBenchmarks/lift-stateless/target/lift-stateless-assembly-0.0.1.jar ...[0m
+[0m[[0minfo[0m] [0mDone packaging.[0m
+[0m[[32msuccess[0m] [0mTotal time: 23 s, completed Jun 28, 2014 11:27:03 PM[0m
+/home/ubuntu/FrameworkBenchmarks/lift-stateless
+
+-----------------------------------------------------
+  VERIFYING JSON (/json)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Expires: Sat, 28 Jun 2014 23:27:18 GMT
+Content-Length: 27
+Cache-Control: no-cache, private, no-store
+Content-Type: application/json; charset=utf-8
+Pragma: no-cache
+Date: Sat, 28 Jun 2014 23:27:18 GMT
+X-Lift-Version: Unknown Lift Version
+Server: Jetty(8.y.z-SNAPSHOT)
+
+{"message":"Hello, World!"}
+
+VALIDATING JSON ... PASS
+
+
+-----------------------------------------------------
+  VERIFYING DB (/db)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Expires: Sat, 28 Jun 2014 23:27:19 GMT
+Content-Length: 31
+Cache-Control: no-cache, private, no-store
+Content-Type: application/json; charset=utf-8
+Pragma: no-cache
+Date: Sat, 28 Jun 2014 23:27:19 GMT
+X-Lift-Version: Unknown Lift Version
+Server: Jetty(8.y.z-SNAPSHOT)
+
+{"id":8824,"randomNumber":9705}
+
+VALIDATING DB ... PASS
+
+
+-----------------------------------------------------
+  VERIFYING QUERY (/db/2)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Expires: Sat, 28 Jun 2014 23:27:19 GMT
+Content-Length: 65
+Cache-Control: no-cache, private, no-store
+Content-Type: application/json; charset=utf-8
+Pragma: no-cache
+Date: Sat, 28 Jun 2014 23:27:19 GMT
+X-Lift-Version: Unknown Lift Version
+Server: Jetty(8.y.z-SNAPSHOT)
+
+[{"id":6692,"randomNumber":4645},{"id":7675,"randomNumber":5587}]
+
+/db/2 - PASS
+
+-----------------------------------------------------
+
+HTTP/1.1 200 OK
+Expires: Sat, 28 Jun 2014 23:27:19 GMT
+Content-Length: 2
+Cache-Control: no-cache, private, no-store
+Content-Type: application/json; charset=utf-8
+Pragma: no-cache
+Date: Sat, 28 Jun 2014 23:27:19 GMT
+X-Lift-Version: Unknown Lift Version
+Server: Jetty(8.y.z-SNAPSHOT)
+
+[]
+
+/db/0 - WARNING
+
+-----------------------------------------------------
+
+HTTP/1.1 500 Server Error
+Expires: Sat, 28 Jun 2014 23:27:19 GMT
+Content-Length: 112
+Cache-Control: no-cache, private, no-store
+Content-Type: text/html; charset=utf-8
+Pragma: no-cache
+Date: Sat, 28 Jun 2014 23:27:19 GMT
+X-Lift-Version: Unknown Lift Version
+Server: Jetty(8.y.z-SNAPSHOT)
+
+<!DOCTYPE html>
+<html> <body>Something unexpected happened while serving the page at /db/foo</body> </html>  
+  
+
+/db/foo - WARNING
+
+-----------------------------------------------------
+
+HTTP/1.1 200 OK
+Expires: Sat, 28 Jun 2014 23:27:19 GMT
+Content-Length: 15578
+Cache-Control: no-cache, private, no-store
+Content-Type: application/json; charset=utf-8
+Pragma: no-cache
+Date: Sat, 28 Jun 2014 23:27:19 GMT
+X-Lift-Version: Unknown Lift Version
+Server: Jetty(8.y.z-SNAPSHOT)
+
+[{"id":13,"randomNumber":5371},{"id":23,"randomNumber":8451},{"id":28,"randomNumber":5940},{"id":31,"randomNumber":7323},{"id":40,"randomNumber":2710},{"id":43,"randomNumber":637},{"id":44,"randomNumber":1659},{"id":102,"randomNumber":4298},{"id":131,"randomNumber":6274},{"id":134,"randomNumber":501},{"id":144,"randomNumber":6756},{"id":150,"randomNumber":7256},{"id":152,"randomNumber":6758},{"id":154,"randomNumber":9457},{"id":208,"randomNumber":2741},{"id":218,"randomNumber":1840},{"id":252,"randomNumber":1972},{"id":270,"randomNumber":6468},{"id":273,"randomNumber":6310},{"id":290,"randomNumber":2922},{"id":292,"randomNumber":4735},{"id":325,"randomNumber":3152},{"id":338,"randomNumber":2722},{"id":342,"randomNumber":8080},{"id":347,"randomNumber":2269},{"id":435,"randomNumber":424},{"id":467,"randomNumber":860},{"id":490,"randomNumber":4597},{"id":506,"randomNumber":952},{"id":511,"randomNumber":2414},{"id":521,"randomNumber":3690},{"id":556,"randomNumber":7951},{"id":577,"randomNumber":5807},{"id":579,"randomNumber":5163},{"id":580,"randomNumber":9123},{"id":636,"randomNumber":1756},{"id":645,"randomNumber":4730},{"id":661,"randomNumber":8549},{"id":705,"randomNumber":3817},{"id":784,"randomNumber":5343},{"id":824,"randomNumber":3662},{"id":842,"randomNumber":4810},{"id":843,"randomNumber":6335},{"id":880,"randomNumber":8225},{"id":926,"randomNumber":5111},{"id":930,"randomNumber":6629},{"id":949,"randomNumber":2875},{"id":959,"randomNumber":8726},{"id":967,"randomNumber":1638},{"id":975,"randomNumber":4099},{"id":1010,"randomNumber":6263},{"id":1042,"randomNumber":9973},{"id":1051,"randomNumber":4865},{"id":1174,"randomNumber":4238},{"id":1191,"randomNumber":8631},{"id":1196,"randomNumber":4003},{"id":1198,"randomNumber":8059},{"id":1203,"randomNumber":5220},{"id":1207,"randomNumber":5352},{"id":1222,"randomNumber":639},{"id":1244,"randomNumber":8979},{"id":1296,"randomNumber":1449},{"id":1310,"randomNumber":2806},{"id":1329,"randomNumber":681},{"id":1342,"randomNumber":3122},{"id":1363,"randomNumber":167},{"id":1403,"randomNumber":6890},{"id":1421,"randomNumber":8310},{"id":1438,"randomNumber":8423},{"id":1442,"randomNumber":6268},{"id":1459,"randomNumber":7584},{"id":1505,"randomNumber":8431},{"id":1534,"randomNumber":7344},{"id":1537,"randomNumber":8238},{"id":1541,"randomNumber":2689},{"id":1545,"randomNumber":2174},{"id":1575,"randomNumber":2044},{"id":1623,"randomNumber":9707},{"id":1643,"randomNumber":5306},{"id":1645,"randomNumber":8423},{"id":1665,"randomNumber":3142},{"id":1677,"randomNumber":4923},{"id":1717,"randomNumber":2723},{"id":1726,"randomNumber":6639},{"id":1735,"randomNumber":2562},{"id":1759,"randomNumber":3605},{"id":1771,"randomNumber":1731},{"id":1776,"randomNumber":252},{"id":1807,"randomNumber":2702},{"id":1809,"randomNumber":5353},{"id":1817,"randomNumber":2003},{"id":1838,"randomNumber":3978},{"id":1861,"randomNumber":7078},{"id":1868,"randomNumber":6789},{"id":1871,"randomNumber":2201},{"id":1925,"randomNumber":3387},{"id":1937,"randomNumber":8583},{"id":1969,"randomNumber":3325},{"id":1973,"randomNumber":5143},{"id":2005,"randomNumber":1628},{"id":2061,"randomNumber":6470},{"id":2084,"randomNumber":4990},{"id":2087,"randomNumber":8042},{"id":2127,"randomNumber":5958},{"id":2150,"randomNumber":3608},{"id":2151,"randomNumber":1078},{"id":2154,"randomNumber":9591},{"id":2170,"randomNumber":6495},{"id":2204,"randomNumber":45},{"id":2221,"randomNumber":9806},{"id":2227,"randomNumber":2543},{"id":2254,"randomNumber":5797},{"id":2262,"randomNumber":731},{"id":2291,"randomNumber":5882},{"id":2296,"randomNumber":5636},{"id":2301,"randomNumber":7516},{"id":2305,"randomNumber":1376},{"id":2314,"randomNumber":2477},{"id":2328,"randomNumber":4650},{"id":2347,"randomNumber":5656},{"id":2368,"randomNumber":9568},{"id":2397,"randomNumber":6010},{"id":2407,"randomNumber":5161},{"id":2414,"randomNumber":9883},{"id":2437,"randomNumber":8542},{"id":2458,"randomNumber":8520},{"id":2466,"randomNumber":5851},{"id":2475,"randomNumber":213},{"id":2478,"randomNumber":3583},{"id":2500,"randomNumber":2562},{"id":2513,"randomNumber":4979},{"id":2529,"randomNumber":5422},{"id":2556,"randomNumber":6333},{"id":2576,"randomNumber":2995},{"id":2600,"randomNumber":2208},{"id":2607,"randomNumber":7432},{"id":2608,"randomNumber":3351},{"id":2662,"randomNumber":3142},{"id":2685,"randomNumber":3529},{"id":2692,"randomNumber":3070},{"id":2701,"randomNumber":9466},{"id":2712,"randomNumber":1591},{"id":2765,"randomNumber":6685},{"id":2819,"randomNumber":6572},{"id":2859,"randomNumber":3971},{"id":2882,"randomNumber":9675},{"id":2902,"randomNumber":459},{"id":2911,"randomNumber":2587},{"id":2924,"randomNumber":1242},{"id":2926,"randomNumber":7756},{"id":2951,"randomNumber":1038},{"id":2964,"randomNumber":9829},{"id":2984,"randomNumber":9132},{"id":2991,"randomNumber":5516},{"id":3020,"randomNumber":4124},{"id":3052,"randomNumber":3426},{"id":3079,"randomNumber":2975},{"id":3110,"randomNumber":2407},{"id":3140,"randomNumber":9449},{"id":3172,"randomNumber":2287},{"id":3174,"randomNumber":4496},{"id":3188,"randomNumber":4042},{"id":3190,"randomNumber":5229},{"id":3200,"randomNumber":7220},{"id":3255,"randomNumber":7694},{"id":3283,"randomNumber":8866},{"id":3299,"randomNumber":6090},{"id":3323,"randomNumber":5675},{"id":3343,"randomNumber":3807},{"id":3348,"randomNumber":4732},{"id":3349,"randomNumber":9199},{"id":3429,"randomNumber":3607},{"id":3432,"randomNumber":1836},{"id":3455,"randomNumber":4161},{"id":3462,"randomNumber":8769},{"id":3480,"randomNumber":582},{"id":3545,"randomNumber":7348},{"id":3565,"randomNumber":225},{"id":3634,"randomNumber":7924},{"id":3649,"randomNumber":3355},{"id":3677,"randomNumber":6806},{"id":3716,"randomNumber":9796},{"id":3739,"randomNumber":2393},{"id":3740,"randomNumber":8828},{"id":3749,"randomNumber":2975},{"id":3759,"randomNumber":9173},{"id":3820,"randomNumber":1472},{"id":3843,"randomNumber":609},{"id":3874,"randomNumber":8487},{"id":3884,"randomNumber":8107},{"id":3900,"randomNumber":4151},{"id":3924,"randomNumber":7074},{"id":3927,"randomNumber":4892},{"id":4009,"randomNumber":5473},{"id":4062,"randomNumber":605},{"id":4075,"randomNumber":7458},{"id":4091,"randomNumber":1234},{"id":4097,"randomNumber":9836},{"id":4137,"randomNumber":3804},{"id":4164,"randomNumber":7866},{"id":4193,"randomNumber":202},{"id":4206,"randomNumber":6780},{"id":4222,"randomNumber":3146},{"id":4228,"randomNumber":3534},{"id":4239,"randomNumber":7433},{"id":4241,"randomNumber":564},{"id":4253,"randomNumber":3212},{"id":4301,"randomNumber":4486},{"id":4305,"randomNumber":3947},{"id":4313,"randomNumber":2847},{"id":4349,"randomNumber":1031},{"id":4358,"randomNumber":5792},{"id":4385,"randomNumber":7148},{"id":4386,"randomNumber":6259},{"id":4388,"randomNumber":6026},{"id":4390,"randomNumber":4012},{"id":4431,"randomNumber":996},{"id":4493,"randomNumber":4795},{"id":4503,"randomNumber":6314},{"id":4504,"randomNumber":2803},{"id":4505,"randomNumber":2248},{"id":4524,"randomNumber":3806},{"id":4553,"randomNumber":4358},{"id":4559,"randomNumber":5481},{"id":4575,"randomNumber":9489},{"id":4587,"randomNumber":6315},{"id":4609,"randomNumber":2091},{"id":4633,"randomNumber":5115},{"id":4639,"randomNumber":4227},{"id":4647,"randomNumber":7065},{"id":4652,"randomNumber":9668},{"id":4683,"randomNumber":8113},{"id":4685,"randomNumber":7497},{"id":4688,"randomNumber":6153},{"id":4693,"randomNumber":7775},{"id":4694,"randomNumber":990},{"id":4729,"randomNumber":6148},{"id":4762,"randomNumber":9697},{"id":4763,"randomNumber":5940},{"id":4870,"randomNumber":5789},{"id":4895,"randomNumber":7578},{"id":4902,"randomNumber":3174},{"id":4928,"randomNumber":3293},{"id":4981,"randomNumber":1193},{"id":4993,"randomNumber":1448},{"id":5034,"randomNumber":1993},{"id":5077,"randomNumber":6560},{"id":5097,"randomNumber":6565},{"id":5104,"randomNumber":8764},{"id":5107,"randomNumber":8790},{"id":5113,"randomNumber":6393},{"id":5129,"randomNumber":5430},{"id":5131,"randomNumber":2310},{"id":5167,"randomNumber":9965},{"id":5168,"randomNumber":3868},{"id":5210,"randomNumber":9580},{"id":5228,"randomNumber":8200},{"id":5272,"randomNumber":9749},{"id":5289,"randomNumber":1115},{"id":5295,"randomNumber":1972},{"id":5297,"randomNumber":410},{"id":5315,"randomNumber":1131},{"id":5335,"randomNumber":2040},{"id":5373,"randomNumber":3438},{"id":5387,"randomNumber":5127},{"id":5395,"randomNumber":705},{"id":5440,"randomNumber":380},{"id":5457,"randomNumber":2438},{"id":5493,"randomNumber":1978},{"id":5495,"randomNumber":8743},{"id":5498,"randomNumber":1349},{"id":5517,"randomNumber":384},{"id":5526,"randomNumber":9114},{"id":5533,"randomNumber":1100},{"id":5535,"randomNumber":726},{"id":5540,"randomNumber":9702},{"id":5551,"randomNumber":4487},{"id":5586,"randomNumber":7740},{"id":5589,"randomNumber":6747},{"id":5601,"randomNumber":5898},{"id":5606,"randomNumber":9018},{"id":5618,"randomNumber":3382},{"id":5670,"randomNumber":2516},{"id":5709,"randomNumber":3091},{"id":5714,"randomNumber":1977},{"id":5728,"randomNumber":5401},{"id":5730,"randomNumber":8591},{"id":5778,"randomNumber":1339},{"id":5793,"randomNumber":4616},{"id":5831,"randomNumber":6843},{"id":5835,"randomNumber":6875},{"id":5894,"randomNumber":2066},{"id":5910,"randomNumber":7832},{"id":5918,"randomNumber":839},{"id":5935,"randomNumber":901},{"id":5941,"randomNumber":6590},{"id":5944,"randomNumber":860},{"id":5949,"randomNumber":2799},{"id":5959,"randomNumber":7680},{"id":6066,"randomNumber":9358},{"id":6090,"randomNumber":9521},{"id":6097,"randomNumber":9638},{"id":6103,"randomNumber":9421},{"id":6115,"randomNumber":206},{"id":6149,"randomNumber":1780},{"id":6169,"randomNumber":2285},{"id":6191,"randomNumber":395},{"id":6193,"randomNumber":4053},{"id":6204,"randomNumber":1113},{"id":6219,"randomNumber":5400},{"id":6229,"randomNumber":2360},{"id":6233,"randomNumber":6611},{"id":6282,"randomNumber":2553},{"id":6285,"randomNumber":9679},{"id":6291,"randomNumber":9665},{"id":6327,"randomNumber":9723},{"id":6334,"randomNumber":7759},{"id":6360,"randomNumber":5465},{"id":6368,"randomNumber":1949},{"id":6377,"randomNumber":1735},{"id":6418,"randomNumber":6669},{"id":6452,"randomNumber":4325},{"id":6481,"randomNumber":1475},{"id":6485,"randomNumber":1278},{"id":6508,"randomNumber":357},{"id":6545,"randomNumber":2645},{"id":6548,"randomNumber":9719},{"id":6614,"randomNumber":7893},{"id":6648,"randomNumber":5152},{"id":6656,"randomNumber":6332},{"id":6675,"randomNumber":2776},{"id":6687,"randomNumber":2416},{"id":6729,"randomNumber":4184},{"id":6736,"randomNumber":6220},{"id":6774,"randomNumber":1889},{"id":6833,"randomNumber":6896},{"id":6834,"randomNumber":8799},{"id":6841,"randomNumber":7934},{"id":6856,"randomNumber":4999},{"id":6862,"randomNumber":2423},{"id":6870,"randomNumber":3873},{"id":6873,"randomNumber":698},{"id":6901,"randomNumber":3579},{"id":6926,"randomNumber":6414},{"id":6948,"randomNumber":908},{"id":6949,"randomNumber":8777},{"id":6972,"randomNumber":6121},{"id":6985,"randomNumber":5159},{"id":6989,"randomNumber":8731},{"id":7027,"randomNumber":2399},{"id":7065,"randomNumber":6273},{"id":7098,"randomNumber":8431},{"id":7156,"randomNumber":3135},{"id":7165,"randomNumber":1081},{"id":7181,"randomNumber":3400},{"id":7210,"randomNumber":7251},{"id":7212,"randomNumber":3883},{"id":7217,"randomNumber":8167},{"id":7310,"randomNumber":3592},{"id":7336,"randomNumber":9435},{"id":7349,"randomNumber":8537},{"id":7387,"randomNumber":1226},{"id":7389,"randomNumber":4177},{"id":7390,"randomNumber":2724},{"id":7398,"randomNumber":2995},{"id":7419,"randomNumber":1841},{"id":7428,"randomNumber":9829},{"id":7443,"randomNumber":3210},{"id":7518,"randomNumber":9510},{"id":7557,"randomNumber":3240},{"id":7588,"randomNumber":3310},{"id":7590,"randomNumber":144},{"id":7594,"randomNumber":8304},{"id":7706,"randomNumber":8130},{"id":7744,"randomNumber":3622},{"id":7761,"randomNumber":4680},{"id":7767,"randomNumber":5152},{"id":7782,"randomNumber":5687},{"id":7794,"randomNumber":7753},{"id":7797,"randomNumber":2161},{"id":7802,"randomNumber":6468},{"id":7869,"randomNumber":6546},{"id":7883,"randomNumber":3354},{"id":7888,"randomNumber":5561},{"id":7898,"randomNumber":2406},{"id":7906,"randomNumber":9492},{"id":7916,"randomNumber":9481},{"id":7919,"randomNumber":2138},{"id":7933,"randomNumber":8546},{"id":7935,"randomNumber":9111},{"id":7954,"randomNumber":5893},{"id":7996,"randomNumber":3218},{"id":8008,"randomNumber":7658},{"id":8038,"randomNumber":5199},{"id":8054,"randomNumber":4222},{"id":8064,"randomNumber":3062},{"id":8094,"randomNumber":1186},{"id":8103,"randomNumber":5703},{"id":8118,"randomNumber":6612},{"id":8137,"randomNumber":1233},{"id":8203,"randomNumber":5809},{"id":8205,"randomNumber":5408},{"id":8237,"randomNumber":1921},{"id":8252,"randomNumber":9160},{"id":8260,"randomNumber":2521},{"id":8295,"randomNumber":1812},{"id":8298,"randomNumber":6453},{"id":8307,"randomNumber":1179},{"id":8404,"randomNumber":6840},{"id":8418,"randomNumber":4819},{"id":8436,"randomNumber":6055},{"id":8447,"randomNumber":3121},{"id":8511,"randomNumber":131},{"id":8524,"randomNumber":8674},{"id":8529,"randomNumber":9862},{"id":8543,"randomNumber":689},{"id":8556,"randomNumber":9145},{"id":8582,"randomNumber":8128},{"id":8604,"randomNumber":71},{"id":8633,"randomNumber":1022},{"id":8636,"randomNumber":1511},{"id":8657,"randomNumber":4445},{"id":8683,"randomNumber":2514},{"id":8687,"randomNumber":6065},{"id":8696,"randomNumber":7538},{"id":8714,"randomNumber":3705},{"id":8741,"randomNumber":7649},{"id":8759,"randomNumber":641},{"id":8762,"randomNumber":5755},{"id":8770,"randomNumber":6952},{"id":8808,"randomNumber":9507},{"id":8828,"randomNumber":6949},{"id":8859,"randomNumber":4836},{"id":8860,"randomNumber":6565},{"id":8863,"randomNumber":3664},{"id":8875,"randomNumber":283},{"id":8901,"randomNumber":5803},{"id":9011,"randomNumber":287},{"id":9040,"randomNumber":1742},{"id":9043,"randomNumber":3354},{"id":9046,"randomNumber":8541},{"id":9063,"randomNumber":2012},{"id":9068,"randomNumber":5215},{"id":9069,"randomNumber":4955},{"id":9125,"randomNumber":7155},{"id":9128,"randomNumber":1571},{"id":9144,"randomNumber":8207},{"id":9161,"randomNumber":4718},{"id":9186,"randomNumber":4288},{"id":9193,"randomNumber":8521},{"id":9215,"randomNumber":9689},{"id":9220,"randomNumber":3046},{"id":9241,"randomNumber":9103},{"id":9274,"randomNumber":5197},{"id":9294,"randomNumber":5516},{"id":9341,"randomNumber":5855},{"id":9346,"randomNumber":3598},{"id":9358,"randomNumber":1937},{"id":9405,"randomNumber":4356},{"id":9427,"randomNumber":4289},{"id":9437,"randomNumber":7976},{"id":9468,"randomNumber":4363},{"id":9469,"randomNumber":1682},{"id":9475,"randomNumber":2362},{"id":9501,"randomNumber":2411},{"id":9504,"randomNumber":1481},{"id":9506,"randomNumber":2133},{"id":9526,"randomNumber":812},{"id":9546,"randomNumber":797},{"id":9549,"randomNumber":1231},{"id":9561,"randomNumber":4571},{"id":9568,"randomNumber":1377},{"id":9587,"randomNumber":2303},{"id":9607,"randomNumber":7271},{"id":9615,"randomNumber":858},{"id":9668,"randomNumber":4438},{"id":9688,"randomNumber":8355},{"id":9703,"randomNumber":1101},{"id":9708,"randomNumber":6682},{"id":9736,"randomNumber":1141},{"id":9746,"randomNumber":2008},{"id":9766,"randomNumber":5683},{"id":9830,"randomNumber":8742},{"id":9844,"randomNumber":5627},{"id":9880,"randomNumber":4641},{"id":9891,"randomNumber":8093},{"id":9902,"randomNumber":5026},{"id":9926,"randomNumber":1305},{"id":9970,"randomNumber":2418},{"id":9995,"randomNumber":2942}]
+
+/db/501 - WARNING
+
+-----------------------------------------------------
+
+
+VALIDATING QUERY ... PASS (with warnings)
+
+
+-----------------------------------------------------
+  Benchmarking lift-stateless ...
+-----------------------------------------------------
+BENCHMARKING JSON ... Complete
+BENCHMARKING DB ... Complete
+BENCHMARKING Query ... Complete
+
+-----------------------------------------------------
+  Stopping lift-stateless
+-----------------------------------------------------
+Lift server stopped. (x_x)
+
+-----------------------------------------------------
+  Stopped lift-stateless
+-----------------------------------------------------
+
+----------------------------------------------------
+Saving results through lift-stateless
+----------------------------------------------------

@@ -1,0 +1,108 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer spark
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/spark/db?queries=2
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/spark/db?queries=2
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.93ms    1.41ms  24.09ms   97.05%
+    Req/Sec   582.07    119.28     1.00k    81.14%
+  21807 requests in 5.00s, 4.05MB read
+Requests/sec:   4361.49
+Transfer/sec:    828.67KB
+
+---------------------------------------------------------
+ Running Warmup spark
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/spark/db?queries=2
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/spark/db?queries=2
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    60.23ms   21.31ms 528.17ms   78.70%
+    Req/Sec     1.07k    69.76     1.24k    74.18%
+  63404 requests in 15.00s, 11.76MB read
+Requests/sec:   4227.79
+Transfer/sec:    803.24KB
+
+---------------------------------------------------------
+ Queries: 1 for spark
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/spark/db?queries=1
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/spark/db?queries=1
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    44.55ms   23.24ms 180.32ms   72.83%
+    Req/Sec     1.44k    60.04     1.65k    69.18%
+  85963 requests in 15.00s, 13.34MB read
+Requests/sec:   5730.18
+Transfer/sec:      0.89MB
+
+---------------------------------------------------------
+ Queries: 5 for spark
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/spark/db?queries=5
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/spark/db?queries=5
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   103.94ms   23.85ms 219.16ms   75.84%
+    Req/Sec   615.79     28.63   661.00     73.30%
+  36800 requests in 14.99s, 10.21MB read
+Requests/sec:   2455.11
+Transfer/sec:    697.37KB
+
+---------------------------------------------------------
+ Queries: 10 for spark
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/spark/db?queries=10
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/spark/db?queries=10
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   183.97ms   30.15ms 363.40ms   87.62%
+    Req/Sec   347.37     17.12   410.00     71.54%
+  20664 requests in 15.00s, 8.86MB read
+Requests/sec:   1377.28
+Transfer/sec:    604.88KB
+
+---------------------------------------------------------
+ Queries: 15 for spark
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/spark/db?queries=15
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/spark/db?queries=15
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   260.38ms   34.12ms 430.56ms   88.46%
+    Req/Sec   244.85      8.45   270.00     66.67%
+  14519 requests in 15.02s, 8.43MB read
+Requests/sec:    966.86
+Transfer/sec:    574.66KB
+
+---------------------------------------------------------
+ Queries: 20 for spark
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/spark/db?queries=20
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/spark/db?queries=20
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   346.99ms   52.96ms 629.33ms   85.16%
+    Req/Sec   185.26      9.09   204.00     65.71%
+  11032 requests in 15.01s, 8.07MB read
+Requests/sec:    735.21
+Transfer/sec:    551.02KB

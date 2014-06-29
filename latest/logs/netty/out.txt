@@ -1,0 +1,254 @@
+test.os.lower() = linux  test.database_os.lower() = linux
+self.results['frameworks'] != None: True
+test.name: netty
+self.results['completed']: {}
+
+=====================================================
+  Beginning netty
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Starting netty
+-----------------------------------------------------
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building netty-example 0.1
+[INFO] ------------------------------------------------------------------------
+Downloading: http://repo.maven.apache.org/maven2/javassist/javassist/maven-metadata.xml
+846/846 B               Downloaded: http://repo.maven.apache.org/maven2/javassist/javassist/maven-metadata.xml (846 B at 2.1 KB/sec)
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ netty-example ---
+[INFO] Deleting /home/ubuntu/FrameworkBenchmarks/netty/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.3:resources (default-resources) @ netty-example ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /home/ubuntu/FrameworkBenchmarks/netty/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.2:compile (default-compile) @ netty-example ---
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 4 source files to /home/ubuntu/FrameworkBenchmarks/netty/target/classes
+[INFO] 
+[INFO] --- maven-assembly-plugin:2.2-beta-5:single (default-cli) @ netty-example ---
+[INFO] META-INF/ already added, skipping
+[INFO] META-INF/MANIFEST.MF already added, skipping
+[INFO] io/ already added, skipping
+[INFO] io/netty/ already added, skipping
+[INFO] io/netty/handler/ already added, skipping
+[INFO] io/netty/handler/codec/ already added, skipping
+[INFO] META-INF/io.netty.versions.properties already added, skipping
+[INFO] META-INF/maven/ already added, skipping
+[INFO] META-INF/maven/io.netty/ already added, skipping
+[INFO] META-INF/INDEX.LIST already added, skipping
+[INFO] META-INF/ already added, skipping
+[INFO] META-INF/MANIFEST.MF already added, skipping
+[INFO] io/ already added, skipping
+[INFO] io/netty/ already added, skipping
+[INFO] META-INF/io.netty.versions.properties already added, skipping
+[INFO] META-INF/maven/ already added, skipping
+[INFO] META-INF/maven/io.netty/ already added, skipping
+[INFO] META-INF/INDEX.LIST already added, skipping
+[INFO] META-INF/ already added, skipping
+[INFO] META-INF/MANIFEST.MF already added, skipping
+[INFO] io/ already added, skipping
+[INFO] io/netty/ already added, skipping
+[INFO] META-INF/io.netty.versions.properties already added, skipping
+[INFO] META-INF/maven/ already added, skipping
+[INFO] META-INF/maven/io.netty/ already added, skipping
+[INFO] META-INF/INDEX.LIST already added, skipping
+[INFO] META-INF/ already added, skipping
+[INFO] META-INF/MANIFEST.MF already added, skipping
+[INFO] io/ already added, skipping
+[INFO] io/netty/ already added, skipping
+[INFO] META-INF/io.netty.versions.properties already added, skipping
+[INFO] META-INF/maven/ already added, skipping
+[INFO] META-INF/maven/io.netty/ already added, skipping
+[INFO] META-INF/INDEX.LIST already added, skipping
+[INFO] META-INF/ already added, skipping
+[INFO] META-INF/MANIFEST.MF already added, skipping
+[INFO] io/ already added, skipping
+[INFO] io/netty/ already added, skipping
+[INFO] io/netty/handler/ already added, skipping
+[INFO] META-INF/io.netty.versions.properties already added, skipping
+[INFO] META-INF/maven/ already added, skipping
+[INFO] META-INF/maven/io.netty/ already added, skipping
+[INFO] META-INF/INDEX.LIST already added, skipping
+[INFO] META-INF/ already added, skipping
+[INFO] META-INF/MANIFEST.MF already added, skipping
+[INFO] io/ already added, skipping
+[INFO] io/netty/ already added, skipping
+[INFO] io/netty/channel/ already added, skipping
+[INFO] META-INF/io.netty.versions.properties already added, skipping
+[INFO] META-INF/maven/ already added, skipping
+[INFO] META-INF/maven/io.netty/ already added, skipping
+[INFO] META-INF/INDEX.LIST already added, skipping
+[INFO] META-INF/MANIFEST.MF already added, skipping
+[INFO] META-INF/ already added, skipping
+[INFO] META-INF/maven/ already added, skipping
+[INFO] META-INF/MANIFEST.MF already added, skipping
+[INFO] META-INF/ already added, skipping
+[INFO] META-INF/LICENSE already added, skipping
+[INFO] META-INF/maven/ already added, skipping
+[INFO] META-INF/maven/com.fasterxml.jackson.core/ already added, skipping
+[INFO] com/ already added, skipping
+[INFO] com/fasterxml/ already added, skipping
+[INFO] com/fasterxml/jackson/ already added, skipping
+[INFO] META-INF/MANIFEST.MF already added, skipping
+[INFO] META-INF/ already added, skipping
+[INFO] META-INF/LICENSE already added, skipping
+[INFO] META-INF/NOTICE already added, skipping
+[INFO] META-INF/maven/ already added, skipping
+[INFO] META-INF/maven/com.fasterxml.jackson.core/ already added, skipping
+[INFO] META-INF/services/ already added, skipping
+[INFO] com/ already added, skipping
+[INFO] com/fasterxml/ already added, skipping
+[INFO] com/fasterxml/jackson/ already added, skipping
+[INFO] META-INF/ already added, skipping
+[INFO] META-INF/MANIFEST.MF already added, skipping
+[INFO] META-INF/LICENSE already added, skipping
+[INFO] META-INF/maven/ already added, skipping
+[INFO] META-INF/services/ already added, skipping
+[INFO] com/ already added, skipping
+[INFO] com/fasterxml/ already added, skipping
+[INFO] com/fasterxml/jackson/ already added, skipping
+[INFO] META-INF/ already added, skipping
+[INFO] META-INF/MANIFEST.MF already added, skipping
+[INFO] META-INF/maven/ already added, skipping
+[INFO] Building jar: /home/ubuntu/FrameworkBenchmarks/netty/target/netty-example-0.1-jar-with-dependencies.jar
+[INFO] META-INF/ already added, skipping
+[INFO] META-INF/MANIFEST.MF already added, skipping
+[INFO] io/ already added, skipping
+[INFO] io/netty/ already added, skipping
+[INFO] io/netty/handler/ already added, skipping
+[INFO] io/netty/handler/codec/ already added, skipping
+[INFO] META-INF/io.netty.versions.properties already added, skipping
+[INFO] META-INF/maven/ already added, skipping
+[INFO] META-INF/maven/io.netty/ already added, skipping
+[INFO] META-INF/INDEX.LIST already added, skipping
+[INFO] META-INF/ already added, skipping
+[INFO] META-INF/MANIFEST.MF already added, skipping
+[INFO] io/ already added, skipping
+[INFO] io/netty/ already added, skipping
+[INFO] META-INF/io.netty.versions.properties already added, skipping
+[INFO] META-INF/maven/ already added, skipping
+[INFO] META-INF/maven/io.netty/ already added, skipping
+[INFO] META-INF/INDEX.LIST already added, skipping
+[INFO] META-INF/ already added, skipping
+[INFO] META-INF/MANIFEST.MF already added, skipping
+[INFO] io/ already added, skipping
+[INFO] io/netty/ already added, skipping
+[INFO] META-INF/io.netty.versions.properties already added, skipping
+[INFO] META-INF/maven/ already added, skipping
+[INFO] META-INF/maven/io.netty/ already added, skipping
+[INFO] META-INF/INDEX.LIST already added, skipping
+[INFO] META-INF/ already added, skipping
+[INFO] META-INF/MANIFEST.MF already added, skipping
+[INFO] io/ already added, skipping
+[INFO] io/netty/ already added, skipping
+[INFO] META-INF/io.netty.versions.properties already added, skipping
+[INFO] META-INF/maven/ already added, skipping
+[INFO] META-INF/maven/io.netty/ already added, skipping
+[INFO] META-INF/INDEX.LIST already added, skipping
+[INFO] META-INF/ already added, skipping
+[INFO] META-INF/MANIFEST.MF already added, skipping
+[INFO] io/ already added, skipping
+[INFO] io/netty/ already added, skipping
+[INFO] io/netty/handler/ already added, skipping
+[INFO] META-INF/io.netty.versions.properties already added, skipping
+[INFO] META-INF/maven/ already added, skipping
+[INFO] META-INF/maven/io.netty/ already added, skipping
+[INFO] META-INF/INDEX.LIST already added, skipping
+[INFO] META-INF/ already added, skipping
+[INFO] META-INF/MANIFEST.MF already added, skipping
+[INFO] io/ already added, skipping
+[INFO] io/netty/ already added, skipping
+[INFO] io/netty/channel/ already added, skipping
+[INFO] META-INF/io.netty.versions.properties already added, skipping
+[INFO] META-INF/maven/ already added, skipping
+[INFO] META-INF/maven/io.netty/ already added, skipping
+[INFO] META-INF/INDEX.LIST already added, skipping
+[INFO] META-INF/MANIFEST.MF already added, skipping
+[INFO] META-INF/ already added, skipping
+[INFO] META-INF/maven/ already added, skipping
+[INFO] META-INF/MANIFEST.MF already added, skipping
+[INFO] META-INF/ already added, skipping
+[INFO] META-INF/LICENSE already added, skipping
+[INFO] META-INF/maven/ already added, skipping
+[INFO] META-INF/maven/com.fasterxml.jackson.core/ already added, skipping
+[INFO] com/ already added, skipping
+[INFO] com/fasterxml/ already added, skipping
+[INFO] com/fasterxml/jackson/ already added, skipping
+[INFO] META-INF/MANIFEST.MF already added, skipping
+[INFO] META-INF/ already added, skipping
+[INFO] META-INF/LICENSE already added, skipping
+[INFO] META-INF/NOTICE already added, skipping
+[INFO] META-INF/maven/ already added, skipping
+[INFO] META-INF/maven/com.fasterxml.jackson.core/ already added, skipping
+[INFO] META-INF/services/ already added, skipping
+[INFO] com/ already added, skipping
+[INFO] com/fasterxml/ already added, skipping
+[INFO] com/fasterxml/jackson/ already added, skipping
+[INFO] META-INF/ already added, skipping
+[INFO] META-INF/MANIFEST.MF already added, skipping
+[INFO] META-INF/LICENSE already added, skipping
+[INFO] META-INF/maven/ already added, skipping
+[INFO] META-INF/services/ already added, skipping
+[INFO] com/ already added, skipping
+[INFO] com/fasterxml/ already added, skipping
+[INFO] com/fasterxml/jackson/ already added, skipping
+[INFO] META-INF/ already added, skipping
+[INFO] META-INF/MANIFEST.MF already added, skipping
+[INFO] META-INF/maven/ already added, skipping
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 4.708s
+[INFO] Finished at: Sun Jun 29 00:02:41 UTC 2014
+[INFO] Final Memory: 16M/330M
+[INFO] ------------------------------------------------------------------------
+
+-----------------------------------------------------
+  VERIFYING JSON (/json)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=UTF-8
+Server: Netty
+Date: Sun, 29 Jun 2014 00:02:51 UTC
+Content-Length: 27
+
+{"message":"Hello, World!"}
+
+VALIDATING JSON ... PASS
+
+
+-----------------------------------------------------
+  VERIFYING PLAINTEXT (/plaintext)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Content-Type: text/plain; charset=UTF-8
+Server: Netty
+Date: Sun, 29 Jun 2014 00:02:51 UTC
+Content-Length: 13
+
+Hello, World!
+
+VALIDATING PLAINTEXT ... PASS
+
+
+-----------------------------------------------------
+  Benchmarking netty ...
+-----------------------------------------------------
+BENCHMARKING JSON ... Complete
+BENCHMARKING Plaintext ... Complete
+
+-----------------------------------------------------
+  Stopping netty
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Stopped netty
+-----------------------------------------------------
+
+----------------------------------------------------
+Saving results through netty
+----------------------------------------------------

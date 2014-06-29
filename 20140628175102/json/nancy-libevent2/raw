@@ -1,0 +1,122 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer nancy-libevent2
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/json
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/json
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.60ms  849.40us   6.85ms   73.76%
+    Req/Sec   670.18    147.23     1.11k    70.27%
+  25318 requests in 4.99s, 4.80MB read
+Requests/sec:   5073.64
+Transfer/sec:      0.96MB
+
+---------------------------------------------------------
+ Running Warmup nancy-libevent2
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/json
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    41.80ms   31.88ms 159.05ms   66.02%
+    Req/Sec     1.55k    92.85     1.78k    70.35%
+  92388 requests in 15.00s, 17.53MB read
+Requests/sec:   6159.70
+Transfer/sec:      1.17MB
+
+---------------------------------------------------------
+ Concurrency: 8 for nancy-libevent2
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.58ms  832.68us   6.89ms   74.77%
+    Req/Sec     1.34k   201.47     2.11k    64.79%
+  76298 requests in 15.00s, 14.48MB read
+Requests/sec:   5086.79
+Transfer/sec:      0.97MB
+
+---------------------------------------------------------
+ Concurrency: 16 for nancy-libevent2
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     2.98ms    1.86ms  13.73ms   70.75%
+    Req/Sec     1.43k   250.97     2.44k    72.69%
+  81496 requests in 15.00s, 15.46MB read
+Requests/sec:   5433.24
+Transfer/sec:      1.03MB
+
+---------------------------------------------------------
+ Concurrency: 32 for nancy-libevent2
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     5.69ms    3.85ms  27.50ms   68.22%
+    Req/Sec     1.46k   184.18     2.10k    68.34%
+  85439 requests in 15.00s, 16.21MB read
+Requests/sec:   5697.40
+Transfer/sec:      1.08MB
+
+---------------------------------------------------------
+ Concurrency: 64 for nancy-libevent2
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    11.11ms    9.73ms 113.16ms   82.08%
+    Req/Sec     1.48k   157.70     1.96k    79.62%
+  88007 requests in 15.00s, 16.70MB read
+Requests/sec:   5866.90
+Transfer/sec:      1.11MB
+
+---------------------------------------------------------
+ Concurrency: 128 for nancy-libevent2
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    21.19ms   16.17ms  90.11ms   67.52%
+    Req/Sec     1.52k   105.76     1.93k    69.24%
+  90871 requests in 15.00s, 17.24MB read
+Requests/sec:   6057.20
+Transfer/sec:      1.15MB
+
+---------------------------------------------------------
+ Concurrency: 256 for nancy-libevent2
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    40.78ms   32.59ms 207.34ms   67.97%
+    Req/Sec     1.56k   100.78     1.81k    69.77%
+  93341 requests in 15.00s, 17.71MB read
+Requests/sec:   6222.98
+Transfer/sec:      1.18MB

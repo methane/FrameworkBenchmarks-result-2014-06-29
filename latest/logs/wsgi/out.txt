@@ -1,0 +1,12 @@
+test.os.lower() = linux  test.database_os.lower() = linux
+self.results['frameworks'] != None: True
+test.name: wsgi
+self.results['completed']: {}
+
+=====================================================
+  Beginning wsgi
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Starting wsgi
+-----------------------------------------------------

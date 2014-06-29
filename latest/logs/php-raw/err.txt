@@ -1,0 +1,71 @@
+restart: Unknown instance: 
+2014/06/29 00:56:32 [error] 18018#0: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] No such file or directory' in /home/ubuntu/FrameworkBenchmarks/php/dbraw.php:10
+Stack trace:
+#0 /home/ubuntu/FrameworkBenchmarks/php/dbraw.php(10): PDO->__construct('mysql:host=loca...', 'benchmarkdbuser', 'benchmarkdbpass', Array)
+#1 {main}
+  thrown in /home/ubuntu/FrameworkBenchmarks/php/dbraw.php on line 10" while reading response header from upstream, client: 127.0.0.1, server: localhost, request: "GET /dbraw.php HTTP/1.1", upstream: "fastcgi://127.0.0.1:9001", host: "127.0.0.1:8080"
+2014/06/29 00:56:32 [error] 18018#0: *3 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] No such file or directory' in /home/ubuntu/FrameworkBenchmarks/php/dbraw.php:10
+Stack trace:
+#0 /home/ubuntu/FrameworkBenchmarks/php/dbraw.php(10): PDO->__construct('mysql:host=loca...', 'benchmarkdbuser', 'benchmarkdbpass', Array)
+#1 {main}
+  thrown in /home/ubuntu/FrameworkBenchmarks/php/dbraw.php on line 10" while reading response header from upstream, client: 127.0.0.1, server: localhost, request: "GET /dbraw.php HTTP/1.1", upstream: "fastcgi://127.0.0.1:9001", host: "127.0.0.1:8080"
+2014/06/29 00:56:32 [error] 18018#0: *4 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] No such file or directory' in /home/ubuntu/FrameworkBenchmarks/php/dbraw.php:10
+Stack trace:
+#0 /home/ubuntu/FrameworkBenchmarks/php/dbraw.php(10): PDO->__construct('mysql:host=loca...', 'benchmarkdbuser', 'benchmarkdbpass', Array)
+#1 {main}
+  thrown in /home/ubuntu/FrameworkBenchmarks/php/dbraw.php on line 10" while reading response header from upstream, client: 127.0.0.1, server: localhost, request: "GET /dbraw.php?queries=2 HTTP/1.1", upstream: "fastcgi://127.0.0.1:9001", host: "127.0.0.1:8080"
+2014/06/29 00:56:32 [error] 18018#0: *5 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] No such file or directory' in /home/ubuntu/FrameworkBenchmarks/php/dbraw.php:10
+Stack trace:
+#0 /home/ubuntu/FrameworkBenchmarks/php/dbraw.php(10): PDO->__construct('mysql:host=loca...', 'benchmarkdbuser', 'benchmarkdbpass', Array)
+#1 {main}
+  thrown in /home/ubuntu/FrameworkBenchmarks/php/dbraw.php on line 10" while reading response header from upstream, client: 127.0.0.1, server: localhost, request: "GET /dbraw.php?queries=2 HTTP/1.1", upstream: "fastcgi://127.0.0.1:9001", host: "127.0.0.1:8080"
+2014/06/29 00:56:32 [error] 18018#0: *6 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] No such file or directory' in /home/ubuntu/FrameworkBenchmarks/php/dbraw.php:10
+Stack trace:
+#0 /home/ubuntu/FrameworkBenchmarks/php/dbraw.php(10): PDO->__construct('mysql:host=loca...', 'benchmarkdbuser', 'benchmarkdbpass', Array)
+#1 {main}
+  thrown in /home/ubuntu/FrameworkBenchmarks/php/dbraw.php on line 10" while reading response header from upstream, client: 127.0.0.1, server: localhost, request: "GET /dbraw.php?queries=0 HTTP/1.1", upstream: "fastcgi://127.0.0.1:9001", host: "127.0.0.1:8080"
+2014/06/29 00:56:32 [error] 18018#0: *7 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] No such file or directory' in /home/ubuntu/FrameworkBenchmarks/php/dbraw.php:10
+Stack trace:
+#0 /home/ubuntu/FrameworkBenchmarks/php/dbraw.php(10): PDO->__construct('mysql:host=loca...', 'benchmarkdbuser', 'benchmarkdbpass', Array)
+#1 {main}
+  thrown in /home/ubuntu/FrameworkBenchmarks/php/dbraw.php on line 10" while reading response header from upstream, client: 127.0.0.1, server: localhost, request: "GET /dbraw.php?queries=0 HTTP/1.1", upstream: "fastcgi://127.0.0.1:9001", host: "127.0.0.1:8080"
+2014/06/29 00:56:32 [error] 18018#0: *8 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] No such file or directory' in /home/ubuntu/FrameworkBenchmarks/php/dbraw.php:10
+Stack trace:
+#0 /home/ubuntu/FrameworkBenchmarks/php/dbraw.php(10): PDO->__construct('mysql:host=loca...', 'benchmarkdbuser', 'benchmarkdbpass', Array)
+#1 {main}
+  thrown in /home/ubuntu/FrameworkBenchmarks/php/dbraw.php on line 10" while reading response header from upstream, client: 127.0.0.1, server: localhost, request: "GET /dbraw.php?queries=foo HTTP/1.1", upstream: "fastcgi://127.0.0.1:9001", host: "127.0.0.1:8080"
+2014/06/29 00:56:32 [error] 18018#0: *9 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] No such file or directory' in /home/ubuntu/FrameworkBenchmarks/php/dbraw.php:10
+Stack trace:
+#0 /home/ubuntu/FrameworkBenchmarks/php/dbraw.php(10): PDO->__construct('mysql:host=loca...', 'benchmarkdbuser', 'benchmarkdbpass', Array)
+#1 {main}
+  thrown in /home/ubuntu/FrameworkBenchmarks/php/dbraw.php on line 10" while reading response header from upstream, client: 127.0.0.1, server: localhost, request: "GET /dbraw.php?queries=foo HTTP/1.1", upstream: "fastcgi://127.0.0.1:9001", host: "127.0.0.1:8080"
+2014/06/29 00:56:32 [error] 18018#0: *10 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] No such file or directory' in /home/ubuntu/FrameworkBenchmarks/php/dbraw.php:10
+Stack trace:
+#0 /home/ubuntu/FrameworkBenchmarks/php/dbraw.php(10): PDO->__construct('mysql:host=loca...', 'benchmarkdbuser', 'benchmarkdbpass', Array)
+#1 {main}
+  thrown in /home/ubuntu/FrameworkBenchmarks/php/dbraw.php on line 10" while reading response header from upstream, client: 127.0.0.1, server: localhost, request: "GET /dbraw.php?queries=501 HTTP/1.1", upstream: "fastcgi://127.0.0.1:9001", host: "127.0.0.1:8080"
+2014/06/29 00:56:32 [error] 18018#0: *11 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] No such file or directory' in /home/ubuntu/FrameworkBenchmarks/php/dbraw.php:10
+Stack trace:
+#0 /home/ubuntu/FrameworkBenchmarks/php/dbraw.php(10): PDO->__construct('mysql:host=loca...', 'benchmarkdbuser', 'benchmarkdbpass', Array)
+#1 {main}
+  thrown in /home/ubuntu/FrameworkBenchmarks/php/dbraw.php on line 10" while reading response header from upstream, client: 127.0.0.1, server: localhost, request: "GET /dbraw.php?queries=501 HTTP/1.1", upstream: "fastcgi://127.0.0.1:9001", host: "127.0.0.1:8080"
+2014/06/29 00:56:32 [error] 18018#0: *12 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] No such file or directory' in /home/ubuntu/FrameworkBenchmarks/php/fortune.php:10
+Stack trace:
+#0 /home/ubuntu/FrameworkBenchmarks/php/fortune.php(10): PDO->__construct('mysql:host=loca...', 'benchmarkdbuser', 'benchmarkdbpass', Array)
+#1 {main}
+  thrown in /home/ubuntu/FrameworkBenchmarks/php/fortune.php on line 10" while reading response header from upstream, client: 127.0.0.1, server: localhost, request: "GET /fortune.php HTTP/1.1", upstream: "fastcgi://127.0.0.1:9001", host: "127.0.0.1:8080"
+2014/06/29 00:56:32 [error] 18018#0: *13 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] No such file or directory' in /home/ubuntu/FrameworkBenchmarks/php/fortune.php:10
+Stack trace:
+#0 /home/ubuntu/FrameworkBenchmarks/php/fortune.php(10): PDO->__construct('mysql:host=loca...', 'benchmarkdbuser', 'benchmarkdbpass', Array)
+#1 {main}
+  thrown in /home/ubuntu/FrameworkBenchmarks/php/fortune.php on line 10" while reading response header from upstream, client: 127.0.0.1, server: localhost, request: "GET /fortune.php HTTP/1.1", upstream: "fastcgi://127.0.0.1:9001", host: "127.0.0.1:8080"
+2014/06/29 00:56:32 [error] 18018#0: *14 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] No such file or directory' in /home/ubuntu/FrameworkBenchmarks/php/updateraw.php:10
+Stack trace:
+#0 /home/ubuntu/FrameworkBenchmarks/php/updateraw.php(10): PDO->__construct('mysql:host=loca...', 'benchmarkdbuser', 'benchmarkdbpass', Array)
+#1 {main}
+  thrown in /home/ubuntu/FrameworkBenchmarks/php/updateraw.php on line 10" while reading response header from upstream, client: 127.0.0.1, server: localhost, request: "GET /updateraw.php?queries=2 HTTP/1.1", upstream: "fastcgi://127.0.0.1:9001", host: "127.0.0.1:8080"
+2014/06/29 00:56:32 [error] 18018#0: *15 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] No such file or directory' in /home/ubuntu/FrameworkBenchmarks/php/updateraw.php:10
+Stack trace:
+#0 /home/ubuntu/FrameworkBenchmarks/php/updateraw.php(10): PDO->__construct('mysql:host=loca...', 'benchmarkdbuser', 'benchmarkdbpass', Array)
+#1 {main}
+  thrown in /home/ubuntu/FrameworkBenchmarks/php/updateraw.php on line 10" while reading response header from upstream, client: 127.0.0.1, server: localhost, request: "GET /updateraw.php?queries=2 HTTP/1.1", upstream: "fastcgi://127.0.0.1:9001", host: "127.0.0.1:8080"

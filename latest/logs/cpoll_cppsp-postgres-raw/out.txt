@@ -1,0 +1,153 @@
+test.os.lower() = linux  test.database_os.lower() = linux
+self.results['frameworks'] != None: True
+test.name: cpoll_cppsp-postgres-raw
+self.results['completed']: {}
+
+=====================================================
+  Beginning cpoll_cppsp-postgres-raw
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Starting cpoll_cppsp-postgres-raw
+-----------------------------------------------------
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+mysql start/running, process 15011
+ * Restarting PostgreSQL 9.3 database server
+   ...done.
+rm -rf cppsp_rel0.2.3 cppsp_0.2
+rm -f www/*.so www/*.txt
+tar xf cppsp_0.2.3.tar.xz
+ln -s cppsp_rel0.2.3 cppsp_0.2
+make CXX=g++-4.8 -C cppsp_0.2 all
+make[1]: Entering directory `/home/ubuntu/FrameworkBenchmarks/cpoll_cppsp/cppsp_rel0.2.3'
+g++-4.8 cppsp_server/cppsp_standalone.C cpoll/all.C cppsp/all.C -o cppsp_standalone -lpthread -ldl -lrt -Ofast -march=native -flto -Wall --std=c++0x -Wno-pmf-conversions -I./include
+g++-4.8 cpoll/all.C -c -o cpoll.o -Ofast -march=native -flto -Wall --std=c++0x -Wno-pmf-conversions -I./include -fPIC
+g++-4.8 cppsp/all.C -c -o cppsp.o -Ofast -march=native -flto -Wall --std=c++0x -Wno-pmf-conversions -I./include -fPIC
+g++-4.8 socketd/all.C cpoll/all.C -o socketd_bin -lpthread -ldl -lrt -Ofast -march=native -flto -Wall --std=c++0x -Wno-pmf-conversions -I./include 
+g++-4.8 cppsp_server/socketd_cppsp.C cpoll/all.C cppsp/all.C -o socketd_cppsp -lpthread -ldl -lrt -Ofast -march=native -flto -Wall --std=c++0x -Wno-pmf-conversions -I./include
+g++-4.8 socketd_proxy.C cpoll/all.C -o socketd_proxy.so -ldl -lpthread --std=c++0x --shared -fPIC -Ofast -march=native -flto -Wall --std=c++0x -Wno-pmf-conversions -I./include 
+make[1]: Leaving directory `/home/ubuntu/FrameworkBenchmarks/cpoll_cppsp/cppsp_rel0.2.3'
+
+-----------------------------------------------------
+  VERIFYING DB (/db_pg_async)
+-----------------------------------------------------
+HTTP/1.1 500 Internal server error
+Date: Sat, 28 Jun 2014 19:42:34 GMT
+Connection: keep-alive
+Content-Type: text/html; charset=UTF-8
+Content-Length: 1022
+
+<html><head><title>Server error in /home/ubuntu/FrameworkBenchmarks/cpoll_cppsp/www/db_pg_async</title><style></style></head><body><h1 style="color: #aa1111">Server error in /home/ubuntu/FrameworkBenchmarks/cpoll_cppsp/www/db_pg_async</h1><hr /><h2 style="color: #444">Compilation error</h2><pre style="color: #000; background: #ffc; padding: 8px;">g++-4.8 --std=c++0x --shared -o /home/ubuntu/FrameworkBenchmarks/cpoll_cppsp/www/db_pg_async.1634105674.dll /home/ubuntu/FrameworkBenchmarks/cpoll_cppsp/www/db_pg_async.1634105674.C -fPIC -I/home/ubuntu/FrameworkBenchmarks/cpoll_cppsp/cppsp_0.2/include -pthread -Ofast -march=native /home/ubuntu/FrameworkBenchmarks/cpoll_cppsp/cppsp_0.2/cpoll.o /home/ubuntu/FrameworkBenchmarks/cpoll_cppsp/cppsp_0.2/cppsp.o -lpq -I/usr/include/postgresql 
+/home/ubuntu/FrameworkBenchmarks/cpoll_cppsp/www/db_pg_async.1634105674.C:3:22: fatal error: postgres.h: No such file or directory
+ #include &lt;cppsp/common.H&gt;
+                      ^
+compilation terminated.
+</pre></body></html>
+
+VALIDATING DB ... FAIL
+
+
+-----------------------------------------------------
+  VERIFYING QUERY (/db_pg_async?queries=2)
+-----------------------------------------------------
+HTTP/1.1 500 Internal server error
+Date: Sat, 28 Jun 2014 19:42:34 GMT
+Connection: keep-alive
+Content-Type: text/html; charset=UTF-8
+Content-Length: 1019
+
+<html><head><title>Server error in /home/ubuntu/FrameworkBenchmarks/cpoll_cppsp/www/db_pg_async</title><style></style></head><body><h1 style="color: #aa1111">Server error in /home/ubuntu/FrameworkBenchmarks/cpoll_cppsp/www/db_pg_async</h1><hr /><h2 style="color: #444">Compilation error</h2><pre style="color: #000; background: #ffc; padding: 8px;">g++-4.8 --std=c++0x --shared -o /home/ubuntu/FrameworkBenchmarks/cpoll_cppsp/www/db_pg_async.749313402.dll /home/ubuntu/FrameworkBenchmarks/cpoll_cppsp/www/db_pg_async.749313402.C -fPIC -I/home/ubuntu/FrameworkBenchmarks/cpoll_cppsp/cppsp_0.2/include -pthread -Ofast -march=native /home/ubuntu/FrameworkBenchmarks/cpoll_cppsp/cppsp_0.2/cpoll.o /home/ubuntu/FrameworkBenchmarks/cpoll_cppsp/cppsp_0.2/cppsp.o -lpq -I/usr/include/postgresql 
+/home/ubuntu/FrameworkBenchmarks/cpoll_cppsp/www/db_pg_async.749313402.C:3:22: fatal error: postgres.h: No such file or directory
+ #include &lt;cppsp/common.H&gt;
+                      ^
+compilation terminated.
+</pre></body></html>
+
+/db_pg_async?queries=2 - FAIL
+
+-----------------------------------------------------
+
+HTTP/1.1 500 Internal server error
+Date: Sat, 28 Jun 2014 19:42:34 GMT
+Connection: keep-alive
+Content-Type: text/html; charset=UTF-8
+Content-Length: 1022
+
+<html><head><title>Server error in /home/ubuntu/FrameworkBenchmarks/cpoll_cppsp/www/db_pg_async</title><style></style></head><body><h1 style="color: #aa1111">Server error in /home/ubuntu/FrameworkBenchmarks/cpoll_cppsp/www/db_pg_async</h1><hr /><h2 style="color: #444">Compilation error</h2><pre style="color: #000; background: #ffc; padding: 8px;">g++-4.8 --std=c++0x --shared -o /home/ubuntu/FrameworkBenchmarks/cpoll_cppsp/www/db_pg_async.2064275528.dll /home/ubuntu/FrameworkBenchmarks/cpoll_cppsp/www/db_pg_async.2064275528.C -fPIC -I/home/ubuntu/FrameworkBenchmarks/cpoll_cppsp/cppsp_0.2/include -pthread -Ofast -march=native /home/ubuntu/FrameworkBenchmarks/cpoll_cppsp/cppsp_0.2/cpoll.o /home/ubuntu/FrameworkBenchmarks/cpoll_cppsp/cppsp_0.2/cppsp.o -lpq -I/usr/include/postgresql 
+/home/ubuntu/FrameworkBenchmarks/cpoll_cppsp/www/db_pg_async.2064275528.C:3:22: fatal error: postgres.h: No such file or directory
+ #include &lt;cppsp/common.H&gt;
+                      ^
+compilation terminated.
+</pre></body></html>
+
+/db_pg_async?queries=0 - WARNING
+
+-----------------------------------------------------
+
+HTTP/1.1 500 Internal server error
+Date: Sat, 28 Jun 2014 19:42:34 GMT
+Connection: keep-alive
+Content-Type: text/html; charset=UTF-8
+Content-Length: 1022
+
+<html><head><title>Server error in /home/ubuntu/FrameworkBenchmarks/cpoll_cppsp/www/db_pg_async</title><style></style></head><body><h1 style="color: #aa1111">Server error in /home/ubuntu/FrameworkBenchmarks/cpoll_cppsp/www/db_pg_async</h1><hr /><h2 style="color: #444">Compilation error</h2><pre style="color: #000; background: #ffc; padding: 8px;">g++-4.8 --std=c++0x --shared -o /home/ubuntu/FrameworkBenchmarks/cpoll_cppsp/www/db_pg_async.1939168370.dll /home/ubuntu/FrameworkBenchmarks/cpoll_cppsp/www/db_pg_async.1939168370.C -fPIC -I/home/ubuntu/FrameworkBenchmarks/cpoll_cppsp/cppsp_0.2/include -pthread -Ofast -march=native /home/ubuntu/FrameworkBenchmarks/cpoll_cppsp/cppsp_0.2/cpoll.o /home/ubuntu/FrameworkBenchmarks/cpoll_cppsp/cppsp_0.2/cppsp.o -lpq -I/usr/include/postgresql 
+/home/ubuntu/FrameworkBenchmarks/cpoll_cppsp/www/db_pg_async.1939168370.C:3:22: fatal error: postgres.h: No such file or directory
+ #include &lt;cppsp/common.H&gt;
+                      ^
+compilation terminated.
+</pre></body></html>
+
+/db_pg_async?queries=foo - WARNING
+
+-----------------------------------------------------
+
+HTTP/1.1 500 Internal server error
+Date: Sat, 28 Jun 2014 19:42:36 GMT
+Connection: keep-alive
+Content-Type: text/html; charset=UTF-8
+Content-Length: 1022
+
+<html><head><title>Server error in /home/ubuntu/FrameworkBenchmarks/cpoll_cppsp/www/db_pg_async</title><style></style></head><body><h1 style="color: #aa1111">Server error in /home/ubuntu/FrameworkBenchmarks/cpoll_cppsp/www/db_pg_async</h1><hr /><h2 style="color: #444">Compilation error</h2><pre style="color: #000; background: #ffc; padding: 8px;">g++-4.8 --std=c++0x --shared -o /home/ubuntu/FrameworkBenchmarks/cpoll_cppsp/www/db_pg_async.1261260339.dll /home/ubuntu/FrameworkBenchmarks/cpoll_cppsp/www/db_pg_async.1261260339.C -fPIC -I/home/ubuntu/FrameworkBenchmarks/cpoll_cppsp/cppsp_0.2/include -pthread -Ofast -march=native /home/ubuntu/FrameworkBenchmarks/cpoll_cppsp/cppsp_0.2/cpoll.o /home/ubuntu/FrameworkBenchmarks/cpoll_cppsp/cppsp_0.2/cppsp.o -lpq -I/usr/include/postgresql 
+/home/ubuntu/FrameworkBenchmarks/cpoll_cppsp/www/db_pg_async.1261260339.C:3:22: fatal error: postgres.h: No such file or directory
+ #include &lt;cppsp/common.H&gt;
+                      ^
+compilation terminated.
+</pre></body></html>
+
+/db_pg_async?queries=501 - WARNING
+
+-----------------------------------------------------
+
+
+VALIDATING QUERY ... FAIL
+
+
+-----------------------------------------------------
+  Benchmarking cpoll_cppsp-postgres-raw ...
+-----------------------------------------------------
+BENCHMARKING DB ... Complete
+BENCHMARKING Query ... Complete
+
+-----------------------------------------------------
+  Stopping cpoll_cppsp-postgres-raw
+-----------------------------------------------------
+sizeof(CP::Socket) = 352
+sizeof(cppspServer::handler) = 1408
+sizeof(handler1) = 1792
+
+-----------------------------------------------------
+  Stopped cpoll_cppsp-postgres-raw
+-----------------------------------------------------
+
+----------------------------------------------------
+Saving results through cpoll_cppsp-postgres-raw
+----------------------------------------------------

@@ -1,0 +1,125 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+0 packages can be updated.
+0 updates are security updates.
+
+
+
+---------------------------------------------------------
+ Running Primer uwsgi
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/json
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/json
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   742.10us  560.68us  12.90ms   91.61%
+    Req/Sec     1.44k   383.50     2.67k    69.23%
+  54649 requests in 5.00s, 6.36MB read
+Requests/sec:  10933.91
+Transfer/sec:      1.27MB
+
+---------------------------------------------------------
+ Running Warmup uwsgi
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/json
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    21.68ms    2.65ms  54.28ms   79.94%
+    Req/Sec     2.99k   183.25     4.00k    78.41%
+  177113 requests in 15.00s, 20.61MB read
+Requests/sec:  11807.54
+Transfer/sec:      1.37MB
+
+---------------------------------------------------------
+ Concurrency: 8 for uwsgi
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   729.45us  641.82us  21.36ms   94.28%
+    Req/Sec     2.92k   475.62     4.89k    70.83%
+  166365 requests in 15.00s, 19.36MB read
+Requests/sec:  11091.33
+Transfer/sec:      1.29MB
+
+---------------------------------------------------------
+ Concurrency: 16 for uwsgi
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.35ms    1.00ms  21.61ms   92.15%
+    Req/Sec     3.09k   508.89     5.55k    69.15%
+  175744 requests in 15.00s, 20.45MB read
+Requests/sec:  11716.66
+Transfer/sec:      1.36MB
+
+---------------------------------------------------------
+ Concurrency: 32 for uwsgi
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     2.78ms    1.09ms  34.91ms   87.62%
+    Req/Sec     3.04k   347.35     5.80k    80.48%
+  172932 requests in 14.99s, 20.12MB read
+Requests/sec:  11534.72
+Transfer/sec:      1.34MB
+
+---------------------------------------------------------
+ Concurrency: 64 for uwsgi
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     5.55ms    2.23ms  29.36ms   83.50%
+    Req/Sec     3.00k   301.22     5.17k    78.78%
+  174575 requests in 15.00s, 20.31MB read
+Requests/sec:  11638.51
+Transfer/sec:      1.35MB
+
+---------------------------------------------------------
+ Concurrency: 128 for uwsgi
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    10.86ms    3.74ms  38.04ms   76.68%
+    Req/Sec     3.12k   604.60     6.05k    72.01%
+  180343 requests in 15.00s, 20.98MB read
+Requests/sec:  12025.55
+Transfer/sec:      1.40MB
+
+---------------------------------------------------------
+ Concurrency: 256 for uwsgi
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    22.10ms    3.15ms 229.47ms   89.78%
+    Req/Sec     2.93k   116.13     3.66k    72.36%
+  174079 requests in 15.00s, 20.25MB read
+Requests/sec:  11605.72
+Transfer/sec:      1.35MB

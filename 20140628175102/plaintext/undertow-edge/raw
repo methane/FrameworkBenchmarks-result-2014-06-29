@@ -1,0 +1,97 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer undertow-edge
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/plaintext
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/plaintext
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    72.91us  109.10us   9.87ms   98.07%
+    Req/Sec     9.33k     1.68k   17.33k    85.11%
+  350471 requests in 5.00s, 48.46MB read
+Requests/sec:  70116.81
+Transfer/sec:      9.70MB
+
+---------------------------------------------------------
+ Running Warmup undertow-edge
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/plaintext
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/plaintext
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     2.32ms    4.05ms 152.29ms   88.13%
+    Req/Sec    31.17k    11.10k   72.33k    70.76%
+  1748568 requests in 15.00s, 241.80MB read
+Requests/sec: 116567.86
+Transfer/sec:     16.12MB
+
+---------------------------------------------------------
+ Concurrency: 256 for undertow-edge
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/plaintext
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     8.09ms   12.22ms 932.15ms   97.24%
+    Req/Sec   122.24k    16.70k  249.81k    82.26%
+  6960496 requests in 15.00s, 0.94GB read
+Requests/sec: 464065.12
+Transfer/sec:     64.17MB
+
+---------------------------------------------------------
+ Concurrency: 1024 for undertow-edge
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 1024 --timeout 1024 -t 4 http://127.0.0.1:8080/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/plaintext
+  4 threads and 1024 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   106.05ms  510.33ms   4.14s    97.66%
+    Req/Sec   117.51k    41.50k  310.96k    71.96%
+  6947168 requests in 15.00s, 0.94GB read
+  Socket errors: connect 0, read 43, write 0, timeout 231
+Requests/sec: 463068.68
+Transfer/sec:     64.03MB
+
+---------------------------------------------------------
+ Concurrency: 4096 for undertow-edge
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 4096 --timeout 4096 -t 4 http://127.0.0.1:8080/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/plaintext
+  4 threads and 4096 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     4.31s     6.21s   13.86s    72.02%
+    Req/Sec   110.61k    43.62k  280.00k    72.21%
+  6872432 requests in 15.00s, 0.93GB read
+  Socket errors: connect 0, read 1127, write 0, timeout 12803
+Requests/sec: 458115.83
+Transfer/sec:     63.35MB
+
+---------------------------------------------------------
+ Concurrency: 16384 for undertow-edge
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16384 --timeout 16384 -t 4 http://127.0.0.1:8080/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/plaintext
+  4 threads and 16384 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.94s     4.34s   11.96s    84.22%
+    Req/Sec   106.11k    45.97k  175.11k    68.04%
+  6415360 requests in 15.00s, 0.87GB read
+  Socket errors: connect 0, read 1548, write 0, timeout 80093
+Requests/sec: 427571.63
+Transfer/sec:     59.13MB

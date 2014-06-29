@@ -1,0 +1,125 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+0 packages can be updated.
+0 updates are security updates.
+
+
+
+---------------------------------------------------------
+ Running Primer urweb-mysql
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/fortunes
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/fortunes
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     0.89ms  479.15us  12.00ms   81.38%
+    Req/Sec     1.32k   574.16     2.78k    84.73%
+  49702 requests in 5.00s, 65.03MB read
+Requests/sec:   9941.95
+Transfer/sec:     13.01MB
+
+---------------------------------------------------------
+ Running Warmup urweb-mysql
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/fortunes
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortunes
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    26.27ms    1.13ms  39.24ms   87.02%
+    Req/Sec     2.46k    76.76     2.67k    76.78%
+  146158 requests in 15.00s, 191.24MB read
+Requests/sec:   9743.99
+Transfer/sec:     12.75MB
+
+---------------------------------------------------------
+ Concurrency: 8 for urweb-mysql
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:8080/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortunes
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   798.39us  189.47us   2.28ms   77.87%
+    Req/Sec     2.64k   410.16     5.44k    78.07%
+  150020 requests in 15.00s, 196.29MB read
+Requests/sec:  10002.37
+Transfer/sec:     13.09MB
+
+---------------------------------------------------------
+ Concurrency: 16 for urweb-mysql
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:8080/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortunes
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.63ms  703.42us  14.93ms   97.14%
+    Req/Sec     2.55k   242.69     3.44k    72.05%
+  145408 requests in 15.00s, 190.26MB read
+Requests/sec:   9694.33
+Transfer/sec:     12.68MB
+
+---------------------------------------------------------
+ Concurrency: 32 for urweb-mysql
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:8080/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortunes
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     3.32ms  788.64us  17.55ms   96.46%
+    Req/Sec     2.54k   190.51     3.22k    68.92%
+  144397 requests in 15.00s, 188.93MB read
+Requests/sec:   9627.75
+Transfer/sec:     12.60MB
+
+---------------------------------------------------------
+ Concurrency: 64 for urweb-mysql
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:8080/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortunes
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     6.61ms  798.84us  20.76ms   94.80%
+    Req/Sec     2.51k   150.88     3.08k    66.96%
+  145038 requests in 15.00s, 189.77MB read
+Requests/sec:   9669.83
+Transfer/sec:     12.65MB
+
+---------------------------------------------------------
+ Concurrency: 128 for urweb-mysql
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:8080/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortunes
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    13.18ms    0.85ms  27.00ms   92.43%
+    Req/Sec     2.48k    90.14     2.72k    73.38%
+  145616 requests in 15.00s, 190.53MB read
+Requests/sec:   9707.86
+Transfer/sec:     12.70MB
+
+---------------------------------------------------------
+ Concurrency: 256 for urweb-mysql
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortunes
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    25.15ms    1.70ms  39.55ms   94.89%
+    Req/Sec     2.55k   124.07     2.94k    77.17%
+  150353 requests in 15.00s, 196.73MB read
+Requests/sec:  10024.18
+Transfer/sec:     13.12MB

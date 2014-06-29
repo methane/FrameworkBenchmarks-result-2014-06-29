@@ -1,0 +1,115 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer pyramid-py2
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:6543/updates?queries=2
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:6543/updates?queries=2
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    11.16ms    3.15ms  36.57ms   71.62%
+    Req/Sec    92.73     21.52   160.00     62.06%
+  3675 requests in 5.01s, 849.01KB read
+  Non-2xx or 3xx responses: 1
+Requests/sec:    733.95
+Transfer/sec:    169.56KB
+
+---------------------------------------------------------
+ Running Warmup pyramid-py2
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:6543/updates?queries=2
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:6543/updates?queries=2
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   319.71ms   11.12ms 371.99ms   77.62%
+    Req/Sec   200.15      5.04   212.00     81.82%
+  12027 requests in 15.02s, 2.71MB read
+  Non-2xx or 3xx responses: 2
+Requests/sec:    800.74
+Transfer/sec:    184.98KB
+
+---------------------------------------------------------
+ Queries: 1 for pyramid-py2
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:6543/updates?queries=1
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:6543/updates?queries=1
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   235.10ms    8.10ms 265.67ms   66.52%
+    Req/Sec   271.87      8.74   306.00     68.91%
+  16326 requests in 15.02s, 3.13MB read
+  Non-2xx or 3xx responses: 1
+Requests/sec:   1087.25
+Transfer/sec:    213.18KB
+
+---------------------------------------------------------
+ Queries: 5 for pyramid-py2
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:6543/updates?queries=5
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:6543/updates?queries=5
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   569.91ms    9.27ms 692.92ms   78.32%
+    Req/Sec   111.41     14.81   133.00     63.64%
+  6730 requests in 15.27s, 2.21MB read
+  Non-2xx or 3xx responses: 3
+Requests/sec:    440.73
+Transfer/sec:    148.42KB
+
+---------------------------------------------------------
+ Queries: 10 for pyramid-py2
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:6543/updates?queries=10
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:6543/updates?queries=10
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   996.73ms   48.53ms   1.04s    97.72%
+    Req/Sec    63.04      7.99    78.00     79.63%
+  3824 requests in 15.19s, 1.91MB read
+  Non-2xx or 3xx responses: 1
+Requests/sec:    251.69
+Transfer/sec:    128.73KB
+
+---------------------------------------------------------
+ Queries: 15 for pyramid-py2
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:6543/updates?queries=15
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:6543/updates?queries=15
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.40s   164.71ms   1.50s    95.56%
+    Req/Sec    43.91     18.04    70.00     60.00%
+  2681 requests in 15.65s, 1.80MB read
+  Non-2xx or 3xx responses: 2
+Requests/sec:    171.29
+Transfer/sec:    117.49KB
+
+---------------------------------------------------------
+ Queries: 20 for pyramid-py2
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:6543/updates?queries=20
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:6543/updates?queries=20
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.82s   255.61ms   1.97s    93.27%
+    Req/Sec    34.88     26.92    87.00     42.86%
+  2060 requests in 15.27s, 1.73MB read
+  Non-2xx or 3xx responses: 1
+Requests/sec:    134.92
+Transfer/sec:    116.11KB

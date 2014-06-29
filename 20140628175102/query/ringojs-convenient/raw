@@ -1,0 +1,108 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer ringojs-convenient
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/db/2
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/db/2
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     2.38ms    1.36ms  19.09ms   87.74%
+    Req/Sec   471.46    120.92     0.89k    64.83%
+  17928 requests in 5.00s, 3.75MB read
+Requests/sec:   3585.74
+Transfer/sec:    768.80KB
+
+---------------------------------------------------------
+ Running Warmup ringojs-convenient
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/db/2
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db/2
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    62.82ms  107.87ms 775.90ms   85.60%
+    Req/Sec     0.97k    99.97     1.31k    69.96%
+  57917 requests in 14.99s, 12.13MB read
+Requests/sec:   3862.96
+Transfer/sec:    828.24KB
+
+---------------------------------------------------------
+ Queries: 1 for ringojs-convenient
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/db/1
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db/1
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    44.77ms   88.81ms 860.04ms   88.59%
+    Req/Sec     1.53k   686.43     5.97k    94.35%
+  85343 requests in 15.00s, 15.12MB read
+Requests/sec:   5689.04
+Transfer/sec:      1.01MB
+
+---------------------------------------------------------
+ Queries: 5 for ringojs-convenient
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/db/5
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db/5
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   125.27ms  147.07ms   1.03s    81.01%
+    Req/Sec   506.00     62.75   767.00     75.12%
+  29761 requests in 15.00s, 8.97MB read
+Requests/sec:   1983.41
+Transfer/sec:    611.82KB
+
+---------------------------------------------------------
+ Queries: 10 for ringojs-convenient
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/db/10
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db/10
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   229.90ms  182.69ms   1.03s    62.03%
+    Req/Sec   276.37     18.80   327.00     74.47%
+  16500 requests in 15.00s, 7.47MB read
+Requests/sec:   1100.00
+Transfer/sec:    510.01KB
+
+---------------------------------------------------------
+ Queries: 15 for ringojs-convenient
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/db/15
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db/15
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   330.83ms  196.90ms   1.34s    65.69%
+    Req/Sec   191.21      9.52   219.00     68.42%
+  11411 requests in 15.01s, 6.90MB read
+Requests/sec:    760.38
+Transfer/sec:    470.55KB
+
+---------------------------------------------------------
+ Queries: 20 for ringojs-convenient
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/db/20
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db/20
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   421.88ms  227.81ms   1.12s    66.55%
+    Req/Sec   147.26      8.97   175.00     78.79%
+  8763 requests in 15.00s, 6.62MB read
+Requests/sec:    584.11
+Transfer/sec:    452.08KB

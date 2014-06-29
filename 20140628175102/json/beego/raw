@@ -1,0 +1,122 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer beego
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/json
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/json
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   272.97us  721.41us  12.51ms   96.89%
+    Req/Sec     4.79k     1.46k    9.00k    73.26%
+  179791 requests in 5.00s, 25.55MB read
+Requests/sec:  35974.01
+Transfer/sec:      5.11MB
+
+---------------------------------------------------------
+ Running Warmup beego
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/json
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     5.05ms    2.91ms  39.50ms   78.97%
+    Req/Sec    13.07k     2.38k   26.13k    69.29%
+  757452 requests in 15.00s, 107.63MB read
+Requests/sec:  50507.40
+Transfer/sec:      7.18MB
+
+---------------------------------------------------------
+ Concurrency: 8 for beego
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   215.22us  808.19us  43.89ms   98.95%
+    Req/Sec    10.15k     2.56k   19.44k    69.40%
+  575219 requests in 15.00s, 81.74MB read
+Requests/sec:  38350.57
+Transfer/sec:      5.45MB
+
+---------------------------------------------------------
+ Concurrency: 16 for beego
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   463.02us    2.51ms  74.82ms   98.86%
+    Req/Sec    11.41k     3.17k   31.40k    70.21%
+  646190 requests in 15.00s, 91.82MB read
+Requests/sec:  43081.92
+Transfer/sec:      6.12MB
+
+---------------------------------------------------------
+ Concurrency: 32 for beego
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   829.35us    1.55ms  78.84ms   92.63%
+    Req/Sec    12.71k     5.27k   42.89k    69.42%
+  714813 requests in 15.00s, 101.57MB read
+Requests/sec:  47656.18
+Transfer/sec:      6.77MB
+
+---------------------------------------------------------
+ Concurrency: 64 for beego
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.52ms    2.26ms  87.33ms   90.51%
+    Req/Sec    13.40k     5.52k   48.30k    67.01%
+  753489 requests in 15.00s, 107.07MB read
+Requests/sec:  50235.35
+Transfer/sec:      7.14MB
+
+---------------------------------------------------------
+ Concurrency: 128 for beego
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     2.71ms    2.07ms  25.76ms   79.12%
+    Req/Sec    13.41k     4.53k   41.44k    69.68%
+  754820 requests in 15.00s, 107.26MB read
+Requests/sec:  50324.40
+Transfer/sec:      7.15MB
+
+---------------------------------------------------------
+ Concurrency: 256 for beego
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     5.06ms    2.90ms  35.76ms   78.20%
+    Req/Sec    12.97k     2.56k   30.40k    70.86%
+  752284 requests in 15.00s, 106.90MB read
+Requests/sec:  50154.43
+Transfer/sec:      7.13MB

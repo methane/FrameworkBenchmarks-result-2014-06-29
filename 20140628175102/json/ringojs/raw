@@ -1,0 +1,122 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer ringojs
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/json
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/json
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     3.39ms    6.10ms  48.01ms   90.41%
+    Req/Sec   518.23    299.28     1.77k    71.30%
+  19018 requests in 5.00s, 3.30MB read
+Requests/sec:   3804.01
+Transfer/sec:    676.10KB
+
+---------------------------------------------------------
+ Running Warmup ringojs
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/json
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    19.72ms   49.07ms 564.59ms   92.76%
+    Req/Sec     3.42k     0.85k    5.03k    74.80%
+  200598 requests in 15.00s, 34.82MB read
+Requests/sec:  13376.14
+Transfer/sec:      2.32MB
+
+---------------------------------------------------------
+ Concurrency: 8 for ringojs
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    10.36ms   32.58ms 139.78ms   91.82%
+    Req/Sec     2.41k     1.34k    7.22k    68.11%
+  136669 requests in 15.00s, 23.72MB read
+Requests/sec:   9112.14
+Transfer/sec:      1.58MB
+
+---------------------------------------------------------
+ Concurrency: 16 for ringojs
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.65ms    7.15ms 137.97ms   97.69%
+    Req/Sec     2.96k     0.90k    7.89k    75.74%
+  167982 requests in 15.00s, 29.16MB read
+Requests/sec:  11199.54
+Transfer/sec:      1.94MB
+
+---------------------------------------------------------
+ Concurrency: 32 for ringojs
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     2.74ms    8.26ms 137.13ms   95.98%
+    Req/Sec     3.37k     1.02k    8.22k    71.71%
+  191878 requests in 15.00s, 33.30MB read
+Requests/sec:  12792.48
+Transfer/sec:      2.22MB
+
+---------------------------------------------------------
+ Concurrency: 64 for ringojs
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     4.77ms    9.82ms 133.09ms   93.07%
+    Req/Sec     3.51k     0.86k    6.48k    70.41%
+  204570 requests in 15.00s, 35.51MB read
+Requests/sec:  13639.91
+Transfer/sec:      2.37MB
+
+---------------------------------------------------------
+ Concurrency: 128 for ringojs
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     9.11ms   20.25ms 247.34ms   92.78%
+    Req/Sec     3.67k   798.88     6.43k    68.81%
+  216620 requests in 15.00s, 37.60MB read
+Requests/sec:  14443.30
+Transfer/sec:      2.51MB
+
+---------------------------------------------------------
+ Concurrency: 256 for ringojs
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    17.93ms   45.87ms 391.41ms   93.40%
+    Req/Sec     3.83k   723.81     7.36k    68.62%
+  226375 requests in 14.99s, 39.29MB read
+Requests/sec:  15097.77
+Transfer/sec:      2.62MB

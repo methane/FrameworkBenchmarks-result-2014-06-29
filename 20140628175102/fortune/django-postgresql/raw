@@ -1,0 +1,122 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer django-postgresql
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/fortunes
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/fortunes
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     9.65ms    4.47ms  29.50ms   58.88%
+    Req/Sec   131.36     69.11   333.00     69.54%
+  5035 requests in 5.00s, 7.17MB read
+Requests/sec:   1006.29
+Transfer/sec:      1.43MB
+
+---------------------------------------------------------
+ Running Warmup django-postgresql
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/fortunes
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortunes
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   255.83ms   60.70ms 543.08ms   65.54%
+    Req/Sec   248.65     14.76   293.00     75.49%
+  14917 requests in 15.01s, 21.24MB read
+Requests/sec:    993.75
+Transfer/sec:      1.41MB
+
+---------------------------------------------------------
+ Concurrency: 8 for django-postgresql
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:8080/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortunes
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     8.25ms    3.89ms  31.15ms   64.26%
+    Req/Sec   264.72     79.76   454.00     64.62%
+  15057 requests in 14.99s, 21.44MB read
+Requests/sec:   1004.56
+Transfer/sec:      1.43MB
+
+---------------------------------------------------------
+ Concurrency: 16 for django-postgresql
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:8080/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortunes
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    16.24ms    9.61ms  58.82ms   78.34%
+    Req/Sec   263.09     62.37   441.00     64.41%
+  15021 requests in 15.00s, 21.39MB read
+Requests/sec:   1001.18
+Transfer/sec:      1.43MB
+
+---------------------------------------------------------
+ Concurrency: 32 for django-postgresql
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:8080/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortunes
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    32.35ms   16.16ms 108.93ms   68.72%
+    Req/Sec   252.64     40.15   357.00     63.43%
+  15070 requests in 15.00s, 21.46MB read
+Requests/sec:   1004.54
+Transfer/sec:      1.43MB
+
+---------------------------------------------------------
+ Concurrency: 64 for django-postgresql
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:8080/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortunes
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    65.77ms   21.56ms 133.56ms   60.04%
+    Req/Sec   249.48     27.61   302.00     64.67%
+  14935 requests in 15.00s, 21.26MB read
+Requests/sec:    995.52
+Transfer/sec:      1.42MB
+
+---------------------------------------------------------
+ Concurrency: 128 for django-postgresql
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:8080/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortunes
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   130.10ms   59.93ms 264.41ms   60.26%
+    Req/Sec   248.56     20.53   286.00     59.39%
+  14985 requests in 15.01s, 21.34MB read
+Requests/sec:    998.05
+Transfer/sec:      1.42MB
+
+---------------------------------------------------------
+ Concurrency: 256 for django-postgresql
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortunes
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   256.33ms   63.78ms 498.95ms   69.89%
+    Req/Sec   251.03     14.94   287.00     72.34%
+  15004 requests in 15.01s, 21.36MB read
+Requests/sec:    999.53
+Transfer/sec:      1.42MB

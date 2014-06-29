@@ -1,0 +1,74 @@
+restart: Unknown instance: 
+2014/06/29 00:32:29 [error] 11397#0: recv() failed (111: Connection refused) while resolving, resolver: 127.0.0.1:53
+2014/06/29 00:32:34 [error] 11397#0: recv() failed (111: Connection refused) while resolving, resolver: 127.0.0.1:53
+2014/06/29 00:32:39 [error] 11397#0: recv() failed (111: Connection refused) while resolving, resolver: 127.0.0.1:53
+curl: (28) Operation timed out after 15001 milliseconds with 0 bytes received
+2014/06/29 00:32:44 [error] 11397#0: recv() failed (111: Connection refused) while resolving, resolver: 127.0.0.1:53
+2014/06/29 00:32:49 [error] 11397#0: recv() failed (111: Connection refused) while resolving, resolver: 127.0.0.1:53
+2014/06/29 00:32:54 [error] 11397#0: recv() failed (111: Connection refused) while resolving, resolver: 127.0.0.1:53
+2014/06/29 00:32:59 [error] 11397#0: *3 lua entry thread aborted: runtime error: ./app.lua:15: failed to connect: localhost could not be resolved (110: Operation timed out)
+stack traceback:
+coroutine 0:
+	[C]: in function 'assert'
+	./app.lua:15: in function <./app.lua:13>
+	[string "content_by_lua"]:1: in function <[string "content_by_lua"]:1>, client: 127.0.0.1, server: , request: "GET /db HTTP/1.1", host: "127.0.0.1:8080"
+curl: (28) Operation timed out after 15000 milliseconds with 0 bytes received
+2014/06/29 00:32:59 [error] 11397#0: recv() failed (111: Connection refused) while resolving, resolver: 127.0.0.1:53
+2014/06/29 00:33:04 [error] 11397#0: recv() failed (111: Connection refused) while resolving, resolver: 127.0.0.1:53
+2014/06/29 00:33:09 [error] 11397#0: recv() failed (111: Connection refused) while resolving, resolver: 127.0.0.1:53
+2014/06/29 00:33:14 [error] 11397#0: recv() failed (111: Connection refused) while resolving, resolver: 127.0.0.1:53
+curl: (28) Operation timed out after 15001 milliseconds with 0 bytes received
+2014/06/29 00:33:19 [error] 11397#0: recv() failed (111: Connection refused) while resolving, resolver: 127.0.0.1:53
+2014/06/29 00:33:24 [error] 11397#0: recv() failed (111: Connection refused) while resolving, resolver: 127.0.0.1:53
+2014/06/29 00:33:29 [error] 11397#0: recv() failed (111: Connection refused) while resolving, resolver: 127.0.0.1:53
+curl: (28) Operation timed out after 15001 milliseconds with 0 bytes received
+2014/06/29 00:33:34 [error] 11397#0: recv() failed (111: Connection refused) while resolving, resolver: 127.0.0.1:53
+2014/06/29 00:33:39 [error] 11397#0: recv() failed (111: Connection refused) while resolving, resolver: 127.0.0.1:53
+2014/06/29 00:33:44 [error] 11397#0: recv() failed (111: Connection refused) while resolving, resolver: 127.0.0.1:53
+curl: (28) Operation timed out after 15001 milliseconds with 0 bytes received
+2014/06/29 00:33:49 [error] 11397#0: recv() failed (111: Connection refused) while resolving, resolver: 127.0.0.1:53
+2014/06/29 00:33:54 [error] 11397#0: recv() failed (111: Connection refused) while resolving, resolver: 127.0.0.1:53
+2014/06/29 00:33:59 [error] 11397#0: recv() failed (111: Connection refused) while resolving, resolver: 127.0.0.1:53
+2014/06/29 00:34:04 [error] 11397#0: recv() failed (111: Connection refused) while resolving, resolver: 127.0.0.1:53
+2014/06/29 00:34:09 [error] 11397#0: recv() failed (111: Connection refused) while resolving, resolver: 127.0.0.1:53
+2014/06/29 00:34:14 [error] 11397#0: recv() failed (111: Connection refused) while resolving, resolver: 127.0.0.1:53
+2014/06/29 00:34:19 [error] 11397#0: recv() failed (111: Connection refused) while resolving, resolver: 127.0.0.1:53
+2014/06/29 00:34:24 [error] 11397#0: recv() failed (111: Connection refused) while resolving, resolver: 127.0.0.1:53
+2014/06/29 00:34:29 [error] 11397#0: recv() failed (111: Connection refused) while resolving, resolver: 127.0.0.1:53
+2014/06/29 00:34:34 [error] 11397#0: recv() failed (111: Connection refused) while resolving, resolver: 127.0.0.1:53
+2014/06/29 00:34:39 [error] 11397#0: recv() failed (111: Connection refused) while resolving, resolver: 127.0.0.1:53
+2014/06/29 00:34:44 [error] 11397#0: recv() failed (111: Connection refused) while resolving, resolver: 127.0.0.1:53
+2014/06/29 00:34:49 [error] 11397#0: recv() failed (111: Connection refused) while resolving, resolver: 127.0.0.1:53
+2014/06/29 00:34:54 [error] 11397#0: recv() failed (111: Connection refused) while resolving, resolver: 127.0.0.1:53
+2014/06/29 00:34:59 [error] 11397#0: recv() failed (111: Connection refused) while resolving, resolver: 127.0.0.1:53
+2014/06/29 00:35:04 [error] 11397#0: recv() failed (111: Connection refused) while resolving, resolver: 127.0.0.1:53
+2014/06/29 00:35:09 [error] 11397#0: recv() failed (111: Connection refused) while resolving, resolver: 127.0.0.1:53
+2014/06/29 00:35:14 [error] 11397#0: recv() failed (111: Connection refused) while resolving, resolver: 127.0.0.1:53
+2014/06/29 00:35:19 [error] 11397#0: recv() failed (111: Connection refused) while resolving, resolver: 127.0.0.1:53
+2014/06/29 00:35:24 [error] 11397#0: recv() failed (111: Connection refused) while resolving, resolver: 127.0.0.1:53
+2014/06/29 00:35:29 [error] 11397#0: recv() failed (111: Connection refused) while resolving, resolver: 127.0.0.1:53
+2014/06/29 00:35:34 [error] 11397#0: recv() failed (111: Connection refused) while resolving, resolver: 127.0.0.1:53
+2014/06/29 00:35:39 [error] 11397#0: recv() failed (111: Connection refused) while resolving, resolver: 127.0.0.1:53
+2014/06/29 00:35:44 [error] 11397#0: recv() failed (111: Connection refused) while resolving, resolver: 127.0.0.1:53
+2014/06/29 00:35:49 [error] 11397#0: recv() failed (111: Connection refused) while resolving, resolver: 127.0.0.1:53
+2014/06/29 00:35:54 [error] 11397#0: recv() failed (111: Connection refused) while resolving, resolver: 127.0.0.1:53
+2014/06/29 00:35:59 [error] 11397#0: recv() failed (111: Connection refused) while resolving, resolver: 127.0.0.1:53
+2014/06/29 00:36:04 [error] 11397#0: recv() failed (111: Connection refused) while resolving, resolver: 127.0.0.1:53
+2014/06/29 00:36:09 [error] 11397#0: recv() failed (111: Connection refused) while resolving, resolver: 127.0.0.1:53
+2014/06/29 00:36:14 [error] 11397#0: recv() failed (111: Connection refused) while resolving, resolver: 127.0.0.1:53
+2014/06/29 00:36:19 [error] 11397#0: recv() failed (111: Connection refused) while resolving, resolver: 127.0.0.1:53
+2014/06/29 00:36:24 [error] 11397#0: recv() failed (111: Connection refused) while resolving, resolver: 127.0.0.1:53
+2014/06/29 00:36:29 [error] 11397#0: recv() failed (111: Connection refused) while resolving, resolver: 127.0.0.1:53
+2014/06/29 00:36:34 [error] 11397#0: recv() failed (111: Connection refused) while resolving, resolver: 127.0.0.1:53
+2014/06/29 00:36:39 [error] 11397#0: recv() failed (111: Connection refused) while resolving, resolver: 127.0.0.1:53
+2014/06/29 00:36:44 [error] 11397#0: recv() failed (111: Connection refused) while resolving, resolver: 127.0.0.1:53
+2014/06/29 00:36:49 [error] 11397#0: recv() failed (111: Connection refused) while resolving, resolver: 127.0.0.1:53
+2014/06/29 00:36:54 [error] 11397#0: recv() failed (111: Connection refused) while resolving, resolver: 127.0.0.1:53
+2014/06/29 00:36:59 [error] 11397#0: recv() failed (111: Connection refused) while resolving, resolver: 127.0.0.1:53
+2014/06/29 00:37:05 [error] 11397#0: recv() failed (111: Connection refused) while resolving, resolver: 127.0.0.1:53
+2014/06/29 00:37:10 [error] 11397#0: recv() failed (111: Connection refused) while resolving, resolver: 127.0.0.1:53
+2014/06/29 00:37:15 [error] 11397#0: recv() failed (111: Connection refused) while resolving, resolver: 127.0.0.1:53
+2014/06/29 00:37:20 [error] 11397#0: recv() failed (111: Connection refused) while resolving, resolver: 127.0.0.1:53
+2014/06/29 00:37:25 [error] 11397#0: recv() failed (111: Connection refused) while resolving, resolver: 127.0.0.1:53
+2014/06/29 00:37:30 [error] 11397#0: recv() failed (111: Connection refused) while resolving, resolver: 127.0.0.1:53
+2014/06/29 00:37:35 [error] 11397#0: recv() failed (111: Connection refused) while resolving, resolver: 127.0.0.1:53

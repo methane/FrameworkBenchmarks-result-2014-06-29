@@ -1,0 +1,25 @@
+restart: Unknown instance: 
+WARNING: Failure to find: fortune_editView.moc
+WARNING: Failure to find: fortune_entryView.moc
+WARNING: Failure to find: fortune_indexView.moc
+WARNING: Failure to find: fortune_showView.moc
+WARNING: Failure to find: world_editView.moc
+WARNING: Failure to find: world_entryView.moc
+WARNING: Failure to find: world_indexView.moc
+WARNING: Failure to find: world_showView.moc
+WARNING: Failure to find: fortune_editView.moc
+WARNING: Failure to find: fortune_entryView.moc
+WARNING: Failure to find: fortune_indexView.moc
+WARNING: Failure to find: fortune_showView.moc
+WARNING: Failure to find: world_editView.moc
+WARNING: Failure to find: world_entryView.moc
+WARNING: Failure to find: world_indexView.moc
+WARNING: Failure to find: world_showView.moc
+WARNING: Failure to find: fortune_editView.moc
+WARNING: Failure to find: fortune_entryView.moc
+WARNING: Failure to find: fortune_indexView.moc
+WARNING: Failure to find: fortune_showView.moc
+WARNING: Failure to find: world_editView.moc
+WARNING: Failure to find: world_entryView.moc
+WARNING: Failure to find: world_indexView.moc
+WARNING: Failure to find: world_showView.moc

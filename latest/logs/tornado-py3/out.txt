@@ -1,0 +1,142 @@
+test.os.lower() = linux  test.database_os.lower() = linux
+self.results['frameworks'] != None: True
+test.name: tornado-py3
+self.results['completed']: {}
+
+=====================================================
+  Beginning tornado-py3
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Starting tornado-py3
+-----------------------------------------------------
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+mysql start/running, process 12906
+ * Restarting PostgreSQL 9.3 database server
+   ...done.
+
+-----------------------------------------------------
+  VERIFYING JSON (/json)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Server: TornadoServer/3.2.2
+Date: Sun, 29 Jun 2014 05:15:46 GMT
+Content-Type: application/json; charset=UTF-8
+Content-Length: 28
+
+{"message": "Hello, World!"}
+
+VALIDATING JSON ... PASS
+
+
+-----------------------------------------------------
+  VERIFYING DB (/db)
+-----------------------------------------------------
+HTTP/1.1 500 Internal Server Error
+Server: TornadoServer/3.2.2
+Date: Sun, 29 Jun 2014 05:15:46 GMT
+Content-Type: text/html; charset=UTF-8
+Content-Length: 93
+
+<html><title>500: Internal Server Error</title><body>500: Internal Server Error</body></html>
+
+VALIDATING DB ... FAIL
+
+
+-----------------------------------------------------
+  VERIFYING QUERY (/queries?queries=2)
+-----------------------------------------------------
+HTTP/1.1 500 Internal Server Error
+Server: TornadoServer/3.2.2
+Date: Sun, 29 Jun 2014 05:15:46 GMT
+Content-Type: text/html; charset=UTF-8
+Content-Length: 93
+
+<html><title>500: Internal Server Error</title><body>500: Internal Server Error</body></html>
+
+/queries?queries=2 - FAIL
+
+-----------------------------------------------------
+
+HTTP/1.1 500 Internal Server Error
+Server: TornadoServer/3.2.2
+Date: Sun, 29 Jun 2014 05:15:46 GMT
+Content-Type: text/html; charset=UTF-8
+Content-Length: 93
+
+<html><title>500: Internal Server Error</title><body>500: Internal Server Error</body></html>
+
+/queries?queries=0 - WARNING
+
+-----------------------------------------------------
+
+HTTP/1.1 500 Internal Server Error
+Server: TornadoServer/3.2.2
+Date: Sun, 29 Jun 2014 05:15:46 GMT
+Content-Type: text/html; charset=UTF-8
+Content-Length: 93
+
+<html><title>500: Internal Server Error</title><body>500: Internal Server Error</body></html>
+
+/queries?queries=foo - WARNING
+
+-----------------------------------------------------
+
+HTTP/1.1 500 Internal Server Error
+Server: TornadoServer/3.2.2
+Date: Sun, 29 Jun 2014 05:15:46 GMT
+Content-Type: text/html; charset=UTF-8
+Content-Length: 93
+
+<html><title>500: Internal Server Error</title><body>500: Internal Server Error</body></html>
+
+/queries?queries=501 - WARNING
+
+-----------------------------------------------------
+
+
+VALIDATING QUERY ... FAIL
+
+
+-----------------------------------------------------
+  VERIFYING PLAINTEXT (/plaintext)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Server: TornadoServer/3.2.2
+Date: Sun, 29 Jun 2014 05:15:46 GMT
+Content-Type: text/plain
+Content-Length: 13
+
+Hello, World!
+
+VALIDATING PLAINTEXT ... PASS
+
+
+-----------------------------------------------------
+  Benchmarking tornado-py3 ...
+-----------------------------------------------------
+BENCHMARKING JSON ... Complete
+BENCHMARKING DB ... Complete
+BENCHMARKING Query ... Complete
+BENCHMARKING Plaintext ... Complete
+
+-----------------------------------------------------
+  Stopping tornado-py3
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Stopped tornado-py3
+-----------------------------------------------------
+
+----------------------------------------------------
+Saving results through tornado-py3
+----------------------------------------------------

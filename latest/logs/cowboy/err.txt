@@ -1,0 +1,6 @@
+restart: Unknown instance: 
+ERROR: Problem starting cowboy
+
+-----------------------------------------------------
+  Stopped cowboy
+-----------------------------------------------------

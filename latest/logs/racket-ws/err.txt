@@ -1,0 +1,211 @@
+restart: Unknown instance: 
+Servlet (@ /db) exception:
+query-list: Unknown column '$1' in 'where clause'
+  SQLSTATE: 42S22
+
+  context...:
+   /home/ubuntu/FrameworkBenchmarks/installs/racket-5.3.6/collects/db/private/generic/interfaces.rkt:169:0: raise-sql-error
+   /home/ubuntu/FrameworkBenchmarks/installs/racket-5.3.6/collects/db/private/generic/common.rkt:270:13
+   /home/ubuntu/FrameworkBenchmarks/installs/racket-5.3.6/collects/db/private/generic/functions.rkt:147:0: query-list
+   f75
+   /home/ubuntu/FrameworkBenchmarks/installs/racket-5.3.6/collects/web-server/dispatchers/dispatch-servlets.rkt:58:2
+   /home/ubuntu/FrameworkBenchmarks/installs/racket-5.3.6/collects/web-server/private/dispatch-server-unit.rkt:96:6
+Servlet (@ /db) exception:
+query-list: Unknown column '$1' in 'where clause'
+  SQLSTATE: 42S22
+
+  context...:
+   /home/ubuntu/FrameworkBenchmarks/installs/racket-5.3.6/collects/db/private/generic/interfaces.rkt:169:0: raise-sql-error
+   /home/ubuntu/FrameworkBenchmarks/installs/racket-5.3.6/collects/db/private/generic/common.rkt:270:13
+   /home/ubuntu/FrameworkBenchmarks/installs/racket-5.3.6/collects/db/private/generic/functions.rkt:147:0: query-list
+   f75
+   /home/ubuntu/FrameworkBenchmarks/installs/racket-5.3.6/collects/web-server/dispatchers/dispatch-servlets.rkt:58:2
+   /home/ubuntu/FrameworkBenchmarks/installs/racket-5.3.6/collects/web-server/private/dispatch-server-unit.rkt:96:6
+Servlet (@ /dbs/2) exception:
+query-list: Unknown column '$1' in 'where clause'
+  SQLSTATE: 42S22
+
+  context...:
+   /home/ubuntu/FrameworkBenchmarks/installs/racket-5.3.6/collects/db/private/generic/interfaces.rkt:169:0: raise-sql-error
+   /home/ubuntu/FrameworkBenchmarks/installs/racket-5.3.6/collects/db/private/generic/common.rkt:270:13
+   /home/ubuntu/FrameworkBenchmarks/installs/racket-5.3.6/collects/db/private/generic/functions.rkt:147:0: query-list
+   /home/ubuntu/FrameworkBenchmarks/racket-ws/bench/bench.rkt:36:2: page/dbs
+   /home/ubuntu/FrameworkBenchmarks/installs/racket-5.3.6/collects/web-server/dispatchers/dispatch-servlets.rkt:58:2
+   /home/ubuntu/FrameworkBenchmarks/installs/racket-5.3.6/collects/web-server/private/dispatch-server-unit.rkt:96:6
+Servlet (@ /dbs/2) exception:
+query-list: Unknown column '$1' in 'where clause'
+  SQLSTATE: 42S22
+
+  context...:
+   /home/ubuntu/FrameworkBenchmarks/installs/racket-5.3.6/collects/db/private/generic/interfaces.rkt:169:0: raise-sql-error
+   /home/ubuntu/FrameworkBenchmarks/installs/racket-5.3.6/collects/db/private/generic/common.rkt:270:13
+   /home/ubuntu/FrameworkBenchmarks/installs/racket-5.3.6/collects/db/private/generic/functions.rkt:147:0: query-list
+   /home/ubuntu/FrameworkBenchmarks/racket-ws/bench/bench.rkt:36:2: page/dbs
+   /home/ubuntu/FrameworkBenchmarks/installs/racket-5.3.6/collects/web-server/dispatchers/dispatch-servlets.rkt:58:2
+   /home/ubuntu/FrameworkBenchmarks/installs/racket-5.3.6/collects/web-server/private/dispatch-server-unit.rkt:96:6
+Servlet (@ /dbs/501) exception:
+query-list: Unknown column '$1' in 'where clause'
+  SQLSTATE: 42S22
+
+  context...:
+   /home/ubuntu/FrameworkBenchmarks/installs/racket-5.3.6/collects/db/private/generic/interfaces.rkt:169:0: raise-sql-error
+   /home/ubuntu/FrameworkBenchmarks/installs/racket-5.3.6/collects/db/private/generic/common.rkt:270:13
+   /home/ubuntu/FrameworkBenchmarks/installs/racket-5.3.6/collects/db/private/generic/functions.rkt:147:0: query-list
+   /home/ubuntu/FrameworkBenchmarks/racket-ws/bench/bench.rkt:36:2: page/dbs
+   /home/ubuntu/FrameworkBenchmarks/installs/racket-5.3.6/collects/web-server/dispatchers/dispatch-servlets.rkt:58:2
+   /home/ubuntu/FrameworkBenchmarks/installs/racket-5.3.6/collects/web-server/private/dispatch-server-unit.rkt:96:6
+Servlet (@ /dbs/501) exception:
+query-list: Unknown column '$1' in 'where clause'
+  SQLSTATE: 42S22
+
+  context...:
+   /home/ubuntu/FrameworkBenchmarks/installs/racket-5.3.6/collects/db/private/generic/interfaces.rkt:169:0: raise-sql-error
+   /home/ubuntu/FrameworkBenchmarks/installs/racket-5.3.6/collects/db/private/generic/common.rkt:270:13
+   /home/ubuntu/FrameworkBenchmarks/installs/racket-5.3.6/collects/db/private/generic/functions.rkt:147:0: query-list
+   /home/ubuntu/FrameworkBenchmarks/racket-ws/bench/bench.rkt:36:2: page/dbs
+   /home/ubuntu/FrameworkBenchmarks/installs/racket-5.3.6/collects/web-server/dispatchers/dispatch-servlets.rkt:58:2
+   /home/ubuntu/FrameworkBenchmarks/installs/racket-5.3.6/collects/web-server/private/dispatch-server-unit.rkt:96:6
+tcp-read: error reading
+  system error: Connection reset by peer; errno=104
+  context...:
+   /home/ubuntu/FrameworkBenchmarks/installs/racket-5.3.6/collects/racket/port.rkt:1135:4: try-again
+tcp-read: error reading
+  system error: Connection reset by peer; errno=104
+  context...:
+   /home/ubuntu/FrameworkBenchmarks/installs/racket-5.3.6/collects/racket/port.rkt:1135:4: try-again
+tcp-read: error reading
+  system error: Connection reset by peer; errno=104
+  context...:
+   /home/ubuntu/FrameworkBenchmarks/installs/racket-5.3.6/collects/racket/port.rkt:1135:4: try-again
+tcp-read: error reading
+  system error: Connection reset by peer; errno=104
+  context...:
+   /home/ubuntu/FrameworkBenchmarks/installs/racket-5.3.6/collects/racket/port.rkt:1135:4: try-again
+tcp-read: error reading
+  system error: Connection reset by peer; errno=104
+  context...:
+   /home/ubuntu/FrameworkBenchmarks/installs/racket-5.3.6/collects/racket/port.rkt:1135:4: try-again
+tcp-read: error reading
+  system error: Connection reset by peer; errno=104
+  context...:
+   /home/ubuntu/FrameworkBenchmarks/installs/racket-5.3.6/collects/racket/port.rkt:1135:4: try-again
+tcp-read: error reading
+  system error: Connection reset by peer; errno=104
+  context...:
+   /home/ubuntu/FrameworkBenchmarks/installs/racket-5.3.6/collects/racket/port.rkt:1135:4: try-again
+tcp-read: error reading
+  system error: Connection reset by peer; errno=104
+  context...:
+   /home/ubuntu/FrameworkBenchmarks/installs/racket-5.3.6/collects/racket/port.rkt:1135:4: try-again
+tcp-read: error reading
+  system error: Connection reset by peer; errno=104
+  context...:
+   /home/ubuntu/FrameworkBenchmarks/installs/racket-5.3.6/collects/racket/port.rkt:1135:4: try-again
+tcp-read: error reading
+  system error: Connection reset by peer; errno=104
+  context...:
+   /home/ubuntu/FrameworkBenchmarks/installs/racket-5.3.6/collects/racket/port.rkt:1135:4: try-again
+tcp-read: error reading
+  system error: Connection reset by peer; errno=104
+  context...:
+   /home/ubuntu/FrameworkBenchmarks/installs/racket-5.3.6/collects/racket/port.rkt:1135:4: try-again
+tcp-read: error reading
+  system error: Connection reset by peer; errno=104
+  context...:
+   /home/ubuntu/FrameworkBenchmarks/installs/racket-5.3.6/collects/racket/port.rkt:1135:4: try-again
+tcp-read: error reading
+  system error: Connection reset by peer; errno=104
+  context...:
+   /home/ubuntu/FrameworkBenchmarks/installs/racket-5.3.6/collects/racket/port.rkt:1135:4: try-again
+tcp-read: error reading
+  system error: Connection reset by peer; errno=104
+  context...:
+   /home/ubuntu/FrameworkBenchmarks/installs/racket-5.3.6/collects/racket/port.rkt:1135:4: try-again
+tcp-read: error reading
+  system error: Connection reset by peer; errno=104
+  context...:
+   /home/ubuntu/FrameworkBenchmarks/installs/racket-5.3.6/collects/racket/port.rkt:1135:4: try-again
+tcp-read: error reading
+  system error: Connection reset by peer; errno=104
+  context...:
+   /home/ubuntu/FrameworkBenchmarks/installs/racket-5.3.6/collects/racket/port.rkt:1135:4: try-again
+tcp-read: error reading
+  system error: Connection reset by peer; errno=104
+  context...:
+   /home/ubuntu/FrameworkBenchmarks/installs/racket-5.3.6/collects/racket/port.rkt:1135:4: try-again
+tcp-read: error reading
+  system error: Connection reset by peer; errno=104
+  context...:
+   /home/ubuntu/FrameworkBenchmarks/installs/racket-5.3.6/collects/racket/port.rkt:1135:4: try-again
+tcp-read: error reading
+  system error: Connection reset by peer; errno=104
+  context...:
+   /home/ubuntu/FrameworkBenchmarks/installs/racket-5.3.6/collects/racket/port.rkt:1135:4: try-again
+tcp-read: error reading
+  system error: Connection reset by peer; errno=104
+  context...:
+   /home/ubuntu/FrameworkBenchmarks/installs/racket-5.3.6/collects/racket/port.rkt:1135:4: try-again
+tcp-read: error reading
+  system error: Connection reset by peer; errno=104
+  context...:
+   /home/ubuntu/FrameworkBenchmarks/installs/racket-5.3.6/collects/racket/port.rkt:1135:4: try-again
+tcp-read: error reading
+  system error: Connection reset by peer; errno=104
+  context...:
+   /home/ubuntu/FrameworkBenchmarks/installs/racket-5.3.6/collects/racket/port.rkt:1135:4: try-again
+tcp-read: error reading
+  system error: Connection reset by peer; errno=104
+  context...:
+   /home/ubuntu/FrameworkBenchmarks/installs/racket-5.3.6/collects/racket/port.rkt:1135:4: try-again
+tcp-read: error reading
+  system error: Connection reset by peer; errno=104
+  context...:
+   /home/ubuntu/FrameworkBenchmarks/installs/racket-5.3.6/collects/racket/port.rkt:1135:4: try-again
+tcp-read: error reading
+  system error: Connection reset by peer; errno=104
+  context...:
+   /home/ubuntu/FrameworkBenchmarks/installs/racket-5.3.6/collects/racket/port.rkt:1135:4: try-again
+tcp-read: error reading
+  system error: Connection reset by peer; errno=104
+  context...:
+   /home/ubuntu/FrameworkBenchmarks/installs/racket-5.3.6/collects/racket/port.rkt:1135:4: try-again
+tcp-read: error reading
+  system error: Connection reset by peer; errno=104
+  context...:
+   /home/ubuntu/FrameworkBenchmarks/installs/racket-5.3.6/collects/racket/port.rkt:1135:4: try-again
+tcp-read: error reading
+  system error: Connection reset by peer; errno=104
+  context...:
+   /home/ubuntu/FrameworkBenchmarks/installs/racket-5.3.6/collects/racket/port.rkt:1135:4: try-again
+tcp-read: error reading
+  system error: Connection reset by peer; errno=104
+  context...:
+   /home/ubuntu/FrameworkBenchmarks/installs/racket-5.3.6/collects/racket/port.rkt:1135:4: try-again
+tcp-read: error reading
+  system error: Connection reset by peer; errno=104
+  context...:
+   /home/ubuntu/FrameworkBenchmarks/installs/racket-5.3.6/collects/racket/port.rkt:1135:4: try-again
+tcp-read: error reading
+  system error: Connection reset by peer; errno=104
+  context...:
+   /home/ubuntu/FrameworkBenchmarks/installs/racket-5.3.6/collects/racket/port.rkt:1135:4: try-again
+tcp-read: error reading
+  system error: Connection reset by peer; errno=104
+  context...:
+   /home/ubuntu/FrameworkBenchmarks/installs/racket-5.3.6/collects/racket/port.rkt:1135:4: try-again
+tcp-read: error reading
+  system error: Connection reset by peer; errno=104
+  context...:
+   /home/ubuntu/FrameworkBenchmarks/installs/racket-5.3.6/collects/racket/port.rkt:1135:4: try-again
+tcp-read: error reading
+  system error: Connection reset by peer; errno=104
+  context...:
+   /home/ubuntu/FrameworkBenchmarks/installs/racket-5.3.6/collects/racket/port.rkt:1135:4: try-again
+tcp-read: error reading
+  system error: Connection reset by peer; errno=104
+  context...:
+   /home/ubuntu/FrameworkBenchmarks/installs/racket-5.3.6/collects/racket/port.rkt:1135:4: try-again
+tcp-read: error reading
+  system error: Connection reset by peer; errno=104
+  context...:
+   /home/ubuntu/FrameworkBenchmarks/installs/racket-5.3.6/collects/racket/port.rkt:1135:4: try-again

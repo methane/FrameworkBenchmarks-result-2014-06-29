@@ -1,0 +1,386 @@
+test.os.lower() = linux  test.database_os.lower() = linux
+self.results['frameworks'] != None: True
+test.name: unfiltered
+self.results['completed']: {}
+
+=====================================================
+  Beginning unfiltered
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Starting unfiltered
+-----------------------------------------------------
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+mysql start/running, process 9228
+ * Restarting PostgreSQL 9.3 database server
+   ...done.
+[0m[[0minfo[0m] [0mLoading project definition from /home/ubuntu/FrameworkBenchmarks/unfiltered/project[0m
+[0m[[0minfo[0m] [0mUpdating {file:/home/ubuntu/FrameworkBenchmarks/unfiltered/project/}default-cef4fd...[0m
+[0m[[0minfo[0m] [0mResolving com.eed3si9n#sbt-assembly;0.8.7 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.scala-sbt#sbt;0.12.3 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.scala-sbt#main;0.12.3 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.scala-sbt#actions;0.12.3 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.scala-sbt#classpath;0.12.3 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.scala-sbt#launcher-interface;0.12.3 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.9.2 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.scala-sbt#interface;0.12.3 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.scala-sbt#io;0.12.3 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.scala-sbt#control;0.12.3 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.scala-lang#scala-compiler;2.9.2 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.scala-sbt#completion;0.12.3 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.scala-sbt#collections;0.12.3 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving jline#jline;1.0 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.scala-sbt#api;0.12.3 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.scala-sbt#compiler-integration;0.12.3 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.scala-sbt#incremental-compiler;0.12.3 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.scala-sbt#logging;0.12.3 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.scala-sbt#process;0.12.3 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.scala-sbt#compile;0.12.3 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.scala-sbt#persist;0.12.3 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.scala-tools.sbinary#sbinary_2.9.0;0.4.0 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.scala-sbt#classfile;0.12.3 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.scala-sbt#compiler-ivy-integration;0.12.3 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.scala-sbt#ivy;0.12.3 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.apache.ivy#ivy;2.3.0-rc1 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving com.jcraft#jsch;0.1.46 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving commons-httpclient#commons-httpclient;3.1 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving commons-logging#commons-logging;1.0.4 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving commons-codec#commons-codec;1.2 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.scala-sbt#run;0.12.3 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.scala-sbt#task-system;0.12.3 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.scala-sbt#tasks;0.12.3 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.scala-sbt#tracking;0.12.3 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.scala-sbt#cache;0.12.3 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.scala-sbt#testing;0.12.3 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.scala-sbt#test-agent;0.12.3 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.scala-tools.testing#test-interface;0.5 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.scala-sbt#command;0.12.3 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.scala-sbt#compiler-interface;0.12.3 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.scala-sbt#precompiled-2_8_2;0.12.3 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.scala-sbt#precompiled-2_9_3;0.12.3 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.scala-sbt#precompiled-2_10_1;0.12.3 ...[0m
+[0m[[0minfo[0m] [0mdownloading http://scalasbt.artifactoryonline.com/scalasbt/sbt-plugin-releases/com.eed3si9n/sbt-assembly/scala_2.9.2/sbt_0.12/0.8.7/jars/sbt-assembly.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] com.eed3si9n#sbt-assembly;0.8.7!sbt-assembly.jar (1581ms)[0m
+[0m[[0minfo[0m] [0mDone updating.[0m
+[0m[[0minfo[0m] [0mCompiling 1 Scala source to /home/ubuntu/FrameworkBenchmarks/unfiltered/project/target/scala-2.9.2/sbt-0.12/classes...[0m
+[0m[[0minfo[0m] [0mSet current project to bench (in build file:/home/ubuntu/FrameworkBenchmarks/unfiltered/)[0m
+[0m[[0minfo[0m] [0mUpdating {file:/home/ubuntu/FrameworkBenchmarks/unfiltered/}bench...[0m
+[0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.10.1 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving net.databinder#unfiltered-netty-server_2.10;0.6.8 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving net.databinder#unfiltered-netty_2.10;0.6.8 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving net.databinder#unfiltered_2.10;0.6.8 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving net.databinder#unfiltered-util_2.10;0.6.8 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving commons-codec#commons-codec;1.4 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.apache.commons#commons-parent;11 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.apache#apache;4 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving io.netty#netty;3.6.4.Final ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.sonatype.oss#oss-parent;7 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving net.databinder.dispatch#dispatch-core_2.10;0.9.5 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving com.ning#async-http-client;1.7.5 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.sonatype.oss#oss-parent;5 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.slf4j#slf4j-api;1.6.2 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.slf4j#slf4j-parent;1.6.2 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving net.databinder#unfiltered-json4s_2.10;0.6.8 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.json4s#json4s-native_2.10;3.2.3 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.json4s#json4s-core_2.10;3.2.3 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.json4s#json4s-ast_2.10;3.2.3 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving com.thoughtworks.paranamer#paranamer;2.5.2 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.scala-lang#scalap;2.10.0 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.scala-lang#scala-compiler;2.10.1 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.scala-lang#scala-reflect;2.10.1 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.clapper#avsl_2.10;1.0.1 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.clapper#grizzled-scala_2.10;1.1.2 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving jline#jline;2.6 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.sonatype.oss#oss-parent;7 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving javax.mail#mail;1.4.3 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving com.sun.mail#all;1.4.3 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving javax.activation#activation;1.1 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.slf4j#slf4j-api;1.7.1 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.json4s#json4s-jackson_2.10;3.2.3 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving com.fasterxml.jackson.core#jackson-databind;2.1.2 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving com.fasterxml.jackson.core#jackson-annotations;2.1.1 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving com.fasterxml.jackson.core#jackson-core;2.1.1 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving com.typesafe.slick#slick_2.10;1.0.0 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving mysql#mysql-connector-java;5.1.24 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving com.jolbox#bonecp;0.7.1.RELEASE ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving com.jolbox#bonecp-parent;0.7.1.RELEASE ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving com.google.guava#guava;r08 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving com.google#google;5 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving com.typesafe#config;1.0.0 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving net.databinder#unfiltered-spec_2.10;0.6.8 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving net.databinder#unfiltered-filter_2.10;0.6.8 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving net.databinder#unfiltered-jetty_2.10;0.6.8 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.eclipse.jetty#jetty-webapp;7.6.9.v20130131 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.eclipse.jetty#jetty-project;7.6.9.v20130131 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.eclipse.jetty#jetty-parent;20 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.eclipse.jetty#jetty-xml;7.6.9.v20130131 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.eclipse.jetty#jetty-project;7.6.9.v20130131 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.eclipse.jetty#jetty-util;7.6.9.v20130131 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.eclipse.jetty#jetty-project;7.6.9.v20130131 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.eclipse.jetty#jetty-servlet;7.6.9.v20130131 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.eclipse.jetty#jetty-project;7.6.9.v20130131 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.eclipse.jetty#jetty-security;7.6.9.v20130131 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.eclipse.jetty#jetty-project;7.6.9.v20130131 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.eclipse.jetty#jetty-server;7.6.9.v20130131 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.eclipse.jetty#jetty-project;7.6.9.v20130131 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.eclipse.jetty.orbit#javax.servlet;2.5.0.v201103041518 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.eclipse.jetty.orbit#jetty-orbit;1 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.eclipse.jetty#jetty-continuation;7.6.9.v20130131 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.eclipse.jetty#jetty-project;7.6.9.v20130131 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.eclipse.jetty#jetty-http;7.6.9.v20130131 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.eclipse.jetty#jetty-project;7.6.9.v20130131 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.eclipse.jetty#jetty-io;7.6.9.v20130131 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.eclipse.jetty#jetty-project;7.6.9.v20130131 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.scala-tools.testing#specs_2.10;1.6.9 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving net.databinder#dispatch-mime_2.10;0.8.9 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving net.databinder#dispatch-core_2.10;0.8.9 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.apache.httpcomponents#httpclient;4.1.3 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.apache.httpcomponents#httpcomponents-client;4.1.3 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.apache.httpcomponents#project;5 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.apache.httpcomponents#httpcore;4.1.4 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.apache.httpcomponents#httpcomponents-core;4.1.4 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.apache.httpcomponents#project;5 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving commons-logging#commons-logging;1.1.1 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.apache.commons#commons-parent;5 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.apache#apache;4 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.scala-lang#scala-actors;2.10.0 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.apache.httpcomponents#httpmime;4.1.2 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.apache.httpcomponents#httpcomponents-client;4.1.2 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.apache.httpcomponents#project;4.1.1 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.apache.james#apache-mime4j-core;0.7.2 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.apache.james#apache-mime4j-project;0.7.2 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.apache.james#james-project;1.8 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.apache#apache;10 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving net.databinder#dispatch-http_2.10;0.8.9 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving net.databinder#dispatch-futures_2.10;0.8.9 ...[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/net/databinder/unfiltered-netty-server_2.10/0.6.8/unfiltered-netty-server_2.10-0.6.8.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] net.databinder#unfiltered-netty-server_2.10;0.6.8!unfiltered-netty-server_2.10.jar (364ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/net/databinder/dispatch/dispatch-core_2.10/0.9.5/dispatch-core_2.10-0.9.5.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] net.databinder.dispatch#dispatch-core_2.10;0.9.5!dispatch-core_2.10.jar (511ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/net/databinder/unfiltered-json4s_2.10/0.6.8/unfiltered-json4s_2.10-0.6.8.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] net.databinder#unfiltered-json4s_2.10;0.6.8!unfiltered-json4s_2.10.jar (489ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/org/clapper/avsl_2.10/1.0.1/avsl_2.10-1.0.1.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.clapper#avsl_2.10;1.0.1!avsl_2.10.jar (519ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/org/json4s/json4s-jackson_2.10/3.2.3/json4s-jackson_2.10-3.2.3.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.json4s#json4s-jackson_2.10;3.2.3!json4s-jackson_2.10.jar (453ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/mysql/mysql-connector-java/5.1.24/mysql-connector-java-5.1.24.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] mysql#mysql-connector-java;5.1.24!mysql-connector-java.jar (445ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/com/jolbox/bonecp/0.7.1.RELEASE/bonecp-0.7.1.RELEASE.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] com.jolbox#bonecp;0.7.1.RELEASE!bonecp.jar(bundle) (359ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/net/databinder/unfiltered-netty_2.10/0.6.8/unfiltered-netty_2.10-0.6.8.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] net.databinder#unfiltered-netty_2.10;0.6.8!unfiltered-netty_2.10.jar (335ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/net/databinder/unfiltered-util_2.10/0.6.8/unfiltered-util_2.10-0.6.8.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] net.databinder#unfiltered-util_2.10;0.6.8!unfiltered-util_2.10.jar (321ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/net/databinder/unfiltered_2.10/0.6.8/unfiltered_2.10-0.6.8.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] net.databinder#unfiltered_2.10;0.6.8!unfiltered_2.10.jar (464ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/io/netty/netty/3.6.4.Final/netty-3.6.4.Final.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] io.netty#netty;3.6.4.Final!netty.jar(bundle) (423ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/commons-codec/commons-codec/1.4/commons-codec-1.4.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] commons-codec#commons-codec;1.4!commons-codec.jar (305ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/com/ning/async-http-client/1.7.5/async-http-client-1.7.5.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] com.ning#async-http-client;1.7.5!async-http-client.jar (341ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/org/json4s/json4s-native_2.10/3.2.3/json4s-native_2.10-3.2.3.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.json4s#json4s-native_2.10;3.2.3!json4s-native_2.10.jar (596ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/org/json4s/json4s-core_2.10/3.2.3/json4s-core_2.10-3.2.3.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.json4s#json4s-core_2.10;3.2.3!json4s-core_2.10.jar (1141ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/org/json4s/json4s-ast_2.10/3.2.3/json4s-ast_2.10-3.2.3.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.json4s#json4s-ast_2.10;3.2.3!json4s-ast_2.10.jar (463ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/org/clapper/grizzled-scala_2.10/1.1.2/grizzled-scala_2.10-1.1.2.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.clapper#grizzled-scala_2.10;1.1.2!grizzled-scala_2.10.jar (333ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/javax/mail/mail/1.4.3/mail-1.4.3.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] javax.mail#mail;1.4.3!mail.jar (402ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/jline/jline/2.6/jline-2.6.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] jline#jline;2.6!jline.jar (352ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/com/google/guava/guava/r08/guava-r08.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] com.google.guava#guava;r08!guava.jar (375ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/net/databinder/unfiltered-spec_2.10/0.6.8/unfiltered-spec_2.10-0.6.8.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] net.databinder#unfiltered-spec_2.10;0.6.8!unfiltered-spec_2.10.jar (488ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/net/databinder/unfiltered-filter_2.10/0.6.8/unfiltered-filter_2.10-0.6.8.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] net.databinder#unfiltered-filter_2.10;0.6.8!unfiltered-filter_2.10.jar (309ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/net/databinder/unfiltered-jetty_2.10/0.6.8/unfiltered-jetty_2.10-0.6.8.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] net.databinder#unfiltered-jetty_2.10;0.6.8!unfiltered-jetty_2.10.jar (323ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/org/scala-tools/testing/specs_2.10/1.6.9/specs_2.10-1.6.9.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-tools.testing#specs_2.10;1.6.9!specs_2.10.jar (445ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/net/databinder/dispatch-mime_2.10/0.8.9/dispatch-mime_2.10-0.8.9.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] net.databinder#dispatch-mime_2.10;0.8.9!dispatch-mime_2.10.jar (741ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/net/databinder/dispatch-http_2.10/0.8.9/dispatch-http_2.10-0.8.9.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] net.databinder#dispatch-http_2.10;0.8.9!dispatch-http_2.10.jar (383ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/org/eclipse/jetty/jetty-webapp/7.6.9.v20130131/jetty-webapp-7.6.9.v20130131.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.eclipse.jetty#jetty-webapp;7.6.9.v20130131!jetty-webapp.jar (302ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/org/eclipse/jetty/jetty-xml/7.6.9.v20130131/jetty-xml-7.6.9.v20130131.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.eclipse.jetty#jetty-xml;7.6.9.v20130131!jetty-xml.jar (321ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/org/eclipse/jetty/jetty-servlet/7.6.9.v20130131/jetty-servlet-7.6.9.v20130131.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.eclipse.jetty#jetty-servlet;7.6.9.v20130131!jetty-servlet.jar (336ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/org/eclipse/jetty/jetty-util/7.6.9.v20130131/jetty-util-7.6.9.v20130131.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.eclipse.jetty#jetty-util;7.6.9.v20130131!jetty-util.jar (303ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/org/eclipse/jetty/jetty-security/7.6.9.v20130131/jetty-security-7.6.9.v20130131.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.eclipse.jetty#jetty-security;7.6.9.v20130131!jetty-security.jar (304ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/org/eclipse/jetty/jetty-server/7.6.9.v20130131/jetty-server-7.6.9.v20130131.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.eclipse.jetty#jetty-server;7.6.9.v20130131!jetty-server.jar (320ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/org/eclipse/jetty/orbit/javax.servlet/2.5.0.v201103041518/javax.servlet-2.5.0.v201103041518.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.eclipse.jetty.orbit#javax.servlet;2.5.0.v201103041518!javax.servlet.jar(orbit) (432ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/org/eclipse/jetty/jetty-continuation/7.6.9.v20130131/jetty-continuation-7.6.9.v20130131.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.eclipse.jetty#jetty-continuation;7.6.9.v20130131!jetty-continuation.jar (321ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/org/eclipse/jetty/jetty-http/7.6.9.v20130131/jetty-http-7.6.9.v20130131.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.eclipse.jetty#jetty-http;7.6.9.v20130131!jetty-http.jar (331ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/org/eclipse/jetty/jetty-io/7.6.9.v20130131/jetty-io-7.6.9.v20130131.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.eclipse.jetty#jetty-io;7.6.9.v20130131!jetty-io.jar (313ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/net/databinder/dispatch-core_2.10/0.8.9/dispatch-core_2.10-0.8.9.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] net.databinder#dispatch-core_2.10;0.8.9!dispatch-core_2.10.jar (393ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/org/apache/httpcomponents/httpclient/4.1.3/httpclient-4.1.3.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.apache.httpcomponents#httpclient;4.1.3!httpclient.jar (325ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/org/apache/httpcomponents/httpmime/4.1.2/httpmime-4.1.2.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.apache.httpcomponents#httpmime;4.1.2!httpmime.jar (377ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] commons-logging#commons-logging;1.1.1!commons-logging.jar (306ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/org/apache/james/apache-mime4j-core/0.7.2/apache-mime4j-core-0.7.2.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.apache.james#apache-mime4j-core;0.7.2!apache-mime4j-core.jar (305ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/org/apache/httpcomponents/httpcore/4.1.4/httpcore-4.1.4.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.apache.httpcomponents#httpcore;4.1.4!httpcore.jar (315ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/net/databinder/dispatch-futures_2.10/0.8.9/dispatch-futures_2.10-0.8.9.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] net.databinder#dispatch-futures_2.10;0.8.9!dispatch-futures_2.10.jar (394ms)[0m
+[0m[[0minfo[0m] [0mDone updating.[0m
+[0m[[0minfo[0m] [0mCompiling 3 Scala sources to /home/ubuntu/FrameworkBenchmarks/unfiltered/target/scala-2.10/classes...[0m
+[0m[[0minfo[0m] [0mNo tests to run for test:test[0m
+[0m[[0minfo[0m] [0mIncluding scala-compiler.jar[0m
+[0m[[0minfo[0m] [0mIncluding paranamer-2.5.2.jar[0m
+[0m[[0minfo[0m] [0mIncluding mysql-connector-java-5.1.24.jar[0m
+[0m[[0minfo[0m] [0mIncluding netty-3.6.4.Final.jar[0m
+[0m[[0minfo[0m] [0mIncluding slick_2.10-1.0.0.jar[0m
+[0m[[0minfo[0m] [0mIncluding dispatch-core_2.10-0.9.5.jar[0m
+[0m[[0minfo[0m] [0mIncluding unfiltered-json4s_2.10-0.6.8.jar[0m
+[0m[[0minfo[0m] [0mIncluding unfiltered-netty-server_2.10-0.6.8.jar[0m
+[0m[[0minfo[0m] [0mIncluding unfiltered-netty_2.10-0.6.8.jar[0m
+[0m[[0minfo[0m] [0mIncluding unfiltered-util_2.10-0.6.8.jar[0m
+[0m[[0minfo[0m] [0mIncluding unfiltered_2.10-0.6.8.jar[0m
+[0m[[0minfo[0m] [0mIncluding activation-1.1.jar[0m
+[0m[[0minfo[0m] [0mIncluding mail-1.4.3.jar[0m
+[0m[[0minfo[0m] [0mIncluding jline-2.6.jar[0m
+[0m[[0minfo[0m] [0mIncluding jackson-databind-2.1.2.jar[0m
+[0m[[0minfo[0m] [0mIncluding avsl_2.10-1.0.1.jar[0m
+[0m[[0minfo[0m] [0mIncluding grizzled-scala_2.10-1.1.2.jar[0m
+[0m[[0minfo[0m] [0mIncluding json4s-ast_2.10-3.2.3.jar[0m
+[0m[[0minfo[0m] [0mIncluding guava-r08.jar[0m
+[0m[[0minfo[0m] [0mIncluding json4s-core_2.10-3.2.3.jar[0m
+[0m[[0minfo[0m] [0mIncluding config-1.0.0.jar[0m
+[0m[[0minfo[0m] [0mIncluding commons-codec-1.4.jar[0m
+[0m[[0minfo[0m] [0mIncluding jackson-annotations-2.1.1.jar[0m
+[0m[[0minfo[0m] [0mIncluding jackson-core-2.1.1.jar[0m
+[0m[[0minfo[0m] [0mIncluding bonecp-0.7.1.RELEASE.jar[0m
+[0m[[0minfo[0m] [0mIncluding async-http-client-1.7.5.jar[0m
+[0m[[0minfo[0m] [0mIncluding json4s-jackson_2.10-3.2.3.jar[0m
+[0m[[0minfo[0m] [0mIncluding json4s-native_2.10-3.2.3.jar[0m
+[0m[[0minfo[0m] [0mIncluding scala-reflect-2.10.1.jar[0m
+[0m[[0minfo[0m] [0mIncluding scalap-2.10.0.jar[0m
+[0m[[0minfo[0m] [0mIncluding slf4j-api-1.7.1.jar[0m
+[0m[[0minfo[0m] [0mIncluding scala-library.jar[0m
+[0m[[0minfo[0m] [0mMerging 'META-INF/NOTICE.txt' with strategy 'rename'[0m
+[0m[[0minfo[0m] [0mMerging 'META-INF/license' with strategy 'rename'[0m
+[0m[[0minfo[0m] [0mMerging 'META-INF/LICENSE.txt' with strategy 'rename'[0m
+[0m[[0minfo[0m] [0mMerging 'META-INF/MANIFEST.MF' with strategy 'discard'[0m
+[0m[[0minfo[0m] [0mMerging 'META-INF/INDEX.LIST' with strategy 'discard'[0m
+[0m[[0minfo[0m] [0mPackaging /home/ubuntu/FrameworkBenchmarks/unfiltered/target/scala-2.10/bench-assembly-1.0.0.jar ...[0m
+[0m[[0minfo[0m] [0mDone packaging.[0m
+[0m[[32msuccess[0m] [0mTotal time: 78 s, completed Jun 29, 2014 6:37:56 AM[0m
+
+-----------------------------------------------------
+  VERIFYING JSON (/json)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+Connection: Keep-Alive
+Content-Length: 25
+
+{"message":"Hello world"}
+
+VALIDATING JSON ... FAIL
+
+
+-----------------------------------------------------
+  VERIFYING DB (/db)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+Connection: Keep-Alive
+Content-Length: 32
+
+[{"id":3102,"randomNumber":534}]
+
+VALIDATING DB ... PASS (with warnings)
+
+
+-----------------------------------------------------
+  VERIFYING QUERY (/db?queries=2)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+Connection: Keep-Alive
+Content-Length: 65
+
+[{"id":4774,"randomNumber":1660},{"id":4956,"randomNumber":8277}]
+
+/db?queries=2 - PASS
+
+-----------------------------------------------------
+
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+Connection: Keep-Alive
+Content-Length: 2
+
+[]
+
+/db?queries=0 - WARNING
+
+-----------------------------------------------------
+
+HTTP/1.1 500 Internal Server Error
+
+Internal Server Error
+
+/db?queries=foo - WARNING
+
+-----------------------------------------------------
+
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+Connection: Keep-Alive
+Content-Length: 15919
+
+[{"id":3268,"randomNumber":1176},{"id":603,"randomNumber":2861},{"id":4896,"randomNumber":4645},{"id":2684,"randomNumber":3615},{"id":5468,"randomNumber":4193},{"id":8659,"randomNumber":3227},{"id":8112,"randomNumber":3914},{"id":8274,"randomNumber":9110},{"id":6692,"randomNumber":3732},{"id":8740,"randomNumber":1537},{"id":7884,"randomNumber":7023},{"id":1621,"randomNumber":8078},{"id":7338,"randomNumber":2625},{"id":1683,"randomNumber":4781},{"id":1126,"randomNumber":2291},{"id":5383,"randomNumber":9525},{"id":6151,"randomNumber":2919},{"id":5160,"randomNumber":3878},{"id":9483,"randomNumber":5382},{"id":2406,"randomNumber":1666},{"id":196,"randomNumber":7949},{"id":5495,"randomNumber":8602},{"id":463,"randomNumber":4103},{"id":6502,"randomNumber":7673},{"id":4208,"randomNumber":2367},{"id":3373,"randomNumber":2469},{"id":6709,"randomNumber":3629},{"id":9693,"randomNumber":1750},{"id":9041,"randomNumber":9930},{"id":4366,"randomNumber":2725},{"id":4537,"randomNumber":9024},{"id":5018,"randomNumber":8201},{"id":7823,"randomNumber":2589},{"id":509,"randomNumber":4212},{"id":2037,"randomNumber":3500},{"id":6384,"randomNumber":5452},{"id":1680,"randomNumber":8501},{"id":2973,"randomNumber":9308},{"id":138,"randomNumber":562},{"id":8258,"randomNumber":9884},{"id":3680,"randomNumber":2658},{"id":6639,"randomNumber":1932},{"id":8908,"randomNumber":2376},{"id":7255,"randomNumber":7263},{"id":7361,"randomNumber":10000},{"id":4448,"randomNumber":7435},{"id":1188,"randomNumber":5363},{"id":3098,"randomNumber":1298},{"id":404,"randomNumber":6462},{"id":8507,"randomNumber":7972},{"id":1399,"randomNumber":3785},{"id":4545,"randomNumber":4100},{"id":5109,"randomNumber":281},{"id":8896,"randomNumber":1119},{"id":628,"randomNumber":9449},{"id":5230,"randomNumber":5740},{"id":1290,"randomNumber":1728},{"id":4978,"randomNumber":3683},{"id":3038,"randomNumber":2865},{"id":7508,"randomNumber":4950},{"id":5115,"randomNumber":8772},{"id":6996,"randomNumber":848},{"id":8467,"randomNumber":1635},{"id":6053,"randomNumber":1042},{"id":2944,"randomNumber":4196},{"id":4928,"randomNumber":2034},{"id":6992,"randomNumber":6300},{"id":9236,"randomNumber":6762},{"id":2504,"randomNumber":7463},{"id":9651,"randomNumber":5528},{"id":9564,"randomNumber":7778},{"id":6712,"randomNumber":4150},{"id":8174,"randomNumber":8927},{"id":8246,"randomNumber":7965},{"id":8306,"randomNumber":9736},{"id":7548,"randomNumber":9168},{"id":4738,"randomNumber":3291},{"id":196,"randomNumber":7949},{"id":7122,"randomNumber":2404},{"id":3770,"randomNumber":7678},{"id":8867,"randomNumber":8804},{"id":2477,"randomNumber":9980},{"id":5057,"randomNumber":175},{"id":9849,"randomNumber":5062},{"id":8062,"randomNumber":4097},{"id":6245,"randomNumber":2747},{"id":5378,"randomNumber":7047},{"id":4759,"randomNumber":5123},{"id":5728,"randomNumber":4322},{"id":4826,"randomNumber":7851},{"id":1348,"randomNumber":5103},{"id":6110,"randomNumber":1637},{"id":3489,"randomNumber":5415},{"id":1136,"randomNumber":9058},{"id":93,"randomNumber":7418},{"id":139,"randomNumber":9328},{"id":5348,"randomNumber":5875},{"id":4332,"randomNumber":8837},{"id":9153,"randomNumber":255},{"id":1105,"randomNumber":1060},{"id":8247,"randomNumber":7045},{"id":4354,"randomNumber":9739},{"id":5644,"randomNumber":4112},{"id":2727,"randomNumber":7876},{"id":5532,"randomNumber":5343},{"id":2938,"randomNumber":8900},{"id":3279,"randomNumber":1830},{"id":7911,"randomNumber":4540},{"id":6208,"randomNumber":491},{"id":5297,"randomNumber":8330},{"id":8107,"randomNumber":5309},{"id":8427,"randomNumber":649},{"id":4248,"randomNumber":660},{"id":7152,"randomNumber":4244},{"id":2616,"randomNumber":1625},{"id":783,"randomNumber":2286},{"id":7697,"randomNumber":8213},{"id":4731,"randomNumber":7702},{"id":1273,"randomNumber":7691},{"id":6297,"randomNumber":4880},{"id":9997,"randomNumber":1544},{"id":8569,"randomNumber":3398},{"id":8178,"randomNumber":9474},{"id":6605,"randomNumber":9306},{"id":3802,"randomNumber":1642},{"id":3160,"randomNumber":4128},{"id":2201,"randomNumber":7640},{"id":5267,"randomNumber":6480},{"id":2522,"randomNumber":8936},{"id":8059,"randomNumber":9826},{"id":3296,"randomNumber":998},{"id":6822,"randomNumber":2853},{"id":5015,"randomNumber":2616},{"id":5766,"randomNumber":3124},{"id":2233,"randomNumber":1117},{"id":8253,"randomNumber":5209},{"id":795,"randomNumber":1921},{"id":1869,"randomNumber":5329},{"id":2909,"randomNumber":6611},{"id":7778,"randomNumber":4276},{"id":1123,"randomNumber":932},{"id":4327,"randomNumber":7422},{"id":576,"randomNumber":2215},{"id":1826,"randomNumber":1535},{"id":5154,"randomNumber":959},{"id":6429,"randomNumber":4814},{"id":8580,"randomNumber":716},{"id":332,"randomNumber":6623},{"id":2854,"randomNumber":5258},{"id":7937,"randomNumber":3381},{"id":7636,"randomNumber":7054},{"id":56,"randomNumber":7530},{"id":1493,"randomNumber":9810},{"id":7988,"randomNumber":6565},{"id":7092,"randomNumber":7074},{"id":3744,"randomNumber":687},{"id":4724,"randomNumber":2409},{"id":4969,"randomNumber":7985},{"id":1795,"randomNumber":2372},{"id":9859,"randomNumber":6289},{"id":1425,"randomNumber":5313},{"id":7859,"randomNumber":3867},{"id":5984,"randomNumber":9778},{"id":2583,"randomNumber":4936},{"id":1459,"randomNumber":7367},{"id":7594,"randomNumber":6529},{"id":7120,"randomNumber":8355},{"id":649,"randomNumber":5075},{"id":4341,"randomNumber":5912},{"id":5545,"randomNumber":5268},{"id":7578,"randomNumber":8191},{"id":6017,"randomNumber":1177},{"id":9763,"randomNumber":5524},{"id":2867,"randomNumber":6119},{"id":2000,"randomNumber":3094},{"id":4123,"randomNumber":1181},{"id":6779,"randomNumber":863},{"id":5121,"randomNumber":1916},{"id":8652,"randomNumber":3093},{"id":9162,"randomNumber":4321},{"id":9766,"randomNumber":4284},{"id":3090,"randomNumber":7752},{"id":3544,"randomNumber":6584},{"id":6955,"randomNumber":7710},{"id":5787,"randomNumber":7770},{"id":3138,"randomNumber":4099},{"id":8580,"randomNumber":716},{"id":4407,"randomNumber":9028},{"id":8340,"randomNumber":5427},{"id":960,"randomNumber":4690},{"id":6848,"randomNumber":6558},{"id":9638,"randomNumber":7088},{"id":6628,"randomNumber":2023},{"id":5321,"randomNumber":513},{"id":7076,"randomNumber":7359},{"id":624,"randomNumber":4355},{"id":1894,"randomNumber":4628},{"id":4723,"randomNumber":1625},{"id":6806,"randomNumber":3027},{"id":9808,"randomNumber":799},{"id":5101,"randomNumber":4132},{"id":9456,"randomNumber":2665},{"id":1092,"randomNumber":8895},{"id":349,"randomNumber":9910},{"id":8243,"randomNumber":3921},{"id":8580,"randomNumber":716},{"id":4512,"randomNumber":4481},{"id":9729,"randomNumber":1362},{"id":8814,"randomNumber":5225},{"id":5638,"randomNumber":8358},{"id":8271,"randomNumber":3214},{"id":8861,"randomNumber":480},{"id":9208,"randomNumber":9990},{"id":3916,"randomNumber":6411},{"id":7446,"randomNumber":3498},{"id":6418,"randomNumber":1352},{"id":8386,"randomNumber":7598},{"id":1395,"randomNumber":6214},{"id":8232,"randomNumber":9260},{"id":1615,"randomNumber":2762},{"id":5775,"randomNumber":6823},{"id":8963,"randomNumber":7826},{"id":180,"randomNumber":8287},{"id":9439,"randomNumber":314},{"id":290,"randomNumber":1210},{"id":4059,"randomNumber":115},{"id":4452,"randomNumber":9639},{"id":4109,"randomNumber":5535},{"id":2370,"randomNumber":3160},{"id":7455,"randomNumber":8001},{"id":7524,"randomNumber":6001},{"id":211,"randomNumber":1000},{"id":4169,"randomNumber":2614},{"id":8560,"randomNumber":2789},{"id":7255,"randomNumber":7263},{"id":6878,"randomNumber":8971},{"id":6582,"randomNumber":6645},{"id":5103,"randomNumber":1926},{"id":4995,"randomNumber":6223},{"id":3592,"randomNumber":9612},{"id":3441,"randomNumber":6493},{"id":6104,"randomNumber":4123},{"id":8493,"randomNumber":984},{"id":5716,"randomNumber":5878},{"id":645,"randomNumber":3360},{"id":984,"randomNumber":5446},{"id":5566,"randomNumber":9042},{"id":456,"randomNumber":6093},{"id":9386,"randomNumber":8188},{"id":478,"randomNumber":5498},{"id":1426,"randomNumber":7938},{"id":2676,"randomNumber":2000},{"id":5282,"randomNumber":7674},{"id":9097,"randomNumber":2854},{"id":1718,"randomNumber":8200},{"id":2333,"randomNumber":1169},{"id":5228,"randomNumber":912},{"id":8442,"randomNumber":230},{"id":8578,"randomNumber":4532},{"id":4494,"randomNumber":6547},{"id":7356,"randomNumber":5417},{"id":7827,"randomNumber":3494},{"id":6470,"randomNumber":4091},{"id":4887,"randomNumber":3101},{"id":5982,"randomNumber":5138},{"id":3002,"randomNumber":2353},{"id":4924,"randomNumber":6979},{"id":5270,"randomNumber":2740},{"id":5448,"randomNumber":5406},{"id":9466,"randomNumber":4200},{"id":8170,"randomNumber":957},{"id":980,"randomNumber":7632},{"id":48,"randomNumber":5719},{"id":9637,"randomNumber":2420},{"id":8384,"randomNumber":9324},{"id":2166,"randomNumber":4374},{"id":8487,"randomNumber":5238},{"id":1275,"randomNumber":94},{"id":8757,"randomNumber":1477},{"id":1686,"randomNumber":3707},{"id":7660,"randomNumber":6875},{"id":7865,"randomNumber":9904},{"id":4713,"randomNumber":8245},{"id":747,"randomNumber":4214},{"id":4684,"randomNumber":3850},{"id":763,"randomNumber":4714},{"id":3143,"randomNumber":9061},{"id":506,"randomNumber":2543},{"id":6166,"randomNumber":4941},{"id":3348,"randomNumber":2676},{"id":9801,"randomNumber":8221},{"id":1736,"randomNumber":6047},{"id":2556,"randomNumber":6204},{"id":5072,"randomNumber":493},{"id":8695,"randomNumber":754},{"id":6913,"randomNumber":2615},{"id":7295,"randomNumber":2931},{"id":8501,"randomNumber":3580},{"id":3330,"randomNumber":627},{"id":2391,"randomNumber":454},{"id":9248,"randomNumber":3841},{"id":3901,"randomNumber":427},{"id":8750,"randomNumber":1412},{"id":7818,"randomNumber":7298},{"id":2626,"randomNumber":2280},{"id":319,"randomNumber":5078},{"id":1596,"randomNumber":1155},{"id":3040,"randomNumber":8817},{"id":5860,"randomNumber":7607},{"id":2632,"randomNumber":7793},{"id":8646,"randomNumber":554},{"id":1386,"randomNumber":6394},{"id":8502,"randomNumber":8627},{"id":2596,"randomNumber":7130},{"id":1057,"randomNumber":3826},{"id":550,"randomNumber":6874},{"id":4250,"randomNumber":7095},{"id":8122,"randomNumber":1649},{"id":4085,"randomNumber":4480},{"id":1869,"randomNumber":5329},{"id":4074,"randomNumber":8322},{"id":9446,"randomNumber":3050},{"id":5981,"randomNumber":696},{"id":155,"randomNumber":8732},{"id":404,"randomNumber":6462},{"id":2092,"randomNumber":3490},{"id":37,"randomNumber":7836},{"id":1291,"randomNumber":3575},{"id":6321,"randomNumber":1927},{"id":8485,"randomNumber":4323},{"id":6892,"randomNumber":1692},{"id":5839,"randomNumber":580},{"id":4209,"randomNumber":1581},{"id":4351,"randomNumber":2554},{"id":3992,"randomNumber":9942},{"id":3503,"randomNumber":1426},{"id":6540,"randomNumber":5246},{"id":6650,"randomNumber":7806},{"id":2112,"randomNumber":7348},{"id":2052,"randomNumber":2090},{"id":2050,"randomNumber":4335},{"id":5347,"randomNumber":7170},{"id":1162,"randomNumber":7467},{"id":5144,"randomNumber":8611},{"id":9732,"randomNumber":7221},{"id":7144,"randomNumber":3223},{"id":2339,"randomNumber":2056},{"id":661,"randomNumber":8878},{"id":8606,"randomNumber":4281},{"id":552,"randomNumber":4925},{"id":2777,"randomNumber":6529},{"id":4765,"randomNumber":7720},{"id":3926,"randomNumber":1100},{"id":3175,"randomNumber":3824},{"id":2848,"randomNumber":4043},{"id":1316,"randomNumber":4563},{"id":6451,"randomNumber":8123},{"id":4239,"randomNumber":2340},{"id":7291,"randomNumber":9323},{"id":121,"randomNumber":7860},{"id":2830,"randomNumber":2116},{"id":9814,"randomNumber":4378},{"id":6123,"randomNumber":4894},{"id":9109,"randomNumber":2973},{"id":6470,"randomNumber":4091},{"id":5458,"randomNumber":641},{"id":2153,"randomNumber":1410},{"id":3750,"randomNumber":7528},{"id":1156,"randomNumber":8179},{"id":6963,"randomNumber":9112},{"id":1513,"randomNumber":6915},{"id":9414,"randomNumber":997},{"id":7467,"randomNumber":3561},{"id":2811,"randomNumber":5934},{"id":1486,"randomNumber":1915},{"id":5885,"randomNumber":4319},{"id":2839,"randomNumber":34},{"id":96,"randomNumber":319},{"id":8315,"randomNumber":7741},{"id":3623,"randomNumber":6246},{"id":2251,"randomNumber":5377},{"id":4176,"randomNumber":6216},{"id":4096,"randomNumber":5310},{"id":4158,"randomNumber":5539},{"id":5576,"randomNumber":2934},{"id":3833,"randomNumber":763},{"id":3121,"randomNumber":5197},{"id":5228,"randomNumber":912},{"id":530,"randomNumber":3574},{"id":9107,"randomNumber":2449},{"id":8604,"randomNumber":5831},{"id":251,"randomNumber":1769},{"id":6325,"randomNumber":6240},{"id":6066,"randomNumber":3315},{"id":6441,"randomNumber":9604},{"id":7148,"randomNumber":3000},{"id":6758,"randomNumber":8411},{"id":4900,"randomNumber":9928},{"id":2365,"randomNumber":7636},{"id":2714,"randomNumber":2405},{"id":2836,"randomNumber":9712},{"id":2305,"randomNumber":780},{"id":1753,"randomNumber":8215},{"id":6040,"randomNumber":7665},{"id":2293,"randomNumber":9277},{"id":1959,"randomNumber":2883},{"id":3754,"randomNumber":3048},{"id":8743,"randomNumber":7999},{"id":9415,"randomNumber":6073},{"id":8389,"randomNumber":3718},{"id":747,"randomNumber":4214},{"id":1053,"randomNumber":7633},{"id":5174,"randomNumber":2146},{"id":531,"randomNumber":6756},{"id":6238,"randomNumber":3009},{"id":6486,"randomNumber":462},{"id":9608,"randomNumber":7021},{"id":6947,"randomNumber":2444},{"id":9427,"randomNumber":2569},{"id":8554,"randomNumber":8239},{"id":5116,"randomNumber":1051},{"id":8630,"randomNumber":8006},{"id":6922,"randomNumber":2198},{"id":39,"randomNumber":9177},{"id":8851,"randomNumber":4341},{"id":4425,"randomNumber":6652},{"id":422,"randomNumber":1843},{"id":7773,"randomNumber":5345},{"id":1914,"randomNumber":353},{"id":8394,"randomNumber":1014},{"id":2044,"randomNumber":6057},{"id":6776,"randomNumber":6187},{"id":9122,"randomNumber":8900},{"id":1282,"randomNumber":4283},{"id":4691,"randomNumber":768},{"id":7782,"randomNumber":4632},{"id":8965,"randomNumber":9256},{"id":5368,"randomNumber":2385},{"id":2667,"randomNumber":1022},{"id":1719,"randomNumber":2921},{"id":552,"randomNumber":4925},{"id":3523,"randomNumber":5371},{"id":3985,"randomNumber":2686},{"id":2387,"randomNumber":921},{"id":7847,"randomNumber":6680},{"id":2067,"randomNumber":7688},{"id":2687,"randomNumber":1719},{"id":6510,"randomNumber":6594},{"id":8973,"randomNumber":2232},{"id":5260,"randomNumber":6923},{"id":8072,"randomNumber":2033},{"id":3228,"randomNumber":6886},{"id":9559,"randomNumber":2549},{"id":612,"randomNumber":7869},{"id":2079,"randomNumber":5678},{"id":2262,"randomNumber":2250},{"id":5878,"randomNumber":5660},{"id":9047,"randomNumber":2596},{"id":5355,"randomNumber":211},{"id":9772,"randomNumber":7996},{"id":897,"randomNumber":1927},{"id":5124,"randomNumber":44},{"id":5162,"randomNumber":8117},{"id":2853,"randomNumber":2981},{"id":5885,"randomNumber":4319},{"id":7128,"randomNumber":2008},{"id":319,"randomNumber":5078},{"id":9431,"randomNumber":7792},{"id":6203,"randomNumber":1144},{"id":53,"randomNumber":7677},{"id":6756,"randomNumber":1972},{"id":1853,"randomNumber":4355},{"id":1509,"randomNumber":5806},{"id":5181,"randomNumber":99},{"id":4401,"randomNumber":6878},{"id":4900,"randomNumber":9928},{"id":2134,"randomNumber":955},{"id":6355,"randomNumber":6928},{"id":9142,"randomNumber":9395},{"id":8579,"randomNumber":5220},{"id":1870,"randomNumber":1487},{"id":2317,"randomNumber":7694},{"id":8693,"randomNumber":3516},{"id":8417,"randomNumber":7496},{"id":3036,"randomNumber":1485},{"id":4136,"randomNumber":409},{"id":3294,"randomNumber":7400},{"id":9804,"randomNumber":2839},{"id":3392,"randomNumber":6905},{"id":1200,"randomNumber":6714},{"id":1586,"randomNumber":6317},{"id":2166,"randomNumber":4374},{"id":4997,"randomNumber":8843},{"id":8568,"randomNumber":9745},{"id":1715,"randomNumber":296},{"id":4650,"randomNumber":4358},{"id":5648,"randomNumber":8723},{"id":6729,"randomNumber":7308},{"id":6469,"randomNumber":2635},{"id":1411,"randomNumber":7565},{"id":88,"randomNumber":5419}]
+
+/db?queries=501 - WARNING
+
+-----------------------------------------------------
+
+
+VALIDATING QUERY ... PASS (with warnings)
+
+
+-----------------------------------------------------
+  Benchmarking unfiltered ...
+-----------------------------------------------------
+BENCHMARKING JSON ... Complete
+BENCHMARKING DB ... Complete
+BENCHMARKING Query ... Complete
+
+-----------------------------------------------------
+  Stopping unfiltered
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Stopped unfiltered
+-----------------------------------------------------
+
+----------------------------------------------------
+Saving results through unfiltered
+----------------------------------------------------

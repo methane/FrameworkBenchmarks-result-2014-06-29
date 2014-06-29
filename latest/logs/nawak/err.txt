@@ -1,0 +1,14 @@
+restart: Unknown instance: 
+Sat, 28 Jun 2014 23:50:08 GMT [WARN] (errno: None) No option --db given, using "config.sqlite" as the default.
+Sat, 28 Jun 2014 23:50:09 GMT [INFO] (src/mime.c:49) MAX limits.mime_ext_len=128
+Sat, 28 Jun 2014 23:50:09 GMT [INFO] (src/host.c:74) MAX limits.url_path=256, limits.host_name=256
+Sat, 28 Jun 2014 23:50:09 GMT [INFO] (src/handler.c:343) MAX limits.handler_stack=102400
+Sat, 28 Jun 2014 23:50:09 GMT [INFO] (src/config/config.c:85) Loaded handler 1:tcp://127.0.0.1:9999:0138a43-micro-nimrod:tcp://127.0.0.1:9998:
+Sat, 28 Jun 2014 23:50:09 GMT [INFO] (src/config/config.c:227) Loaded route 1:/:handler for host 1:localhost
+Sat, 28 Jun 2014 23:50:09 GMT [INFO] (src/config/config.c:312) Loaded 1 hosts for server 1:bd81667c-505a-41da-952c-1e672338db8a
+Sat, 28 Jun 2014 23:50:09 GMT [INFO] (src/server.c:445) LOADING Handler tcp://127.0.0.1:9999
+Sat, 28 Jun 2014 23:50:09 GMT [INFO] (src/unixy.c:139) Process 27638 is not running anymore, so removing PID file .//run/mongrel2.pid.
+Sat, 28 Jun 2014 23:50:09 GMT [INFO] (src/mongrel2.c:223) All loaded up, time to turn into a server.
+Sat, 28 Jun 2014 23:50:09 GMT [INFO] (src/mongrel2.c:224) -- Starting Mongrel2/1.8.1. Copyright (C) Zed A. Shaw. Licensed BSD.
+
+Sat, 28 Jun 2014 23:50:09 GMT [INFO] (src/mongrel2.c:225) -- Look in /logs/error.log for startup messages and errors.

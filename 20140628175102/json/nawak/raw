@@ -1,0 +1,122 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer nawak
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:6767/json
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:6767/json
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   533.38us  330.37us   8.33ms   93.73%
+    Req/Sec     1.96k   273.40     3.00k    75.10%
+  74314 requests in 5.00s, 6.95MB read
+Requests/sec:  14867.28
+Transfer/sec:      1.39MB
+
+---------------------------------------------------------
+ Running Warmup nawak
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:6767/json
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:6767/json
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    10.63ms    5.96ms  91.29ms   82.53%
+    Req/Sec     6.07k   596.63     8.34k    71.64%
+  357843 requests in 15.00s, 33.44MB read
+Requests/sec:  23853.16
+Transfer/sec:      2.23MB
+
+---------------------------------------------------------
+ Concurrency: 8 for nawak
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:6767/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:6767/json
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   526.86us  311.15us   7.43ms   92.47%
+    Req/Sec     3.91k   427.94     5.33k    69.41%
+  221964 requests in 15.00s, 20.74MB read
+Requests/sec:  14798.07
+Transfer/sec:      1.38MB
+
+---------------------------------------------------------
+ Concurrency: 16 for nawak
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:6767/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:6767/json
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     0.92ms  655.55us   8.84ms   92.59%
+    Req/Sec     4.61k   662.09     7.33k    74.06%
+  261647 requests in 15.00s, 24.45MB read
+Requests/sec:  17444.25
+Transfer/sec:      1.63MB
+
+---------------------------------------------------------
+ Concurrency: 32 for nawak
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:6767/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:6767/json
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.66ms    1.08ms  12.76ms   86.63%
+    Req/Sec     5.12k   734.78     9.67k    74.74%
+  290977 requests in 15.00s, 27.19MB read
+Requests/sec:  19400.35
+Transfer/sec:      1.81MB
+
+---------------------------------------------------------
+ Concurrency: 64 for nawak
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:6767/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:6767/json
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     3.03ms    1.94ms  25.69ms   83.80%
+    Req/Sec     5.60k   786.69    11.80k    73.36%
+  318382 requests in 15.00s, 29.76MB read
+Requests/sec:  21224.57
+Transfer/sec:      1.98MB
+
+---------------------------------------------------------
+ Concurrency: 128 for nawak
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:6767/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:6767/json
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     5.61ms    3.10ms  42.73ms   81.74%
+    Req/Sec     5.87k   565.67     9.71k    72.49%
+  342760 requests in 15.00s, 32.03MB read
+Requests/sec:  22849.67
+Transfer/sec:      2.14MB
+
+---------------------------------------------------------
+ Concurrency: 256 for nawak
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:6767/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:6767/json
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    10.72ms    6.67ms 104.75ms   84.83%
+    Req/Sec     6.05k   473.30     8.09k    68.61%
+  357995 requests in 15.00s, 33.46MB read
+Requests/sec:  23866.06
+Transfer/sec:      2.23MB

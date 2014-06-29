@@ -1,0 +1,96 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer evhttp-sharp
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8085/plaintext
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8085/plaintext
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   677.76us    2.89ms  27.06ms   97.55%
+    Req/Sec     3.87k     1.48k    9.22k    70.97%
+  145664 requests in 5.00s, 18.61MB read
+Requests/sec:  29143.04
+Transfer/sec:      3.72MB
+
+---------------------------------------------------------
+ Running Warmup evhttp-sharp
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8085/plaintext
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8085/plaintext
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     7.37ms    9.09ms  64.93ms   87.48%
+    Req/Sec    10.99k     4.91k   25.83k    63.98%
+  607928 requests in 15.00s, 77.69MB read
+Requests/sec:  40526.60
+Transfer/sec:      5.18MB
+
+---------------------------------------------------------
+ Concurrency: 256 for evhttp-sharp
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8085/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8085/plaintext
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    88.79ms   37.23ms 193.43ms   62.71%
+    Req/Sec    11.89k     1.99k   20.32k    69.01%
+  703912 requests in 15.00s, 89.95MB read
+Requests/sec:  46930.32
+Transfer/sec:      6.00MB
+
+---------------------------------------------------------
+ Concurrency: 1024 for evhttp-sharp
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 1024 --timeout 1024 -t 4 http://127.0.0.1:8085/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8085/plaintext
+  4 threads and 1024 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   356.68ms  140.16ms 701.28ms   63.84%
+    Req/Sec    12.18k     3.20k   17.72k    59.15%
+  680974 requests in 15.00s, 87.02MB read
+Requests/sec:  45398.06
+Transfer/sec:      5.80MB
+
+---------------------------------------------------------
+ Concurrency: 4096 for evhttp-sharp
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 4096 --timeout 4096 -t 4 http://127.0.0.1:8085/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8085/plaintext
+  4 threads and 4096 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.57s   235.17ms   2.03s    58.98%
+    Req/Sec    10.34k   217.21    10.78k    59.09%
+  618954 requests in 15.00s, 79.10MB read
+  Socket errors: connect 0, read 0, write 0, timeout 49
+Requests/sec:  41276.64
+Transfer/sec:      5.27MB
+
+---------------------------------------------------------
+ Concurrency: 16384 for evhttp-sharp
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16384 --timeout 16384 -t 4 http://127.0.0.1:8085/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8085/plaintext
+  4 threads and 16384 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     0.00us    0.00us   0.00us    -nan%
+    Req/Sec     0.00      0.00     0.00      -nan%
+  569415 requests in 15.00s, 72.77MB read
+  Socket errors: connect 0, read 0, write 0, timeout 400
+Requests/sec:  37969.88
+Transfer/sec:      4.85MB

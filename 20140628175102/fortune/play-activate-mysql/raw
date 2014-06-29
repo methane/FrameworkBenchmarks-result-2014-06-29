@@ -1,0 +1,122 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer play-activate-mysql
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:9000/fortunes
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:9000/fortunes
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     3.78ms    4.11ms  32.06ms   89.88%
+    Req/Sec   352.29    153.73   846.00     68.70%
+  13267 requests in 4.98s, 29.16MB read
+Requests/sec:   2661.88
+Transfer/sec:      5.85MB
+
+---------------------------------------------------------
+ Running Warmup play-activate-mysql
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:9000/fortunes
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:9000/fortunes
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    79.85ms  115.30ms 544.17ms   88.37%
+    Req/Sec   806.54    164.45     1.77k    83.80%
+  47722 requests in 15.00s, 104.90MB read
+Requests/sec:   3182.00
+Transfer/sec:      6.99MB
+
+---------------------------------------------------------
+ Concurrency: 8 for play-activate-mysql
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:9000/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:9000/fortunes
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     2.97ms    3.01ms  31.91ms   90.52%
+    Req/Sec   809.70    237.48     1.67k    71.35%
+  46073 requests in 15.00s, 101.28MB read
+Requests/sec:   3072.09
+Transfer/sec:      6.75MB
+
+---------------------------------------------------------
+ Concurrency: 16 for play-activate-mysql
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:9000/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:9000/fortunes
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     5.23ms    4.00ms  44.70ms   85.97%
+    Req/Sec   814.33    160.36     1.50k    72.71%
+  47407 requests in 15.00s, 104.21MB read
+Requests/sec:   3160.41
+Transfer/sec:      6.95MB
+
+---------------------------------------------------------
+ Concurrency: 32 for play-activate-mysql
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:9000/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:9000/fortunes
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    10.16ms    7.59ms  78.09ms   82.79%
+    Req/Sec   808.60    115.16     1.17k    75.76%
+  47876 requests in 15.00s, 105.24MB read
+Requests/sec:   3191.72
+Transfer/sec:      7.02MB
+
+---------------------------------------------------------
+ Concurrency: 64 for play-activate-mysql
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:9000/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:9000/fortunes
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    20.58ms   13.82ms 130.16ms   74.54%
+    Req/Sec   800.62     75.34     1.00k    71.75%
+  47726 requests in 15.00s, 104.91MB read
+Requests/sec:   3181.81
+Transfer/sec:      6.99MB
+
+---------------------------------------------------------
+ Concurrency: 128 for play-activate-mysql
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:9000/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:9000/fortunes
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    40.14ms   35.12ms 266.03ms   81.14%
+    Req/Sec   805.58    118.90     1.28k    75.10%
+  47757 requests in 15.00s, 104.98MB read
+Requests/sec:   3183.61
+Transfer/sec:      7.00MB
+
+---------------------------------------------------------
+ Concurrency: 256 for play-activate-mysql
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:9000/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:9000/fortunes
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    80.85ms   76.27ms 753.08ms   83.45%
+    Req/Sec   796.46     82.39     1.13k    72.34%
+  47616 requests in 15.00s, 104.67MB read
+Requests/sec:   3173.94
+Transfer/sec:      6.98MB

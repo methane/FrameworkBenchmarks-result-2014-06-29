@@ -1,0 +1,1420 @@
+restart: Unknown instance: 
+2014-06-29 02:09:45 [434] [INFO] Starting gunicorn 18.0
+2014-06-29 02:09:45 [434] [INFO] Listening at: http://0.0.0.0:6543 (434)
+2014-06-29 02:09:45 [434] [INFO] Using worker: sync
+2014-06-29 02:09:45 [439] [INFO] Booting worker with pid: 439
+2014-06-29 02:09:45 [440] [INFO] Booting worker with pid: 440
+2014-06-29 02:09:46 [441] [INFO] Booting worker with pid: 441
+2014-06-29 02:09:46 [442] [INFO] Booting worker with pid: 442
+2014-06-29 02:09:46 [443] [INFO] Booting worker with pid: 443
+2014-06-29 02:09:46 [452] [INFO] Booting worker with pid: 452
+2014-06-29 02:09:46 [453] [INFO] Booting worker with pid: 453
+2014-06-29 02:09:46 [459] [INFO] Booting worker with pid: 459
+2014-06-29 02:09:46 [462] [INFO] Booting worker with pid: 462
+2014-06-29 02:09:46 [463] [INFO] Booting worker with pid: 463
+2014-06-29 02:09:46 [464] [INFO] Booting worker with pid: 464
+2014-06-29 02:09:46 [465] [INFO] Booting worker with pid: 465
+2014-06-29 02:12:20 [462] [ERROR] Error handling request
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 131, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 242, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 217, in invoke_subrequest
+    response = handle_request(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/tweens.py", line 21, in excview_tween
+    response = handler(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 163, in handle_request
+    response = view_callable(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 355, in rendered_view
+    result = view(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 501, in _requestonly_view
+    response = view(request)
+  File "/home/ubuntu/FrameworkBenchmarks/pyramid/frameworkbenchmarks/views.py", line 25, in test_2
+    result = DBSession.query(World).filter(World.id == num).one()
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2367, in one
+    raise orm_exc.NoResultFound("No row was found for one()")
+NoResultFound: No row was found for one()
+2014-06-29 02:12:33 [439] [ERROR] Error handling request
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 131, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 242, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 217, in invoke_subrequest
+    response = handle_request(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/tweens.py", line 21, in excview_tween
+    response = handler(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 163, in handle_request
+    response = view_callable(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 355, in rendered_view
+    result = view(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 501, in _requestonly_view
+    response = view(request)
+  File "/home/ubuntu/FrameworkBenchmarks/pyramid/frameworkbenchmarks/views.py", line 25, in test_2
+    result = DBSession.query(World).filter(World.id == num).one()
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2367, in one
+    raise orm_exc.NoResultFound("No row was found for one()")
+NoResultFound: No row was found for one()
+2014-06-29 02:12:42 [464] [ERROR] Error handling request
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 131, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 242, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 217, in invoke_subrequest
+    response = handle_request(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/tweens.py", line 21, in excview_tween
+    response = handler(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 163, in handle_request
+    response = view_callable(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 355, in rendered_view
+    result = view(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 501, in _requestonly_view
+    response = view(request)
+  File "/home/ubuntu/FrameworkBenchmarks/pyramid/frameworkbenchmarks/views.py", line 25, in test_2
+    result = DBSession.query(World).filter(World.id == num).one()
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2367, in one
+    raise orm_exc.NoResultFound("No row was found for one()")
+NoResultFound: No row was found for one()
+2014-06-29 02:12:48 [442] [ERROR] Error handling request
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 131, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 242, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 217, in invoke_subrequest
+    response = handle_request(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/tweens.py", line 21, in excview_tween
+    response = handler(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 163, in handle_request
+    response = view_callable(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 355, in rendered_view
+    result = view(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 501, in _requestonly_view
+    response = view(request)
+  File "/home/ubuntu/FrameworkBenchmarks/pyramid/frameworkbenchmarks/views.py", line 25, in test_2
+    result = DBSession.query(World).filter(World.id == num).one()
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2367, in one
+    raise orm_exc.NoResultFound("No row was found for one()")
+NoResultFound: No row was found for one()
+2014-06-29 02:12:57 [465] [ERROR] Error handling request
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 131, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 242, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 217, in invoke_subrequest
+    response = handle_request(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/tweens.py", line 21, in excview_tween
+    response = handler(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 163, in handle_request
+    response = view_callable(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 355, in rendered_view
+    result = view(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 501, in _requestonly_view
+    response = view(request)
+  File "/home/ubuntu/FrameworkBenchmarks/pyramid/frameworkbenchmarks/views.py", line 25, in test_2
+    result = DBSession.query(World).filter(World.id == num).one()
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2367, in one
+    raise orm_exc.NoResultFound("No row was found for one()")
+NoResultFound: No row was found for one()
+2014-06-29 02:13:02 [443] [ERROR] Error handling request
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 131, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 242, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 217, in invoke_subrequest
+    response = handle_request(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/tweens.py", line 21, in excview_tween
+    response = handler(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 163, in handle_request
+    response = view_callable(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 355, in rendered_view
+    result = view(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 501, in _requestonly_view
+    response = view(request)
+  File "/home/ubuntu/FrameworkBenchmarks/pyramid/frameworkbenchmarks/views.py", line 25, in test_2
+    result = DBSession.query(World).filter(World.id == num).one()
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2367, in one
+    raise orm_exc.NoResultFound("No row was found for one()")
+NoResultFound: No row was found for one()
+2014-06-29 02:13:04 [440] [ERROR] Error handling request
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 131, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 242, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 217, in invoke_subrequest
+    response = handle_request(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/tweens.py", line 21, in excview_tween
+    response = handler(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 163, in handle_request
+    response = view_callable(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 355, in rendered_view
+    result = view(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 501, in _requestonly_view
+    response = view(request)
+  File "/home/ubuntu/FrameworkBenchmarks/pyramid/frameworkbenchmarks/views.py", line 25, in test_2
+    result = DBSession.query(World).filter(World.id == num).one()
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2367, in one
+    raise orm_exc.NoResultFound("No row was found for one()")
+NoResultFound: No row was found for one()
+2014-06-29 02:13:13 [442] [ERROR] Error handling request
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 131, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 242, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 217, in invoke_subrequest
+    response = handle_request(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/tweens.py", line 21, in excview_tween
+    response = handler(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 163, in handle_request
+    response = view_callable(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 355, in rendered_view
+    result = view(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 501, in _requestonly_view
+    response = view(request)
+  File "/home/ubuntu/FrameworkBenchmarks/pyramid/frameworkbenchmarks/views.py", line 25, in test_2
+    result = DBSession.query(World).filter(World.id == num).one()
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2367, in one
+    raise orm_exc.NoResultFound("No row was found for one()")
+NoResultFound: No row was found for one()
+2014-06-29 02:13:20 [463] [ERROR] Error handling request
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 131, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 242, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 217, in invoke_subrequest
+    response = handle_request(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/tweens.py", line 21, in excview_tween
+    response = handler(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 163, in handle_request
+    response = view_callable(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 355, in rendered_view
+    result = view(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 501, in _requestonly_view
+    response = view(request)
+  File "/home/ubuntu/FrameworkBenchmarks/pyramid/frameworkbenchmarks/views.py", line 25, in test_2
+    result = DBSession.query(World).filter(World.id == num).one()
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2367, in one
+    raise orm_exc.NoResultFound("No row was found for one()")
+NoResultFound: No row was found for one()
+2014-06-29 02:13:28 [442] [ERROR] Error handling request
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 131, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 242, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 217, in invoke_subrequest
+    response = handle_request(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/tweens.py", line 21, in excview_tween
+    response = handler(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 163, in handle_request
+    response = view_callable(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 355, in rendered_view
+    result = view(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 501, in _requestonly_view
+    response = view(request)
+  File "/home/ubuntu/FrameworkBenchmarks/pyramid/frameworkbenchmarks/views.py", line 25, in test_2
+    result = DBSession.query(World).filter(World.id == num).one()
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2367, in one
+    raise orm_exc.NoResultFound("No row was found for one()")
+NoResultFound: No row was found for one()
+2014-06-29 02:13:33 [459] [ERROR] Error handling request
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 131, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 242, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 217, in invoke_subrequest
+    response = handle_request(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/tweens.py", line 21, in excview_tween
+    response = handler(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 163, in handle_request
+    response = view_callable(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 355, in rendered_view
+    result = view(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 501, in _requestonly_view
+    response = view(request)
+  File "/home/ubuntu/FrameworkBenchmarks/pyramid/frameworkbenchmarks/views.py", line 25, in test_2
+    result = DBSession.query(World).filter(World.id == num).one()
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2367, in one
+    raise orm_exc.NoResultFound("No row was found for one()")
+NoResultFound: No row was found for one()
+2014-06-29 02:13:38 [453] [ERROR] Error handling request
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 131, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 242, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 217, in invoke_subrequest
+    response = handle_request(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/tweens.py", line 21, in excview_tween
+    response = handler(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 163, in handle_request
+    response = view_callable(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 355, in rendered_view
+    result = view(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 501, in _requestonly_view
+    response = view(request)
+  File "/home/ubuntu/FrameworkBenchmarks/pyramid/frameworkbenchmarks/views.py", line 25, in test_2
+    result = DBSession.query(World).filter(World.id == num).one()
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2367, in one
+    raise orm_exc.NoResultFound("No row was found for one()")
+NoResultFound: No row was found for one()
+2014-06-29 02:13:41 [440] [ERROR] Error handling request
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 131, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 242, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 217, in invoke_subrequest
+    response = handle_request(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/tweens.py", line 21, in excview_tween
+    response = handler(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 163, in handle_request
+    response = view_callable(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 355, in rendered_view
+    result = view(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 501, in _requestonly_view
+    response = view(request)
+  File "/home/ubuntu/FrameworkBenchmarks/pyramid/frameworkbenchmarks/views.py", line 25, in test_2
+    result = DBSession.query(World).filter(World.id == num).one()
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2367, in one
+    raise orm_exc.NoResultFound("No row was found for one()")
+NoResultFound: No row was found for one()
+2014-06-29 02:13:42 [464] [ERROR] Error handling request
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 131, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 242, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 217, in invoke_subrequest
+    response = handle_request(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/tweens.py", line 21, in excview_tween
+    response = handler(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 163, in handle_request
+    response = view_callable(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 355, in rendered_view
+    result = view(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 501, in _requestonly_view
+    response = view(request)
+  File "/home/ubuntu/FrameworkBenchmarks/pyramid/frameworkbenchmarks/views.py", line 25, in test_2
+    result = DBSession.query(World).filter(World.id == num).one()
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2367, in one
+    raise orm_exc.NoResultFound("No row was found for one()")
+NoResultFound: No row was found for one()
+2014-06-29 02:13:49 [462] [ERROR] Error handling request
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 131, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 242, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 217, in invoke_subrequest
+    response = handle_request(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/tweens.py", line 21, in excview_tween
+    response = handler(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 163, in handle_request
+    response = view_callable(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 355, in rendered_view
+    result = view(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 501, in _requestonly_view
+    response = view(request)
+  File "/home/ubuntu/FrameworkBenchmarks/pyramid/frameworkbenchmarks/views.py", line 25, in test_2
+    result = DBSession.query(World).filter(World.id == num).one()
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2367, in one
+    raise orm_exc.NoResultFound("No row was found for one()")
+NoResultFound: No row was found for one()
+2014-06-29 02:13:57 [453] [ERROR] Error handling request
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 131, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 242, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 217, in invoke_subrequest
+    response = handle_request(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/tweens.py", line 21, in excview_tween
+    response = handler(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 163, in handle_request
+    response = view_callable(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 355, in rendered_view
+    result = view(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 501, in _requestonly_view
+    response = view(request)
+  File "/home/ubuntu/FrameworkBenchmarks/pyramid/frameworkbenchmarks/views.py", line 25, in test_2
+    result = DBSession.query(World).filter(World.id == num).one()
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2367, in one
+    raise orm_exc.NoResultFound("No row was found for one()")
+NoResultFound: No row was found for one()
+2014-06-29 02:13:58 [453] [ERROR] Error handling request
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 131, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 242, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 217, in invoke_subrequest
+    response = handle_request(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/tweens.py", line 21, in excview_tween
+    response = handler(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 163, in handle_request
+    response = view_callable(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 355, in rendered_view
+    result = view(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 501, in _requestonly_view
+    response = view(request)
+  File "/home/ubuntu/FrameworkBenchmarks/pyramid/frameworkbenchmarks/views.py", line 25, in test_2
+    result = DBSession.query(World).filter(World.id == num).one()
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2367, in one
+    raise orm_exc.NoResultFound("No row was found for one()")
+NoResultFound: No row was found for one()
+2014-06-29 02:14:09 [462] [ERROR] Error handling request
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 131, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 242, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 217, in invoke_subrequest
+    response = handle_request(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/tweens.py", line 21, in excview_tween
+    response = handler(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 163, in handle_request
+    response = view_callable(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 355, in rendered_view
+    result = view(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 501, in _requestonly_view
+    response = view(request)
+  File "/home/ubuntu/FrameworkBenchmarks/pyramid/frameworkbenchmarks/views.py", line 25, in test_2
+    result = DBSession.query(World).filter(World.id == num).one()
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2367, in one
+    raise orm_exc.NoResultFound("No row was found for one()")
+NoResultFound: No row was found for one()
+2014-06-29 02:14:11 [462] [ERROR] Error handling request
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 131, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 242, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 217, in invoke_subrequest
+    response = handle_request(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/tweens.py", line 21, in excview_tween
+    response = handler(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 163, in handle_request
+    response = view_callable(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 355, in rendered_view
+    result = view(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 501, in _requestonly_view
+    response = view(request)
+  File "/home/ubuntu/FrameworkBenchmarks/pyramid/frameworkbenchmarks/views.py", line 25, in test_2
+    result = DBSession.query(World).filter(World.id == num).one()
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2367, in one
+    raise orm_exc.NoResultFound("No row was found for one()")
+NoResultFound: No row was found for one()
+2014-06-29 02:14:15 [462] [ERROR] Error handling request
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 131, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 242, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 217, in invoke_subrequest
+    response = handle_request(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/tweens.py", line 21, in excview_tween
+    response = handler(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 163, in handle_request
+    response = view_callable(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 355, in rendered_view
+    result = view(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 501, in _requestonly_view
+    response = view(request)
+  File "/home/ubuntu/FrameworkBenchmarks/pyramid/frameworkbenchmarks/views.py", line 25, in test_2
+    result = DBSession.query(World).filter(World.id == num).one()
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2367, in one
+    raise orm_exc.NoResultFound("No row was found for one()")
+NoResultFound: No row was found for one()
+2014-06-29 02:14:25 [439] [ERROR] Error handling request
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 131, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 242, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 217, in invoke_subrequest
+    response = handle_request(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/tweens.py", line 21, in excview_tween
+    response = handler(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 163, in handle_request
+    response = view_callable(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 355, in rendered_view
+    result = view(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 501, in _requestonly_view
+    response = view(request)
+  File "/home/ubuntu/FrameworkBenchmarks/pyramid/frameworkbenchmarks/views.py", line 46, in test_3
+    for num in [randint(1, 10001) for _ in range(1, queries + 1)]
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2367, in one
+    raise orm_exc.NoResultFound("No row was found for one()")
+NoResultFound: No row was found for one()
+2014-06-29 02:14:25 [442] [ERROR] Error handling request
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 131, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 242, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 217, in invoke_subrequest
+    response = handle_request(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/tweens.py", line 21, in excview_tween
+    response = handler(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 163, in handle_request
+    response = view_callable(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 355, in rendered_view
+    result = view(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 501, in _requestonly_view
+    response = view(request)
+  File "/home/ubuntu/FrameworkBenchmarks/pyramid/frameworkbenchmarks/views.py", line 46, in test_3
+    for num in [randint(1, 10001) for _ in range(1, queries + 1)]
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2367, in one
+    raise orm_exc.NoResultFound("No row was found for one()")
+NoResultFound: No row was found for one()
+2014-06-29 02:14:26 [440] [ERROR] Error handling request
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 131, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 242, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 217, in invoke_subrequest
+    response = handle_request(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/tweens.py", line 21, in excview_tween
+    response = handler(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 163, in handle_request
+    response = view_callable(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 355, in rendered_view
+    result = view(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 501, in _requestonly_view
+    response = view(request)
+  File "/home/ubuntu/FrameworkBenchmarks/pyramid/frameworkbenchmarks/views.py", line 46, in test_3
+    for num in [randint(1, 10001) for _ in range(1, queries + 1)]
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2367, in one
+    raise orm_exc.NoResultFound("No row was found for one()")
+NoResultFound: No row was found for one()
+2014-06-29 02:14:35 [439] [ERROR] Error handling request
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 131, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 242, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 217, in invoke_subrequest
+    response = handle_request(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/tweens.py", line 21, in excview_tween
+    response = handler(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 163, in handle_request
+    response = view_callable(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 355, in rendered_view
+    result = view(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 501, in _requestonly_view
+    response = view(request)
+  File "/home/ubuntu/FrameworkBenchmarks/pyramid/frameworkbenchmarks/views.py", line 46, in test_3
+    for num in [randint(1, 10001) for _ in range(1, queries + 1)]
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2367, in one
+    raise orm_exc.NoResultFound("No row was found for one()")
+NoResultFound: No row was found for one()
+2014-06-29 02:14:37 [439] [ERROR] Error handling request
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 131, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 242, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 217, in invoke_subrequest
+    response = handle_request(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/tweens.py", line 21, in excview_tween
+    response = handler(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 163, in handle_request
+    response = view_callable(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 355, in rendered_view
+    result = view(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 501, in _requestonly_view
+    response = view(request)
+  File "/home/ubuntu/FrameworkBenchmarks/pyramid/frameworkbenchmarks/views.py", line 46, in test_3
+    for num in [randint(1, 10001) for _ in range(1, queries + 1)]
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2367, in one
+    raise orm_exc.NoResultFound("No row was found for one()")
+NoResultFound: No row was found for one()
+2014-06-29 02:14:44 [443] [ERROR] Error handling request
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 131, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 242, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 217, in invoke_subrequest
+    response = handle_request(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/tweens.py", line 21, in excview_tween
+    response = handler(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 163, in handle_request
+    response = view_callable(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 355, in rendered_view
+    result = view(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 501, in _requestonly_view
+    response = view(request)
+  File "/home/ubuntu/FrameworkBenchmarks/pyramid/frameworkbenchmarks/views.py", line 46, in test_3
+    for num in [randint(1, 10001) for _ in range(1, queries + 1)]
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2367, in one
+    raise orm_exc.NoResultFound("No row was found for one()")
+NoResultFound: No row was found for one()
+2014-06-29 02:14:52 [442] [ERROR] Error handling request
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 131, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 242, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 217, in invoke_subrequest
+    response = handle_request(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/tweens.py", line 21, in excview_tween
+    response = handler(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 163, in handle_request
+    response = view_callable(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 355, in rendered_view
+    result = view(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 501, in _requestonly_view
+    response = view(request)
+  File "/home/ubuntu/FrameworkBenchmarks/pyramid/frameworkbenchmarks/views.py", line 46, in test_3
+    for num in [randint(1, 10001) for _ in range(1, queries + 1)]
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2367, in one
+    raise orm_exc.NoResultFound("No row was found for one()")
+NoResultFound: No row was found for one()
+2014-06-29 02:14:55 [440] [ERROR] Error handling request
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 131, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 242, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 217, in invoke_subrequest
+    response = handle_request(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/tweens.py", line 21, in excview_tween
+    response = handler(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 163, in handle_request
+    response = view_callable(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 355, in rendered_view
+    result = view(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 501, in _requestonly_view
+    response = view(request)
+  File "/home/ubuntu/FrameworkBenchmarks/pyramid/frameworkbenchmarks/views.py", line 46, in test_3
+    for num in [randint(1, 10001) for _ in range(1, queries + 1)]
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2367, in one
+    raise orm_exc.NoResultFound("No row was found for one()")
+NoResultFound: No row was found for one()
+2014-06-29 02:14:56 [439] [ERROR] Error handling request
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 131, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 242, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 217, in invoke_subrequest
+    response = handle_request(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/tweens.py", line 21, in excview_tween
+    response = handler(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 163, in handle_request
+    response = view_callable(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 355, in rendered_view
+    result = view(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 501, in _requestonly_view
+    response = view(request)
+  File "/home/ubuntu/FrameworkBenchmarks/pyramid/frameworkbenchmarks/views.py", line 46, in test_3
+    for num in [randint(1, 10001) for _ in range(1, queries + 1)]
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2367, in one
+    raise orm_exc.NoResultFound("No row was found for one()")
+NoResultFound: No row was found for one()
+2014-06-29 02:14:59 [443] [ERROR] Error handling request
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 131, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 242, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 217, in invoke_subrequest
+    response = handle_request(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/tweens.py", line 21, in excview_tween
+    response = handler(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 163, in handle_request
+    response = view_callable(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 355, in rendered_view
+    result = view(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 501, in _requestonly_view
+    response = view(request)
+  File "/home/ubuntu/FrameworkBenchmarks/pyramid/frameworkbenchmarks/views.py", line 46, in test_3
+    for num in [randint(1, 10001) for _ in range(1, queries + 1)]
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2367, in one
+    raise orm_exc.NoResultFound("No row was found for one()")
+NoResultFound: No row was found for one()
+2014-06-29 02:15:02 [462] [ERROR] Error handling request
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 131, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 242, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 217, in invoke_subrequest
+    response = handle_request(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/tweens.py", line 21, in excview_tween
+    response = handler(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 163, in handle_request
+    response = view_callable(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 355, in rendered_view
+    result = view(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 501, in _requestonly_view
+    response = view(request)
+  File "/home/ubuntu/FrameworkBenchmarks/pyramid/frameworkbenchmarks/views.py", line 46, in test_3
+    for num in [randint(1, 10001) for _ in range(1, queries + 1)]
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2367, in one
+    raise orm_exc.NoResultFound("No row was found for one()")
+NoResultFound: No row was found for one()
+2014-06-29 02:15:08 [462] [ERROR] Error handling request
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 131, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 242, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 217, in invoke_subrequest
+    response = handle_request(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/tweens.py", line 21, in excview_tween
+    response = handler(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 163, in handle_request
+    response = view_callable(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 355, in rendered_view
+    result = view(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 501, in _requestonly_view
+    response = view(request)
+  File "/home/ubuntu/FrameworkBenchmarks/pyramid/frameworkbenchmarks/views.py", line 46, in test_3
+    for num in [randint(1, 10001) for _ in range(1, queries + 1)]
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2367, in one
+    raise orm_exc.NoResultFound("No row was found for one()")
+NoResultFound: No row was found for one()
+2014-06-29 02:15:09 [439] [ERROR] Error handling request
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 131, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 242, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 217, in invoke_subrequest
+    response = handle_request(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/tweens.py", line 21, in excview_tween
+    response = handler(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 163, in handle_request
+    response = view_callable(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 355, in rendered_view
+    result = view(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 501, in _requestonly_view
+    response = view(request)
+  File "/home/ubuntu/FrameworkBenchmarks/pyramid/frameworkbenchmarks/views.py", line 46, in test_3
+    for num in [randint(1, 10001) for _ in range(1, queries + 1)]
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2367, in one
+    raise orm_exc.NoResultFound("No row was found for one()")
+NoResultFound: No row was found for one()
+2014-06-29 02:15:12 [463] [ERROR] Error handling request
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 131, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 242, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 217, in invoke_subrequest
+    response = handle_request(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/tweens.py", line 21, in excview_tween
+    response = handler(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 163, in handle_request
+    response = view_callable(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 355, in rendered_view
+    result = view(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 501, in _requestonly_view
+    response = view(request)
+  File "/home/ubuntu/FrameworkBenchmarks/pyramid/frameworkbenchmarks/views.py", line 46, in test_3
+    for num in [randint(1, 10001) for _ in range(1, queries + 1)]
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2367, in one
+    raise orm_exc.NoResultFound("No row was found for one()")
+NoResultFound: No row was found for one()
+2014-06-29 02:15:13 [463] [ERROR] Error handling request
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 131, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 242, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 217, in invoke_subrequest
+    response = handle_request(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/tweens.py", line 21, in excview_tween
+    response = handler(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 163, in handle_request
+    response = view_callable(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 355, in rendered_view
+    result = view(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 501, in _requestonly_view
+    response = view(request)
+  File "/home/ubuntu/FrameworkBenchmarks/pyramid/frameworkbenchmarks/views.py", line 46, in test_3
+    for num in [randint(1, 10001) for _ in range(1, queries + 1)]
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2367, in one
+    raise orm_exc.NoResultFound("No row was found for one()")
+NoResultFound: No row was found for one()
+2014-06-29 02:15:20 [443] [ERROR] Error handling request
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 131, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 242, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 217, in invoke_subrequest
+    response = handle_request(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/tweens.py", line 21, in excview_tween
+    response = handler(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 163, in handle_request
+    response = view_callable(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 355, in rendered_view
+    result = view(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 501, in _requestonly_view
+    response = view(request)
+  File "/home/ubuntu/FrameworkBenchmarks/pyramid/frameworkbenchmarks/views.py", line 46, in test_3
+    for num in [randint(1, 10001) for _ in range(1, queries + 1)]
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2367, in one
+    raise orm_exc.NoResultFound("No row was found for one()")
+NoResultFound: No row was found for one()
+2014-06-29 02:15:20 [442] [ERROR] Error handling request
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 131, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 242, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 217, in invoke_subrequest
+    response = handle_request(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/tweens.py", line 21, in excview_tween
+    response = handler(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 163, in handle_request
+    response = view_callable(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 355, in rendered_view
+    result = view(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 501, in _requestonly_view
+    response = view(request)
+  File "/home/ubuntu/FrameworkBenchmarks/pyramid/frameworkbenchmarks/views.py", line 46, in test_3
+    for num in [randint(1, 10001) for _ in range(1, queries + 1)]
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2367, in one
+    raise orm_exc.NoResultFound("No row was found for one()")
+NoResultFound: No row was found for one()
+2014-06-29 02:15:21 [439] [ERROR] Error handling request
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 131, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 242, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 217, in invoke_subrequest
+    response = handle_request(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/tweens.py", line 21, in excview_tween
+    response = handler(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 163, in handle_request
+    response = view_callable(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 355, in rendered_view
+    result = view(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 501, in _requestonly_view
+    response = view(request)
+  File "/home/ubuntu/FrameworkBenchmarks/pyramid/frameworkbenchmarks/views.py", line 46, in test_3
+    for num in [randint(1, 10001) for _ in range(1, queries + 1)]
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2367, in one
+    raise orm_exc.NoResultFound("No row was found for one()")
+NoResultFound: No row was found for one()
+2014-06-29 02:15:26 [453] [ERROR] Error handling request
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 131, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 242, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 217, in invoke_subrequest
+    response = handle_request(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/tweens.py", line 21, in excview_tween
+    response = handler(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 163, in handle_request
+    response = view_callable(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 355, in rendered_view
+    result = view(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 501, in _requestonly_view
+    response = view(request)
+  File "/home/ubuntu/FrameworkBenchmarks/pyramid/frameworkbenchmarks/views.py", line 46, in test_3
+    for num in [randint(1, 10001) for _ in range(1, queries + 1)]
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2367, in one
+    raise orm_exc.NoResultFound("No row was found for one()")
+NoResultFound: No row was found for one()
+2014-06-29 02:15:27 [465] [ERROR] Error handling request
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 131, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 242, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 217, in invoke_subrequest
+    response = handle_request(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/tweens.py", line 21, in excview_tween
+    response = handler(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 163, in handle_request
+    response = view_callable(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 355, in rendered_view
+    result = view(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 501, in _requestonly_view
+    response = view(request)
+  File "/home/ubuntu/FrameworkBenchmarks/pyramid/frameworkbenchmarks/views.py", line 46, in test_3
+    for num in [randint(1, 10001) for _ in range(1, queries + 1)]
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2367, in one
+    raise orm_exc.NoResultFound("No row was found for one()")
+NoResultFound: No row was found for one()
+2014-06-29 02:15:29 [441] [ERROR] Error handling request
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 131, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 242, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 217, in invoke_subrequest
+    response = handle_request(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/tweens.py", line 21, in excview_tween
+    response = handler(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 163, in handle_request
+    response = view_callable(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 355, in rendered_view
+    result = view(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 501, in _requestonly_view
+    response = view(request)
+  File "/home/ubuntu/FrameworkBenchmarks/pyramid/frameworkbenchmarks/views.py", line 46, in test_3
+    for num in [randint(1, 10001) for _ in range(1, queries + 1)]
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2367, in one
+    raise orm_exc.NoResultFound("No row was found for one()")
+NoResultFound: No row was found for one()
+2014-06-29 02:15:33 [463] [ERROR] Error handling request
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 131, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 242, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 217, in invoke_subrequest
+    response = handle_request(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/tweens.py", line 21, in excview_tween
+    response = handler(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 163, in handle_request
+    response = view_callable(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 355, in rendered_view
+    result = view(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 501, in _requestonly_view
+    response = view(request)
+  File "/home/ubuntu/FrameworkBenchmarks/pyramid/frameworkbenchmarks/views.py", line 46, in test_3
+    for num in [randint(1, 10001) for _ in range(1, queries + 1)]
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2367, in one
+    raise orm_exc.NoResultFound("No row was found for one()")
+NoResultFound: No row was found for one()
+2014-06-29 02:15:39 [442] [ERROR] Error handling request
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 131, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 242, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 217, in invoke_subrequest
+    response = handle_request(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/tweens.py", line 21, in excview_tween
+    response = handler(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 163, in handle_request
+    response = view_callable(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 355, in rendered_view
+    result = view(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 501, in _requestonly_view
+    response = view(request)
+  File "/home/ubuntu/FrameworkBenchmarks/pyramid/frameworkbenchmarks/views.py", line 46, in test_3
+    for num in [randint(1, 10001) for _ in range(1, queries + 1)]
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2367, in one
+    raise orm_exc.NoResultFound("No row was found for one()")
+NoResultFound: No row was found for one()
+2014-06-29 02:15:43 [443] [ERROR] Error handling request
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 131, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 242, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 217, in invoke_subrequest
+    response = handle_request(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/tweens.py", line 21, in excview_tween
+    response = handler(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 163, in handle_request
+    response = view_callable(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 355, in rendered_view
+    result = view(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 501, in _requestonly_view
+    response = view(request)
+  File "/home/ubuntu/FrameworkBenchmarks/pyramid/frameworkbenchmarks/views.py", line 46, in test_3
+    for num in [randint(1, 10001) for _ in range(1, queries + 1)]
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2367, in one
+    raise orm_exc.NoResultFound("No row was found for one()")
+NoResultFound: No row was found for one()
+2014-06-29 02:15:47 [441] [ERROR] Error handling request
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 131, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 242, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 217, in invoke_subrequest
+    response = handle_request(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/tweens.py", line 21, in excview_tween
+    response = handler(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 163, in handle_request
+    response = view_callable(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 355, in rendered_view
+    result = view(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 501, in _requestonly_view
+    response = view(request)
+  File "/home/ubuntu/FrameworkBenchmarks/pyramid/frameworkbenchmarks/views.py", line 46, in test_3
+    for num in [randint(1, 10001) for _ in range(1, queries + 1)]
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2367, in one
+    raise orm_exc.NoResultFound("No row was found for one()")
+NoResultFound: No row was found for one()
+2014-06-29 02:15:51 [459] [ERROR] Error handling request
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 131, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 242, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 217, in invoke_subrequest
+    response = handle_request(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/tweens.py", line 21, in excview_tween
+    response = handler(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 163, in handle_request
+    response = view_callable(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 355, in rendered_view
+    result = view(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 501, in _requestonly_view
+    response = view(request)
+  File "/home/ubuntu/FrameworkBenchmarks/pyramid/frameworkbenchmarks/views.py", line 46, in test_3
+    for num in [randint(1, 10001) for _ in range(1, queries + 1)]
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2367, in one
+    raise orm_exc.NoResultFound("No row was found for one()")
+NoResultFound: No row was found for one()
+2014-06-29 02:15:55 [443] [ERROR] Error handling request
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 131, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 242, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 217, in invoke_subrequest
+    response = handle_request(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/tweens.py", line 21, in excview_tween
+    response = handler(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 163, in handle_request
+    response = view_callable(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 355, in rendered_view
+    result = view(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 501, in _requestonly_view
+    response = view(request)
+  File "/home/ubuntu/FrameworkBenchmarks/pyramid/frameworkbenchmarks/views.py", line 46, in test_3
+    for num in [randint(1, 10001) for _ in range(1, queries + 1)]
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2367, in one
+    raise orm_exc.NoResultFound("No row was found for one()")
+NoResultFound: No row was found for one()
+2014-06-29 02:15:56 [442] [ERROR] Error handling request
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 131, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 242, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 217, in invoke_subrequest
+    response = handle_request(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/tweens.py", line 21, in excview_tween
+    response = handler(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 163, in handle_request
+    response = view_callable(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 355, in rendered_view
+    result = view(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 501, in _requestonly_view
+    response = view(request)
+  File "/home/ubuntu/FrameworkBenchmarks/pyramid/frameworkbenchmarks/views.py", line 46, in test_3
+    for num in [randint(1, 10001) for _ in range(1, queries + 1)]
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2367, in one
+    raise orm_exc.NoResultFound("No row was found for one()")
+NoResultFound: No row was found for one()
+2014-06-29 02:16:07 [452] [ERROR] Error handling request
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 131, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 242, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 217, in invoke_subrequest
+    response = handle_request(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/tweens.py", line 21, in excview_tween
+    response = handler(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 163, in handle_request
+    response = view_callable(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 355, in rendered_view
+    result = view(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 501, in _requestonly_view
+    response = view(request)
+  File "/home/ubuntu/FrameworkBenchmarks/pyramid/frameworkbenchmarks/views.py", line 46, in test_3
+    for num in [randint(1, 10001) for _ in range(1, queries + 1)]
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2367, in one
+    raise orm_exc.NoResultFound("No row was found for one()")
+NoResultFound: No row was found for one()
+2014-06-29 02:16:13 [464] [ERROR] Error handling request
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 131, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 242, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 217, in invoke_subrequest
+    response = handle_request(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/tweens.py", line 21, in excview_tween
+    response = handler(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 163, in handle_request
+    response = view_callable(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 355, in rendered_view
+    result = view(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 501, in _requestonly_view
+    response = view(request)
+  File "/home/ubuntu/FrameworkBenchmarks/pyramid/frameworkbenchmarks/views.py", line 46, in test_3
+    for num in [randint(1, 10001) for _ in range(1, queries + 1)]
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2367, in one
+    raise orm_exc.NoResultFound("No row was found for one()")
+NoResultFound: No row was found for one()
+2014-06-29 02:16:13 [462] [ERROR] Error handling request
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 131, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 242, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 217, in invoke_subrequest
+    response = handle_request(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/tweens.py", line 21, in excview_tween
+    response = handler(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 163, in handle_request
+    response = view_callable(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 355, in rendered_view
+    result = view(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 501, in _requestonly_view
+    response = view(request)
+  File "/home/ubuntu/FrameworkBenchmarks/pyramid/frameworkbenchmarks/views.py", line 46, in test_3
+    for num in [randint(1, 10001) for _ in range(1, queries + 1)]
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2367, in one
+    raise orm_exc.NoResultFound("No row was found for one()")
+NoResultFound: No row was found for one()
+2014-06-29 02:16:13 [465] [ERROR] Error handling request
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 131, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 242, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 217, in invoke_subrequest
+    response = handle_request(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/tweens.py", line 21, in excview_tween
+    response = handler(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 163, in handle_request
+    response = view_callable(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 355, in rendered_view
+    result = view(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 501, in _requestonly_view
+    response = view(request)
+  File "/home/ubuntu/FrameworkBenchmarks/pyramid/frameworkbenchmarks/views.py", line 46, in test_3
+    for num in [randint(1, 10001) for _ in range(1, queries + 1)]
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2367, in one
+    raise orm_exc.NoResultFound("No row was found for one()")
+NoResultFound: No row was found for one()
+2014-06-29 02:16:15 [442] [ERROR] Error handling request
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 131, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 242, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 217, in invoke_subrequest
+    response = handle_request(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/tweens.py", line 21, in excview_tween
+    response = handler(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 163, in handle_request
+    response = view_callable(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 355, in rendered_view
+    result = view(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 501, in _requestonly_view
+    response = view(request)
+  File "/home/ubuntu/FrameworkBenchmarks/pyramid/frameworkbenchmarks/views.py", line 46, in test_3
+    for num in [randint(1, 10001) for _ in range(1, queries + 1)]
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2367, in one
+    raise orm_exc.NoResultFound("No row was found for one()")
+NoResultFound: No row was found for one()
+2014-06-29 02:17:54 [442] [ERROR] Error processing request.
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 93, in handle
+    self.handle_request(listener, req, client, addr)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 137, in handle_request
+    resp.write(item)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/gunicorn/http/wsgi.py", line 313, in write
+    util.write(self.sock, arg, self.chunked)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/gunicorn/util.py", line 298, in write
+    sock.sendall(data)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+error: [Errno 104] Connection reset by peer
+2014-06-29 02:18:33 [439] [ERROR] Error handling request
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 131, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 242, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 217, in invoke_subrequest
+    response = handle_request(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/tweens.py", line 21, in excview_tween
+    response = handler(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 163, in handle_request
+    response = view_callable(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 355, in rendered_view
+    result = view(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 501, in _requestonly_view
+    response = view(request)
+  File "/home/ubuntu/FrameworkBenchmarks/pyramid/frameworkbenchmarks/views.py", line 80, in test_5
+    for num in [randint(1, 10001) for _ in range(1, queries + 1)]
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2367, in one
+    raise orm_exc.NoResultFound("No row was found for one()")
+NoResultFound: No row was found for one()
+2014-06-29 02:18:42 [452] [ERROR] Error handling request
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 131, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 242, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 217, in invoke_subrequest
+    response = handle_request(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/tweens.py", line 21, in excview_tween
+    response = handler(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 163, in handle_request
+    response = view_callable(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 355, in rendered_view
+    result = view(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 501, in _requestonly_view
+    response = view(request)
+  File "/home/ubuntu/FrameworkBenchmarks/pyramid/frameworkbenchmarks/views.py", line 80, in test_5
+    for num in [randint(1, 10001) for _ in range(1, queries + 1)]
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2367, in one
+    raise orm_exc.NoResultFound("No row was found for one()")
+NoResultFound: No row was found for one()
+2014-06-29 02:18:47 [440] [ERROR] Error handling request
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 131, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 242, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 217, in invoke_subrequest
+    response = handle_request(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/tweens.py", line 21, in excview_tween
+    response = handler(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 163, in handle_request
+    response = view_callable(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 355, in rendered_view
+    result = view(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 501, in _requestonly_view
+    response = view(request)
+  File "/home/ubuntu/FrameworkBenchmarks/pyramid/frameworkbenchmarks/views.py", line 80, in test_5
+    for num in [randint(1, 10001) for _ in range(1, queries + 1)]
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2367, in one
+    raise orm_exc.NoResultFound("No row was found for one()")
+NoResultFound: No row was found for one()
+2014-06-29 02:18:55 [443] [ERROR] Error processing request.
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 93, in handle
+    self.handle_request(listener, req, client, addr)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 137, in handle_request
+    resp.write(item)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/gunicorn/http/wsgi.py", line 313, in write
+    util.write(self.sock, arg, self.chunked)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/gunicorn/util.py", line 298, in write
+    sock.sendall(data)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+error: [Errno 104] Connection reset by peer
+2014-06-29 02:19:05 [459] [ERROR] Error handling request
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 131, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 242, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 217, in invoke_subrequest
+    response = handle_request(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/tweens.py", line 21, in excview_tween
+    response = handler(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 163, in handle_request
+    response = view_callable(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 355, in rendered_view
+    result = view(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 501, in _requestonly_view
+    response = view(request)
+  File "/home/ubuntu/FrameworkBenchmarks/pyramid/frameworkbenchmarks/views.py", line 80, in test_5
+    for num in [randint(1, 10001) for _ in range(1, queries + 1)]
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2367, in one
+    raise orm_exc.NoResultFound("No row was found for one()")
+NoResultFound: No row was found for one()
+2014-06-29 02:19:21 [459] [ERROR] Error handling request
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 131, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 242, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 217, in invoke_subrequest
+    response = handle_request(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/tweens.py", line 21, in excview_tween
+    response = handler(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 163, in handle_request
+    response = view_callable(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 355, in rendered_view
+    result = view(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 501, in _requestonly_view
+    response = view(request)
+  File "/home/ubuntu/FrameworkBenchmarks/pyramid/frameworkbenchmarks/views.py", line 80, in test_5
+    for num in [randint(1, 10001) for _ in range(1, queries + 1)]
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2367, in one
+    raise orm_exc.NoResultFound("No row was found for one()")
+NoResultFound: No row was found for one()
+2014-06-29 02:19:30 [459] [ERROR] Error handling request
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 131, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 242, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 217, in invoke_subrequest
+    response = handle_request(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/tweens.py", line 21, in excview_tween
+    response = handler(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 163, in handle_request
+    response = view_callable(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 355, in rendered_view
+    result = view(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 501, in _requestonly_view
+    response = view(request)
+  File "/home/ubuntu/FrameworkBenchmarks/pyramid/frameworkbenchmarks/views.py", line 80, in test_5
+    for num in [randint(1, 10001) for _ in range(1, queries + 1)]
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2367, in one
+    raise orm_exc.NoResultFound("No row was found for one()")
+NoResultFound: No row was found for one()
+2014-06-29 02:19:32 [465] [ERROR] Error handling request
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 131, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 242, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 217, in invoke_subrequest
+    response = handle_request(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/tweens.py", line 21, in excview_tween
+    response = handler(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 163, in handle_request
+    response = view_callable(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 355, in rendered_view
+    result = view(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 501, in _requestonly_view
+    response = view(request)
+  File "/home/ubuntu/FrameworkBenchmarks/pyramid/frameworkbenchmarks/views.py", line 80, in test_5
+    for num in [randint(1, 10001) for _ in range(1, queries + 1)]
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2367, in one
+    raise orm_exc.NoResultFound("No row was found for one()")
+NoResultFound: No row was found for one()
+2014-06-29 02:19:35 [441] [ERROR] Error handling request
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 131, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 242, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 217, in invoke_subrequest
+    response = handle_request(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/tweens.py", line 21, in excview_tween
+    response = handler(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 163, in handle_request
+    response = view_callable(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 355, in rendered_view
+    result = view(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 501, in _requestonly_view
+    response = view(request)
+  File "/home/ubuntu/FrameworkBenchmarks/pyramid/frameworkbenchmarks/views.py", line 80, in test_5
+    for num in [randint(1, 10001) for _ in range(1, queries + 1)]
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2367, in one
+    raise orm_exc.NoResultFound("No row was found for one()")
+NoResultFound: No row was found for one()
+2014-06-29 02:19:49 [439] [ERROR] Error handling request
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 131, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 242, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 217, in invoke_subrequest
+    response = handle_request(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/tweens.py", line 21, in excview_tween
+    response = handler(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 163, in handle_request
+    response = view_callable(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 355, in rendered_view
+    result = view(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 501, in _requestonly_view
+    response = view(request)
+  File "/home/ubuntu/FrameworkBenchmarks/pyramid/frameworkbenchmarks/views.py", line 80, in test_5
+    for num in [randint(1, 10001) for _ in range(1, queries + 1)]
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2367, in one
+    raise orm_exc.NoResultFound("No row was found for one()")
+NoResultFound: No row was found for one()
+2014-06-29 02:19:55 [463] [ERROR] Error handling request
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 131, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 242, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 217, in invoke_subrequest
+    response = handle_request(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/tweens.py", line 21, in excview_tween
+    response = handler(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 163, in handle_request
+    response = view_callable(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 355, in rendered_view
+    result = view(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 501, in _requestonly_view
+    response = view(request)
+  File "/home/ubuntu/FrameworkBenchmarks/pyramid/frameworkbenchmarks/views.py", line 80, in test_5
+    for num in [randint(1, 10001) for _ in range(1, queries + 1)]
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2367, in one
+    raise orm_exc.NoResultFound("No row was found for one()")
+NoResultFound: No row was found for one()
+2014-06-29 02:20:01 [459] [ERROR] Error handling request
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 131, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 242, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 217, in invoke_subrequest
+    response = handle_request(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/tweens.py", line 21, in excview_tween
+    response = handler(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 163, in handle_request
+    response = view_callable(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 355, in rendered_view
+    result = view(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 501, in _requestonly_view
+    response = view(request)
+  File "/home/ubuntu/FrameworkBenchmarks/pyramid/frameworkbenchmarks/views.py", line 80, in test_5
+    for num in [randint(1, 10001) for _ in range(1, queries + 1)]
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2367, in one
+    raise orm_exc.NoResultFound("No row was found for one()")
+NoResultFound: No row was found for one()
+2014-06-29 02:20:20 [464] [ERROR] Error handling request
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 131, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 242, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 217, in invoke_subrequest
+    response = handle_request(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/tweens.py", line 21, in excview_tween
+    response = handler(request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/router.py", line 163, in handle_request
+    response = view_callable(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 355, in rendered_view
+    result = view(context, request)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/pyramid/config/views.py", line 501, in _requestonly_view
+    response = view(request)
+  File "/home/ubuntu/FrameworkBenchmarks/pyramid/frameworkbenchmarks/views.py", line 80, in test_5
+    for num in [randint(1, 10001) for _ in range(1, queries + 1)]
+  File "/home/ubuntu/FrameworkBenchmarks/installs/py2/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2367, in one
+    raise orm_exc.NoResultFound("No row was found for one()")
+NoResultFound: No row was found for one()
+2014-06-29 02:22:05 [434] [INFO] Handling signal: term
+2014-06-29 02:22:05 [452] [INFO] Worker exiting (pid: 452)
+2014-06-29 02:22:05 [453] [INFO] Worker exiting (pid: 453)
+2014-06-29 02:22:05 [462] [INFO] Worker exiting (pid: 462)
+2014-06-29 02:22:05 [465] [INFO] Worker exiting (pid: 465)
+2014-06-29 02:22:05 [442] [INFO] Worker exiting (pid: 442)
+2014-06-29 02:22:05 [441] [INFO] Worker exiting (pid: 441)
+2014-06-29 02:22:05 [463] [INFO] Worker exiting (pid: 463)
+2014-06-29 02:22:05 [459] [INFO] Worker exiting (pid: 459)
+2014-06-29 02:22:05 [464] [INFO] Worker exiting (pid: 464)
+2014-06-29 02:22:05 [440] [INFO] Worker exiting (pid: 440)
+2014-06-29 02:22:05 [443] [INFO] Worker exiting (pid: 443)
+2014-06-29 02:22:05 [434] [INFO] Shutting down: Master

@@ -1,0 +1,74 @@
+test.os.lower() = linux  test.database_os.lower() = linux
+self.results['frameworks'] != None: True
+test.name: luminus-raw
+self.results['completed']: {}
+
+=====================================================
+  Beginning luminus-raw
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Starting luminus-raw
+-----------------------------------------------------
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+mysql start/running, process 32535
+ * Restarting PostgreSQL 9.3 database server
+   ...done.
+Created /home/ubuntu/FrameworkBenchmarks/luminus/hello/target/hello-luminus-standalone.war
+
+-----------------------------------------------------
+  VERIFYING DB (/luminus/dbraw)
+-----------------------------------------------------
+VALIDATING DB ... FAIL
+
+
+-----------------------------------------------------
+  VERIFYING QUERY (/luminus/dbraw/2)
+-----------------------------------------------------
+/luminus/dbraw/2 - FAIL
+
+-----------------------------------------------------
+
+/luminus/dbraw/0 - WARNING
+
+-----------------------------------------------------
+
+/luminus/dbraw/foo - WARNING
+
+-----------------------------------------------------
+
+/luminus/dbraw/501 - WARNING
+
+-----------------------------------------------------
+
+
+VALIDATING QUERY ... FAIL
+
+
+-----------------------------------------------------
+  Benchmarking luminus-raw ...
+-----------------------------------------------------
+BENCHMARKING DB ... Complete
+BENCHMARKING Query ... Complete
+
+-----------------------------------------------------
+  Stopping luminus-raw
+-----------------------------------------------------
+Resin/4.0.36 shutdown watchdog at 127.0.0.1:6600
+
+-----------------------------------------------------
+  Stopped luminus-raw
+-----------------------------------------------------
+
+----------------------------------------------------
+Saving results through luminus-raw
+----------------------------------------------------

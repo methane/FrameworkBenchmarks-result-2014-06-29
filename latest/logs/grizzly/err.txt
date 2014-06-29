@@ -1,0 +1,5 @@
+Jun 28, 2014 10:39:46 PM org.glassfish.grizzly.http.server.NetworkListener start
+INFO: Started listener bound to [0.0.0.0:8080]
+Jun 28, 2014 10:39:46 PM org.glassfish.grizzly.http.server.HttpServer start
+INFO: [HttpServer] Started.
+Server started.

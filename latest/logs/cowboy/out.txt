@@ -1,0 +1,41 @@
+test.os.lower() = linux  test.database_os.lower() = linux
+self.results['frameworks'] != None: True
+test.name: cowboy
+self.results['completed']: {}
+
+=====================================================
+  Beginning cowboy
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Starting cowboy
+-----------------------------------------------------
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+mysql start/running, process 13937
+ * Restarting PostgreSQL 9.3 database server
+   ...done.
+==> jiffy (get-deps)
+==> mimetypes (get-deps)
+==> emysql (get-deps)
+==> ranch (get-deps)
+==> cowboy (get-deps)
+==> cowboy (get-deps)
+==> jiffy (compile)
+Compiling /home/ubuntu/FrameworkBenchmarks/cowboy/deps/jiffy/c_src/doubles.cc
+In file included from c_src/double-conversion/double-conversion.h:31:0,
+                 from /home/ubuntu/FrameworkBenchmarks/cowboy/deps/jiffy/c_src/doubles.cc:1:
+c_src/double-conversion/utils.h: In function ‘Dest double_conversion::BitCast(const Source&)’:
+c_src/double-conversion/utils.h:299:16: error: typedef ‘VerifySizesAreEqual’ locally defined but not used [-Werror=unused-local-typedefs]
+   typedef char VerifySizesAreEqual[sizeof(Dest) == sizeof(Source) ? 1 : -1];
+                ^
+cc1plus: all warnings being treated as errors
+ERROR: compile failed while processing /home/ubuntu/FrameworkBenchmarks/cowboy/deps/jiffy: rebar_abort

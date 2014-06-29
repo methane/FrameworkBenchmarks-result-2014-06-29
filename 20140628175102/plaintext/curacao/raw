@@ -1,0 +1,97 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer curacao
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/plaintext
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/plaintext
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   582.37us  786.46us  12.89ms   90.81%
+    Req/Sec     2.00k   552.41     3.78k    65.72%
+  73616 requests in 5.00s, 11.30MB read
+Requests/sec:  14729.67
+Transfer/sec:      2.26MB
+
+---------------------------------------------------------
+ Running Warmup curacao
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/plaintext
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/plaintext
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    10.44ms    8.12ms 101.15ms   82.67%
+    Req/Sec     6.19k   707.30     9.30k    78.38%
+  363556 requests in 15.00s, 55.82MB read
+Requests/sec:  24239.96
+Transfer/sec:      3.72MB
+
+---------------------------------------------------------
+ Concurrency: 256 for curacao
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/plaintext
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   128.47ms  118.75ms 998.24ms   85.90%
+    Req/Sec     7.93k     1.11k   18.08k    85.46%
+  480090 requests in 15.00s, 73.71MB read
+Requests/sec:  32013.61
+Transfer/sec:      4.92MB
+
+---------------------------------------------------------
+ Concurrency: 1024 for curacao
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 1024 --timeout 1024 -t 4 http://127.0.0.1:8080/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/plaintext
+  4 threads and 1024 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   621.06ms  490.00ms   4.59s    86.81%
+    Req/Sec     6.47k     1.79k   11.21k    72.94%
+  364674 requests in 15.00s, 55.99MB read
+  Socket errors: connect 0, read 0, write 0, timeout 740
+Requests/sec:  24316.04
+Transfer/sec:      3.73MB
+
+---------------------------------------------------------
+ Concurrency: 4096 for curacao
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 4096 --timeout 4096 -t 4 http://127.0.0.1:8080/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/plaintext
+  4 threads and 4096 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   842.02ms  980.44ms   7.59s    87.70%
+    Req/Sec     9.69k     4.10k   16.51k    75.27%
+  466549 requests in 15.01s, 71.63MB read
+  Socket errors: connect 0, read 1140, write 0, timeout 11924
+Requests/sec:  31088.12
+Transfer/sec:      4.77MB
+
+---------------------------------------------------------
+ Concurrency: 16384 for curacao
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16384 --timeout 16384 -t 4 http://127.0.0.1:8080/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/plaintext
+  4 threads and 16384 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     6.89s     4.91s   14.83s    54.00%
+    Req/Sec     7.60k     3.82k   17.59k    71.08%
+  433452 requests in 14.99s, 66.55MB read
+  Socket errors: connect 0, read 4678, write 0, timeout 65552
+Requests/sec:  28914.66
+Transfer/sec:      4.44MB

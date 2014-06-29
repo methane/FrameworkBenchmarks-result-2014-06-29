@@ -1,0 +1,96 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer treefrog
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/world/plain
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/world/plain
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     2.05ms    2.13ms  10.53ms   75.10%
+    Req/Sec     0.86k   487.39     2.44k    57.13%
+  31819 requests in 5.00s, 5.40MB read
+Requests/sec:   6361.15
+Transfer/sec:      1.08MB
+
+---------------------------------------------------------
+ Running Warmup treefrog
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/world/plain
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/world/plain
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    29.14ms   15.15ms 118.32ms   80.85%
+    Req/Sec     2.28k   397.02     3.17k    71.92%
+  131893 requests in 15.00s, 22.39MB read
+Requests/sec:   8792.68
+Transfer/sec:      1.49MB
+
+---------------------------------------------------------
+ Concurrency: 256 for treefrog
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/world/plain -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/world/plain
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    61.47ms   11.86ms  72.42ms   90.97%
+    Req/Sec    70.69    477.30     7.00k    97.42%
+  7773 requests in 16.01s, 1.32MB read
+Requests/sec:    485.48
+Transfer/sec:     84.39KB
+
+---------------------------------------------------------
+ Concurrency: 1024 for treefrog
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 1024 --timeout 1024 -t 4 http://127.0.0.1:8080/world/plain -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/world/plain
+  4 threads and 1024 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   119.18ms   57.68ms 265.35ms   86.17%
+    Req/Sec    75.23    602.51     8.04k    97.09%
+  9394 requests in 16.02s, 1.59MB read
+Requests/sec:    586.45
+Transfer/sec:    101.94KB
+
+---------------------------------------------------------
+ Concurrency: 4096 for treefrog
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 4096 --timeout 4096 -t 4 http://127.0.0.1:8080/world/plain -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/world/plain
+  4 threads and 4096 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   978.75ms  191.84ms   1.68s    93.47%
+    Req/Sec   366.88      1.49k   15.35k    93.19%
+  33624 requests in 16.06s, 5.71MB read
+  Socket errors: connect 0, read 0, write 0, timeout 240
+Requests/sec:   2093.54
+Transfer/sec:    363.92KB
+
+---------------------------------------------------------
+ Concurrency: 16384 for treefrog
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16384 --timeout 16384 -t 4 http://127.0.0.1:8080/world/plain -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/world/plain
+  4 threads and 16384 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     5.42s     3.88s   13.34s    75.56%
+    Req/Sec     0.96k   785.43     2.35k    62.50%
+  56446 requests in 16.19s, 9.58MB read
+  Socket errors: connect 0, read 4066, write 0, timeout 10091
+Requests/sec:   3487.23
+Transfer/sec:    606.18KB

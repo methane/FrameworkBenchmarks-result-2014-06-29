@@ -1,0 +1,124 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer dropwizard-mongodb
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:9000/json
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:9000/json
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     2.92ms    6.86ms  41.19ms   93.52%
+    Req/Sec     1.08k     0.96k    5.89k    82.09%
+  33453 requests in 6.00s, 4.91MB read
+Requests/sec:   5573.14
+Transfer/sec:    838.15KB
+
+---------------------------------------------------------
+ Running Warmup dropwizard-mongodb
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:9000/json
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:9000/json
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   110.05ms  525.11ms   3.49s    95.54%
+    Req/Sec     6.67k     2.89k   22.67k    73.08%
+  354306 requests in 15.00s, 52.04MB read
+  Socket errors: connect 0, read 42, write 0, timeout 0
+Requests/sec:  23621.11
+Transfer/sec:      3.47MB
+
+---------------------------------------------------------
+ Concurrency: 8 for dropwizard-mongodb
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:9000/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:9000/json
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   324.37us  219.68us   8.74ms   88.66%
+    Req/Sec     6.80k     1.79k   12.56k    78.76%
+  386342 requests in 15.00s, 56.74MB read
+Requests/sec:  25758.53
+Transfer/sec:      3.78MB
+
+---------------------------------------------------------
+ Concurrency: 16 for dropwizard-mongodb
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:9000/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:9000/json
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   616.30us  369.02us  11.12ms   96.01%
+    Req/Sec     6.87k     0.91k   12.67k    86.27%
+  391223 requests in 15.00s, 57.46MB read
+Requests/sec:  26083.56
+Transfer/sec:      3.83MB
+
+---------------------------------------------------------
+ Concurrency: 32 for dropwizard-mongodb
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:9000/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:9000/json
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.59ms    5.92ms 121.39ms   97.91%
+    Req/Sec     6.65k     1.76k   18.89k    78.23%
+  379979 requests in 15.00s, 55.81MB read
+Requests/sec:  25333.99
+Transfer/sec:      3.72MB
+
+---------------------------------------------------------
+ Concurrency: 64 for dropwizard-mongodb
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:9000/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:9000/json
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     5.18ms   27.52ms 314.60ms   97.10%
+    Req/Sec     6.50k     2.53k   20.44k    73.57%
+  372562 requests in 15.00s, 54.72MB read
+Requests/sec:  24840.48
+Transfer/sec:      3.65MB
+
+---------------------------------------------------------
+ Concurrency: 128 for dropwizard-mongodb
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:9000/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:9000/json
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    11.56ms   62.58ms 594.76ms   96.39%
+    Req/Sec     6.42k     2.73k   23.33k    70.49%
+  368423 requests in 15.00s, 54.11MB read
+Requests/sec:  24567.63
+Transfer/sec:      3.61MB
+
+---------------------------------------------------------
+ Concurrency: 256 for dropwizard-mongodb
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:9000/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:9000/json
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    37.67ms  164.17ms 960.36ms   94.94%
+    Req/Sec     6.40k     2.70k   22.78k    72.43%
+  364545 requests in 15.00s, 53.54MB read
+  Socket errors: connect 0, read 0, write 0, timeout 37
+Requests/sec:  24306.87
+Transfer/sec:      3.57MB

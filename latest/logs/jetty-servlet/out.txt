@@ -1,0 +1,188 @@
+test.os.lower() = linux  test.database_os.lower() = linux
+self.results['frameworks'] != None: True
+test.name: jetty-servlet
+self.results['completed']: {}
+
+=====================================================
+  Beginning jetty-servlet
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Starting jetty-servlet
+-----------------------------------------------------
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building jetty-servlet-example 0.1
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ jetty-servlet-example ---
+[INFO] Deleting /home/ubuntu/FrameworkBenchmarks/jetty-servlet/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.3:resources (default-resources) @ jetty-servlet-example ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /home/ubuntu/FrameworkBenchmarks/jetty-servlet/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.2:compile (default-compile) @ jetty-servlet-example ---
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 3 source files to /home/ubuntu/FrameworkBenchmarks/jetty-servlet/target/classes
+[INFO] 
+[INFO] --- maven-assembly-plugin:2.2-beta-5:single (default-cli) @ jetty-servlet-example ---
+[INFO] META-INF/ already added, skipping
+[INFO] META-INF/MANIFEST.MF already added, skipping
+[INFO] org/ already added, skipping
+[INFO] org/eclipse/ already added, skipping
+[INFO] org/eclipse/jetty/ already added, skipping
+[INFO] about.html already added, skipping
+[INFO] META-INF/maven/ already added, skipping
+[INFO] META-INF/maven/org.eclipse.jetty/ already added, skipping
+[INFO] META-INF/ already added, skipping
+[INFO] META-INF/MANIFEST.MF already added, skipping
+[INFO] org/ already added, skipping
+[INFO] org/eclipse/ already added, skipping
+[INFO] org/eclipse/jetty/ already added, skipping
+[INFO] about.html already added, skipping
+[INFO] META-INF/maven/ already added, skipping
+[INFO] META-INF/maven/org.eclipse.jetty/ already added, skipping
+[INFO] META-INF/ already added, skipping
+[INFO] META-INF/MANIFEST.MF already added, skipping
+[INFO] META-INF/maven/ already added, skipping
+[INFO] META-INF/ already added, skipping
+[INFO] META-INF/MANIFEST.MF already added, skipping
+[INFO] org/ already added, skipping
+[INFO] org/eclipse/ already added, skipping
+[INFO] org/eclipse/jetty/ already added, skipping
+[INFO] about.html already added, skipping
+[INFO] META-INF/maven/ already added, skipping
+[INFO] META-INF/maven/org.eclipse.jetty/ already added, skipping
+[INFO] META-INF/ already added, skipping
+[INFO] META-INF/MANIFEST.MF already added, skipping
+[INFO] org/ already added, skipping
+[INFO] org/eclipse/ already added, skipping
+[INFO] org/eclipse/jetty/ already added, skipping
+[INFO] about.html already added, skipping
+[INFO] META-INF/maven/ already added, skipping
+[INFO] META-INF/maven/org.eclipse.jetty/ already added, skipping
+[INFO] META-INF/ already added, skipping
+[INFO] META-INF/MANIFEST.MF already added, skipping
+[INFO] org/ already added, skipping
+[INFO] org/eclipse/ already added, skipping
+[INFO] org/eclipse/jetty/ already added, skipping
+[INFO] about.html already added, skipping
+[INFO] META-INF/maven/ already added, skipping
+[INFO] META-INF/maven/org.eclipse.jetty/ already added, skipping
+[INFO] META-INF/ already added, skipping
+[INFO] META-INF/MANIFEST.MF already added, skipping
+[INFO] org/ already added, skipping
+[INFO] org/eclipse/ already added, skipping
+[INFO] org/eclipse/jetty/ already added, skipping
+[INFO] org/eclipse/jetty/util/ already added, skipping
+[INFO] about.html already added, skipping
+[INFO] META-INF/maven/ already added, skipping
+[INFO] META-INF/maven/org.eclipse.jetty/ already added, skipping
+[INFO] Building jar: /home/ubuntu/FrameworkBenchmarks/jetty-servlet/target/jetty-servlet-example-0.1-jar-with-dependencies.jar
+[INFO] META-INF/ already added, skipping
+[INFO] META-INF/MANIFEST.MF already added, skipping
+[INFO] org/ already added, skipping
+[INFO] org/eclipse/ already added, skipping
+[INFO] org/eclipse/jetty/ already added, skipping
+[INFO] about.html already added, skipping
+[INFO] META-INF/maven/ already added, skipping
+[INFO] META-INF/maven/org.eclipse.jetty/ already added, skipping
+[INFO] META-INF/ already added, skipping
+[INFO] META-INF/MANIFEST.MF already added, skipping
+[INFO] org/ already added, skipping
+[INFO] org/eclipse/ already added, skipping
+[INFO] org/eclipse/jetty/ already added, skipping
+[INFO] about.html already added, skipping
+[INFO] META-INF/maven/ already added, skipping
+[INFO] META-INF/maven/org.eclipse.jetty/ already added, skipping
+[INFO] META-INF/ already added, skipping
+[INFO] META-INF/MANIFEST.MF already added, skipping
+[INFO] META-INF/maven/ already added, skipping
+[INFO] META-INF/ already added, skipping
+[INFO] META-INF/MANIFEST.MF already added, skipping
+[INFO] org/ already added, skipping
+[INFO] org/eclipse/ already added, skipping
+[INFO] org/eclipse/jetty/ already added, skipping
+[INFO] about.html already added, skipping
+[INFO] META-INF/maven/ already added, skipping
+[INFO] META-INF/maven/org.eclipse.jetty/ already added, skipping
+[INFO] META-INF/ already added, skipping
+[INFO] META-INF/MANIFEST.MF already added, skipping
+[INFO] org/ already added, skipping
+[INFO] org/eclipse/ already added, skipping
+[INFO] org/eclipse/jetty/ already added, skipping
+[INFO] about.html already added, skipping
+[INFO] META-INF/maven/ already added, skipping
+[INFO] META-INF/maven/org.eclipse.jetty/ already added, skipping
+[INFO] META-INF/ already added, skipping
+[INFO] META-INF/MANIFEST.MF already added, skipping
+[INFO] org/ already added, skipping
+[INFO] org/eclipse/ already added, skipping
+[INFO] org/eclipse/jetty/ already added, skipping
+[INFO] about.html already added, skipping
+[INFO] META-INF/maven/ already added, skipping
+[INFO] META-INF/maven/org.eclipse.jetty/ already added, skipping
+[INFO] META-INF/ already added, skipping
+[INFO] META-INF/MANIFEST.MF already added, skipping
+[INFO] org/ already added, skipping
+[INFO] org/eclipse/ already added, skipping
+[INFO] org/eclipse/jetty/ already added, skipping
+[INFO] org/eclipse/jetty/util/ already added, skipping
+[INFO] about.html already added, skipping
+[INFO] META-INF/maven/ already added, skipping
+[INFO] META-INF/maven/org.eclipse.jetty/ already added, skipping
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 3.168s
+[INFO] Finished at: Sat Jun 28 23:05:17 UTC 2014
+[INFO] Final Memory: 12M/207M
+[INFO] ------------------------------------------------------------------------
+
+-----------------------------------------------------
+  VERIFYING JSON (/json)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Date: Sat, 28 Jun 2014 23:05:27 GMT
+Content-Type: application/json;charset=ISO-8859-1
+Content-Length: 27
+Server: Jetty(9.1.z-SNAPSHOT)
+
+{"message":"Hello, World!"}
+
+VALIDATING JSON ... PASS
+
+
+-----------------------------------------------------
+  VERIFYING PLAINTEXT (/plaintext)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Date: Sat, 28 Jun 2014 23:05:27 GMT
+Content-Type: text/plain
+Content-Length: 13
+Server: Jetty(9.1.z-SNAPSHOT)
+
+Hello, World!
+
+VALIDATING PLAINTEXT ... PASS
+
+
+-----------------------------------------------------
+  Benchmarking jetty-servlet ...
+-----------------------------------------------------
+BENCHMARKING JSON ... Complete
+BENCHMARKING Plaintext ... Complete
+
+-----------------------------------------------------
+  Stopping jetty-servlet
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Stopped jetty-servlet
+-----------------------------------------------------
+
+----------------------------------------------------
+Saving results through jetty-servlet
+----------------------------------------------------

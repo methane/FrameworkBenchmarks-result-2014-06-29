@@ -1,0 +1,116 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Sun Jun 29 01:44:52 UTC 2014
+
+  System load:  3.21               Processes:           140
+  Usage of /:   69.4% of 19.55GB   Users logged in:     0
+  Memory usage: 32%                IP address for eth0: 10.227.136.45
+  Swap usage:   0%
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer play-activate-mysql
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:9000/update?queries=2
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:9000/update?queries=2
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    34.32ms   52.61ms 166.76ms   78.04%
+    Req/Sec   177.00    123.37   600.00     66.30%
+  7013 requests in 5.00s, 1.11MB read
+Requests/sec:   1402.87
+Transfer/sec:    226.83KB
+
+---------------------------------------------------------
+ Running Warmup play-activate-mysql
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:9000/update?queries=2
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:9000/update?queries=2
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   134.61ms  149.52ms   1.13s    86.35%
+    Req/Sec   528.92    210.45     0.91k    63.29%
+  31845 requests in 15.00s, 5.03MB read
+Requests/sec:   2123.03
+Transfer/sec:    343.24KB
+
+---------------------------------------------------------
+ Queries: 1 for play-activate-mysql
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:9000/update?queries=1
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:9000/update?queries=1
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    88.92ms   94.09ms 682.35ms   86.57%
+    Req/Sec   802.78    282.39     1.45k    72.37%
+  48192 requests in 15.01s, 6.15MB read
+Requests/sec:   3209.68
+Transfer/sec:    419.32KB
+
+---------------------------------------------------------
+ Queries: 5 for play-activate-mysql
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:9000/update?queries=5
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:9000/update?queries=5
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   185.16ms  227.08ms   1.53s    81.49%
+    Req/Sec   357.55     99.19   599.00     67.33%
+  21333 requests in 15.00s, 5.33MB read
+Requests/sec:   1422.49
+Transfer/sec:    363.82KB
+
+---------------------------------------------------------
+ Queries: 10 for play-activate-mysql
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:9000/update?queries=10
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:9000/update?queries=10
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   272.66ms  302.15ms   1.56s    81.86%
+    Req/Sec   229.88     64.18   601.00     77.10%
+  13462 requests in 15.00s, 5.40MB read
+Requests/sec:    897.31
+Transfer/sec:    368.75KB
+
+---------------------------------------------------------
+ Queries: 15 for play-activate-mysql
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:9000/update?queries=15
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:9000/update?queries=15
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   424.70ms  469.12ms   2.37s    80.90%
+    Req/Sec   151.94     28.57   221.00     69.41%
+  9101 requests in 15.01s, 5.03MB read
+Requests/sec:    606.29
+Transfer/sec:    343.21KB
+
+---------------------------------------------------------
+ Queries: 20 for play-activate-mysql
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:9000/update?queries=20
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:9000/update?queries=20
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   562.81ms  598.17ms   2.92s    79.77%
+    Req/Sec   111.64     17.00   147.00     73.97%
+  6758 requests in 15.01s, 4.76MB read
+Requests/sec:    450.28
+Transfer/sec:    324.78KB

@@ -1,0 +1,97 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer jetty-servlet
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/plaintext
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/plaintext
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     4.52ms   15.86ms  83.89ms   93.24%
+    Req/Sec     4.59k     3.43k   17.67k    73.84%
+  165744 requests in 5.00s, 23.08MB read
+Requests/sec:  33159.44
+Transfer/sec:      4.62MB
+
+---------------------------------------------------------
+ Running Warmup jetty-servlet
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/plaintext
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/plaintext
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     4.72ms    6.68ms 269.83ms   95.05%
+    Req/Sec    13.88k     2.42k   27.91k    70.73%
+  795750 requests in 15.00s, 110.80MB read
+Requests/sec:  53051.81
+Transfer/sec:      7.39MB
+
+---------------------------------------------------------
+ Concurrency: 256 for jetty-servlet
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/plaintext
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    28.38ms   39.87ms 508.14ms   91.34%
+    Req/Sec    36.04k     3.62k   46.55k    69.43%
+  2148124 requests in 15.00s, 299.10MB read
+Requests/sec: 143171.93
+Transfer/sec:     19.93MB
+
+---------------------------------------------------------
+ Concurrency: 1024 for jetty-servlet
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 1024 --timeout 1024 -t 4 http://127.0.0.1:8080/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/plaintext
+  4 threads and 1024 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   109.45ms  113.60ms   1.81s    91.27%
+    Req/Sec    36.71k     5.04k   67.37k    87.74%
+  2157471 requests in 14.99s, 300.40MB read
+  Socket errors: connect 0, read 20, write 0, timeout 59
+Requests/sec: 143945.58
+Transfer/sec:     20.04MB
+
+---------------------------------------------------------
+ Concurrency: 4096 for jetty-servlet
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 4096 --timeout 4096 -t 4 http://127.0.0.1:8080/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/plaintext
+  4 threads and 4096 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   340.49ms  186.50ms   2.54s    76.06%
+    Req/Sec    36.02k     6.23k   49.66k    71.88%
+  2150316 requests in 14.99s, 299.40MB read
+  Socket errors: connect 0, read 25, write 0, timeout 6255
+Requests/sec: 143404.84
+Transfer/sec:     19.97MB
+
+---------------------------------------------------------
+ Concurrency: 16384 for jetty-servlet
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16384 --timeout 16384 -t 4 http://127.0.0.1:8080/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/plaintext
+  4 threads and 16384 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   789.55ms  571.15ms   7.92s    96.72%
+    Req/Sec    34.77k     6.70k   44.88k    72.00%
+  2049858 requests in 14.99s, 285.41MB read
+  Socket errors: connect 0, read 1684, write 0, timeout 58964
+Requests/sec: 136783.88
+Transfer/sec:     19.05MB

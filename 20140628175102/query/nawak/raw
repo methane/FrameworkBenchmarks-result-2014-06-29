@@ -1,0 +1,108 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer nawak
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:6767/queries?queries=2
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:6767/queries?queries=2
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.06ms  502.17us   7.13ms   84.18%
+    Req/Sec     1.00k   157.53     1.55k    69.11%
+  37748 requests in 5.00s, 4.88MB read
+Requests/sec:   7553.84
+Transfer/sec:      0.98MB
+
+---------------------------------------------------------
+ Running Warmup nawak
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:6767/queries?queries=2
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:6767/queries?queries=2
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    24.78ms   35.13ms 253.85ms   90.06%
+    Req/Sec     2.50k   183.71     3.09k    69.11%
+  149376 requests in 15.00s, 19.31MB read
+Requests/sec:   9958.86
+Transfer/sec:      1.29MB
+
+---------------------------------------------------------
+ Queries: 1 for nawak
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:6767/queries?queries=1
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:6767/queries?queries=1
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    18.72ms   23.77ms 208.50ms   88.28%
+    Req/Sec     3.45k   259.01     4.34k    69.76%
+  206034 requests in 15.00s, 20.39MB read
+Requests/sec:  13736.13
+Transfer/sec:      1.36MB
+
+---------------------------------------------------------
+ Queries: 5 for nawak
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:6767/queries?queries=5
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:6767/queries?queries=5
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    47.37ms   61.97ms 357.15ms   84.79%
+    Req/Sec     1.32k    97.49     1.69k    68.80%
+  79119 requests in 15.00s, 17.50MB read
+Requests/sec:   5274.55
+Transfer/sec:      1.17MB
+
+---------------------------------------------------------
+ Queries: 10 for nawak
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:6767/queries?queries=10
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:6767/queries?queries=10
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    85.92ms  107.54ms 625.24ms   84.48%
+    Req/Sec   730.35     52.98     0.87k    67.44%
+  43741 requests in 15.00s, 16.30MB read
+Requests/sec:   2915.52
+Transfer/sec:      1.09MB
+
+---------------------------------------------------------
+ Queries: 15 for nawak
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:6767/queries?queries=15
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:6767/queries?queries=15
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   122.06ms  169.29ms 849.28ms   86.66%
+    Req/Sec   526.88     46.97   681.00     66.84%
+  31590 requests in 15.00s, 16.56MB read
+Requests/sec:   2105.54
+Transfer/sec:      1.10MB
+
+---------------------------------------------------------
+ Queries: 20 for nawak
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:6767/queries?queries=20
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:6767/queries?queries=20
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   151.64ms  189.25ms   1.04s    87.32%
+    Req/Sec   418.72     34.21   559.00     70.99%
+  25060 requests in 15.01s, 16.93MB read
+Requests/sec:   1669.84
+Transfer/sec:      1.13MB

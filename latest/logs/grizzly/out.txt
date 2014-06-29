@@ -1,0 +1,155 @@
+test.os.lower() = linux  test.database_os.lower() = linux
+self.results['frameworks'] != None: True
+test.name: grizzly
+self.results['completed']: {}
+
+=====================================================
+  Beginning grizzly
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Starting grizzly
+-----------------------------------------------------
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building grizzly-bm 0.1
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ grizzly-bm ---
+[INFO] Deleting /home/ubuntu/FrameworkBenchmarks/grizzly-bm/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.3:resources (default-resources) @ grizzly-bm ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/ubuntu/FrameworkBenchmarks/grizzly-bm/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.2:compile (default-compile) @ grizzly-bm ---
+[INFO] Compiling 5 source files to /home/ubuntu/FrameworkBenchmarks/grizzly-bm/target/classes
+[INFO] 
+[INFO] --- maven-assembly-plugin:2.2-beta-5:single (default-cli) @ grizzly-bm ---
+[INFO] META-INF/MANIFEST.MF already added, skipping
+[INFO] META-INF/ already added, skipping
+[INFO] META-INF/maven/ already added, skipping
+[INFO] META-INF/maven/org.glassfish.grizzly/ already added, skipping
+[INFO] org/ already added, skipping
+[INFO] org/glassfish/ already added, skipping
+[INFO] org/glassfish/grizzly/ already added, skipping
+[INFO] org/glassfish/grizzly/http/ already added, skipping
+[INFO] META-INF/MANIFEST.MF already added, skipping
+[INFO] META-INF/ already added, skipping
+[INFO] META-INF/maven/ already added, skipping
+[INFO] META-INF/maven/org.glassfish.grizzly/ already added, skipping
+[INFO] org/ already added, skipping
+[INFO] org/glassfish/ already added, skipping
+[INFO] org/glassfish/grizzly/ already added, skipping
+[INFO] META-INF/MANIFEST.MF already added, skipping
+[INFO] META-INF/ already added, skipping
+[INFO] META-INF/maven/ already added, skipping
+[INFO] META-INF/MANIFEST.MF already added, skipping
+[INFO] META-INF/ already added, skipping
+[INFO] META-INF/LICENSE already added, skipping
+[INFO] META-INF/maven/ already added, skipping
+[INFO] META-INF/maven/com.fasterxml.jackson.core/ already added, skipping
+[INFO] com/ already added, skipping
+[INFO] com/fasterxml/ already added, skipping
+[INFO] com/fasterxml/jackson/ already added, skipping
+[INFO] META-INF/MANIFEST.MF already added, skipping
+[INFO] META-INF/ already added, skipping
+[INFO] META-INF/LICENSE already added, skipping
+[INFO] META-INF/NOTICE already added, skipping
+[INFO] META-INF/maven/ already added, skipping
+[INFO] META-INF/maven/com.fasterxml.jackson.core/ already added, skipping
+[INFO] META-INF/services/ already added, skipping
+[INFO] com/ already added, skipping
+[INFO] com/fasterxml/ already added, skipping
+[INFO] com/fasterxml/jackson/ already added, skipping
+[INFO] Building jar: /home/ubuntu/FrameworkBenchmarks/grizzly-bm/target/grizzly-bm-0.1-jar-with-dependencies.jar
+[INFO] META-INF/MANIFEST.MF already added, skipping
+[INFO] META-INF/ already added, skipping
+[INFO] META-INF/maven/ already added, skipping
+[INFO] META-INF/maven/org.glassfish.grizzly/ already added, skipping
+[INFO] org/ already added, skipping
+[INFO] org/glassfish/ already added, skipping
+[INFO] org/glassfish/grizzly/ already added, skipping
+[INFO] org/glassfish/grizzly/http/ already added, skipping
+[INFO] META-INF/MANIFEST.MF already added, skipping
+[INFO] META-INF/ already added, skipping
+[INFO] META-INF/maven/ already added, skipping
+[INFO] META-INF/maven/org.glassfish.grizzly/ already added, skipping
+[INFO] org/ already added, skipping
+[INFO] org/glassfish/ already added, skipping
+[INFO] org/glassfish/grizzly/ already added, skipping
+[INFO] META-INF/MANIFEST.MF already added, skipping
+[INFO] META-INF/ already added, skipping
+[INFO] META-INF/maven/ already added, skipping
+[INFO] META-INF/MANIFEST.MF already added, skipping
+[INFO] META-INF/ already added, skipping
+[INFO] META-INF/LICENSE already added, skipping
+[INFO] META-INF/maven/ already added, skipping
+[INFO] META-INF/maven/com.fasterxml.jackson.core/ already added, skipping
+[INFO] com/ already added, skipping
+[INFO] com/fasterxml/ already added, skipping
+[INFO] com/fasterxml/jackson/ already added, skipping
+[INFO] META-INF/MANIFEST.MF already added, skipping
+[INFO] META-INF/ already added, skipping
+[INFO] META-INF/LICENSE already added, skipping
+[INFO] META-INF/NOTICE already added, skipping
+[INFO] META-INF/maven/ already added, skipping
+[INFO] META-INF/maven/com.fasterxml.jackson.core/ already added, skipping
+[INFO] META-INF/services/ already added, skipping
+[INFO] com/ already added, skipping
+[INFO] com/fasterxml/ already added, skipping
+[INFO] com/fasterxml/jackson/ already added, skipping
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 5.527s
+[INFO] Finished at: Sat Jun 28 22:39:46 UTC 2014
+[INFO] Final Memory: 17M/204M
+[INFO] ------------------------------------------------------------------------
+
+-----------------------------------------------------
+  VERIFYING JSON (/json)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Server: GRZLY
+Content-Type: application/json;charset=utf-8
+Date: Sat, 28 Jun 2014 22:39:56 GMT
+Content-Length: 27
+
+{"message":"Hello, World!"}
+
+VALIDATING JSON ... PASS
+
+
+-----------------------------------------------------
+  VERIFYING PLAINTEXT (/plaintext)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Server: GRZLY
+Content-Type: text/plain;charset=utf-8
+Date: Sat, 28 Jun 2014 22:39:56 GMT
+Content-Length: 13
+
+Hello, World!
+
+VALIDATING PLAINTEXT ... PASS
+
+
+-----------------------------------------------------
+  Benchmarking grizzly ...
+-----------------------------------------------------
+BENCHMARKING JSON ... Complete
+BENCHMARKING Plaintext ... Complete
+
+-----------------------------------------------------
+  Stopping grizzly
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Stopped grizzly
+-----------------------------------------------------
+
+----------------------------------------------------
+Saving results through grizzly
+----------------------------------------------------

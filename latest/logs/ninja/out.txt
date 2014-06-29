@@ -1,0 +1,139 @@
+test.os.lower() = linux  test.database_os.lower() = linux
+self.results['frameworks'] != None: True
+test.name: ninja
+self.results['completed']: {}
+
+=====================================================
+  Beginning ninja
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Starting ninja
+-----------------------------------------------------
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+mysql start/running, process 6240
+ * Restarting PostgreSQL 9.3 database server
+   ...done.
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building ninja-resin 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ ninja-resin ---
+[INFO] Deleting /home/ubuntu/FrameworkBenchmarks/ninja-resin/target
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.0:enforce (enforce-banned-dependencies) @ ninja-resin ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.3:resources (default-resources) @ ninja-resin ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 5 resources
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ ninja-resin ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 11 source files to /home/ubuntu/FrameworkBenchmarks/ninja-resin/target/classes
+[WARNING] /home/ubuntu/FrameworkBenchmarks/ninja-resin/src/main/java/dao/FortuneDao.java: /home/ubuntu/FrameworkBenchmarks/ninja-resin/src/main/java/dao/FortuneDao.java uses unchecked or unsafe operations.
+[WARNING] /home/ubuntu/FrameworkBenchmarks/ninja-resin/src/main/java/dao/FortuneDao.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-war-plugin:2.4:war (default-cli) @ ninja-resin ---
+[INFO] Packaging webapp
+[INFO] Assembling webapp [ninja-resin] in [/home/ubuntu/FrameworkBenchmarks/ninja-resin/target/ninja-resin-0.0.1-SNAPSHOT]
+[INFO] Processing war project
+[INFO] Copying webapp resources [/home/ubuntu/FrameworkBenchmarks/ninja-resin/src/main/webapp]
+[INFO] Webapp assembled in [693 msecs]
+[INFO] Building war: /home/ubuntu/FrameworkBenchmarks/ninja-resin/target/ninja.war
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 6.807s
+[INFO] Finished at: Sun Jun 29 00:07:16 UTC 2014
+[INFO] Final Memory: 21M/179M
+[INFO] ------------------------------------------------------------------------
+Resin/4.0.36 launching watchdog at 127.0.0.1:6600
+Resin/4.0.36 started -server 'default' with watchdog at 127.0.0.1:6600
+
+-----------------------------------------------------
+  VERIFYING JSON (/ninja/json)
+-----------------------------------------------------
+VALIDATING JSON ... FAIL
+
+
+-----------------------------------------------------
+  VERIFYING DB (/ninja/db)
+-----------------------------------------------------
+VALIDATING DB ... FAIL
+
+
+-----------------------------------------------------
+  VERIFYING QUERY (/ninja/queries?queries=2)
+-----------------------------------------------------
+/ninja/queries?queries=2 - FAIL
+
+-----------------------------------------------------
+
+/ninja/queries?queries=0 - WARNING
+
+-----------------------------------------------------
+
+/ninja/queries?queries=foo - WARNING
+
+-----------------------------------------------------
+
+/ninja/queries?queries=501 - WARNING
+
+-----------------------------------------------------
+
+
+VALIDATING QUERY ... FAIL
+
+
+-----------------------------------------------------
+  VERIFYING FORTUNE (/ninja/fortunes)
+-----------------------------------------------------
+VALIDATING FORTUNE ... FAIL
+
+
+-----------------------------------------------------
+  VERIFYING UPDATE (/ninja/update?queries=)
+-----------------------------------------------------
+VALIDATING UPDATE ... FAIL
+
+
+-----------------------------------------------------
+  VERIFYING PLAINTEXT (/ninja/plaintext)
+-----------------------------------------------------
+VALIDATING PLAINTEXT ... FAIL
+
+
+-----------------------------------------------------
+  Benchmarking ninja ...
+-----------------------------------------------------
+BENCHMARKING JSON ... Complete
+BENCHMARKING DB ... Complete
+BENCHMARKING Query ... Complete
+BENCHMARKING Fortune ... Complete
+BENCHMARKING Update ... Complete
+BENCHMARKING Plaintext ... Complete
+
+-----------------------------------------------------
+  Stopping ninja
+-----------------------------------------------------
+Resin/4.0.36 shutdown watchdog at 127.0.0.1:6600
+
+-----------------------------------------------------
+  Stopped ninja
+-----------------------------------------------------
+
+----------------------------------------------------
+Saving results through ninja
+----------------------------------------------------

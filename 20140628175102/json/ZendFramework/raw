@@ -1,0 +1,130 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Sat Jun 28 17:51:03 UTC 2014
+
+  System load:  0.09               Processes:           138
+  Usage of /:   67.2% of 19.55GB   Users logged in:     1
+  Memory usage: 24%                IP address for eth0: 10.227.136.45
+  Swap usage:   0%
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer ZendFramework
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/json
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/json
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    29.72ms   10.64ms  65.50ms   64.22%
+    Req/Sec    36.03     13.45    81.00     76.29%
+  1446 requests in 5.02s, 338.86KB read
+Requests/sec:    288.11
+Transfer/sec:     67.52KB
+
+---------------------------------------------------------
+ Running Warmup ZendFramework
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/json
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.18s   513.52ms   4.37s    75.90%
+    Req/Sec    62.64     37.13   261.00     73.82%
+  3678 requests in 15.00s, 862.03KB read
+Requests/sec:    245.25
+Transfer/sec:     57.48KB
+
+---------------------------------------------------------
+ Concurrency: 8 for ZendFramework
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    28.86ms   11.01ms  86.17ms   61.32%
+    Req/Sec    72.15     17.99   155.00     73.65%
+  4327 requests in 15.01s, 0.99MB read
+Requests/sec:    288.25
+Transfer/sec:     67.55KB
+
+---------------------------------------------------------
+ Concurrency: 16 for ZendFramework
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    59.17ms   20.23ms 117.10ms   67.11%
+    Req/Sec    69.23     11.97   118.00     78.52%
+  4161 requests in 15.02s, 0.95MB read
+Requests/sec:    277.10
+Transfer/sec:     64.93KB
+
+---------------------------------------------------------
+ Concurrency: 32 for ZendFramework
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   121.52ms   34.37ms 226.57ms   74.67%
+    Req/Sec    66.77      6.89    95.00     74.00%
+  4015 requests in 15.02s, 0.92MB read
+Requests/sec:    267.34
+Transfer/sec:     62.65KB
+
+---------------------------------------------------------
+ Concurrency: 64 for ZendFramework
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   247.11ms   56.36ms 499.96ms   75.55%
+    Req/Sec    65.62      4.17    77.00     71.43%
+  3925 requests in 15.03s, 0.90MB read
+Requests/sec:    261.22
+Transfer/sec:     61.22KB
+
+---------------------------------------------------------
+ Concurrency: 128 for ZendFramework
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   489.20ms  115.57ms 869.74ms   68.89%
+    Req/Sec    65.56      4.54    73.00     75.81%
+  3895 requests in 15.03s, 0.89MB read
+Requests/sec:    259.09
+Transfer/sec:     60.72KB
+
+---------------------------------------------------------
+ Concurrency: 256 for ZendFramework
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.01s   649.94ms   6.73s    97.84%
+    Req/Sec    63.56     11.02    78.00     81.25%
+  3785 requests in 15.03s, 0.87MB read
+Requests/sec:    251.86
+Transfer/sec:     59.03KB

@@ -1,0 +1,63 @@
+test.os.lower() = linux  test.database_os.lower() = linux
+self.results['frameworks'] != None: True
+test.name: snap
+self.results['completed']: {}
+
+=====================================================
+  Beginning snap
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Starting snap
+-----------------------------------------------------
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+mysql start/running, process 31033
+ * Restarting PostgreSQL 9.3 database server
+   ...done.
+Downloading the latest package list from hackage.haskell.org
+Resolving dependencies...
+In order, the following would be installed:
+HUnit-1.2.5.2 (new package)
+bytestring-mmap-0.2.2 (new package)
+extensible-exceptions-0.1.1.4 (new package)
+text-0.11.3.1 (new version)
+blaze-builder-0.3.3.2 (reinstall) changes: text-1.1.1.3 -> 0.11.3.1
+blaze-textual-0.2.0.9 (reinstall) changes: text-1.1.1.3 -> 0.11.3.1
+hashable-1.2.2.0 (reinstall) changes: text-1.1.1.3 -> 0.11.3.1
+case-insensitive-1.2.0.0 (reinstall) changes: text-1.1.1.3 -> 0.11.3.1
+scientific-0.3.2.1 (reinstall) changes: text-1.1.1.3 -> 0.11.3.1
+attoparsec-0.11.3.4 (new version)
+mysql-simple-0.2.2.4 (reinstall) changes: attoparsec-0.12.1.0 -> 0.11.3.4,
+text-1.1.1.3 -> 0.11.3.1
+transformers-0.3.0.0 (new version)
+enumerator-0.4.20 (new package)
+attoparsec-enumerator-0.3.3 (new package)
+blaze-builder-enumerator-0.2.0.6 (new package)
+monads-tf-0.1.0.2 (new package)
+MonadCatchIO-transformers-0.3.1.1 (new package)
+mtl-2.1.3.1 (new version)
+parsec-3.1.5 (reinstall) changes: mtl-2.2.1 -> 2.1.3.1, text-1.1.1.3 ->
+0.11.3.1
+network-2.5.0.0 (reinstall)
+regex-base-0.93.2 (new package)
+regex-posix-0.95.2 (new package)
+transformers-base-0.4.2 (reinstall) changes: transformers-0.4.1.0 -> 0.3.0.0
+monad-control-0.3.3.0 (reinstall) changes: transformers-0.4.1.0 -> 0.3.0.0
+resource-pool-0.2.3.0 (reinstall) changes: transformers-0.4.1.0 -> 0.3.0.0
+unordered-containers-0.2.4.0 (reinstall)
+aeson-0.6.2.1 (new version)
+configurator-0.2.0.2 (new package)
+zlib-bindings-0.1.1.5 (new package)
+zlib-enum-0.2.3.1 (new package)
+snap-core-0.9.6.3 (new package)
+snap-server-0.9.4.5 (new package)
+snap-bench-0.1 (new package)

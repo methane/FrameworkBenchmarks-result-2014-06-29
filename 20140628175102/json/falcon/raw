@@ -1,0 +1,130 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Sat Jun 28 21:00:44 UTC 2014
+
+  System load:  1.32               Processes:           136
+  Usage of /:   67.6% of 19.55GB   Users logged in:     0
+  Memory usage: 24%                IP address for eth0: 10.227.136.45
+  Swap usage:   0%
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer falcon
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/json
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/json
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   787.48us    1.68ms  22.17ms   98.50%
+    Req/Sec     2.03k     1.15k    4.89k    60.63%
+  76789 requests in 5.00s, 14.57MB read
+Requests/sec:  15364.47
+Transfer/sec:      2.92MB
+
+---------------------------------------------------------
+ Running Warmup falcon
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/json
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    17.35ms   12.73ms  88.69ms   59.54%
+    Req/Sec     3.94k     0.94k    7.30k    66.83%
+  230948 requests in 15.00s, 43.83MB read
+Requests/sec:  15397.64
+Transfer/sec:      2.92MB
+
+---------------------------------------------------------
+ Concurrency: 8 for falcon
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   563.69us  700.64us  16.12ms   98.44%
+    Req/Sec     3.99k     1.00k    7.44k    66.89%
+  227457 requests in 15.00s, 43.17MB read
+Requests/sec:  15164.96
+Transfer/sec:      2.88MB
+
+---------------------------------------------------------
+ Concurrency: 16 for falcon
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.16ms    2.06ms  43.69ms   97.41%
+    Req/Sec     3.99k     1.24k    9.44k    72.19%
+  227181 requests in 14.99s, 43.11MB read
+Requests/sec:  15154.36
+Transfer/sec:      2.88MB
+
+---------------------------------------------------------
+ Concurrency: 32 for falcon
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     2.20ms    2.93ms  27.65ms   90.52%
+    Req/Sec     4.39k     2.03k    9.89k    66.18%
+  231969 requests in 15.01s, 44.02MB read
+Requests/sec:  15455.10
+Transfer/sec:      2.93MB
+
+---------------------------------------------------------
+ Concurrency: 64 for falcon
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     4.78ms    5.31ms  37.83ms   83.00%
+    Req/Sec     4.32k     1.69k    9.27k    66.43%
+  231608 requests in 15.00s, 43.95MB read
+Requests/sec:  15440.93
+Transfer/sec:      2.93MB
+
+---------------------------------------------------------
+ Concurrency: 128 for falcon
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     8.47ms    6.02ms  53.74ms   71.51%
+    Req/Sec     4.00k     0.87k    6.96k    67.00%
+  232493 requests in 15.00s, 44.12MB read
+Requests/sec:  15499.82
+Transfer/sec:      2.94MB
+
+---------------------------------------------------------
+ Concurrency: 256 for falcon
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    17.47ms    9.97ms  62.05ms   59.95%
+    Req/Sec     3.98k     1.22k    6.89k    68.92%
+  231683 requests in 15.00s, 43.97MB read
+Requests/sec:  15446.30
+Transfer/sec:      2.93MB

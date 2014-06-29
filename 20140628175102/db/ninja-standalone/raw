@@ -1,0 +1,130 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Sun Jun 29 00:08:32 UTC 2014
+
+  System load:  1.96               Processes:           138
+  Usage of /:   67.9% of 19.55GB   Users logged in:     0
+  Memory usage: 30%                IP address for eth0: 10.227.136.45
+  Swap usage:   0%
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer ninja-standalone
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/db
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/db
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     2.22ms    2.26ms  21.68ms   91.74%
+    Req/Sec   497.13    153.04     0.93k    66.95%
+  18042 requests in 5.00s, 4.93MB read
+Requests/sec:   3610.05
+Transfer/sec:      0.99MB
+
+---------------------------------------------------------
+ Running Warmup ninja-standalone
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/db
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    28.06ms   62.62ms   1.01s    92.37%
+    Req/Sec     2.30k   383.70     4.82k    75.81%
+  136718 requests in 15.00s, 37.39MB read
+Requests/sec:   9114.70
+Transfer/sec:      2.49MB
+
+---------------------------------------------------------
+ Concurrency: 8 for ninja-standalone
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:8080/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     0.98ms  679.68us  11.27ms   89.40%
+    Req/Sec     2.16k   330.26     3.33k    68.87%
+  123013 requests in 15.00s, 33.64MB read
+Requests/sec:   8201.55
+Transfer/sec:      2.24MB
+
+---------------------------------------------------------
+ Concurrency: 16 for ninja-standalone
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:8080/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.89ms    2.14ms  40.69ms   90.80%
+    Req/Sec     2.31k   464.95     4.11k    67.66%
+  131139 requests in 15.00s, 35.87MB read
+Requests/sec:   8743.19
+Transfer/sec:      2.39MB
+
+---------------------------------------------------------
+ Concurrency: 32 for ninja-standalone
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:8080/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     3.75ms    5.38ms  58.87ms   89.46%
+    Req/Sec     2.32k   475.64     4.17k    70.74%
+  134094 requests in 15.00s, 36.67MB read
+Requests/sec:   8939.76
+Transfer/sec:      2.45MB
+
+---------------------------------------------------------
+ Concurrency: 64 for ninja-standalone
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:8080/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     7.56ms   13.27ms 191.56ms   88.76%
+    Req/Sec     2.29k   357.66     3.91k    70.37%
+  135343 requests in 15.00s, 37.02MB read
+Requests/sec:   9023.16
+Transfer/sec:      2.47MB
+
+---------------------------------------------------------
+ Concurrency: 128 for ninja-standalone
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:8080/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    14.52ms   29.68ms 326.09ms   89.25%
+    Req/Sec     2.27k   321.00     3.32k    67.39%
+  135085 requests in 15.00s, 36.95MB read
+Requests/sec:   9007.09
+Transfer/sec:      2.46MB
+
+---------------------------------------------------------
+ Concurrency: 256 for ninja-standalone
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    28.02ms   61.74ms   1.14s    92.11%
+    Req/Sec     2.29k   409.63     5.00k    81.38%
+  136201 requests in 15.00s, 37.25MB read
+Requests/sec:   9079.53
+Transfer/sec:      2.48MB

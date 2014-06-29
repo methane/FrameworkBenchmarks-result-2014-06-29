@@ -1,0 +1,97 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer nawak
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:6767/plaintext
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:6767/plaintext
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   539.65us  318.13us   6.69ms   92.71%
+    Req/Sec     1.94k   264.53     3.11k    67.63%
+  73579 requests in 5.00s, 5.47MB read
+Requests/sec:  14721.72
+Transfer/sec:      1.10MB
+
+---------------------------------------------------------
+ Running Warmup nawak
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:6767/plaintext
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:6767/plaintext
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    10.76ms    6.49ms 110.85ms   84.73%
+    Req/Sec     6.06k   518.73     7.70k    68.27%
+  357786 requests in 15.00s, 26.61MB read
+Requests/sec:  23847.64
+Transfer/sec:      1.77MB
+
+---------------------------------------------------------
+ Concurrency: 256 for nawak
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:6767/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:6767/plaintext
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   134.69ms   52.92ms 318.74ms   70.92%
+    Req/Sec     7.72k     0.99k   10.08k    66.07%
+  461441 requests in 15.00s, 34.33MB read
+Requests/sec:  30767.99
+Transfer/sec:      2.29MB
+
+---------------------------------------------------------
+ Concurrency: 1024 for nawak
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 1024 --timeout 1024 -t 4 http://127.0.0.1:6767/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:6767/plaintext
+  4 threads and 1024 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   472.85ms  125.57ms   1.09s    71.15%
+    Req/Sec     8.31k     1.95k   11.48k    75.00%
+  490765 requests in 15.02s, 36.51MB read
+  Socket errors: connect 0, read 0, write 0, timeout 216
+Requests/sec:  32672.47
+Transfer/sec:      2.43MB
+
+---------------------------------------------------------
+ Concurrency: 4096 for nawak
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 4096 --timeout 4096 -t 4 http://127.0.0.1:6767/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:6767/plaintext
+  4 threads and 4096 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.12s   408.18ms   8.04s    86.72%
+    Req/Sec     8.04k     2.42k   14.15k    69.44%
+  479081 requests in 15.00s, 35.64MB read
+  Socket errors: connect 0, read 91, write 0, timeout 12835
+Requests/sec:  31940.42
+Transfer/sec:      2.38MB
+
+---------------------------------------------------------
+ Concurrency: 16384 for nawak
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16384 --timeout 16384 -t 4 http://127.0.0.1:6767/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:6767/plaintext
+  4 threads and 16384 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     2.26s   743.09ms   8.83s    76.69%
+    Req/Sec     7.82k   780.98     9.31k    66.67%
+  403742 requests in 15.01s, 30.03MB read
+  Socket errors: connect 0, read 1751, write 0, timeout 71261
+Requests/sec:  26890.54
+Transfer/sec:      2.00MB

@@ -1,0 +1,108 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer servlet-postgres-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/servlet/postgres?queries=2
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/servlet/postgres?queries=2
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     2.39ms    8.98ms  73.41ms   98.26%
+    Req/Sec     0.87k   235.50     2.00k    73.72%
+  32244 requests in 5.00s, 5.98MB read
+Requests/sec:   6449.13
+Transfer/sec:      1.20MB
+
+---------------------------------------------------------
+ Running Warmup servlet-postgres-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/servlet/postgres?queries=2
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/servlet/postgres?queries=2
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    41.27ms  126.43ms   2.15s    98.81%
+    Req/Sec     1.93k   482.47     6.11k    89.50%
+  115030 requests in 15.00s, 21.34MB read
+Requests/sec:   7668.88
+Transfer/sec:      1.42MB
+
+---------------------------------------------------------
+ Queries: 1 for servlet-postgres-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/servlet/postgres?queries=1
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/servlet/postgres?queries=1
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    42.73ms  176.34ms   1.50s    98.26%
+    Req/Sec     3.26k   849.82    10.06k    90.16%
+  188684 requests in 15.00s, 28.93MB read
+Requests/sec:  12578.32
+Transfer/sec:      1.93MB
+
+---------------------------------------------------------
+ Queries: 5 for servlet-postgres-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/servlet/postgres?queries=5
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/servlet/postgres?queries=5
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   780.48ms    2.76s   11.81s    93.54%
+    Req/Sec     0.94k   711.14     4.00k    81.87%
+  51071 requests in 15.00s, 14.17MB read
+Requests/sec:   3403.78
+Transfer/sec:      0.94MB
+
+---------------------------------------------------------
+ Queries: 10 for servlet-postgres-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/servlet/postgres?queries=10
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/servlet/postgres?queries=10
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   136.50ms  104.49ms   1.05s    84.46%
+    Req/Sec   463.97     36.76   644.00     82.29%
+  27745 requests in 15.00s, 11.90MB read
+Requests/sec:   1849.51
+Transfer/sec:    812.34KB
+
+---------------------------------------------------------
+ Queries: 15 for servlet-postgres-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/servlet/postgres?queries=15
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/servlet/postgres?queries=15
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   174.37ms  182.41ms   2.01s    97.72%
+    Req/Sec   399.25     91.12     1.02k    87.13%
+  23968 requests in 15.00s, 13.91MB read
+Requests/sec:   1597.46
+Transfer/sec:      0.93MB
+
+---------------------------------------------------------
+ Queries: 20 for servlet-postgres-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/servlet/postgres?queries=20
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/servlet/postgres?queries=20
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   210.80ms  120.90ms   1.11s    91.93%
+    Req/Sec   325.39     65.04   707.00     78.67%
+  19681 requests in 15.00s, 14.41MB read
+Requests/sec:   1312.20
+Transfer/sec:      0.96MB

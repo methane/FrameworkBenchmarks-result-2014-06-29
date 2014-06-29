@@ -1,0 +1,38 @@
+test.os.lower() = linux  test.database_os.lower() = linux
+self.results['frameworks'] != None: True
+test.name: yesod-mongodb-raw
+self.results['completed']: {}
+
+=====================================================
+  Beginning yesod-mongodb-raw
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Starting yesod-mongodb-raw
+-----------------------------------------------------
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Sun Jun 29 07:22:12 UTC 2014
+
+  System load:  1.05               Processes:           136
+  Usage of /:   69.3% of 19.55GB   Users logged in:     0
+  Memory usage: 27%                IP address for eth0: 10.227.136.45
+  Swap usage:   0%
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+0 packages can be updated.
+0 updates are security updates.
+
+
+mysql start/running, process 16748
+ * Restarting PostgreSQL 9.3 database server
+   ...done.
+Downloading the latest package list from hackage.haskell.org
+Resolving dependencies...

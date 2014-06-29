@@ -1,0 +1,222 @@
+test.os.lower() = linux  test.database_os.lower() = linux
+self.results['frameworks'] != None: True
+test.name: stream-mongodb-raw
+self.results['completed']: {}
+
+=====================================================
+  Beginning stream-mongodb-raw
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Starting stream-mongodb-raw
+-----------------------------------------------------
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+mysql start/running, process 4673
+ * Restarting PostgreSQL 9.3 database server
+   ...done.
+Resolving dependencies... (3.3s)
+  args 0.9.0 (5 newer versions available)
+  bson 0.1.18
+  collection 0.9.3+1
+  crypto 0.9.0
+  logging 0.9.1+1
+  matcher 0.10.1+1
+  mime 0.9.0+3
+  mongo_dart 0.1.35 (7 newer versions available)
+  mongo_dart_query 0.1.12
+  more 1.2.1
+  path 1.2.1
+  postgresql 0.2.12 (1 newer version available)
+  rikulo_commons 1.0.0 (8 newer versions available)
+  stack_trace 1.0.2
+  stream 1.0.0 (6 newer versions available)
+  unittest 0.11.0+2
+  unmodifiable_collection 0.9.2+1
+  yaml 0.9.0 (5 newer versions available)
+No dependencies changed.
+Uncaught Error: SocketException: OS Error: Connection refused, errno = 111, address = localhost, port = 33795
+Uncaught Error: SocketException: OS Error: Connection refused, errno = 111, address = localhost, port = 33990
+Uncaught Error: SocketException: OS Error: Connection refused, errno = 111, address = localhost, port = 33989
+Uncaught Error: SocketException: OS Error: Connection refused, errno = 111, address = localhost, port = 33924
+
+-----------------------------------------------------
+  VERIFYING DB (/db-mongo)
+-----------------------------------------------------
+HTTP/1.1 502 Bad Gateway
+Server: nginx/1.4.1
+Date: Sun, 29 Jun 2014 04:54:24 GMT
+Content-Type: text/html
+Content-Length: 172
+Connection: keep-alive
+
+<html>
+<head><title>502 Bad Gateway</title></head>
+<body bgcolor="white">
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx/1.4.1</center>
+</body>
+</html>
+
+
+VALIDATING DB ... FAIL
+
+
+-----------------------------------------------------
+  VERIFYING QUERY (/queries-mongo?queries=2)
+-----------------------------------------------------
+HTTP/1.1 502 Bad Gateway
+Server: nginx/1.4.1
+Date: Sun, 29 Jun 2014 04:54:24 GMT
+Content-Type: text/html
+Content-Length: 172
+Connection: keep-alive
+
+<html>
+<head><title>502 Bad Gateway</title></head>
+<body bgcolor="white">
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx/1.4.1</center>
+</body>
+</html>
+
+
+/queries-mongo?queries=2 - FAIL
+
+-----------------------------------------------------
+
+HTTP/1.1 502 Bad Gateway
+Server: nginx/1.4.1
+Date: Sun, 29 Jun 2014 04:54:24 GMT
+Content-Type: text/html
+Content-Length: 172
+Connection: keep-alive
+
+<html>
+<head><title>502 Bad Gateway</title></head>
+<body bgcolor="white">
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx/1.4.1</center>
+</body>
+</html>
+
+
+/queries-mongo?queries=0 - WARNING
+
+-----------------------------------------------------
+
+HTTP/1.1 502 Bad Gateway
+Server: nginx/1.4.1
+Date: Sun, 29 Jun 2014 04:54:24 GMT
+Content-Type: text/html
+Content-Length: 172
+Connection: keep-alive
+
+<html>
+<head><title>502 Bad Gateway</title></head>
+<body bgcolor="white">
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx/1.4.1</center>
+</body>
+</html>
+
+
+/queries-mongo?queries=foo - WARNING
+
+-----------------------------------------------------
+
+HTTP/1.1 502 Bad Gateway
+Server: nginx/1.4.1
+Date: Sun, 29 Jun 2014 04:54:24 GMT
+Content-Type: text/html
+Content-Length: 172
+Connection: keep-alive
+
+<html>
+<head><title>502 Bad Gateway</title></head>
+<body bgcolor="white">
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx/1.4.1</center>
+</body>
+</html>
+
+
+/queries-mongo?queries=501 - WARNING
+
+-----------------------------------------------------
+
+
+VALIDATING QUERY ... FAIL
+
+
+-----------------------------------------------------
+  VERIFYING FORTUNE (/fortunes-mongo)
+-----------------------------------------------------
+HTTP/1.1 502 Bad Gateway
+Server: nginx/1.4.1
+Date: Sun, 29 Jun 2014 04:54:24 GMT
+Content-Type: text/html
+Content-Length: 172
+Connection: keep-alive
+
+<html>
+<head><title>502 Bad Gateway</title></head>
+<body bgcolor="white">
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx/1.4.1</center>
+</body>
+</html>
+
+
+VALIDATING FORTUNE ... FAIL
+
+
+-----------------------------------------------------
+  VERIFYING UPDATE (/updates-mongo?queries=)
+-----------------------------------------------------
+HTTP/1.1 502 Bad Gateway
+Server: nginx/1.4.1
+Date: Sun, 29 Jun 2014 04:54:24 GMT
+Content-Type: text/html
+Content-Length: 172
+Connection: keep-alive
+
+<html>
+<head><title>502 Bad Gateway</title></head>
+<body bgcolor="white">
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx/1.4.1</center>
+</body>
+</html>
+
+
+VALIDATING UPDATE ... FAIL
+
+
+-----------------------------------------------------
+  Benchmarking stream-mongodb-raw ...
+-----------------------------------------------------
+BENCHMARKING DB ... Complete
+BENCHMARKING Query ... Complete
+BENCHMARKING Fortune ... Complete
+BENCHMARKING Update ... Complete
+
+-----------------------------------------------------
+  Stopping stream-mongodb-raw
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Stopped stream-mongodb-raw
+-----------------------------------------------------
+
+----------------------------------------------------
+Saving results through stream-mongodb-raw
+----------------------------------------------------

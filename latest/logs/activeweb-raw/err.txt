@@ -1,0 +1,2 @@
+restart: Unknown instance: 
+[main] WARN org.javalite.activeweb.Configuration - Environment variable ACTIVE_ENV not provided, defaulting to 'development'

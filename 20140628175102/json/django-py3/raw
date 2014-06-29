@@ -1,0 +1,122 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer django-py3
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/json
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/json
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     2.84ms    3.11ms  30.98ms   93.03%
+    Req/Sec   427.51    130.16     1.00k    83.97%
+  15844 requests in 5.00s, 3.05MB read
+Requests/sec:   3170.50
+Transfer/sec:    625.43KB
+
+---------------------------------------------------------
+ Running Warmup django-py3
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/json
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    91.51ms   49.92ms 227.76ms   65.92%
+    Req/Sec   845.61    418.50     1.63k    72.38%
+  48863 requests in 15.00s, 9.41MB read
+Requests/sec:   3257.61
+Transfer/sec:    642.61KB
+
+---------------------------------------------------------
+ Concurrency: 8 for django-py3
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     2.67ms    2.88ms  26.30ms   92.12%
+    Req/Sec     0.86k   287.30     1.55k    66.56%
+  49375 requests in 15.00s, 9.51MB read
+Requests/sec:   3291.72
+Transfer/sec:    649.34KB
+
+---------------------------------------------------------
+ Concurrency: 16 for django-py3
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     4.99ms    4.51ms  29.83ms   83.90%
+    Req/Sec     0.99k   409.89     2.45k    60.66%
+  49606 requests in 15.00s, 9.56MB read
+Requests/sec:   3306.82
+Transfer/sec:    652.32KB
+
+---------------------------------------------------------
+ Concurrency: 32 for django-py3
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    10.98ms    8.03ms  40.71ms   69.00%
+    Req/Sec     0.93k   423.54     1.90k    58.65%
+  49686 requests in 15.01s, 9.57MB read
+Requests/sec:   3310.55
+Transfer/sec:    653.06KB
+
+---------------------------------------------------------
+ Concurrency: 64 for django-py3
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    19.60ms   16.47ms  94.48ms   73.91%
+    Req/Sec     0.85k   179.54     1.30k    67.06%
+  49778 requests in 14.99s, 9.59MB read
+Requests/sec:   3320.73
+Transfer/sec:    655.09KB
+
+---------------------------------------------------------
+ Concurrency: 128 for django-py3
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    38.98ms   11.40ms  70.05ms   59.60%
+    Req/Sec   830.39     90.13     1.00k    62.96%
+  49662 requests in 15.00s, 9.57MB read
+Requests/sec:   3310.67
+Transfer/sec:    653.08KB
+
+---------------------------------------------------------
+ Concurrency: 256 for django-py3
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    76.43ms   27.02ms 198.27ms   87.93%
+    Req/Sec   829.46     47.29     0.94k    63.50%
+  49784 requests in 15.00s, 9.59MB read
+Requests/sec:   3319.00
+Transfer/sec:    654.74KB

@@ -1,0 +1,51 @@
+test.os.lower() = linux  test.database_os.lower() = linux
+self.results['frameworks'] != None: True
+test.name: web-simple
+self.results['completed']: {}
+
+=====================================================
+  Beginning web-simple
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Starting web-simple
+-----------------------------------------------------
+
+-----------------------------------------------------
+  VERIFYING JSON (/json)
+-----------------------------------------------------
+HTTP/1.1 502 Bad Gateway
+Server: nginx/1.4.1
+Date: Sun, 29 Jun 2014 07:15:45 GMT
+Content-Type: text/html
+Content-Length: 172
+Connection: keep-alive
+
+<html>
+<head><title>502 Bad Gateway</title></head>
+<body bgcolor="white">
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx/1.4.1</center>
+</body>
+</html>
+
+
+VALIDATING JSON ... FAIL
+
+
+-----------------------------------------------------
+  Benchmarking web-simple ...
+-----------------------------------------------------
+BENCHMARKING JSON ... Complete
+
+-----------------------------------------------------
+  Stopping web-simple
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Stopped web-simple
+-----------------------------------------------------
+
+----------------------------------------------------
+Saving results through web-simple
+----------------------------------------------------

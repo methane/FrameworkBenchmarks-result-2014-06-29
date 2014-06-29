@@ -1,0 +1,108 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer ringojs-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/db?queries=2
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/db?queries=2
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     3.04ms    6.05ms  51.91ms   95.03%
+    Req/Sec   586.84    244.74     1.33k    66.60%
+  22021 requests in 5.00s, 4.61MB read
+Requests/sec:   4405.27
+Transfer/sec:      0.92MB
+
+---------------------------------------------------------
+ Running Warmup ringojs-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/db?queries=2
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db?queries=2
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    47.25ms   53.32ms 410.98ms   85.58%
+    Req/Sec     1.31k   171.72     2.19k    80.92%
+  78501 requests in 14.99s, 16.44MB read
+Requests/sec:   5235.70
+Transfer/sec:      1.10MB
+
+---------------------------------------------------------
+ Queries: 1 for ringojs-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/db?queries=1
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db?queries=1
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    33.57ms   61.75ms 473.96ms   89.56%
+    Req/Sec     1.91k   248.64     2.94k    70.60%
+  113747 requests in 15.00s, 20.37MB read
+Requests/sec:   7583.34
+Transfer/sec:      1.36MB
+
+---------------------------------------------------------
+ Queries: 5 for ringojs-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/db?queries=5
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db?queries=5
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    91.57ms   55.02ms 904.14ms   82.81%
+    Req/Sec   692.02     45.09   830.00     76.08%
+  41441 requests in 15.00s, 12.48MB read
+Requests/sec:   2762.51
+Transfer/sec:    852.17KB
+
+---------------------------------------------------------
+ Queries: 10 for ringojs-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/db?queries=10
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db?queries=10
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   163.46ms   60.97ms 857.40ms   73.21%
+    Req/Sec   391.74     24.31   481.00     74.50%
+  23429 requests in 15.01s, 10.61MB read
+Requests/sec:   1561.38
+Transfer/sec:    723.91KB
+
+---------------------------------------------------------
+ Queries: 15 for ringojs-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/db?queries=15
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db?queries=15
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   235.04ms   70.30ms 678.75ms   76.99%
+    Req/Sec   271.89     20.78   438.00     88.52%
+  16259 requests in 15.00s, 9.82MB read
+Requests/sec:   1083.89
+Transfer/sec:    670.65KB
+
+---------------------------------------------------------
+ Queries: 20 for ringojs-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/db?queries=20
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db?queries=20
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   297.17ms   96.01ms 922.46ms   73.01%
+    Req/Sec   209.89     24.94   324.00     93.75%
+  12518 requests in 15.00s, 9.46MB read
+Requests/sec:    834.51
+Transfer/sec:    645.85KB

@@ -1,0 +1,133 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Sun Jun 29 00:22:58 UTC 2014
+
+  System load:  1.27               Processes:           136
+  Usage of /:   67.9% of 19.55GB   Users logged in:     0
+  Memory usage: 24%                IP address for eth0: 10.227.136.45
+  Swap usage:   0%
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer onion
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/json
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/json
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   120.21us  113.41us   3.98ms   90.80%
+    Req/Sec     7.78k     1.06k   12.44k    70.44%
+  294138 requests in 5.00s, 49.65MB read
+Requests/sec:  58865.49
+Transfer/sec:      9.94MB
+
+---------------------------------------------------------
+ Running Warmup onion
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/json
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    29.97ms  211.84ms   1.64s    98.29%
+    Req/Sec    25.51k    10.83k   72.44k    72.82%
+  1441029 requests in 15.00s, 243.25MB read
+  Socket errors: connect 0, read 64, write 0, timeout 85
+Requests/sec:  96069.59
+Transfer/sec:     16.22MB
+
+---------------------------------------------------------
+ Concurrency: 8 for onion
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   109.59us  145.70us   5.66ms   94.15%
+    Req/Sec    16.43k     2.84k   32.78k    77.05%
+  932453 requests in 15.00s, 157.40MB read
+Requests/sec:  62166.09
+Transfer/sec:     10.49MB
+
+---------------------------------------------------------
+ Concurrency: 16 for onion
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   186.66us  236.91us  10.93ms   90.74%
+    Req/Sec    20.74k     4.64k   44.56k    73.40%
+  1177949 requests in 15.00s, 198.84MB read
+Requests/sec:  78532.43
+Transfer/sec:     13.26MB
+
+---------------------------------------------------------
+ Concurrency: 32 for onion
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   349.12us  494.43us  20.71ms   90.31%
+    Req/Sec    23.49k     6.22k   53.56k    69.28%
+  1332930 requests in 15.00s, 225.00MB read
+Requests/sec:  88883.47
+Transfer/sec:     15.00MB
+
+---------------------------------------------------------
+ Concurrency: 64 for onion
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     0.89ms   10.21ms 409.52ms   99.92%
+    Req/Sec    24.75k     7.77k   67.78k    74.79%
+  1398926 requests in 15.00s, 236.14MB read
+Requests/sec:  93264.56
+Transfer/sec:     15.74MB
+
+---------------------------------------------------------
+ Concurrency: 128 for onion
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    12.92ms  139.79ms   1.67s    99.28%
+    Req/Sec    25.16k    11.21k   72.78k    75.58%
+  1415308 requests in 15.00s, 238.90MB read
+  Socket errors: connect 0, read 28, write 0, timeout 65
+Requests/sec:  94358.04
+Transfer/sec:     15.93MB
+
+---------------------------------------------------------
+ Concurrency: 256 for onion
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     2.32ms    8.40ms   1.66s    99.66%
+    Req/Sec    25.48k     7.30k   61.56k    72.17%
+  1442797 requests in 15.00s, 243.54MB read
+  Socket errors: connect 0, read 0, write 0, timeout 79
+Requests/sec:  96186.83
+Transfer/sec:     16.24MB

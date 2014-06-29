@@ -1,0 +1,111 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+0 packages can be updated.
+0 updates are security updates.
+
+
+
+---------------------------------------------------------
+ Running Primer urweb-postgres
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/updates/2
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/updates/2
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     6.50ms    2.69ms  23.75ms   85.92%
+    Req/Sec   174.41     60.07   363.00     60.23%
+  6813 requests in 5.00s, 1.23MB read
+Requests/sec:   1361.99
+Transfer/sec:    250.81KB
+
+---------------------------------------------------------
+ Running Warmup urweb-postgres
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/updates/2
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/updates/2
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   172.62ms   29.75ms 289.31ms   77.10%
+    Req/Sec   376.62     62.18   562.00     74.86%
+  22580 requests in 15.03s, 4.06MB read
+Requests/sec:   1502.04
+Transfer/sec:    276.59KB
+
+---------------------------------------------------------
+ Queries: 1 for urweb-postgres
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/updates/1
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/updates/1
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   170.01ms   13.35ms 211.13ms   68.40%
+    Req/Sec   378.65     39.08   540.00     84.81%
+  22731 requests in 15.07s, 3.40MB read
+Requests/sec:   1508.60
+Transfer/sec:    230.98KB
+
+---------------------------------------------------------
+ Queries: 5 for urweb-postgres
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/updates/5
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/updates/5
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   201.49ms   20.35ms 324.83ms   94.35%
+    Req/Sec   318.97     30.64   347.00     90.07%
+  19171 requests in 15.04s, 5.21MB read
+Requests/sec:   1274.36
+Transfer/sec:    354.54KB
+
+---------------------------------------------------------
+ Queries: 10 for urweb-postgres
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/updates/10
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/updates/10
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   280.84ms    8.32ms 305.79ms   64.79%
+    Req/Sec   227.77      6.53   255.00     79.81%
+  13678 requests in 15.07s, 5.79MB read
+Requests/sec:    907.39
+Transfer/sec:    393.25KB
+
+---------------------------------------------------------
+ Queries: 15 for urweb-postgres
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/updates/15
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/updates/15
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   380.74ms   23.40ms 419.65ms   91.04%
+    Req/Sec   165.36     16.38   216.00     68.13%
+  9932 requests in 15.01s, 5.71MB read
+Requests/sec:    661.77
+Transfer/sec:    389.49KB
+
+---------------------------------------------------------
+ Queries: 20 for urweb-postgres
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/updates/20
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/updates/20
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   596.94ms  250.86ms   1.56s    91.97%
+    Req/Sec   112.88     30.01   143.00     88.41%
+  6900 requests in 15.85s, 5.01MB read
+Requests/sec:    435.27
+Transfer/sec:    323.73KB

@@ -1,0 +1,130 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Sun Jun 29 05:24:51 UTC 2014
+
+  System load:  3.48               Processes:           149
+  Usage of /:   69.2% of 19.55GB   Users logged in:     1
+  Memory usage: 25%                IP address for eth0: 10.227.136.45
+  Swap usage:   0%
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer treefrog
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/world/random
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/world/random
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     3.28ms    2.25ms   9.18ms   49.98%
+    Req/Sec   442.54    230.17     1.22k    58.62%
+  16047 requests in 5.00s, 3.12MB read
+Requests/sec:   3208.75
+Transfer/sec:    638.55KB
+
+---------------------------------------------------------
+ Running Warmup treefrog
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/world/random
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/world/random
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    54.69ms   46.38ms 268.77ms   83.27%
+    Req/Sec     1.53k   565.48     2.15k    74.06%
+  71927 requests in 15.01s, 13.98MB read
+Requests/sec:   4792.60
+Transfer/sec:      0.93MB
+
+---------------------------------------------------------
+ Concurrency: 8 for treefrog
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:8080/world/random -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/world/random
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     2.70ms    1.78ms  11.64ms   75.34%
+    Req/Sec     0.90k   307.66     1.89k    65.50%
+  49428 requests in 15.00s, 9.61MB read
+Requests/sec:   3294.93
+Transfer/sec:    655.69KB
+
+---------------------------------------------------------
+ Concurrency: 16 for treefrog
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:8080/world/random -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/world/random
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     4.47ms    2.37ms  16.27ms   68.94%
+    Req/Sec     0.96k   220.53     1.91k    67.60%
+  54435 requests in 15.00s, 10.58MB read
+Requests/sec:   3629.04
+Transfer/sec:    722.20KB
+
+---------------------------------------------------------
+ Concurrency: 32 for treefrog
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:8080/world/random -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/world/random
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     9.01ms    4.45ms  34.41ms   72.13%
+    Req/Sec     0.92k   109.72     1.26k    65.82%
+  54014 requests in 15.00s, 10.50MB read
+Requests/sec:   3601.14
+Transfer/sec:    716.65KB
+
+---------------------------------------------------------
+ Concurrency: 64 for treefrog
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:8080/world/random -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/world/random
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    17.33ms    7.28ms  56.93ms   69.79%
+    Req/Sec     0.93k    72.88     1.18k    71.39%
+  55447 requests in 15.00s, 10.78MB read
+Requests/sec:   3696.48
+Transfer/sec:    735.62KB
+
+---------------------------------------------------------
+ Concurrency: 128 for treefrog
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:8080/world/random -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/world/random
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    28.97ms    9.41ms  70.72ms   68.98%
+    Req/Sec     1.11k    98.83     1.53k    87.43%
+  65744 requests in 15.00s, 12.78MB read
+Requests/sec:   4382.89
+Transfer/sec:      0.85MB
+
+---------------------------------------------------------
+ Concurrency: 256 for treefrog
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/world/random -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/world/random
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    48.64ms   19.61ms 482.38ms   78.98%
+    Req/Sec     1.29k   118.40     1.91k    79.84%
+  76449 requests in 15.00s, 14.86MB read
+Requests/sec:   5096.69
+Transfer/sec:      0.99MB

@@ -1,0 +1,129 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer pyramid-py2
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:6543/db
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:6543/db
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     5.19ms    7.76ms  95.98ms   97.77%
+    Req/Sec   260.56    102.26   642.00     66.05%
+  10021 requests in 5.00s, 1.83MB read
+Requests/sec:   2004.13
+Transfer/sec:    375.34KB
+
+---------------------------------------------------------
+ Running Warmup pyramid-py2
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:6543/db
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:6543/db
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   120.66ms    3.24ms 154.76ms   91.13%
+    Req/Sec   530.93     16.12   569.00     88.98%
+  31791 requests in 15.02s, 5.81MB read
+  Non-2xx or 3xx responses: 2
+Requests/sec:   2116.44
+Transfer/sec:    396.39KB
+
+---------------------------------------------------------
+ Concurrency: 8 for pyramid-py2
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:6543/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:6543/db
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     4.08ms    2.36ms  22.75ms   74.70%
+    Req/Sec   531.83    145.93     1.09k    70.15%
+  30586 requests in 15.01s, 5.59MB read
+  Non-2xx or 3xx responses: 2
+Requests/sec:   2037.80
+Transfer/sec:    381.67KB
+
+---------------------------------------------------------
+ Concurrency: 16 for pyramid-py2
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:6543/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:6543/db
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     7.49ms    1.96ms  36.67ms   76.57%
+    Req/Sec   540.39     59.42   736.00     65.72%
+  31608 requests in 15.00s, 5.78MB read
+  Non-2xx or 3xx responses: 3
+Requests/sec:   2107.06
+Transfer/sec:    394.64KB
+
+---------------------------------------------------------
+ Concurrency: 32 for pyramid-py2
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:6543/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:6543/db
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    15.04ms    3.32ms  51.28ms   76.14%
+    Req/Sec   534.78     42.26   666.00     70.13%
+  31680 requests in 14.99s, 5.79MB read
+  Non-2xx or 3xx responses: 3
+Requests/sec:   2112.77
+Transfer/sec:    395.72KB
+
+---------------------------------------------------------
+ Concurrency: 64 for pyramid-py2
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:6543/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:6543/db
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    30.14ms    2.37ms  48.91ms   68.80%
+    Req/Sec   532.86     22.49   626.00     71.23%
+  31752 requests in 15.01s, 5.81MB read
+  Non-2xx or 3xx responses: 4
+Requests/sec:   2115.30
+Transfer/sec:    396.18KB
+
+---------------------------------------------------------
+ Concurrency: 128 for pyramid-py2
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:6543/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:6543/db
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    60.71ms    2.80ms  80.86ms   71.87%
+    Req/Sec   528.91     15.49   574.00     73.25%
+  31632 requests in 14.99s, 5.79MB read
+  Non-2xx or 3xx responses: 3
+Requests/sec:   2109.91
+Transfer/sec:    395.17KB
+
+---------------------------------------------------------
+ Concurrency: 256 for pyramid-py2
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:6543/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:6543/db
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   121.81ms    3.72ms 145.59ms   75.21%
+    Req/Sec   525.60     10.88   547.00     79.06%
+  31496 requests in 15.00s, 5.76MB read
+  Non-2xx or 3xx responses: 3
+Requests/sec:   2099.71
+Transfer/sec:    393.26KB

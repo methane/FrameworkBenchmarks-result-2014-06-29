@@ -1,0 +1,108 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer flask-nginx-uwsgi
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/updates?queries=2
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/updates?queries=2
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    16.64ms   27.87ms 161.02ms   96.29%
+    Req/Sec    93.49     37.81   241.00     73.88%
+  3704 requests in 5.00s, 812.15KB read
+Requests/sec:    740.07
+Transfer/sec:    162.27KB
+
+---------------------------------------------------------
+ Running Warmup flask-nginx-uwsgi
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/updates?queries=2
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/updates?queries=2
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   340.04ms   53.32ms 649.11ms   96.67%
+    Req/Sec   189.00     22.37   220.00     78.89%
+  11378 requests in 15.03s, 2.44MB read
+Requests/sec:    756.82
+Transfer/sec:    165.96KB
+
+---------------------------------------------------------
+ Queries: 1 for flask-nginx-uwsgi
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/updates?queries=1
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/updates?queries=1
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   240.15ms   44.26ms 515.85ms   96.33%
+    Req/Sec   270.92     24.63   305.00     93.46%
+  16253 requests in 15.01s, 2.93MB read
+Requests/sec:   1082.78
+Transfer/sec:    199.61KB
+
+---------------------------------------------------------
+ Queries: 5 for flask-nginx-uwsgi
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/updates?queries=5
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/updates?queries=5
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   674.11ms  148.72ms   1.01s    81.38%
+    Req/Sec   102.35     61.43   206.00     64.21%
+  6198 requests in 15.23s, 1.97MB read
+Requests/sec:    407.07
+Transfer/sec:    132.34KB
+
+---------------------------------------------------------
+ Queries: 10 for flask-nginx-uwsgi
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/updates?queries=10
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/updates?queries=10
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.06s    73.00ms   1.25s    88.25%
+    Req/Sec    58.91      7.28    71.00     69.09%
+  3598 requests in 15.45s, 1.76MB read
+Requests/sec:    232.85
+Transfer/sec:    116.37KB
+
+---------------------------------------------------------
+ Queries: 15 for flask-nginx-uwsgi
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/updates?queries=15
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/updates?queries=15
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.49s   210.27ms   1.76s    85.71%
+    Req/Sec    41.12     20.22    74.00     57.14%
+  2522 requests in 15.88s, 1.66MB read
+Requests/sec:    158.78
+Transfer/sec:    107.09KB
+
+---------------------------------------------------------
+ Queries: 20 for flask-nginx-uwsgi
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/updates?queries=20
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/updates?queries=20
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.89s   277.44ms   2.07s    92.84%
+    Req/Sec    32.47     19.13    67.00     62.79%
+  1972 requests in 15.70s, 1.64MB read
+Requests/sec:    125.62
+Transfer/sec:    106.67KB

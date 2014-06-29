@@ -1,0 +1,758 @@
+test.os.lower() = linux  test.database_os.lower() = linux
+self.results['frameworks'] != None: True
+test.name: ringojs-convenient
+self.results['completed']: {}
+
+=====================================================
+  Beginning ringojs-convenient
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Starting ringojs-convenient
+-----------------------------------------------------
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+mysql start/running, process 13479
+ * Restarting PostgreSQL 9.3 database server
+   ...done.
+Downloading http://github.com/oberhamsi/sql-ringojs-client/zipball/master
+Installing package 'sql-ringojs-client' in /usr/share/ringojs//packages/sql-ringojs-client
+ + /usr/share/ringojs//packages/sql-ringojs-client/README.textile
+ + /usr/share/ringojs//packages/sql-ringojs-client/examples/query.js
+ + /usr/share/ringojs//packages/sql-ringojs-client/jars/commons-dbcp-1.4.jar
+ + /usr/share/ringojs//packages/sql-ringojs-client/jars/commons-pool-1.6.jar
+ + /usr/share/ringojs//packages/sql-ringojs-client/jars/mysql.jar
+ + /usr/share/ringojs//packages/sql-ringojs-client/lib/ngv/sql.js
+ + /usr/share/ringojs//packages/sql-ringojs-client/package.json
+Done
+Downloading http://github.com/grob/ringo-sqlstore/zipball/master
+Installing package 'ringo-sqlstore' in /usr/share/ringojs//packages/ringo-sqlstore
+ + /usr/share/ringojs//packages/ringo-sqlstore/README.md
+ + /usr/share/ringojs//packages/ringo-sqlstore/benchmarks/connectionpool.js
+ + /usr/share/ringojs//packages/ringo-sqlstore/benchmarks/connectionpool.worker.js
+ + /usr/share/ringojs//packages/ringo-sqlstore/benchmarks/query.concurrent.js
+ + /usr/share/ringojs//packages/ringo-sqlstore/benchmarks/query.concurrent.worker.js
+ + /usr/share/ringojs//packages/ringo-sqlstore/benchmarks/query.js
+ + /usr/share/ringojs//packages/ringo-sqlstore/benchmarks/run.js
+ + /usr/share/ringojs//packages/ringo-sqlstore/docs/basedialect/index.html
+ + /usr/share/ringojs//packages/ringo-sqlstore/docs/cache/index.html
+ + /usr/share/ringojs//packages/ringo-sqlstore/docs/collection/index.html
+ + /usr/share/ringojs//packages/ringo-sqlstore/docs/connection/pool/index.html
+ + /usr/share/ringojs//packages/ringo-sqlstore/docs/connection/poolworker/index.html
+ + /usr/share/ringojs//packages/ringo-sqlstore/docs/connection/util/index.html
+ + /usr/share/ringojs//packages/ringo-sqlstore/docs/databases/h2/index.html
+ + /usr/share/ringojs//packages/ringo-sqlstore/docs/databases/mysql5/index.html
+ + /usr/share/ringojs//packages/ringo-sqlstore/docs/databases/oracle/index.html
+ + /usr/share/ringojs//packages/ringo-sqlstore/docs/databases/postgresql/index.html
+ + /usr/share/ringojs//packages/ringo-sqlstore/docs/index.html
+ + /usr/share/ringojs//packages/ringo-sqlstore/docs/index_all.html
+ + /usr/share/ringojs//packages/ringo-sqlstore/docs/key/index.html
+ + /usr/share/ringojs//packages/ringo-sqlstore/docs/main/index.html
+ + /usr/share/ringojs//packages/ringo-sqlstore/docs/mapping/index.html
+ + /usr/share/ringojs//packages/ringo-sqlstore/docs/query/ast/index.html
+ + /usr/share/ringojs//packages/ringo-sqlstore/docs/query/collectorgenerator/index.html
+ + /usr/share/ringojs//packages/ringo-sqlstore/docs/query/normalizer/index.html
+ + /usr/share/ringojs//packages/ringo-sqlstore/docs/query/parser/index.html
+ + /usr/share/ringojs//packages/ringo-sqlstore/docs/query/query/index.html
+ + /usr/share/ringojs//packages/ringo-sqlstore/docs/query/sqlgenerator/index.html
+ + /usr/share/ringojs//packages/ringo-sqlstore/docs/static/enterkey.png
+ + /usr/share/ringojs//packages/ringo-sqlstore/docs/static/jquery.min.js
+ + /usr/share/ringojs//packages/ringo-sqlstore/docs/static/jsdoc.css
+ + /usr/share/ringojs//packages/ringo-sqlstore/docs/static/jsdoc.js
+ + /usr/share/ringojs//packages/ringo-sqlstore/docs/static/style.css
+ + /usr/share/ringojs//packages/ringo-sqlstore/docs/storable/index.html
+ + /usr/share/ringojs//packages/ringo-sqlstore/docs/store/index.html
+ + /usr/share/ringojs//packages/ringo-sqlstore/docs/transaction/index.html
+ + /usr/share/ringojs//packages/ringo-sqlstore/docs/types/index.html
+ + /usr/share/ringojs//packages/ringo-sqlstore/docs/util/index.html
+ + /usr/share/ringojs//packages/ringo-sqlstore/jars/concurrentlinkedhashmap-lru-1.4.jar
+ + /usr/share/ringojs//packages/ringo-sqlstore/jars/h2-1.3.160.jar
+ + /usr/share/ringojs//packages/ringo-sqlstore/lib/sqlstore/basedialect.js
+ + /usr/share/ringojs//packages/ringo-sqlstore/lib/sqlstore/cache.js
+ + /usr/share/ringojs//packages/ringo-sqlstore/lib/sqlstore/collection.js
+ + /usr/share/ringojs//packages/ringo-sqlstore/lib/sqlstore/connection/pool.js
+ + /usr/share/ringojs//packages/ringo-sqlstore/lib/sqlstore/connection/poolworker.js
+ + /usr/share/ringojs//packages/ringo-sqlstore/lib/sqlstore/connection/util.js
+ + /usr/share/ringojs//packages/ringo-sqlstore/lib/sqlstore/databases/h2.js
+ + /usr/share/ringojs//packages/ringo-sqlstore/lib/sqlstore/databases/mysql5.js
+ + /usr/share/ringojs//packages/ringo-sqlstore/lib/sqlstore/databases/oracle.js
+ + /usr/share/ringojs//packages/ringo-sqlstore/lib/sqlstore/databases/postgresql.js
+ + /usr/share/ringojs//packages/ringo-sqlstore/lib/sqlstore/key.js
+ + /usr/share/ringojs//packages/ringo-sqlstore/lib/sqlstore/main.js
+ + /usr/share/ringojs//packages/ringo-sqlstore/lib/sqlstore/mapping.js
+ + /usr/share/ringojs//packages/ringo-sqlstore/lib/sqlstore/query/ast.js
+ + /usr/share/ringojs//packages/ringo-sqlstore/lib/sqlstore/query/collectorgenerator.js
+ + /usr/share/ringojs//packages/ringo-sqlstore/lib/sqlstore/query/normalizer.js
+ + /usr/share/ringojs//packages/ringo-sqlstore/lib/sqlstore/query/parser.js
+ + /usr/share/ringojs//packages/ringo-sqlstore/lib/sqlstore/query/parser.pegjs
+ + /usr/share/ringojs//packages/ringo-sqlstore/lib/sqlstore/query/query.js
+ + /usr/share/ringojs//packages/ringo-sqlstore/lib/sqlstore/query/sqlgenerator.js
+ + /usr/share/ringojs//packages/ringo-sqlstore/lib/sqlstore/storable.js
+ + /usr/share/ringojs//packages/ringo-sqlstore/lib/sqlstore/store.js
+ + /usr/share/ringojs//packages/ringo-sqlstore/lib/sqlstore/transaction.js
+ + /usr/share/ringojs//packages/ringo-sqlstore/lib/sqlstore/types.js
+ + /usr/share/ringojs//packages/ringo-sqlstore/lib/sqlstore/util.js
+ + /usr/share/ringojs//packages/ringo-sqlstore/package.json
+ + /usr/share/ringojs//packages/ringo-sqlstore/test/all.js
+ + /usr/share/ringojs//packages/ringo-sqlstore/test/collection_cache_test.js
+ + /usr/share/ringojs//packages/ringo-sqlstore/test/collection_manytomany_test.js
+ + /usr/share/ringojs//packages/ringo-sqlstore/test/collection_test.js
+ + /usr/share/ringojs//packages/ringo-sqlstore/test/config.js
+ + /usr/share/ringojs//packages/ringo-sqlstore/test/connectionpool_test.js
+ + /usr/share/ringojs//packages/ringo-sqlstore/test/connectionpool_worker.js
+ + /usr/share/ringojs//packages/ringo-sqlstore/test/json_test.js
+ + /usr/share/ringojs//packages/ringo-sqlstore/test/lifecycle_test.js
+ + /usr/share/ringojs//packages/ringo-sqlstore/test/mapping_test.js
+ + /usr/share/ringojs//packages/ringo-sqlstore/test/object_test.js
+ + /usr/share/ringojs//packages/ringo-sqlstore/test/query/all.js
+ + /usr/share/ringojs//packages/ringo-sqlstore/test/query/ast_test.js
+ + /usr/share/ringojs//packages/ringo-sqlstore/test/query/query_join_test.js
+ + /usr/share/ringojs//packages/ringo-sqlstore/test/query/query_test.js
+ + /usr/share/ringojs//packages/ringo-sqlstore/test/query/sql_test.js
+ + /usr/share/ringojs//packages/ringo-sqlstore/test/query/sqlquery_test.js
+ + /usr/share/ringojs//packages/ringo-sqlstore/test/rollback_test.js
+ + /usr/share/ringojs//packages/ringo-sqlstore/test/runner.js
+ + /usr/share/ringojs//packages/ringo-sqlstore/test/store_test.js
+ + /usr/share/ringojs//packages/ringo-sqlstore/test/transaction_test.js
+ + /usr/share/ringojs//packages/ringo-sqlstore/test/transaction_worker.js
+Done
+Downloading http://github.com/ringo/stick/zipball/master
+Installing package 'stick' in /usr/share/ringojs//packages/stick
+ + /usr/share/ringojs//packages/stick/LICENSE
+ + /usr/share/ringojs//packages/stick/README.md
+ + /usr/share/ringojs//packages/stick/docs/api/helpers/index.html
+ + /usr/share/ringojs//packages/stick/docs/api/index.html
+ + /usr/share/ringojs//packages/stick/docs/api/index_all.html
+ + /usr/share/ringojs//packages/stick/docs/api/middleware/basicauth/index.html
+ + /usr/share/ringojs//packages/stick/docs/api/middleware/continuation/index.html
+ + /usr/share/ringojs//packages/stick/docs/api/middleware/cookies/index.html
+ + /usr/share/ringojs//packages/stick/docs/api/middleware/error/index.html
+ + /usr/share/ringojs//packages/stick/docs/api/middleware/etag/index.html
+ + /usr/share/ringojs//packages/stick/docs/api/middleware/gzip/index.html
+ + /usr/share/ringojs//packages/stick/docs/api/middleware/index.html
+ + /usr/share/ringojs//packages/stick/docs/api/middleware/method/index.html
+ + /usr/share/ringojs//packages/stick/docs/api/middleware/mount/index.html
+ + /usr/share/ringojs//packages/stick/docs/api/middleware/notfound/index.html
+ + /usr/share/ringojs//packages/stick/docs/api/middleware/params/index.html
+ + /usr/share/ringojs//packages/stick/docs/api/middleware/profiler/index.html
+ + /usr/share/ringojs//packages/stick/docs/api/middleware/render/index.html
+ + /usr/share/ringojs//packages/stick/docs/api/middleware/requestlog/index.html
+ + /usr/share/ringojs//packages/stick/docs/api/middleware/route/index.html
+ + /usr/share/ringojs//packages/stick/docs/api/middleware/session/index.html
+ + /usr/share/ringojs//packages/stick/docs/api/middleware/static/index.html
+ + /usr/share/ringojs//packages/stick/docs/api/middleware/upload/index.html
+ + /usr/share/ringojs//packages/stick/docs/api/static/jquery.js
+ + /usr/share/ringojs//packages/stick/docs/api/static/jsdoc.css
+ + /usr/share/ringojs//packages/stick/docs/api/static/jsdoc.js
+ + /usr/share/ringojs//packages/stick/docs/api/static/style.css
+ + /usr/share/ringojs//packages/stick/docs/api/stick/index.html
+ + /usr/share/ringojs//packages/stick/docs/index.html
+ + /usr/share/ringojs//packages/stick/examples/continuation/app.js
+ + /usr/share/ringojs//packages/stick/examples/demo.js
+ + /usr/share/ringojs//packages/stick/examples/mount-route/app.js
+ + /usr/share/ringojs//packages/stick/examples/mount-route/bar.js
+ + /usr/share/ringojs//packages/stick/examples/mount-route/foo.js
+ + /usr/share/ringojs//packages/stick/examples/skeleton/README.txt
+ + /usr/share/ringojs//packages/stick/examples/skeleton/actions.js
+ + /usr/share/ringojs//packages/stick/examples/skeleton/config/jetty.xml
+ + /usr/share/ringojs//packages/stick/examples/skeleton/config/log4j.properties
+ + /usr/share/ringojs//packages/stick/examples/skeleton/main.js
+ + /usr/share/ringojs//packages/stick/examples/skeleton/public/stylesheets/page.css
+ + /usr/share/ringojs//packages/stick/examples/skeleton/templates/index.html
+ + /usr/share/ringojs//packages/stick/examples/skeleton/templates/page.html
+ + /usr/share/ringojs//packages/stick/lib/helpers.js
+ + /usr/share/ringojs//packages/stick/lib/middleware.js
+ + /usr/share/ringojs//packages/stick/lib/middleware/basicauth.js
+ + /usr/share/ringojs//packages/stick/lib/middleware/continuation.js
+ + /usr/share/ringojs//packages/stick/lib/middleware/cookies.js
+ + /usr/share/ringojs//packages/stick/lib/middleware/cors.js
+ + /usr/share/ringojs//packages/stick/lib/middleware/csrf.js
+ + /usr/share/ringojs//packages/stick/lib/middleware/error.html
+ + /usr/share/ringojs//packages/stick/lib/middleware/error.js
+ + /usr/share/ringojs//packages/stick/lib/middleware/etag.js
+ + /usr/share/ringojs//packages/stick/lib/middleware/gzip.js
+ + /usr/share/ringojs//packages/stick/lib/middleware/method.js
+ + /usr/share/ringojs//packages/stick/lib/middleware/mount.js
+ + /usr/share/ringojs//packages/stick/lib/middleware/notfound.html
+ + /usr/share/ringojs//packages/stick/lib/middleware/notfound.js
+ + /usr/share/ringojs//packages/stick/lib/middleware/params.js
+ + /usr/share/ringojs//packages/stick/lib/middleware/profiler.js
+ + /usr/share/ringojs//packages/stick/lib/middleware/render.js
+ + /usr/share/ringojs//packages/stick/lib/middleware/requestlog.js
+ + /usr/share/ringojs//packages/stick/lib/middleware/route.js
+ + /usr/share/ringojs//packages/stick/lib/middleware/session.js
+ + /usr/share/ringojs//packages/stick/lib/middleware/static.js
+ + /usr/share/ringojs//packages/stick/lib/middleware/upload.js
+ + /usr/share/ringojs//packages/stick/lib/stick.js
+ + /usr/share/ringojs//packages/stick/package.json
+ + /usr/share/ringojs//packages/stick/test/csrf_test.js
+ + /usr/share/ringojs//packages/stick/test/stick_test.js
+ + /usr/share/ringojs//packages/stick/update-docs.sh
+Done
+Downloading http://github.com/oberhamsi/reinhardt/zipball/master
+Installing package 'reinhardt' in /usr/share/ringojs//packages/reinhardt
+ + /usr/share/ringojs//packages/reinhardt/README.md
+ + /usr/share/ringojs//packages/reinhardt/TODO.md
+ + /usr/share/ringojs//packages/reinhardt/docs/custom-template-filters.md
+ + /usr/share/ringojs//packages/reinhardt/docs/custom-template-tags.md
+ + /usr/share/ringojs//packages/reinhardt/docs/filters.md
+ + /usr/share/ringojs//packages/reinhardt/docs/if-details.md
+ + /usr/share/ringojs//packages/reinhardt/docs/quickstart.md
+ + /usr/share/ringojs//packages/reinhardt/docs/tags.md
+ + /usr/share/ringojs//packages/reinhardt/docs/templates.md
+ + /usr/share/ringojs//packages/reinhardt/docs/undefined-variables.md
+ + /usr/share/ringojs//packages/reinhardt/examples/main.js
+ + /usr/share/ringojs//packages/reinhardt/examples/speed.js
+ + /usr/share/ringojs//packages/reinhardt/examples/static/django-reinhardt.jpg
+ + /usr/share/ringojs//packages/reinhardt/examples/templates-speed/extends_1.html
+ + /usr/share/ringojs//packages/reinhardt/examples/templates-speed/extends_2.html
+ + /usr/share/ringojs//packages/reinhardt/examples/templates-speed/extends_base.html
+ + /usr/share/ringojs//packages/reinhardt/examples/templates-speed/extends_base2.html
+ + /usr/share/ringojs//packages/reinhardt/examples/templates-speed/include_base.html
+ + /usr/share/ringojs//packages/reinhardt/examples/templates-speed/included.html
+ + /usr/share/ringojs//packages/reinhardt/examples/templates-speed/included_2.html
+ + /usr/share/ringojs//packages/reinhardt/examples/templates/base.html
+ + /usr/share/ringojs//packages/reinhardt/examples/templates/earlylife.html
+ + /usr/share/ringojs//packages/reinhardt/examples/templates/links.html
+ + /usr/share/ringojs//packages/reinhardt/examples/templates2/discoveryofjazz.html
+ + /usr/share/ringojs//packages/reinhardt/lib/constants.js
+ + /usr/share/ringojs//packages/reinhardt/lib/context.js
+ + /usr/share/ringojs//packages/reinhardt/lib/debug.js
+ + /usr/share/ringojs//packages/reinhardt/lib/environment.js
+ + /usr/share/ringojs//packages/reinhardt/lib/error.html
+ + /usr/share/ringojs//packages/reinhardt/lib/errors.js
+ + /usr/share/ringojs//packages/reinhardt/lib/filter/arrays.js
+ + /usr/share/ringojs//packages/reinhardt/lib/filter/dates.js
+ + /usr/share/ringojs//packages/reinhardt/lib/filter/htmlstrings.js
+ + /usr/share/ringojs//packages/reinhardt/lib/filter/logic.js
+ + /usr/share/ringojs//packages/reinhardt/lib/filter/objects.js
+ + /usr/share/ringojs//packages/reinhardt/lib/filter/strings.js
+ + /usr/share/ringojs//packages/reinhardt/lib/filterexpression.js
+ + /usr/share/ringojs//packages/reinhardt/lib/lexer.js
+ + /usr/share/ringojs//packages/reinhardt/lib/loaders/cached.js
+ + /usr/share/ringojs//packages/reinhardt/lib/loaders/filesystem.js
+ + /usr/share/ringojs//packages/reinhardt/lib/middleware.js
+ + /usr/share/ringojs//packages/reinhardt/lib/nodelist.js
+ + /usr/share/ringojs//packages/reinhardt/lib/nodes.js
+ + /usr/share/ringojs//packages/reinhardt/lib/parser.js
+ + /usr/share/ringojs//packages/reinhardt/lib/reinhardt.js
+ + /usr/share/ringojs//packages/reinhardt/lib/smartif.js
+ + /usr/share/ringojs//packages/reinhardt/lib/tag/loader.js
+ + /usr/share/ringojs//packages/reinhardt/lib/tag/logic.js
+ + /usr/share/ringojs//packages/reinhardt/lib/tag/loop.js
+ + /usr/share/ringojs//packages/reinhardt/lib/tag/misc.js
+ + /usr/share/ringojs//packages/reinhardt/lib/template.js
+ + /usr/share/ringojs//packages/reinhardt/lib/token.js
+ + /usr/share/ringojs//packages/reinhardt/lib/utils.js
+ + /usr/share/ringojs//packages/reinhardt/lib/utils/fs.js
+ + /usr/share/ringojs//packages/reinhardt/lib/utils/html.js
+ + /usr/share/ringojs//packages/reinhardt/lib/utils/iter.js
+ + /usr/share/ringojs//packages/reinhardt/lib/variable.js
+ + /usr/share/ringojs//packages/reinhardt/package.json
+ + /usr/share/ringojs//packages/reinhardt/test/all.js
+ + /usr/share/ringojs//packages/reinhardt/test/basic.js
+ + /usr/share/ringojs//packages/reinhardt/test/context.js
+ + /usr/share/ringojs//packages/reinhardt/test/environment.js
+ + /usr/share/ringojs//packages/reinhardt/test/envtest/child.html
+ + /usr/share/ringojs//packages/reinhardt/test/envtest/master.html
+ + /usr/share/ringojs//packages/reinhardt/test/envtest/tags.js
+ + /usr/share/ringojs//packages/reinhardt/test/fakepackage/filters.js
+ + /usr/share/ringojs//packages/reinhardt/test/fakepackage/tags.js
+ + /usr/share/ringojs//packages/reinhardt/test/filterexpression.js
+ + /usr/share/ringojs//packages/reinhardt/test/filters.js
+ + /usr/share/ringojs//packages/reinhardt/test/lexer.html
+ + /usr/share/ringojs//packages/reinhardt/test/lexer.js
+ + /usr/share/ringojs//packages/reinhardt/test/loader.js
+ + /usr/share/ringojs//packages/reinhardt/test/nodelist.js
+ + /usr/share/ringojs//packages/reinhardt/test/regressions.js
+ + /usr/share/ringojs//packages/reinhardt/test/smartif.js
+ + /usr/share/ringojs//packages/reinhardt/test/template.js
+ + /usr/share/ringojs//packages/reinhardt/test/templatedir/bar/test.html
+ + /usr/share/ringojs//packages/reinhardt/test/templatedir/foo/baz/test.html
+ + /usr/share/ringojs//packages/reinhardt/test/templatedir/foo/test.html
+ + /usr/share/ringojs//packages/reinhardt/test/variable.js
+Done
+0    [main] INFO  ringo.httpserver  - Set app module: /home/ubuntu/FrameworkBenchmarks/ringojs-convenient/ringo-main
+131  [main] INFO  org.eclipse.jetty.server.Server  - jetty-7.5.4.v20111024
+162  [main] INFO  org.eclipse.jetty.server.handler.ContextHandler  - started o.e.j.s.ServletContextHandler{/,null}
+168  [main] INFO  org.eclipse.jetty.server.AbstractConnector  - Started SelectChannelConnector@0.0.0.0:8080 STARTING
+176  [main] INFO  ringo.httpserver  - Server on http://localhost:8080 started.
+
+-----------------------------------------------------
+  VERIFYING JSON (/json)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Date: Sun, 29 Jun 2014 03:22:30 GMT
+content-type: application/json; charset=utf-8
+Content-Length: 27
+Server: Jetty(7.5.4.v20111024)
+
+{"message":"Hello, World!"}
+
+VALIDATING JSON ... PASS
+
+
+-----------------------------------------------------
+  VERIFYING DB (/db)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Date: Sun, 29 Jun 2014 03:22:30 GMT
+content-type: application/json; charset=utf-8
+Content-Length: 31
+Server: Jetty(7.5.4.v20111024)
+
+{"id":9063,"randomNumber":2981}
+
+VALIDATING DB ... PASS
+
+
+-----------------------------------------------------
+  VERIFYING QUERY (/db/2)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Date: Sun, 29 Jun 2014 03:22:31 GMT
+content-type: application/json; charset=utf-8
+Content-Length: 65
+Server: Jetty(7.5.4.v20111024)
+
+[{"id":6173,"randomNumber":9833},{"id":6898,"randomNumber":7988}]
+
+/db/2 - PASS
+
+-----------------------------------------------------
+
+HTTP/1.1 200 OK
+Date: Sun, 29 Jun 2014 03:22:31 GMT
+content-type: application/json; charset=utf-8
+Content-Length: 31
+Server: Jetty(7.5.4.v20111024)
+
+{"id":3815,"randomNumber":1297}
+
+/db/0 - WARNING
+
+-----------------------------------------------------
+
+HTTP/1.1 200 OK
+Date: Sun, 29 Jun 2014 03:22:31 GMT
+content-type: application/json; charset=utf-8
+Content-Length: 31
+Server: Jetty(7.5.4.v20111024)
+
+{"id":4118,"randomNumber":4833}
+
+/db/foo - WARNING
+
+-----------------------------------------------------
+
+HTTP/1.1 200 OK
+Date: Sun, 29 Jun 2014 03:22:31 GMT
+content-type: application/json; charset=utf-8
+Content-Length: 15903
+Server: Jetty(7.5.4.v20111024)
+
+[{"id":2218,"randomNumber":5400},{"id":9536,"randomNumber":9728},{"id":1514,"randomNumber":1032},{"id":424,"randomNumber":4168},{"id":6864,"randomNumber":5959},{"id":9511,"randomNumber":7},{"id":9585,"randomNumber":1635},{"id":2470,"randomNumber":484},{"id":1668,"randomNumber":8346},{"id":8340,"randomNumber":3021},{"id":374,"randomNumber":3658},{"id":683,"randomNumber":791},{"id":385,"randomNumber":5210},{"id":1635,"randomNumber":600},{"id":9128,"randomNumber":8703},{"id":2594,"randomNumber":2901},{"id":819,"randomNumber":7504},{"id":6706,"randomNumber":3122},{"id":5869,"randomNumber":6544},{"id":866,"randomNumber":8597},{"id":7523,"randomNumber":3039},{"id":595,"randomNumber":2325},{"id":5950,"randomNumber":680},{"id":8617,"randomNumber":981},{"id":8260,"randomNumber":2324},{"id":5810,"randomNumber":9692},{"id":9269,"randomNumber":1695},{"id":1767,"randomNumber":3815},{"id":3122,"randomNumber":9824},{"id":6477,"randomNumber":6887},{"id":7284,"randomNumber":2625},{"id":6677,"randomNumber":6836},{"id":2917,"randomNumber":9575},{"id":1660,"randomNumber":2025},{"id":5435,"randomNumber":659},{"id":7447,"randomNumber":2729},{"id":5212,"randomNumber":8544},{"id":3202,"randomNumber":8741},{"id":6133,"randomNumber":5148},{"id":4848,"randomNumber":862},{"id":2226,"randomNumber":1898},{"id":2572,"randomNumber":9303},{"id":4088,"randomNumber":6237},{"id":8050,"randomNumber":77},{"id":4685,"randomNumber":5225},{"id":4971,"randomNumber":7498},{"id":1416,"randomNumber":7108},{"id":1078,"randomNumber":9359},{"id":9687,"randomNumber":7237},{"id":9165,"randomNumber":7355},{"id":4724,"randomNumber":954},{"id":8222,"randomNumber":1181},{"id":8658,"randomNumber":8347},{"id":8443,"randomNumber":5398},{"id":125,"randomNumber":2188},{"id":6516,"randomNumber":9903},{"id":3544,"randomNumber":1008},{"id":1425,"randomNumber":1607},{"id":5056,"randomNumber":8223},{"id":8836,"randomNumber":4038},{"id":5543,"randomNumber":5773},{"id":1466,"randomNumber":541},{"id":7644,"randomNumber":6652},{"id":8175,"randomNumber":3162},{"id":869,"randomNumber":7178},{"id":9928,"randomNumber":9985},{"id":5372,"randomNumber":7335},{"id":2204,"randomNumber":8713},{"id":2328,"randomNumber":2408},{"id":1669,"randomNumber":4077},{"id":4864,"randomNumber":4499},{"id":7373,"randomNumber":2316},{"id":3790,"randomNumber":5999},{"id":773,"randomNumber":3969},{"id":3680,"randomNumber":6556},{"id":3482,"randomNumber":270},{"id":7068,"randomNumber":7178},{"id":761,"randomNumber":7307},{"id":3215,"randomNumber":8949},{"id":2900,"randomNumber":9928},{"id":7130,"randomNumber":534},{"id":6307,"randomNumber":1099},{"id":9035,"randomNumber":8691},{"id":3457,"randomNumber":5197},{"id":2117,"randomNumber":6627},{"id":2828,"randomNumber":7151},{"id":1250,"randomNumber":304},{"id":352,"randomNumber":5745},{"id":9218,"randomNumber":2328},{"id":6214,"randomNumber":1782},{"id":2925,"randomNumber":3175},{"id":422,"randomNumber":7647},{"id":6075,"randomNumber":3049},{"id":7470,"randomNumber":7569},{"id":8928,"randomNumber":6649},{"id":1583,"randomNumber":5447},{"id":118,"randomNumber":7881},{"id":6023,"randomNumber":3804},{"id":1101,"randomNumber":2164},{"id":1315,"randomNumber":8954},{"id":4989,"randomNumber":8461},{"id":1090,"randomNumber":7800},{"id":8211,"randomNumber":431},{"id":720,"randomNumber":3493},{"id":4044,"randomNumber":9168},{"id":2630,"randomNumber":5009},{"id":722,"randomNumber":9781},{"id":4838,"randomNumber":2140},{"id":5804,"randomNumber":3475},{"id":2149,"randomNumber":9332},{"id":1116,"randomNumber":3575},{"id":5678,"randomNumber":4259},{"id":5217,"randomNumber":1791},{"id":8877,"randomNumber":1275},{"id":227,"randomNumber":1461},{"id":1736,"randomNumber":8803},{"id":7558,"randomNumber":3586},{"id":8724,"randomNumber":4628},{"id":8856,"randomNumber":6504},{"id":6631,"randomNumber":3847},{"id":8918,"randomNumber":4003},{"id":1784,"randomNumber":9141},{"id":1780,"randomNumber":6257},{"id":9947,"randomNumber":3471},{"id":8357,"randomNumber":5528},{"id":9173,"randomNumber":928},{"id":8202,"randomNumber":1232},{"id":5376,"randomNumber":1787},{"id":1997,"randomNumber":6217},{"id":1480,"randomNumber":4916},{"id":8696,"randomNumber":8734},{"id":4791,"randomNumber":1055},{"id":8614,"randomNumber":1577},{"id":9234,"randomNumber":7337},{"id":3692,"randomNumber":3168},{"id":2044,"randomNumber":132},{"id":9599,"randomNumber":6363},{"id":429,"randomNumber":3196},{"id":2730,"randomNumber":6892},{"id":6935,"randomNumber":3064},{"id":3570,"randomNumber":2345},{"id":1383,"randomNumber":3017},{"id":6831,"randomNumber":9587},{"id":8094,"randomNumber":3947},{"id":7356,"randomNumber":1904},{"id":4990,"randomNumber":3820},{"id":8591,"randomNumber":4601},{"id":3281,"randomNumber":1148},{"id":603,"randomNumber":9802},{"id":4756,"randomNumber":5668},{"id":5907,"randomNumber":6990},{"id":7039,"randomNumber":2032},{"id":818,"randomNumber":3286},{"id":3922,"randomNumber":4410},{"id":5590,"randomNumber":5835},{"id":8517,"randomNumber":6180},{"id":9335,"randomNumber":1484},{"id":6479,"randomNumber":8168},{"id":2559,"randomNumber":2948},{"id":6853,"randomNumber":7480},{"id":6359,"randomNumber":1197},{"id":855,"randomNumber":9118},{"id":8789,"randomNumber":4705},{"id":7491,"randomNumber":6997},{"id":5040,"randomNumber":3340},{"id":7703,"randomNumber":8678},{"id":3730,"randomNumber":3509},{"id":503,"randomNumber":674},{"id":341,"randomNumber":2260},{"id":347,"randomNumber":6890},{"id":4539,"randomNumber":8128},{"id":1130,"randomNumber":4461},{"id":8366,"randomNumber":1240},{"id":178,"randomNumber":9362},{"id":130,"randomNumber":7688},{"id":3538,"randomNumber":6244},{"id":5771,"randomNumber":2612},{"id":9561,"randomNumber":5808},{"id":7783,"randomNumber":2522},{"id":1076,"randomNumber":1054},{"id":6876,"randomNumber":6192},{"id":1682,"randomNumber":5166},{"id":4859,"randomNumber":5533},{"id":209,"randomNumber":1052},{"id":8225,"randomNumber":8972},{"id":146,"randomNumber":6495},{"id":1023,"randomNumber":782},{"id":758,"randomNumber":2730},{"id":6415,"randomNumber":1839},{"id":1127,"randomNumber":3608},{"id":8306,"randomNumber":3868},{"id":2034,"randomNumber":99},{"id":5289,"randomNumber":2908},{"id":7398,"randomNumber":5401},{"id":7314,"randomNumber":701},{"id":3075,"randomNumber":8244},{"id":2810,"randomNumber":1746},{"id":6659,"randomNumber":8347},{"id":7960,"randomNumber":3765},{"id":5273,"randomNumber":7162},{"id":6273,"randomNumber":5008},{"id":6256,"randomNumber":5840},{"id":2178,"randomNumber":2815},{"id":7396,"randomNumber":235},{"id":6922,"randomNumber":870},{"id":2576,"randomNumber":3548},{"id":4280,"randomNumber":1827},{"id":6254,"randomNumber":5002},{"id":1466,"randomNumber":541},{"id":6222,"randomNumber":3703},{"id":1829,"randomNumber":6567},{"id":1069,"randomNumber":6786},{"id":8537,"randomNumber":3223},{"id":3384,"randomNumber":9902},{"id":6232,"randomNumber":4092},{"id":5991,"randomNumber":9456},{"id":2678,"randomNumber":4610},{"id":9756,"randomNumber":7187},{"id":7569,"randomNumber":5277},{"id":3139,"randomNumber":2343},{"id":7125,"randomNumber":5670},{"id":5805,"randomNumber":8754},{"id":2653,"randomNumber":8850},{"id":8045,"randomNumber":5238},{"id":9331,"randomNumber":2616},{"id":1232,"randomNumber":7823},{"id":8762,"randomNumber":7227},{"id":459,"randomNumber":1861},{"id":9956,"randomNumber":8695},{"id":2072,"randomNumber":2460},{"id":8050,"randomNumber":77},{"id":6068,"randomNumber":2699},{"id":6866,"randomNumber":141},{"id":6019,"randomNumber":6271},{"id":9254,"randomNumber":6414},{"id":8907,"randomNumber":6542},{"id":602,"randomNumber":485},{"id":311,"randomNumber":9179},{"id":3985,"randomNumber":5458},{"id":9978,"randomNumber":9026},{"id":6704,"randomNumber":1680},{"id":1752,"randomNumber":8444},{"id":4627,"randomNumber":8899},{"id":4885,"randomNumber":1651},{"id":3310,"randomNumber":4510},{"id":348,"randomNumber":6833},{"id":9670,"randomNumber":790},{"id":2216,"randomNumber":9419},{"id":9538,"randomNumber":5471},{"id":6377,"randomNumber":3384},{"id":167,"randomNumber":8985},{"id":4806,"randomNumber":3853},{"id":1270,"randomNumber":1357},{"id":5754,"randomNumber":3594},{"id":7909,"randomNumber":4237},{"id":8018,"randomNumber":7328},{"id":6206,"randomNumber":5775},{"id":23,"randomNumber":6791},{"id":1936,"randomNumber":7745},{"id":2773,"randomNumber":4475},{"id":9281,"randomNumber":6270},{"id":5445,"randomNumber":9666},{"id":5012,"randomNumber":4534},{"id":6153,"randomNumber":9632},{"id":2899,"randomNumber":9480},{"id":288,"randomNumber":8092},{"id":5821,"randomNumber":1816},{"id":9116,"randomNumber":41},{"id":3818,"randomNumber":6655},{"id":662,"randomNumber":4237},{"id":5826,"randomNumber":1322},{"id":9083,"randomNumber":3132},{"id":9969,"randomNumber":8047},{"id":2999,"randomNumber":54},{"id":1944,"randomNumber":4317},{"id":5021,"randomNumber":3803},{"id":6022,"randomNumber":9398},{"id":5657,"randomNumber":6671},{"id":7506,"randomNumber":5526},{"id":3966,"randomNumber":4616},{"id":6090,"randomNumber":2257},{"id":3014,"randomNumber":6239},{"id":4331,"randomNumber":8768},{"id":913,"randomNumber":8525},{"id":5595,"randomNumber":5871},{"id":2887,"randomNumber":9620},{"id":8162,"randomNumber":5650},{"id":8478,"randomNumber":6529},{"id":2032,"randomNumber":8958},{"id":2154,"randomNumber":1292},{"id":8199,"randomNumber":5354},{"id":8811,"randomNumber":4309},{"id":6141,"randomNumber":6799},{"id":6058,"randomNumber":3963},{"id":9016,"randomNumber":8289},{"id":7869,"randomNumber":3245},{"id":809,"randomNumber":3257},{"id":3806,"randomNumber":7999},{"id":9760,"randomNumber":6902},{"id":1332,"randomNumber":5267},{"id":4935,"randomNumber":1281},{"id":6825,"randomNumber":5864},{"id":1199,"randomNumber":1358},{"id":2220,"randomNumber":4578},{"id":3443,"randomNumber":3890},{"id":6299,"randomNumber":2678},{"id":5925,"randomNumber":802},{"id":2559,"randomNumber":2948},{"id":2631,"randomNumber":1595},{"id":3472,"randomNumber":992},{"id":826,"randomNumber":9799},{"id":5340,"randomNumber":4101},{"id":2133,"randomNumber":2904},{"id":9598,"randomNumber":4138},{"id":3780,"randomNumber":7994},{"id":8449,"randomNumber":7278},{"id":936,"randomNumber":855},{"id":2394,"randomNumber":4167},{"id":8475,"randomNumber":9359},{"id":9239,"randomNumber":8226},{"id":5047,"randomNumber":5678},{"id":2400,"randomNumber":8411},{"id":2225,"randomNumber":3739},{"id":6992,"randomNumber":7004},{"id":8733,"randomNumber":7874},{"id":5703,"randomNumber":7359},{"id":1706,"randomNumber":3785},{"id":641,"randomNumber":5607},{"id":9533,"randomNumber":9055},{"id":9204,"randomNumber":3538},{"id":659,"randomNumber":9904},{"id":806,"randomNumber":8394},{"id":9677,"randomNumber":5412},{"id":767,"randomNumber":2013},{"id":1756,"randomNumber":5728},{"id":8464,"randomNumber":4045},{"id":2975,"randomNumber":8231},{"id":9409,"randomNumber":6850},{"id":2092,"randomNumber":1804},{"id":7367,"randomNumber":344},{"id":6763,"randomNumber":5896},{"id":22,"randomNumber":8516},{"id":8037,"randomNumber":5752},{"id":3722,"randomNumber":2431},{"id":3080,"randomNumber":3375},{"id":3032,"randomNumber":996},{"id":563,"randomNumber":4490},{"id":4568,"randomNumber":8342},{"id":1884,"randomNumber":5440},{"id":1860,"randomNumber":8126},{"id":6574,"randomNumber":5805},{"id":5795,"randomNumber":61},{"id":1827,"randomNumber":9053},{"id":101,"randomNumber":7300},{"id":5256,"randomNumber":2661},{"id":1811,"randomNumber":1531},{"id":871,"randomNumber":2961},{"id":5916,"randomNumber":6730},{"id":1016,"randomNumber":6344},{"id":1504,"randomNumber":1818},{"id":9857,"randomNumber":4087},{"id":3297,"randomNumber":3606},{"id":6185,"randomNumber":2150},{"id":9307,"randomNumber":8361},{"id":7041,"randomNumber":8394},{"id":8588,"randomNumber":4935},{"id":7343,"randomNumber":1349},{"id":5952,"randomNumber":3625},{"id":550,"randomNumber":4954},{"id":5921,"randomNumber":5715},{"id":8842,"randomNumber":3698},{"id":805,"randomNumber":5213},{"id":8747,"randomNumber":1880},{"id":7088,"randomNumber":6942},{"id":5926,"randomNumber":2881},{"id":6551,"randomNumber":4129},{"id":5553,"randomNumber":474},{"id":9746,"randomNumber":239},{"id":7686,"randomNumber":8292},{"id":7424,"randomNumber":9426},{"id":8943,"randomNumber":2223},{"id":2868,"randomNumber":3542},{"id":7037,"randomNumber":5148},{"id":4213,"randomNumber":7759},{"id":6010,"randomNumber":98},{"id":9836,"randomNumber":1159},{"id":851,"randomNumber":7792},{"id":2795,"randomNumber":6672},{"id":7276,"randomNumber":1964},{"id":7720,"randomNumber":6433},{"id":8479,"randomNumber":5097},{"id":8118,"randomNumber":9272},{"id":6262,"randomNumber":777},{"id":5890,"randomNumber":3604},{"id":964,"randomNumber":1552},{"id":2203,"randomNumber":7968},{"id":7701,"randomNumber":1289},{"id":8386,"randomNumber":8585},{"id":6442,"randomNumber":2082},{"id":3029,"randomNumber":9867},{"id":9262,"randomNumber":8699},{"id":2195,"randomNumber":8777},{"id":9457,"randomNumber":1625},{"id":933,"randomNumber":9565},{"id":7140,"randomNumber":8251},{"id":7990,"randomNumber":5676},{"id":3228,"randomNumber":1431},{"id":586,"randomNumber":2705},{"id":5475,"randomNumber":1372},{"id":743,"randomNumber":3072},{"id":4239,"randomNumber":1100},{"id":9496,"randomNumber":749},{"id":3185,"randomNumber":903},{"id":5118,"randomNumber":2158},{"id":7981,"randomNumber":6573},{"id":8526,"randomNumber":7730},{"id":9513,"randomNumber":2593},{"id":4598,"randomNumber":5840},{"id":3135,"randomNumber":1048},{"id":5958,"randomNumber":6254},{"id":1355,"randomNumber":7405},{"id":3855,"randomNumber":2695},{"id":9048,"randomNumber":7830},{"id":4281,"randomNumber":5628},{"id":1265,"randomNumber":4727},{"id":1070,"randomNumber":2115},{"id":7958,"randomNumber":9700},{"id":8042,"randomNumber":8691},{"id":4917,"randomNumber":465},{"id":615,"randomNumber":1311},{"id":9106,"randomNumber":9729},{"id":1888,"randomNumber":9105},{"id":782,"randomNumber":9949},{"id":6775,"randomNumber":2386},{"id":6598,"randomNumber":2435},{"id":208,"randomNumber":8453},{"id":2769,"randomNumber":744},{"id":6075,"randomNumber":3049},{"id":6691,"randomNumber":7676},{"id":3672,"randomNumber":3599},{"id":8670,"randomNumber":6086},{"id":9144,"randomNumber":8126},{"id":3023,"randomNumber":8929},{"id":3419,"randomNumber":668},{"id":3409,"randomNumber":8148},{"id":3035,"randomNumber":3806},{"id":258,"randomNumber":1929},{"id":625,"randomNumber":4152},{"id":6255,"randomNumber":2729},{"id":1466,"randomNumber":541},{"id":7559,"randomNumber":9039},{"id":7758,"randomNumber":6958},{"id":5487,"randomNumber":3297},{"id":3518,"randomNumber":6308},{"id":3406,"randomNumber":9936},{"id":7953,"randomNumber":29},{"id":2270,"randomNumber":9319},{"id":1008,"randomNumber":4077},{"id":2339,"randomNumber":3918},{"id":629,"randomNumber":5937},{"id":7944,"randomNumber":4592},{"id":947,"randomNumber":9887},{"id":2403,"randomNumber":9796},{"id":4717,"randomNumber":7841},{"id":5333,"randomNumber":7321},{"id":2317,"randomNumber":4879},{"id":9313,"randomNumber":8627},{"id":5700,"randomNumber":7340},{"id":5259,"randomNumber":9257},{"id":5701,"randomNumber":3360},{"id":9637,"randomNumber":5172},{"id":9012,"randomNumber":6923},{"id":3959,"randomNumber":9032},{"id":244,"randomNumber":6606},{"id":678,"randomNumber":3204},{"id":315,"randomNumber":6884},{"id":5802,"randomNumber":2259},{"id":4880,"randomNumber":8318},{"id":9136,"randomNumber":3532},{"id":2651,"randomNumber":5618},{"id":8378,"randomNumber":7400},{"id":9779,"randomNumber":1731},{"id":4141,"randomNumber":8009},{"id":1549,"randomNumber":8669},{"id":3801,"randomNumber":6920},{"id":9600,"randomNumber":2041},{"id":2782,"randomNumber":719},{"id":1773,"randomNumber":9397},{"id":911,"randomNumber":381},{"id":2256,"randomNumber":4616},{"id":7870,"randomNumber":9250},{"id":3611,"randomNumber":3042},{"id":7938,"randomNumber":7073},{"id":5635,"randomNumber":9551},{"id":8353,"randomNumber":7020},{"id":2334,"randomNumber":3967},{"id":4156,"randomNumber":3361},{"id":13,"randomNumber":9584},{"id":2534,"randomNumber":3907},{"id":1787,"randomNumber":8947},{"id":2069,"randomNumber":1471}]
+
+/db/501 - WARNING
+
+-----------------------------------------------------
+
+
+VALIDATING QUERY ... PASS (with warnings)
+
+
+-----------------------------------------------------
+  VERIFYING FORTUNE (/fortune)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Date: Sun, 29 Jun 2014 03:22:32 GMT
+content-type: text/html; charset=utf-8
+Content-Length: 1305
+Server: Jetty(7.5.4.v20111024)
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Fortunes</title>
+</head>
+<body>
+<table>
+<tr>
+<th>id</th>
+<th>message</th>
+</tr>
+
+<tr>
+<td>11</td>
+<td>&lt;script&gt;alert(&quot;This should not be displayed in a browser alert box.&quot;);&lt;/script&gt;</td>
+</tr>
+
+<tr>
+<td>4</td>
+<td>A bad random number generator: 1, 1, 1, 1, 1, 4.33e+67, 1, 1, 1</td>
+</tr>
+
+<tr>
+<td>5</td>
+<td>A computer program does what you tell it to do, not what you want it to do.</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>A computer scientist is someone who fixes things that aren&#39;t broken.</td>
+</tr>
+
+<tr>
+<td>8</td>
+<td>A list is only as strong as its weakest link. — Donald Knuth</td>
+</tr>
+
+<tr>
+<td>0</td>
+<td>Additional fortune added at request time.</td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>After enough decimal places, nobody gives a damn.</td>
+</tr>
+
+<tr>
+<td>7</td>
+<td>Any program that runs right is obsolete.</td>
+</tr>
+
+<tr>
+<td>10</td>
+<td>Computers make very fast, very accurate mistakes.</td>
+</tr>
+
+<tr>
+<td>6</td>
+<td>Emacs is a nice operating system, but I prefer UNIX. — Tom Christaensen</td>
+</tr>
+
+<tr>
+<td>9</td>
+<td>Feature: A bug with seniority.</td>
+</tr>
+
+<tr>
+<td>1</td>
+<td>fortune: No such file or directory</td>
+</tr>
+
+<tr>
+<td>12</td>
+<td>フレームワークのベンチマーク</td>
+</tr>
+
+</table>
+</body>
+</html>
+
+VALIDATING FORTUNE ... PASS
+
+
+-----------------------------------------------------
+  VERIFYING UPDATE (/updates/)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Date: Sun, 29 Jun 2014 03:22:32 GMT
+content-type: application/json; charset=utf-8
+Content-Length: 65
+Server: Jetty(7.5.4.v20111024)
+
+[{"id":2224,"randomNumber":7018},{"id":5257,"randomNumber":3932}]
+
+VALIDATING UPDATE ... PASS
+
+
+-----------------------------------------------------
+  VERIFYING PLAINTEXT (/plaintext)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Date: Sun, 29 Jun 2014 03:22:32 GMT
+content-type: text/plain; charset=utf-8
+Content-Length: 13
+Server: Jetty(7.5.4.v20111024)
+
+Hello, World!
+
+VALIDATING PLAINTEXT ... PASS
+
+
+-----------------------------------------------------
+  Benchmarking ringojs-convenient ...
+-----------------------------------------------------
+BENCHMARKING JSON ... Complete
+BENCHMARKING DB ... Complete
+BENCHMARKING Query ... Complete
+BENCHMARKING Fortune ... Complete
+BENCHMARKING Update ... Complete
+BENCHMARKING Plaintext ... Complete
+
+-----------------------------------------------------
+  Stopping ringojs-convenient
+-----------------------------------------------------
+736193 [ringo-worker-1] INFO  org.eclipse.jetty.server.Server  - Graceful shutdown SelectChannelConnector@0.0.0.0:8080 STARTED
+736959 [ringo-worker-1] INFO  org.eclipse.jetty.server.Server  - Graceful shutdown o.e.j.s.ServletContextHandler{/,null}
+
+-----------------------------------------------------
+  Stopped ringojs-convenient
+-----------------------------------------------------
+739484 [qtp1183133939-76] WARN  org.eclipse.jetty.io.nio  - handle failed
+java.lang.IllegalStateException: DISPATCHED,initial
+	at org.eclipse.jetty.server.AsyncContinuation.recycle(AsyncContinuation.java:512)
+	at org.eclipse.jetty.server.Request.recycle(Request.java:1354)
+	at org.eclipse.jetty.server.HttpConnection.reset(HttpConnection.java:387)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:87)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:586)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:44)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:598)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:533)
+	at java.lang.Thread.run(Thread.java:744)
+742907 [qtp1183133939-271] WARN  org.eclipse.jetty.io.nio  - handle failed
+java.lang.IllegalStateException: DISPATCHED,initial
+	at org.eclipse.jetty.server.AsyncContinuation.recycle(AsyncContinuation.java:512)
+	at org.eclipse.jetty.server.Request.recycle(Request.java:1354)
+	at org.eclipse.jetty.server.HttpConnection.reset(HttpConnection.java:387)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:87)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:586)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:44)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:598)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:533)
+	at java.lang.Thread.run(Thread.java:744)
+
+----------------------------------------------------
+Saving results through ringojs-convenient
+----------------------------------------------------
+745335 [qtp1183133939-36] WARN  org.eclipse.jetty.io.nio  - handle failed
+java.lang.IllegalStateException: DISPATCHED,initial
+	at org.eclipse.jetty.server.AsyncContinuation.recycle(AsyncContinuation.java:512)
+	at org.eclipse.jetty.server.Request.recycle(Request.java:1354)
+	at org.eclipse.jetty.server.HttpConnection.reset(HttpConnection.java:387)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:87)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:586)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:44)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:598)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:533)
+	at java.lang.Thread.run(Thread.java:744)
+747259 [qtp1183133939-104] WARN  org.eclipse.jetty.io.nio  - handle failed
+java.lang.IllegalStateException: DISPATCHED,initial
+	at org.eclipse.jetty.server.AsyncContinuation.recycle(AsyncContinuation.java:512)
+	at org.eclipse.jetty.server.Request.recycle(Request.java:1354)
+	at org.eclipse.jetty.server.HttpConnection.reset(HttpConnection.java:387)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:87)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:586)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:44)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:598)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:533)
+	at java.lang.Thread.run(Thread.java:744)
+752239 [qtp1183133939-248] WARN  org.eclipse.jetty.io.nio  - handle failed
+java.lang.IllegalStateException: DISPATCHED,initial
+	at org.eclipse.jetty.server.AsyncContinuation.recycle(AsyncContinuation.java:512)
+	at org.eclipse.jetty.server.Request.recycle(Request.java:1354)
+	at org.eclipse.jetty.server.HttpConnection.reset(HttpConnection.java:387)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:87)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:586)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:44)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:598)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:533)
+	at java.lang.Thread.run(Thread.java:744)
+753959 [qtp1183133939-226] WARN  org.eclipse.jetty.io.nio  - handle failed
+java.lang.IllegalStateException: DISPATCHED,initial
+	at org.eclipse.jetty.server.AsyncContinuation.recycle(AsyncContinuation.java:512)
+	at org.eclipse.jetty.server.Request.recycle(Request.java:1354)
+	at org.eclipse.jetty.server.HttpConnection.reset(HttpConnection.java:387)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:87)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:586)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:44)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:598)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:533)
+	at java.lang.Thread.run(Thread.java:744)
+755599 [qtp1183133939-141] WARN  org.eclipse.jetty.io.nio  - handle failed
+java.lang.IllegalStateException: DISPATCHED,initial
+	at org.eclipse.jetty.server.AsyncContinuation.recycle(AsyncContinuation.java:512)
+	at org.eclipse.jetty.server.Request.recycle(Request.java:1354)
+	at org.eclipse.jetty.server.HttpConnection.reset(HttpConnection.java:387)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:87)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:586)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:44)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:598)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:533)
+	at java.lang.Thread.run(Thread.java:744)
+756871 [qtp1183133939-236] WARN  org.eclipse.jetty.io.nio  - handle failed
+java.lang.IllegalStateException: DISPATCHED,initial
+	at org.eclipse.jetty.server.AsyncContinuation.recycle(AsyncContinuation.java:512)
+	at org.eclipse.jetty.server.Request.recycle(Request.java:1354)
+	at org.eclipse.jetty.server.HttpConnection.reset(HttpConnection.java:387)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:87)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:586)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:44)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:598)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:533)
+	at java.lang.Thread.run(Thread.java:744)
+758183 [qtp1183133939-113] WARN  org.eclipse.jetty.io.nio  - handle failed
+java.lang.IllegalStateException: DISPATCHED,initial
+	at org.eclipse.jetty.server.AsyncContinuation.recycle(AsyncContinuation.java:512)
+	at org.eclipse.jetty.server.Request.recycle(Request.java:1354)
+	at org.eclipse.jetty.server.HttpConnection.reset(HttpConnection.java:387)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:87)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:586)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:44)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:598)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:533)
+	at java.lang.Thread.run(Thread.java:744)
+758187 [qtp1183133939-112] WARN  org.eclipse.jetty.io.nio  - handle failed
+java.lang.IllegalStateException: DISPATCHED,initial
+	at org.eclipse.jetty.server.AsyncContinuation.recycle(AsyncContinuation.java:512)
+	at org.eclipse.jetty.server.Request.recycle(Request.java:1354)
+	at org.eclipse.jetty.server.HttpConnection.reset(HttpConnection.java:387)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:87)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:586)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:44)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:598)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:533)
+	at java.lang.Thread.run(Thread.java:744)
+760175 [qtp1183133939-230] WARN  org.eclipse.jetty.io.nio  - handle failed
+java.lang.IllegalStateException: DISPATCHED,initial
+	at org.eclipse.jetty.server.AsyncContinuation.recycle(AsyncContinuation.java:512)
+	at org.eclipse.jetty.server.Request.recycle(Request.java:1354)
+	at org.eclipse.jetty.server.HttpConnection.reset(HttpConnection.java:387)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:87)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:586)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:44)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:598)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:533)
+	at java.lang.Thread.run(Thread.java:744)
+760299 [qtp1183133939-220] WARN  org.eclipse.jetty.io.nio  - handle failed
+java.lang.IllegalStateException: DISPATCHED,initial
+	at org.eclipse.jetty.server.AsyncContinuation.recycle(AsyncContinuation.java:512)
+	at org.eclipse.jetty.server.Request.recycle(Request.java:1354)
+	at org.eclipse.jetty.server.HttpConnection.reset(HttpConnection.java:387)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:87)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:586)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:44)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:598)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:533)
+	at java.lang.Thread.run(Thread.java:744)
+763087 [qtp1183133939-23] WARN  org.eclipse.jetty.io.nio  - handle failed
+java.lang.IllegalStateException: DISPATCHED,initial
+	at org.eclipse.jetty.server.AsyncContinuation.recycle(AsyncContinuation.java:512)
+	at org.eclipse.jetty.server.Request.recycle(Request.java:1354)
+	at org.eclipse.jetty.server.HttpConnection.reset(HttpConnection.java:387)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:87)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:586)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:44)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:598)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:533)
+	at java.lang.Thread.run(Thread.java:744)
+763259 [qtp1183133939-175] WARN  org.eclipse.jetty.io.nio  - handle failed
+java.lang.IllegalStateException: DISPATCHED,initial
+	at org.eclipse.jetty.server.AsyncContinuation.recycle(AsyncContinuation.java:512)
+	at org.eclipse.jetty.server.Request.recycle(Request.java:1354)
+	at org.eclipse.jetty.server.HttpConnection.reset(HttpConnection.java:387)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:87)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:586)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:44)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:598)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:533)
+	at java.lang.Thread.run(Thread.java:744)
+763483 [qtp1183133939-99] WARN  org.eclipse.jetty.io.nio  - handle failed
+java.lang.IllegalStateException: DISPATCHED,initial
+	at org.eclipse.jetty.server.AsyncContinuation.recycle(AsyncContinuation.java:512)
+	at org.eclipse.jetty.server.Request.recycle(Request.java:1354)
+	at org.eclipse.jetty.server.HttpConnection.reset(HttpConnection.java:387)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:87)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:586)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:44)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:598)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:533)
+	at java.lang.Thread.run(Thread.java:744)
+764863 [qtp1183133939-30] WARN  org.eclipse.jetty.io.nio  - handle failed
+java.lang.IllegalStateException: DISPATCHED,initial
+	at org.eclipse.jetty.server.AsyncContinuation.recycle(AsyncContinuation.java:512)
+	at org.eclipse.jetty.server.Request.recycle(Request.java:1354)
+	at org.eclipse.jetty.server.HttpConnection.reset(HttpConnection.java:387)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:87)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:586)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:44)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:598)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:533)
+	at java.lang.Thread.run(Thread.java:744)
+764879 [qtp1183133939-140] WARN  org.eclipse.jetty.io.nio  - handle failed
+java.lang.IllegalStateException: DISPATCHED,initial
+	at org.eclipse.jetty.server.AsyncContinuation.recycle(AsyncContinuation.java:512)
+	at org.eclipse.jetty.server.Request.recycle(Request.java:1354)
+	at org.eclipse.jetty.server.HttpConnection.reset(HttpConnection.java:387)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:87)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:586)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:44)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:598)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:533)
+	at java.lang.Thread.run(Thread.java:744)
+765007 [qtp1183133939-207] WARN  org.eclipse.jetty.io.nio  - handle failed
+java.lang.IllegalStateException: DISPATCHED,initial
+	at org.eclipse.jetty.server.AsyncContinuation.recycle(AsyncContinuation.java:512)
+	at org.eclipse.jetty.server.Request.recycle(Request.java:1354)
+	at org.eclipse.jetty.server.HttpConnection.reset(HttpConnection.java:387)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:87)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:586)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:44)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:598)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:533)
+	at java.lang.Thread.run(Thread.java:744)
+765183 [qtp1183133939-185] WARN  org.eclipse.jetty.io.nio  - handle failed
+java.lang.IllegalStateException: DISPATCHED,initial
+	at org.eclipse.jetty.server.AsyncContinuation.recycle(AsyncContinuation.java:512)
+	at org.eclipse.jetty.server.Request.recycle(Request.java:1354)
+	at org.eclipse.jetty.server.HttpConnection.reset(HttpConnection.java:387)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:87)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:586)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:44)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:598)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:533)
+	at java.lang.Thread.run(Thread.java:744)
+765187 [qtp1183133939-209] WARN  org.eclipse.jetty.io.nio  - handle failed
+java.lang.IllegalStateException: DISPATCHED,initial
+	at org.eclipse.jetty.server.AsyncContinuation.recycle(AsyncContinuation.java:512)
+	at org.eclipse.jetty.server.Request.recycle(Request.java:1354)
+	at org.eclipse.jetty.server.HttpConnection.reset(HttpConnection.java:387)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:87)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:586)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:44)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:598)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:533)
+	at java.lang.Thread.run(Thread.java:744)
+765348 [qtp1183133939-59] WARN  org.eclipse.jetty.io.nio  - handle failed
+java.lang.IllegalStateException: DISPATCHED,initial
+	at org.eclipse.jetty.server.AsyncContinuation.recycle(AsyncContinuation.java:512)
+	at org.eclipse.jetty.server.Request.recycle(Request.java:1354)
+	at org.eclipse.jetty.server.HttpConnection.reset(HttpConnection.java:387)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:87)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:586)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:44)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:598)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:533)
+	at java.lang.Thread.run(Thread.java:744)
+765363 [qtp1183133939-104] WARN  org.eclipse.jetty.io.nio  - handle failed
+java.lang.IllegalStateException: DISPATCHED,initial
+	at org.eclipse.jetty.server.AsyncContinuation.recycle(AsyncContinuation.java:512)
+	at org.eclipse.jetty.server.Request.recycle(Request.java:1354)
+	at org.eclipse.jetty.server.HttpConnection.reset(HttpConnection.java:387)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:87)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:586)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:44)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:598)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:533)
+	at java.lang.Thread.run(Thread.java:744)
+765410 [ringo-worker-1] INFO  org.eclipse.jetty.server.handler.ContextHandler  - stopped o.e.j.s.ServletContextHandler{/,null}

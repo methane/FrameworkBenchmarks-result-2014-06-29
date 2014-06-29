@@ -1,0 +1,122 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer unfiltered
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:9000/db
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:9000/db
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     3.49ms    3.28ms  28.92ms   88.22%
+    Req/Sec   369.14    165.41     0.94k    66.52%
+  13691 requests in 5.01s, 1.86MB read
+Requests/sec:   2734.35
+Transfer/sec:    381.25KB
+
+---------------------------------------------------------
+ Running Warmup unfiltered
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:9000/db
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:9000/db
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    35.33ms    3.27ms  72.68ms   89.18%
+    Req/Sec     1.83k   109.74     2.03k    79.58%
+  108231 requests in 15.00s, 14.74MB read
+Requests/sec:   7215.84
+Transfer/sec:      0.98MB
+
+---------------------------------------------------------
+ Concurrency: 8 for unfiltered
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:9000/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:9000/db
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.18ms  763.60us  26.12ms   95.65%
+    Req/Sec     1.80k   227.83     2.40k    81.76%
+  102250 requests in 15.00s, 13.92MB read
+Requests/sec:   6817.15
+Transfer/sec:      0.93MB
+
+---------------------------------------------------------
+ Concurrency: 16 for unfiltered
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:9000/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:9000/db
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     2.17ms  693.60us  20.86ms   86.06%
+    Req/Sec     1.95k   202.20     2.44k    78.34%
+  110953 requests in 15.00s, 15.11MB read
+Requests/sec:   7397.47
+Transfer/sec:      1.01MB
+
+---------------------------------------------------------
+ Concurrency: 32 for unfiltered
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:9000/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:9000/db
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     4.32ms  802.11us  13.32ms   89.50%
+    Req/Sec     1.96k   207.33     2.67k    77.69%
+  111249 requests in 15.00s, 15.15MB read
+Requests/sec:   7418.42
+Transfer/sec:      1.01MB
+
+---------------------------------------------------------
+ Concurrency: 64 for unfiltered
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:9000/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:9000/db
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     8.65ms    0.97ms  18.34ms   88.60%
+    Req/Sec     1.90k   140.56     2.28k    74.50%
+  110902 requests in 15.00s, 15.10MB read
+Requests/sec:   7393.84
+Transfer/sec:      1.01MB
+
+---------------------------------------------------------
+ Concurrency: 128 for unfiltered
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:9000/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:9000/db
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    17.11ms    1.16ms  26.09ms   84.77%
+    Req/Sec     1.90k    96.84     2.23k    75.77%
+  112105 requests in 15.00s, 15.26MB read
+Requests/sec:   7473.83
+Transfer/sec:      1.02MB
+
+---------------------------------------------------------
+ Concurrency: 256 for unfiltered
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:9000/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:9000/db
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    34.55ms    1.84ms  44.81ms   83.94%
+    Req/Sec     1.87k    76.48     2.11k    73.43%
+  111083 requests in 15.00s, 15.12MB read
+Requests/sec:   7406.15
+Transfer/sec:      1.01MB

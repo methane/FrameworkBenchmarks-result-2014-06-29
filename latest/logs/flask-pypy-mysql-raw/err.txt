@@ -1,0 +1,579 @@
+restart: Unknown instance: 
+2014-06-28 22:20:47 [25469] [CRITICAL] WORKER TIMEOUT (pid:25479)
+2014-06-28 22:20:47 [25469] [CRITICAL] WORKER TIMEOUT (pid:25479)
+ERROR:app:Exception on /raw-updates [GET]
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/FrameworkBenchmarks/flask/app.py", line 152, in raw_updates
+    (randomNumber, world['id']))
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/engine/base.py", line 1681, in execute
+    connection = self.contextual_connect(close_with_result=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/engine/base.py", line 1729, in contextual_connect
+    self.pool.connect(),
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/pool.py", line 332, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/pool.py", line 626, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/pool.py", line 433, in checkout
+    rec = pool._do_get()
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/pool.py", line 941, in _do_get
+    (self.size(), self.overflow(), self._timeout))
+TimeoutError: QueuePool limit of size 5 overflow 10 reached, connection timed out, timeout 30
+ERROR:app:Exception on /raw-updates [GET]
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/FrameworkBenchmarks/flask/app.py", line 152, in raw_updates
+    (randomNumber, world['id']))
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/engine/base.py", line 1681, in execute
+    connection = self.contextual_connect(close_with_result=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/engine/base.py", line 1729, in contextual_connect
+    self.pool.connect(),
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/pool.py", line 332, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/pool.py", line 626, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/pool.py", line 433, in checkout
+    rec = pool._do_get()
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/pool.py", line 941, in _do_get
+    (self.size(), self.overflow(), self._timeout))
+TimeoutError: QueuePool limit of size 5 overflow 10 reached, connection timed out, timeout 30
+ERROR:tornado.access:500 GET /raw-updates?queries=2 (127.0.0.1) 30016.96ms
+ERROR:tornado.access:500 GET /raw-updates?queries=2 (127.0.0.1) 30016.73ms
+ERROR:app:Exception on /raw-updates [GET]
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/FrameworkBenchmarks/flask/app.py", line 152, in raw_updates
+    (randomNumber, world['id']))
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/engine/base.py", line 1681, in execute
+    connection = self.contextual_connect(close_with_result=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/engine/base.py", line 1729, in contextual_connect
+    self.pool.connect(),
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/pool.py", line 332, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/pool.py", line 626, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/pool.py", line 433, in checkout
+    rec = pool._do_get()
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/pool.py", line 941, in _do_get
+    (self.size(), self.overflow(), self._timeout))
+TimeoutError: QueuePool limit of size 5 overflow 10 reached, connection timed out, timeout 30
+ERROR:tornado.access:500 GET /raw-updates?queries=2 (127.0.0.1) 30018.71ms
+ERROR:app:Exception on /raw-updates [GET]
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/FrameworkBenchmarks/flask/app.py", line 152, in raw_updates
+    (randomNumber, world['id']))
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/engine/base.py", line 1681, in execute
+    connection = self.contextual_connect(close_with_result=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/engine/base.py", line 1729, in contextual_connect
+    self.pool.connect(),
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/pool.py", line 332, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/pool.py", line 626, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/pool.py", line 433, in checkout
+    rec = pool._do_get()
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/pool.py", line 941, in _do_get
+    (self.size(), self.overflow(), self._timeout))
+TimeoutError: QueuePool limit of size 5 overflow 10 reached, connection timed out, timeout 30
+ERROR:tornado.access:500 GET /raw-updates?queries=2 (127.0.0.1) 30016.62ms
+2014-06-28 22:20:58 [25469] [CRITICAL] WORKER TIMEOUT (pid:25480)
+2014-06-28 22:20:58 [25469] [CRITICAL] WORKER TIMEOUT (pid:25481)
+2014-06-28 22:20:58 [25469] [CRITICAL] WORKER TIMEOUT (pid:25484)
+2014-06-28 22:20:58 [25469] [CRITICAL] WORKER TIMEOUT (pid:25493)
+2014-06-28 22:20:58 [25469] [CRITICAL] WORKER TIMEOUT (pid:25480)
+2014-06-28 22:20:58 [25469] [CRITICAL] WORKER TIMEOUT (pid:25481)
+2014-06-28 22:20:58 [25469] [CRITICAL] WORKER TIMEOUT (pid:25484)
+2014-06-28 22:20:58 [25469] [CRITICAL] WORKER TIMEOUT (pid:25493)
+2014-06-28 22:20:58 [25469] [CRITICAL] WORKER TIMEOUT (pid:25481)
+2014-06-28 22:20:58 [25469] [CRITICAL] WORKER TIMEOUT (pid:25484)
+2014-06-28 22:20:58 [25469] [CRITICAL] WORKER TIMEOUT (pid:25493)
+2014-06-28 22:20:58 [25469] [CRITICAL] WORKER TIMEOUT (pid:25493)
+2014-06-28 22:20:58 [25469] [CRITICAL] WORKER TIMEOUT (pid:25489)
+2014-06-28 22:20:58 [25469] [CRITICAL] WORKER TIMEOUT (pid:25489)
+ERROR:app:Exception on /raw-updates [GET]
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/FrameworkBenchmarks/flask/app.py", line 152, in raw_updates
+    (randomNumber, world['id']))
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/engine/base.py", line 1681, in execute
+    connection = self.contextual_connect(close_with_result=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/engine/base.py", line 1729, in contextual_connect
+    self.pool.connect(),
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/pool.py", line 332, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/pool.py", line 626, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/pool.py", line 433, in checkout
+    rec = pool._do_get()
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/pool.py", line 941, in _do_get
+    (self.size(), self.overflow(), self._timeout))
+TimeoutError: QueuePool limit of size 5 overflow 10 reached, connection timed out, timeout 30
+ERROR:app:Exception on /raw-updates [GET]
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/FrameworkBenchmarks/flask/app.py", line 152, in raw_updates
+    (randomNumber, world['id']))
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/engine/base.py", line 1681, in execute
+    connection = self.contextual_connect(close_with_result=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/engine/base.py", line 1729, in contextual_connect
+    self.pool.connect(),
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/pool.py", line 332, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/pool.py", line 626, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/pool.py", line 433, in checkout
+    rec = pool._do_get()
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/pool.py", line 941, in _do_get
+    (self.size(), self.overflow(), self._timeout))
+TimeoutError: QueuePool limit of size 5 overflow 10 reached, connection timed out, timeout 30
+ERROR:tornado.access:500 GET /raw-updates?queries=2 (127.0.0.1) 30041.99ms
+ERROR:tornado.access:500 GET /raw-updates?queries=2 (127.0.0.1) 30038.77ms
+2014-06-28 22:21:00 [25469] [CRITICAL] WORKER TIMEOUT (pid:25500)
+2014-06-28 22:21:00 [25469] [CRITICAL] WORKER TIMEOUT (pid:25500)
+ERROR:app:Exception on /raw-updates [GET]
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/FrameworkBenchmarks/flask/app.py", line 152, in raw_updates
+    (randomNumber, world['id']))
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/engine/base.py", line 1681, in execute
+    connection = self.contextual_connect(close_with_result=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/engine/base.py", line 1729, in contextual_connect
+    self.pool.connect(),
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/pool.py", line 332, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/pool.py", line 626, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/pool.py", line 433, in checkout
+    rec = pool._do_get()
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/pool.py", line 941, in _do_get
+    (self.size(), self.overflow(), self._timeout))
+TimeoutError: QueuePool limit of size 5 overflow 10 reached, connection timed out, timeout 30
+ERROR:tornado.access:500 GET /raw-updates?queries=2 (127.0.0.1) 30003.01ms
+2014-06-28 22:21:20 [25469] [CRITICAL] WORKER TIMEOUT (pid:26355)
+2014-06-28 22:21:20 [25469] [CRITICAL] WORKER TIMEOUT (pid:25491)
+2014-06-28 22:21:20 [25469] [CRITICAL] WORKER TIMEOUT (pid:25495)
+2014-06-28 22:21:20 [25469] [CRITICAL] WORKER TIMEOUT (pid:25498)
+2014-06-28 22:21:20 [25469] [CRITICAL] WORKER TIMEOUT (pid:25491)
+2014-06-28 22:21:20 [25469] [CRITICAL] WORKER TIMEOUT (pid:25495)
+2014-06-28 22:21:20 [25469] [CRITICAL] WORKER TIMEOUT (pid:25498)
+2014-06-28 22:21:20 [25469] [CRITICAL] WORKER TIMEOUT (pid:25495)
+2014-06-28 22:21:20 [25469] [CRITICAL] WORKER TIMEOUT (pid:25498)
+ERROR:app:Exception on /raw-updates [GET]
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/FrameworkBenchmarks/flask/app.py", line 148, in raw_updates
+    world = dbraw_engine.execute("SELECT * FROM World WHERE id=%s", (rp(),)).fetchone()
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/engine/base.py", line 1681, in execute
+    connection = self.contextual_connect(close_with_result=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/engine/base.py", line 1729, in contextual_connect
+    self.pool.connect(),
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/pool.py", line 332, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/pool.py", line 626, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/pool.py", line 433, in checkout
+    rec = pool._do_get()
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/pool.py", line 941, in _do_get
+    (self.size(), self.overflow(), self._timeout))
+TimeoutError: QueuePool limit of size 5 overflow 10 reached, connection timed out, timeout 30
+ERROR:tornado.access:500 GET /raw-updates?queries=2 (127.0.0.1) 30002.63ms
+2014-06-28 22:21:30 [25469] [CRITICAL] WORKER TIMEOUT (pid:25476)
+2014-06-28 22:21:30 [25469] [CRITICAL] WORKER TIMEOUT (pid:25476)
+2014-06-28 22:21:37 [25469] [CRITICAL] WORKER TIMEOUT (pid:26380)
+2014-06-28 22:21:37 [25469] [CRITICAL] WORKER TIMEOUT (pid:26365)
+2014-06-28 22:21:37 [25469] [CRITICAL] WORKER TIMEOUT (pid:26366)
+2014-06-28 22:21:37 [25469] [CRITICAL] WORKER TIMEOUT (pid:26380)
+2014-06-28 22:21:37 [25469] [CRITICAL] WORKER TIMEOUT (pid:26365)
+2014-06-28 22:21:37 [25469] [CRITICAL] WORKER TIMEOUT (pid:26366)
+2014-06-28 22:21:37 [25469] [CRITICAL] WORKER TIMEOUT (pid:26380)
+2014-06-28 22:21:37 [25469] [CRITICAL] WORKER TIMEOUT (pid:26365)
+2014-06-28 22:21:37 [25469] [CRITICAL] WORKER TIMEOUT (pid:26370)
+2014-06-28 22:21:37 [25469] [CRITICAL] WORKER TIMEOUT (pid:26373)
+2014-06-28 22:21:55 [25469] [CRITICAL] WORKER TIMEOUT (pid:26367)
+2014-06-28 22:21:55 [25469] [CRITICAL] WORKER TIMEOUT (pid:26367)
+ERROR:app:Exception on /raw-updates [GET]
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/FrameworkBenchmarks/flask/app.py", line 148, in raw_updates
+    world = dbraw_engine.execute("SELECT * FROM World WHERE id=%s", (rp(),)).fetchone()
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/engine/base.py", line 1681, in execute
+    connection = self.contextual_connect(close_with_result=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/engine/base.py", line 1729, in contextual_connect
+    self.pool.connect(),
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/pool.py", line 332, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/pool.py", line 626, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/pool.py", line 433, in checkout
+    rec = pool._do_get()
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/pool.py", line 941, in _do_get
+    (self.size(), self.overflow(), self._timeout))
+TimeoutError: QueuePool limit of size 5 overflow 10 reached, connection timed out, timeout 30
+ERROR:tornado.access:500 GET /raw-updates?queries=10 (127.0.0.1) 30002.74ms
+ERROR:app:Exception on /raw-updates [GET]
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/FrameworkBenchmarks/flask/app.py", line 152, in raw_updates
+    (randomNumber, world['id']))
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/engine/base.py", line 1681, in execute
+    connection = self.contextual_connect(close_with_result=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/engine/base.py", line 1729, in contextual_connect
+    self.pool.connect(),
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/pool.py", line 332, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/pool.py", line 626, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/pool.py", line 433, in checkout
+    rec = pool._do_get()
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/pool.py", line 941, in _do_get
+    (self.size(), self.overflow(), self._timeout))
+TimeoutError: QueuePool limit of size 5 overflow 10 reached, connection timed out, timeout 30
+ERROR:app:Exception on /raw-updates [GET]
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/FrameworkBenchmarks/flask/app.py", line 152, in raw_updates
+    (randomNumber, world['id']))
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/engine/base.py", line 1681, in execute
+    connection = self.contextual_connect(close_with_result=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/engine/base.py", line 1729, in contextual_connect
+    self.pool.connect(),
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/pool.py", line 332, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/pool.py", line 626, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/pool.py", line 433, in checkout
+    rec = pool._do_get()
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/pool.py", line 941, in _do_get
+    (self.size(), self.overflow(), self._timeout))
+TimeoutError: QueuePool limit of size 5 overflow 10 reached, connection timed out, timeout 30
+ERROR:app:Exception on /raw-updates [GET]
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/FrameworkBenchmarks/flask/app.py", line 152, in raw_updates
+    (randomNumber, world['id']))
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/engine/base.py", line 1681, in execute
+    connection = self.contextual_connect(close_with_result=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/engine/base.py", line 1729, in contextual_connect
+    self.pool.connect(),
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/pool.py", line 332, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/pool.py", line 626, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/pool.py", line 433, in checkout
+    rec = pool._do_get()
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/pool.py", line 941, in _do_get
+    (self.size(), self.overflow(), self._timeout))
+TimeoutError: QueuePool limit of size 5 overflow 10 reached, connection timed out, timeout 30
+ERROR:app:Exception on /raw-updates [GET]
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/FrameworkBenchmarks/flask/app.py", line 152, in raw_updates
+    (randomNumber, world['id']))
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/engine/base.py", line 1681, in execute
+    connection = self.contextual_connect(close_with_result=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/engine/base.py", line 1729, in contextual_connect
+    self.pool.connect(),
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/pool.py", line 332, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/pool.py", line 626, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/pool.py", line 433, in checkout
+    rec = pool._do_get()
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/pool.py", line 941, in _do_get
+    (self.size(), self.overflow(), self._timeout))
+TimeoutError: QueuePool limit of size 5 overflow 10 reached, connection timed out, timeout 30
+ERROR:tornado.access:500 GET /raw-updates?queries=10 (127.0.0.1) 30052.58ms
+ERROR:tornado.access:500 GET /raw-updates?queries=10 (127.0.0.1) 30039.91ms
+ERROR:tornado.access:500 GET /raw-updates?queries=10 (127.0.0.1) 30063.08ms
+ERROR:tornado.access:500 GET /raw-updates?queries=10 (127.0.0.1) 30052.19ms
+2014-06-28 22:21:56 [25469] [CRITICAL] WORKER TIMEOUT (pid:26397)
+2014-06-28 22:21:56 [25469] [CRITICAL] WORKER TIMEOUT (pid:26398)
+2014-06-28 22:21:56 [25469] [CRITICAL] WORKER TIMEOUT (pid:25494)
+2014-06-28 22:21:56 [25469] [CRITICAL] WORKER TIMEOUT (pid:26404)
+2014-06-28 22:21:56 [25469] [CRITICAL] WORKER TIMEOUT (pid:26396)
+2014-06-28 22:21:56 [25469] [CRITICAL] WORKER TIMEOUT (pid:26397)
+2014-06-28 22:21:56 [25469] [CRITICAL] WORKER TIMEOUT (pid:26398)
+2014-06-28 22:21:56 [25469] [CRITICAL] WORKER TIMEOUT (pid:25494)
+2014-06-28 22:21:56 [25469] [CRITICAL] WORKER TIMEOUT (pid:26404)
+2014-06-28 22:21:56 [25469] [CRITICAL] WORKER TIMEOUT (pid:26396)
+2014-06-28 22:21:56 [25469] [CRITICAL] WORKER TIMEOUT (pid:25494)
+2014-06-28 22:21:56 [25469] [CRITICAL] WORKER TIMEOUT (pid:26396)
+2014-06-28 22:22:13 [25469] [CRITICAL] WORKER TIMEOUT (pid:26419)
+2014-06-28 22:22:13 [25469] [CRITICAL] WORKER TIMEOUT (pid:26419)
+ERROR:app:Exception on /raw-updates [GET]
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/FrameworkBenchmarks/flask/app.py", line 152, in raw_updates
+    (randomNumber, world['id']))
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/engine/base.py", line 1681, in execute
+    connection = self.contextual_connect(close_with_result=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/engine/base.py", line 1729, in contextual_connect
+    self.pool.connect(),
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/pool.py", line 332, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/pool.py", line 626, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/pool.py", line 433, in checkout
+    rec = pool._do_get()
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/pool.py", line 941, in _do_get
+    (self.size(), self.overflow(), self._timeout))
+TimeoutError: QueuePool limit of size 5 overflow 10 reached, connection timed out, timeout 30
+ERROR:app:Exception on /raw-updates [GET]
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/FrameworkBenchmarks/flask/app.py", line 152, in raw_updates
+    (randomNumber, world['id']))
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/engine/base.py", line 1681, in execute
+    connection = self.contextual_connect(close_with_result=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/engine/base.py", line 1729, in contextual_connect
+    self.pool.connect(),
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/pool.py", line 332, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/pool.py", line 626, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/pool.py", line 433, in checkout
+    rec = pool._do_get()
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/pool.py", line 941, in _do_get
+    (self.size(), self.overflow(), self._timeout))
+TimeoutError: QueuePool limit of size 5 overflow 10 reached, connection timed out, timeout 30
+ERROR:app:Exception on /raw-updates [GET]
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/FrameworkBenchmarks/flask/app.py", line 152, in raw_updates
+    (randomNumber, world['id']))
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/engine/base.py", line 1681, in execute
+    connection = self.contextual_connect(close_with_result=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/engine/base.py", line 1729, in contextual_connect
+    self.pool.connect(),
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/pool.py", line 332, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/pool.py", line 626, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/pool.py", line 433, in checkout
+    rec = pool._do_get()
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/pool.py", line 941, in _do_get
+    (self.size(), self.overflow(), self._timeout))
+TimeoutError: QueuePool limit of size 5 overflow 10 reached, connection timed out, timeout 30
+ERROR:app:Exception on /raw-updates [GET]
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/FrameworkBenchmarks/flask/app.py", line 152, in raw_updates
+    (randomNumber, world['id']))
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/engine/base.py", line 1681, in execute
+    connection = self.contextual_connect(close_with_result=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/engine/base.py", line 1729, in contextual_connect
+    self.pool.connect(),
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/pool.py", line 332, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/pool.py", line 626, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/pool.py", line 433, in checkout
+    rec = pool._do_get()
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/pool.py", line 941, in _do_get
+    (self.size(), self.overflow(), self._timeout))
+TimeoutError: QueuePool limit of size 5 overflow 10 reached, connection timed out, timeout 30
+ERROR:app:Exception on /raw-updates [GET]
+Traceback (most recent call last):
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/FrameworkBenchmarks/flask/app.py", line 152, in raw_updates
+    (randomNumber, world['id']))
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/engine/base.py", line 1681, in execute
+    connection = self.contextual_connect(close_with_result=True)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/engine/base.py", line 1729, in contextual_connect
+    self.pool.connect(),
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/pool.py", line 332, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/pool.py", line 626, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/pool.py", line 433, in checkout
+    rec = pool._do_get()
+  File "/home/ubuntu/FrameworkBenchmarks/installs/pypy/site-packages/sqlalchemy/pool.py", line 941, in _do_get
+    (self.size(), self.overflow(), self._timeout))
+TimeoutError: QueuePool limit of size 5 overflow 10 reached, connection timed out, timeout 30
+ERROR:tornado.access:500 GET /raw-updates?queries=15 (127.0.0.1) 30151.46ms
+ERROR:tornado.access:500 GET /raw-updates?queries=15 (127.0.0.1) 30156.64ms
+ERROR:tornado.access:500 GET /raw-updates?queries=15 (127.0.0.1) 30160.65ms
+ERROR:tornado.access:500 GET /raw-updates?queries=15 (127.0.0.1) 30162.73ms
+ERROR:tornado.access:500 GET /raw-updates?queries=15 (127.0.0.1) 30164.20ms
+2014-06-28 22:22:14 [25469] [CRITICAL] WORKER TIMEOUT (pid:26423)
+2014-06-28 22:22:14 [25469] [CRITICAL] WORKER TIMEOUT (pid:26426)
+2014-06-28 22:22:14 [25469] [CRITICAL] WORKER TIMEOUT (pid:26428)
+2014-06-28 22:22:14 [25469] [CRITICAL] WORKER TIMEOUT (pid:26429)
+2014-06-28 22:22:14 [25469] [CRITICAL] WORKER TIMEOUT (pid:26430)
+2014-06-28 22:22:14 [25469] [CRITICAL] WORKER TIMEOUT (pid:26423)
+2014-06-28 22:22:14 [25469] [CRITICAL] WORKER TIMEOUT (pid:26426)
+2014-06-28 22:22:14 [25469] [CRITICAL] WORKER TIMEOUT (pid:26428)
+2014-06-28 22:22:14 [25469] [CRITICAL] WORKER TIMEOUT (pid:26429)
+2014-06-28 22:22:14 [25469] [CRITICAL] WORKER TIMEOUT (pid:26430)
+2014-06-28 22:22:14 [25469] [CRITICAL] WORKER TIMEOUT (pid:26428)
+2014-06-28 22:22:14 [25469] [CRITICAL] WORKER TIMEOUT (pid:26429)
+Exception SystemExit: SystemExit(0,) in threading._shutdown() ignored
+debug: OperationError:
+debug:  operror-type: SystemExit
+debug:  operror-value: 0
+debug: OperationError:
+debug:  operror-type: SystemExit
+debug:  operror-value: 0

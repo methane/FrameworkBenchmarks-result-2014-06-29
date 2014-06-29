@@ -1,0 +1,108 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer grizzly-jersey
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/db?queries=2
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/db?queries=2
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     2.19ms    2.07ms  32.68ms   97.27%
+    Req/Sec   529.89    119.87     0.90k    65.07%
+  20002 requests in 5.00s, 3.88MB read
+Requests/sec:   4000.57
+Transfer/sec:    795.56KB
+
+---------------------------------------------------------
+ Running Warmup grizzly-jersey
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/db?queries=2
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db?queries=2
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    59.81ms    2.79ms  74.02ms   87.02%
+    Req/Sec     1.07k    66.10     1.27k    69.50%
+  64138 requests in 14.99s, 12.45MB read
+Requests/sec:   4277.58
+Transfer/sec:    850.36KB
+
+---------------------------------------------------------
+ Queries: 1 for grizzly-jersey
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/db?queries=1
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db?queries=1
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    47.43ms    4.21ms 103.98ms   92.44%
+    Req/Sec     1.35k    62.91     1.47k    81.36%
+  80672 requests in 15.00s, 13.07MB read
+Requests/sec:   5378.17
+Transfer/sec:      0.87MB
+
+---------------------------------------------------------
+ Queries: 5 for grizzly-jersey
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/db?queries=5
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db?queries=5
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    95.85ms    6.19ms 155.82ms   93.52%
+    Req/Sec   670.13     41.20   784.00     79.72%
+  40069 requests in 15.01s, 11.46MB read
+Requests/sec:   2669.00
+Transfer/sec:    781.73KB
+
+---------------------------------------------------------
+ Queries: 10 for grizzly-jersey
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/db?queries=10
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db?queries=10
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   155.78ms    7.45ms 217.60ms   92.39%
+    Req/Sec   411.04     16.47   455.00     72.78%
+  24614 requests in 15.00s, 10.77MB read
+Requests/sec:   1641.23
+Transfer/sec:    735.40KB
+
+---------------------------------------------------------
+ Queries: 15 for grizzly-jersey
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/db?queries=15
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db?queries=15
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   214.88ms    8.88ms 278.83ms   96.15%
+    Req/Sec   297.30     20.08   367.00     78.12%
+  17864 requests in 15.08s, 10.52MB read
+Requests/sec:   1185.00
+Transfer/sec:    714.87KB
+
+---------------------------------------------------------
+ Queries: 20 for grizzly-jersey
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/db?queries=20
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db?queries=20
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   274.47ms    8.39ms 331.16ms   91.46%
+    Req/Sec   232.53     17.30   295.00     80.00%
+  13974 requests in 15.04s, 10.35MB read
+Requests/sec:    929.00
+Transfer/sec:    704.59KB

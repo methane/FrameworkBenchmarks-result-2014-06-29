@@ -1,0 +1,276 @@
+test.os.lower() = linux  test.database_os.lower() = linux
+self.results['frameworks'] != None: True
+test.name: stream-postgresql-raw
+self.results['completed']: {}
+
+=====================================================
+  Beginning stream-postgresql-raw
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Starting stream-postgresql-raw
+-----------------------------------------------------
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Sun Jun 29 04:53:54 UTC 2014
+
+  System load:  2.83               Processes:           139
+  Usage of /:   69.0% of 19.55GB   Users logged in:     1
+  Memory usage: 27%                IP address for eth0: 10.227.136.45
+  Swap usage:   0%
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+mysql start/running, process 5388
+ * Restarting PostgreSQL 9.3 database server
+   ...done.
+Resolving dependencies... (1.9s)
+  args 0.9.0 (5 newer versions available)
+  bson 0.1.18
+  collection 0.9.3+1
+  crypto 0.9.0
+  logging 0.9.1+1
+  matcher 0.10.1+1
+  mime 0.9.0+3
+  mongo_dart 0.1.35 (7 newer versions available)
+  mongo_dart_query 0.1.12
+  more 1.2.1
+  path 1.2.1
+  postgresql 0.2.12 (1 newer version available)
+  rikulo_commons 1.0.0 (8 newer versions available)
+  stack_trace 1.0.2
+  stream 1.0.0 (6 newer versions available)
+  unittest 0.11.0+2
+  unmodifiable_collection 0.9.2+1
+  yaml 0.9.0 (5 newer versions available)
+No dependencies changed.
+Uncaught Error: SocketException: OS Error: Connection refused, errno = 111, address = localhost, port = 34094
+Uncaught Error: SocketException: OS Error: Connection refused, errno = 111, address = localhost, port = 34194
+Uncaught Error: SocketException: OS Error: Connection refused, errno = 111, address = localhost, port = 34226
+Uncaught Error: SocketException: OS Error: Connection refused, errno = 111, address = localhost, port = 34300
+
+-----------------------------------------------------
+  VERIFYING JSON (/json)
+-----------------------------------------------------
+HTTP/1.1 502 Bad Gateway
+Server: nginx/1.4.1
+Date: Sun, 29 Jun 2014 04:55:02 GMT
+Content-Type: text/html
+Content-Length: 172
+Connection: keep-alive
+
+<html>
+<head><title>502 Bad Gateway</title></head>
+<body bgcolor="white">
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx/1.4.1</center>
+</body>
+</html>
+
+
+VALIDATING JSON ... FAIL
+
+
+-----------------------------------------------------
+  VERIFYING DB (/db)
+-----------------------------------------------------
+HTTP/1.1 502 Bad Gateway
+Server: nginx/1.4.1
+Date: Sun, 29 Jun 2014 04:55:02 GMT
+Content-Type: text/html
+Content-Length: 172
+Connection: keep-alive
+
+<html>
+<head><title>502 Bad Gateway</title></head>
+<body bgcolor="white">
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx/1.4.1</center>
+</body>
+</html>
+
+
+VALIDATING DB ... FAIL
+
+
+-----------------------------------------------------
+  VERIFYING QUERY (/queries?queries=2)
+-----------------------------------------------------
+HTTP/1.1 502 Bad Gateway
+Server: nginx/1.4.1
+Date: Sun, 29 Jun 2014 04:55:03 GMT
+Content-Type: text/html
+Content-Length: 172
+Connection: keep-alive
+
+<html>
+<head><title>502 Bad Gateway</title></head>
+<body bgcolor="white">
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx/1.4.1</center>
+</body>
+</html>
+
+
+/queries?queries=2 - FAIL
+
+-----------------------------------------------------
+
+HTTP/1.1 502 Bad Gateway
+Server: nginx/1.4.1
+Date: Sun, 29 Jun 2014 04:55:03 GMT
+Content-Type: text/html
+Content-Length: 172
+Connection: keep-alive
+
+<html>
+<head><title>502 Bad Gateway</title></head>
+<body bgcolor="white">
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx/1.4.1</center>
+</body>
+</html>
+
+
+/queries?queries=0 - WARNING
+
+-----------------------------------------------------
+
+HTTP/1.1 502 Bad Gateway
+Server: nginx/1.4.1
+Date: Sun, 29 Jun 2014 04:55:03 GMT
+Content-Type: text/html
+Content-Length: 172
+Connection: keep-alive
+
+<html>
+<head><title>502 Bad Gateway</title></head>
+<body bgcolor="white">
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx/1.4.1</center>
+</body>
+</html>
+
+
+/queries?queries=foo - WARNING
+
+-----------------------------------------------------
+
+HTTP/1.1 502 Bad Gateway
+Server: nginx/1.4.1
+Date: Sun, 29 Jun 2014 04:55:03 GMT
+Content-Type: text/html
+Content-Length: 172
+Connection: keep-alive
+
+<html>
+<head><title>502 Bad Gateway</title></head>
+<body bgcolor="white">
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx/1.4.1</center>
+</body>
+</html>
+
+
+/queries?queries=501 - WARNING
+
+-----------------------------------------------------
+
+
+VALIDATING QUERY ... FAIL
+
+
+-----------------------------------------------------
+  VERIFYING FORTUNE (/fortunes)
+-----------------------------------------------------
+HTTP/1.1 502 Bad Gateway
+Server: nginx/1.4.1
+Date: Sun, 29 Jun 2014 04:55:03 GMT
+Content-Type: text/html
+Content-Length: 172
+Connection: keep-alive
+
+<html>
+<head><title>502 Bad Gateway</title></head>
+<body bgcolor="white">
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx/1.4.1</center>
+</body>
+</html>
+
+
+VALIDATING FORTUNE ... FAIL
+
+
+-----------------------------------------------------
+  VERIFYING UPDATE (/updates?queries=)
+-----------------------------------------------------
+HTTP/1.1 502 Bad Gateway
+Server: nginx/1.4.1
+Date: Sun, 29 Jun 2014 04:55:03 GMT
+Content-Type: text/html
+Content-Length: 172
+Connection: keep-alive
+
+<html>
+<head><title>502 Bad Gateway</title></head>
+<body bgcolor="white">
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx/1.4.1</center>
+</body>
+</html>
+
+
+VALIDATING UPDATE ... FAIL
+
+
+-----------------------------------------------------
+  VERIFYING PLAINTEXT (/plaintext)
+-----------------------------------------------------
+HTTP/1.1 502 Bad Gateway
+Server: nginx/1.4.1
+Date: Sun, 29 Jun 2014 04:55:03 GMT
+Content-Type: text/html
+Content-Length: 172
+Connection: keep-alive
+
+<html>
+<head><title>502 Bad Gateway</title></head>
+<body bgcolor="white">
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx/1.4.1</center>
+</body>
+</html>
+
+
+VALIDATING PLAINTEXT ... FAIL
+
+
+-----------------------------------------------------
+  Benchmarking stream-postgresql-raw ...
+-----------------------------------------------------
+BENCHMARKING JSON ... Complete
+BENCHMARKING DB ... Complete
+BENCHMARKING Query ... Complete
+BENCHMARKING Fortune ... Complete
+BENCHMARKING Update ... Complete
+BENCHMARKING Plaintext ... Complete
+
+-----------------------------------------------------
+  Stopping stream-postgresql-raw
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Stopped stream-postgresql-raw
+-----------------------------------------------------
+
+----------------------------------------------------
+Saving results through stream-postgresql-raw
+----------------------------------------------------

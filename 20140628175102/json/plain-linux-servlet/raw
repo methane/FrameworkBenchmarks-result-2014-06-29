@@ -1,0 +1,122 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer plain-linux-servlet
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/web-apps/servlet/json
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/web-apps/servlet/json
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   362.92us    0.97ms  15.80ms   96.91%
+    Req/Sec     4.51k     1.91k   13.56k    64.83%
+  158965 requests in 5.00s, 25.92MB read
+Requests/sec:  31800.92
+Transfer/sec:      5.19MB
+
+---------------------------------------------------------
+ Running Warmup plain-linux-servlet
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/web-apps/servlet/json
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/web-apps/servlet/json
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     3.45ms    3.01ms 503.20ms   85.70%
+    Req/Sec    19.62k     5.60k   42.40k    70.04%
+  1112531 requests in 15.00s, 181.43MB read
+Requests/sec:  74163.18
+Transfer/sec:     12.09MB
+
+---------------------------------------------------------
+ Concurrency: 8 for plain-linux-servlet
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:8080/web-apps/servlet/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/web-apps/servlet/json
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   183.72us  389.21us  16.67ms   99.29%
+    Req/Sec    11.72k     2.61k   22.20k    73.47%
+  660890 requests in 15.00s, 107.78MB read
+Requests/sec:  44061.88
+Transfer/sec:      7.19MB
+
+---------------------------------------------------------
+ Concurrency: 16 for plain-linux-servlet
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:8080/web-apps/servlet/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/web-apps/servlet/json
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   337.18us  498.16us  11.69ms   98.42%
+    Req/Sec    13.00k     3.25k   34.33k    75.24%
+  734425 requests in 15.00s, 119.77MB read
+Requests/sec:  48965.62
+Transfer/sec:      7.99MB
+
+---------------------------------------------------------
+ Concurrency: 32 for plain-linux-servlet
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:8080/web-apps/servlet/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/web-apps/servlet/json
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   609.89us  741.14us  13.05ms   93.82%
+    Req/Sec    14.93k     4.59k   42.22k    70.65%
+  842262 requests in 15.00s, 137.35MB read
+Requests/sec:  56153.63
+Transfer/sec:      9.16MB
+
+---------------------------------------------------------
+ Concurrency: 64 for plain-linux-servlet
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:8080/web-apps/servlet/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/web-apps/servlet/json
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.12ms    1.07ms  17.05ms   88.73%
+    Req/Sec    16.21k     5.17k   37.89k    69.46%
+  915165 requests in 15.00s, 149.24MB read
+Requests/sec:  61018.18
+Transfer/sec:      9.95MB
+
+---------------------------------------------------------
+ Concurrency: 128 for plain-linux-servlet
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:8080/web-apps/servlet/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/web-apps/servlet/json
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.99ms    1.54ms  16.75ms   73.23%
+    Req/Sec    17.73k     5.60k   46.33k    71.20%
+  1002937 requests in 14.99s, 163.56MB read
+Requests/sec:  66920.06
+Transfer/sec:     10.91MB
+
+---------------------------------------------------------
+ Concurrency: 256 for plain-linux-servlet
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/web-apps/servlet/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/web-apps/servlet/json
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     3.41ms    2.19ms  20.72ms   68.47%
+    Req/Sec    19.80k     5.85k   49.89k    70.52%
+  1125825 requests in 15.00s, 183.60MB read
+Requests/sec:  75042.87
+Transfer/sec:     12.24MB

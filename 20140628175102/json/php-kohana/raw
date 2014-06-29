@@ -1,0 +1,122 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer php-kohana
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/bench/json
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/bench/json
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     6.84ms    4.74ms  36.88ms   91.39%
+    Req/Sec   200.91    109.36   533.00     61.71%
+  7778 requests in 5.00s, 1.67MB read
+Requests/sec:   1554.69
+Transfer/sec:    341.53KB
+
+---------------------------------------------------------
+ Running Warmup php-kohana
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/bench/json
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/bench/json
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   186.89ms  185.49ms   5.24s    99.30%
+    Req/Sec   347.68     24.43   391.00     78.79%
+  20508 requests in 15.00s, 4.40MB read
+Requests/sec:   1367.18
+Transfer/sec:    300.41KB
+
+---------------------------------------------------------
+ Concurrency: 8 for php-kohana
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:8080/bench/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/bench/json
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     5.74ms    3.57ms  34.80ms   85.24%
+    Req/Sec   406.50    140.45     0.93k    69.39%
+  23524 requests in 15.00s, 5.05MB read
+Requests/sec:   1568.24
+Transfer/sec:    344.51KB
+
+---------------------------------------------------------
+ Concurrency: 16 for php-kohana
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:8080/bench/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/bench/json
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    10.60ms    5.64ms  40.81ms   69.00%
+    Req/Sec   401.95    102.57     0.94k    73.70%
+  23725 requests in 15.00s, 5.09MB read
+Requests/sec:   1581.29
+Transfer/sec:    347.38KB
+
+---------------------------------------------------------
+ Concurrency: 32 for php-kohana
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:8080/bench/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/bench/json
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    21.52ms   13.42ms 103.93ms   73.15%
+    Req/Sec   390.35     74.86   774.00     74.83%
+  23245 requests in 15.00s, 4.99MB read
+Requests/sec:   1549.18
+Transfer/sec:    340.32KB
+
+---------------------------------------------------------
+ Concurrency: 64 for php-kohana
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:8080/bench/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/bench/json
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    43.23ms   19.59ms 144.52ms   75.32%
+    Req/Sec   368.18     35.77   532.00     73.52%
+  22010 requests in 15.00s, 4.72MB read
+Requests/sec:   1467.04
+Transfer/sec:    322.28KB
+
+---------------------------------------------------------
+ Concurrency: 128 for php-kohana
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:8080/bench/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/bench/json
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    90.61ms   43.66ms 319.45ms   72.58%
+    Req/Sec   357.37     28.01   455.00     70.97%
+  21354 requests in 15.00s, 4.58MB read
+Requests/sec:   1423.19
+Transfer/sec:    312.67KB
+
+---------------------------------------------------------
+ Concurrency: 256 for php-kohana
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/bench/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/bench/json
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   182.81ms  166.67ms   4.35s    97.13%
+    Req/Sec   353.56     34.78   416.00     75.82%
+  20832 requests in 15.01s, 4.47MB read
+Requests/sec:   1387.67
+Transfer/sec:    304.91KB

@@ -1,0 +1,122 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer activeweb-raw
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/activeweb/fortunes
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/activeweb/fortunes
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     3.15ms    1.82ms  21.86ms   92.29%
+    Req/Sec   353.95     85.91   700.00     74.64%
+  13217 requests in 5.00s, 23.44MB read
+Requests/sec:   2643.08
+Transfer/sec:      4.69MB
+
+---------------------------------------------------------
+ Running Warmup activeweb-raw
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/activeweb/fortunes
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/activeweb/fortunes
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    98.30ms  132.63ms 889.32ms   85.69%
+    Req/Sec   696.87     96.36     1.37k    76.68%
+  41616 requests in 14.99s, 73.87MB read
+Requests/sec:   2775.71
+Transfer/sec:      4.93MB
+
+---------------------------------------------------------
+ Concurrency: 8 for activeweb-raw
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:8080/activeweb/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/activeweb/fortunes
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     2.95ms    1.59ms  23.23ms   91.35%
+    Req/Sec   738.13    131.39     1.33k    63.58%
+  42068 requests in 15.00s, 74.62MB read
+Requests/sec:   2804.35
+Transfer/sec:      4.97MB
+
+---------------------------------------------------------
+ Concurrency: 16 for activeweb-raw
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:8080/activeweb/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/activeweb/fortunes
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     5.68ms    2.46ms  31.25ms   75.16%
+    Req/Sec   739.79    119.28     1.12k    70.95%
+  42991 requests in 15.00s, 76.26MB read
+Requests/sec:   2865.94
+Transfer/sec:      5.08MB
+
+---------------------------------------------------------
+ Concurrency: 32 for activeweb-raw
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:8080/activeweb/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/activeweb/fortunes
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    11.45ms    5.73ms  46.38ms   69.95%
+    Req/Sec   727.45    107.12     1.18k    72.62%
+  43040 requests in 15.00s, 76.37MB read
+Requests/sec:   2869.48
+Transfer/sec:      5.09MB
+
+---------------------------------------------------------
+ Concurrency: 64 for activeweb-raw
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:8080/activeweb/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/activeweb/fortunes
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    22.90ms   15.85ms 139.15ms   70.81%
+    Req/Sec   711.47     75.81     0.94k    72.53%
+  42591 requests in 15.00s, 75.56MB read
+Requests/sec:   2838.51
+Transfer/sec:      5.04MB
+
+---------------------------------------------------------
+ Concurrency: 128 for activeweb-raw
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:8080/activeweb/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/activeweb/fortunes
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    45.84ms   43.49ms 301.72ms   84.88%
+    Req/Sec   700.94     66.28     0.93k    72.61%
+  41972 requests in 15.00s, 74.47MB read
+Requests/sec:   2797.99
+Transfer/sec:      4.96MB
+
+---------------------------------------------------------
+ Concurrency: 256 for activeweb-raw
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/activeweb/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/activeweb/fortunes
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    91.84ms  125.20ms 815.55ms   86.44%
+    Req/Sec   692.12     74.31     0.96k    76.27%
+  41399 requests in 15.00s, 73.47MB read
+Requests/sec:   2759.30
+Transfer/sec:      4.90MB

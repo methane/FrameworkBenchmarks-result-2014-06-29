@@ -1,0 +1,71 @@
+test.os.lower() = linux  test.database_os.lower() = linux
+self.results['frameworks'] != None: True
+test.name: rack-jruby
+self.results['completed']: {}
+
+=====================================================
+  Beginning rack-jruby
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Starting rack-jruby
+-----------------------------------------------------
+Using json 1.7.6
+Using rack 1.5.2
+Using rubyzip 1.0.0
+Using torqbox 0.1.7
+Using zip-zip 0.3
+Using bundler 1.6.3
+Your bundle is complete!
+Use `bundle show [gemname]` to see where a bundled gem is installed.
+[INFO ] TorqBox::Server  - TorqBox 0.1.7 starting...
+[INFO ] org.projectodd.wunderboss.web.WebComponent  - Undertow listening on 0.0.0.0:8080
+[INFO ] org.projectodd.wunderboss.web.WebComponent  - Started web context /
+
+-----------------------------------------------------
+  VERIFYING JSON (/json)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Connection: keep-alive
+Server: undertow
+Content-Type: application/json
+Content-Length: 27
+Date: Sun, 29 Jun 2014 02:23:10 GMT
+
+{"message":"Hello, World!"}
+
+VALIDATING JSON ... PASS
+
+
+-----------------------------------------------------
+  VERIFYING PLAINTEXT (/plaintext)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Connection: keep-alive
+Server: undertow
+Content-Type: text/plain
+Content-Length: 13
+Date: Sun, 29 Jun 2014 02:23:10 GMT
+
+Hello, World!
+
+VALIDATING PLAINTEXT ... PASS
+
+
+-----------------------------------------------------
+  Benchmarking rack-jruby ...
+-----------------------------------------------------
+BENCHMARKING JSON ... Complete
+BENCHMARKING Plaintext ... Complete
+
+-----------------------------------------------------
+  Stopping rack-jruby
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Stopped rack-jruby
+-----------------------------------------------------
+
+----------------------------------------------------
+Saving results through rack-jruby
+----------------------------------------------------

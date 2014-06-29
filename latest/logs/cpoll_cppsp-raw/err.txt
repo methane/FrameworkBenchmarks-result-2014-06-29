@@ -1,0 +1,521 @@
+restart: Unknown instance: 
+In file included from cppsp_server/cppsp_standalone.C:15:0:
+./include/cpoll/cpoll.H: In member function ‘void CP::StreamWriter::write(int64_t)’:
+./include/cpoll/cpoll.H:619:91: warning: format ‘%lli’ expects argument of type ‘long long int’, but argument 4 has type ‘int64_t {aka long int}’ [-Wformat=]
+    buffer->bufferPos += snprintf((char*) buffer->buffer + buffer->bufferPos, 22, "%lli", i);
+                                                                                           ^
+./include/cpoll/cpoll.H:619:91: warning: format ‘%lli’ expects argument of type ‘long long int’, but argument 4 has type ‘int64_t {aka long int}’ [-Wformat=]
+./include/cpoll/cpoll.H: In member function ‘void CP::StreamWriter::write(uint64_t)’:
+./include/cpoll/cpoll.H:635:91: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 4 has type ‘uint64_t {aka long unsigned int}’ [-Wformat=]
+    buffer->bufferPos += snprintf((char*) buffer->buffer + buffer->bufferPos, 21, "%llu", i);
+                                                                                           ^
+./include/cpoll/cpoll.H:635:91: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 4 has type ‘uint64_t {aka long unsigned int}’ [-Wformat=]
+cppsp_server/cppsp_standalone.C: In function ‘int main(int, char**)’:
+cppsp_server/cppsp_standalone.C:25:60: warning: format ‘%i’ expects argument of type ‘int’, but argument 2 has type ‘long unsigned int’ [-Wformat=]
+ #define PRINTSIZE(x) printf("sizeof("#x") = %i\n",sizeof(x))
+                                                            ^
+cppsp_server/cppsp_standalone.C:258:2: note: in expansion of macro ‘PRINTSIZE’
+  PRINTSIZE(CP::Socket);
+  ^
+cppsp_server/cppsp_standalone.C:25:60: warning: format ‘%i’ expects argument of type ‘int’, but argument 2 has type ‘long unsigned int’ [-Wformat=]
+ #define PRINTSIZE(x) printf("sizeof("#x") = %i\n",sizeof(x))
+                                                            ^
+cppsp_server/cppsp_standalone.C:259:2: note: in expansion of macro ‘PRINTSIZE’
+  PRINTSIZE(cppspServer::handler);
+  ^
+cppsp_server/cppsp_standalone.C:25:60: warning: format ‘%i’ expects argument of type ‘int’, but argument 2 has type ‘long unsigned int’ [-Wformat=]
+ #define PRINTSIZE(x) printf("sizeof("#x") = %i\n",sizeof(x))
+                                                            ^
+cppsp_server/cppsp_standalone.C:260:2: note: in expansion of macro ‘PRINTSIZE’
+  PRINTSIZE(handler1);
+  ^
+In file included from cpoll/cpoll.C:21:0,
+                 from cpoll/all.C:1:
+cpoll/include/cpoll.H: In member function ‘void CP::StreamWriter::write(int64_t)’:
+cpoll/include/cpoll.H:619:91: warning: format ‘%lli’ expects argument of type ‘long long int’, but argument 4 has type ‘int64_t {aka long int}’ [-Wformat=]
+    buffer->bufferPos += snprintf((char*) buffer->buffer + buffer->bufferPos, 22, "%lli", i);
+                                                                                           ^
+cpoll/include/cpoll.H:619:91: warning: format ‘%lli’ expects argument of type ‘long long int’, but argument 4 has type ‘int64_t {aka long int}’ [-Wformat=]
+cpoll/include/cpoll.H: In member function ‘void CP::StreamWriter::write(uint64_t)’:
+cpoll/include/cpoll.H:635:91: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 4 has type ‘uint64_t {aka long unsigned int}’ [-Wformat=]
+    buffer->bufferPos += snprintf((char*) buffer->buffer + buffer->bufferPos, 21, "%llu", i);
+                                                                                           ^
+cpoll/include/cpoll.H:635:91: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 4 has type ‘uint64_t {aka long unsigned int}’ [-Wformat=]
+In file included from cpoll/all.C:1:0:
+cpoll/cpoll.C: In member function ‘CP::Timer::setInterval(timespec)’:
+cpoll/cpoll.C:1615:86: warning: ‘r’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+    if (onEventsChange != nullptr) onEventsChange(*this, r ? Events::in : Events::none);
+                                                                                      ^
+cpoll/cpoll.C: In member function ‘CP::Timer::setInterval(unsigned long)’:
+cpoll/cpoll.C:1623:86: warning: ‘r’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+    if (onEventsChange != nullptr) onEventsChange(*this, r ? Events::in : Events::none);
+                                                                                      ^
+In file included from cpoll/include/cpoll.H:49:0,
+                 from cpoll/cpoll.C:21,
+                 from cpoll/all.C:1:
+cpoll/sendfd.C: At top level:
+cpoll/include/basictypes.H:153:13: warning: ‘CP::atoi(CP::String)’ defined but not used [-Wunused-function]
+  static int atoi(String s) {
+             ^
+cpoll/include/basictypes.H:156:14: warning: ‘CP::atol(CP::String)’ defined but not used [-Wunused-function]
+  static long atol(String s) {
+              ^
+cpoll/include/basictypes.H:159:19: warning: ‘CP::atoll(CP::String)’ defined but not used [-Wunused-function]
+  static long long atoll(String s) {
+                   ^
+cpoll/include/basictypes.H:162:16: warning: ‘CP::atof(CP::String)’ defined but not used [-Wunused-function]
+  static double atof(String s) {
+                ^
+In file included from cppsp/common.C:21:0,
+                 from cppsp/all.C:1:
+./include/cpoll/cpoll.H: In member function ‘void CP::StreamWriter::write(int64_t)’:
+./include/cpoll/cpoll.H:619:91: warning: format ‘%lli’ expects argument of type ‘long long int’, but argument 4 has type ‘int64_t {aka long int}’ [-Wformat=]
+    buffer->bufferPos += snprintf((char*) buffer->buffer + buffer->bufferPos, 22, "%lli", i);
+                                                                                           ^
+./include/cpoll/cpoll.H:619:91: warning: format ‘%lli’ expects argument of type ‘long long int’, but argument 4 has type ‘int64_t {aka long int}’ [-Wformat=]
+./include/cpoll/cpoll.H: In member function ‘void CP::StreamWriter::write(uint64_t)’:
+./include/cpoll/cpoll.H:635:91: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 4 has type ‘uint64_t {aka long unsigned int}’ [-Wformat=]
+    buffer->bufferPos += snprintf((char*) buffer->buffer + buffer->bufferPos, 21, "%llu", i);
+                                                                                           ^
+./include/cpoll/cpoll.H:635:91: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 4 has type ‘uint64_t {aka long unsigned int}’ [-Wformat=]
+In file included from cppsp/all.C:2:0:
+cppsp/cppsp_cpoll.C: In function ‘bool cppsp::CPollRequest_parseReqLine(cppsp::CPollRequest*)’:
+cppsp/cppsp_cpoll.C:66:26: warning: narrowing conversion of ‘(((long int)q) - ((long int)path))’ from ‘long int’ to ‘int’ inside { } [-Wnarrowing]
+    This->path = {path, q - path};
+                          ^
+In file included from cppsp/all.C:4:0:
+cppsp/stringutils.C: In function ‘cppsp::String cppsp::urlDecode(const char*, int, CP::StringPool&)’:
+cppsp/stringutils.C:80:15: warning: narrowing conversion of ‘(((long int)c) - ((long int)ch))’ from ‘long int’ to ‘int’ inside { } [-Wnarrowing]
+   return {ch,c-ch};
+               ^
+In file included from cppsp/common.C:21:0,
+                 from cppsp/all.C:1:
+./include/cpoll/cpoll.H: In instantiation of ‘void CP::StreamWriter::writeF(const char*, P&& ...) [with P = {}]’:
+cppsp/common.C:863:38:   required from here
+./include/cpoll/cpoll.H:650:72: warning: format not a string literal and no format arguments [-Wformat-security]
+      buffer->bufferSize - buffer->bufferPos, fmt, std::forward<P>(p)...);
+                                                                        ^
+./include/cpoll/cpoll.H:650:72: warning: format not a string literal and no format arguments [-Wformat-security]
+In file included from cppsp/all.C:1:0:
+cppsp/common.C: In function ‘CP::File* cppsp::compilePage(std::string, std::string, std::string, std::string, std::string, const std::vector<std::basic_string<char> >&, pid_t&, std::string&)’:
+cppsp/common.C:366:21: warning: ignoring return value of ‘int chdir(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+    chdir(wd.c_str());
+                     ^
+cppsp/common.C: In member function ‘void cppsp::loadedPage::readCB(int)’:
+cppsp/common.C:402:40: warning: ignoring return value of ‘int link(const char*, const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     link(dllPath.c_str(), dll1.c_str());
+                                        ^
+cppsp/common.C:405:40: warning: ignoring return value of ‘int link(const char*, const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     link(txtPath.c_str(), txt1.c_str());
+                                        ^
+In file included from ./include/cpoll/cpoll.H:46:0,
+                 from cppsp/common.C:21,
+                 from cppsp/all.C:1:
+cppsp/common.C: In member function ‘cppsp::cppspManager::loadPage(CP::NewEPoll&, CP::String, CP::String, RGC::Allocator*, Delegate<void (cppsp::Page*, std::exception*)>)’:
+./include/delegate.H:43:69: warning: ‘p’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   return ((R (*)(void* data, P...))func)(data,std::forward<P2>(p)...);
+                                                                     ^
+In file included from cppsp/all.C:1:0:
+cppsp/common.C:724:15: note: ‘p’ was declared here
+    xxx: Page* p;
+               ^
+In file included from cpoll/cpoll.C:21:0,
+                 from cpoll/all.C:1:
+cpoll/include/cpoll.H: In member function ‘void CP::StreamWriter::write(int64_t)’:
+cpoll/include/cpoll.H:619:91: warning: format ‘%lli’ expects argument of type ‘long long int’, but argument 4 has type ‘int64_t {aka long int}’ [-Wformat=]
+    buffer->bufferPos += snprintf((char*) buffer->buffer + buffer->bufferPos, 22, "%lli", i);
+                                                                                           ^
+cpoll/include/cpoll.H:619:91: warning: format ‘%lli’ expects argument of type ‘long long int’, but argument 4 has type ‘int64_t {aka long int}’ [-Wformat=]
+cpoll/include/cpoll.H: In member function ‘void CP::StreamWriter::write(uint64_t)’:
+cpoll/include/cpoll.H:635:91: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 4 has type ‘uint64_t {aka long unsigned int}’ [-Wformat=]
+    buffer->bufferPos += snprintf((char*) buffer->buffer + buffer->bufferPos, 21, "%llu", i);
+                                                                                           ^
+cpoll/include/cpoll.H:635:91: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 4 has type ‘uint64_t {aka long unsigned int}’ [-Wformat=]
+In file included from cpoll/all.C:1:0:
+cpoll/cpoll.C: In member function ‘CP::Timer::setInterval(timespec)’:
+cpoll/cpoll.C:1615:86: warning: ‘r’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+    if (onEventsChange != nullptr) onEventsChange(*this, r ? Events::in : Events::none);
+                                                                                      ^
+cpoll/cpoll.C: In member function ‘CP::Timer::setInterval(unsigned long)’:
+cpoll/cpoll.C:1623:86: warning: ‘r’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+    if (onEventsChange != nullptr) onEventsChange(*this, r ? Events::in : Events::none);
+                                                                                      ^
+In file included from cpoll/include/cpoll.H:49:0,
+                 from cpoll/cpoll.C:21,
+                 from cpoll/all.C:1:
+cpoll/sendfd.C: At top level:
+cpoll/include/basictypes.H:153:13: warning: ‘CP::atoi(CP::String)’ defined but not used [-Wunused-function]
+  static int atoi(String s) {
+             ^
+cpoll/include/basictypes.H:156:14: warning: ‘CP::atol(CP::String)’ defined but not used [-Wunused-function]
+  static long atol(String s) {
+              ^
+cpoll/include/basictypes.H:159:19: warning: ‘CP::atoll(CP::String)’ defined but not used [-Wunused-function]
+  static long long atoll(String s) {
+                   ^
+cpoll/include/basictypes.H:162:16: warning: ‘CP::atof(CP::String)’ defined but not used [-Wunused-function]
+  static double atof(String s) {
+                ^
+In file included from cppsp/common.C:21:0,
+                 from cppsp/all.C:1:
+./include/cpoll/cpoll.H: In member function ‘void CP::StreamWriter::write(int64_t)’:
+./include/cpoll/cpoll.H:619:91: warning: format ‘%lli’ expects argument of type ‘long long int’, but argument 4 has type ‘int64_t {aka long int}’ [-Wformat=]
+    buffer->bufferPos += snprintf((char*) buffer->buffer + buffer->bufferPos, 22, "%lli", i);
+                                                                                           ^
+./include/cpoll/cpoll.H:619:91: warning: format ‘%lli’ expects argument of type ‘long long int’, but argument 4 has type ‘int64_t {aka long int}’ [-Wformat=]
+./include/cpoll/cpoll.H: In member function ‘void CP::StreamWriter::write(uint64_t)’:
+./include/cpoll/cpoll.H:635:91: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 4 has type ‘uint64_t {aka long unsigned int}’ [-Wformat=]
+    buffer->bufferPos += snprintf((char*) buffer->buffer + buffer->bufferPos, 21, "%llu", i);
+                                                                                           ^
+./include/cpoll/cpoll.H:635:91: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 4 has type ‘uint64_t {aka long unsigned int}’ [-Wformat=]
+In file included from cppsp/all.C:2:0:
+cppsp/cppsp_cpoll.C: In function ‘bool cppsp::CPollRequest_parseReqLine(cppsp::CPollRequest*)’:
+cppsp/cppsp_cpoll.C:66:26: warning: narrowing conversion of ‘(((long int)q) - ((long int)path))’ from ‘long int’ to ‘int’ inside { } [-Wnarrowing]
+    This->path = {path, q - path};
+                          ^
+In file included from cppsp/all.C:4:0:
+cppsp/stringutils.C: In function ‘cppsp::String cppsp::urlDecode(const char*, int, CP::StringPool&)’:
+cppsp/stringutils.C:80:15: warning: narrowing conversion of ‘(((long int)c) - ((long int)ch))’ from ‘long int’ to ‘int’ inside { } [-Wnarrowing]
+   return {ch,c-ch};
+               ^
+In file included from cppsp/common.C:21:0,
+                 from cppsp/all.C:1:
+./include/cpoll/cpoll.H: In instantiation of ‘void CP::StreamWriter::writeF(const char*, P&& ...) [with P = {}]’:
+cppsp/common.C:863:38:   required from here
+./include/cpoll/cpoll.H:650:72: warning: format not a string literal and no format arguments [-Wformat-security]
+      buffer->bufferSize - buffer->bufferPos, fmt, std::forward<P>(p)...);
+                                                                        ^
+./include/cpoll/cpoll.H:650:72: warning: format not a string literal and no format arguments [-Wformat-security]
+In file included from cppsp/all.C:1:0:
+cppsp/common.C: In function ‘CP::File* cppsp::compilePage(std::string, std::string, std::string, std::string, std::string, const std::vector<std::basic_string<char> >&, pid_t&, std::string&)’:
+cppsp/common.C:366:21: warning: ignoring return value of ‘int chdir(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+    chdir(wd.c_str());
+                     ^
+cppsp/common.C: In member function ‘void cppsp::loadedPage::readCB(int)’:
+cppsp/common.C:402:40: warning: ignoring return value of ‘int link(const char*, const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     link(dllPath.c_str(), dll1.c_str());
+                                        ^
+cppsp/common.C:405:40: warning: ignoring return value of ‘int link(const char*, const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     link(txtPath.c_str(), txt1.c_str());
+                                        ^
+In file included from ./include/cpoll/cpoll.H:46:0,
+                 from cppsp/common.C:21,
+                 from cppsp/all.C:1:
+cppsp/common.C: In member function ‘cppsp::cppspManager::loadPage(CP::NewEPoll&, CP::String, CP::String, RGC::Allocator*, Delegate<void (cppsp::Page*, std::exception*)>)’:
+./include/delegate.H:43:69: warning: ‘p’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   return ((R (*)(void* data, P...))func)(data,std::forward<P2>(p)...);
+                                                                     ^
+In file included from cppsp/all.C:1:0:
+cppsp/common.C:724:15: note: ‘p’ was declared here
+    xxx: Page* p;
+               ^
+In file included from socketd/include/socketd_internal.H:24:0,
+                 from socketd/socketd.C:24,
+                 from socketd/all.C:1:
+./include/cpoll/cpoll.H: In member function ‘void CP::StreamWriter::write(int64_t)’:
+./include/cpoll/cpoll.H:619:91: warning: format ‘%lli’ expects argument of type ‘long long int’, but argument 4 has type ‘int64_t {aka long int}’ [-Wformat=]
+    buffer->bufferPos += snprintf((char*) buffer->buffer + buffer->bufferPos, 22, "%lli", i);
+                                                                                           ^
+./include/cpoll/cpoll.H:619:91: warning: format ‘%lli’ expects argument of type ‘long long int’, but argument 4 has type ‘int64_t {aka long int}’ [-Wformat=]
+./include/cpoll/cpoll.H: In member function ‘void CP::StreamWriter::write(uint64_t)’:
+./include/cpoll/cpoll.H:635:91: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 4 has type ‘uint64_t {aka long unsigned int}’ [-Wformat=]
+    buffer->bufferPos += snprintf((char*) buffer->buffer + buffer->bufferPos, 21, "%llu", i);
+                                                                                           ^
+./include/cpoll/cpoll.H:635:91: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 4 has type ‘uint64_t {aka long unsigned int}’ [-Wformat=]
+In file included from socketd/all.C:1:0:
+socketd/socketd.C: In member function ‘void socketd::connectionInfo::checkMatch()’:
+socketd/socketd.C:48:65: warning: format ‘%i’ expects argument of type ‘int’, but argument 2 has type ‘std::vector<socketd::binding*>::size_type {aka long unsigned int}’ [-Wformat=]
+ #define SOCKETD_DEBUG(LEVEL, ...) if(LEVEL<=5)printf(__VA_ARGS__)
+                                                                 ^
+socketd/socketd.C:414:3: note: in expansion of macro ‘SOCKETD_DEBUG’
+   SOCKETD_DEBUG(9, "bindings.size() = %i\n", This->bindings.size());
+   ^
+socketd/socketd.C:452:36: warning: variable ‘sr’ set but not used [-Wunused-but-set-variable]
+     CP::newPersistentStreamReader* sr;
+                                    ^
+socketd/socketd.C: In function ‘void* socketd::socketd_processorThread(void*)’:
+socketd/socketd.C:691:7: warning: unused variable ‘cb’ [-Wunused-variable]
+    }* cb = new cb1(p, th, l);
+       ^
+socketd/socketd.C: In member function ‘void socketd::socketd::run()’:
+socketd/socketd.C:39:60: warning: format ‘%i’ expects argument of type ‘int’, but argument 2 has type ‘long unsigned int’ [-Wformat=]
+ #define PRINTSIZE(x) printf("sizeof("#x") = %i\n",sizeof(x))
+                                                            ^
+socketd/socketd.C:698:3: note: in expansion of macro ‘PRINTSIZE’
+   PRINTSIZE(CP::Socket);
+   ^
+socketd/socketd.C:39:60: warning: format ‘%i’ expects argument of type ‘int’, but argument 2 has type ‘long unsigned int’ [-Wformat=]
+ #define PRINTSIZE(x) printf("sizeof("#x") = %i\n",sizeof(x))
+                                                            ^
+socketd/socketd.C:699:3: note: in expansion of macro ‘PRINTSIZE’
+   PRINTSIZE(CP::newPersistentStreamReader);
+   ^
+socketd/socketd.C:39:60: warning: format ‘%i’ expects argument of type ‘int’, but argument 2 has type ‘long unsigned int’ [-Wformat=]
+ #define PRINTSIZE(x) printf("sizeof("#x") = %i\n",sizeof(x))
+                                                            ^
+socketd/socketd.C:700:3: note: in expansion of macro ‘PRINTSIZE’
+   PRINTSIZE(connectionInfo);
+   ^
+socketd/socketd.C:48:65: warning: format ‘%i’ expects argument of type ‘int’, but argument 2 has type ‘std::vector<socketd::binding*>::size_type {aka long unsigned int}’ [-Wformat=]
+ #define SOCKETD_DEBUG(LEVEL, ...) if(LEVEL<=5)printf(__VA_ARGS__)
+                                                                 ^
+socketd/socketd.C:768:3: note: in expansion of macro ‘SOCKETD_DEBUG’
+   SOCKETD_DEBUG(9, "bindings.size() = %i\n", bindings.size());
+   ^
+In file included from socketd/all.C:2:0:
+socketd/main.C: In function ‘int main(int, char**)’:
+socketd/main.C:52:60: warning: format ‘%i’ expects argument of type ‘int’, but argument 2 has type ‘long unsigned int’ [-Wformat=]
+ #define PRINTSIZE(x) printf("sizeof("#x") = %i\n",sizeof(x))
+                                                            ^
+socketd/main.C:80:2: note: in expansion of macro ‘PRINTSIZE’
+  PRINTSIZE(socketd::socketd);
+  ^
+socketd/main.C:52:60: warning: format ‘%i’ expects argument of type ‘int’, but argument 2 has type ‘long unsigned int’ [-Wformat=]
+ #define PRINTSIZE(x) printf("sizeof("#x") = %i\n",sizeof(x))
+                                                            ^
+socketd/main.C:81:2: note: in expansion of macro ‘PRINTSIZE’
+  PRINTSIZE(socketd::vhost);
+  ^
+socketd/main.C:52:60: warning: format ‘%i’ expects argument of type ‘int’, but argument 2 has type ‘long unsigned int’ [-Wformat=]
+ #define PRINTSIZE(x) printf("sizeof("#x") = %i\n",sizeof(x))
+                                                            ^
+socketd/main.C:82:2: note: in expansion of macro ‘PRINTSIZE’
+  PRINTSIZE(socketd::listen);
+  ^
+In file included from socketd/all.C:3:0:
+socketd/configparser.C: In lambda function:
+socketd/configparser.C:204:11: warning: enumeration value ‘none’ not handled in switch [-Wswitch]
+     switch(ct.type) {
+           ^
+In file included from socketd/all.C:1:0:
+socketd/configparser.C: At top level:
+socketd/socketd.C:52:13: warning: ‘socketd::asdf’ defined but not used [-Wunused-variable]
+  static int asdf = 0;
+             ^
+In file included from cpoll/cpoll.C:21:0,
+                 from cpoll/all.C:1:
+cpoll/include/cpoll.H: In member function ‘void CP::StreamWriter::write(int64_t)’:
+cpoll/include/cpoll.H:619:91: warning: format ‘%lli’ expects argument of type ‘long long int’, but argument 4 has type ‘int64_t {aka long int}’ [-Wformat=]
+    buffer->bufferPos += snprintf((char*) buffer->buffer + buffer->bufferPos, 22, "%lli", i);
+                                                                                           ^
+cpoll/include/cpoll.H:619:91: warning: format ‘%lli’ expects argument of type ‘long long int’, but argument 4 has type ‘int64_t {aka long int}’ [-Wformat=]
+cpoll/include/cpoll.H: In member function ‘void CP::StreamWriter::write(uint64_t)’:
+cpoll/include/cpoll.H:635:91: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 4 has type ‘uint64_t {aka long unsigned int}’ [-Wformat=]
+    buffer->bufferPos += snprintf((char*) buffer->buffer + buffer->bufferPos, 21, "%llu", i);
+                                                                                           ^
+cpoll/include/cpoll.H:635:91: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 4 has type ‘uint64_t {aka long unsigned int}’ [-Wformat=]
+In file included from cpoll/all.C:1:0:
+cpoll/cpoll.C: In member function ‘CP::Timer::setInterval(timespec)’:
+cpoll/cpoll.C:1615:86: warning: ‘r’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+    if (onEventsChange != nullptr) onEventsChange(*this, r ? Events::in : Events::none);
+                                                                                      ^
+cpoll/cpoll.C: In member function ‘CP::Timer::setInterval(unsigned long)’:
+cpoll/cpoll.C:1623:86: warning: ‘r’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+    if (onEventsChange != nullptr) onEventsChange(*this, r ? Events::in : Events::none);
+                                                                                      ^
+In file included from cpoll/include/cpoll.H:49:0,
+                 from cpoll/cpoll.C:21,
+                 from cpoll/all.C:1:
+cpoll/sendfd.C: At top level:
+cpoll/include/basictypes.H:153:13: warning: ‘CP::atoi(CP::String)’ defined but not used [-Wunused-function]
+  static int atoi(String s) {
+             ^
+cpoll/include/basictypes.H:156:14: warning: ‘CP::atol(CP::String)’ defined but not used [-Wunused-function]
+  static long atol(String s) {
+              ^
+cpoll/include/basictypes.H:159:19: warning: ‘CP::atoll(CP::String)’ defined but not used [-Wunused-function]
+  static long long atoll(String s) {
+                   ^
+cpoll/include/basictypes.H:162:16: warning: ‘CP::atof(CP::String)’ defined but not used [-Wunused-function]
+  static double atof(String s) {
+                ^
+In file included from cppsp_server/socketd_cppsp.C:15:0:
+./include/cpoll/cpoll.H: In member function ‘void CP::StreamWriter::write(int64_t)’:
+./include/cpoll/cpoll.H:619:91: warning: format ‘%lli’ expects argument of type ‘long long int’, but argument 4 has type ‘int64_t {aka long int}’ [-Wformat=]
+    buffer->bufferPos += snprintf((char*) buffer->buffer + buffer->bufferPos, 22, "%lli", i);
+                                                                                           ^
+./include/cpoll/cpoll.H:619:91: warning: format ‘%lli’ expects argument of type ‘long long int’, but argument 4 has type ‘int64_t {aka long int}’ [-Wformat=]
+./include/cpoll/cpoll.H: In member function ‘void CP::StreamWriter::write(uint64_t)’:
+./include/cpoll/cpoll.H:635:91: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 4 has type ‘uint64_t {aka long unsigned int}’ [-Wformat=]
+    buffer->bufferPos += snprintf((char*) buffer->buffer + buffer->bufferPos, 21, "%llu", i);
+                                                                                           ^
+./include/cpoll/cpoll.H:635:91: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 4 has type ‘uint64_t {aka long unsigned int}’ [-Wformat=]
+In file included from cpoll/cpoll.C:21:0,
+                 from cpoll/all.C:1:
+cpoll/include/cpoll.H: In member function ‘void CP::StreamWriter::write(int64_t)’:
+cpoll/include/cpoll.H:619:91: warning: format ‘%lli’ expects argument of type ‘long long int’, but argument 4 has type ‘int64_t {aka long int}’ [-Wformat=]
+    buffer->bufferPos += snprintf((char*) buffer->buffer + buffer->bufferPos, 22, "%lli", i);
+                                                                                           ^
+cpoll/include/cpoll.H:619:91: warning: format ‘%lli’ expects argument of type ‘long long int’, but argument 4 has type ‘int64_t {aka long int}’ [-Wformat=]
+cpoll/include/cpoll.H: In member function ‘void CP::StreamWriter::write(uint64_t)’:
+cpoll/include/cpoll.H:635:91: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 4 has type ‘uint64_t {aka long unsigned int}’ [-Wformat=]
+    buffer->bufferPos += snprintf((char*) buffer->buffer + buffer->bufferPos, 21, "%llu", i);
+                                                                                           ^
+cpoll/include/cpoll.H:635:91: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 4 has type ‘uint64_t {aka long unsigned int}’ [-Wformat=]
+In file included from cpoll/all.C:1:0:
+cpoll/cpoll.C: In member function ‘CP::Timer::setInterval(timespec)’:
+cpoll/cpoll.C:1615:86: warning: ‘r’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+    if (onEventsChange != nullptr) onEventsChange(*this, r ? Events::in : Events::none);
+                                                                                      ^
+cpoll/cpoll.C: In member function ‘CP::Timer::setInterval(unsigned long)’:
+cpoll/cpoll.C:1623:86: warning: ‘r’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+    if (onEventsChange != nullptr) onEventsChange(*this, r ? Events::in : Events::none);
+                                                                                      ^
+In file included from cpoll/include/cpoll.H:49:0,
+                 from cpoll/cpoll.C:21,
+                 from cpoll/all.C:1:
+cpoll/sendfd.C: At top level:
+cpoll/include/basictypes.H:153:13: warning: ‘CP::atoi(CP::String)’ defined but not used [-Wunused-function]
+  static int atoi(String s) {
+             ^
+cpoll/include/basictypes.H:156:14: warning: ‘CP::atol(CP::String)’ defined but not used [-Wunused-function]
+  static long atol(String s) {
+              ^
+cpoll/include/basictypes.H:159:19: warning: ‘CP::atoll(CP::String)’ defined but not used [-Wunused-function]
+  static long long atoll(String s) {
+                   ^
+cpoll/include/basictypes.H:162:16: warning: ‘CP::atof(CP::String)’ defined but not used [-Wunused-function]
+  static double atof(String s) {
+                ^
+In file included from cppsp/common.C:21:0,
+                 from cppsp/all.C:1:
+./include/cpoll/cpoll.H: In member function ‘void CP::StreamWriter::write(int64_t)’:
+./include/cpoll/cpoll.H:619:91: warning: format ‘%lli’ expects argument of type ‘long long int’, but argument 4 has type ‘int64_t {aka long int}’ [-Wformat=]
+    buffer->bufferPos += snprintf((char*) buffer->buffer + buffer->bufferPos, 22, "%lli", i);
+                                                                                           ^
+./include/cpoll/cpoll.H:619:91: warning: format ‘%lli’ expects argument of type ‘long long int’, but argument 4 has type ‘int64_t {aka long int}’ [-Wformat=]
+./include/cpoll/cpoll.H: In member function ‘void CP::StreamWriter::write(uint64_t)’:
+./include/cpoll/cpoll.H:635:91: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 4 has type ‘uint64_t {aka long unsigned int}’ [-Wformat=]
+    buffer->bufferPos += snprintf((char*) buffer->buffer + buffer->bufferPos, 21, "%llu", i);
+                                                                                           ^
+./include/cpoll/cpoll.H:635:91: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 4 has type ‘uint64_t {aka long unsigned int}’ [-Wformat=]
+In file included from cppsp/all.C:2:0:
+cppsp/cppsp_cpoll.C: In function ‘bool cppsp::CPollRequest_parseReqLine(cppsp::CPollRequest*)’:
+cppsp/cppsp_cpoll.C:66:26: warning: narrowing conversion of ‘(((long int)q) - ((long int)path))’ from ‘long int’ to ‘int’ inside { } [-Wnarrowing]
+    This->path = {path, q - path};
+                          ^
+In file included from cppsp/all.C:4:0:
+cppsp/stringutils.C: In function ‘cppsp::String cppsp::urlDecode(const char*, int, CP::StringPool&)’:
+cppsp/stringutils.C:80:15: warning: narrowing conversion of ‘(((long int)c) - ((long int)ch))’ from ‘long int’ to ‘int’ inside { } [-Wnarrowing]
+   return {ch,c-ch};
+               ^
+In file included from cppsp/common.C:21:0,
+                 from cppsp/all.C:1:
+./include/cpoll/cpoll.H: In instantiation of ‘void CP::StreamWriter::writeF(const char*, P&& ...) [with P = {}]’:
+cppsp/common.C:863:38:   required from here
+./include/cpoll/cpoll.H:650:72: warning: format not a string literal and no format arguments [-Wformat-security]
+      buffer->bufferSize - buffer->bufferPos, fmt, std::forward<P>(p)...);
+                                                                        ^
+./include/cpoll/cpoll.H:650:72: warning: format not a string literal and no format arguments [-Wformat-security]
+In file included from cppsp/all.C:1:0:
+cppsp/common.C: In function ‘CP::File* cppsp::compilePage(std::string, std::string, std::string, std::string, std::string, const std::vector<std::basic_string<char> >&, pid_t&, std::string&)’:
+cppsp/common.C:366:21: warning: ignoring return value of ‘int chdir(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+    chdir(wd.c_str());
+                     ^
+cppsp/common.C: In member function ‘void cppsp::loadedPage::readCB(int)’:
+cppsp/common.C:402:40: warning: ignoring return value of ‘int link(const char*, const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     link(dllPath.c_str(), dll1.c_str());
+                                        ^
+cppsp/common.C:405:40: warning: ignoring return value of ‘int link(const char*, const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     link(txtPath.c_str(), txt1.c_str());
+                                        ^
+In file included from ./include/cpoll/cpoll.H:46:0,
+                 from cppsp/common.C:21,
+                 from cppsp/all.C:1:
+cppsp/common.C: In member function ‘cppsp::cppspManager::loadPage(CP::NewEPoll&, CP::String, CP::String, RGC::Allocator*, Delegate<void (cppsp::Page*, std::exception*)>)’:
+./include/delegate.H:43:69: warning: ‘p’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   return ((R (*)(void* data, P...))func)(data,std::forward<P2>(p)...);
+                                                                     ^
+In file included from cppsp/all.C:1:0:
+cppsp/common.C:724:15: note: ‘p’ was declared here
+    xxx: Page* p;
+               ^
+socketd_proxy.C: In function ‘int fixAccept(int, sockaddr*, socklen_t*)’:
+socketd_proxy.C:158:37: warning: format ‘%i’ expects argument of type ‘int’, but argument 3 has type ‘long unsigned int’ [-Wformat=]
+     ,sizeof(protocolHeader),r,sockfd);
+                                     ^
+socketd_proxy.C:167:44: warning: format ‘%i’ expects argument of type ‘int’, but argument 3 has type ‘long unsigned int’ [-Wformat=]
+     ,sizeof(prot_handleConnection),r,sockfd);
+                                            ^
+socketd_proxy.C: In function ‘int fixRead(bufferInfo*, int, void*, size_t)’:
+socketd_proxy.C:275:37: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  int minLen=__min(len,bi->len - bi->offset);
+                                     ^
+socketd_proxy.C:264:24: note: in definition of macro ‘__min’
+ #define __min(x,y) ((x<y)?x:y)
+                        ^
+socketd_proxy.C: In function ‘int shutdown(int, int)’:
+socketd_proxy.C:306:7: warning: unused variable ‘isListen’ [-Wunused-variable]
+  bool isListen;
+       ^
+In file included from ./include/cpoll/statemachines.H:31:0,
+                 from socketd_proxy.C:14:
+socketd_proxy.C: At top level:
+./include/cpoll/basictypes.H:153:13: warning: ‘CP::atoi(CP::String)’ defined but not used [-Wunused-function]
+  static int atoi(String s) {
+             ^
+./include/cpoll/basictypes.H:156:14: warning: ‘CP::atol(CP::String)’ defined but not used [-Wunused-function]
+  static long atol(String s) {
+              ^
+./include/cpoll/basictypes.H:159:19: warning: ‘CP::atoll(CP::String)’ defined but not used [-Wunused-function]
+  static long long atoll(String s) {
+                   ^
+./include/cpoll/basictypes.H:162:16: warning: ‘CP::atof(CP::String)’ defined but not used [-Wunused-function]
+  static double atof(String s) {
+                ^
+In file included from cpoll/cpoll.C:21:0,
+                 from cpoll/all.C:1:
+cpoll/include/cpoll.H: In member function ‘void CP::StreamWriter::write(int64_t)’:
+cpoll/include/cpoll.H:619:91: warning: format ‘%lli’ expects argument of type ‘long long int’, but argument 4 has type ‘int64_t {aka long int}’ [-Wformat=]
+    buffer->bufferPos += snprintf((char*) buffer->buffer + buffer->bufferPos, 22, "%lli", i);
+                                                                                           ^
+cpoll/include/cpoll.H:619:91: warning: format ‘%lli’ expects argument of type ‘long long int’, but argument 4 has type ‘int64_t {aka long int}’ [-Wformat=]
+cpoll/include/cpoll.H: In member function ‘void CP::StreamWriter::write(uint64_t)’:
+cpoll/include/cpoll.H:635:91: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 4 has type ‘uint64_t {aka long unsigned int}’ [-Wformat=]
+    buffer->bufferPos += snprintf((char*) buffer->buffer + buffer->bufferPos, 21, "%llu", i);
+                                                                                           ^
+cpoll/include/cpoll.H:635:91: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 4 has type ‘uint64_t {aka long unsigned int}’ [-Wformat=]
+In file included from cpoll/all.C:1:0:
+cpoll/cpoll.C: In member function ‘CP::Timer::setInterval(timespec)’:
+cpoll/cpoll.C:1615:86: warning: ‘r’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+    if (onEventsChange != nullptr) onEventsChange(*this, r ? Events::in : Events::none);
+                                                                                      ^
+cpoll/cpoll.C: In member function ‘CP::Timer::setInterval(unsigned long)’:
+cpoll/cpoll.C:1623:86: warning: ‘r’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+    if (onEventsChange != nullptr) onEventsChange(*this, r ? Events::in : Events::none);
+                                                                                      ^
+In file included from cpoll/include/cpoll.H:49:0,
+                 from cpoll/cpoll.C:21,
+                 from cpoll/all.C:1:
+cpoll/sendfd.C: At top level:
+cpoll/include/basictypes.H:153:13: warning: ‘CP::atoi(CP::String)’ defined but not used [-Wunused-function]
+  static int atoi(String s) {
+             ^
+cpoll/include/basictypes.H:156:14: warning: ‘CP::atol(CP::String)’ defined but not used [-Wunused-function]
+  static long atol(String s) {
+              ^
+cpoll/include/basictypes.H:159:19: warning: ‘CP::atoll(CP::String)’ defined but not used [-Wunused-function]
+  static long long atoll(String s) {
+                   ^
+cpoll/include/basictypes.H:162:16: warning: ‘CP::atof(CP::String)’ defined but not used [-Wunused-function]
+  static double atof(String s) {
+                ^
+[1;1;1mspecify -? for help[0;0;0m
+[1;1;1musing SO_REUSEPORT[0;0;0m
+[1;1;1mstarting 4 processes[0;0;0m
+module /home/ubuntu/FrameworkBenchmarks/cpoll_cppsp/www/forcedynamic.cppsm loaded
+module /home/ubuntu/FrameworkBenchmarks/cpoll_cppsp/www/forcedynamic.cppsm loaded
+module /home/ubuntu/FrameworkBenchmarks/cpoll_cppsp/www/forcedynamic.cppsm loaded
+module /home/ubuntu/FrameworkBenchmarks/cpoll_cppsp/www/forcedynamic.cppsm loaded
+module /home/ubuntu/FrameworkBenchmarks/cpoll_cppsp/www/db loaded
+module /home/ubuntu/FrameworkBenchmarks/cpoll_cppsp/www/db loaded
+module /home/ubuntu/FrameworkBenchmarks/cpoll_cppsp/www/db loaded
+module /home/ubuntu/FrameworkBenchmarks/cpoll_cppsp/www/db loaded
+module /home/ubuntu/FrameworkBenchmarks/cpoll_cppsp/www/fortune loaded
+module /home/ubuntu/FrameworkBenchmarks/cpoll_cppsp/www/update loaded
+module /home/ubuntu/FrameworkBenchmarks/cpoll_cppsp/www/update loaded
+module /home/ubuntu/FrameworkBenchmarks/cpoll_cppsp/www/fortune loaded
+module /home/ubuntu/FrameworkBenchmarks/cpoll_cppsp/www/fortune loaded
+module /home/ubuntu/FrameworkBenchmarks/cpoll_cppsp/www/fortune loaded
+module /home/ubuntu/FrameworkBenchmarks/cpoll_cppsp/www/update loaded
+module /home/ubuntu/FrameworkBenchmarks/cpoll_cppsp/www/update loaded

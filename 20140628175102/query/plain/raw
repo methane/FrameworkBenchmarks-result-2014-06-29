@@ -1,0 +1,108 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer plain
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/db?queries=2
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/db?queries=2
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.23ms    1.21ms  22.78ms   93.43%
+    Req/Sec     0.98k   261.89     1.89k    78.55%
+  36379 requests in 5.00s, 7.66MB read
+Requests/sec:   7276.93
+Transfer/sec:      1.53MB
+
+---------------------------------------------------------
+ Running Warmup plain
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/db?queries=2
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db?queries=2
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    31.58ms   79.12ms   3.98s    99.88%
+    Req/Sec     2.14k   405.70     4.94k    90.21%
+  121645 requests in 15.00s, 25.61MB read
+Requests/sec:   8109.35
+Transfer/sec:      1.71MB
+
+---------------------------------------------------------
+ Queries: 1 for plain
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/db?queries=1
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db?queries=1
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    21.87ms   49.59ms   2.84s    99.94%
+    Req/Sec     3.02k   238.73     3.80k    81.80%
+  177918 requests in 15.00s, 31.03MB read
+Requests/sec:  11861.43
+Transfer/sec:      2.07MB
+
+---------------------------------------------------------
+ Queries: 5 for plain
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/db?queries=5
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db?queries=5
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    53.36ms   49.11ms   1.55s    97.93%
+    Req/Sec     1.32k   494.65     3.24k    78.62%
+  62752 requests in 15.01s, 20.07MB read
+Requests/sec:   4180.52
+Transfer/sec:      1.34MB
+
+---------------------------------------------------------
+ Queries: 10 for plain
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/db?queries=10
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db?queries=10
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    83.77ms   97.74ms   2.90s    99.31%
+    Req/Sec   830.77    252.56     1.40k    64.88%
+  34258 requests in 15.04s, 17.14MB read
+Requests/sec:   2277.97
+Transfer/sec:      1.14MB
+
+---------------------------------------------------------
+ Queries: 15 for plain
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/db?queries=15
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db?queries=15
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     4.80s     6.48s   14.89s    77.36%
+    Req/Sec   361.67    318.25     1.09k    47.21%
+  23676 requests in 15.03s, 16.12MB read
+Requests/sec:   1575.33
+Transfer/sec:      1.07MB
+
+---------------------------------------------------------
+ Queries: 20 for plain
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/db?queries=20
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db?queries=20
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   123.82ms  197.26ms   6.49s    99.12%
+    Req/Sec   627.31    267.24     1.27k    68.92%
+  18162 requests in 15.03s, 15.65MB read
+Requests/sec:   1208.15
+Transfer/sec:      1.04MB

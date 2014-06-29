@@ -1,0 +1,25 @@
+test.os.lower() = linux  test.database_os.lower() = linux
+self.results['frameworks'] != None: True
+test.name: play2
+self.results['completed']: {}
+
+=====================================================
+  Beginning play2
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Starting play2
+-----------------------------------------------------
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+mysql start/running, process 32434
+ * Restarting PostgreSQL 9.3 database server
+   ...done.

@@ -1,0 +1,6 @@
+src/github.com/beego/x2j/examples/books.go:5:2: cannot find package "github.com/clbanning/x2j" in any of:
+	/home/ubuntu/FrameworkBenchmarks/installs/go/src/pkg/github.com/clbanning/x2j (from $GOROOT)
+	/home/ubuntu/FrameworkBenchmarks/beego/src/github.com/clbanning/x2j (from $GOPATH)
+src/github.com/couchbaselabs/retriever/handle_logger.go:15:2: cannot find package "github.com/gorilla/mux" in any of:
+	/home/ubuntu/FrameworkBenchmarks/installs/go/src/pkg/github.com/gorilla/mux (from $GOROOT)
+	/home/ubuntu/FrameworkBenchmarks/beego/src/github.com/gorilla/mux (from $GOPATH)

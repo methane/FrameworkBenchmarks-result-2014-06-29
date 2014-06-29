@@ -1,0 +1,61 @@
+test.os.lower() = linux  test.database_os.lower() = linux
+self.results['frameworks'] != None: True
+test.name: onion
+self.results['completed']: {}
+
+=====================================================
+  Beginning onion
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Starting onion
+-----------------------------------------------------
+cc -O2 -Ionion/src/   -c -o hello.o hello.c
+(cd onion/build/tools/otemplate/; make)
+make[1]: Entering directory `/home/ubuntu/FrameworkBenchmarks/onion/onion/build/tools/otemplate'
+make[2]: Entering directory `/home/ubuntu/FrameworkBenchmarks/installs/onion/build'
+make[3]: Entering directory `/home/ubuntu/FrameworkBenchmarks/installs/onion/build'
+make[3]: Leaving directory `/home/ubuntu/FrameworkBenchmarks/installs/onion/build'
+[ 90%] Built target otemplate
+make[3]: Entering directory `/home/ubuntu/FrameworkBenchmarks/installs/onion/build'
+make[3]: Leaving directory `/home/ubuntu/FrameworkBenchmarks/installs/onion/build'
+[100%] Built target i18n
+make[2]: Leaving directory `/home/ubuntu/FrameworkBenchmarks/installs/onion/build'
+make[1]: Leaving directory `/home/ubuntu/FrameworkBenchmarks/onion/onion/build/tools/otemplate'
+onion/build/tools/otemplate/otemplate base.html base_html.c
+cc -O2 -Ionion/src/   -c -o base_html.o base_html.c
+onion/build/tools/otemplate/otemplate fortunes.html fortunes_html.c
+cc -O2 -Ionion/src/   -c -o fortunes_html.o fortunes_html.c
+cc hello.o base_html.o fortunes_html.o libonion_static.a -o hello -lpthread `mysql_config --libs` `pkg-config json --libs` -lgnutls -lgcrypt -lrt
+
+-----------------------------------------------------
+  VERIFYING JSON (/json)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Content-Length: 30
+Content-Type: application/json
+Date: Sun, 29 Jun 2014 00:23:47 UTC
+Server: libonion v0.7 - coralbits.com
+
+{ "message": "Hello, World!" }
+
+VALIDATING JSON ... PASS
+
+
+-----------------------------------------------------
+  Benchmarking onion ...
+-----------------------------------------------------
+BENCHMARKING JSON ... Complete
+
+-----------------------------------------------------
+  Stopping onion
+-----------------------------------------------------
+Listening at http://localhost:8080/
+
+-----------------------------------------------------
+  Stopped onion
+-----------------------------------------------------
+
+----------------------------------------------------
+Saving results through onion
+----------------------------------------------------

@@ -1,0 +1,30 @@
+restart: Unknown instance: 
+Warning! PATH is not properly set up, '/home/ubuntu/.rvm/gems/ruby-2.0.0-p0/bin' is not at first place,
+         usually this is caused by shell initialization files - check them for 'PATH=...' entries,
+         it might also help to re-add RVM to your dotfiles: 'rvm get stable --auto-dotfiles',
+         to fix temporarily in this shell session run: 'rvm use ruby-2.0.0-p0'.
+Warning! PATH is not properly set up, '/home/ubuntu/.rvm/gems/ruby-2.0.0-p0/bin' is not at first place,
+         usually this is caused by shell initialization files - check them for 'PATH=...' entries,
+         it might also help to re-add RVM to your dotfiles: 'rvm get stable --auto-dotfiles',
+         to fix temporarily in this shell session run: 'rvm use ruby-2.0.0-p0'.
+I, [2014-06-29T02:35:16.888064 #5293]  INFO -- : Refreshing Gem list
+I, [2014-06-29T02:35:19.383713 #5293]  INFO -- : unlinking existing socket=/tmp/.sock
+I, [2014-06-29T02:35:19.383868 #5293]  INFO -- : listening on addr=/tmp/.sock fd=8
+I, [2014-06-29T02:35:19.391685 #5496]  INFO -- : worker=0 ready
+I, [2014-06-29T02:35:19.394474 #5499]  INFO -- : worker=1 ready
+I, [2014-06-29T02:35:19.395825 #5502]  INFO -- : worker=2 ready
+I, [2014-06-29T02:35:19.396855 #5505]  INFO -- : worker=3 ready
+I, [2014-06-29T02:35:19.398288 #5508]  INFO -- : worker=4 ready
+I, [2014-06-29T02:35:19.398880 #5293]  INFO -- : master process ready
+I, [2014-06-29T02:35:19.399762 #5511]  INFO -- : worker=5 ready
+I, [2014-06-29T02:35:19.400998 #5514]  INFO -- : worker=6 ready
+I, [2014-06-29T02:35:19.401942 #5517]  INFO -- : worker=7 ready
+I, [2014-06-29T02:45:57.498532 #5293]  INFO -- : reaped #<Process::Status: pid 5496 exit 0> worker=0
+I, [2014-06-29T02:45:57.498622 #5293]  INFO -- : reaped #<Process::Status: pid 5499 exit 0> worker=1
+I, [2014-06-29T02:45:57.498674 #5293]  INFO -- : reaped #<Process::Status: pid 5502 exit 0> worker=2
+I, [2014-06-29T02:45:57.498720 #5293]  INFO -- : reaped #<Process::Status: pid 5505 exit 0> worker=3
+I, [2014-06-29T02:45:57.498769 #5293]  INFO -- : reaped #<Process::Status: pid 5508 exit 0> worker=4
+I, [2014-06-29T02:45:57.498814 #5293]  INFO -- : reaped #<Process::Status: pid 5511 exit 0> worker=5
+I, [2014-06-29T02:45:57.498861 #5293]  INFO -- : reaped #<Process::Status: pid 5514 exit 0> worker=6
+I, [2014-06-29T02:45:57.498908 #5293]  INFO -- : reaped #<Process::Status: pid 5517 exit 0> worker=7
+I, [2014-06-29T02:45:57.498987 #5293]  INFO -- : master complete

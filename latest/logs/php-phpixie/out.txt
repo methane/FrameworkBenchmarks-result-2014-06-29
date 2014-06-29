@@ -1,0 +1,1526 @@
+test.os.lower() = linux  test.database_os.lower() = linux
+self.results['frameworks'] != None: True
+test.name: php-phpixie
+self.results['completed']: {}
+
+=====================================================
+  Beginning php-phpixie
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Starting php-phpixie
+-----------------------------------------------------
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+mysql start/running, process 16522
+ * Restarting PostgreSQL 9.3 database server
+   ...done.
+Loading composer repositories with package information
+Installing dependencies (including require-dev) from lock file
+Nothing to install or update
+Generating optimized autoload files
+
+-----------------------------------------------------
+  VERIFYING JSON (/json)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Server: nginx/1.4.1
+Date: Sun, 29 Jun 2014 00:52:05 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: PHP/5.4.13
+
+{"message":"Hello, World!"}
+
+VALIDATING JSON ... PASS
+
+
+-----------------------------------------------------
+  VERIFYING DB (/db)
+-----------------------------------------------------
+HTTP/1.1 503 Service Temporarily Unavailable
+Server: nginx/1.4.1
+Date: Sun, 29 Jun 2014 00:52:05 GMT
+Content-Type: text/html
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: PHP/5.4.13
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Error</title>
+		<style>
+			html{
+				width:100%;
+				min-height:100%;
+				font-family:'Verdana';
+				font-size:14px;
+			}
+			body{
+
+				min-height:100%;
+				background: #a90329; /* Old browsers */
+				background: -moz-radial-gradient(center, ellipse cover, #a90329 0%, #6d0019 100%); /* FF3.6+ */
+				background: -webkit-radial-gradient(center, ellipse cover, #a90329 0%,#6d0019 100%); /* Chrome10+,Safari5.1+ */
+			}
+			#content{
+				width:1000px;
+				margin:auto;
+				padding:10px 0px;
+				background:#eee;
+			}
+			.file{
+				font-weight:bold;
+			}
+			.block{
+				border-bottom:1px solid #000;
+				margin:10px;
+			}
+			.code{
+				
+				padding:10px;
+			}
+			.highlight{
+				background:#efecd0;
+			}
+			#exception{
+				font-size:25px;
+				font-weight:bold;
+				padding:10px;
+			}
+			#debug{
+				border-bottom: 1px solid black;
+				margin: 10px;
+			}
+			#log{
+				font-size:15px;
+				font-weight:bold;
+				padding:5px;
+			}
+			.log{
+				padding:10px;
+				border-bottom: 1px solid black;
+			}
+			.log.odd{
+				
+			}
+			pre{
+				margin:0px;
+			}
+			.thick{
+				border-width:2px;
+			}
+		</style>
+	</head>
+	<body>
+				<div id="content">
+			<div id="exception">SQLSTATE[HY000] [2002] No such file or directory</div>
+			<div id="blocks">
+									<div class="block ">
+						<div class="file">/home/ubuntu/FrameworkBenchmarks/php-phpixie/vendor/phpixie/db/classes/PHPixie/DB/PDO/Connection.php</div>
+						<div class="code">
+														
+														<pre class="line ">38    			$pixie-&gt;config-&gt;get(&quot;db.{$config}.connection&quot;),</pre>
+														<pre class="line ">39    			$pixie-&gt;config-&gt;get(&quot;db.{$config}.user&quot;, ''),</pre>
+														<pre class="line ">40    			$pixie-&gt;config-&gt;get(&quot;db.{$config}.password&quot;, '')</pre>
+														<pre class="line highlight">41    		);</pre>
+														<pre class="line ">42    		$this-&gt;conn-&gt;setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);</pre>
+														<pre class="line ">43    		$this-&gt;db_type = strtolower(str_replace('PDO_', '', $this-&gt;conn-&gt;getAttribute(\PDO::ATTR_DRIVER_NAME)));</pre>
+													</div>
+					</div>
+														<div class="block ">
+						<div class="file">/home/ubuntu/FrameworkBenchmarks/php-phpixie/vendor/phpixie/db/classes/PHPixie/DB.php</div>
+						<div class="code">
+														
+														<pre class="line ">46    		if (!isset($this-&gt;db_instances[$config])) {</pre>
+														<pre class="line ">47    			$driver = $this-&gt;pixie-&gt;config-&gt;get(&quot;db.{$config}.driver&quot;);</pre>
+														<pre class="line ">48    			$driver = &quot;\\PHPixie\\DB\\&quot;.$driver.&quot;\\Connection&quot;;</pre>
+														<pre class="line highlight">49    			$this-&gt;db_instances[$config] = new $driver($this-&gt;pixie, $config);</pre>
+														<pre class="line ">50    		}</pre>
+														<pre class="line ">51    		return $this-&gt;db_instances[$config];</pre>
+													</div>
+					</div>
+														<div class="block ">
+						<div class="file">/home/ubuntu/FrameworkBenchmarks/php-phpixie/vendor/phpixie/orm/classes/PHPixie/ORM/Model.php</div>
+						<div class="code">
+														
+														<pre class="line ">153    	public function __construct($pixie)</pre>
+														<pre class="line ">154    	{</pre>
+														<pre class="line ">155    		$this-&gt;pixie = $pixie;</pre>
+														<pre class="line highlight">156    		$this-&gt;conn = $pixie-&gt;db-&gt;get($this-&gt;connection);</pre>
+														<pre class="line ">157    		$this-&gt;query = $this-&gt;conn-&gt;query('select');</pre>
+														<pre class="line ">158    		$this-&gt;model_name = strtolower(get_class($this));</pre>
+													</div>
+					</div>
+														<div class="block ">
+						<div class="file">/home/ubuntu/FrameworkBenchmarks/php-phpixie/vendor/phpixie/orm/classes/PHPixie/ORM.php</div>
+						<div class="code">
+														
+														<pre class="line ">44    	public function get($name, $id = null)</pre>
+														<pre class="line ">45    	{</pre>
+														<pre class="line ">46    		$model = $this-&gt;pixie-&gt;app_namespace.&quot;Model\\&quot;.ucfirst($name);</pre>
+														<pre class="line highlight">47    		$model = new $model($this-&gt;pixie);</pre>
+														<pre class="line ">48    		if ($id != null)</pre>
+														<pre class="line ">49    		{</pre>
+													</div>
+					</div>
+														<div class="block ">
+						<div class="file">/home/ubuntu/FrameworkBenchmarks/php-phpixie/classes/App/Controller/Benchmark.php</div>
+						<div class="code">
+														
+														<pre class="line ">67    	}</pre>
+														<pre class="line ">68    	</pre>
+														<pre class="line ">69    	protected function fetch_random_world() {</pre>
+														<pre class="line highlight">70    		return $this-&gt;pixie-&gt;orm-&gt;get('world')</pre>
+														<pre class="line ">71    				-&gt;where('id', rand(1, 10000))</pre>
+														<pre class="line ">72    				-&gt;find();</pre>
+													</div>
+					</div>
+														<div class="block ">
+						<div class="file">/home/ubuntu/FrameworkBenchmarks/php-phpixie/classes/App/Controller/Benchmark.php</div>
+						<div class="code">
+														
+														<pre class="line ">10    	</pre>
+														<pre class="line ">11    	public function action_db() {</pre>
+														<pre class="line ">12    		$this-&gt;response-&gt;add_header(&quot;Content-Type: application/json&quot;);</pre>
+														<pre class="line highlight">13    		$this-&gt;response-&gt;body = json_encode($this-&gt;fetch_random_world()-&gt;as_array());</pre>
+														<pre class="line ">14    	}</pre>
+														<pre class="line ">15    	</pre>
+													</div>
+					</div>
+														<div class="block ">
+						<div class="file">/home/ubuntu/FrameworkBenchmarks/php-phpixie/vendor/phpixie/core/classes/PHPixie/Controller.php</div>
+						<div class="code">
+														
+														<pre class="line ">103    		$this-&gt;execute = true;</pre>
+														<pre class="line ">104    		$this-&gt;before();</pre>
+														<pre class="line ">105    		if ($this-&gt;execute)</pre>
+														<pre class="line highlight">106    			$this-&gt;$action();</pre>
+														<pre class="line ">107    		if ($this-&gt;execute)</pre>
+														<pre class="line ">108    			$this-&gt;after();</pre>
+													</div>
+					</div>
+														<div class="block ">
+						<div class="file">/home/ubuntu/FrameworkBenchmarks/php-phpixie/vendor/phpixie/core/classes/PHPixie/Request.php</div>
+						<div class="code">
+														
+														<pre class="line ">175    		$class = $this-&gt;param('namespace',$this-&gt;pixie-&gt;app_namespace).'Controller\\'.ucfirst($this-&gt;param('controller'));</pre>
+														<pre class="line ">176    		$controller = $this-&gt;pixie-&gt;controller($class);</pre>
+														<pre class="line ">177    		$controller-&gt;request = $this;</pre>
+														<pre class="line highlight">178    		$controller-&gt;run($this-&gt;param('action'));</pre>
+														<pre class="line ">179    		return $controller-&gt;response;</pre>
+														<pre class="line ">180    	}</pre>
+													</div>
+					</div>
+														<div class="block ">
+						<div class="file">/home/ubuntu/FrameworkBenchmarks/php-phpixie/vendor/phpixie/core/classes/PHPixie/Pixie.php</div>
+						<div class="code">
+														
+														<pre class="line ">219    		try {</pre>
+														<pre class="line ">220    		</pre>
+														<pre class="line ">221    			$request =  $this-&gt;http_request();</pre>
+														<pre class="line highlight">222    			$response = $request-&gt;execute();</pre>
+														<pre class="line ">223    			$response-&gt;send_headers()-&gt;send_body();</pre>
+														<pre class="line ">224    			</pre>
+													</div>
+					</div>
+														<div class="block ">
+						<div class="file">/home/ubuntu/FrameworkBenchmarks/php-phpixie/web/index.php</div>
+						<div class="code">
+														
+														<pre class="line ">4    $loader-&gt;add('', $root.'/classes/');</pre>
+														<pre class="line ">5    </pre>
+														<pre class="line ">6    $pixie = new \App\Pixie();</pre>
+														<pre class="line highlight">7    $pixie-&gt;bootstrap($root)-&gt;handle_http_request();</pre>
+													</div>
+					</div>
+												</div>
+		</div>
+	</body>
+</html>
+
+VALIDATING DB ... FAIL
+
+
+-----------------------------------------------------
+  VERIFYING QUERY (/queries?queries=2)
+-----------------------------------------------------
+HTTP/1.1 503 Service Temporarily Unavailable
+Server: nginx/1.4.1
+Date: Sun, 29 Jun 2014 00:52:05 GMT
+Content-Type: text/html
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: PHP/5.4.13
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Error</title>
+		<style>
+			html{
+				width:100%;
+				min-height:100%;
+				font-family:'Verdana';
+				font-size:14px;
+			}
+			body{
+
+				min-height:100%;
+				background: #a90329; /* Old browsers */
+				background: -moz-radial-gradient(center, ellipse cover, #a90329 0%, #6d0019 100%); /* FF3.6+ */
+				background: -webkit-radial-gradient(center, ellipse cover, #a90329 0%,#6d0019 100%); /* Chrome10+,Safari5.1+ */
+			}
+			#content{
+				width:1000px;
+				margin:auto;
+				padding:10px 0px;
+				background:#eee;
+			}
+			.file{
+				font-weight:bold;
+			}
+			.block{
+				border-bottom:1px solid #000;
+				margin:10px;
+			}
+			.code{
+				
+				padding:10px;
+			}
+			.highlight{
+				background:#efecd0;
+			}
+			#exception{
+				font-size:25px;
+				font-weight:bold;
+				padding:10px;
+			}
+			#debug{
+				border-bottom: 1px solid black;
+				margin: 10px;
+			}
+			#log{
+				font-size:15px;
+				font-weight:bold;
+				padding:5px;
+			}
+			.log{
+				padding:10px;
+				border-bottom: 1px solid black;
+			}
+			.log.odd{
+				
+			}
+			pre{
+				margin:0px;
+			}
+			.thick{
+				border-width:2px;
+			}
+		</style>
+	</head>
+	<body>
+				<div id="content">
+			<div id="exception">SQLSTATE[HY000] [2002] No such file or directory</div>
+			<div id="blocks">
+									<div class="block ">
+						<div class="file">/home/ubuntu/FrameworkBenchmarks/php-phpixie/vendor/phpixie/db/classes/PHPixie/DB/PDO/Connection.php</div>
+						<div class="code">
+														
+														<pre class="line ">38    			$pixie-&gt;config-&gt;get(&quot;db.{$config}.connection&quot;),</pre>
+														<pre class="line ">39    			$pixie-&gt;config-&gt;get(&quot;db.{$config}.user&quot;, ''),</pre>
+														<pre class="line ">40    			$pixie-&gt;config-&gt;get(&quot;db.{$config}.password&quot;, '')</pre>
+														<pre class="line highlight">41    		);</pre>
+														<pre class="line ">42    		$this-&gt;conn-&gt;setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);</pre>
+														<pre class="line ">43    		$this-&gt;db_type = strtolower(str_replace('PDO_', '', $this-&gt;conn-&gt;getAttribute(\PDO::ATTR_DRIVER_NAME)));</pre>
+													</div>
+					</div>
+														<div class="block ">
+						<div class="file">/home/ubuntu/FrameworkBenchmarks/php-phpixie/vendor/phpixie/db/classes/PHPixie/DB.php</div>
+						<div class="code">
+														
+														<pre class="line ">46    		if (!isset($this-&gt;db_instances[$config])) {</pre>
+														<pre class="line ">47    			$driver = $this-&gt;pixie-&gt;config-&gt;get(&quot;db.{$config}.driver&quot;);</pre>
+														<pre class="line ">48    			$driver = &quot;\\PHPixie\\DB\\&quot;.$driver.&quot;\\Connection&quot;;</pre>
+														<pre class="line highlight">49    			$this-&gt;db_instances[$config] = new $driver($this-&gt;pixie, $config);</pre>
+														<pre class="line ">50    		}</pre>
+														<pre class="line ">51    		return $this-&gt;db_instances[$config];</pre>
+													</div>
+					</div>
+														<div class="block ">
+						<div class="file">/home/ubuntu/FrameworkBenchmarks/php-phpixie/vendor/phpixie/orm/classes/PHPixie/ORM/Model.php</div>
+						<div class="code">
+														
+														<pre class="line ">153    	public function __construct($pixie)</pre>
+														<pre class="line ">154    	{</pre>
+														<pre class="line ">155    		$this-&gt;pixie = $pixie;</pre>
+														<pre class="line highlight">156    		$this-&gt;conn = $pixie-&gt;db-&gt;get($this-&gt;connection);</pre>
+														<pre class="line ">157    		$this-&gt;query = $this-&gt;conn-&gt;query('select');</pre>
+														<pre class="line ">158    		$this-&gt;model_name = strtolower(get_class($this));</pre>
+													</div>
+					</div>
+														<div class="block ">
+						<div class="file">/home/ubuntu/FrameworkBenchmarks/php-phpixie/vendor/phpixie/orm/classes/PHPixie/ORM.php</div>
+						<div class="code">
+														
+														<pre class="line ">44    	public function get($name, $id = null)</pre>
+														<pre class="line ">45    	{</pre>
+														<pre class="line ">46    		$model = $this-&gt;pixie-&gt;app_namespace.&quot;Model\\&quot;.ucfirst($name);</pre>
+														<pre class="line highlight">47    		$model = new $model($this-&gt;pixie);</pre>
+														<pre class="line ">48    		if ($id != null)</pre>
+														<pre class="line ">49    		{</pre>
+													</div>
+					</div>
+														<div class="block ">
+						<div class="file">/home/ubuntu/FrameworkBenchmarks/php-phpixie/classes/App/Controller/Benchmark.php</div>
+						<div class="code">
+														
+														<pre class="line ">67    	}</pre>
+														<pre class="line ">68    	</pre>
+														<pre class="line ">69    	protected function fetch_random_world() {</pre>
+														<pre class="line highlight">70    		return $this-&gt;pixie-&gt;orm-&gt;get('world')</pre>
+														<pre class="line ">71    				-&gt;where('id', rand(1, 10000))</pre>
+														<pre class="line ">72    				-&gt;find();</pre>
+													</div>
+					</div>
+														<div class="block ">
+						<div class="file">/home/ubuntu/FrameworkBenchmarks/php-phpixie/classes/App/Controller/Benchmark.php</div>
+						<div class="code">
+														
+														<pre class="line ">22    			$n = 500;</pre>
+														<pre class="line ">23    		$res = array();</pre>
+														<pre class="line ">24    		for ($i = 0; $i &lt; $n; $i++)</pre>
+														<pre class="line highlight">25    			$res[] = $this-&gt;fetch_random_world()-&gt;as_array();</pre>
+														<pre class="line ">26    		$this-&gt;response-&gt;body = json_encode($res);</pre>
+														<pre class="line ">27    	}</pre>
+													</div>
+					</div>
+														<div class="block ">
+						<div class="file">/home/ubuntu/FrameworkBenchmarks/php-phpixie/vendor/phpixie/core/classes/PHPixie/Controller.php</div>
+						<div class="code">
+														
+														<pre class="line ">103    		$this-&gt;execute = true;</pre>
+														<pre class="line ">104    		$this-&gt;before();</pre>
+														<pre class="line ">105    		if ($this-&gt;execute)</pre>
+														<pre class="line highlight">106    			$this-&gt;$action();</pre>
+														<pre class="line ">107    		if ($this-&gt;execute)</pre>
+														<pre class="line ">108    			$this-&gt;after();</pre>
+													</div>
+					</div>
+														<div class="block ">
+						<div class="file">/home/ubuntu/FrameworkBenchmarks/php-phpixie/vendor/phpixie/core/classes/PHPixie/Request.php</div>
+						<div class="code">
+														
+														<pre class="line ">175    		$class = $this-&gt;param('namespace',$this-&gt;pixie-&gt;app_namespace).'Controller\\'.ucfirst($this-&gt;param('controller'));</pre>
+														<pre class="line ">176    		$controller = $this-&gt;pixie-&gt;controller($class);</pre>
+														<pre class="line ">177    		$controller-&gt;request = $this;</pre>
+														<pre class="line highlight">178    		$controller-&gt;run($this-&gt;param('action'));</pre>
+														<pre class="line ">179    		return $controller-&gt;response;</pre>
+														<pre class="line ">180    	}</pre>
+													</div>
+					</div>
+														<div class="block ">
+						<div class="file">/home/ubuntu/FrameworkBenchmarks/php-phpixie/vendor/phpixie/core/classes/PHPixie/Pixie.php</div>
+						<div class="code">
+														
+														<pre class="line ">219    		try {</pre>
+														<pre class="line ">220    		</pre>
+														<pre class="line ">221    			$request =  $this-&gt;http_request();</pre>
+														<pre class="line highlight">222    			$response = $request-&gt;execute();</pre>
+														<pre class="line ">223    			$response-&gt;send_headers()-&gt;send_body();</pre>
+														<pre class="line ">224    			</pre>
+													</div>
+					</div>
+														<div class="block ">
+						<div class="file">/home/ubuntu/FrameworkBenchmarks/php-phpixie/web/index.php</div>
+						<div class="code">
+														
+														<pre class="line ">4    $loader-&gt;add('', $root.'/classes/');</pre>
+														<pre class="line ">5    </pre>
+														<pre class="line ">6    $pixie = new \App\Pixie();</pre>
+														<pre class="line highlight">7    $pixie-&gt;bootstrap($root)-&gt;handle_http_request();</pre>
+													</div>
+					</div>
+												</div>
+		</div>
+	</body>
+</html>
+
+/queries?queries=2 - FAIL
+
+-----------------------------------------------------
+
+HTTP/1.1 503 Service Temporarily Unavailable
+Server: nginx/1.4.1
+Date: Sun, 29 Jun 2014 00:52:05 GMT
+Content-Type: text/html
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: PHP/5.4.13
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Error</title>
+		<style>
+			html{
+				width:100%;
+				min-height:100%;
+				font-family:'Verdana';
+				font-size:14px;
+			}
+			body{
+
+				min-height:100%;
+				background: #a90329; /* Old browsers */
+				background: -moz-radial-gradient(center, ellipse cover, #a90329 0%, #6d0019 100%); /* FF3.6+ */
+				background: -webkit-radial-gradient(center, ellipse cover, #a90329 0%,#6d0019 100%); /* Chrome10+,Safari5.1+ */
+			}
+			#content{
+				width:1000px;
+				margin:auto;
+				padding:10px 0px;
+				background:#eee;
+			}
+			.file{
+				font-weight:bold;
+			}
+			.block{
+				border-bottom:1px solid #000;
+				margin:10px;
+			}
+			.code{
+				
+				padding:10px;
+			}
+			.highlight{
+				background:#efecd0;
+			}
+			#exception{
+				font-size:25px;
+				font-weight:bold;
+				padding:10px;
+			}
+			#debug{
+				border-bottom: 1px solid black;
+				margin: 10px;
+			}
+			#log{
+				font-size:15px;
+				font-weight:bold;
+				padding:5px;
+			}
+			.log{
+				padding:10px;
+				border-bottom: 1px solid black;
+			}
+			.log.odd{
+				
+			}
+			pre{
+				margin:0px;
+			}
+			.thick{
+				border-width:2px;
+			}
+		</style>
+	</head>
+	<body>
+				<div id="content">
+			<div id="exception">SQLSTATE[HY000] [2002] No such file or directory</div>
+			<div id="blocks">
+									<div class="block ">
+						<div class="file">/home/ubuntu/FrameworkBenchmarks/php-phpixie/vendor/phpixie/db/classes/PHPixie/DB/PDO/Connection.php</div>
+						<div class="code">
+														
+														<pre class="line ">38    			$pixie-&gt;config-&gt;get(&quot;db.{$config}.connection&quot;),</pre>
+														<pre class="line ">39    			$pixie-&gt;config-&gt;get(&quot;db.{$config}.user&quot;, ''),</pre>
+														<pre class="line ">40    			$pixie-&gt;config-&gt;get(&quot;db.{$config}.password&quot;, '')</pre>
+														<pre class="line highlight">41    		);</pre>
+														<pre class="line ">42    		$this-&gt;conn-&gt;setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);</pre>
+														<pre class="line ">43    		$this-&gt;db_type = strtolower(str_replace('PDO_', '', $this-&gt;conn-&gt;getAttribute(\PDO::ATTR_DRIVER_NAME)));</pre>
+													</div>
+					</div>
+														<div class="block ">
+						<div class="file">/home/ubuntu/FrameworkBenchmarks/php-phpixie/vendor/phpixie/db/classes/PHPixie/DB.php</div>
+						<div class="code">
+														
+														<pre class="line ">46    		if (!isset($this-&gt;db_instances[$config])) {</pre>
+														<pre class="line ">47    			$driver = $this-&gt;pixie-&gt;config-&gt;get(&quot;db.{$config}.driver&quot;);</pre>
+														<pre class="line ">48    			$driver = &quot;\\PHPixie\\DB\\&quot;.$driver.&quot;\\Connection&quot;;</pre>
+														<pre class="line highlight">49    			$this-&gt;db_instances[$config] = new $driver($this-&gt;pixie, $config);</pre>
+														<pre class="line ">50    		}</pre>
+														<pre class="line ">51    		return $this-&gt;db_instances[$config];</pre>
+													</div>
+					</div>
+														<div class="block ">
+						<div class="file">/home/ubuntu/FrameworkBenchmarks/php-phpixie/vendor/phpixie/orm/classes/PHPixie/ORM/Model.php</div>
+						<div class="code">
+														
+														<pre class="line ">153    	public function __construct($pixie)</pre>
+														<pre class="line ">154    	{</pre>
+														<pre class="line ">155    		$this-&gt;pixie = $pixie;</pre>
+														<pre class="line highlight">156    		$this-&gt;conn = $pixie-&gt;db-&gt;get($this-&gt;connection);</pre>
+														<pre class="line ">157    		$this-&gt;query = $this-&gt;conn-&gt;query('select');</pre>
+														<pre class="line ">158    		$this-&gt;model_name = strtolower(get_class($this));</pre>
+													</div>
+					</div>
+														<div class="block ">
+						<div class="file">/home/ubuntu/FrameworkBenchmarks/php-phpixie/vendor/phpixie/orm/classes/PHPixie/ORM.php</div>
+						<div class="code">
+														
+														<pre class="line ">44    	public function get($name, $id = null)</pre>
+														<pre class="line ">45    	{</pre>
+														<pre class="line ">46    		$model = $this-&gt;pixie-&gt;app_namespace.&quot;Model\\&quot;.ucfirst($name);</pre>
+														<pre class="line highlight">47    		$model = new $model($this-&gt;pixie);</pre>
+														<pre class="line ">48    		if ($id != null)</pre>
+														<pre class="line ">49    		{</pre>
+													</div>
+					</div>
+														<div class="block ">
+						<div class="file">/home/ubuntu/FrameworkBenchmarks/php-phpixie/classes/App/Controller/Benchmark.php</div>
+						<div class="code">
+														
+														<pre class="line ">67    	}</pre>
+														<pre class="line ">68    	</pre>
+														<pre class="line ">69    	protected function fetch_random_world() {</pre>
+														<pre class="line highlight">70    		return $this-&gt;pixie-&gt;orm-&gt;get('world')</pre>
+														<pre class="line ">71    				-&gt;where('id', rand(1, 10000))</pre>
+														<pre class="line ">72    				-&gt;find();</pre>
+													</div>
+					</div>
+														<div class="block ">
+						<div class="file">/home/ubuntu/FrameworkBenchmarks/php-phpixie/classes/App/Controller/Benchmark.php</div>
+						<div class="code">
+														
+														<pre class="line ">22    			$n = 500;</pre>
+														<pre class="line ">23    		$res = array();</pre>
+														<pre class="line ">24    		for ($i = 0; $i &lt; $n; $i++)</pre>
+														<pre class="line highlight">25    			$res[] = $this-&gt;fetch_random_world()-&gt;as_array();</pre>
+														<pre class="line ">26    		$this-&gt;response-&gt;body = json_encode($res);</pre>
+														<pre class="line ">27    	}</pre>
+													</div>
+					</div>
+														<div class="block ">
+						<div class="file">/home/ubuntu/FrameworkBenchmarks/php-phpixie/vendor/phpixie/core/classes/PHPixie/Controller.php</div>
+						<div class="code">
+														
+														<pre class="line ">103    		$this-&gt;execute = true;</pre>
+														<pre class="line ">104    		$this-&gt;before();</pre>
+														<pre class="line ">105    		if ($this-&gt;execute)</pre>
+														<pre class="line highlight">106    			$this-&gt;$action();</pre>
+														<pre class="line ">107    		if ($this-&gt;execute)</pre>
+														<pre class="line ">108    			$this-&gt;after();</pre>
+													</div>
+					</div>
+														<div class="block ">
+						<div class="file">/home/ubuntu/FrameworkBenchmarks/php-phpixie/vendor/phpixie/core/classes/PHPixie/Request.php</div>
+						<div class="code">
+														
+														<pre class="line ">175    		$class = $this-&gt;param('namespace',$this-&gt;pixie-&gt;app_namespace).'Controller\\'.ucfirst($this-&gt;param('controller'));</pre>
+														<pre class="line ">176    		$controller = $this-&gt;pixie-&gt;controller($class);</pre>
+														<pre class="line ">177    		$controller-&gt;request = $this;</pre>
+														<pre class="line highlight">178    		$controller-&gt;run($this-&gt;param('action'));</pre>
+														<pre class="line ">179    		return $controller-&gt;response;</pre>
+														<pre class="line ">180    	}</pre>
+													</div>
+					</div>
+														<div class="block ">
+						<div class="file">/home/ubuntu/FrameworkBenchmarks/php-phpixie/vendor/phpixie/core/classes/PHPixie/Pixie.php</div>
+						<div class="code">
+														
+														<pre class="line ">219    		try {</pre>
+														<pre class="line ">220    		</pre>
+														<pre class="line ">221    			$request =  $this-&gt;http_request();</pre>
+														<pre class="line highlight">222    			$response = $request-&gt;execute();</pre>
+														<pre class="line ">223    			$response-&gt;send_headers()-&gt;send_body();</pre>
+														<pre class="line ">224    			</pre>
+													</div>
+					</div>
+														<div class="block ">
+						<div class="file">/home/ubuntu/FrameworkBenchmarks/php-phpixie/web/index.php</div>
+						<div class="code">
+														
+														<pre class="line ">4    $loader-&gt;add('', $root.'/classes/');</pre>
+														<pre class="line ">5    </pre>
+														<pre class="line ">6    $pixie = new \App\Pixie();</pre>
+														<pre class="line highlight">7    $pixie-&gt;bootstrap($root)-&gt;handle_http_request();</pre>
+													</div>
+					</div>
+												</div>
+		</div>
+	</body>
+</html>
+
+/queries?queries=0 - WARNING
+
+-----------------------------------------------------
+
+HTTP/1.1 503 Service Temporarily Unavailable
+Server: nginx/1.4.1
+Date: Sun, 29 Jun 2014 00:52:05 GMT
+Content-Type: text/html
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: PHP/5.4.13
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Error</title>
+		<style>
+			html{
+				width:100%;
+				min-height:100%;
+				font-family:'Verdana';
+				font-size:14px;
+			}
+			body{
+
+				min-height:100%;
+				background: #a90329; /* Old browsers */
+				background: -moz-radial-gradient(center, ellipse cover, #a90329 0%, #6d0019 100%); /* FF3.6+ */
+				background: -webkit-radial-gradient(center, ellipse cover, #a90329 0%,#6d0019 100%); /* Chrome10+,Safari5.1+ */
+			}
+			#content{
+				width:1000px;
+				margin:auto;
+				padding:10px 0px;
+				background:#eee;
+			}
+			.file{
+				font-weight:bold;
+			}
+			.block{
+				border-bottom:1px solid #000;
+				margin:10px;
+			}
+			.code{
+				
+				padding:10px;
+			}
+			.highlight{
+				background:#efecd0;
+			}
+			#exception{
+				font-size:25px;
+				font-weight:bold;
+				padding:10px;
+			}
+			#debug{
+				border-bottom: 1px solid black;
+				margin: 10px;
+			}
+			#log{
+				font-size:15px;
+				font-weight:bold;
+				padding:5px;
+			}
+			.log{
+				padding:10px;
+				border-bottom: 1px solid black;
+			}
+			.log.odd{
+				
+			}
+			pre{
+				margin:0px;
+			}
+			.thick{
+				border-width:2px;
+			}
+		</style>
+	</head>
+	<body>
+				<div id="content">
+			<div id="exception">SQLSTATE[HY000] [2002] No such file or directory</div>
+			<div id="blocks">
+									<div class="block ">
+						<div class="file">/home/ubuntu/FrameworkBenchmarks/php-phpixie/vendor/phpixie/db/classes/PHPixie/DB/PDO/Connection.php</div>
+						<div class="code">
+														
+														<pre class="line ">38    			$pixie-&gt;config-&gt;get(&quot;db.{$config}.connection&quot;),</pre>
+														<pre class="line ">39    			$pixie-&gt;config-&gt;get(&quot;db.{$config}.user&quot;, ''),</pre>
+														<pre class="line ">40    			$pixie-&gt;config-&gt;get(&quot;db.{$config}.password&quot;, '')</pre>
+														<pre class="line highlight">41    		);</pre>
+														<pre class="line ">42    		$this-&gt;conn-&gt;setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);</pre>
+														<pre class="line ">43    		$this-&gt;db_type = strtolower(str_replace('PDO_', '', $this-&gt;conn-&gt;getAttribute(\PDO::ATTR_DRIVER_NAME)));</pre>
+													</div>
+					</div>
+														<div class="block ">
+						<div class="file">/home/ubuntu/FrameworkBenchmarks/php-phpixie/vendor/phpixie/db/classes/PHPixie/DB.php</div>
+						<div class="code">
+														
+														<pre class="line ">46    		if (!isset($this-&gt;db_instances[$config])) {</pre>
+														<pre class="line ">47    			$driver = $this-&gt;pixie-&gt;config-&gt;get(&quot;db.{$config}.driver&quot;);</pre>
+														<pre class="line ">48    			$driver = &quot;\\PHPixie\\DB\\&quot;.$driver.&quot;\\Connection&quot;;</pre>
+														<pre class="line highlight">49    			$this-&gt;db_instances[$config] = new $driver($this-&gt;pixie, $config);</pre>
+														<pre class="line ">50    		}</pre>
+														<pre class="line ">51    		return $this-&gt;db_instances[$config];</pre>
+													</div>
+					</div>
+														<div class="block ">
+						<div class="file">/home/ubuntu/FrameworkBenchmarks/php-phpixie/vendor/phpixie/orm/classes/PHPixie/ORM/Model.php</div>
+						<div class="code">
+														
+														<pre class="line ">153    	public function __construct($pixie)</pre>
+														<pre class="line ">154    	{</pre>
+														<pre class="line ">155    		$this-&gt;pixie = $pixie;</pre>
+														<pre class="line highlight">156    		$this-&gt;conn = $pixie-&gt;db-&gt;get($this-&gt;connection);</pre>
+														<pre class="line ">157    		$this-&gt;query = $this-&gt;conn-&gt;query('select');</pre>
+														<pre class="line ">158    		$this-&gt;model_name = strtolower(get_class($this));</pre>
+													</div>
+					</div>
+														<div class="block ">
+						<div class="file">/home/ubuntu/FrameworkBenchmarks/php-phpixie/vendor/phpixie/orm/classes/PHPixie/ORM.php</div>
+						<div class="code">
+														
+														<pre class="line ">44    	public function get($name, $id = null)</pre>
+														<pre class="line ">45    	{</pre>
+														<pre class="line ">46    		$model = $this-&gt;pixie-&gt;app_namespace.&quot;Model\\&quot;.ucfirst($name);</pre>
+														<pre class="line highlight">47    		$model = new $model($this-&gt;pixie);</pre>
+														<pre class="line ">48    		if ($id != null)</pre>
+														<pre class="line ">49    		{</pre>
+													</div>
+					</div>
+														<div class="block ">
+						<div class="file">/home/ubuntu/FrameworkBenchmarks/php-phpixie/classes/App/Controller/Benchmark.php</div>
+						<div class="code">
+														
+														<pre class="line ">67    	}</pre>
+														<pre class="line ">68    	</pre>
+														<pre class="line ">69    	protected function fetch_random_world() {</pre>
+														<pre class="line highlight">70    		return $this-&gt;pixie-&gt;orm-&gt;get('world')</pre>
+														<pre class="line ">71    				-&gt;where('id', rand(1, 10000))</pre>
+														<pre class="line ">72    				-&gt;find();</pre>
+													</div>
+					</div>
+														<div class="block ">
+						<div class="file">/home/ubuntu/FrameworkBenchmarks/php-phpixie/classes/App/Controller/Benchmark.php</div>
+						<div class="code">
+														
+														<pre class="line ">22    			$n = 500;</pre>
+														<pre class="line ">23    		$res = array();</pre>
+														<pre class="line ">24    		for ($i = 0; $i &lt; $n; $i++)</pre>
+														<pre class="line highlight">25    			$res[] = $this-&gt;fetch_random_world()-&gt;as_array();</pre>
+														<pre class="line ">26    		$this-&gt;response-&gt;body = json_encode($res);</pre>
+														<pre class="line ">27    	}</pre>
+													</div>
+					</div>
+														<div class="block ">
+						<div class="file">/home/ubuntu/FrameworkBenchmarks/php-phpixie/vendor/phpixie/core/classes/PHPixie/Controller.php</div>
+						<div class="code">
+														
+														<pre class="line ">103    		$this-&gt;execute = true;</pre>
+														<pre class="line ">104    		$this-&gt;before();</pre>
+														<pre class="line ">105    		if ($this-&gt;execute)</pre>
+														<pre class="line highlight">106    			$this-&gt;$action();</pre>
+														<pre class="line ">107    		if ($this-&gt;execute)</pre>
+														<pre class="line ">108    			$this-&gt;after();</pre>
+													</div>
+					</div>
+														<div class="block ">
+						<div class="file">/home/ubuntu/FrameworkBenchmarks/php-phpixie/vendor/phpixie/core/classes/PHPixie/Request.php</div>
+						<div class="code">
+														
+														<pre class="line ">175    		$class = $this-&gt;param('namespace',$this-&gt;pixie-&gt;app_namespace).'Controller\\'.ucfirst($this-&gt;param('controller'));</pre>
+														<pre class="line ">176    		$controller = $this-&gt;pixie-&gt;controller($class);</pre>
+														<pre class="line ">177    		$controller-&gt;request = $this;</pre>
+														<pre class="line highlight">178    		$controller-&gt;run($this-&gt;param('action'));</pre>
+														<pre class="line ">179    		return $controller-&gt;response;</pre>
+														<pre class="line ">180    	}</pre>
+													</div>
+					</div>
+														<div class="block ">
+						<div class="file">/home/ubuntu/FrameworkBenchmarks/php-phpixie/vendor/phpixie/core/classes/PHPixie/Pixie.php</div>
+						<div class="code">
+														
+														<pre class="line ">219    		try {</pre>
+														<pre class="line ">220    		</pre>
+														<pre class="line ">221    			$request =  $this-&gt;http_request();</pre>
+														<pre class="line highlight">222    			$response = $request-&gt;execute();</pre>
+														<pre class="line ">223    			$response-&gt;send_headers()-&gt;send_body();</pre>
+														<pre class="line ">224    			</pre>
+													</div>
+					</div>
+														<div class="block ">
+						<div class="file">/home/ubuntu/FrameworkBenchmarks/php-phpixie/web/index.php</div>
+						<div class="code">
+														
+														<pre class="line ">4    $loader-&gt;add('', $root.'/classes/');</pre>
+														<pre class="line ">5    </pre>
+														<pre class="line ">6    $pixie = new \App\Pixie();</pre>
+														<pre class="line highlight">7    $pixie-&gt;bootstrap($root)-&gt;handle_http_request();</pre>
+													</div>
+					</div>
+												</div>
+		</div>
+	</body>
+</html>
+
+/queries?queries=foo - WARNING
+
+-----------------------------------------------------
+
+HTTP/1.1 503 Service Temporarily Unavailable
+Server: nginx/1.4.1
+Date: Sun, 29 Jun 2014 00:52:05 GMT
+Content-Type: text/html
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: PHP/5.4.13
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Error</title>
+		<style>
+			html{
+				width:100%;
+				min-height:100%;
+				font-family:'Verdana';
+				font-size:14px;
+			}
+			body{
+
+				min-height:100%;
+				background: #a90329; /* Old browsers */
+				background: -moz-radial-gradient(center, ellipse cover, #a90329 0%, #6d0019 100%); /* FF3.6+ */
+				background: -webkit-radial-gradient(center, ellipse cover, #a90329 0%,#6d0019 100%); /* Chrome10+,Safari5.1+ */
+			}
+			#content{
+				width:1000px;
+				margin:auto;
+				padding:10px 0px;
+				background:#eee;
+			}
+			.file{
+				font-weight:bold;
+			}
+			.block{
+				border-bottom:1px solid #000;
+				margin:10px;
+			}
+			.code{
+				
+				padding:10px;
+			}
+			.highlight{
+				background:#efecd0;
+			}
+			#exception{
+				font-size:25px;
+				font-weight:bold;
+				padding:10px;
+			}
+			#debug{
+				border-bottom: 1px solid black;
+				margin: 10px;
+			}
+			#log{
+				font-size:15px;
+				font-weight:bold;
+				padding:5px;
+			}
+			.log{
+				padding:10px;
+				border-bottom: 1px solid black;
+			}
+			.log.odd{
+				
+			}
+			pre{
+				margin:0px;
+			}
+			.thick{
+				border-width:2px;
+			}
+		</style>
+	</head>
+	<body>
+				<div id="content">
+			<div id="exception">SQLSTATE[HY000] [2002] No such file or directory</div>
+			<div id="blocks">
+									<div class="block ">
+						<div class="file">/home/ubuntu/FrameworkBenchmarks/php-phpixie/vendor/phpixie/db/classes/PHPixie/DB/PDO/Connection.php</div>
+						<div class="code">
+														
+														<pre class="line ">38    			$pixie-&gt;config-&gt;get(&quot;db.{$config}.connection&quot;),</pre>
+														<pre class="line ">39    			$pixie-&gt;config-&gt;get(&quot;db.{$config}.user&quot;, ''),</pre>
+														<pre class="line ">40    			$pixie-&gt;config-&gt;get(&quot;db.{$config}.password&quot;, '')</pre>
+														<pre class="line highlight">41    		);</pre>
+														<pre class="line ">42    		$this-&gt;conn-&gt;setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);</pre>
+														<pre class="line ">43    		$this-&gt;db_type = strtolower(str_replace('PDO_', '', $this-&gt;conn-&gt;getAttribute(\PDO::ATTR_DRIVER_NAME)));</pre>
+													</div>
+					</div>
+														<div class="block ">
+						<div class="file">/home/ubuntu/FrameworkBenchmarks/php-phpixie/vendor/phpixie/db/classes/PHPixie/DB.php</div>
+						<div class="code">
+														
+														<pre class="line ">46    		if (!isset($this-&gt;db_instances[$config])) {</pre>
+														<pre class="line ">47    			$driver = $this-&gt;pixie-&gt;config-&gt;get(&quot;db.{$config}.driver&quot;);</pre>
+														<pre class="line ">48    			$driver = &quot;\\PHPixie\\DB\\&quot;.$driver.&quot;\\Connection&quot;;</pre>
+														<pre class="line highlight">49    			$this-&gt;db_instances[$config] = new $driver($this-&gt;pixie, $config);</pre>
+														<pre class="line ">50    		}</pre>
+														<pre class="line ">51    		return $this-&gt;db_instances[$config];</pre>
+													</div>
+					</div>
+														<div class="block ">
+						<div class="file">/home/ubuntu/FrameworkBenchmarks/php-phpixie/vendor/phpixie/orm/classes/PHPixie/ORM/Model.php</div>
+						<div class="code">
+														
+														<pre class="line ">153    	public function __construct($pixie)</pre>
+														<pre class="line ">154    	{</pre>
+														<pre class="line ">155    		$this-&gt;pixie = $pixie;</pre>
+														<pre class="line highlight">156    		$this-&gt;conn = $pixie-&gt;db-&gt;get($this-&gt;connection);</pre>
+														<pre class="line ">157    		$this-&gt;query = $this-&gt;conn-&gt;query('select');</pre>
+														<pre class="line ">158    		$this-&gt;model_name = strtolower(get_class($this));</pre>
+													</div>
+					</div>
+														<div class="block ">
+						<div class="file">/home/ubuntu/FrameworkBenchmarks/php-phpixie/vendor/phpixie/orm/classes/PHPixie/ORM.php</div>
+						<div class="code">
+														
+														<pre class="line ">44    	public function get($name, $id = null)</pre>
+														<pre class="line ">45    	{</pre>
+														<pre class="line ">46    		$model = $this-&gt;pixie-&gt;app_namespace.&quot;Model\\&quot;.ucfirst($name);</pre>
+														<pre class="line highlight">47    		$model = new $model($this-&gt;pixie);</pre>
+														<pre class="line ">48    		if ($id != null)</pre>
+														<pre class="line ">49    		{</pre>
+													</div>
+					</div>
+														<div class="block ">
+						<div class="file">/home/ubuntu/FrameworkBenchmarks/php-phpixie/classes/App/Controller/Benchmark.php</div>
+						<div class="code">
+														
+														<pre class="line ">67    	}</pre>
+														<pre class="line ">68    	</pre>
+														<pre class="line ">69    	protected function fetch_random_world() {</pre>
+														<pre class="line highlight">70    		return $this-&gt;pixie-&gt;orm-&gt;get('world')</pre>
+														<pre class="line ">71    				-&gt;where('id', rand(1, 10000))</pre>
+														<pre class="line ">72    				-&gt;find();</pre>
+													</div>
+					</div>
+														<div class="block ">
+						<div class="file">/home/ubuntu/FrameworkBenchmarks/php-phpixie/classes/App/Controller/Benchmark.php</div>
+						<div class="code">
+														
+														<pre class="line ">22    			$n = 500;</pre>
+														<pre class="line ">23    		$res = array();</pre>
+														<pre class="line ">24    		for ($i = 0; $i &lt; $n; $i++)</pre>
+														<pre class="line highlight">25    			$res[] = $this-&gt;fetch_random_world()-&gt;as_array();</pre>
+														<pre class="line ">26    		$this-&gt;response-&gt;body = json_encode($res);</pre>
+														<pre class="line ">27    	}</pre>
+													</div>
+					</div>
+														<div class="block ">
+						<div class="file">/home/ubuntu/FrameworkBenchmarks/php-phpixie/vendor/phpixie/core/classes/PHPixie/Controller.php</div>
+						<div class="code">
+														
+														<pre class="line ">103    		$this-&gt;execute = true;</pre>
+														<pre class="line ">104    		$this-&gt;before();</pre>
+														<pre class="line ">105    		if ($this-&gt;execute)</pre>
+														<pre class="line highlight">106    			$this-&gt;$action();</pre>
+														<pre class="line ">107    		if ($this-&gt;execute)</pre>
+														<pre class="line ">108    			$this-&gt;after();</pre>
+													</div>
+					</div>
+														<div class="block ">
+						<div class="file">/home/ubuntu/FrameworkBenchmarks/php-phpixie/vendor/phpixie/core/classes/PHPixie/Request.php</div>
+						<div class="code">
+														
+														<pre class="line ">175    		$class = $this-&gt;param('namespace',$this-&gt;pixie-&gt;app_namespace).'Controller\\'.ucfirst($this-&gt;param('controller'));</pre>
+														<pre class="line ">176    		$controller = $this-&gt;pixie-&gt;controller($class);</pre>
+														<pre class="line ">177    		$controller-&gt;request = $this;</pre>
+														<pre class="line highlight">178    		$controller-&gt;run($this-&gt;param('action'));</pre>
+														<pre class="line ">179    		return $controller-&gt;response;</pre>
+														<pre class="line ">180    	}</pre>
+													</div>
+					</div>
+														<div class="block ">
+						<div class="file">/home/ubuntu/FrameworkBenchmarks/php-phpixie/vendor/phpixie/core/classes/PHPixie/Pixie.php</div>
+						<div class="code">
+														
+														<pre class="line ">219    		try {</pre>
+														<pre class="line ">220    		</pre>
+														<pre class="line ">221    			$request =  $this-&gt;http_request();</pre>
+														<pre class="line highlight">222    			$response = $request-&gt;execute();</pre>
+														<pre class="line ">223    			$response-&gt;send_headers()-&gt;send_body();</pre>
+														<pre class="line ">224    			</pre>
+													</div>
+					</div>
+														<div class="block ">
+						<div class="file">/home/ubuntu/FrameworkBenchmarks/php-phpixie/web/index.php</div>
+						<div class="code">
+														
+														<pre class="line ">4    $loader-&gt;add('', $root.'/classes/');</pre>
+														<pre class="line ">5    </pre>
+														<pre class="line ">6    $pixie = new \App\Pixie();</pre>
+														<pre class="line highlight">7    $pixie-&gt;bootstrap($root)-&gt;handle_http_request();</pre>
+													</div>
+					</div>
+												</div>
+		</div>
+	</body>
+</html>
+
+/queries?queries=501 - WARNING
+
+-----------------------------------------------------
+
+
+VALIDATING QUERY ... FAIL
+
+
+-----------------------------------------------------
+  VERIFYING FORTUNE (/fortunes)
+-----------------------------------------------------
+HTTP/1.1 503 Service Temporarily Unavailable
+Server: nginx/1.4.1
+Date: Sun, 29 Jun 2014 00:52:05 GMT
+Content-Type: text/html
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: PHP/5.4.13
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Error</title>
+		<style>
+			html{
+				width:100%;
+				min-height:100%;
+				font-family:'Verdana';
+				font-size:14px;
+			}
+			body{
+
+				min-height:100%;
+				background: #a90329; /* Old browsers */
+				background: -moz-radial-gradient(center, ellipse cover, #a90329 0%, #6d0019 100%); /* FF3.6+ */
+				background: -webkit-radial-gradient(center, ellipse cover, #a90329 0%,#6d0019 100%); /* Chrome10+,Safari5.1+ */
+			}
+			#content{
+				width:1000px;
+				margin:auto;
+				padding:10px 0px;
+				background:#eee;
+			}
+			.file{
+				font-weight:bold;
+			}
+			.block{
+				border-bottom:1px solid #000;
+				margin:10px;
+			}
+			.code{
+				
+				padding:10px;
+			}
+			.highlight{
+				background:#efecd0;
+			}
+			#exception{
+				font-size:25px;
+				font-weight:bold;
+				padding:10px;
+			}
+			#debug{
+				border-bottom: 1px solid black;
+				margin: 10px;
+			}
+			#log{
+				font-size:15px;
+				font-weight:bold;
+				padding:5px;
+			}
+			.log{
+				padding:10px;
+				border-bottom: 1px solid black;
+			}
+			.log.odd{
+				
+			}
+			pre{
+				margin:0px;
+			}
+			.thick{
+				border-width:2px;
+			}
+		</style>
+	</head>
+	<body>
+				<div id="content">
+			<div id="exception">SQLSTATE[HY000] [2002] No such file or directory</div>
+			<div id="blocks">
+									<div class="block ">
+						<div class="file">/home/ubuntu/FrameworkBenchmarks/php-phpixie/vendor/phpixie/db/classes/PHPixie/DB/PDO/Connection.php</div>
+						<div class="code">
+														
+														<pre class="line ">38    			$pixie-&gt;config-&gt;get(&quot;db.{$config}.connection&quot;),</pre>
+														<pre class="line ">39    			$pixie-&gt;config-&gt;get(&quot;db.{$config}.user&quot;, ''),</pre>
+														<pre class="line ">40    			$pixie-&gt;config-&gt;get(&quot;db.{$config}.password&quot;, '')</pre>
+														<pre class="line highlight">41    		);</pre>
+														<pre class="line ">42    		$this-&gt;conn-&gt;setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);</pre>
+														<pre class="line ">43    		$this-&gt;db_type = strtolower(str_replace('PDO_', '', $this-&gt;conn-&gt;getAttribute(\PDO::ATTR_DRIVER_NAME)));</pre>
+													</div>
+					</div>
+														<div class="block ">
+						<div class="file">/home/ubuntu/FrameworkBenchmarks/php-phpixie/vendor/phpixie/db/classes/PHPixie/DB.php</div>
+						<div class="code">
+														
+														<pre class="line ">46    		if (!isset($this-&gt;db_instances[$config])) {</pre>
+														<pre class="line ">47    			$driver = $this-&gt;pixie-&gt;config-&gt;get(&quot;db.{$config}.driver&quot;);</pre>
+														<pre class="line ">48    			$driver = &quot;\\PHPixie\\DB\\&quot;.$driver.&quot;\\Connection&quot;;</pre>
+														<pre class="line highlight">49    			$this-&gt;db_instances[$config] = new $driver($this-&gt;pixie, $config);</pre>
+														<pre class="line ">50    		}</pre>
+														<pre class="line ">51    		return $this-&gt;db_instances[$config];</pre>
+													</div>
+					</div>
+														<div class="block ">
+						<div class="file">/home/ubuntu/FrameworkBenchmarks/php-phpixie/vendor/phpixie/orm/classes/PHPixie/ORM/Model.php</div>
+						<div class="code">
+														
+														<pre class="line ">153    	public function __construct($pixie)</pre>
+														<pre class="line ">154    	{</pre>
+														<pre class="line ">155    		$this-&gt;pixie = $pixie;</pre>
+														<pre class="line highlight">156    		$this-&gt;conn = $pixie-&gt;db-&gt;get($this-&gt;connection);</pre>
+														<pre class="line ">157    		$this-&gt;query = $this-&gt;conn-&gt;query('select');</pre>
+														<pre class="line ">158    		$this-&gt;model_name = strtolower(get_class($this));</pre>
+													</div>
+					</div>
+														<div class="block ">
+						<div class="file">/home/ubuntu/FrameworkBenchmarks/php-phpixie/vendor/phpixie/orm/classes/PHPixie/ORM.php</div>
+						<div class="code">
+														
+														<pre class="line ">44    	public function get($name, $id = null)</pre>
+														<pre class="line ">45    	{</pre>
+														<pre class="line ">46    		$model = $this-&gt;pixie-&gt;app_namespace.&quot;Model\\&quot;.ucfirst($name);</pre>
+														<pre class="line highlight">47    		$model = new $model($this-&gt;pixie);</pre>
+														<pre class="line ">48    		if ($id != null)</pre>
+														<pre class="line ">49    		{</pre>
+													</div>
+					</div>
+														<div class="block ">
+						<div class="file">/home/ubuntu/FrameworkBenchmarks/php-phpixie/classes/App/Controller/Benchmark.php</div>
+						<div class="code">
+														
+														<pre class="line ">27    	}</pre>
+														<pre class="line ">28    	</pre>
+														<pre class="line ">29    	public function action_fortunes() {</pre>
+														<pre class="line highlight">30    		$fortunes = $this-&gt;pixie-&gt; orm-&gt;get('fortune')-&gt;find_all()-&gt;as_array();</pre>
+														<pre class="line ">31    		$fortune = $this-&gt;pixie-&gt;orm-&gt;get('fortune');</pre>
+														<pre class="line ">32    		$fortune-&gt;id = 0;</pre>
+													</div>
+					</div>
+														<div class="block ">
+						<div class="file">/home/ubuntu/FrameworkBenchmarks/php-phpixie/vendor/phpixie/core/classes/PHPixie/Controller.php</div>
+						<div class="code">
+														
+														<pre class="line ">103    		$this-&gt;execute = true;</pre>
+														<pre class="line ">104    		$this-&gt;before();</pre>
+														<pre class="line ">105    		if ($this-&gt;execute)</pre>
+														<pre class="line highlight">106    			$this-&gt;$action();</pre>
+														<pre class="line ">107    		if ($this-&gt;execute)</pre>
+														<pre class="line ">108    			$this-&gt;after();</pre>
+													</div>
+					</div>
+														<div class="block ">
+						<div class="file">/home/ubuntu/FrameworkBenchmarks/php-phpixie/vendor/phpixie/core/classes/PHPixie/Request.php</div>
+						<div class="code">
+														
+														<pre class="line ">175    		$class = $this-&gt;param('namespace',$this-&gt;pixie-&gt;app_namespace).'Controller\\'.ucfirst($this-&gt;param('controller'));</pre>
+														<pre class="line ">176    		$controller = $this-&gt;pixie-&gt;controller($class);</pre>
+														<pre class="line ">177    		$controller-&gt;request = $this;</pre>
+														<pre class="line highlight">178    		$controller-&gt;run($this-&gt;param('action'));</pre>
+														<pre class="line ">179    		return $controller-&gt;response;</pre>
+														<pre class="line ">180    	}</pre>
+													</div>
+					</div>
+														<div class="block ">
+						<div class="file">/home/ubuntu/FrameworkBenchmarks/php-phpixie/vendor/phpixie/core/classes/PHPixie/Pixie.php</div>
+						<div class="code">
+														
+														<pre class="line ">219    		try {</pre>
+														<pre class="line ">220    		</pre>
+														<pre class="line ">221    			$request =  $this-&gt;http_request();</pre>
+														<pre class="line highlight">222    			$response = $request-&gt;execute();</pre>
+														<pre class="line ">223    			$response-&gt;send_headers()-&gt;send_body();</pre>
+														<pre class="line ">224    			</pre>
+													</div>
+					</div>
+														<div class="block ">
+						<div class="file">/home/ubuntu/FrameworkBenchmarks/php-phpixie/web/index.php</div>
+						<div class="code">
+														
+														<pre class="line ">4    $loader-&gt;add('', $root.'/classes/');</pre>
+														<pre class="line ">5    </pre>
+														<pre class="line ">6    $pixie = new \App\Pixie();</pre>
+														<pre class="line highlight">7    $pixie-&gt;bootstrap($root)-&gt;handle_http_request();</pre>
+													</div>
+					</div>
+												</div>
+		</div>
+	</body>
+</html>
+
+VALIDATING FORTUNE ... FAIL
+
+
+-----------------------------------------------------
+  VERIFYING UPDATE (/updates?queries=)
+-----------------------------------------------------
+HTTP/1.1 503 Service Temporarily Unavailable
+Server: nginx/1.4.1
+Date: Sun, 29 Jun 2014 00:52:05 GMT
+Content-Type: text/html
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: PHP/5.4.13
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Error</title>
+		<style>
+			html{
+				width:100%;
+				min-height:100%;
+				font-family:'Verdana';
+				font-size:14px;
+			}
+			body{
+
+				min-height:100%;
+				background: #a90329; /* Old browsers */
+				background: -moz-radial-gradient(center, ellipse cover, #a90329 0%, #6d0019 100%); /* FF3.6+ */
+				background: -webkit-radial-gradient(center, ellipse cover, #a90329 0%,#6d0019 100%); /* Chrome10+,Safari5.1+ */
+			}
+			#content{
+				width:1000px;
+				margin:auto;
+				padding:10px 0px;
+				background:#eee;
+			}
+			.file{
+				font-weight:bold;
+			}
+			.block{
+				border-bottom:1px solid #000;
+				margin:10px;
+			}
+			.code{
+				
+				padding:10px;
+			}
+			.highlight{
+				background:#efecd0;
+			}
+			#exception{
+				font-size:25px;
+				font-weight:bold;
+				padding:10px;
+			}
+			#debug{
+				border-bottom: 1px solid black;
+				margin: 10px;
+			}
+			#log{
+				font-size:15px;
+				font-weight:bold;
+				padding:5px;
+			}
+			.log{
+				padding:10px;
+				border-bottom: 1px solid black;
+			}
+			.log.odd{
+				
+			}
+			pre{
+				margin:0px;
+			}
+			.thick{
+				border-width:2px;
+			}
+		</style>
+	</head>
+	<body>
+				<div id="content">
+			<div id="exception">SQLSTATE[HY000] [2002] No such file or directory</div>
+			<div id="blocks">
+									<div class="block ">
+						<div class="file">/home/ubuntu/FrameworkBenchmarks/php-phpixie/vendor/phpixie/db/classes/PHPixie/DB/PDO/Connection.php</div>
+						<div class="code">
+														
+														<pre class="line ">38    			$pixie-&gt;config-&gt;get(&quot;db.{$config}.connection&quot;),</pre>
+														<pre class="line ">39    			$pixie-&gt;config-&gt;get(&quot;db.{$config}.user&quot;, ''),</pre>
+														<pre class="line ">40    			$pixie-&gt;config-&gt;get(&quot;db.{$config}.password&quot;, '')</pre>
+														<pre class="line highlight">41    		);</pre>
+														<pre class="line ">42    		$this-&gt;conn-&gt;setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);</pre>
+														<pre class="line ">43    		$this-&gt;db_type = strtolower(str_replace('PDO_', '', $this-&gt;conn-&gt;getAttribute(\PDO::ATTR_DRIVER_NAME)));</pre>
+													</div>
+					</div>
+														<div class="block ">
+						<div class="file">/home/ubuntu/FrameworkBenchmarks/php-phpixie/vendor/phpixie/db/classes/PHPixie/DB.php</div>
+						<div class="code">
+														
+														<pre class="line ">46    		if (!isset($this-&gt;db_instances[$config])) {</pre>
+														<pre class="line ">47    			$driver = $this-&gt;pixie-&gt;config-&gt;get(&quot;db.{$config}.driver&quot;);</pre>
+														<pre class="line ">48    			$driver = &quot;\\PHPixie\\DB\\&quot;.$driver.&quot;\\Connection&quot;;</pre>
+														<pre class="line highlight">49    			$this-&gt;db_instances[$config] = new $driver($this-&gt;pixie, $config);</pre>
+														<pre class="line ">50    		}</pre>
+														<pre class="line ">51    		return $this-&gt;db_instances[$config];</pre>
+													</div>
+					</div>
+														<div class="block ">
+						<div class="file">/home/ubuntu/FrameworkBenchmarks/php-phpixie/vendor/phpixie/orm/classes/PHPixie/ORM/Model.php</div>
+						<div class="code">
+														
+														<pre class="line ">153    	public function __construct($pixie)</pre>
+														<pre class="line ">154    	{</pre>
+														<pre class="line ">155    		$this-&gt;pixie = $pixie;</pre>
+														<pre class="line highlight">156    		$this-&gt;conn = $pixie-&gt;db-&gt;get($this-&gt;connection);</pre>
+														<pre class="line ">157    		$this-&gt;query = $this-&gt;conn-&gt;query('select');</pre>
+														<pre class="line ">158    		$this-&gt;model_name = strtolower(get_class($this));</pre>
+													</div>
+					</div>
+														<div class="block ">
+						<div class="file">/home/ubuntu/FrameworkBenchmarks/php-phpixie/vendor/phpixie/orm/classes/PHPixie/ORM.php</div>
+						<div class="code">
+														
+														<pre class="line ">44    	public function get($name, $id = null)</pre>
+														<pre class="line ">45    	{</pre>
+														<pre class="line ">46    		$model = $this-&gt;pixie-&gt;app_namespace.&quot;Model\\&quot;.ucfirst($name);</pre>
+														<pre class="line highlight">47    		$model = new $model($this-&gt;pixie);</pre>
+														<pre class="line ">48    		if ($id != null)</pre>
+														<pre class="line ">49    		{</pre>
+													</div>
+					</div>
+														<div class="block ">
+						<div class="file">/home/ubuntu/FrameworkBenchmarks/php-phpixie/classes/App/Controller/Benchmark.php</div>
+						<div class="code">
+														
+														<pre class="line ">67    	}</pre>
+														<pre class="line ">68    	</pre>
+														<pre class="line ">69    	protected function fetch_random_world() {</pre>
+														<pre class="line highlight">70    		return $this-&gt;pixie-&gt;orm-&gt;get('world')</pre>
+														<pre class="line ">71    				-&gt;where('id', rand(1, 10000))</pre>
+														<pre class="line ">72    				-&gt;find();</pre>
+													</div>
+					</div>
+														<div class="block ">
+						<div class="file">/home/ubuntu/FrameworkBenchmarks/php-phpixie/classes/App/Controller/Benchmark.php</div>
+						<div class="code">
+														
+														<pre class="line ">53    			$n = 500;</pre>
+														<pre class="line ">54    		$res = array();</pre>
+														<pre class="line ">55    		for ($i = 0; $i &lt; $n; $i++) {</pre>
+														<pre class="line highlight">56    			$world = $this-&gt;fetch_random_world();</pre>
+														<pre class="line ">57    			$world-&gt;randomNumber = rand(1, 10000);</pre>
+														<pre class="line ">58    			$world-&gt;save();</pre>
+													</div>
+					</div>
+														<div class="block ">
+						<div class="file">/home/ubuntu/FrameworkBenchmarks/php-phpixie/vendor/phpixie/core/classes/PHPixie/Controller.php</div>
+						<div class="code">
+														
+														<pre class="line ">103    		$this-&gt;execute = true;</pre>
+														<pre class="line ">104    		$this-&gt;before();</pre>
+														<pre class="line ">105    		if ($this-&gt;execute)</pre>
+														<pre class="line highlight">106    			$this-&gt;$action();</pre>
+														<pre class="line ">107    		if ($this-&gt;execute)</pre>
+														<pre class="line ">108    			$this-&gt;after();</pre>
+													</div>
+					</div>
+														<div class="block ">
+						<div class="file">/home/ubuntu/FrameworkBenchmarks/php-phpixie/vendor/phpixie/core/classes/PHPixie/Request.php</div>
+						<div class="code">
+														
+														<pre class="line ">175    		$class = $this-&gt;param('namespace',$this-&gt;pixie-&gt;app_namespace).'Controller\\'.ucfirst($this-&gt;param('controller'));</pre>
+														<pre class="line ">176    		$controller = $this-&gt;pixie-&gt;controller($class);</pre>
+														<pre class="line ">177    		$controller-&gt;request = $this;</pre>
+														<pre class="line highlight">178    		$controller-&gt;run($this-&gt;param('action'));</pre>
+														<pre class="line ">179    		return $controller-&gt;response;</pre>
+														<pre class="line ">180    	}</pre>
+													</div>
+					</div>
+														<div class="block ">
+						<div class="file">/home/ubuntu/FrameworkBenchmarks/php-phpixie/vendor/phpixie/core/classes/PHPixie/Pixie.php</div>
+						<div class="code">
+														
+														<pre class="line ">219    		try {</pre>
+														<pre class="line ">220    		</pre>
+														<pre class="line ">221    			$request =  $this-&gt;http_request();</pre>
+														<pre class="line highlight">222    			$response = $request-&gt;execute();</pre>
+														<pre class="line ">223    			$response-&gt;send_headers()-&gt;send_body();</pre>
+														<pre class="line ">224    			</pre>
+													</div>
+					</div>
+														<div class="block ">
+						<div class="file">/home/ubuntu/FrameworkBenchmarks/php-phpixie/web/index.php</div>
+						<div class="code">
+														
+														<pre class="line ">4    $loader-&gt;add('', $root.'/classes/');</pre>
+														<pre class="line ">5    </pre>
+														<pre class="line ">6    $pixie = new \App\Pixie();</pre>
+														<pre class="line highlight">7    $pixie-&gt;bootstrap($root)-&gt;handle_http_request();</pre>
+													</div>
+					</div>
+												</div>
+		</div>
+	</body>
+</html>
+
+VALIDATING UPDATE ... FAIL
+
+
+-----------------------------------------------------
+  VERIFYING PLAINTEXT (/plaintext)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Server: nginx/1.4.1
+Date: Sun, 29 Jun 2014 00:52:05 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: PHP/5.4.13
+
+Hello, World!
+
+VALIDATING PLAINTEXT ... PASS
+
+
+-----------------------------------------------------
+  Benchmarking php-phpixie ...
+-----------------------------------------------------
+BENCHMARKING JSON ... Complete
+BENCHMARKING DB ... Complete
+BENCHMARKING Query ... Complete
+BENCHMARKING Fortune ... Complete
+BENCHMARKING Update ... Complete
+BENCHMARKING Plaintext ... Complete
+
+-----------------------------------------------------
+  Stopping php-phpixie
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Stopped php-phpixie
+-----------------------------------------------------
+
+----------------------------------------------------
+Saving results through php-phpixie
+----------------------------------------------------

@@ -1,0 +1,156 @@
+test.os.lower() = linux  test.database_os.lower() = linux
+self.results['frameworks'] != None: True
+test.name: silica-raw
+self.results['completed']: {}
+
+=====================================================
+  Beginning silica-raw
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Starting silica-raw
+-----------------------------------------------------
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+mysql start/running, process 27352
+ * Restarting PostgreSQL 9.3 database server
+   ...done.
+Loading composer repositories with package information
+Installing dependencies (including require-dev) from lock file
+Nothing to install or update
+Generating autoload files
+
+-----------------------------------------------------
+  VERIFYING DB (/db)
+-----------------------------------------------------
+HTTP/1.1 500 Internal Server Error
+Server: nginx/1.4.1
+Date: Sun, 29 Jun 2014 04:13:27 GMT
+Content-Type: text/html
+Content-Length: 192
+Connection: close
+
+<html>
+<head><title>500 Internal Server Error</title></head>
+<body bgcolor="white">
+<center><h1>500 Internal Server Error</h1></center>
+<hr><center>nginx/1.4.1</center>
+</body>
+</html>
+
+
+VALIDATING DB ... FAIL
+
+
+-----------------------------------------------------
+  VERIFYING QUERY (/db?queries=2)
+-----------------------------------------------------
+HTTP/1.1 500 Internal Server Error
+Server: nginx/1.4.1
+Date: Sun, 29 Jun 2014 04:13:27 GMT
+Content-Type: text/html
+Content-Length: 192
+Connection: close
+
+<html>
+<head><title>500 Internal Server Error</title></head>
+<body bgcolor="white">
+<center><h1>500 Internal Server Error</h1></center>
+<hr><center>nginx/1.4.1</center>
+</body>
+</html>
+
+
+/db?queries=2 - FAIL
+
+-----------------------------------------------------
+
+HTTP/1.1 500 Internal Server Error
+Server: nginx/1.4.1
+Date: Sun, 29 Jun 2014 04:13:27 GMT
+Content-Type: text/html
+Content-Length: 192
+Connection: close
+
+<html>
+<head><title>500 Internal Server Error</title></head>
+<body bgcolor="white">
+<center><h1>500 Internal Server Error</h1></center>
+<hr><center>nginx/1.4.1</center>
+</body>
+</html>
+
+
+/db?queries=0 - WARNING
+
+-----------------------------------------------------
+
+HTTP/1.1 500 Internal Server Error
+Server: nginx/1.4.1
+Date: Sun, 29 Jun 2014 04:13:27 GMT
+Content-Type: text/html
+Content-Length: 192
+Connection: close
+
+<html>
+<head><title>500 Internal Server Error</title></head>
+<body bgcolor="white">
+<center><h1>500 Internal Server Error</h1></center>
+<hr><center>nginx/1.4.1</center>
+</body>
+</html>
+
+
+/db?queries=foo - WARNING
+
+-----------------------------------------------------
+
+HTTP/1.1 500 Internal Server Error
+Server: nginx/1.4.1
+Date: Sun, 29 Jun 2014 04:13:27 GMT
+Content-Type: text/html
+Content-Length: 192
+Connection: close
+
+<html>
+<head><title>500 Internal Server Error</title></head>
+<body bgcolor="white">
+<center><h1>500 Internal Server Error</h1></center>
+<hr><center>nginx/1.4.1</center>
+</body>
+</html>
+
+
+/db?queries=501 - WARNING
+
+-----------------------------------------------------
+
+
+VALIDATING QUERY ... FAIL
+
+
+-----------------------------------------------------
+  Benchmarking silica-raw ...
+-----------------------------------------------------
+BENCHMARKING DB ... Complete
+BENCHMARKING Query ... Complete
+
+-----------------------------------------------------
+  Stopping silica-raw
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Stopped silica-raw
+-----------------------------------------------------
+
+----------------------------------------------------
+Saving results through silica-raw
+----------------------------------------------------

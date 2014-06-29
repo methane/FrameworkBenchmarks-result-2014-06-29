@@ -1,0 +1,130 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Sun Jun 29 05:19:48 UTC 2014
+
+  System load:  2.64               Processes:           139
+  Usage of /:   69.2% of 19.55GB   Users logged in:     1
+  Memory usage: 25%                IP address for eth0: 10.227.136.45
+  Swap usage:   0%
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer tornado-pypy
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/json
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/json
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    10.06ms   22.11ms  81.95ms   86.55%
+    Req/Sec     1.01k     0.85k    4.33k    66.32%
+  36494 requests in 5.01s, 6.26MB read
+Requests/sec:   7285.85
+Transfer/sec:      1.25MB
+
+---------------------------------------------------------
+ Running Warmup tornado-pypy
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/json
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     6.83ms    2.67ms  47.86ms   64.45%
+    Req/Sec     9.17k   738.22    11.06k    71.87%
+  534668 requests in 14.99s, 91.78MB read
+Requests/sec:  35662.81
+Transfer/sec:      6.12MB
+
+---------------------------------------------------------
+ Concurrency: 8 for tornado-pypy
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   267.24us  324.16us  48.37ms   98.45%
+    Req/Sec     7.69k     1.75k   11.89k    56.91%
+  436292 requests in 15.00s, 74.89MB read
+Requests/sec:  29089.80
+Transfer/sec:      4.99MB
+
+---------------------------------------------------------
+ Concurrency: 16 for tornado-pypy
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   570.13us  468.68us  23.90ms   91.78%
+    Req/Sec     7.71k     1.91k   16.56k    65.92%
+  437747 requests in 15.00s, 75.14MB read
+Requests/sec:  29185.16
+Transfer/sec:      5.01MB
+
+---------------------------------------------------------
+ Concurrency: 32 for tornado-pypy
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.11ms  532.94us  35.59ms   73.04%
+    Req/Sec     7.79k     1.87k   15.67k    73.43%
+  442273 requests in 15.00s, 75.92MB read
+Requests/sec:  29494.16
+Transfer/sec:      5.06MB
+
+---------------------------------------------------------
+ Concurrency: 64 for tornado-pypy
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     2.37ms    0.95ms  36.29ms   79.94%
+    Req/Sec     7.78k     2.14k   16.00k    73.14%
+  442962 requests in 15.00s, 76.04MB read
+Requests/sec:  29537.22
+Transfer/sec:      5.07MB
+
+---------------------------------------------------------
+ Concurrency: 128 for tornado-pypy
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     4.44ms    3.48ms  67.32ms   72.28%
+    Req/Sec     8.12k     2.83k   19.09k    69.98%
+  466618 requests in 15.00s, 80.10MB read
+Requests/sec:  31112.03
+Transfer/sec:      5.34MB
+
+---------------------------------------------------------
+ Concurrency: 256 for tornado-pypy
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     7.20ms    3.81ms  51.64ms   70.48%
+    Req/Sec     9.26k     2.21k   14.48k    64.23%
+  539093 requests in 15.00s, 92.54MB read
+Requests/sec:  35941.81
+Transfer/sec:      6.17MB

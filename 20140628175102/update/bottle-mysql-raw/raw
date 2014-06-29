@@ -1,0 +1,109 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer bottle-mysql-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/raw-updates?queries=2
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/raw-updates?queries=2
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     4.33ms    2.13ms  23.24ms   69.93%
+    Req/Sec   287.53    130.46   666.00     68.14%
+  10656 requests in 5.00s, 2.24MB read
+Requests/sec:   2130.53
+Transfer/sec:    458.90KB
+
+---------------------------------------------------------
+ Running Warmup bottle-mysql-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/raw-updates?queries=2
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/raw-updates?queries=2
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   117.59ms   33.94ms 340.32ms   70.41%
+    Req/Sec   542.96     39.79   642.00     68.82%
+  32764 requests in 15.00s, 6.89MB read
+Requests/sec:   2184.30
+Transfer/sec:    470.47KB
+
+---------------------------------------------------------
+ Queries: 1 for bottle-mysql-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/raw-updates?queries=1
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/raw-updates?queries=1
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    75.10ms   18.44ms 182.99ms   71.79%
+    Req/Sec     0.85k    43.14     0.95k    73.09%
+  51053 requests in 15.00s, 9.19MB read
+Requests/sec:   3403.02
+Transfer/sec:    627.36KB
+
+---------------------------------------------------------
+ Queries: 5 for bottle-mysql-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/raw-updates?queries=5
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/raw-updates?queries=5
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   245.46ms   48.63ms 579.20ms   74.44%
+    Req/Sec   263.39     13.61   333.00     79.80%
+  15807 requests in 15.01s, 4.78MB read
+Requests/sec:   1053.07
+Transfer/sec:    325.90KB
+
+---------------------------------------------------------
+ Queries: 10 for bottle-mysql-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/raw-updates?queries=10
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/raw-updates?queries=10
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   457.06ms  115.02ms   1.15s    69.43%
+    Req/Sec   140.50     12.28   191.00     76.92%
+  8400 requests in 15.06s, 3.81MB read
+Requests/sec:    557.78
+Transfer/sec:    259.16KB
+
+---------------------------------------------------------
+ Queries: 15 for bottle-mysql-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/raw-updates?queries=15
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/raw-updates?queries=15
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   670.39ms  146.43ms   1.53s    69.23%
+    Req/Sec    95.66      8.06   129.00     83.10%
+  5739 requests in 15.02s, 3.47MB read
+Requests/sec:    382.04
+Transfer/sec:    236.78KB
+
+---------------------------------------------------------
+ Queries: 20 for bottle-mysql-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/raw-updates?queries=20
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/raw-updates?queries=20
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   858.52ms  174.33ms   1.67s    71.70%
+    Req/Sec    73.95     11.30   113.00     82.14%
+  4398 requests in 15.04s, 3.33MB read
+  Socket errors: connect 0, read 1, write 0, timeout 0
+Requests/sec:    292.35
+Transfer/sec:    226.59KB

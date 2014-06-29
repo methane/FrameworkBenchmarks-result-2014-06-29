@@ -1,0 +1,91 @@
+test.os.lower() = linux  test.database_os.lower() = linux
+self.results['frameworks'] != None: True
+test.name: scalatra
+self.results['completed']: {}
+
+=====================================================
+  Beginning scalatra
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Starting scalatra
+-----------------------------------------------------
+[0m[[0minfo[0m] [0mLoading project definition from /home/ubuntu/FrameworkBenchmarks/scalatra/project[0m
+[0m[[0minfo[0m] [0mSet current project to scalatra (in build file:/home/ubuntu/FrameworkBenchmarks/scalatra/)[0m
+[0m[[32msuccess[0m] [0mTotal time: 0 s, completed Jun 29, 2014 3:43:54 AM[0m
+[0m[[0minfo[0m] [0mUpdating {file:/home/ubuntu/FrameworkBenchmarks/scalatra/}scalatra-benchmark...[0m
+[0m[[0minfo[0m] [0mGenerating /home/ubuntu/FrameworkBenchmarks/scalatra/target/scala-2.10/resource_managed/main/rebel.xml.[0m
+[0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.10.0 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.scalatra#scalatra_2.10;2.2.0 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.scalatra#scalatra-common_2.10;2.2.0 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.clapper#grizzled-slf4j_2.10;1.0.1 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.slf4j#slf4j-api;1.7.1 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.scalatra.rl#rl_2.10;0.4.2 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving com.googlecode.juniversalchardet#juniversalchardet;1.0.3 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving eu.medsea.mimeutil#mime-util;2.1.3 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving joda-time#joda-time;2.1 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.joda#joda-convert;1.2 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving com.typesafe.akka#akka-actor_2.10;2.1.0 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving com.typesafe#config;1.0.0 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.scalatra#scalatra-json_2.10;2.2.0 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.json4s#json4s-core_2.10;3.1.0 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.json4s#json4s-ast_2.10;3.1.0 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving com.thoughtworks.paranamer#paranamer;2.5.2 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.scala-lang#scalap;2.10.0 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.scala-lang#scala-compiler;2.10.0 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.scala-lang#scala-reflect;2.10.0 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving mysql#mysql-connector-java;5.1.23 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.json4s#json4s-jackson_2.10;3.2.4 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.json4s#json4s-core_2.10;3.2.4 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.json4s#json4s-ast_2.10;3.2.4 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving com.fasterxml.jackson.core#jackson-databind;2.1.2 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving com.fasterxml.jackson.core#jackson-annotations;2.1.1 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving com.fasterxml.jackson.core#jackson-core;2.1.1 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving ch.qos.logback#logback-classic;1.0.6 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving ch.qos.logback#logback-core;1.0.6 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.eclipse.jetty.orbit#javax.servlet;3.0.0.v201112011016 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.eclipse.jetty#jetty-webapp;8.1.8.v20121106 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.eclipse.jetty#jetty-xml;8.1.8.v20121106 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.eclipse.jetty#jetty-util;8.1.8.v20121106 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.eclipse.jetty#jetty-servlet;8.1.8.v20121106 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.eclipse.jetty#jetty-security;8.1.8.v20121106 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.eclipse.jetty#jetty-server;8.1.8.v20121106 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.eclipse.jetty#jetty-continuation;8.1.8.v20121106 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.eclipse.jetty#jetty-http;8.1.8.v20121106 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.eclipse.jetty#jetty-io;8.1.8.v20121106 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving com.mojolly.scalate#scalate-generator_2.10;0.4.2 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.fusesource.scalate#scalate-core_2.10;1.6.1 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.fusesource.scalate#scalate-util_2.10;1.6.1 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.slf4j#slf4j-api;1.6.1 ...[0m
+[0m[[0minfo[0m] [0mDone updating.[0m
+[0m[[0minfo[0m] [0mCompiling Templates in Template Directory: /home/ubuntu/FrameworkBenchmarks/scalatra/./src/main/webapp/WEB-INF[0m
+[0m[[0minfo[0m] [0mCompiling 8 Scala sources to /home/ubuntu/FrameworkBenchmarks/scalatra/target/scala-2.10/classes...[0m
+[0m[[0minfo[0m] [0mPackaging /home/ubuntu/FrameworkBenchmarks/scalatra/target/scala-2.10/scalatra_2.10-1.0-SNAPSHOT.war ...[0m
+[0m[[0minfo[0m] [0mDone packaging.[0m
+[0m[[32msuccess[0m] [0mTotal time: 13 s, completed Jun 29, 2014 3:44:07 AM[0m
+Resin/4.0.36 launching watchdog at 127.0.0.1:6600
+Resin/4.0.36 started -server 'default' with watchdog at 127.0.0.1:6600
+
+-----------------------------------------------------
+  VERIFYING JSON (/scalatra/json)
+-----------------------------------------------------
+VALIDATING JSON ... FAIL
+
+
+-----------------------------------------------------
+  Benchmarking scalatra ...
+-----------------------------------------------------
+BENCHMARKING JSON ... Complete
+
+-----------------------------------------------------
+  Stopping scalatra
+-----------------------------------------------------
+Resin/4.0.36 shutdown watchdog at 127.0.0.1:6600
+
+-----------------------------------------------------
+  Stopped scalatra
+-----------------------------------------------------
+
+----------------------------------------------------
+Saving results through scalatra
+----------------------------------------------------

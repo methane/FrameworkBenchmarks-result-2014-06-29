@@ -1,0 +1,152 @@
+test.os.lower() = linux  test.database_os.lower() = linux
+self.results['frameworks'] != None: True
+test.name: kelp-raw
+self.results['completed']: {}
+
+=====================================================
+  Beginning kelp-raw
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Starting kelp-raw
+-----------------------------------------------------
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+mysql start/running, process 2124
+ * Restarting PostgreSQL 9.3 database server
+   ...done.
+
+-----------------------------------------------------
+  VERIFYING DB (/db)
+-----------------------------------------------------
+HTTP/1.1 502 Bad Gateway
+Server: nginx/1.4.1
+Date: Sat, 28 Jun 2014 23:10:14 GMT
+Content-Type: text/html
+Content-Length: 172
+Connection: keep-alive
+
+<html>
+<head><title>502 Bad Gateway</title></head>
+<body bgcolor="white">
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx/1.4.1</center>
+</body>
+</html>
+
+
+VALIDATING DB ... FAIL
+
+
+-----------------------------------------------------
+  VERIFYING QUERY (/db?queries=2)
+-----------------------------------------------------
+HTTP/1.1 502 Bad Gateway
+Server: nginx/1.4.1
+Date: Sat, 28 Jun 2014 23:10:14 GMT
+Content-Type: text/html
+Content-Length: 172
+Connection: keep-alive
+
+<html>
+<head><title>502 Bad Gateway</title></head>
+<body bgcolor="white">
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx/1.4.1</center>
+</body>
+</html>
+
+
+/db?queries=2 - FAIL
+
+-----------------------------------------------------
+
+HTTP/1.1 502 Bad Gateway
+Server: nginx/1.4.1
+Date: Sat, 28 Jun 2014 23:10:15 GMT
+Content-Type: text/html
+Content-Length: 172
+Connection: keep-alive
+
+<html>
+<head><title>502 Bad Gateway</title></head>
+<body bgcolor="white">
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx/1.4.1</center>
+</body>
+</html>
+
+
+/db?queries=0 - WARNING
+
+-----------------------------------------------------
+
+HTTP/1.1 502 Bad Gateway
+Server: nginx/1.4.1
+Date: Sat, 28 Jun 2014 23:10:15 GMT
+Content-Type: text/html
+Content-Length: 172
+Connection: keep-alive
+
+<html>
+<head><title>502 Bad Gateway</title></head>
+<body bgcolor="white">
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx/1.4.1</center>
+</body>
+</html>
+
+
+/db?queries=foo - WARNING
+
+-----------------------------------------------------
+
+HTTP/1.1 502 Bad Gateway
+Server: nginx/1.4.1
+Date: Sat, 28 Jun 2014 23:10:15 GMT
+Content-Type: text/html
+Content-Length: 172
+Connection: keep-alive
+
+<html>
+<head><title>502 Bad Gateway</title></head>
+<body bgcolor="white">
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx/1.4.1</center>
+</body>
+</html>
+
+
+/db?queries=501 - WARNING
+
+-----------------------------------------------------
+
+
+VALIDATING QUERY ... FAIL
+
+
+-----------------------------------------------------
+  Benchmarking kelp-raw ...
+-----------------------------------------------------
+BENCHMARKING DB ... Complete
+BENCHMARKING Query ... Complete
+
+-----------------------------------------------------
+  Stopping kelp-raw
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Stopped kelp-raw
+-----------------------------------------------------
+
+----------------------------------------------------
+Saving results through kelp-raw
+----------------------------------------------------

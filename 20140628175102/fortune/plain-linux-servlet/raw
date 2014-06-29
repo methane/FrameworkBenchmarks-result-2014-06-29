@@ -1,0 +1,122 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer plain-linux-servlet
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/web-apps/servlet/fortunes
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/web-apps/servlet/fortunes
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.49ms    1.24ms  10.96ms   89.41%
+    Req/Sec   812.10    270.45     1.81k    68.53%
+  29225 requests in 4.99s, 40.33MB read
+Requests/sec:   5853.59
+Transfer/sec:      8.08MB
+
+---------------------------------------------------------
+ Running Warmup plain-linux-servlet
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/web-apps/servlet/fortunes
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/web-apps/servlet/fortunes
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   237.45ms    1.03s    5.42s    96.07%
+    Req/Sec     2.00k   764.72     4.42k    74.65%
+  120087 requests in 15.00s, 165.72MB read
+Requests/sec:   8005.67
+Transfer/sec:     11.05MB
+
+---------------------------------------------------------
+ Concurrency: 8 for plain-linux-servlet
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:8080/web-apps/servlet/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/web-apps/servlet/fortunes
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.01ms  523.27us   8.10ms   69.82%
+    Req/Sec     2.09k   294.22     3.11k    69.99%
+  118894 requests in 15.00s, 164.07MB read
+Requests/sec:   7926.59
+Transfer/sec:     10.94MB
+
+---------------------------------------------------------
+ Concurrency: 16 for plain-linux-servlet
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:8080/web-apps/servlet/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/web-apps/servlet/fortunes
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     2.61ms    7.10ms  94.79ms   99.32%
+    Req/Sec     2.08k   424.63     3.56k    73.43%
+  118391 requests in 15.00s, 163.38MB read
+Requests/sec:   7893.50
+Transfer/sec:     10.89MB
+
+---------------------------------------------------------
+ Concurrency: 32 for plain-linux-servlet
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:8080/web-apps/servlet/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/web-apps/servlet/fortunes
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     4.14ms    3.39ms  16.24ms   52.13%
+    Req/Sec     2.04k   321.03     3.18k    67.09%
+  118884 requests in 15.00s, 164.06MB read
+Requests/sec:   7925.44
+Transfer/sec:     10.94MB
+
+---------------------------------------------------------
+ Concurrency: 64 for plain-linux-servlet
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:8080/web-apps/servlet/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/web-apps/servlet/fortunes
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     8.11ms    7.35ms  30.65ms   49.71%
+    Req/Sec     2.03k   239.06     2.78k    67.38%
+  119442 requests in 15.00s, 164.83MB read
+Requests/sec:   7962.87
+Transfer/sec:     10.99MB
+
+---------------------------------------------------------
+ Concurrency: 128 for plain-linux-servlet
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:8080/web-apps/servlet/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/web-apps/servlet/fortunes
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    15.95ms   14.96ms  54.09ms   47.72%
+    Req/Sec     2.03k   256.39     3.13k    72.23%
+  119014 requests in 15.00s, 164.24MB read
+Requests/sec:   7934.51
+Transfer/sec:     10.95MB
+
+---------------------------------------------------------
+ Concurrency: 256 for plain-linux-servlet
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/web-apps/servlet/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/web-apps/servlet/fortunes
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    31.16ms   61.83ms   2.75s    99.51%
+    Req/Sec     2.21k   476.41     4.00k    75.14%
+  118772 requests in 15.00s, 163.90MB read
+Requests/sec:   7920.05
+Transfer/sec:     10.93MB

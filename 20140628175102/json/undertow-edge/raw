@@ -1,0 +1,122 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer undertow-edge
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/json
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/json
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   462.87us    2.13ms  29.27ms   97.07%
+    Req/Sec     6.11k     3.30k   17.78k    65.29%
+  212345 requests in 5.00s, 33.41MB read
+Requests/sec:  42481.01
+Transfer/sec:      6.68MB
+
+---------------------------------------------------------
+ Running Warmup undertow-edge
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/json
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     2.69ms   13.80ms 630.02ms   99.27%
+    Req/Sec    28.44k     8.49k   67.56k    70.99%
+  1553661 requests in 15.00s, 244.48MB read
+Requests/sec: 103580.23
+Transfer/sec:     16.30MB
+
+---------------------------------------------------------
+ Concurrency: 8 for undertow-edge
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    97.62us  177.08us  12.12ms   98.74%
+    Req/Sec    18.48k     3.65k   39.00k    73.21%
+  1045308 requests in 15.00s, 164.49MB read
+Requests/sec:  69692.22
+Transfer/sec:     10.97MB
+
+---------------------------------------------------------
+ Concurrency: 16 for undertow-edge
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   182.67us  438.92us  16.07ms   96.97%
+    Req/Sec    21.88k     5.79k   55.44k    75.20%
+  1237180 requests in 15.00s, 194.68MB read
+Requests/sec:  82484.20
+Transfer/sec:     12.98MB
+
+---------------------------------------------------------
+ Concurrency: 32 for undertow-edge
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   375.94us  724.44us  31.24ms   94.56%
+    Req/Sec    24.07k     8.69k   57.67k    66.22%
+  1361241 requests in 15.00s, 214.20MB read
+Requests/sec:  90759.90
+Transfer/sec:     14.28MB
+
+---------------------------------------------------------
+ Concurrency: 64 for undertow-edge
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     0.86ms    2.05ms  40.81ms   90.43%
+    Req/Sec    26.19k    12.59k   57.00k    62.67%
+  1453350 requests in 15.00s, 228.69MB read
+Requests/sec:  96894.88
+Transfer/sec:     15.25MB
+
+---------------------------------------------------------
+ Concurrency: 128 for undertow-edge
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.50ms    3.20ms  64.35ms   89.72%
+    Req/Sec    27.07k    11.07k   60.78k    66.90%
+  1507427 requests in 14.99s, 237.20MB read
+Requests/sec: 100575.59
+Transfer/sec:     15.83MB
+
+---------------------------------------------------------
+ Concurrency: 256 for undertow-edge
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     2.42ms    3.70ms 165.50ms   88.94%
+    Req/Sec    28.06k     8.73k   70.22k    72.09%
+  1579034 requests in 15.00s, 248.47MB read
+Requests/sec: 105270.46
+Transfer/sec:     16.56MB

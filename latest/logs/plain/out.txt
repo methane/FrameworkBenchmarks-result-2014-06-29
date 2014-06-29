@@ -1,0 +1,510 @@
+test.os.lower() = linux  test.database_os.lower() = linux
+self.results['frameworks'] != None: True
+test.name: plain
+self.results['completed']: {}
+
+=====================================================
+  Beginning plain
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Starting plain
+-----------------------------------------------------
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+mysql start/running, process 23529
+ * Restarting PostgreSQL 9.3 database server
+   ...done.
+Getting org.scala-sbt sbt 0.12.4 ...
+downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/sbt/0.12.4/jars/sbt.jar ...
+	[SUCCESSFUL ] org.scala-sbt#sbt;0.12.4!sbt.jar (444ms)
+downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/main/0.12.4/jars/main.jar ...
+	[SUCCESSFUL ] org.scala-sbt#main;0.12.4!main.jar (1271ms)
+downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/compiler-interface/0.12.4/jars/compiler-interface-bin.jar ...
+	[SUCCESSFUL ] org.scala-sbt#compiler-interface;0.12.4!compiler-interface-bin.jar (390ms)
+downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/compiler-interface/0.12.4/jars/compiler-interface-src.jar ...
+	[SUCCESSFUL ] org.scala-sbt#compiler-interface;0.12.4!compiler-interface-src.jar (343ms)
+downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/precompiled-2_8_2/0.12.4/jars/compiler-interface-bin.jar ...
+	[SUCCESSFUL ] org.scala-sbt#precompiled-2_8_2;0.12.4!compiler-interface-bin.jar (410ms)
+downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/precompiled-2_9_3/0.12.4/jars/compiler-interface-bin.jar ...
+	[SUCCESSFUL ] org.scala-sbt#precompiled-2_9_3;0.12.4!compiler-interface-bin.jar (405ms)
+downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/precompiled-2_10_1/0.12.4/jars/compiler-interface-bin.jar ...
+	[SUCCESSFUL ] org.scala-sbt#precompiled-2_10_1;0.12.4!compiler-interface-bin.jar (346ms)
+downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/actions/0.12.4/jars/actions.jar ...
+	[SUCCESSFUL ] org.scala-sbt#actions;0.12.4!actions.jar (361ms)
+downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/interface/0.12.4/jars/interface.jar ...
+	[SUCCESSFUL ] org.scala-sbt#interface;0.12.4!interface.jar (407ms)
+downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/io/0.12.4/jars/io.jar ...
+	[SUCCESSFUL ] org.scala-sbt#io;0.12.4!io.jar (378ms)
+downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/ivy/0.12.4/jars/ivy.jar ...
+	[SUCCESSFUL ] org.scala-sbt#ivy;0.12.4!ivy.jar (409ms)
+downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/launcher-interface/0.12.4/jars/launcher-interface.jar ...
+	[SUCCESSFUL ] org.scala-sbt#launcher-interface;0.12.4!launcher-interface.jar (385ms)
+downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/logging/0.12.4/jars/logging.jar ...
+	[SUCCESSFUL ] org.scala-sbt#logging;0.12.4!logging.jar (362ms)
+downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/process/0.12.4/jars/process.jar ...
+	[SUCCESSFUL ] org.scala-sbt#process;0.12.4!process.jar (400ms)
+downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/run/0.12.4/jars/run.jar ...
+	[SUCCESSFUL ] org.scala-sbt#run;0.12.4!run.jar (601ms)
+downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/command/0.12.4/jars/command.jar ...
+	[SUCCESSFUL ] org.scala-sbt#command;0.12.4!command.jar (396ms)
+downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/classpath/0.12.4/jars/classpath.jar ...
+	[SUCCESSFUL ] org.scala-sbt#classpath;0.12.4!classpath.jar (347ms)
+downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/completion/0.12.4/jars/completion.jar ...
+	[SUCCESSFUL ] org.scala-sbt#completion;0.12.4!completion.jar (1609ms)
+downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/api/0.12.4/jars/api.jar ...
+	[SUCCESSFUL ] org.scala-sbt#api;0.12.4!api.jar (816ms)
+downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/compiler-integration/0.12.4/jars/compiler-integration.jar ...
+	[SUCCESSFUL ] org.scala-sbt#compiler-integration;0.12.4!compiler-integration.jar (344ms)
+downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/compiler-ivy-integration/0.12.4/jars/compiler-ivy-integration.jar ...
+	[SUCCESSFUL ] org.scala-sbt#compiler-ivy-integration;0.12.4!compiler-ivy-integration.jar (353ms)
+downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/task-system/0.12.4/jars/task-system.jar ...
+	[SUCCESSFUL ] org.scala-sbt#task-system;0.12.4!task-system.jar (408ms)
+downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/tasks/0.12.4/jars/tasks.jar ...
+	[SUCCESSFUL ] org.scala-sbt#tasks;0.12.4!tasks.jar (409ms)
+downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/tracking/0.12.4/jars/tracking.jar ...
+	[SUCCESSFUL ] org.scala-sbt#tracking;0.12.4!tracking.jar (350ms)
+downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/testing/0.12.4/jars/testing.jar ...
+	[SUCCESSFUL ] org.scala-sbt#testing;0.12.4!testing.jar (346ms)
+downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/control/0.12.4/jars/control.jar ...
+	[SUCCESSFUL ] org.scala-sbt#control;0.12.4!control.jar (466ms)
+downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/collections/0.12.4/jars/collections.jar ...
+	[SUCCESSFUL ] org.scala-sbt#collections;0.12.4!collections.jar (595ms)
+downloading http://repo1.maven.org/maven2/jline/jline/1.0/jline-1.0.jar ...
+	[SUCCESSFUL ] jline#jline;1.0!jline.jar (453ms)
+downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/incremental-compiler/0.12.4/jars/incremental-compiler.jar ...
+	[SUCCESSFUL ] org.scala-sbt#incremental-compiler;0.12.4!incremental-compiler.jar (708ms)
+downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/compile/0.12.4/jars/compile.jar ...
+	[SUCCESSFUL ] org.scala-sbt#compile;0.12.4!compile.jar (471ms)
+downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/persist/0.12.4/jars/persist.jar ...
+	[SUCCESSFUL ] org.scala-sbt#persist;0.12.4!persist.jar (404ms)
+downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/classfile/0.12.4/jars/classfile.jar ...
+	[SUCCESSFUL ] org.scala-sbt#classfile;0.12.4!classfile.jar (349ms)
+downloading http://repo1.maven.org/maven2/org/scala-tools/sbinary/sbinary_2.9.0/0.4.0/sbinary_2.9.0-0.4.0.jar ...
+	[SUCCESSFUL ] org.scala-tools.sbinary#sbinary_2.9.0;0.4.0!sbinary_2.9.0.jar (412ms)
+downloading http://repo1.maven.org/maven2/org/apache/ivy/ivy/2.3.0-rc1/ivy-2.3.0-rc1.jar ...
+	[SUCCESSFUL ] org.apache.ivy#ivy;2.3.0-rc1!ivy.jar (619ms)
+downloading http://repo1.maven.org/maven2/com/jcraft/jsch/0.1.46/jsch-0.1.46.jar ...
+	[SUCCESSFUL ] com.jcraft#jsch;0.1.46!jsch.jar (368ms)
+downloading http://repo1.maven.org/maven2/commons-httpclient/commons-httpclient/3.1/commons-httpclient-3.1.jar ...
+	[SUCCESSFUL ] commons-httpclient#commons-httpclient;3.1!commons-httpclient.jar (328ms)
+downloading http://repo1.maven.org/maven2/commons-logging/commons-logging/1.0.4/commons-logging-1.0.4.jar ...
+	[SUCCESSFUL ] commons-logging#commons-logging;1.0.4!commons-logging.jar (297ms)
+downloading http://repo1.maven.org/maven2/commons-codec/commons-codec/1.2/commons-codec-1.2.jar ...
+	[SUCCESSFUL ] commons-codec#commons-codec;1.2!commons-codec.jar (307ms)
+downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/cache/0.12.4/jars/cache.jar ...
+	[SUCCESSFUL ] org.scala-sbt#cache;0.12.4!cache.jar (598ms)
+downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/test-agent/0.12.4/jars/test-agent.jar ...
+	[SUCCESSFUL ] org.scala-sbt#test-agent;0.12.4!test-agent.jar (366ms)
+downloading http://repo1.maven.org/maven2/org/scala-tools/testing/test-interface/0.5/test-interface-0.5.jar ...
+	[SUCCESSFUL ] org.scala-tools.testing#test-interface;0.5!test-interface.jar (300ms)
+:: retrieving :: org.scala-sbt#boot-app
+	confs: [default]
+	41 artifacts copied, 0 already retrieved (8493kB/43ms)
+Getting Scala 2.9.2 (for sbt)...
+downloading http://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.9.2/scala-compiler-2.9.2.jar ...
+	[SUCCESSFUL ] org.scala-lang#scala-compiler;2.9.2!scala-compiler.jar (1032ms)
+downloading http://repo1.maven.org/maven2/org/scala-lang/scala-library/2.9.2/scala-library-2.9.2.jar ...
+	[SUCCESSFUL ] org.scala-lang#scala-library;2.9.2!scala-library.jar (652ms)
+downloading http://repo1.maven.org/maven2/org/scala-lang/jline/2.9.2/jline-2.9.2.jar ...
+	[SUCCESSFUL ] org.scala-lang#jline;2.9.2!jline.jar (354ms)
+downloading http://repo1.maven.org/maven2/org/fusesource/jansi/jansi/1.4/jansi-1.4.jar ...
+	[SUCCESSFUL ] org.fusesource.jansi#jansi;1.4!jansi.jar (295ms)
+:: retrieving :: org.scala-sbt#boot-scala
+	confs: [default]
+	4 artifacts copied, 0 already retrieved (20090kB/25ms)
+[0m[[0minfo[0m] [0mLoading project definition from /home/ubuntu/FrameworkBenchmarks/plain/project[0m
+[0m[[0minfo[0m] [0mSet current project to plain-benchmark (in build file:/home/ubuntu/FrameworkBenchmarks/plain/)[0m
+Getting Scala 2.10.3 ...
+[0m[[0minfo[0m] [0mFormatting 4 Scala sources {file:/home/ubuntu/FrameworkBenchmarks/plain/}default-b1a2c0(compile) ...[0m
+downloading http://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.10.3/scala-compiler-2.10.3.jar ...
+	[SUCCESSFUL ] org.scala-lang#scala-compiler;2.10.3!scala-compiler.jar (819ms)
+downloading http://repo1.maven.org/maven2/org/scala-lang/scala-library/2.10.3/scala-library-2.10.3.jar ...
+	[SUCCESSFUL ] org.scala-lang#scala-library;2.10.3!scala-library.jar (487ms)
+downloading http://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.10.3/scala-reflect-2.10.3.jar ...
+	[SUCCESSFUL ] org.scala-lang#scala-reflect;2.10.3!scala-reflect.jar (457ms)
+downloading http://repo1.maven.org/maven2/org/scala-lang/jline/2.10.3/jline-2.10.3.jar ...
+	[SUCCESSFUL ] org.scala-lang#jline;2.10.3!jline.jar (305ms)
+:: retrieving :: org.scala-sbt#boot-scala
+	confs: [default]
+	5 artifacts copied, 0 already retrieved (24447kB/28ms)
+[0m[[0minfo[0m] [0mUpdating {file:/home/ubuntu/FrameworkBenchmarks/plain/}default-b1a2c0...[0m
+[0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.10.3 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.scala-lang#scala-reflect;2.10.3 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.reflections#reflections;0.9.8 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.reflections#reflections-parent;0.9.8 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving com.google.guava#guava;11.0.2 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving com.google.guava#guava-parent;11.0.2 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.sonatype.oss#oss-parent;7 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving com.google.code.findbugs#jsr305;1.3.9 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving javassist#javassist;3.12.1.GA ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving dom4j#dom4j;1.6.1 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving xml-apis#xml-apis;1.0.b2 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving com.typesafe#config;1.0.2 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving ch.qos.logback#logback-classic;1.0.13 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving ch.qos.logback#logback-parent;1.0.13 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving ch.qos.logback#logback-core;1.0.13 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving ch.qos.logback#logback-parent;1.0.13 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.slf4j#slf4j-api;1.7.5 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.slf4j#slf4j-parent;1.7.5 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.codehaus.janino#janino;2.6.1 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.codehaus.janino#janino-parent;2.6.1 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.codehaus#codehaus-parent;4 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.codehaus.janino#commons-compiler;2.6.1 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.codehaus.janino#janino-parent;2.6.1 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving com.typesafe.akka#akka-actor_2.10;2.2.3 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving com.typesafe.akka#akka-slf4j_2.10;2.2.3 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.apache.commons#commons-lang3;3.1 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.apache.commons#commons-parent;22 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.apache#apache;9 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.apache.commons#commons-compress;1.5 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.apache.commons#commons-parent;28 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.apache#apache;13 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.tukaani#xz;1.2 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving commons-io#commons-io;2.4 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.apache.commons#commons-parent;25 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.apache#apache;9 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving commons-net#commons-net;3.3 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.apache.commons#commons-parent;30 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.apache#apache;13 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving commons-codec#commons-codec;1.8 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.apache.commons#commons-parent;28 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving javax.servlet#javax.servlet-api;3.1.0 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving net.java#jvnet-parent;3 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.glassfish.web#javax.servlet.jsp;2.3.1 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving net.java#jvnet-parent;1 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.glassfish#javax.el;[3.0-b07,) ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving net.java#jvnet-parent;3 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving javax.servlet.jsp#javax.servlet.jsp-api;2.3.1 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving net.java#jvnet-parent;1 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving com.googlecode.concurrentlinkedhashmap#concurrentlinkedhashmap-lru;1.4 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.sonatype.oss#oss-parent;7 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving net.jpountz.lz4#lz4;1.2.0 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving net.lingala.zip4j#zip4j;1.3.1 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving com.fasterxml.jackson.core#jackson-databind;2.3.0 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving com.fasterxml#oss-parent;11 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving com.fasterxml.jackson.core#jackson-annotations;2.3.0 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving com.fasterxml#oss-parent;11 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving com.fasterxml.jackson.core#jackson-core;2.3.0 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving com.fasterxml#oss-parent;11 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving com.sun.jersey#jersey-json;1.17.1 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving com.sun.jersey#jersey-project;1.17.1 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving net.java#jvnet-parent;1 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.codehaus.jettison#jettison;1.1 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving com.sun.xml.bind#jaxb-impl;2.2.3-1 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving javax.xml.bind#jaxb-api;2.2.2 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving javax.xml.stream#stax-api;1.0-2 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving javax.activation#activation;1.1 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.codehaus.jackson#jackson-core-asl;1.9.2 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.codehaus.jackson#jackson-mapper-asl;1.9.2 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.codehaus.jackson#jackson-jaxrs;1.9.2 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving org.codehaus.jackson#jackson-xc;1.9.2 ...[0m
+M[2K[0m[[0minfo[0m] [0mResolving mysql#mysql-connector-java;5.1.27 ...[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/org/reflections/reflections/0.9.8/reflections-0.9.8.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.reflections#reflections;0.9.8!reflections.jar (300ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/com/typesafe/config/1.0.2/config-1.0.2.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] com.typesafe#config;1.0.2!config.jar(bundle) (298ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/ch/qos/logback/logback-classic/1.0.13/logback-classic-1.0.13.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] ch.qos.logback#logback-classic;1.0.13!logback-classic.jar (300ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/org/codehaus/janino/janino/2.6.1/janino-2.6.1.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.codehaus.janino#janino;2.6.1!janino.jar (328ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/com/typesafe/akka/akka-actor_2.10/2.2.3/akka-actor_2.10-2.2.3.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] com.typesafe.akka#akka-actor_2.10;2.2.3!akka-actor_2.10.jar (393ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/com/typesafe/akka/akka-slf4j_2.10/2.2.3/akka-slf4j_2.10-2.2.3.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] com.typesafe.akka#akka-slf4j_2.10;2.2.3!akka-slf4j_2.10.jar(bundle) (299ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/org/apache/commons/commons-lang3/3.1/commons-lang3-3.1.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.apache.commons#commons-lang3;3.1!commons-lang3.jar (326ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/org/apache/commons/commons-compress/1.5/commons-compress-1.5.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.apache.commons#commons-compress;1.5!commons-compress.jar (370ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/commons-io/commons-io/2.4/commons-io-2.4.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] commons-io#commons-io;2.4!commons-io.jar (299ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/commons-net/commons-net/3.3/commons-net-3.3.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] commons-net#commons-net;3.3!commons-net.jar (309ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/commons-codec/commons-codec/1.8/commons-codec-1.8.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] commons-codec#commons-codec;1.8!commons-codec.jar (341ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] javax.servlet#javax.servlet-api;3.1.0!javax.servlet-api.jar (584ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/org/glassfish/web/javax.servlet.jsp/2.3.1/javax.servlet.jsp-2.3.1.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.glassfish.web#javax.servlet.jsp;2.3.1!javax.servlet.jsp.jar (306ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/com/googlecode/concurrentlinkedhashmap/concurrentlinkedhashmap-lru/1.4/concurrentlinkedhashmap-lru-1.4.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] com.googlecode.concurrentlinkedhashmap#concurrentlinkedhashmap-lru;1.4!concurrentlinkedhashmap-lru.jar (334ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/net/jpountz/lz4/lz4/1.2.0/lz4-1.2.0.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] net.jpountz.lz4#lz4;1.2.0!lz4.jar (433ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/net/lingala/zip4j/zip4j/1.3.1/zip4j-1.3.1.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] net.lingala.zip4j#zip4j;1.3.1!zip4j.jar (299ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.3.0/jackson-databind-2.3.0.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] com.fasterxml.jackson.core#jackson-databind;2.3.0!jackson-databind.jar(bundle) (307ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/com/sun/jersey/jersey-json/1.17.1/jersey-json-1.17.1.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] com.sun.jersey#jersey-json;1.17.1!jersey-json.jar (309ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/mysql/mysql-connector-java/5.1.27/mysql-connector-java-5.1.27.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] mysql#mysql-connector-java;5.1.27!mysql-connector-java.jar (310ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/com/google/guava/guava/11.0.2/guava-11.0.2.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] com.google.guava#guava;11.0.2!guava.jar (351ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/javassist/javassist/3.12.1.GA/javassist-3.12.1.GA.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] javassist#javassist;3.12.1.GA!javassist.jar (309ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] dom4j#dom4j;1.6.1!dom4j.jar (335ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] com.google.code.findbugs#jsr305;1.3.9!jsr305.jar (298ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/xml-apis/xml-apis/1.0.b2/xml-apis-1.0.b2.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] xml-apis#xml-apis;1.0.b2!xml-apis.jar (309ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/ch/qos/logback/logback-core/1.0.13/logback-core-1.0.13.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] ch.qos.logback#logback-core;1.0.13!logback-core.jar (316ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.5/slf4j-api-1.7.5.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.slf4j#slf4j-api;1.7.5!slf4j-api.jar (296ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/org/codehaus/janino/commons-compiler/2.6.1/commons-compiler-2.6.1.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.codehaus.janino#commons-compiler;2.6.1!commons-compiler.jar (296ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/org/tukaani/xz/1.2/xz-1.2.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.tukaani#xz;1.2!xz.jar (296ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/org/glassfish/javax.el/3.0.1-b04/javax.el-3.0.1-b04.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.glassfish#javax.el;3.0.1-b04!javax.el.jar (309ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/javax/servlet/jsp/javax.servlet.jsp-api/2.3.1/javax.servlet.jsp-api-2.3.1.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] javax.servlet.jsp#javax.servlet.jsp-api;2.3.1!javax.servlet.jsp-api.jar (297ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.3.0/jackson-annotations-2.3.0.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] com.fasterxml.jackson.core#jackson-annotations;2.3.0!jackson-annotations.jar(bundle) (298ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-core/2.3.0/jackson-core-2.3.0.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] com.fasterxml.jackson.core#jackson-core;2.3.0!jackson-core.jar(bundle) (299ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/org/codehaus/jettison/jettison/1.1/jettison-1.1.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.codehaus.jettison#jettison;1.1!jettison.jar(bundle) (364ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/com/sun/xml/bind/jaxb-impl/2.2.3-1/jaxb-impl-2.2.3-1.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] com.sun.xml.bind#jaxb-impl;2.2.3-1!jaxb-impl.jar (378ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/org/codehaus/jackson/jackson-core-asl/1.9.2/jackson-core-asl-1.9.2.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.codehaus.jackson#jackson-core-asl;1.9.2!jackson-core-asl.jar (300ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/org/codehaus/jackson/jackson-mapper-asl/1.9.2/jackson-mapper-asl-1.9.2.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.codehaus.jackson#jackson-mapper-asl;1.9.2!jackson-mapper-asl.jar (315ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/org/codehaus/jackson/jackson-jaxrs/1.9.2/jackson-jaxrs-1.9.2.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.codehaus.jackson#jackson-jaxrs;1.9.2!jackson-jaxrs.jar (305ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/org/codehaus/jackson/jackson-xc/1.9.2/jackson-xc-1.9.2.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.codehaus.jackson#jackson-xc;1.9.2!jackson-xc.jar (434ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/javax/xml/bind/jaxb-api/2.2.2/jaxb-api-2.2.2.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] javax.xml.bind#jaxb-api;2.2.2!jaxb-api.jar (417ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/javax/xml/stream/stax-api/1.0-2/stax-api-1.0-2.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] javax.xml.stream#stax-api;1.0-2!stax-api.jar (305ms)[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/javax/activation/activation/1.1/activation-1.1.jar ...[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] javax.activation#activation;1.1!activation.jar (313ms)[0m
+[0m[[0minfo[0m] [0mDone updating.[0m
+[0m[[0minfo[0m] [0mCompiling 4 Scala sources to /home/ubuntu/FrameworkBenchmarks/plain/target/scala-2.10/classes...[0m
+[0m[[0minfo[0m] [0m'compiler-interface' not yet compiled for Scala 2.10.3. Compiling...[0m
+[0m[[0minfo[0m] [0m  Compilation completed in 14.799 s[0m
+[0m[[0minfo[0m] [0mIncluding plain-library_2.10-1.0.1-SNAPSHOT.jar[0m
+[0m[[0minfo[0m] [0mIncluding jackson-xc-1.9.2.jar[0m
+[0m[[0minfo[0m] [0mIncluding javax.servlet-api-3.1.0.jar[0m
+[0m[[0minfo[0m] [0mIncluding jaxb-impl-2.2.3-1.jar[0m
+[0m[[0minfo[0m] [0mIncluding commons-compiler-2.6.1.jar[0m
+[0m[[0minfo[0m] [0mIncluding janino-2.6.1.jar[0m
+[0m[[0minfo[0m] [0mIncluding jaxb-api-2.2.2.jar[0m
+[0m[[0minfo[0m] [0mIncluding stax-api-1.0-2.jar[0m
+[0m[[0minfo[0m] [0mIncluding mysql-connector-java-5.1.27.jar[0m
+[0m[[0minfo[0m] [0mIncluding jettison-1.1.jar[0m
+[0m[[0minfo[0m] [0mIncluding javax.servlet.jsp-2.3.1.jar[0m
+[0m[[0minfo[0m] [0mIncluding akka-actor_2.10-2.2.3.jar[0m
+[0m[[0minfo[0m] [0mIncluding lz4-1.2.0.jar[0m
+[0m[[0minfo[0m] [0mIncluding zip4j-1.3.1.jar[0m
+[0m[[0minfo[0m] [0mIncluding commons-compress-1.5.jar[0m
+[0m[[0minfo[0m] [0mIncluding javax.el-3.0.1-b04.jar[0m
+[0m[[0minfo[0m] [0mIncluding commons-lang3-3.1.jar[0m
+[0m[[0minfo[0m] [0mIncluding reflections-0.9.8.jar[0m
+[0m[[0minfo[0m] [0mIncluding scala-reflect-2.10.3.jar[0m
+[0m[[0minfo[0m] [0mIncluding jackson-core-asl-1.9.2.jar[0m
+[0m[[0minfo[0m] [0mIncluding scala-library.jar[0m
+[0m[[0minfo[0m] [0mIncluding jackson-jaxrs-1.9.2.jar[0m
+[0m[[0minfo[0m] [0mIncluding jackson-mapper-asl-1.9.2.jar[0m
+[0m[[0minfo[0m] [0mIncluding jackson-core-2.3.0.jar[0m
+[0m[[0minfo[0m] [0mIncluding jackson-databind-2.3.0.jar[0m
+[0m[[0minfo[0m] [0mIncluding akka-slf4j_2.10-2.2.3.jar[0m
+[0m[[0minfo[0m] [0mIncluding config-1.0.2.jar[0m
+[0m[[0minfo[0m] [0mIncluding jsr305-1.3.9.jar[0m
+[0m[[0minfo[0m] [0mIncluding commons-codec-1.8.jar[0m
+[0m[[0minfo[0m] [0mIncluding guava-11.0.2.jar[0m
+[0m[[0minfo[0m] [0mIncluding commons-io-2.4.jar[0m
+[0m[[0minfo[0m] [0mIncluding commons-net-3.3.jar[0m
+[0m[[0minfo[0m] [0mIncluding slf4j-api-1.7.5.jar[0m
+[0m[[0minfo[0m] [0mIncluding xz-1.2.jar[0m
+[0m[[0minfo[0m] [0mIncluding dom4j-1.6.1.jar[0m
+[0m[[0minfo[0m] [0mIncluding xml-apis-1.0.b2.jar[0m
+[0m[[0minfo[0m] [0mIncluding logback-classic-1.0.13.jar[0m
+[0m[[0minfo[0m] [0mIncluding javassist-3.12.1.GA.jar[0m
+[0m[[0minfo[0m] [0mIncluding logback-core-1.0.13.jar[0m
+[0m[[0minfo[0m] [0mIncluding concurrentlinkedhashmap-lru-1.4.jar[0m
+[0m[[0minfo[0m] [0mIncluding activation-1.1.jar[0m
+[0m[[0minfo[0m] [0mIncluding javax.servlet.jsp-api-2.3.1.jar[0m
+[0m[[0minfo[0m] [0mIncluding jersey-json-1.17.1.jar[0m
+[0m[[0minfo[0m] [0mIncluding jackson-annotations-2.3.0.jar[0m
+[0m[[33mwarn[0m] [0mMerging 'META-INF/NOTICE.txt' with strategy 'rename'[0m
+[0m[[33mwarn[0m] [0mMerging 'license/LICENSE.txt' with strategy 'rename'[0m
+[0m[[33mwarn[0m] [0mMerging 'META-INF/NOTICE' with strategy 'rename'[0m
+[0m[[33mwarn[0m] [0mMerging 'license' with strategy 'rename'[0m
+[0m[[33mwarn[0m] [0mMerging 'license/README.txt' with strategy 'rename'[0m
+[0m[[33mwarn[0m] [0mMerging 'META-INF/LICENSE.txt' with strategy 'rename'[0m
+[0m[[33mwarn[0m] [0mMerging 'META-INF/LICENSE' with strategy 'rename'[0m
+[0m[[33mwarn[0m] [0mMerging 'META-INF/DUMMY.DSA' with strategy 'discard'[0m
+[0m[[33mwarn[0m] [0mMerging 'META-INF/MANIFEST.MF' with strategy 'discard'[0m
+[0m[[33mwarn[0m] [0mMerging 'META-INF/DUMMY.SF' with strategy 'discard'[0m
+[0m[[33mwarn[0m] [0mMerging 'META-INF/INDEX.LIST' with strategy 'discard'[0m
+[0m[[33mwarn[0m] [0mMerging 'reference.conf' with strategy 'concat'[0m
+[0m[[33mwarn[0m] [0mStrategy 'concat' was applied to a file[0m
+[0m[[0minfo[0m] [0mStrategy 'deduplicate' was applied to a file (Run the task at debug level to see details)[0m
+[0m[[33mwarn[0m] [0mStrategy 'discard' was applied to 4 files[0m
+[0m[[33mwarn[0m] [0mStrategy 'rename' was applied to 7 files[0m
+[0m[[0minfo[0m] [0mPackaging /home/ubuntu/FrameworkBenchmarks/plain/target/scala-2.10/plain-benchmark-assembly-1.0.1.jar ...[0m
+[0m[[0minfo[0m] [0mDone packaging.[0m
+[0m[[32msuccess[0m] [0mTotal time: 83 s, completed Jun 29, 2014 1:10:16 AM[0m
+
+-----------------------------------------------------
+  VERIFYING JSON (/json)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Server: plain 1.0.0
+Date: Sun, 29 Jun 2014 01:10:36 GMT
+Content-Type: application/json; charset=UTF-8
+Content-Length: 27
+
+{"message":"Hello, World!"}
+
+VALIDATING JSON ... PASS
+
+
+-----------------------------------------------------
+  VERIFYING DB (/db)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Server: plain 1.0.0
+Date: Sun, 29 Jun 2014 01:10:36 GMT
+Content-Type: application/json; charset=UTF-8
+Content-Length: 37
+
+{"id":6586,"randomNumber":-532421310}
+
+VALIDATING DB ... PASS
+
+
+-----------------------------------------------------
+  VERIFYING QUERY (/db?queries=2)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Server: plain 1.0.0
+Date: Sun, 29 Jun 2014 01:10:36 GMT
+Content-Type: application/json; charset=UTF-8
+Content-Length: 76
+
+[{"id":593,"randomNumber":1412847093},{"id":5419,"randomNumber":1779565864}]
+
+/db?queries=2 - PASS
+
+-----------------------------------------------------
+
+HTTP/1.1 200 OK
+Server: plain 1.0.0
+Date: Sun, 29 Jun 2014 01:10:36 GMT
+Content-Type: application/json; charset=UTF-8
+Content-Length: 40
+
+[{"id":9914,"randomNumber":-1024299495}]
+
+/db?queries=0 - PASS
+
+-----------------------------------------------------
+
+HTTP/1.1 200 OK
+Server: plain 1.0.0
+Date: Sun, 29 Jun 2014 01:10:36 GMT
+Content-Type: application/json; charset=UTF-8
+Content-Length: 40
+
+[{"id":8979,"randomNumber":-1467386727}]
+
+/db?queries=foo - PASS
+
+-----------------------------------------------------
+
+HTTP/1.1 200 OK
+Server: plain 1.0.0
+Date: Sun, 29 Jun 2014 01:10:36 GMT
+Content-Type: application/json; charset=UTF-8
+Content-Length: 18956
+
+/db?queries=501 - WARNING
+
+-----------------------------------------------------
+
+
+VALIDATING QUERY ... PASS (with warnings)
+
+
+-----------------------------------------------------
+  VERIFYING FORTUNE (/fortunes)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Server: plain 1.0.0
+Date: Sun, 29 Jun 2014 01:10:40 GMT
+Content-Type: text/html; charset=UTF-8
+Content-Length: 1293
+
+<!DOCTYPE html><html>
+      <head><title>Fortunes</title></head>
+      <body>  <table>
+                <tr><th>id</th><th>message</th></tr>
+                <tr><td>11</td><td>&lt;script&gt;alert(&quot;This should not be displayed in a browser alert box.&quot;);&lt;/script&gt;</td></tr><tr><td>4</td><td>A bad random number generator: 1, 1, 1, 1, 1, 4.33e+67, 1, 1, 1</td></tr><tr><td>5</td><td>A computer program does what you tell it to do, not what you want it to do.</td></tr><tr><td>2</td><td>A computer scientist is someone who fixes things that aren't broken.</td></tr><tr><td>8</td><td>A list is only as strong as its weakest link. — Donald Knuth</td></tr><tr><td>0</td><td>Additional fortune added at request time.</td></tr><tr><td>3</td><td>After enough decimal places, nobody gives a damn.</td></tr><tr><td>7</td><td>Any program that runs right is obsolete.</td></tr><tr><td>10</td><td>Computers make very fast, very accurate mistakes.</td></tr><tr><td>6</td><td>Emacs is a nice operating system, but I prefer UNIX. — Tom Christaensen</td></tr><tr><td>9</td><td>Feature: A bug with seniority.</td></tr><tr><td>1</td><td>fortune: No such file or directory</td></tr><tr><td>12</td><td>フレームワークのベンチマーク</td></tr>
+              </table> </body>
+    </html>
+
+VALIDATING FORTUNE ... PASS
+
+
+-----------------------------------------------------
+  VERIFYING UPDATE (/update?queries=)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Server: plain 1.0.0
+Date: Sun, 29 Jun 2014 01:10:40 GMT
+Content-Type: application/json; charset=UTF-8
+Content-Length: 64
+
+[{"id":2934,"randomNumber":7065},{"id":3878,"randomNumber":557}]
+
+VALIDATING UPDATE ... PASS
+
+
+-----------------------------------------------------
+  VERIFYING PLAINTEXT (/plaintext)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Server: plain 1.0.0
+Date: Sun, 29 Jun 2014 01:10:40 GMT
+Content-Type: application/octet-stream
+Content-Length: 13
+
+Hello, World!
+
+VALIDATING PLAINTEXT ... PASS
+
+
+-----------------------------------------------------
+  Benchmarking plain ...
+-----------------------------------------------------
+BENCHMARKING JSON ... Complete
+BENCHMARKING DB ... Complete
+BENCHMARKING Query ... Complete
+BENCHMARKING Fortune ... Complete
+BENCHMARKING Update ... Complete
+BENCHMARKING Plaintext ... Complete
+
+-----------------------------------------------------
+  Stopping plain
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Stopped plain
+-----------------------------------------------------
+
+----------------------------------------------------
+Saving results through plain
+----------------------------------------------------

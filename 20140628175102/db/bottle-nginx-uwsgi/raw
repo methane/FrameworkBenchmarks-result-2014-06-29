@@ -1,0 +1,122 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer bottle-nginx-uwsgi
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/dbs
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/dbs
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     4.71ms    7.42ms  88.96ms   98.15%
+    Req/Sec   290.73     99.77   700.00     66.99%
+  11015 requests in 5.00s, 1.93MB read
+Requests/sec:   2202.86
+Transfer/sec:    395.23KB
+
+---------------------------------------------------------
+ Running Warmup bottle-nginx-uwsgi
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/dbs
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/dbs
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   110.70ms    2.41ms 122.28ms   68.63%
+    Req/Sec   578.87     10.86   619.00     66.80%
+  34657 requests in 15.00s, 6.07MB read
+Requests/sec:   2310.41
+Transfer/sec:    414.57KB
+
+---------------------------------------------------------
+ Concurrency: 8 for bottle-nginx-uwsgi
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:8080/dbs -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/dbs
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     3.71ms    1.91ms  38.79ms   76.14%
+    Req/Sec   581.43    119.76     1.09k    65.71%
+  33390 requests in 15.00s, 5.85MB read
+Requests/sec:   2225.75
+Transfer/sec:    399.34KB
+
+---------------------------------------------------------
+ Concurrency: 16 for bottle-nginx-uwsgi
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:8080/dbs -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/dbs
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     7.01ms    1.70ms  15.56ms   68.07%
+    Req/Sec   590.09     65.56   812.00     76.20%
+  34379 requests in 15.00s, 6.02MB read
+Requests/sec:   2291.76
+Transfer/sec:    411.20KB
+
+---------------------------------------------------------
+ Concurrency: 32 for bottle-nginx-uwsgi
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:8080/dbs -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/dbs
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    13.92ms    1.90ms  68.61ms   79.77%
+    Req/Sec   584.98     38.34   705.00     64.51%
+  34618 requests in 15.00s, 6.07MB read
+Requests/sec:   2307.75
+Transfer/sec:    414.05KB
+
+---------------------------------------------------------
+ Concurrency: 64 for bottle-nginx-uwsgi
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:8080/dbs -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/dbs
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    27.86ms    1.69ms  69.96ms   77.65%
+    Req/Sec   578.55     25.74   672.00     66.21%
+  34407 requests in 15.00s, 6.03MB read
+Requests/sec:   2293.53
+Transfer/sec:    411.51KB
+
+---------------------------------------------------------
+ Concurrency: 128 for bottle-nginx-uwsgi
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:8080/dbs -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/dbs
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    55.93ms    1.58ms  63.95ms   73.50%
+    Req/Sec   574.40     10.80   619.00     76.91%
+  34328 requests in 15.00s, 6.02MB read
+Requests/sec:   2288.14
+Transfer/sec:    410.56KB
+
+---------------------------------------------------------
+ Concurrency: 256 for bottle-nginx-uwsgi
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/dbs -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/dbs
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   110.99ms    2.10ms 162.50ms   74.19%
+    Req/Sec   577.34     12.26   623.00     78.91%
+  34571 requests in 15.00s, 6.06MB read
+Requests/sec:   2304.63
+Transfer/sec:    413.53KB

@@ -1,0 +1,173 @@
+test.os.lower() = linux  test.database_os.lower() = linux
+self.results['frameworks'] != None: True
+test.name: php-phalcon
+self.results['completed']: {}
+
+=====================================================
+  Beginning php-phalcon
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Starting php-phalcon
+-----------------------------------------------------
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+mysql start/running, process 14167
+ * Restarting PostgreSQL 9.3 database server
+   ...done.
+
+-----------------------------------------------------
+  VERIFYING JSON (/json)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Server: nginx/1.4.1
+Date: Sun, 29 Jun 2014 00:45:50 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: PHP/5.4.13
+
+{"message":"Hello, World!"}
+
+VALIDATING JSON ... PASS
+
+
+-----------------------------------------------------
+  VERIFYING DB (/db)
+-----------------------------------------------------
+HTTP/1.1 500 Internal Server Error
+Server: nginx/1.4.1
+Date: Sun, 29 Jun 2014 00:45:50 GMT
+Content-Type: text/html
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: PHP/5.4.13
+
+
+
+VALIDATING DB ... FAIL
+
+
+-----------------------------------------------------
+  VERIFYING QUERY (/queries?queries=2)
+-----------------------------------------------------
+HTTP/1.1 500 Internal Server Error
+Server: nginx/1.4.1
+Date: Sun, 29 Jun 2014 00:45:50 GMT
+Content-Type: text/html
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: PHP/5.4.13
+
+
+
+/queries?queries=2 - FAIL
+
+-----------------------------------------------------
+
+HTTP/1.1 500 Internal Server Error
+Server: nginx/1.4.1
+Date: Sun, 29 Jun 2014 00:45:50 GMT
+Content-Type: text/html
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: PHP/5.4.13
+
+
+
+/queries?queries=0 - WARNING
+
+-----------------------------------------------------
+
+HTTP/1.1 500 Internal Server Error
+Server: nginx/1.4.1
+Date: Sun, 29 Jun 2014 00:45:50 GMT
+Content-Type: text/html
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: PHP/5.4.13
+
+
+
+/queries?queries=foo - WARNING
+
+-----------------------------------------------------
+
+HTTP/1.1 500 Internal Server Error
+Server: nginx/1.4.1
+Date: Sun, 29 Jun 2014 00:45:50 GMT
+Content-Type: text/html
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: PHP/5.4.13
+
+
+
+/queries?queries=501 - WARNING
+
+-----------------------------------------------------
+
+
+VALIDATING QUERY ... FAIL
+
+
+-----------------------------------------------------
+  VERIFYING FORTUNE (/fortunes)
+-----------------------------------------------------
+HTTP/1.1 500 Internal Server Error
+Server: nginx/1.4.1
+Date: Sun, 29 Jun 2014 00:45:50 GMT
+Content-Type: text/html
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: PHP/5.4.13
+
+
+
+VALIDATING FORTUNE ... FAIL
+
+
+-----------------------------------------------------
+  VERIFYING UPDATE (/update?queries=)
+-----------------------------------------------------
+HTTP/1.1 500 Internal Server Error
+Server: nginx/1.4.1
+Date: Sun, 29 Jun 2014 00:45:50 GMT
+Content-Type: text/html
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: PHP/5.4.13
+
+
+
+VALIDATING UPDATE ... FAIL
+
+
+-----------------------------------------------------
+  Benchmarking php-phalcon ...
+-----------------------------------------------------
+BENCHMARKING JSON ... Complete
+BENCHMARKING DB ... Complete
+BENCHMARKING Query ... Complete
+BENCHMARKING Fortune ... Complete
+BENCHMARKING Update ... Complete
+
+-----------------------------------------------------
+  Stopping php-phalcon
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Stopped php-phalcon
+-----------------------------------------------------
+
+----------------------------------------------------
+Saving results through php-phalcon
+----------------------------------------------------

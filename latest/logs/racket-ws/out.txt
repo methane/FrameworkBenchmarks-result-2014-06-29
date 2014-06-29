@@ -1,0 +1,179 @@
+test.os.lower() = linux  test.database_os.lower() = linux
+self.results['frameworks'] != None: True
+test.name: racket-ws
+self.results['completed']: {}
+
+=====================================================
+  Beginning racket-ws
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Starting racket-ws
+-----------------------------------------------------
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+mysql start/running, process 3694
+ * Restarting PostgreSQL 9.3 database server
+   ...done.
+
+-----------------------------------------------------
+  VERIFYING JSON (/json)
+-----------------------------------------------------
+HTTP/1.1 200 Okay
+Date: Sun, 29 Jun 2014 02:31:52 GMT
+Last-Modified: Sun, 29 Jun 2014 02:31:52 GMT
+Server: Racket
+Content-Type: application/json
+Transfer-Encoding: chunked
+
+{"message":"Hello, World!"}
+
+VALIDATING JSON ... PASS
+
+
+-----------------------------------------------------
+  VERIFYING DB (/db)
+-----------------------------------------------------
+HTTP/1.1 500 Okay
+Date: Sun, 29 Jun 2014 02:31:52 GMT
+Last-Modified: Sun, 29 Jun 2014 02:31:52 GMT
+Server: Racket
+Content-Type: text/html; charset=utf-8
+Transfer-Encoding: chunked
+
+<html><head><title>Servlet Error</title><link rel="stylesheet" href="/error.css" /></head><body><div class="section"><div class="title">Exception</div><p>The application raised an exception with the message:<pre>query-list: Unknown column '$1' in 'where clause'
+  SQLSTATE: 42S22</pre></p><p>Stack trace:<pre>raise-sql-error at:
+  line 169, column 0, in file /home/ubuntu/FrameworkBenchmarks/installs/racket-5.3.6/collects/db/private/generic/interfaces.rkt
+&lt;unknown procedure&gt; at:
+  line 270, column 13, in file /home/ubuntu/FrameworkBenchmarks/installs/racket-5.3.6/collects/db/private/generic/common.rkt
+query-list at:
+  line 147, column 0, in file /home/ubuntu/FrameworkBenchmarks/installs/racket-5.3.6/collects/db/private/generic/functions.rkt
+f75 at:
+  &lt;unknown location&gt;
+&lt;unknown procedure&gt; at:
+  line 58, column 2, in file /home/ubuntu/FrameworkBenchmarks/installs/racket-5.3.6/collects/web-server/dispatchers/dispatch-servlets.rkt
+&lt;unknown procedure&gt; at:
+  line 96, column 6, in file /home/ubuntu/FrameworkBenchmarks/installs/racket-5.3.6/collects/web-server/private/dispatch-server-unit.rkt
+</pre></p></div></body></html>
+
+VALIDATING DB ... FAIL
+
+
+-----------------------------------------------------
+  VERIFYING QUERY (/dbs/2)
+-----------------------------------------------------
+HTTP/1.1 500 Okay
+Date: Sun, 29 Jun 2014 02:31:52 GMT
+Last-Modified: Sun, 29 Jun 2014 02:31:52 GMT
+Server: Racket
+Content-Type: text/html; charset=utf-8
+Transfer-Encoding: chunked
+
+<html><head><title>Servlet Error</title><link rel="stylesheet" href="/error.css" /></head><body><div class="section"><div class="title">Exception</div><p>The application raised an exception with the message:<pre>query-list: Unknown column '$1' in 'where clause'
+  SQLSTATE: 42S22</pre></p><p>Stack trace:<pre>raise-sql-error at:
+  line 169, column 0, in file /home/ubuntu/FrameworkBenchmarks/installs/racket-5.3.6/collects/db/private/generic/interfaces.rkt
+&lt;unknown procedure&gt; at:
+  line 270, column 13, in file /home/ubuntu/FrameworkBenchmarks/installs/racket-5.3.6/collects/db/private/generic/common.rkt
+query-list at:
+  line 147, column 0, in file /home/ubuntu/FrameworkBenchmarks/installs/racket-5.3.6/collects/db/private/generic/functions.rkt
+page/dbs at:
+  line 36, column 2, in file /home/ubuntu/FrameworkBenchmarks/racket-ws/bench/bench.rkt
+&lt;unknown procedure&gt; at:
+  line 58, column 2, in file /home/ubuntu/FrameworkBenchmarks/installs/racket-5.3.6/collects/web-server/dispatchers/dispatch-servlets.rkt
+&lt;unknown procedure&gt; at:
+  line 96, column 6, in file /home/ubuntu/FrameworkBenchmarks/installs/racket-5.3.6/collects/web-server/private/dispatch-server-unit.rkt
+</pre></p></div></body></html>
+
+/dbs/2 - FAIL
+
+-----------------------------------------------------
+
+HTTP/1.1 200 Okay
+Date: Sun, 29 Jun 2014 02:31:52 GMT
+Last-Modified: Sun, 29 Jun 2014 02:31:52 GMT
+Server: Racket
+Content-Type: application/json
+Transfer-Encoding: chunked
+
+[]
+
+/dbs/0 - WARNING
+
+-----------------------------------------------------
+
+HTTP/1.1 404 File not found
+Date: Sun, 29 Jun 2014 02:31:52 GMT
+Last-Modified: Sun, 29 Jun 2014 02:31:52 GMT
+Server: Racket
+Content-Type: text/html; charset=utf-8
+Content-Length: 214
+
+<html>
+<head><title>Not Found</title></head>
+<body bgcolor='white'>
+<p>The file you were looking for was not found on this server.</p>
+<p>Powered by <a href="http://racket-lang.org/">Racket</a></p>
+</body>
+</html>
+
+
+/dbs/foo - WARNING
+
+-----------------------------------------------------
+
+HTTP/1.1 500 Okay
+Date: Sun, 29 Jun 2014 02:31:52 GMT
+Last-Modified: Sun, 29 Jun 2014 02:31:52 GMT
+Server: Racket
+Content-Type: text/html; charset=utf-8
+Transfer-Encoding: chunked
+
+<html><head><title>Servlet Error</title><link rel="stylesheet" href="/error.css" /></head><body><div class="section"><div class="title">Exception</div><p>The application raised an exception with the message:<pre>query-list: Unknown column '$1' in 'where clause'
+  SQLSTATE: 42S22</pre></p><p>Stack trace:<pre>raise-sql-error at:
+  line 169, column 0, in file /home/ubuntu/FrameworkBenchmarks/installs/racket-5.3.6/collects/db/private/generic/interfaces.rkt
+&lt;unknown procedure&gt; at:
+  line 270, column 13, in file /home/ubuntu/FrameworkBenchmarks/installs/racket-5.3.6/collects/db/private/generic/common.rkt
+query-list at:
+  line 147, column 0, in file /home/ubuntu/FrameworkBenchmarks/installs/racket-5.3.6/collects/db/private/generic/functions.rkt
+page/dbs at:
+  line 36, column 2, in file /home/ubuntu/FrameworkBenchmarks/racket-ws/bench/bench.rkt
+&lt;unknown procedure&gt; at:
+  line 58, column 2, in file /home/ubuntu/FrameworkBenchmarks/installs/racket-5.3.6/collects/web-server/dispatchers/dispatch-servlets.rkt
+&lt;unknown procedure&gt; at:
+  line 96, column 6, in file /home/ubuntu/FrameworkBenchmarks/installs/racket-5.3.6/collects/web-server/private/dispatch-server-unit.rkt
+</pre></p></div></body></html>
+
+/dbs/501 - WARNING
+
+-----------------------------------------------------
+
+
+VALIDATING QUERY ... FAIL
+
+
+-----------------------------------------------------
+  Benchmarking racket-ws ...
+-----------------------------------------------------
+BENCHMARKING JSON ... Complete
+BENCHMARKING DB ... Complete
+BENCHMARKING Query ... Complete
+
+-----------------------------------------------------
+  Stopping racket-ws
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Stopped racket-ws
+-----------------------------------------------------
+
+----------------------------------------------------
+Saving results through racket-ws
+----------------------------------------------------

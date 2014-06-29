@@ -1,0 +1,130 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Sun Jun 29 05:24:16 UTC 2014
+
+  System load:  3.96               Processes:           139
+  Usage of /:   69.2% of 19.55GB   Users logged in:     1
+  Memory usage: 25%                IP address for eth0: 10.227.136.45
+  Swap usage:   0%
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer treefrog
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/json/json
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/json/json
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     2.69ms    2.50ms   7.93ms   52.44%
+    Req/Sec   770.50    788.27     3.22k    81.49%
+  28767 requests in 5.00s, 5.46MB read
+Requests/sec:   5750.23
+Transfer/sec:      1.09MB
+
+---------------------------------------------------------
+ Running Warmup treefrog
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/json/json
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json/json
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    30.49ms   22.93ms 253.97ms   90.79%
+    Req/Sec     2.19k   301.83     3.01k    79.43%
+  129829 requests in 15.00s, 24.64MB read
+Requests/sec:   8656.07
+Transfer/sec:      1.64MB
+
+---------------------------------------------------------
+ Concurrency: 8 for treefrog
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:8080/json/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json/json
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.27ms    1.03ms   7.31ms   86.36%
+    Req/Sec     1.76k   456.05     4.11k    68.79%
+  100316 requests in 15.00s, 19.04MB read
+Requests/sec:   6686.82
+Transfer/sec:      1.27MB
+
+---------------------------------------------------------
+ Concurrency: 16 for treefrog
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:8080/json/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json/json
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     2.39ms    1.52ms  11.05ms   67.61%
+    Req/Sec     1.82k   330.15     3.44k    71.65%
+  103509 requests in 15.00s, 19.64MB read
+Requests/sec:   6900.54
+Transfer/sec:      1.31MB
+
+---------------------------------------------------------
+ Concurrency: 32 for treefrog
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:8080/json/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json/json
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     5.58ms    2.90ms  25.21ms   69.38%
+    Req/Sec     1.53k   289.73     2.75k    68.34%
+  88574 requests in 15.00s, 16.81MB read
+Requests/sec:   5905.09
+Transfer/sec:      1.12MB
+
+---------------------------------------------------------
+ Concurrency: 64 for treefrog
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:8080/json/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json/json
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    10.48ms    4.67ms  40.34ms   70.12%
+    Req/Sec     1.57k   220.82     2.39k    68.35%
+  92182 requests in 15.00s, 17.49MB read
+Requests/sec:   6144.73
+Transfer/sec:      1.17MB
+
+---------------------------------------------------------
+ Concurrency: 128 for treefrog
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:8080/json/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json/json
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    17.22ms    7.43ms  61.83ms   71.77%
+    Req/Sec     1.88k   159.17     2.51k    69.72%
+  111541 requests in 15.00s, 21.17MB read
+Requests/sec:   7434.94
+Transfer/sec:      1.41MB
+
+---------------------------------------------------------
+ Concurrency: 256 for treefrog
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/json/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json/json
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    30.42ms   17.21ms 128.17ms   84.28%
+    Req/Sec     2.12k   279.62     2.76k    65.81%
+  122901 requests in 15.00s, 23.32MB read
+Requests/sec:   8193.35
+Transfer/sec:      1.55MB

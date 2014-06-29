@@ -1,0 +1,130 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Sun Jun 29 02:56:20 UTC 2014
+
+  System load:  0.89               Processes:           135
+  Usage of /:   68.6% of 19.55GB   Users logged in:     0
+  Memory usage: 26%                IP address for eth0: 10.227.136.45
+  Swap usage:   0%
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer revel
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/db
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/db
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   671.05us    1.52ms  23.27ms   98.26%
+    Req/Sec     1.91k   411.61     2.89k    75.63%
+  72047 requests in 5.00s, 10.57MB read
+Requests/sec:  14414.04
+Transfer/sec:      2.11MB
+
+---------------------------------------------------------
+ Running Warmup revel
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/db
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    16.81ms   18.83ms 626.61ms   96.52%
+    Req/Sec     3.96k   324.84     5.06k    71.61%
+  233802 requests in 15.00s, 34.29MB read
+Requests/sec:  15587.13
+Transfer/sec:      2.29MB
+
+---------------------------------------------------------
+ Concurrency: 8 for revel
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:8080/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   571.50us    0.86ms  31.85ms   97.85%
+    Req/Sec     3.72k   627.67     5.78k    73.71%
+  211474 requests in 15.00s, 31.01MB read
+Requests/sec:  14098.99
+Transfer/sec:      2.07MB
+
+---------------------------------------------------------
+ Concurrency: 16 for revel
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:8080/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.06ms    1.06ms  30.24ms   93.09%
+    Req/Sec     3.98k   660.03     6.44k    68.22%
+  226278 requests in 15.00s, 33.19MB read
+Requests/sec:  15086.28
+Transfer/sec:      2.21MB
+
+---------------------------------------------------------
+ Concurrency: 32 for revel
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:8080/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     2.06ms    1.75ms  30.09ms   88.23%
+    Req/Sec     4.12k   653.28     7.22k    68.46%
+  234164 requests in 15.00s, 34.34MB read
+Requests/sec:  15612.79
+Transfer/sec:      2.29MB
+
+---------------------------------------------------------
+ Concurrency: 64 for revel
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:8080/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     4.11ms    2.93ms  38.49ms   78.82%
+    Req/Sec     4.07k   529.17     7.38k    69.92%
+  235255 requests in 15.00s, 34.50MB read
+Requests/sec:  15684.97
+Transfer/sec:      2.30MB
+
+---------------------------------------------------------
+ Concurrency: 128 for revel
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:8080/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     8.17ms    4.81ms  48.46ms   75.43%
+    Req/Sec     4.00k   382.54     5.84k    69.24%
+  235456 requests in 15.00s, 34.53MB read
+Requests/sec:  15698.13
+Transfer/sec:      2.30MB
+
+---------------------------------------------------------
+ Concurrency: 256 for revel
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    16.38ms    9.47ms  73.32ms   67.78%
+    Req/Sec     3.93k   280.79     4.81k    69.05%
+  233224 requests in 15.00s, 34.20MB read
+Requests/sec:  15548.94
+Transfer/sec:      2.28MB

@@ -1,0 +1,91 @@
+test.os.lower() = linux  test.database_os.lower() = linux
+self.results['frameworks'] != None: True
+test.name: nodejs-mysql-raw
+self.results['completed']: {}
+
+=====================================================
+  Beginning nodejs-mysql-raw
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Starting nodejs-mysql-raw
+-----------------------------------------------------
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Sun Jun 29 00:22:22 UTC 2014
+
+  System load:  2.14               Processes:           136
+  Usage of /:   67.9% of 19.55GB   Users logged in:     0
+  Memory usage: 24%                IP address for eth0: 10.227.136.45
+  Swap usage:   0%
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+mysql start/running, process 9541
+ * Restarting PostgreSQL 9.3 database server
+   ...done.
+worker undefined died
+worker undefined died
+worker undefined died
+worker undefined died
+
+-----------------------------------------------------
+  VERIFYING DB (/mysql)
+-----------------------------------------------------
+VALIDATING DB ... FAIL
+
+
+-----------------------------------------------------
+  VERIFYING QUERY (/mysql?queries=2)
+-----------------------------------------------------
+/mysql?queries=2 - FAIL
+
+-----------------------------------------------------
+
+/mysql?queries=0 - WARNING
+
+-----------------------------------------------------
+
+/mysql?queries=foo - WARNING
+
+-----------------------------------------------------
+
+/mysql?queries=501 - WARNING
+
+-----------------------------------------------------
+
+
+VALIDATING QUERY ... FAIL
+
+
+-----------------------------------------------------
+  VERIFYING UPDATE (/update?queries=)
+-----------------------------------------------------
+VALIDATING UPDATE ... FAIL
+
+
+-----------------------------------------------------
+  Benchmarking nodejs-mysql-raw ...
+-----------------------------------------------------
+BENCHMARKING DB ... Complete
+BENCHMARKING Query ... Complete
+BENCHMARKING Update ... Complete
+
+-----------------------------------------------------
+  Stopping nodejs-mysql-raw
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Stopped nodejs-mysql-raw
+-----------------------------------------------------
+
+----------------------------------------------------
+Saving results through nodejs-mysql-raw
+----------------------------------------------------

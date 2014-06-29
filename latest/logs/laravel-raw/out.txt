@@ -1,0 +1,224 @@
+test.os.lower() = linux  test.database_os.lower() = linux
+self.results['frameworks'] != None: True
+test.name: laravel-raw
+self.results['completed']: {}
+
+=====================================================
+  Beginning laravel-raw
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Starting laravel-raw
+-----------------------------------------------------
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Sat Jun 28 23:23:18 UTC 2014
+
+  System load:  3.64               Processes:           401
+  Usage of /:   67.7% of 19.55GB   Users logged in:     0
+  Memory usage: 26%                IP address for eth0: 10.227.136.45
+  Swap usage:   0%
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+mysql start/running, process 29314
+ * Restarting PostgreSQL 9.3 database server
+   ...done.
+
+-----------------------------------------------------
+  VERIFYING DB (/db)
+-----------------------------------------------------
+HTTP/1.1 500 Internal Server Error
+Server: nginx/1.4.1
+Content-Type: text/html; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: PHP/5.4.13
+cache-control: no-cache
+date: Sat, 28 Jun 2014 23:26:06 GMT
+
+<html><h2>Unhandled Exception</h2>
+				<h3>Message:</h3>
+				<pre>SQLSTATE[HY000] [2002] No such file or directory</pre>
+				<h3>Location:</h3>
+				<pre>/home/ubuntu/FrameworkBenchmarks/php-laravel/laravel/database/connectors/mysql.php on line 33</pre>
+				  <h3>Stack Trace:</h3>
+				  <pre>#0 /home/ubuntu/FrameworkBenchmarks/php-laravel/laravel/database/connectors/mysql.php(33): PDO->__construct('mysql:host=loca...', 'benchmarkdbuser', 'benchmarkdbpass', Array)
+#1 /home/ubuntu/FrameworkBenchmarks/php-laravel/laravel/database.php(66): Laravel\Database\Connectors\MySQL->connect(Array)
+#2 /home/ubuntu/FrameworkBenchmarks/php-laravel/laravel/database.php(52): Laravel\Database::connect(Array)
+#3 /home/ubuntu/FrameworkBenchmarks/php-laravel/laravel/database.php(112): Laravel\Database::connection(NULL)
+#4 /home/ubuntu/FrameworkBenchmarks/php-laravel/application/routes.php(47): Laravel\Database::table('World')
+#5 [internal function]: Laravel\Bundle::{closure}()
+#6 /home/ubuntu/FrameworkBenchmarks/php-laravel/laravel/routing/route.php(163): call_user_func_array(Object(Closure), Array)
+#7 /home/ubuntu/FrameworkBenchmarks/php-laravel/laravel/routing/route.php(124): Laravel\Routing\Route->response()
+#8 /home/ubuntu/FrameworkBenchmarks/php-laravel/laravel/laravel.php(167): Laravel\Routing\Route->call()
+#9 /home/ubuntu/FrameworkBenchmarks/php-laravel/public/index.php(34): require('/home/ubuntu/Fr...')
+#10 {main}</pre></html>
+
+VALIDATING DB ... FAIL
+
+
+-----------------------------------------------------
+  VERIFYING QUERY (/db?queries=2)
+-----------------------------------------------------
+HTTP/1.1 500 Internal Server Error
+Server: nginx/1.4.1
+Content-Type: text/html; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: PHP/5.4.13
+cache-control: no-cache
+date: Sat, 28 Jun 2014 23:26:06 GMT
+
+<html><h2>Unhandled Exception</h2>
+				<h3>Message:</h3>
+				<pre>SQLSTATE[HY000] [2002] No such file or directory</pre>
+				<h3>Location:</h3>
+				<pre>/home/ubuntu/FrameworkBenchmarks/php-laravel/laravel/database/connectors/mysql.php on line 33</pre>
+				  <h3>Stack Trace:</h3>
+				  <pre>#0 /home/ubuntu/FrameworkBenchmarks/php-laravel/laravel/database/connectors/mysql.php(33): PDO->__construct('mysql:host=loca...', 'benchmarkdbuser', 'benchmarkdbpass', Array)
+#1 /home/ubuntu/FrameworkBenchmarks/php-laravel/laravel/database.php(66): Laravel\Database\Connectors\MySQL->connect(Array)
+#2 /home/ubuntu/FrameworkBenchmarks/php-laravel/laravel/database.php(52): Laravel\Database::connect(Array)
+#3 /home/ubuntu/FrameworkBenchmarks/php-laravel/laravel/database.php(112): Laravel\Database::connection(NULL)
+#4 /home/ubuntu/FrameworkBenchmarks/php-laravel/application/routes.php(47): Laravel\Database::table('World')
+#5 [internal function]: Laravel\Bundle::{closure}()
+#6 /home/ubuntu/FrameworkBenchmarks/php-laravel/laravel/routing/route.php(163): call_user_func_array(Object(Closure), Array)
+#7 /home/ubuntu/FrameworkBenchmarks/php-laravel/laravel/routing/route.php(124): Laravel\Routing\Route->response()
+#8 /home/ubuntu/FrameworkBenchmarks/php-laravel/laravel/laravel.php(167): Laravel\Routing\Route->call()
+#9 /home/ubuntu/FrameworkBenchmarks/php-laravel/public/index.php(34): require('/home/ubuntu/Fr...')
+#10 {main}</pre></html>
+
+/db?queries=2 - FAIL
+
+-----------------------------------------------------
+
+HTTP/1.1 200 OK
+Server: nginx/1.4.1
+Content-Type: application/json; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: PHP/5.4.13
+cache-control: no-cache
+date: Sat, 28 Jun 2014 23:26:06 GMT
+Set-Cookie: session_payload=665d46481046117bfce39b71f443a71d30aef36f%2Bv4gxUbIIwtgdUbmxL5dKx4e7zJtg%2BgS47PWcgBDXroY07Se%2BStG6ql4gzqvDpY9TSUQwipUZIsBr0R1hdvIj07Je%2BbvzAoXh8xhlcs%2FLaQK8iOw0w%2FhdRI6oDY2I8OqsM9A0Eprb%2BDuXlAg09KuG%2FjwLzytw%2B7vh7OK7Epa%2BSUgdEDBc9kVMDlePOF5HLm4EjeZ5qXxRFOtenDYr3M2b8frxJOC%2B7pUlYP7U6XBB3YptXqqjP1jQ9keEJMhLGprjQpe%2FwAMkPlwQVQApMIenBbJGZQwF1aqqctiPO8aomCm7R22urJyWGbPlX7LdliZMUeZriR8g68u1ZotzvBIuag%3D%3D; expires=Sun, 29-Jun-2014 00:26:06 GMT; path=/; httponly
+Set-Cookie: laravel_session=faabc6f761f26234888b11b8fbfe2f62ee9667ed%2BWGHnEAguZ6yd0vpePB043y4tljTkbXmfQwU8ZOQG; expires=Sun, 29-Jun-2014 00:26:06 GMT; path=/; httponly
+
+[]
+
+/db?queries=0 - WARNING
+
+-----------------------------------------------------
+
+HTTP/1.1 200 OK
+Server: nginx/1.4.1
+Content-Type: application/json; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: PHP/5.4.13
+cache-control: no-cache
+date: Sat, 28 Jun 2014 23:26:07 GMT
+Set-Cookie: session_payload=50adab6f8b9f80b18f2a3906c81792147f212dbb%2Bh91cN2g6lNRlzdVhSa%2BFapyCTQ5E0qosOsLQK1o%2BJYvAER9yPUYSg76dXKdbg0vxUgob9024Cse0a8%2Fwwj7UG0SiK1RQVAvbpDrwVnPB2v4KNlSPkb%2F80ixuz9vvnhSxqbSmKd3Y025whNbBm9as%2BUks4s6j8vHa413YUqxT9eI2abEffB8rMQGZ8mnqbN4lvc2ROnax0iBDUichDiHNSVYHLXdpoEi9pCQphv18UeZo2A3ly5gup%2Femom%2Flk5dRpQaklMBLL9WEHRkwM%2FLeX4%2FHeZpfKgU3yoEbu%2BJ81z8x%2BBg79mB%2BnMKSV%2FzmzEDHCBON9Uu0jG%2FH0j%2B%2B9Whmqg%3D%3D; expires=Sun, 29-Jun-2014 00:26:07 GMT; path=/; httponly
+Set-Cookie: laravel_session=f50b41270655b5bc00586d2359373c0f0ffc1190%2BWTeSY38cqk9KZthOaPhDO2LAPwmjDwUqp03Oxt6H; expires=Sun, 29-Jun-2014 00:26:07 GMT; path=/; httponly
+
+[]
+
+/db?queries=foo - WARNING
+
+-----------------------------------------------------
+
+HTTP/1.1 500 Internal Server Error
+Server: nginx/1.4.1
+Content-Type: text/html; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: PHP/5.4.13
+cache-control: no-cache
+date: Sat, 28 Jun 2014 23:26:07 GMT
+
+<html><h2>Unhandled Exception</h2>
+				<h3>Message:</h3>
+				<pre>SQLSTATE[HY000] [2002] No such file or directory</pre>
+				<h3>Location:</h3>
+				<pre>/home/ubuntu/FrameworkBenchmarks/php-laravel/laravel/database/connectors/mysql.php on line 33</pre>
+				  <h3>Stack Trace:</h3>
+				  <pre>#0 /home/ubuntu/FrameworkBenchmarks/php-laravel/laravel/database/connectors/mysql.php(33): PDO->__construct('mysql:host=loca...', 'benchmarkdbuser', 'benchmarkdbpass', Array)
+#1 /home/ubuntu/FrameworkBenchmarks/php-laravel/laravel/database.php(66): Laravel\Database\Connectors\MySQL->connect(Array)
+#2 /home/ubuntu/FrameworkBenchmarks/php-laravel/laravel/database.php(52): Laravel\Database::connect(Array)
+#3 /home/ubuntu/FrameworkBenchmarks/php-laravel/laravel/database.php(112): Laravel\Database::connection(NULL)
+#4 /home/ubuntu/FrameworkBenchmarks/php-laravel/application/routes.php(47): Laravel\Database::table('World')
+#5 [internal function]: Laravel\Bundle::{closure}()
+#6 /home/ubuntu/FrameworkBenchmarks/php-laravel/laravel/routing/route.php(163): call_user_func_array(Object(Closure), Array)
+#7 /home/ubuntu/FrameworkBenchmarks/php-laravel/laravel/routing/route.php(124): Laravel\Routing\Route->response()
+#8 /home/ubuntu/FrameworkBenchmarks/php-laravel/laravel/laravel.php(167): Laravel\Routing\Route->call()
+#9 /home/ubuntu/FrameworkBenchmarks/php-laravel/public/index.php(34): require('/home/ubuntu/Fr...')
+#10 {main}</pre></html>
+
+/db?queries=501 - WARNING
+
+-----------------------------------------------------
+
+
+VALIDATING QUERY ... FAIL
+
+
+-----------------------------------------------------
+  VERIFYING FORTUNE (/fortunes)
+-----------------------------------------------------
+HTTP/1.1 500 Internal Server Error
+Server: nginx/1.4.1
+Content-Type: text/html; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: PHP/5.4.13
+cache-control: no-cache
+date: Sat, 28 Jun 2014 23:26:07 GMT
+
+<html><h2>Unhandled Exception</h2>
+				<h3>Message:</h3>
+				<pre>SQLSTATE[HY000] [2002] No such file or directory</pre>
+				<h3>Location:</h3>
+				<pre>/home/ubuntu/FrameworkBenchmarks/php-laravel/laravel/database/connectors/mysql.php on line 33</pre>
+				  <h3>Stack Trace:</h3>
+				  <pre>#0 /home/ubuntu/FrameworkBenchmarks/php-laravel/laravel/database/connectors/mysql.php(33): PDO->__construct('mysql:host=loca...', 'benchmarkdbuser', 'benchmarkdbpass', Array)
+#1 /home/ubuntu/FrameworkBenchmarks/php-laravel/laravel/database.php(66): Laravel\Database\Connectors\MySQL->connect(Array)
+#2 /home/ubuntu/FrameworkBenchmarks/php-laravel/laravel/database.php(52): Laravel\Database::connect(Array)
+#3 /home/ubuntu/FrameworkBenchmarks/php-laravel/laravel/database.php(112): Laravel\Database::connection(NULL)
+#4 /home/ubuntu/FrameworkBenchmarks/php-laravel/application/controllers/bench.php(8): Laravel\Database::table('Fortune')
+#5 [internal function]: Bench_Controller->action_fortunes()
+#6 /home/ubuntu/FrameworkBenchmarks/php-laravel/laravel/routing/controller.php(325): call_user_func_array(Array, Array)
+#7 /home/ubuntu/FrameworkBenchmarks/php-laravel/laravel/routing/controller.php(285): Laravel\Routing\Controller->response('fortunes', Array)
+#8 /home/ubuntu/FrameworkBenchmarks/php-laravel/laravel/routing/controller.php(165): Laravel\Routing\Controller->execute('fortunes', Array)
+#9 /home/ubuntu/FrameworkBenchmarks/php-laravel/laravel/routing/route.php(153): Laravel\Routing\Controller::call('bench@fortunes', Array)
+#10 /home/ubuntu/FrameworkBenchmarks/php-laravel/laravel/routing/route.php(124): Laravel\Routing\Route->response()
+#11 /home/ubuntu/FrameworkBenchmarks/php-laravel/laravel/laravel.php(167): Laravel\Routing\Route->call()
+#12 /home/ubuntu/FrameworkBenchmarks/php-laravel/public/index.php(34): require('/home/ubuntu/Fr...')
+#13 {main}</pre></html>
+
+VALIDATING FORTUNE ... FAIL
+
+
+-----------------------------------------------------
+  Benchmarking laravel-raw ...
+-----------------------------------------------------
+BENCHMARKING DB ... Complete
+BENCHMARKING Query ... Complete
+BENCHMARKING Fortune ... Complete
+
+-----------------------------------------------------
+  Stopping laravel-raw
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Stopped laravel-raw
+-----------------------------------------------------
+
+----------------------------------------------------
+Saving results through laravel-raw
+----------------------------------------------------

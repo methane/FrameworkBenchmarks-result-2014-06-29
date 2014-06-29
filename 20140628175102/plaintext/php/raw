@@ -1,0 +1,107 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Sun Jun 29 00:38:14 UTC 2014
+
+  System load:  2.87               Processes:           402
+  Usage of /:   67.9% of 19.55GB   Users logged in:     0
+  Memory usage: 22%                IP address for eth0: 10.227.136.45
+  Swap usage:   0%
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer php
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/plaintext.php
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/plaintext.php
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   739.54us    1.88ms  25.28ms   98.23%
+    Req/Sec     1.90k   542.08     4.44k    75.20%
+  71999 requests in 5.00s, 14.00MB read
+Requests/sec:  14404.16
+Transfer/sec:      2.80MB
+
+---------------------------------------------------------
+ Running Warmup php
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/plaintext.php
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/plaintext.php
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    18.79ms   20.04ms 552.27ms   95.06%
+    Req/Sec     3.53k   485.24     6.67k    79.19%
+  209790 requests in 15.00s, 40.81MB read
+Requests/sec:  13986.22
+Transfer/sec:      2.72MB
+
+---------------------------------------------------------
+ Concurrency: 256 for php
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/plaintext.php -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/plaintext.php
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   259.43ms  157.09ms 814.75ms   66.19%
+    Req/Sec     3.98k   329.68     5.12k    75.58%
+  237634 requests in 15.00s, 46.22MB read
+Requests/sec:  15843.67
+Transfer/sec:      3.08MB
+
+---------------------------------------------------------
+ Concurrency: 1024 for php
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 1024 --timeout 1024 -t 4 http://127.0.0.1:8080/plaintext.php -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/plaintext.php
+  4 threads and 1024 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   607.78ms    1.31s   14.90s    96.89%
+    Req/Sec     3.56k   806.92     5.74k    63.64%
+  217728 requests in 14.99s, 42.35MB read
+  Socket errors: connect 0, read 212, write 0, timeout 0
+Requests/sec:  14525.77
+Transfer/sec:      2.83MB
+
+---------------------------------------------------------
+ Concurrency: 4096 for php
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 4096 --timeout 4096 -t 4 http://127.0.0.1:8080/plaintext.php -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/plaintext.php
+  4 threads and 4096 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     4.21s     3.90s   11.25s    61.12%
+    Req/Sec     2.32k     1.42k    6.53k    75.56%
+  146411 requests in 15.00s, 28.49MB read
+  Socket errors: connect 0, read 139310, write 0, timeout 1081
+  Non-2xx or 3xx responses: 47
+Requests/sec:   9761.14
+Transfer/sec:      1.90MB
+
+---------------------------------------------------------
+ Concurrency: 16384 for php
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16384 --timeout 16384 -t 4 http://127.0.0.1:8080/plaintext.php -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/plaintext.php
+  4 threads and 16384 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     8.92s     2.33s   10.19s    89.18%
+    Req/Sec     1.34k     1.64k    6.92k    84.85%
+  104987 requests in 15.23s, 20.44MB read
+  Socket errors: connect 0, read 334183, write 0, timeout 5897
+  Non-2xx or 3xx responses: 120
+Requests/sec:   6895.44
+Transfer/sec:      1.34MB

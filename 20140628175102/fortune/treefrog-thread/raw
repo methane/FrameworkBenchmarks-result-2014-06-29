@@ -1,0 +1,122 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer treefrog-thread
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/fortune/index
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/fortune/index
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    39.98ms   28.16us  40.10ms   73.44%
+    Req/Sec    25.00      0.07    25.00     99.55%
+  1008 requests in 5.01s, 1.40MB read
+Requests/sec:    201.35
+Transfer/sec:    287.08KB
+
+---------------------------------------------------------
+ Running Warmup treefrog-thread
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/fortune/index
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortune/index
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    53.05ms   24.29ms 327.87ms   89.58%
+    Req/Sec     1.20k    79.37     1.36k    75.59%
+  70921 requests in 15.00s, 98.98MB read
+Requests/sec:   4729.44
+Transfer/sec:      6.60MB
+
+---------------------------------------------------------
+ Concurrency: 8 for treefrog-thread
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:8080/fortune/index -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortune/index
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    39.97ms   30.62us  40.08ms   81.48%
+    Req/Sec    49.88      5.88    75.00     92.87%
+  3008 requests in 15.00s, 4.19MB read
+Requests/sec:    200.51
+Transfer/sec:    285.88KB
+
+---------------------------------------------------------
+ Concurrency: 16 for treefrog-thread
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:8080/fortune/index -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortune/index
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    40.00ms  329.21us  43.98ms   99.31%
+    Req/Sec   100.21      6.16   137.00     95.47%
+  6009 requests in 15.02s, 8.38MB read
+Requests/sec:    400.09
+Transfer/sec:    571.11KB
+
+---------------------------------------------------------
+ Concurrency: 32 for treefrog-thread
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:8080/fortune/index -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortune/index
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    39.98ms  256.58us  43.99ms   99.59%
+    Req/Sec   200.70     11.92   237.00     93.15%
+  12012 requests in 15.03s, 16.75MB read
+Requests/sec:    799.27
+Transfer/sec:      1.11MB
+
+---------------------------------------------------------
+ Concurrency: 64 for treefrog-thread
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:8080/fortune/index -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortune/index
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    40.00ms  349.19us  44.05ms   99.24%
+    Req/Sec   402.29     10.18   451.00     80.58%
+  23978 requests in 15.00s, 33.46MB read
+Requests/sec:   1598.24
+Transfer/sec:      2.23MB
+
+---------------------------------------------------------
+ Concurrency: 128 for treefrog-thread
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:8080/fortune/index -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortune/index
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    40.13ms    0.86ms  52.02ms   95.96%
+    Req/Sec   800.47     29.82     0.90k    72.81%
+  47701 requests in 15.00s, 66.58MB read
+Requests/sec:   3180.21
+Transfer/sec:      4.44MB
+
+---------------------------------------------------------
+ Concurrency: 256 for treefrog-thread
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/fortune/index -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortune/index
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    49.88ms   20.94ms 343.87ms   89.93%
+    Req/Sec     1.27k   104.36     1.54k    72.80%
+  75269 requests in 15.00s, 105.05MB read
+Requests/sec:   5017.85
+Transfer/sec:      7.00MB

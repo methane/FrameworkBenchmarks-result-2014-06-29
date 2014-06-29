@@ -1,0 +1,25 @@
+cabal: Could not resolve dependencies:
+trying: bench-wai-0.0.0
+rejecting: http-types-0.8.5/installed-7c8... (conflict: http-types =>
+text==1.1.1.3/installed-816..., bench-wai => text>=0.11 && <0.12)
+trying: http-types-0.8.5
+rejecting: case-insensitive-1.2.0.0/installed-874... (conflict:
+case-insensitive => text==1.1.1.3/installed-816..., bench-wai => text>=0.11 &&
+<0.12)
+trying: case-insensitive-1.2.0.0
+rejecting: hashable-1.2.2.0/installed-4d5... (conflict: hashable =>
+text==1.1.1.3/installed-816..., bench-wai => text>=0.11 && <0.12)
+trying: hashable-1.2.2.0
+trying: network-conduit-1.1.0/installed-dce...
+trying: conduit-1.1.6/installed-48b...
+rejecting: void-0.6.1/installed-92a... (conflict: hashable==1.2.2.0, void =>
+hashable==1.2.2.0/installed-4d5...)
+rejecting: void-0.6.1, 0.6, 0.5.12, 0.5.11, 0.5.10, 0.5.8, 0.5.7, 0.5.6,
+0.5.5.1, 0.5.5, 0.5.4.3, 0.5.4.2, 0.5.4.1, 0.5.4, 0.5.3, 0.5.2, 0.5.1, 0.5.0,
+0.4, 0.3, 0.2, 0.1 (conflict: conduit => void==0.6.1/installed-92a...)
+
+-----------------------------------------------------
+  Subprocess Error wai
+-----------------------------------------------------
+Command 'cabal install --only-dependencies' returned non-zero exit status 1
+(<class 'subprocess.CalledProcessError'>, CalledProcessError())

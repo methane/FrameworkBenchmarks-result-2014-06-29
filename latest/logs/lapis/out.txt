@@ -1,0 +1,181 @@
+test.os.lower() = linux  test.database_os.lower() = linux
+self.results['frameworks'] != None: True
+test.name: lapis
+self.results['completed']: {}
+
+=====================================================
+  Beginning lapis
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Starting lapis
+-----------------------------------------------------
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+mysql start/running, process 2438
+ * Restarting PostgreSQL 9.3 database server
+   ...done.
+
+-----------------------------------------------------
+  VERIFYING JSON (/)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Server: openresty/1.5.8.1
+Date: Sat, 28 Jun 2014 23:10:51 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+
+{"message":"Hello, World!"}
+
+VALIDATING JSON ... PASS
+
+
+-----------------------------------------------------
+  VERIFYING DB (/db)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Server: openresty/1.5.8.1
+Date: Sat, 28 Jun 2014 23:10:51 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+
+{"id":6530,"randomNumber":5201}
+
+VALIDATING DB ... PASS
+
+
+-----------------------------------------------------
+  VERIFYING QUERY (/db?queries=2)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Server: openresty/1.5.8.1
+Date: Sat, 28 Jun 2014 23:10:51 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+
+[{"id":5182,"randomNumber":9886},{"id":5434,"randomNumber":8033}]
+
+/db?queries=2 - PASS
+
+-----------------------------------------------------
+
+HTTP/1.1 200 OK
+Server: openresty/1.5.8.1
+Date: Sat, 28 Jun 2014 23:10:51 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+
+{"id":7034,"randomNumber":4130}
+
+/db?queries=0 - WARNING
+
+-----------------------------------------------------
+
+HTTP/1.1 200 OK
+Server: openresty/1.5.8.1
+Date: Sat, 28 Jun 2014 23:10:51 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+
+{"id":6605,"randomNumber":1826}
+
+/db?queries=foo - WARNING
+
+-----------------------------------------------------
+
+HTTP/1.1 200 OK
+Server: openresty/1.5.8.1
+Date: Sat, 28 Jun 2014 23:10:51 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+
+[{"id":9228,"randomNumber":70},{"id":2356,"randomNumber":1307},{"id":8216,"randomNumber":5433},{"id":3033,"randomNumber":9438},{"id":5905,"randomNumber":8828},{"id":3818,"randomNumber":2634},{"id":9298,"randomNumber":185},{"id":7278,"randomNumber":7942},{"id":2938,"randomNumber":4338},{"id":7338,"randomNumber":425},{"id":390,"randomNumber":8741},{"id":4485,"randomNumber":967},{"id":9779,"randomNumber":3665},{"id":8813,"randomNumber":9855},{"id":6925,"randomNumber":5148},{"id":9295,"randomNumber":8606},{"id":2886,"randomNumber":9061},{"id":9864,"randomNumber":3332},{"id":7030,"randomNumber":9532},{"id":5654,"randomNumber":5651},{"id":6103,"randomNumber":7604},{"id":4280,"randomNumber":2800},{"id":9931,"randomNumber":6291},{"id":717,"randomNumber":592},{"id":5764,"randomNumber":8400},{"id":5000,"randomNumber":4448},{"id":1513,"randomNumber":2896},{"id":7830,"randomNumber":5376},{"id":6285,"randomNumber":8891},{"id":1813,"randomNumber":110},{"id":9477,"randomNumber":8471},{"id":8448,"randomNumber":5},{"id":5690,"randomNumber":2583},{"id":6566,"randomNumber":5397},{"id":5337,"randomNumber":947},{"id":10,"randomNumber":1473},{"id":8419,"randomNumber":1151},{"id":6107,"randomNumber":3463},{"id":3615,"randomNumber":3288},{"id":8702,"randomNumber":1716},{"id":7568,"randomNumber":8049},{"id":8698,"randomNumber":6340},{"id":968,"randomNumber":7207},{"id":8227,"randomNumber":8828},{"id":9730,"randomNumber":5815},{"id":9138,"randomNumber":7002},{"id":8458,"randomNumber":4302},{"id":2596,"randomNumber":282},{"id":5882,"randomNumber":6484},{"id":6647,"randomNumber":6011},{"id":183,"randomNumber":4617},{"id":5580,"randomNumber":7966},{"id":2727,"randomNumber":6465},{"id":9296,"randomNumber":1638},{"id":3225,"randomNumber":4023},{"id":7347,"randomNumber":6140},{"id":6548,"randomNumber":6730},{"id":5817,"randomNumber":8389},{"id":4952,"randomNumber":8129},{"id":795,"randomNumber":3610},{"id":6211,"randomNumber":8553},{"id":6528,"randomNumber":1237},{"id":115,"randomNumber":7100},{"id":1122,"randomNumber":6562},{"id":6628,"randomNumber":6704},{"id":9071,"randomNumber":6183},{"id":648,"randomNumber":9971},{"id":2660,"randomNumber":7073},{"id":2119,"randomNumber":6840},{"id":5418,"randomNumber":6768},{"id":8206,"randomNumber":7281},{"id":943,"randomNumber":6419},{"id":8115,"randomNumber":3626},{"id":198,"randomNumber":4273},{"id":1140,"randomNumber":4378},{"id":4123,"randomNumber":480},{"id":1887,"randomNumber":9407},{"id":582,"randomNumber":5117},{"id":2305,"randomNumber":9427},{"id":4988,"randomNumber":8446},{"id":4299,"randomNumber":6956},{"id":2829,"randomNumber":7047},{"id":1378,"randomNumber":5895},{"id":6164,"randomNumber":6250},{"id":3548,"randomNumber":8828},{"id":5761,"randomNumber":9944},{"id":7109,"randomNumber":6581},{"id":8587,"randomNumber":8281},{"id":6340,"randomNumber":2797},{"id":3804,"randomNumber":9279},{"id":5889,"randomNumber":6406},{"id":8039,"randomNumber":838},{"id":8129,"randomNumber":8904},{"id":739,"randomNumber":1397},{"id":159,"randomNumber":9783},{"id":3854,"randomNumber":4799},{"id":1391,"randomNumber":5319},{"id":7375,"randomNumber":4747},{"id":5022,"randomNumber":995},{"id":6524,"randomNumber":7913},{"id":1482,"randomNumber":3706},{"id":9897,"randomNumber":2222},{"id":4487,"randomNumber":9972},{"id":6736,"randomNumber":6885},{"id":3318,"randomNumber":8478},{"id":1526,"randomNumber":1155},{"id":1167,"randomNumber":2326},{"id":1663,"randomNumber":9071},{"id":4954,"randomNumber":5678},{"id":4134,"randomNumber":2305},{"id":5186,"randomNumber":4791},{"id":2486,"randomNumber":1711},{"id":4820,"randomNumber":3445},{"id":8368,"randomNumber":8132},{"id":5571,"randomNumber":4304},{"id":8705,"randomNumber":3376},{"id":9199,"randomNumber":2834},{"id":8646,"randomNumber":2008},{"id":9404,"randomNumber":1683},{"id":2299,"randomNumber":2889},{"id":4198,"randomNumber":5088},{"id":2522,"randomNumber":6862},{"id":7006,"randomNumber":7687},{"id":2311,"randomNumber":6747},{"id":939,"randomNumber":5204},{"id":6219,"randomNumber":5947},{"id":3644,"randomNumber":259},{"id":4813,"randomNumber":2984},{"id":4039,"randomNumber":8033},{"id":2094,"randomNumber":7945},{"id":6064,"randomNumber":3718},{"id":1972,"randomNumber":46},{"id":393,"randomNumber":5949},{"id":5724,"randomNumber":2105},{"id":5386,"randomNumber":7764},{"id":9680,"randomNumber":4359},{"id":6263,"randomNumber":9269},{"id":2956,"randomNumber":3701},{"id":5620,"randomNumber":4953},{"id":9040,"randomNumber":317},{"id":1874,"randomNumber":5797},{"id":7435,"randomNumber":5008},{"id":5590,"randomNumber":2052},{"id":3095,"randomNumber":9219},{"id":5861,"randomNumber":7648},{"id":1635,"randomNumber":5847},{"id":1316,"randomNumber":2861},{"id":263,"randomNumber":2910},{"id":549,"randomNumber":7954},{"id":7735,"randomNumber":8716},{"id":8805,"randomNumber":169},{"id":4758,"randomNumber":5051},{"id":4896,"randomNumber":9004},{"id":8026,"randomNumber":8642},{"id":4701,"randomNumber":2524},{"id":8064,"randomNumber":3669},{"id":1948,"randomNumber":9249},{"id":8330,"randomNumber":9419},{"id":5512,"randomNumber":1938},{"id":175,"randomNumber":668},{"id":2469,"randomNumber":7275},{"id":6113,"randomNumber":7723},{"id":5219,"randomNumber":6592},{"id":580,"randomNumber":5083},{"id":8434,"randomNumber":2750},{"id":1414,"randomNumber":9682},{"id":6145,"randomNumber":8641},{"id":8890,"randomNumber":6694},{"id":2826,"randomNumber":5135},{"id":8984,"randomNumber":1019},{"id":7274,"randomNumber":3435},{"id":5211,"randomNumber":4883},{"id":2674,"randomNumber":1465},{"id":9086,"randomNumber":7689},{"id":4728,"randomNumber":5531},{"id":8444,"randomNumber":5785},{"id":9668,"randomNumber":3824},{"id":8912,"randomNumber":9955},{"id":5764,"randomNumber":8400},{"id":4567,"randomNumber":768},{"id":7719,"randomNumber":9649},{"id":2818,"randomNumber":9895},{"id":7153,"randomNumber":9459},{"id":1358,"randomNumber":4836},{"id":9244,"randomNumber":7743},{"id":2622,"randomNumber":3393},{"id":7032,"randomNumber":4063},{"id":1509,"randomNumber":1707},{"id":8060,"randomNumber":7627},{"id":1953,"randomNumber":6639},{"id":3876,"randomNumber":3355},{"id":7334,"randomNumber":6853},{"id":6056,"randomNumber":5379},{"id":2689,"randomNumber":4696},{"id":3012,"randomNumber":4522},{"id":9201,"randomNumber":7534},{"id":9438,"randomNumber":8833},{"id":7481,"randomNumber":2289},{"id":4209,"randomNumber":8519},{"id":2771,"randomNumber":9865},{"id":4108,"randomNumber":1950},{"id":7245,"randomNumber":5812},{"id":3797,"randomNumber":2850},{"id":9743,"randomNumber":764},{"id":6664,"randomNumber":2878},{"id":2491,"randomNumber":5565},{"id":9865,"randomNumber":405},{"id":9102,"randomNumber":9773},{"id":305,"randomNumber":339},{"id":6963,"randomNumber":2656},{"id":3821,"randomNumber":8347},{"id":8949,"randomNumber":6164},{"id":2658,"randomNumber":3903},{"id":188,"randomNumber":2742},{"id":4873,"randomNumber":2395},{"id":4881,"randomNumber":2116},{"id":8780,"randomNumber":4419},{"id":9962,"randomNumber":671},{"id":8286,"randomNumber":1052},{"id":7993,"randomNumber":6291},{"id":9736,"randomNumber":8468},{"id":8277,"randomNumber":4392},{"id":4456,"randomNumber":4488},{"id":628,"randomNumber":9588},{"id":7921,"randomNumber":1577},{"id":137,"randomNumber":2291},{"id":9308,"randomNumber":2070},{"id":9327,"randomNumber":1877},{"id":2195,"randomNumber":8693},{"id":973,"randomNumber":9310},{"id":6606,"randomNumber":6546},{"id":815,"randomNumber":2814},{"id":3523,"randomNumber":9737},{"id":8793,"randomNumber":3769},{"id":4196,"randomNumber":2336},{"id":3539,"randomNumber":6895},{"id":3307,"randomNumber":9486},{"id":6073,"randomNumber":8698},{"id":198,"randomNumber":4273},{"id":1349,"randomNumber":1433},{"id":5439,"randomNumber":6463},{"id":6919,"randomNumber":7974},{"id":279,"randomNumber":5020},{"id":9135,"randomNumber":3318},{"id":1236,"randomNumber":1019},{"id":4074,"randomNumber":5248},{"id":281,"randomNumber":8061},{"id":4183,"randomNumber":3573},{"id":5842,"randomNumber":3542},{"id":2901,"randomNumber":7389},{"id":5180,"randomNumber":4128},{"id":4163,"randomNumber":3202},{"id":5673,"randomNumber":2891},{"id":6118,"randomNumber":3937},{"id":9225,"randomNumber":4432},{"id":442,"randomNumber":5271},{"id":2629,"randomNumber":9052},{"id":9105,"randomNumber":3023},{"id":7647,"randomNumber":1490},{"id":950,"randomNumber":9191},{"id":4833,"randomNumber":6570},{"id":6298,"randomNumber":783},{"id":5451,"randomNumber":1524},{"id":7543,"randomNumber":4945},{"id":3362,"randomNumber":7122},{"id":8351,"randomNumber":1961},{"id":7595,"randomNumber":3642},{"id":6900,"randomNumber":930},{"id":9880,"randomNumber":8305},{"id":6067,"randomNumber":2348},{"id":7463,"randomNumber":4590},{"id":126,"randomNumber":83},{"id":2104,"randomNumber":1156},{"id":8023,"randomNumber":3917},{"id":3992,"randomNumber":9494},{"id":8308,"randomNumber":3501},{"id":3676,"randomNumber":4210},{"id":9002,"randomNumber":3824},{"id":5238,"randomNumber":304},{"id":857,"randomNumber":185},{"id":8294,"randomNumber":3654},{"id":6194,"randomNumber":6487},{"id":3723,"randomNumber":7842},{"id":7695,"randomNumber":3296},{"id":144,"randomNumber":7431},{"id":9603,"randomNumber":1656},{"id":7983,"randomNumber":3982},{"id":7352,"randomNumber":3170},{"id":4195,"randomNumber":1487},{"id":5683,"randomNumber":7151},{"id":469,"randomNumber":8351},{"id":5827,"randomNumber":6362},{"id":2632,"randomNumber":7677},{"id":1671,"randomNumber":5246},{"id":3956,"randomNumber":2557},{"id":2158,"randomNumber":3987},{"id":2160,"randomNumber":7610},{"id":208,"randomNumber":8012},{"id":2022,"randomNumber":2847},{"id":9510,"randomNumber":7218},{"id":1838,"randomNumber":7738},{"id":7187,"randomNumber":1609},{"id":7403,"randomNumber":9860},{"id":8482,"randomNumber":9612},{"id":1131,"randomNumber":9602},{"id":1549,"randomNumber":3211},{"id":7113,"randomNumber":8815},{"id":3692,"randomNumber":4060},{"id":4707,"randomNumber":4716},{"id":4843,"randomNumber":3752},{"id":3442,"randomNumber":18},{"id":3397,"randomNumber":3916},{"id":6798,"randomNumber":9768},{"id":6864,"randomNumber":6547},{"id":7305,"randomNumber":8303},{"id":3779,"randomNumber":4315},{"id":4927,"randomNumber":276},{"id":9780,"randomNumber":2156},{"id":3533,"randomNumber":1046},{"id":6258,"randomNumber":5896},{"id":4030,"randomNumber":9231},{"id":6012,"randomNumber":6310},{"id":2721,"randomNumber":6980},{"id":7475,"randomNumber":4356},{"id":7551,"randomNumber":5105},{"id":225,"randomNumber":213},{"id":3049,"randomNumber":1490},{"id":2474,"randomNumber":6784},{"id":5318,"randomNumber":9222},{"id":4670,"randomNumber":236},{"id":7573,"randomNumber":5113},{"id":6015,"randomNumber":6237},{"id":4264,"randomNumber":3533},{"id":8528,"randomNumber":7962},{"id":8497,"randomNumber":9826},{"id":7922,"randomNumber":8106},{"id":8981,"randomNumber":3130},{"id":5721,"randomNumber":6559},{"id":5213,"randomNumber":2300},{"id":3233,"randomNumber":7880},{"id":1721,"randomNumber":9608},{"id":7306,"randomNumber":4539},{"id":2640,"randomNumber":1106},{"id":4230,"randomNumber":6168},{"id":6643,"randomNumber":7044},{"id":7789,"randomNumber":8676},{"id":6884,"randomNumber":9882},{"id":551,"randomNumber":1019},{"id":4735,"randomNumber":1432},{"id":2455,"randomNumber":2599},{"id":1338,"randomNumber":2271},{"id":2204,"randomNumber":4539},{"id":2075,"randomNumber":2232},{"id":694,"randomNumber":2429},{"id":7093,"randomNumber":6910},{"id":8283,"randomNumber":6806},{"id":703,"randomNumber":4041},{"id":37,"randomNumber":6888},{"id":8444,"randomNumber":5785},{"id":7843,"randomNumber":3957},{"id":6518,"randomNumber":8936},{"id":2387,"randomNumber":5525},{"id":7312,"randomNumber":2949},{"id":7615,"randomNumber":8647},{"id":8950,"randomNumber":6414},{"id":8691,"randomNumber":2190},{"id":2185,"randomNumber":704},{"id":5489,"randomNumber":70},{"id":6930,"randomNumber":2046},{"id":5671,"randomNumber":4158},{"id":9422,"randomNumber":591},{"id":7192,"randomNumber":7776},{"id":657,"randomNumber":4702},{"id":467,"randomNumber":9379},{"id":7227,"randomNumber":7430},{"id":1907,"randomNumber":5259},{"id":6684,"randomNumber":8189},{"id":6551,"randomNumber":5799},{"id":7050,"randomNumber":6800},{"id":5080,"randomNumber":1040},{"id":1265,"randomNumber":2796},{"id":9516,"randomNumber":166},{"id":6795,"randomNumber":2136},{"id":1463,"randomNumber":5292},{"id":6960,"randomNumber":3634},{"id":7973,"randomNumber":2825},{"id":8285,"randomNumber":883},{"id":5944,"randomNumber":214},{"id":1087,"randomNumber":8367},{"id":2207,"randomNumber":2894},{"id":6602,"randomNumber":4241},{"id":3907,"randomNumber":832},{"id":4802,"randomNumber":9785},{"id":7568,"randomNumber":8049},{"id":5138,"randomNumber":3836},{"id":3805,"randomNumber":855},{"id":2495,"randomNumber":7577},{"id":189,"randomNumber":7458},{"id":6934,"randomNumber":679},{"id":6680,"randomNumber":5525},{"id":2859,"randomNumber":671},{"id":3344,"randomNumber":7634},{"id":7572,"randomNumber":5153},{"id":3158,"randomNumber":133},{"id":1140,"randomNumber":4378},{"id":6883,"randomNumber":8527},{"id":6725,"randomNumber":236},{"id":7387,"randomNumber":6454},{"id":9499,"randomNumber":6588},{"id":6374,"randomNumber":1681},{"id":2273,"randomNumber":7383},{"id":333,"randomNumber":6610},{"id":5357,"randomNumber":8400},{"id":8254,"randomNumber":8885},{"id":6253,"randomNumber":4848},{"id":5052,"randomNumber":7026},{"id":5910,"randomNumber":5538},{"id":9004,"randomNumber":1367},{"id":3231,"randomNumber":8653},{"id":9489,"randomNumber":5174},{"id":7769,"randomNumber":5874},{"id":7951,"randomNumber":9493},{"id":631,"randomNumber":8946},{"id":3695,"randomNumber":7256},{"id":9216,"randomNumber":4457},{"id":4587,"randomNumber":2645},{"id":1598,"randomNumber":3717},{"id":8822,"randomNumber":9548},{"id":568,"randomNumber":5244},{"id":5708,"randomNumber":8003},{"id":2574,"randomNumber":272},{"id":2839,"randomNumber":7853},{"id":7979,"randomNumber":1338},{"id":3987,"randomNumber":3406},{"id":1274,"randomNumber":6494},{"id":9597,"randomNumber":9238},{"id":6743,"randomNumber":1266},{"id":927,"randomNumber":8935},{"id":4152,"randomNumber":9271},{"id":3742,"randomNumber":7565},{"id":9181,"randomNumber":1393},{"id":6516,"randomNumber":7449},{"id":3518,"randomNumber":8858},{"id":452,"randomNumber":4139},{"id":1517,"randomNumber":2803},{"id":4760,"randomNumber":6387},{"id":8751,"randomNumber":527},{"id":6965,"randomNumber":1835},{"id":3859,"randomNumber":4121},{"id":3920,"randomNumber":4326},{"id":2699,"randomNumber":5078},{"id":4676,"randomNumber":6475},{"id":4603,"randomNumber":2582},{"id":3361,"randomNumber":1235},{"id":6431,"randomNumber":8667},{"id":2986,"randomNumber":5385},{"id":2911,"randomNumber":6449},{"id":8062,"randomNumber":8798},{"id":860,"randomNumber":5317},{"id":8297,"randomNumber":1945},{"id":6495,"randomNumber":9089},{"id":5057,"randomNumber":6228},{"id":3367,"randomNumber":3861},{"id":4225,"randomNumber":6664},{"id":2322,"randomNumber":7285},{"id":7291,"randomNumber":5070},{"id":9869,"randomNumber":4905},{"id":4066,"randomNumber":9105},{"id":4343,"randomNumber":2359},{"id":8562,"randomNumber":1475},{"id":6198,"randomNumber":6800},{"id":2514,"randomNumber":8011},{"id":3107,"randomNumber":8082},{"id":9802,"randomNumber":6405},{"id":9502,"randomNumber":7958},{"id":8572,"randomNumber":7199},{"id":1943,"randomNumber":6078},{"id":2439,"randomNumber":2022},{"id":8996,"randomNumber":1702},{"id":598,"randomNumber":5235},{"id":6669,"randomNumber":288},{"id":5745,"randomNumber":9590},{"id":2282,"randomNumber":212},{"id":3174,"randomNumber":8120},{"id":9858,"randomNumber":6009},{"id":9683,"randomNumber":6653},{"id":4398,"randomNumber":1739},{"id":5218,"randomNumber":1157},{"id":3327,"randomNumber":6882},{"id":1446,"randomNumber":8069},{"id":3223,"randomNumber":6382},{"id":1225,"randomNumber":2741},{"id":4090,"randomNumber":9227},{"id":9671,"randomNumber":4767},{"id":2479,"randomNumber":1207},{"id":3849,"randomNumber":4812},{"id":6950,"randomNumber":9140},{"id":6875,"randomNumber":6127},{"id":2715,"randomNumber":2849},{"id":6166,"randomNumber":4607},{"id":2628,"randomNumber":1788}]
+
+/db?queries=501 - WARNING
+
+-----------------------------------------------------
+
+
+VALIDATING QUERY ... PASS (with warnings)
+
+
+-----------------------------------------------------
+  VERIFYING FORTUNE (/fortunes)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Server: openresty/1.5.8.1
+Date: Sat, 28 Jun 2014 23:10:51 GMT
+Content-Type: text/html; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+
+<!DOCTYPE HTML><html><head><title>Fortunes</title></head><body><table><tr><th>id</th><th>message</th></tr><tr><td>11</td><td>&lt;script&gt;alert(&quot;This should not be displayed in a browser alert box.&quot;);&lt;/script&gt;</td></tr><tr><td>4</td><td>A bad random number generator: 1, 1, 1, 1, 1, 4.33e+67, 1, 1, 1</td></tr><tr><td>5</td><td>A computer program does what you tell it to do, not what you want it to do.</td></tr><tr><td>2</td><td>A computer scientist is someone who fixes things that aren&#039;t broken.</td></tr><tr><td>8</td><td>A list is only as strong as its weakest link. — Donald Knuth</td></tr><tr><td>0</td><td>Additional fortune added at request time.</td></tr><tr><td>3</td><td>After enough decimal places, nobody gives a damn.</td></tr><tr><td>7</td><td>Any program that runs right is obsolete.</td></tr><tr><td>10</td><td>Computers make very fast, very accurate mistakes.</td></tr><tr><td>6</td><td>Emacs is a nice operating system, but I prefer UNIX. — Tom Christaensen</td></tr><tr><td>9</td><td>Feature: A bug with seniority.</td></tr><tr><td>1</td><td>fortune: No such file or directory</td></tr><tr><td>12</td><td>フレームワークのベンチマーク</td></tr></table></body></html>
+
+VALIDATING FORTUNE ... PASS
+
+
+-----------------------------------------------------
+  VERIFYING UPDATE (/update?queries=)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Server: openresty/1.5.8.1
+Date: Sat, 28 Jun 2014 23:10:51 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+
+[{"id":1663,"randomNumber":5825},{"id":2011,"randomNumber":8482}]
+
+VALIDATING UPDATE ... PASS
+
+
+-----------------------------------------------------
+  VERIFYING PLAINTEXT (/plaintext)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Server: openresty/1.5.8.1
+Date: Sat, 28 Jun 2014 23:10:51 GMT
+Content-Type: text/plain; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+
+Hello, World!
+
+VALIDATING PLAINTEXT ... PASS
+
+
+-----------------------------------------------------
+  Benchmarking lapis ...
+-----------------------------------------------------
+BENCHMARKING JSON ... Complete
+BENCHMARKING DB ... Complete
+BENCHMARKING Query ... Complete
+BENCHMARKING Fortune ... Complete
+BENCHMARKING Update ... Complete
+BENCHMARKING Plaintext ... Complete
+
+-----------------------------------------------------
+  Stopping lapis
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Stopped lapis
+-----------------------------------------------------
+
+----------------------------------------------------
+Saving results through lapis
+----------------------------------------------------

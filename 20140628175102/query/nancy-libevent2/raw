@@ -1,0 +1,115 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer nancy-libevent2
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/db/2
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/db/2
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     6.16ms    4.16ms  33.59ms   91.76%
+    Req/Sec   188.40     57.66   400.00     63.81%
+  7280 requests in 4.99s, 152.10MB read
+  Non-2xx or 3xx responses: 7280
+Requests/sec:   1458.62
+Transfer/sec:     30.47MB
+
+---------------------------------------------------------
+ Running Warmup nancy-libevent2
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/db/2
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db/2
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   158.23ms  112.07ms 527.29ms   65.12%
+    Req/Sec   408.46     31.59   494.00     70.34%
+  24442 requests in 15.01s, 510.89MB read
+  Non-2xx or 3xx responses: 24442
+Requests/sec:   1628.74
+Transfer/sec:     34.04MB
+
+---------------------------------------------------------
+ Queries: 1 for nancy-libevent2
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/db/1
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db/1
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   146.05ms   98.01ms 494.11ms   70.29%
+    Req/Sec   452.34     26.83   523.00     73.17%
+  27001 requests in 15.00s, 564.29MB read
+  Non-2xx or 3xx responses: 27001
+Requests/sec:   1800.11
+Transfer/sec:     37.62MB
+
+---------------------------------------------------------
+ Queries: 5 for nancy-libevent2
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/db/5
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db/5
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   212.44ms  158.19ms 835.67ms   69.23%
+    Req/Sec   299.35     25.48   362.00     65.93%
+  18010 requests in 15.00s, 376.43MB read
+  Non-2xx or 3xx responses: 18010
+Requests/sec:   1200.43
+Transfer/sec:     25.09MB
+
+---------------------------------------------------------
+ Queries: 10 for nancy-libevent2
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/db/10
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db/10
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   298.38ms  196.36ms   1.18s    70.31%
+    Req/Sec   214.85     16.22   256.00     64.79%
+  12793 requests in 15.02s, 267.35MB read
+  Non-2xx or 3xx responses: 12793
+Requests/sec:    851.71
+Transfer/sec:     17.80MB
+
+---------------------------------------------------------
+ Queries: 15 for nancy-libevent2
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/db/15
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db/15
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   394.31ms  290.54ms   1.67s    71.29%
+    Req/Sec   165.66     22.12   208.00     68.29%
+  9898 requests in 15.06s, 207.47MB read
+  Non-2xx or 3xx responses: 9898
+Requests/sec:    657.29
+Transfer/sec:     13.78MB
+
+---------------------------------------------------------
+ Queries: 20 for nancy-libevent2
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/db/20
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db/20
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   477.91ms  289.19ms   1.74s    69.23%
+    Req/Sec   134.80     17.22   178.00     67.19%
+  7964 requests in 15.00s, 166.67MB read
+  Non-2xx or 3xx responses: 7964
+Requests/sec:    530.76
+Transfer/sec:     11.11MB

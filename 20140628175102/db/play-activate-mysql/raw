@@ -1,0 +1,122 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer play-activate-mysql
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:9000/db
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:9000/db
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     4.43ms    4.22ms  39.37ms   91.67%
+    Req/Sec   283.95    115.04   750.00     70.19%
+  10575 requests in 5.00s, 1.20MB read
+Requests/sec:   2115.63
+Transfer/sec:    245.41KB
+
+---------------------------------------------------------
+ Running Warmup play-activate-mysql
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:9000/db
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:9000/db
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    37.24ms   39.95ms 499.94ms   87.37%
+    Req/Sec     1.68k   217.22     2.46k    72.56%
+  99169 requests in 15.00s, 11.23MB read
+Requests/sec:   6611.51
+Transfer/sec:    766.91KB
+
+---------------------------------------------------------
+ Concurrency: 8 for play-activate-mysql
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:9000/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:9000/db
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.06ms  665.57us  14.98ms   92.13%
+    Req/Sec     2.01k   270.43     3.56k    73.37%
+  114040 requests in 15.00s, 12.92MB read
+Requests/sec:   7602.83
+Transfer/sec:      0.86MB
+
+---------------------------------------------------------
+ Concurrency: 16 for play-activate-mysql
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:9000/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:9000/db
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     2.48ms  636.56us  20.43ms   97.19%
+    Req/Sec     1.70k   156.06     2.22k    77.21%
+  96485 requests in 15.00s, 10.93MB read
+Requests/sec:   6433.52
+Transfer/sec:    746.25KB
+
+---------------------------------------------------------
+ Concurrency: 32 for play-activate-mysql
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:9000/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:9000/db
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     4.82ms    1.69ms  21.79ms   73.37%
+    Req/Sec     1.73k   161.92     2.23k    71.04%
+  100007 requests in 15.00s, 11.33MB read
+Requests/sec:   6667.18
+Transfer/sec:    773.37KB
+
+---------------------------------------------------------
+ Concurrency: 64 for play-activate-mysql
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:9000/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:9000/db
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     9.53ms    6.96ms  58.67ms   83.85%
+    Req/Sec     1.71k   140.84     2.20k    70.67%
+  100845 requests in 15.00s, 11.42MB read
+Requests/sec:   6723.29
+Transfer/sec:    779.88KB
+
+---------------------------------------------------------
+ Concurrency: 128 for play-activate-mysql
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:9000/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:9000/db
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    18.51ms   14.53ms 108.52ms   79.67%
+    Req/Sec     1.70k   115.94     2.27k    70.58%
+  101408 requests in 14.99s, 11.49MB read
+Requests/sec:   6763.91
+Transfer/sec:    784.59KB
+
+---------------------------------------------------------
+ Concurrency: 256 for play-activate-mysql
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:9000/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:9000/db
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    36.84ms   34.69ms 286.57ms   83.72%
+    Req/Sec     1.72k   258.86     3.15k    88.06%
+  102083 requests in 15.00s, 11.56MB read
+Requests/sec:   6805.55
+Transfer/sec:    789.42KB

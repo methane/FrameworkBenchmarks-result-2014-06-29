@@ -1,0 +1,122 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer revel-qbs
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/fortune
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/fortune
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.19ms    1.01ms  15.72ms   94.88%
+    Req/Sec     0.94k   205.91     1.89k    74.83%
+  35639 requests in 5.00s, 48.53MB read
+Requests/sec:   7128.57
+Transfer/sec:      9.71MB
+
+---------------------------------------------------------
+ Running Warmup revel-qbs
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/fortune
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortune
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    37.48ms   33.98ms 232.28ms   72.30%
+    Req/Sec     1.73k   138.00     2.28k    69.42%
+  103065 requests in 15.00s, 140.36MB read
+Requests/sec:   6869.88
+Transfer/sec:      9.36MB
+
+---------------------------------------------------------
+ Concurrency: 8 for revel-qbs
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:8080/fortune -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortune
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.15ms    0.88ms  24.84ms   93.68%
+    Req/Sec     1.86k   302.74     2.89k    68.62%
+  105987 requests in 15.00s, 144.34MB read
+Requests/sec:   7066.22
+Transfer/sec:      9.62MB
+
+---------------------------------------------------------
+ Concurrency: 16 for revel-qbs
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:8080/fortune -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortune
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     2.24ms    1.30ms  19.28ms   83.42%
+    Req/Sec     1.90k   277.48     2.80k    66.63%
+  107778 requests in 15.00s, 146.78MB read
+Requests/sec:   7185.64
+Transfer/sec:      9.79MB
+
+---------------------------------------------------------
+ Concurrency: 32 for revel-qbs
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:8080/fortune -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortune
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     4.57ms    2.48ms  30.71ms   74.46%
+    Req/Sec     1.83k   229.76     2.67k    68.48%
+  105808 requests in 15.00s, 144.09MB read
+Requests/sec:   7054.67
+Transfer/sec:      9.61MB
+
+---------------------------------------------------------
+ Concurrency: 64 for revel-qbs
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:8080/fortune -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortune
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     9.08ms    5.69ms  55.54ms   68.97%
+    Req/Sec     1.81k   180.40     2.52k    67.23%
+  106599 requests in 15.00s, 145.17MB read
+Requests/sec:   7107.72
+Transfer/sec:      9.68MB
+
+---------------------------------------------------------
+ Concurrency: 128 for revel-qbs
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:8080/fortune -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortune
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    18.31ms   14.99ms 171.41ms   70.30%
+    Req/Sec     1.79k   132.39     2.15k    66.50%
+  106608 requests in 15.00s, 145.18MB read
+Requests/sec:   7107.41
+Transfer/sec:      9.68MB
+
+---------------------------------------------------------
+ Concurrency: 256 for revel-qbs
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/fortune -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortune
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    37.22ms   34.32ms 208.73ms   75.10%
+    Req/Sec     1.73k   113.72     2.06k    66.31%
+  103165 requests in 15.00s, 140.49MB read
+Requests/sec:   6877.53
+Transfer/sec:      9.37MB

@@ -1,0 +1,108 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer activeweb-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/activeweb/queries?queries=2
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/activeweb/queries?queries=2
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     5.71ms    5.38ms  31.48ms   87.70%
+    Req/Sec   245.31    105.80   600.00     62.21%
+  9065 requests in 5.00s, 2.70MB read
+Requests/sec:   1813.40
+Transfer/sec:    553.48KB
+
+---------------------------------------------------------
+ Running Warmup activeweb-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/activeweb/queries?queries=2
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/activeweb/queries?queries=2
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    97.15ms  125.84ms   1.75s    89.16%
+    Req/Sec   642.50     67.53   849.00     77.39%
+  38256 requests in 15.00s, 11.41MB read
+Requests/sec:   2550.16
+Transfer/sec:    778.59KB
+
+---------------------------------------------------------
+ Queries: 1 for activeweb-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/activeweb/queries?queries=1
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/activeweb/queries?queries=1
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    65.06ms  104.65ms   1.21s    89.72%
+    Req/Sec     0.98k   161.39     1.61k    72.28%
+  58385 requests in 15.00s, 15.53MB read
+Requests/sec:   3892.45
+Transfer/sec:      1.04MB
+
+---------------------------------------------------------
+ Queries: 5 for activeweb-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/activeweb/queries?queries=5
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/activeweb/queries?queries=5
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   162.68ms  193.72ms   2.88s    98.02%
+    Req/Sec   412.60     60.57   631.00     81.08%
+  23634 requests in 15.00s, 9.34MB read
+Requests/sec:   1575.37
+Transfer/sec:    637.21KB
+
+---------------------------------------------------------
+ Queries: 10 for activeweb-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/activeweb/queries?queries=10
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/activeweb/queries?queries=10
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   282.72ms   70.04ms 573.74ms   70.27%
+    Req/Sec   227.85      9.25   247.00     67.57%
+  13578 requests in 15.01s, 7.55MB read
+Requests/sec:    904.80
+Transfer/sec:    515.01KB
+
+---------------------------------------------------------
+ Queries: 15 for activeweb-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/activeweb/queries?queries=15
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/activeweb/queries?queries=15
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   399.22ms   84.73ms 871.80ms   72.96%
+    Req/Sec   159.85      7.40   176.00     69.70%
+  9493 requests in 15.01s, 6.82MB read
+Requests/sec:    632.53
+Transfer/sec:    465.01KB
+
+---------------------------------------------------------
+ Queries: 20 for activeweb-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/activeweb/queries?queries=20
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/activeweb/queries?queries=20
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   528.11ms   94.09ms 913.24ms   74.71%
+    Req/Sec   123.05      5.47   136.00     64.41%
+  7276 requests in 15.01s, 6.39MB read
+Requests/sec:    484.60
+Transfer/sec:    436.06KB

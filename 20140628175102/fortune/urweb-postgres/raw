@@ -1,0 +1,125 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+0 packages can be updated.
+0 updates are security updates.
+
+
+
+---------------------------------------------------------
+ Running Primer urweb-postgres
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/fortunes
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/fortunes
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   616.10us  193.78us   2.36ms   67.69%
+    Req/Sec     1.83k   641.96     3.89k    87.50%
+  69191 requests in 4.99s, 90.53MB read
+Requests/sec:  13852.18
+Transfer/sec:     18.12MB
+
+---------------------------------------------------------
+ Running Warmup urweb-postgres
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/fortunes
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortunes
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    17.95ms    1.23ms  18.98ms   96.43%
+    Req/Sec     3.60k   327.64     5.82k    85.50%
+  210972 requests in 15.00s, 276.04MB read
+Requests/sec:  14065.01
+Transfer/sec:     18.40MB
+
+---------------------------------------------------------
+ Concurrency: 8 for urweb-postgres
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:8080/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortunes
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   625.01us  243.16us   2.46ms   64.56%
+    Req/Sec     3.48k   845.24     7.00k    67.37%
+  198307 requests in 15.00s, 259.47MB read
+Requests/sec:  13221.58
+Transfer/sec:     17.30MB
+
+---------------------------------------------------------
+ Concurrency: 16 for urweb-postgres
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:8080/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortunes
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.12ms  210.79us   2.93ms   65.67%
+    Req/Sec     3.71k   200.29     4.44k    64.11%
+  211155 requests in 15.00s, 276.28MB read
+Requests/sec:  14077.93
+Transfer/sec:     18.42MB
+
+---------------------------------------------------------
+ Concurrency: 32 for urweb-postgres
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:8080/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortunes
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     2.26ms  168.09us   3.07ms   68.99%
+    Req/Sec     3.70k   192.28     4.33k    63.77%
+  210356 requests in 15.00s, 275.24MB read
+Requests/sec:  14025.42
+Transfer/sec:     18.35MB
+
+---------------------------------------------------------
+ Concurrency: 64 for urweb-postgres
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:8080/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortunes
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     4.57ms  170.17us   5.57ms   72.45%
+    Req/Sec     3.68k   204.43     4.33k    62.11%
+  209410 requests in 15.00s, 274.00MB read
+Requests/sec:  13962.50
+Transfer/sec:     18.27MB
+
+---------------------------------------------------------
+ Concurrency: 128 for urweb-postgres
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:8080/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortunes
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     9.13ms  166.70us  11.23ms   71.54%
+    Req/Sec     3.59k    88.34     3.82k    51.15%
+  209810 requests in 15.00s, 274.52MB read
+Requests/sec:  13987.68
+Transfer/sec:     18.30MB
+
+---------------------------------------------------------
+ Concurrency: 256 for urweb-postgres
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortunes
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    18.15ms  674.00us  19.88ms   94.08%
+    Req/Sec     3.56k   156.16     4.23k    73.77%
+  209949 requests in 15.00s, 274.71MB read
+Requests/sec:  13997.10
+Transfer/sec:     18.31MB

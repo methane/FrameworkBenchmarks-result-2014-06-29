@@ -1,0 +1,11 @@
+restart: Unknown instance: 
+
+BUILD FAILED
+/home/ubuntu/FrameworkBenchmarks/gemini/build.xml:25: destination directory "/home/ubuntu/FrameworkBenchmarks/gemini/Docroot/WEB-INF/classes" does not exist or is not a directory
+
+Total time: 0 seconds
+ERROR: Problem starting gemini
+
+-----------------------------------------------------
+  Stopped gemini
+-----------------------------------------------------

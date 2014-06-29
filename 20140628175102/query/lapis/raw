@@ -1,0 +1,108 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer lapis
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/db?queries=2
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/db?queries=2
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.77ms    1.29ms  12.93ms   89.67%
+    Req/Sec   733.47    304.84     1.89k    70.83%
+  26885 requests in 5.00s, 6.22MB read
+Requests/sec:   5378.00
+Transfer/sec:      1.24MB
+
+---------------------------------------------------------
+ Running Warmup lapis
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/db?queries=2
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db?queries=2
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    82.11ms  104.31ms 820.96ms   87.43%
+    Req/Sec     1.20k   566.79     2.33k    57.53%
+  55101 requests in 15.01s, 12.74MB read
+Requests/sec:   3670.28
+Transfer/sec:    869.25KB
+
+---------------------------------------------------------
+ Queries: 1 for lapis
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/db?queries=1
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db?queries=1
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    67.25ms   61.38ms 643.73ms   75.64%
+    Req/Sec     1.00k   264.37     1.93k    72.14%
+  60638 requests in 15.04s, 12.07MB read
+Requests/sec:   4032.99
+Transfer/sec:    822.12KB
+
+---------------------------------------------------------
+ Queries: 5 for lapis
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/db?queries=5
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db?queries=5
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   138.30ms  111.12ms 877.20ms   80.43%
+    Req/Sec   508.31    181.80     1.03k    80.20%
+  30550 requests in 15.00s, 9.84MB read
+Requests/sec:   2036.51
+Transfer/sec:    671.94KB
+
+---------------------------------------------------------
+ Queries: 10 for lapis
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/db?queries=10
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db?queries=10
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   232.91ms  148.26ms   1.12s    80.36%
+    Req/Sec   294.64     60.68   428.00     70.59%
+  18496 requests in 15.00s, 8.78MB read
+Requests/sec:   1233.13
+Transfer/sec:    599.46KB
+
+---------------------------------------------------------
+ Queries: 15 for lapis
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/db?queries=15
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db?queries=15
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   356.00ms  390.28ms   2.23s    78.15%
+    Req/Sec   293.98    149.15   503.00     54.00%
+  13438 requests in 15.04s, 8.42MB read
+Requests/sec:    893.42
+Transfer/sec:    572.95KB
+
+---------------------------------------------------------
+ Queries: 20 for lapis
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/db?queries=20
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db?queries=20
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   376.42ms  248.19ms   1.40s    78.74%
+    Req/Sec   167.00     22.27   201.00     61.82%
+  9905 requests in 15.01s, 7.70MB read
+Requests/sec:    659.86
+Transfer/sec:    525.58KB

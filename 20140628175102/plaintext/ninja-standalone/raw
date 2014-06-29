@@ -1,0 +1,97 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer ninja-standalone
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/plaintext
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/plaintext
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    16.13ms   28.72ms  92.20ms   77.45%
+    Req/Sec     2.06k     1.76k    8.67k    59.50%
+  77204 requests in 5.00s, 9.13MB read
+Requests/sec:  15441.18
+Transfer/sec:      1.83MB
+
+---------------------------------------------------------
+ Running Warmup ninja-standalone
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/plaintext
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/plaintext
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    13.03ms   31.76ms 343.54ms   91.82%
+    Req/Sec     4.84k     1.00k   10.00k    69.07%
+  284322 requests in 15.00s, 33.62MB read
+Requests/sec:  18958.49
+Transfer/sec:      2.24MB
+
+---------------------------------------------------------
+ Concurrency: 256 for ninja-standalone
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/plaintext
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   160.11ms  138.09ms 762.48ms   81.55%
+    Req/Sec     5.99k   494.92     8.48k    79.65%
+  358147 requests in 15.00s, 42.35MB read
+Requests/sec:  23879.74
+Transfer/sec:      2.82MB
+
+---------------------------------------------------------
+ Concurrency: 1024 for ninja-standalone
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 1024 --timeout 1024 -t 4 http://127.0.0.1:8080/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/plaintext
+  4 threads and 1024 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   634.63ms  222.89ms   1.55s    73.62%
+    Req/Sec     6.00k     0.99k   10.13k    83.70%
+  359549 requests in 15.00s, 42.52MB read
+  Socket errors: connect 0, read 0, write 0, timeout 175
+Requests/sec:  23976.29
+Transfer/sec:      2.84MB
+
+---------------------------------------------------------
+ Concurrency: 4096 for ninja-standalone
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 4096 --timeout 4096 -t 4 http://127.0.0.1:8080/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/plaintext
+  4 threads and 4096 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     2.31s   983.09ms   6.79s    78.06%
+    Req/Sec     5.96k     1.45k    9.01k    61.43%
+  356117 requests in 15.00s, 42.11MB read
+  Socket errors: connect 0, read 27, write 0, timeout 1147
+Requests/sec:  23748.66
+Transfer/sec:      2.81MB
+
+---------------------------------------------------------
+ Concurrency: 16384 for ninja-standalone
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16384 --timeout 16384 -t 4 http://127.0.0.1:8080/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/plaintext
+  4 threads and 16384 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     9.86s     4.39s   13.38s    79.71%
+    Req/Sec     5.64k     2.61k   12.78k    72.92%
+  333679 requests in 15.00s, 39.46MB read
+  Socket errors: connect 0, read 1619, write 0, timeout 9974
+Requests/sec:  22240.26
+Transfer/sec:      2.63MB

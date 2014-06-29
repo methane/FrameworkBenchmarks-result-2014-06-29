@@ -1,0 +1,172 @@
+test.os.lower() = linux  test.database_os.lower() = linux
+self.results['frameworks'] != None: True
+test.name: servicestack-xsp-default
+self.results['completed']: {}
+
+=====================================================
+  Beginning servicestack-xsp-default
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Starting servicestack-xsp-default
+-----------------------------------------------------
+XBuild Engine Version 12.0
+Mono, Version 3.2.8.0
+Copyright (C) 2005-2013 Various Mono authors
+:  warning : Default tasks file /usr/local/lib/mono/2.0/Microsoft.Common.tasks not found, ignoring.
+
+Build started 6/29/2014 3:48:43 AM.
+__________________________________________________
+Project "/home/ubuntu/FrameworkBenchmarks/servicestack/src/ServiceStackBenchmark.sln" (default target(s)):
+	Target ValidateSolutionConfiguration:
+		Building solution configuration "Release|Any CPU".
+	Target Build:
+		Project "/home/ubuntu/FrameworkBenchmarks/servicestack/src/ServiceStackBenchmark.csproj" (default target(s)):
+			Target RestorePackages:
+				Executing: mono --runtime=v4.0.30319 /home/ubuntu/FrameworkBenchmarks/servicestack/src/.nuget/NuGet.exe install "packages.config" -source ""   -RequireConsent -solutionDir "/home/ubuntu/FrameworkBenchmarks/servicestack/src/ " 
+				Restoring NuGet packages...
+				To prevent NuGet from downloading packages during build, open the Visual Studio Options dialog, click on the Package Manager node and uncheck 'Allow NuGet to download missing packages'.
+			Target PrepareForBuild:
+				Configuration: Release Platform: AnyCPU
+				Created directory "bin/"
+				Created directory "obj/Release/"
+			Target ResolveAssemblyReferences:
+/usr/local/lib/mono/4.5/Microsoft.Common.targets:  warning : Reference 'System.Web.Entity' not resolved
+				For searchpath {CandidateAssemblyFiles}
+				Warning: {CandidateAssemblyFiles} not supported currently
+				For searchpath {HintPathFromItem}
+				HintPath attribute not found
+				For searchpath {TargetFrameworkDirectory}
+				Considered target framework dir /usr/local/lib/mono/4.5, assembly named 'System.Web.Entity' not found.
+				Considered target framework dir /usr/local/lib/mono/4.5/Facades/, assembly named 'System.Web.Entity' not found.
+				For searchpath {PkgConfig}
+				Considered System.Web.Entity, but could not find in any pkg-config files.
+				For searchpath {GAC}
+				Considered System.Web.Entity, but could not find in the GAC.
+				For searchpath {RawFileName}
+				Considered '/home/ubuntu/FrameworkBenchmarks/servicestack/src/System.Web.Entity' as a file, but the file does not exist
+				For searchpath bin/
+				Considered '/home/ubuntu/FrameworkBenchmarks/servicestack/src/bin/System.Web.Entity' as a file, but the file does not exist
+				Considered '/home/ubuntu/FrameworkBenchmarks/servicestack/src/bin/System.Web.Entity.exe' as a file, but the file does not exist
+				Considered '/home/ubuntu/FrameworkBenchmarks/servicestack/src/bin/System.Web.Entity.dll' as a file, but the file does not exist
+			Target CopyFilesMarkedCopyLocal:
+				Copying file from '/home/ubuntu/FrameworkBenchmarks/servicestack/lib/AWSSDK.2.0.0.4-beta/lib/net45/AWSSDK.dll' to '/home/ubuntu/FrameworkBenchmarks/servicestack/src/bin/AWSSDK.dll'
+				Copying file from '/home/ubuntu/FrameworkBenchmarks/servicestack/lib/EnyimMemcached.2.12/lib/net35/Enyim.Caching.dll' to '/home/ubuntu/FrameworkBenchmarks/servicestack/src/bin/Enyim.Caching.dll'
+				Copying file from '/home/ubuntu/FrameworkBenchmarks/servicestack/lib/WindowsAzure.Caching.1.7.0.0/lib/net35-full/Microsoft.ApplicationServer.Caching.Client.dll' to '/home/ubuntu/FrameworkBenchmarks/servicestack/src/bin/Microsoft.ApplicationServer.Caching.Client.dll'
+				Copying file from '/home/ubuntu/FrameworkBenchmarks/servicestack/lib/WindowsAzure.Caching.1.7.0.0/lib/net35-full/Microsoft.ApplicationServer.Caching.Core.dll' to '/home/ubuntu/FrameworkBenchmarks/servicestack/src/bin/Microsoft.ApplicationServer.Caching.Core.dll'
+				Copying file from '/home/ubuntu/FrameworkBenchmarks/servicestack/lib/WindowsAzure.Caching.1.7.0.0/lib/net35-full/Microsoft.Web.DistributedCache.dll' to '/home/ubuntu/FrameworkBenchmarks/servicestack/src/bin/Microsoft.Web.DistributedCache.dll'
+				Copying file from '/home/ubuntu/FrameworkBenchmarks/servicestack/lib/WindowsAzure.Caching.1.7.0.0/lib/net35-full/Microsoft.WindowsFabric.Common.dll' to '/home/ubuntu/FrameworkBenchmarks/servicestack/src/bin/Microsoft.WindowsFabric.Common.dll'
+				Copying file from '/home/ubuntu/FrameworkBenchmarks/servicestack/lib/WindowsAzure.Caching.1.7.0.0/lib/net35-full/Microsoft.WindowsFabric.Data.Common.dll' to '/home/ubuntu/FrameworkBenchmarks/servicestack/src/bin/Microsoft.WindowsFabric.Data.Common.dll'
+				Copying file from '/home/ubuntu/FrameworkBenchmarks/servicestack/lib/mongocsharpdriver.1.8.2/lib/net35/MongoDB.Bson.dll' to '/home/ubuntu/FrameworkBenchmarks/servicestack/src/bin/MongoDB.Bson.dll'
+				Copying file from '/home/ubuntu/FrameworkBenchmarks/servicestack/lib/mongocsharpdriver.1.8.2/lib/net35/MongoDB.Driver.dll' to '/home/ubuntu/FrameworkBenchmarks/servicestack/src/bin/MongoDB.Driver.dll'
+				Copying file from '/home/ubuntu/FrameworkBenchmarks/servicestack/lib/Npgsql.2.0.13-beta1/lib/net45/Mono.Security.dll' to '/home/ubuntu/FrameworkBenchmarks/servicestack/src/bin/Mono.Security.dll'
+				Copying file from '/home/ubuntu/FrameworkBenchmarks/servicestack/lib/MySql.Data.6.7.4/lib/net40/MySql.Data.dll' to '/home/ubuntu/FrameworkBenchmarks/servicestack/src/bin/MySql.Data.dll'
+				Copying file from '/home/ubuntu/FrameworkBenchmarks/servicestack/lib/Npgsql.2.0.13-beta1/lib/net45/Npgsql.dll' to '/home/ubuntu/FrameworkBenchmarks/servicestack/src/bin/Npgsql.dll'
+				Copying file from '/home/ubuntu/FrameworkBenchmarks/servicestack/lib/Npgsql.2.0.13-beta1/lib/net45/policy.2.0.Npgsql.dll' to '/home/ubuntu/FrameworkBenchmarks/servicestack/src/bin/policy.2.0.Npgsql.dll'
+				Copying file from '/home/ubuntu/FrameworkBenchmarks/servicestack/lib/ServiceStack.3.9.59/lib/net35/ServiceStack.dll' to '/home/ubuntu/FrameworkBenchmarks/servicestack/src/bin/ServiceStack.dll'
+				Copying file from '/home/ubuntu/FrameworkBenchmarks/servicestack/lib/ServiceStack.Api.Swagger.3.9.59/lib/net35/ServiceStack.Api.Swagger.dll' to '/home/ubuntu/FrameworkBenchmarks/servicestack/src/bin/ServiceStack.Api.Swagger.dll'
+				Copying file from '/home/ubuntu/FrameworkBenchmarks/servicestack/lib/ServiceStack.Caching.AwsDynamoDb.3.9.55/lib/ServiceStack.CacheAccess.AwsDynamoDb.dll' to '/home/ubuntu/FrameworkBenchmarks/servicestack/src/bin/ServiceStack.CacheAccess.AwsDynamoDb.dll'
+				Copying file from '/home/ubuntu/FrameworkBenchmarks/servicestack/lib/ServiceStack.Caching.Azure.3.9.55/lib/ServiceStack.CacheAccess.Azure.dll' to '/home/ubuntu/FrameworkBenchmarks/servicestack/src/bin/ServiceStack.CacheAccess.Azure.dll'
+				Copying file from '/home/ubuntu/FrameworkBenchmarks/servicestack/lib/ServiceStack.Caching.Memcached.3.9.55/lib/ServiceStack.CacheAccess.Memcached.dll' to '/home/ubuntu/FrameworkBenchmarks/servicestack/src/bin/ServiceStack.CacheAccess.Memcached.dll'
+				Copying file from '/home/ubuntu/FrameworkBenchmarks/servicestack/lib/ServiceStack.Common.3.9.59/lib/net35/ServiceStack.Common.dll' to '/home/ubuntu/FrameworkBenchmarks/servicestack/src/bin/ServiceStack.Common.dll'
+				Copying file from '/home/ubuntu/FrameworkBenchmarks/servicestack/lib/ServiceStack.Common.3.9.59/lib/net35/ServiceStack.Interfaces.dll' to '/home/ubuntu/FrameworkBenchmarks/servicestack/src/bin/ServiceStack.Interfaces.dll'
+				Copying file from '/home/ubuntu/FrameworkBenchmarks/servicestack/lib/ServiceStack.OrmLite.SqlServer.3.9.59/lib/ServiceStack.OrmLite.dll' to '/home/ubuntu/FrameworkBenchmarks/servicestack/src/bin/ServiceStack.OrmLite.dll'
+				Copying file from '/home/ubuntu/FrameworkBenchmarks/servicestack/lib/ServiceStack.OrmLite.MySql.3.9.59/lib/ServiceStack.OrmLite.MySql.dll' to '/home/ubuntu/FrameworkBenchmarks/servicestack/src/bin/ServiceStack.OrmLite.MySql.dll'
+				Copying file from '/home/ubuntu/FrameworkBenchmarks/servicestack/lib/ServiceStack.OrmLite.PostgreSQL.3.9.59/lib/ServiceStack.OrmLite.PostgreSQL.dll' to '/home/ubuntu/FrameworkBenchmarks/servicestack/src/bin/ServiceStack.OrmLite.PostgreSQL.dll'
+				Copying file from '/home/ubuntu/FrameworkBenchmarks/servicestack/lib/ServiceStack.OrmLite.SqlServer.3.9.59/lib/ServiceStack.OrmLite.SqlServer.dll' to '/home/ubuntu/FrameworkBenchmarks/servicestack/src/bin/ServiceStack.OrmLite.SqlServer.dll'
+				Copying file from '/home/ubuntu/FrameworkBenchmarks/servicestack/lib/ServiceStack.Redis.3.9.59/lib/net35/ServiceStack.Redis.dll' to '/home/ubuntu/FrameworkBenchmarks/servicestack/src/bin/ServiceStack.Redis.dll'
+				Copying file from '/home/ubuntu/FrameworkBenchmarks/servicestack/lib/ServiceStack.3.9.59/lib/net35/ServiceStack.ServiceInterface.dll' to '/home/ubuntu/FrameworkBenchmarks/servicestack/src/bin/ServiceStack.ServiceInterface.dll'
+				Copying file from '/home/ubuntu/FrameworkBenchmarks/servicestack/lib/ServiceStack.Text.3.9.59/lib/net35/ServiceStack.Text.dll' to '/home/ubuntu/FrameworkBenchmarks/servicestack/src/bin/ServiceStack.Text.dll'
+			Target GenerateSatelliteAssemblies:
+			No input files were specified for target GenerateSatelliteAssemblies, skipping.
+			Target CoreCompile:
+				Tool /usr/local/bin/mcs execution started with arguments: /noconfig /debug:pdbonly /optimize+ /out:obj/Release/ServiceStackBenchmark.dll AppHostConfigHelper.cs Model/Fortune.cs Properties/AssemblyInfo.cs SafeRandom.cs Service/MongoDBService.cs Service/MySqlService.cs Service/PostgreSqlService.cs Service/Services.cs DbFactories/MySqlOrmLiteConnectionFactory.cs DbFactories/PostgreSqlOrmLiteConnectionFactory.cs DbFactories/SqlServerOrmLiteConnectionFactory.cs Model/World.cs Service/SqlServerService.cs AppHost.cs Global.asax.cs DbFactories/ISqlServerOrmLiteConnectionFactory.cs DbFactories/IMySqlOrmLiteConnectionFactory.cs DbFactories/IPostgreSqlOrmLiteConnectionFactory.cs obj/Release/.NETFramework,Version=v4.5.AssemblyAttribute.cs /target:library /define:TRACE /platform:AnyCPU /reference:../lib/AWSSDK.2.0.0.4-beta/lib/net45/AWSSDK.dll /reference:../lib/EnyimMemcached.2.12/lib/net35/Enyim.Caching.dll /reference:../lib/WindowsAzure.Caching.1.7.0.0/lib/net35-full/Microsoft.ApplicationServer.Caching.Client.dll /reference:../lib/WindowsAzure.Caching.1.7.0.0/lib/net35-full/Microsoft.ApplicationServer.Caching.Core.dll /reference:../lib/WindowsAzure.Caching.1.7.0.0/lib/net35-full/Microsoft.Web.DistributedCache.dll /reference:../lib/WindowsAzure.Caching.1.7.0.0/lib/net35-full/Microsoft.WindowsFabric.Common.dll /reference:../lib/WindowsAzure.Caching.1.7.0.0/lib/net35-full/Microsoft.WindowsFabric.Data.Common.dll /reference:../lib/mongocsharpdriver.1.8.2/lib/net35/MongoDB.Bson.dll /reference:../lib/mongocsharpdriver.1.8.2/lib/net35/MongoDB.Driver.dll /reference:../lib/Npgsql.2.0.13-beta1/lib/net45/Mono.Security.dll /reference:../lib/MySql.Data.6.7.4/lib/net40/MySql.Data.dll /reference:../lib/Npgsql.2.0.13-beta1/lib/net45/Npgsql.dll /reference:../lib/Npgsql.2.0.13-beta1/lib/net45/policy.2.0.Npgsql.dll /reference:../lib/ServiceStack.3.9.59/lib/net35/ServiceStack.dll /reference:../lib/ServiceStack.Api.Swagger.3.9.59/lib/net35/ServiceStack.Api.Swagger.dll /reference:../lib/ServiceStack.Caching.AwsDynamoDb.3.9.55/lib/ServiceStack.CacheAccess.AwsDynamoDb.dll /reference:../lib/ServiceStack.Caching.Azure.3.9.55/lib/ServiceStack.CacheAccess.Azure.dll /reference:../lib/ServiceStack.Caching.Memcached.3.9.55/lib/ServiceStack.CacheAccess.Memcached.dll /reference:../lib/ServiceStack.Common.3.9.59/lib/net35/ServiceStack.Common.dll /reference:../lib/ServiceStack.Common.3.9.59/lib/net35/ServiceStack.Interfaces.dll /reference:../lib/ServiceStack.OrmLite.SqlServer.3.9.59/lib/ServiceStack.OrmLite.dll /reference:../lib/ServiceStack.OrmLite.MySql.3.9.59/lib/ServiceStack.OrmLite.MySql.dll /reference:../lib/ServiceStack.OrmLite.PostgreSQL.3.9.59/lib/ServiceStack.OrmLite.PostgreSQL.dll /reference:../lib/ServiceStack.OrmLite.SqlServer.3.9.59/lib/ServiceStack.OrmLite.SqlServer.dll /reference:../lib/ServiceStack.Redis.3.9.59/lib/net35/ServiceStack.Redis.dll /reference:../lib/ServiceStack.3.9.59/lib/net35/ServiceStack.ServiceInterface.dll /reference:../lib/ServiceStack.Text.3.9.59/lib/net35/ServiceStack.Text.dll /reference:/usr/local/lib/mono/4.5/System.dll /reference:/usr/local/lib/mono/4.5/System.ComponentModel.DataAnnotations.dll /reference:/usr/local/lib/mono/4.5/System.Configuration.dll /reference:/usr/local/lib/mono/4.5/System.Data.dll /reference:/usr/local/lib/mono/4.5/System.Data.DataSetExtensions.dll /reference:/usr/local/lib/mono/4.5/System.Runtime.Serialization.dll /reference:/usr/local/lib/mono/4.5/System.Web.dll /reference:/usr/local/lib/mono/4.5/System.Web.ApplicationServices.dll /reference:/usr/local/lib/mono/4.5/System.Web.DynamicData.dll /reference:/usr/local/lib/mono/4.5/System.Web.Extensions.dll /reference:/usr/local/lib/mono/4.5/System.Xml.dll /reference:/usr/local/lib/mono/4.5/System.Xml.Linq.dll /reference:/usr/local/lib/mono/4.5/System.Core.dll /warn:4
+AppHostConfigHelper.cs(56,30): warning CS0168: The variable `ex' is declared but never used
+AppHostConfigHelper.cs(82,30): warning CS0168: The variable `ex' is declared but never used
+AppHostConfigHelper.cs(108,30): warning CS0168: The variable `ex' is declared but never used
+:  warning CS1701: Assuming assembly reference `AWSSDK, Version=1.5.25.0, Culture=neutral, PublicKeyToken=9f476d3089b52be3' matches assembly `AWSSDK, Version=2.0.0.4, Culture=neutral, PublicKeyToken=9f476d3089b52be3'. You may need to supply runtime policy
+			Target DeployOutputFiles:
+				Copying file from '/home/ubuntu/FrameworkBenchmarks/servicestack/src/obj/Release/ServiceStackBenchmark.dll.mdb' to '/home/ubuntu/FrameworkBenchmarks/servicestack/src/bin/ServiceStackBenchmark.dll.mdb'
+				Copying file from '/home/ubuntu/FrameworkBenchmarks/servicestack/src/obj/Release/ServiceStackBenchmark.dll' to '/home/ubuntu/FrameworkBenchmarks/servicestack/src/bin/ServiceStackBenchmark.dll'
+		Done building project "/home/ubuntu/FrameworkBenchmarks/servicestack/src/ServiceStackBenchmark.csproj".
+		Project "/home/ubuntu/FrameworkBenchmarks/servicestack/src/SelfHost/ServiceStackBenchmark.SelfHost.csproj" (default target(s)):
+			Target RestorePackages:
+				Executing: mono --runtime=v4.0.30319 /home/ubuntu/FrameworkBenchmarks/servicestack/src/.nuget/NuGet.exe install "packages.config" -source ""   -RequireConsent -solutionDir "/home/ubuntu/FrameworkBenchmarks/servicestack/src/ " 
+				Restoring NuGet packages...
+				To prevent NuGet from downloading packages during build, open the Visual Studio Options dialog, click on the Package Manager node and uncheck 'Allow NuGet to download missing packages'.
+			Target PrepareForBuild:
+				Configuration: Release Platform: AnyCPU
+			Target CopyFilesMarkedCopyLocal:
+				Copying file from '/home/ubuntu/FrameworkBenchmarks/servicestack/src/bin/ServiceStackBenchmark.dll' to '/home/ubuntu/FrameworkBenchmarks/servicestack/src/SelfHost/bin/Release/ServiceStackBenchmark.dll'
+				Copying file from '/home/ubuntu/FrameworkBenchmarks/servicestack/src/bin/ServiceStackBenchmark.dll.mdb' to '/home/ubuntu/FrameworkBenchmarks/servicestack/src/SelfHost/bin/Release/ServiceStackBenchmark.dll.mdb'
+			Target GenerateSatelliteAssemblies:
+			No input files were specified for target GenerateSatelliteAssemblies, skipping.
+			Target GenerateTargetFrameworkMonikerAttribute:
+			Skipping target "GenerateTargetFrameworkMonikerAttribute" because its outputs are up-to-date.
+			Target CoreCompile:
+				Tool /usr/local/bin/mcs execution started with arguments: /noconfig /debug:pdbonly /optimize+ /out:obj/Release/ServiceStackBenchmark.SelfHost.exe AppHostSelfHelper.cs AppSelfHost.cs Program.cs Properties/AssemblyInfo.cs /target:exe /define:TRACE /platform:AnyCPU /reference:../../lib/ServiceStack.3.9.59/lib/net35/ServiceStack.dll /reference:../../lib/ServiceStack.Common.3.9.59/lib/net35/ServiceStack.Common.dll /reference:../../lib/ServiceStack.Common.3.9.59/lib/net35/ServiceStack.Interfaces.dll /reference:../../lib/ServiceStack.OrmLite.SqlServer.3.9.59/lib/ServiceStack.OrmLite.dll /reference:../../lib/ServiceStack.OrmLite.SqlServer.3.9.59/lib/ServiceStack.OrmLite.SqlServer.dll /reference:../../lib/ServiceStack.Redis.3.9.59/lib/net35/ServiceStack.Redis.dll /reference:../../lib/ServiceStack.3.9.59/lib/net35/ServiceStack.ServiceInterface.dll /reference:../../lib/ServiceStack.Text.3.9.59/lib/net35/ServiceStack.Text.dll /reference:/usr/local/lib/mono/4.5/System.dll /reference:/usr/local/lib/mono/4.5/System.Xml.Linq.dll /reference:/usr/local/lib/mono/4.5/System.Data.DataSetExtensions.dll /reference:/usr/local/lib/mono/4.5/Microsoft.CSharp.dll /reference:/usr/local/lib/mono/4.5/System.Data.dll /reference:/usr/local/lib/mono/4.5/System.Xml.dll /reference:/usr/local/lib/mono/4.5/System.Core.dll /reference:/home/ubuntu/FrameworkBenchmarks/servicestack/src/bin//ServiceStackBenchmark.dll /warn:4
+			Target _CopyAppConfigFile:
+			Skipping target "_CopyAppConfigFile" because its outputs are up-to-date.
+			Target DeployOutputFiles:
+				Copying file from '/home/ubuntu/FrameworkBenchmarks/servicestack/src/SelfHost/obj/Release/ServiceStackBenchmark.SelfHost.exe.mdb' to '/home/ubuntu/FrameworkBenchmarks/servicestack/src/SelfHost/bin/Release/ServiceStackBenchmark.SelfHost.exe.mdb'
+				Copying file from '/home/ubuntu/FrameworkBenchmarks/servicestack/src/SelfHost/obj/Release/ServiceStackBenchmark.SelfHost.exe' to '/home/ubuntu/FrameworkBenchmarks/servicestack/src/SelfHost/bin/Release/ServiceStackBenchmark.SelfHost.exe'
+		Done building project "/home/ubuntu/FrameworkBenchmarks/servicestack/src/SelfHost/ServiceStackBenchmark.SelfHost.csproj".
+Done building project "/home/ubuntu/FrameworkBenchmarks/servicestack/src/ServiceStackBenchmark.sln".
+
+Build succeeded.
+
+Warnings:
+
+:  warning : Default tasks file /usr/local/lib/mono/2.0/Microsoft.Common.tasks not found, ignoring.
+
+/home/ubuntu/FrameworkBenchmarks/servicestack/src/ServiceStackBenchmark.sln (default targets) ->
+(Build target) ->
+/home/ubuntu/FrameworkBenchmarks/servicestack/src/ServiceStackBenchmark.csproj (default targets) ->
+/usr/local/lib/mono/4.5/Microsoft.Common.targets (ResolveAssemblyReferences target) ->
+
+	/usr/local/lib/mono/4.5/Microsoft.Common.targets:  warning : Reference 'System.Web.Entity' not resolved
+
+/home/ubuntu/FrameworkBenchmarks/servicestack/src/ServiceStackBenchmark.sln (default targets) ->
+(Build target) ->
+/home/ubuntu/FrameworkBenchmarks/servicestack/src/ServiceStackBenchmark.csproj (default targets) ->
+/usr/local/lib/mono/4.5/Microsoft.CSharp.targets (CoreCompile target) ->
+
+	AppHostConfigHelper.cs(56,30): warning CS0168: The variable `ex' is declared but never used
+	AppHostConfigHelper.cs(82,30): warning CS0168: The variable `ex' is declared but never used
+	AppHostConfigHelper.cs(108,30): warning CS0168: The variable `ex' is declared but never used
+	:  warning CS1701: Assuming assembly reference `AWSSDK, Version=1.5.25.0, Culture=neutral, PublicKeyToken=9f476d3089b52be3' matches assembly `AWSSDK, Version=2.0.0.4, Culture=neutral, PublicKeyToken=9f476d3089b52be3'. You may need to supply runtime policy
+
+	 6 Warning(s)
+	 0 Error(s)
+
+Time Elapsed 00:00:01.8401510
+
+-----------------------------------------------------
+  VERIFYING JSON (/json)
+-----------------------------------------------------
+VALIDATING JSON ... FAIL
+
+
+-----------------------------------------------------
+  VERIFYING PLAINTEXT (/plaintext)
+-----------------------------------------------------
+VALIDATING PLAINTEXT ... FAIL
+
+
+-----------------------------------------------------
+  Benchmarking servicestack-xsp-default ...
+-----------------------------------------------------
+BENCHMARKING JSON ... Complete
+BENCHMARKING Plaintext ... Complete
+
+-----------------------------------------------------
+  Stopping servicestack-xsp-default
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Stopped servicestack-xsp-default
+-----------------------------------------------------
+
+----------------------------------------------------
+Saving results through servicestack-xsp-default
+----------------------------------------------------

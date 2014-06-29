@@ -1,0 +1,239 @@
+test.os.lower() = linux  test.database_os.lower() = linux
+self.results['frameworks'] != None: True
+test.name: nawak
+self.results['completed']: {}
+
+=====================================================
+  Beginning nawak
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Starting nawak
+-----------------------------------------------------
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+mysql start/running, process 4108
+ * Restarting PostgreSQL 9.3 database server
+   ...done.
+config/nimrod.cfg(36, 2) Hint: added path: '/home/ubuntu/.babel/pkgs/' [Path]
+Hint: used config file '/home/ubuntu/FrameworkBenchmarks/installs/nimrod/config/nimrod.cfg' [Conf]
+Hint: system [Processing]
+Hint: nawak_app [Processing]
+Hint: strtabs [Processing]
+Hint: os [Processing]
+Hint: strutils [Processing]
+Hint: parseutils [Processing]
+Hint: times [Processing]
+Hint: posix [Processing]
+Hint: hashes [Processing]
+Hint: math [Processing]
+Hint: algorithm [Processing]
+Hint: nawak_mongrel [Processing]
+Hint: tables [Processing]
+Hint: json [Processing]
+Hint: lexbase [Processing]
+Hint: streams [Processing]
+Hint: unicode [Processing]
+Hint: cookies [Processing]
+Hint: zmq4 [Processing]
+Hint: uuid [Processing]
+Hint: unsigned [Processing]
+/home/ubuntu/FrameworkBenchmarks/installs/nawak/nawak/lib/uuid.nim(105, 6) Hint: 'int_to_hexchar_mappings' is declared but not used [XDeclaredButNotUsed]
+Hint: optim_strange_loop [Processing]
+Hint: macros [Processing]
+Hint: netstrings [Processing]
+Hint: nawak_mg [Processing]
+Hint: xmltree [Processing]
+Hint: jesterpatterns [Processing]
+/home/ubuntu/FrameworkBenchmarks/installs/nawak/nawak/private/jesterpatterns.nim(93, 5) Hint: 'jesterpatterns.match(pattern: TPattern, s: string): tuple[matched: bool, params: PStringTable]' is declared but not used [XDeclaredButNotUsed]
+Hint: tuple_index_setter [Processing]
+Hint: nawak_common [Processing]
+Hint: cookies [Processing]
+Hint: jesterutils [Processing]
+Hint: cgi [Processing]
+/home/ubuntu/FrameworkBenchmarks/installs/nawak/nawak/nawak_mongrel.nim(31, 33) Hint: optFormat("$1 $2:$3, $4", [uuid, $ len(conn_id), conn_id, msg]) --> '&(uuid, &(' ', &($ len(conn_id), &(':', &(conn_id, &(',', &(' ', msg)))))))' [Pattern]
+Hint: jdump [Processing]
+/home/ubuntu/FrameworkBenchmarks/installs/nawak/nawak/jdump.nim(6, 2) Hint: optAdd1(result, newStringOfCap(len(s) + len(s) shr 3), "\"") --> 'result = newStringOfCap(len(s) + len(s) shr 3) & "\""' [Pattern]
+/home/ubuntu/FrameworkBenchmarks/installs/nawak/nawak/jdump.nim(18, 6) Hint: optAdd2(result, "\\u", toHex(r, 4)) --> 'add(result, "\\u" & toHex(r, 4))' [Pattern]
+Hint: db_postgres_redone [Processing]
+Hint: postgres_redone [Processing]
+lib/db_postgres_redone.nim(102, 5) Hint: 'db_postgres_redone.setupQueryNo(db: TDbConn, query: TSqlQuery, args: varargs[string]): PPGresult' is declared but not used [XDeclaredButNotUsed]
+Hint: fortunes_tmpl [Processing]
+Hint: escape [Processing]
+/home/ubuntu/FrameworkBenchmarks/installs/nawak/nawak/private/nawak_mg.nim(143, 12) Hint: 'emptystring' is declared but not used [XDeclaredButNotUsed]
+/home/ubuntu/FrameworkBenchmarks/installs/nawak/nawak/private/nawak_mg.nim(143, 12) Hint: 'emptystring' is declared but not used [XDeclaredButNotUsed]
+/home/ubuntu/FrameworkBenchmarks/installs/nawak/nawak/private/nawak_mg.nim(143, 12) Hint: 'emptystring' is declared but not used [XDeclaredButNotUsed]
+/home/ubuntu/FrameworkBenchmarks/installs/nawak/nawak/private/nawak_mg.nim(143, 12) Hint: 'emptystring' is declared but not used [XDeclaredButNotUsed]
+/home/ubuntu/FrameworkBenchmarks/installs/nawak/nawak/private/nawak_mg.nim(143, 12) Hint: 'emptystring' is declared but not used [XDeclaredButNotUsed]
+/home/ubuntu/FrameworkBenchmarks/installs/nawak/nawak/private/nawak_mg.nim(143, 12) Hint: 'emptystring' is declared but not used [XDeclaredButNotUsed]
+gcc -c -w -O3 -fno-strict-aliasing -I/home/ubuntu/FrameworkBenchmarks/installs/nimrod/lib -o /home/ubuntu/FrameworkBenchmarks/nawak/nimcache/nawak_nawak_app.o /home/ubuntu/FrameworkBenchmarks/nawak/nimcache/nawak_nawak_app.c
+gcc -c -w -O3 -fno-strict-aliasing -I/home/ubuntu/FrameworkBenchmarks/installs/nimrod/lib -o /home/ubuntu/FrameworkBenchmarks/nawak/nimcache/pure_strtabs.o /home/ubuntu/FrameworkBenchmarks/nawak/nimcache/pure_strtabs.c
+gcc -c -w -O3 -fno-strict-aliasing -I/home/ubuntu/FrameworkBenchmarks/installs/nimrod/lib -o /home/ubuntu/FrameworkBenchmarks/nawak/nimcache/pure_os.o /home/ubuntu/FrameworkBenchmarks/nawak/nimcache/pure_os.c
+gcc -c -w -O3 -fno-strict-aliasing -I/home/ubuntu/FrameworkBenchmarks/installs/nimrod/lib -o /home/ubuntu/FrameworkBenchmarks/nawak/nimcache/pure_strutils.o /home/ubuntu/FrameworkBenchmarks/nawak/nimcache/pure_strutils.c
+gcc -c -w -O3 -fno-strict-aliasing -I/home/ubuntu/FrameworkBenchmarks/installs/nimrod/lib -o /home/ubuntu/FrameworkBenchmarks/nawak/nimcache/pure_parseutils.o /home/ubuntu/FrameworkBenchmarks/nawak/nimcache/pure_parseutils.c
+gcc -c -w -O3 -fno-strict-aliasing -I/home/ubuntu/FrameworkBenchmarks/installs/nimrod/lib -o /home/ubuntu/FrameworkBenchmarks/nawak/nimcache/pure_times.o /home/ubuntu/FrameworkBenchmarks/nawak/nimcache/pure_times.c
+gcc -c -w -O3 -fno-strict-aliasing -I/home/ubuntu/FrameworkBenchmarks/installs/nimrod/lib -o /home/ubuntu/FrameworkBenchmarks/nawak/nimcache/posix_posix.o /home/ubuntu/FrameworkBenchmarks/nawak/nimcache/posix_posix.c
+gcc -c -w -O3 -fno-strict-aliasing -I/home/ubuntu/FrameworkBenchmarks/installs/nimrod/lib -o /home/ubuntu/FrameworkBenchmarks/nawak/nimcache/pure_hashes.o /home/ubuntu/FrameworkBenchmarks/nawak/nimcache/pure_hashes.c
+gcc -c -w -O3 -fno-strict-aliasing -I/home/ubuntu/FrameworkBenchmarks/installs/nimrod/lib -o /home/ubuntu/FrameworkBenchmarks/nawak/nimcache/pure_math.o /home/ubuntu/FrameworkBenchmarks/nawak/nimcache/pure_math.c
+gcc -c -w -O3 -fno-strict-aliasing -I/home/ubuntu/FrameworkBenchmarks/installs/nimrod/lib -o /home/ubuntu/FrameworkBenchmarks/nawak/nimcache/pure_algorithm.o /home/ubuntu/FrameworkBenchmarks/nawak/nimcache/pure_algorithm.c
+gcc   -o /home/ubuntu/FrameworkBenchmarks/nawak/nawak_app  /home/ubuntu/FrameworkBenchmarks/nawak/nimcache/nawak_escape.o /home/ubuntu/FrameworkBenchmarks/nawak/nimcache/nawak_fortunes_tmpl.o /home/ubuntu/FrameworkBenchmarks/nawak/nimcache/nawak_postgres_redone.o /home/ubuntu/FrameworkBenchmarks/nawak/nimcache/nawak_db_postgres_redone.o /home/ubuntu/FrameworkBenchmarks/nawak/nimcache/nawak_jdump.o /home/ubuntu/FrameworkBenchmarks/nawak/nimcache/pure_cgi.o /home/ubuntu/FrameworkBenchmarks/nawak/nimcache/nawak_jesterutils.o /home/ubuntu/FrameworkBenchmarks/nawak/nimcache/nawak_cookies.o /home/ubuntu/FrameworkBenchmarks/nawak/nimcache/nawak_nawak_common.o /home/ubuntu/FrameworkBenchmarks/nawak/nimcache/nawak_tuple_index_setter.o /home/ubuntu/FrameworkBenchmarks/nawak/nimcache/nawak_jesterpatterns.o /home/ubuntu/FrameworkBenchmarks/nawak/nimcache/pure_xmltree.o /home/ubuntu/FrameworkBenchmarks/nawak/nimcache/nawak_nawak_mg.o /home/ubuntu/FrameworkBenchmarks/nawak/nimcache/nawak_netstrings.o /home/ubuntu/FrameworkBenchmarks/nawak/nimcache/core_macros.o /home/ubuntu/FrameworkBenchmarks/nawak/nimcache/nawak_optim_strange_loop.o /home/ubuntu/FrameworkBenchmarks/nawak/nimcache/core_unsigned.o /home/ubuntu/FrameworkBenchmarks/nawak/nimcache/nawak_uuid.o /home/ubuntu/FrameworkBenchmarks/nawak/nimcache/nawak_zmq4.o /home/ubuntu/FrameworkBenchmarks/nawak/nimcache/pure_cookies.o /home/ubuntu/FrameworkBenchmarks/nawak/nimcache/pure_unicode.o /home/ubuntu/FrameworkBenchmarks/nawak/nimcache/pure_streams.o /home/ubuntu/FrameworkBenchmarks/nawak/nimcache/pure_lexbase.o /home/ubuntu/FrameworkBenchmarks/nawak/nimcache/pure_json.o /home/ubuntu/FrameworkBenchmarks/nawak/nimcache/collections_tables.o /home/ubuntu/FrameworkBenchmarks/nawak/nimcache/nawak_nawak_mongrel.o /home/ubuntu/FrameworkBenchmarks/nawak/nimcache/pure_algorithm.o /home/ubuntu/FrameworkBenchmarks/nawak/nimcache/pure_math.o /home/ubuntu/FrameworkBenchmarks/nawak/nimcache/pure_hashes.o /home/ubuntu/FrameworkBenchmarks/nawak/nimcache/posix_posix.o /home/ubuntu/FrameworkBenchmarks/nawak/nimcache/pure_times.o /home/ubuntu/FrameworkBenchmarks/nawak/nimcache/pure_parseutils.o /home/ubuntu/FrameworkBenchmarks/nawak/nimcache/pure_strutils.o /home/ubuntu/FrameworkBenchmarks/nawak/nimcache/pure_os.o /home/ubuntu/FrameworkBenchmarks/nawak/nimcache/pure_strtabs.o /home/ubuntu/FrameworkBenchmarks/nawak/nimcache/nimrod_system.o /home/ubuntu/FrameworkBenchmarks/nawak/nimcache/nawak_nawak_app.o  -ldl -lm
+Hint: operation successful (22744 lines compiled; 1.001 sec total; 32.332MB) [SuccessX]
+
+-----------------------------------------------------
+  VERIFYING JSON (/json)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Content-Length: 27
+Content-Type: application/json
+
+{"message":"Hello, World!"}
+
+VALIDATING JSON ... PASS
+
+
+-----------------------------------------------------
+  VERIFYING DB (/db)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Content-Length: 31
+Content-Type: application/json
+
+{"id":3280,"randomNumber":3381}
+
+VALIDATING DB ... PASS
+
+
+-----------------------------------------------------
+  VERIFYING QUERY (/queries?queries=2)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Content-Length: 65
+Content-Type: application/json
+
+[{"id":7527,"randomNumber":8201},{"id":4548,"randomNumber":4371}]
+
+/queries?queries=2 - PASS
+
+-----------------------------------------------------
+
+HTTP/1.1 200 OK
+Content-Length: 33
+Content-Type: application/json
+
+[{"id":4369,"randomNumber":8486}]
+
+/queries?queries=0 - PASS
+
+-----------------------------------------------------
+
+HTTP/1.1 200 OK
+Content-Length: 33
+Content-Type: application/json
+
+[{"id":5033,"randomNumber":7805}]
+
+/queries?queries=foo - PASS
+
+-----------------------------------------------------
+
+HTTP/1.1 200 OK
+Content-Length: 15885
+Content-Type: application/json
+
+[{"id":6927,"randomNumber":2845},{"id":1314,"randomNumber":7841},{"id":738,"randomNumber":8050},{"id":2215,"randomNumber":3120},{"id":2265,"randomNumber":9602},{"id":180,"randomNumber":1208},{"id":7223,"randomNumber":5084},{"id":2539,"randomNumber":6413},{"id":920,"randomNumber":8588},{"id":7197,"randomNumber":7633},{"id":7787,"randomNumber":5224},{"id":2738,"randomNumber":5406},{"id":8128,"randomNumber":2258},{"id":3427,"randomNumber":608},{"id":6533,"randomNumber":9326},{"id":7911,"randomNumber":4693},{"id":9487,"randomNumber":2612},{"id":2948,"randomNumber":8895},{"id":8043,"randomNumber":3132},{"id":4601,"randomNumber":3500},{"id":3731,"randomNumber":2580},{"id":1303,"randomNumber":6561},{"id":6175,"randomNumber":7109},{"id":81,"randomNumber":231},{"id":4598,"randomNumber":3965},{"id":3242,"randomNumber":2770},{"id":4771,"randomNumber":5675},{"id":9171,"randomNumber":4523},{"id":5578,"randomNumber":5719},{"id":9587,"randomNumber":8991},{"id":3991,"randomNumber":249},{"id":2505,"randomNumber":3072},{"id":7252,"randomNumber":2731},{"id":1081,"randomNumber":8283},{"id":1071,"randomNumber":9885},{"id":5868,"randomNumber":9504},{"id":1260,"randomNumber":1386},{"id":8294,"randomNumber":2021},{"id":8407,"randomNumber":4576},{"id":8531,"randomNumber":76},{"id":1842,"randomNumber":6811},{"id":6193,"randomNumber":9035},{"id":1269,"randomNumber":104},{"id":9969,"randomNumber":5189},{"id":5971,"randomNumber":9854},{"id":4153,"randomNumber":2683},{"id":4232,"randomNumber":1922},{"id":1809,"randomNumber":7319},{"id":7100,"randomNumber":2746},{"id":2274,"randomNumber":6466},{"id":6409,"randomNumber":5508},{"id":831,"randomNumber":2315},{"id":9929,"randomNumber":3202},{"id":2583,"randomNumber":9418},{"id":7263,"randomNumber":888},{"id":4526,"randomNumber":451},{"id":2177,"randomNumber":3966},{"id":2033,"randomNumber":6598},{"id":3696,"randomNumber":5126},{"id":7754,"randomNumber":925},{"id":7971,"randomNumber":2218},{"id":4039,"randomNumber":7250},{"id":6610,"randomNumber":6184},{"id":5222,"randomNumber":5876},{"id":1471,"randomNumber":7826},{"id":4033,"randomNumber":3860},{"id":7441,"randomNumber":9903},{"id":2730,"randomNumber":2420},{"id":8678,"randomNumber":1249},{"id":2199,"randomNumber":1590},{"id":7613,"randomNumber":989},{"id":519,"randomNumber":7970},{"id":4743,"randomNumber":8869},{"id":5233,"randomNumber":8152},{"id":6840,"randomNumber":8019},{"id":713,"randomNumber":800},{"id":9385,"randomNumber":9649},{"id":1071,"randomNumber":9885},{"id":2521,"randomNumber":426},{"id":2836,"randomNumber":9023},{"id":3344,"randomNumber":3313},{"id":8930,"randomNumber":5413},{"id":18,"randomNumber":1192},{"id":3272,"randomNumber":2894},{"id":7864,"randomNumber":6808},{"id":7280,"randomNumber":5741},{"id":4150,"randomNumber":903},{"id":40,"randomNumber":7475},{"id":5664,"randomNumber":7710},{"id":4197,"randomNumber":6675},{"id":4146,"randomNumber":5541},{"id":3634,"randomNumber":8552},{"id":4587,"randomNumber":5042},{"id":7107,"randomNumber":9664},{"id":5207,"randomNumber":7164},{"id":6057,"randomNumber":8155},{"id":7491,"randomNumber":7303},{"id":9000,"randomNumber":737},{"id":5139,"randomNumber":1371},{"id":6168,"randomNumber":2067},{"id":1198,"randomNumber":9697},{"id":2751,"randomNumber":3087},{"id":3039,"randomNumber":1717},{"id":5941,"randomNumber":3945},{"id":7983,"randomNumber":9852},{"id":9878,"randomNumber":7222},{"id":3005,"randomNumber":654},{"id":3719,"randomNumber":4607},{"id":948,"randomNumber":5875},{"id":5526,"randomNumber":4513},{"id":2906,"randomNumber":2728},{"id":643,"randomNumber":4053},{"id":807,"randomNumber":7367},{"id":2924,"randomNumber":3558},{"id":267,"randomNumber":9482},{"id":5022,"randomNumber":4261},{"id":6555,"randomNumber":8107},{"id":4416,"randomNumber":2488},{"id":1414,"randomNumber":7958},{"id":2219,"randomNumber":202},{"id":8612,"randomNumber":9668},{"id":5559,"randomNumber":2700},{"id":2204,"randomNumber":3836},{"id":3199,"randomNumber":5577},{"id":9017,"randomNumber":1005},{"id":3763,"randomNumber":1671},{"id":5607,"randomNumber":9086},{"id":6508,"randomNumber":4508},{"id":2762,"randomNumber":4661},{"id":745,"randomNumber":6291},{"id":9027,"randomNumber":4285},{"id":3959,"randomNumber":7815},{"id":3495,"randomNumber":8606},{"id":8417,"randomNumber":5996},{"id":6251,"randomNumber":2746},{"id":7829,"randomNumber":4538},{"id":4646,"randomNumber":6143},{"id":9256,"randomNumber":8122},{"id":1547,"randomNumber":6151},{"id":1945,"randomNumber":6971},{"id":4781,"randomNumber":9779},{"id":4453,"randomNumber":2876},{"id":2588,"randomNumber":2888},{"id":1939,"randomNumber":5393},{"id":3728,"randomNumber":8548},{"id":9206,"randomNumber":2799},{"id":6960,"randomNumber":791},{"id":282,"randomNumber":525},{"id":3621,"randomNumber":4209},{"id":8373,"randomNumber":8223},{"id":8852,"randomNumber":5057},{"id":8584,"randomNumber":5588},{"id":283,"randomNumber":9048},{"id":1056,"randomNumber":9936},{"id":8134,"randomNumber":3928},{"id":5652,"randomNumber":8042},{"id":4818,"randomNumber":6411},{"id":3741,"randomNumber":5213},{"id":8511,"randomNumber":2528},{"id":7579,"randomNumber":1655},{"id":4485,"randomNumber":6159},{"id":3889,"randomNumber":5030},{"id":7889,"randomNumber":3830},{"id":4332,"randomNumber":4833},{"id":8658,"randomNumber":5793},{"id":4140,"randomNumber":2635},{"id":2160,"randomNumber":336},{"id":3303,"randomNumber":3521},{"id":3395,"randomNumber":9218},{"id":59,"randomNumber":4378},{"id":5248,"randomNumber":7231},{"id":4527,"randomNumber":5424},{"id":863,"randomNumber":7522},{"id":4187,"randomNumber":9226},{"id":2817,"randomNumber":514},{"id":942,"randomNumber":7383},{"id":3392,"randomNumber":4859},{"id":9776,"randomNumber":9698},{"id":1223,"randomNumber":8474},{"id":3364,"randomNumber":5472},{"id":4501,"randomNumber":3293},{"id":6427,"randomNumber":2821},{"id":1947,"randomNumber":1235},{"id":1135,"randomNumber":987},{"id":7482,"randomNumber":9628},{"id":81,"randomNumber":231},{"id":3138,"randomNumber":3780},{"id":8651,"randomNumber":238},{"id":3821,"randomNumber":968},{"id":8000,"randomNumber":3374},{"id":6229,"randomNumber":3048},{"id":4657,"randomNumber":4683},{"id":1889,"randomNumber":9311},{"id":469,"randomNumber":5354},{"id":8988,"randomNumber":408},{"id":546,"randomNumber":1178},{"id":4608,"randomNumber":3470},{"id":7500,"randomNumber":2795},{"id":200,"randomNumber":3508},{"id":8002,"randomNumber":1777},{"id":7558,"randomNumber":768},{"id":5447,"randomNumber":732},{"id":8880,"randomNumber":8958},{"id":4772,"randomNumber":6211},{"id":5985,"randomNumber":744},{"id":1696,"randomNumber":7687},{"id":5713,"randomNumber":4962},{"id":5728,"randomNumber":2786},{"id":7824,"randomNumber":3655},{"id":3287,"randomNumber":7866},{"id":9091,"randomNumber":3818},{"id":8676,"randomNumber":8056},{"id":9713,"randomNumber":2082},{"id":7390,"randomNumber":9137},{"id":9810,"randomNumber":2805},{"id":3546,"randomNumber":5477},{"id":3822,"randomNumber":9821},{"id":9300,"randomNumber":9519},{"id":2196,"randomNumber":1445},{"id":3994,"randomNumber":7344},{"id":7299,"randomNumber":173},{"id":4776,"randomNumber":7297},{"id":8650,"randomNumber":1163},{"id":9187,"randomNumber":3159},{"id":5245,"randomNumber":1380},{"id":3990,"randomNumber":4747},{"id":6084,"randomNumber":3847},{"id":9852,"randomNumber":8298},{"id":1489,"randomNumber":6235},{"id":6284,"randomNumber":9598},{"id":4206,"randomNumber":6549},{"id":5398,"randomNumber":4438},{"id":8082,"randomNumber":3965},{"id":3085,"randomNumber":378},{"id":169,"randomNumber":3949},{"id":419,"randomNumber":3629},{"id":1133,"randomNumber":5775},{"id":2233,"randomNumber":5648},{"id":6146,"randomNumber":644},{"id":8956,"randomNumber":9888},{"id":1871,"randomNumber":9001},{"id":1589,"randomNumber":3339},{"id":7631,"randomNumber":9913},{"id":7936,"randomNumber":9460},{"id":5330,"randomNumber":224},{"id":3792,"randomNumber":4845},{"id":1481,"randomNumber":4597},{"id":9151,"randomNumber":215},{"id":9443,"randomNumber":2775},{"id":3677,"randomNumber":9821},{"id":3144,"randomNumber":4488},{"id":6742,"randomNumber":776},{"id":8452,"randomNumber":8398},{"id":8145,"randomNumber":1081},{"id":2280,"randomNumber":1815},{"id":48,"randomNumber":1578},{"id":2134,"randomNumber":7927},{"id":8364,"randomNumber":7554},{"id":9900,"randomNumber":5841},{"id":3622,"randomNumber":9838},{"id":999,"randomNumber":549},{"id":457,"randomNumber":8332},{"id":5371,"randomNumber":3194},{"id":5432,"randomNumber":9521},{"id":3541,"randomNumber":243},{"id":1891,"randomNumber":9242},{"id":2202,"randomNumber":2251},{"id":1025,"randomNumber":6836},{"id":4123,"randomNumber":8219},{"id":4700,"randomNumber":7140},{"id":6332,"randomNumber":9493},{"id":2346,"randomNumber":3924},{"id":6288,"randomNumber":5043},{"id":3962,"randomNumber":5260},{"id":281,"randomNumber":8165},{"id":1617,"randomNumber":8354},{"id":4106,"randomNumber":6569},{"id":1761,"randomNumber":336},{"id":7119,"randomNumber":9595},{"id":3548,"randomNumber":711},{"id":1789,"randomNumber":8977},{"id":6614,"randomNumber":5240},{"id":6641,"randomNumber":3136},{"id":6593,"randomNumber":1327},{"id":4758,"randomNumber":8246},{"id":8921,"randomNumber":5300},{"id":6640,"randomNumber":7181},{"id":3244,"randomNumber":4801},{"id":3636,"randomNumber":402},{"id":2891,"randomNumber":5626},{"id":3217,"randomNumber":7964},{"id":986,"randomNumber":9966},{"id":3347,"randomNumber":8410},{"id":8588,"randomNumber":3011},{"id":6417,"randomNumber":4144},{"id":6888,"randomNumber":9002},{"id":478,"randomNumber":7608},{"id":4971,"randomNumber":5265},{"id":4264,"randomNumber":2026},{"id":953,"randomNumber":3619},{"id":9670,"randomNumber":2857},{"id":596,"randomNumber":9964},{"id":3298,"randomNumber":2214},{"id":5957,"randomNumber":7056},{"id":909,"randomNumber":9893},{"id":9930,"randomNumber":8367},{"id":3925,"randomNumber":8088},{"id":5014,"randomNumber":7846},{"id":8042,"randomNumber":8559},{"id":1043,"randomNumber":9175},{"id":4914,"randomNumber":123},{"id":9831,"randomNumber":3604},{"id":4008,"randomNumber":6880},{"id":1554,"randomNumber":2572},{"id":2775,"randomNumber":8667},{"id":8765,"randomNumber":6253},{"id":474,"randomNumber":9045},{"id":9414,"randomNumber":6170},{"id":8360,"randomNumber":527},{"id":461,"randomNumber":6937},{"id":2305,"randomNumber":5169},{"id":1577,"randomNumber":9767},{"id":1446,"randomNumber":3733},{"id":5651,"randomNumber":3000},{"id":164,"randomNumber":9010},{"id":4215,"randomNumber":991},{"id":8890,"randomNumber":4853},{"id":6993,"randomNumber":8760},{"id":9185,"randomNumber":5843},{"id":3154,"randomNumber":5133},{"id":4297,"randomNumber":7747},{"id":8854,"randomNumber":6495},{"id":101,"randomNumber":267},{"id":3946,"randomNumber":397},{"id":1162,"randomNumber":8997},{"id":1009,"randomNumber":4903},{"id":3875,"randomNumber":269},{"id":1438,"randomNumber":3371},{"id":2375,"randomNumber":7348},{"id":1917,"randomNumber":3561},{"id":8832,"randomNumber":6024},{"id":7288,"randomNumber":6391},{"id":8099,"randomNumber":8534},{"id":2839,"randomNumber":7178},{"id":5193,"randomNumber":6002},{"id":873,"randomNumber":8380},{"id":1603,"randomNumber":9558},{"id":2019,"randomNumber":5439},{"id":286,"randomNumber":4127},{"id":6315,"randomNumber":364},{"id":2479,"randomNumber":3038},{"id":8942,"randomNumber":6307},{"id":7891,"randomNumber":4767},{"id":277,"randomNumber":2633},{"id":4593,"randomNumber":1580},{"id":4406,"randomNumber":7462},{"id":4491,"randomNumber":5235},{"id":9834,"randomNumber":2897},{"id":1398,"randomNumber":7028},{"id":3675,"randomNumber":560},{"id":9339,"randomNumber":3417},{"id":2047,"randomNumber":7153},{"id":8880,"randomNumber":8958},{"id":9439,"randomNumber":1628},{"id":5992,"randomNumber":7549},{"id":6393,"randomNumber":2111},{"id":448,"randomNumber":1045},{"id":9867,"randomNumber":1186},{"id":7830,"randomNumber":7919},{"id":2822,"randomNumber":7140},{"id":8135,"randomNumber":9070},{"id":6661,"randomNumber":5912},{"id":6461,"randomNumber":2347},{"id":6233,"randomNumber":2585},{"id":9499,"randomNumber":9829},{"id":1653,"randomNumber":5540},{"id":3457,"randomNumber":4470},{"id":7453,"randomNumber":6800},{"id":23,"randomNumber":1496},{"id":3742,"randomNumber":415},{"id":3767,"randomNumber":7919},{"id":2502,"randomNumber":1188},{"id":2684,"randomNumber":7926},{"id":1657,"randomNumber":6770},{"id":9130,"randomNumber":6887},{"id":3628,"randomNumber":278},{"id":6062,"randomNumber":9476},{"id":3620,"randomNumber":8561},{"id":3461,"randomNumber":5297},{"id":3812,"randomNumber":3938},{"id":3646,"randomNumber":7739},{"id":9152,"randomNumber":4502},{"id":5858,"randomNumber":6448},{"id":8877,"randomNumber":5185},{"id":8590,"randomNumber":8703},{"id":8201,"randomNumber":4404},{"id":5269,"randomNumber":8480},{"id":9037,"randomNumber":2995},{"id":4419,"randomNumber":8776},{"id":3098,"randomNumber":955},{"id":8210,"randomNumber":2598},{"id":2553,"randomNumber":1908},{"id":9758,"randomNumber":5422},{"id":1022,"randomNumber":8018},{"id":5137,"randomNumber":9701},{"id":5608,"randomNumber":7527},{"id":9027,"randomNumber":4285},{"id":8593,"randomNumber":8367},{"id":3060,"randomNumber":429},{"id":9049,"randomNumber":1786},{"id":8687,"randomNumber":4505},{"id":3179,"randomNumber":616},{"id":7902,"randomNumber":8117},{"id":7722,"randomNumber":5182},{"id":4835,"randomNumber":7084},{"id":7031,"randomNumber":5604},{"id":1349,"randomNumber":1614},{"id":7249,"randomNumber":1486},{"id":7002,"randomNumber":7372},{"id":1161,"randomNumber":1392},{"id":7412,"randomNumber":2813},{"id":647,"randomNumber":3046},{"id":312,"randomNumber":4914},{"id":3269,"randomNumber":3620},{"id":9523,"randomNumber":9994},{"id":5254,"randomNumber":1426},{"id":1469,"randomNumber":761},{"id":1143,"randomNumber":3659},{"id":642,"randomNumber":3634},{"id":5888,"randomNumber":9778},{"id":4240,"randomNumber":2947},{"id":5204,"randomNumber":3496},{"id":4792,"randomNumber":2919},{"id":349,"randomNumber":7858},{"id":6225,"randomNumber":4470},{"id":9929,"randomNumber":3202},{"id":5956,"randomNumber":2471},{"id":1603,"randomNumber":9558},{"id":4873,"randomNumber":5349},{"id":5368,"randomNumber":6994},{"id":652,"randomNumber":5057},{"id":3559,"randomNumber":1900},{"id":8546,"randomNumber":6613},{"id":4905,"randomNumber":8417},{"id":1280,"randomNumber":4758},{"id":9732,"randomNumber":6983},{"id":8288,"randomNumber":5161},{"id":8980,"randomNumber":4184},{"id":6980,"randomNumber":9311},{"id":5289,"randomNumber":2782},{"id":6493,"randomNumber":5570},{"id":4391,"randomNumber":2550},{"id":2288,"randomNumber":3740},{"id":3156,"randomNumber":8634},{"id":4011,"randomNumber":3465},{"id":8162,"randomNumber":9393},{"id":8409,"randomNumber":5283},{"id":1832,"randomNumber":300},{"id":9305,"randomNumber":3781},{"id":5403,"randomNumber":4328},{"id":4071,"randomNumber":8584},{"id":9896,"randomNumber":7054},{"id":606,"randomNumber":3890},{"id":8862,"randomNumber":6727},{"id":6597,"randomNumber":1735},{"id":6830,"randomNumber":1259},{"id":5142,"randomNumber":994},{"id":8904,"randomNumber":4883},{"id":8433,"randomNumber":5087},{"id":6367,"randomNumber":8879},{"id":4271,"randomNumber":5306},{"id":5436,"randomNumber":365},{"id":9925,"randomNumber":5389},{"id":9168,"randomNumber":115},{"id":6692,"randomNumber":8525},{"id":7557,"randomNumber":9026},{"id":8900,"randomNumber":545},{"id":4979,"randomNumber":9302},{"id":2888,"randomNumber":2072},{"id":2231,"randomNumber":1936},{"id":6620,"randomNumber":2850},{"id":5732,"randomNumber":6341},{"id":6622,"randomNumber":4944},{"id":5259,"randomNumber":8144},{"id":8888,"randomNumber":8854},{"id":6984,"randomNumber":2649},{"id":3420,"randomNumber":2060},{"id":3648,"randomNumber":4279},{"id":8815,"randomNumber":5751},{"id":9076,"randomNumber":4926},{"id":9050,"randomNumber":8088},{"id":2885,"randomNumber":4983},{"id":5324,"randomNumber":2455},{"id":9655,"randomNumber":7681},{"id":8099,"randomNumber":8534},{"id":1920,"randomNumber":3958},{"id":2837,"randomNumber":253},{"id":9592,"randomNumber":9076},{"id":823,"randomNumber":5577},{"id":7621,"randomNumber":4119}]
+
+/queries?queries=501 - PASS
+
+-----------------------------------------------------
+
+
+VALIDATING QUERY ... PASS
+
+
+-----------------------------------------------------
+  VERIFYING FORTUNE (/fortunes)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Content-Length: 1316
+Content-Type: text/html; charset=utf-8
+
+<!DOCTYPE html>
+<html>
+  <head><title>Fortunes</title></head>
+<body>
+  <table>
+    <tr><th>id</th><th>message</th></tr>
+    <tr><td>11</td><td>&lt;script&gt;alert(&quot;This should not be displayed in a browser alert box.&quot;);&lt;&#x2F;script&gt;</td></tr>
+    <tr><td>4</td><td>A bad random number generator: 1, 1, 1, 1, 1, 4.33e+67, 1, 1, 1</td></tr>
+    <tr><td>5</td><td>A computer program does what you tell it to do, not what you want it to do.</td></tr>
+    <tr><td>2</td><td>A computer scientist is someone who fixes things that aren&#x27;t broken.</td></tr>
+    <tr><td>8</td><td>A list is only as strong as its weakest link. — Donald Knuth</td></tr>
+    <tr><td>0</td><td>Additional fortune added at request time.</td></tr>
+    <tr><td>3</td><td>After enough decimal places, nobody gives a damn.</td></tr>
+    <tr><td>7</td><td>Any program that runs right is obsolete.</td></tr>
+    <tr><td>10</td><td>Computers make very fast, very accurate mistakes.</td></tr>
+    <tr><td>6</td><td>Emacs is a nice operating system, but I prefer UNIX. — Tom Christaensen</td></tr>
+    <tr><td>9</td><td>Feature: A bug with seniority.</td></tr>
+    <tr><td>1</td><td>fortune: No such file or directory</td></tr>
+    <tr><td>12</td><td>フレームワークのベンチマーク</td></tr>
+  </table>
+</body>
+</html>
+
+
+VALIDATING FORTUNE ... PASS
+
+
+-----------------------------------------------------
+  VERIFYING UPDATE (/updates?queries=)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Content-Length: 65
+Content-Type: application/json
+
+[{"id":4575,"randomNumber":2873},{"id":1351,"randomNumber":4283}]
+
+VALIDATING UPDATE ... PASS
+
+
+-----------------------------------------------------
+  VERIFYING PLAINTEXT (/plaintext)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Content-Length: 13
+Content-Type: text/plain
+
+Hello, World!
+
+VALIDATING PLAINTEXT ... PASS
+
+
+-----------------------------------------------------
+  Benchmarking nawak ...
+-----------------------------------------------------
+BENCHMARKING JSON ... Complete
+BENCHMARKING DB ... Complete
+BENCHMARKING Query ... Complete
+BENCHMARKING Fortune ... Complete
+BENCHMARKING Update ... Complete
+BENCHMARKING Plaintext ... Complete
+
+-----------------------------------------------------
+  Stopping nawak
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Stopped nawak
+-----------------------------------------------------
+
+----------------------------------------------------
+Saving results through nawak
+----------------------------------------------------

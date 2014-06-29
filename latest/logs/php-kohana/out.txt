@@ -1,0 +1,45 @@
+test.os.lower() = linux  test.database_os.lower() = linux
+self.results['frameworks'] != None: True
+test.name: php-kohana
+self.results['completed']: {}
+
+=====================================================
+  Beginning php-kohana
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Starting php-kohana
+-----------------------------------------------------
+
+-----------------------------------------------------
+  VERIFYING JSON (/bench/json)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Server: nginx/1.4.1
+Date: Sun, 29 Jun 2014 00:42:25 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: PHP/5.4.13
+
+{"message":"Hello, World!"}
+
+VALIDATING JSON ... PASS
+
+
+-----------------------------------------------------
+  Benchmarking php-kohana ...
+-----------------------------------------------------
+BENCHMARKING JSON ... Complete
+
+-----------------------------------------------------
+  Stopping php-kohana
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Stopped php-kohana
+-----------------------------------------------------
+
+----------------------------------------------------
+Saving results through php-kohana
+----------------------------------------------------

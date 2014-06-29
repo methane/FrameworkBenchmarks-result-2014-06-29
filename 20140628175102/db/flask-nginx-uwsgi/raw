@@ -1,0 +1,122 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer flask-nginx-uwsgi
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/dbs
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/dbs
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     6.39ms    9.35ms  92.16ms   97.79%
+    Req/Sec   212.86     81.31   500.00     72.73%
+  8187 requests in 4.99s, 1.46MB read
+Requests/sec:   1639.83
+Transfer/sec:    299.03KB
+
+---------------------------------------------------------
+ Running Warmup flask-nginx-uwsgi
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/dbs
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/dbs
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   151.31ms    5.61ms 171.33ms   66.02%
+    Req/Sec   423.39     10.65   455.00     74.60%
+  25392 requests in 15.00s, 4.52MB read
+Requests/sec:   1692.49
+Transfer/sec:    308.69KB
+
+---------------------------------------------------------
+ Concurrency: 8 for flask-nginx-uwsgi
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:8080/dbs -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/dbs
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     5.13ms    2.46ms  23.26ms   62.39%
+    Req/Sec   422.40    107.28     0.92k    63.50%
+  24496 requests in 15.00s, 4.36MB read
+Requests/sec:   1632.94
+Transfer/sec:    297.77KB
+
+---------------------------------------------------------
+ Concurrency: 16 for flask-nginx-uwsgi
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:8080/dbs -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/dbs
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     9.56ms    2.47ms  20.57ms   68.14%
+    Req/Sec   422.51     38.11   558.00     68.56%
+  25014 requests in 15.00s, 4.45MB read
+Requests/sec:   1667.96
+Transfer/sec:    304.16KB
+
+---------------------------------------------------------
+ Concurrency: 32 for flask-nginx-uwsgi
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:8080/dbs -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/dbs
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    19.11ms    3.42ms  58.65ms   67.44%
+    Req/Sec   422.86     30.93   510.00     70.10%
+  25124 requests in 15.00s, 4.47MB read
+Requests/sec:   1674.87
+Transfer/sec:    305.41KB
+
+---------------------------------------------------------
+ Concurrency: 64 for flask-nginx-uwsgi
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:8080/dbs -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/dbs
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    38.21ms    2.88ms  98.07ms   74.12%
+    Req/Sec   420.97     21.18   488.00     73.31%
+  25108 requests in 15.00s, 4.47MB read
+Requests/sec:   1673.99
+Transfer/sec:    305.28KB
+
+---------------------------------------------------------
+ Concurrency: 128 for flask-nginx-uwsgi
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:8080/dbs -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/dbs
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    76.16ms    3.73ms 122.08ms   69.93%
+    Req/Sec   421.09     20.04   503.00     71.31%
+  25198 requests in 15.00s, 4.49MB read
+Requests/sec:   1679.49
+Transfer/sec:    306.29KB
+
+---------------------------------------------------------
+ Concurrency: 256 for flask-nginx-uwsgi
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/dbs -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/dbs
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   153.55ms    4.73ms 170.42ms   69.84%
+    Req/Sec   416.98     12.83   457.00     84.04%
+  24990 requests in 15.00s, 4.45MB read
+Requests/sec:   1665.55
+Transfer/sec:    303.80KB

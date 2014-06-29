@@ -1,0 +1,158 @@
+[uWSGI] getting INI configuration from /home/ubuntu/FrameworkBenchmarks/config/uwsgi.ini
+*** Starting uWSGI 2.0.5.1 (64bit) on [Sun Jun 29 07:07:01 2014] ***
+compiled with version: 4.8.2 on 27 June 2014 14:19:43
+os: Linux-3.13.0-30-generic #54-Ubuntu SMP Mon Jun 9 22:45:01 UTC 2014
+nodename: ip-10-227-136-45
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/ubuntu/FrameworkBenchmarks/uwsgi
+writing pidfile to /tmp/uwsgi.pid
+detected binary path: /home/ubuntu/FrameworkBenchmarks/installs/py2/bin/uwsgi
+your processes number limit is 59758
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+- async cores set to 1000 - fd table size: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /tmp/uwsgi.sock fd 4
+Python version: 2.7.7 (default, Jun 27 2014, 14:15:12)  [GCC 4.8.2]
+Python main interpreter initialized at 0x1ae6300
+python threads support enabled
+your server socket listen backlog is limited to 65535 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 51832320 bytes (50617 KB) for 4000 cores
+*** Operational MODE: preforking+async ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x1ae6300 pid: 12732 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 12732)
+spawned uWSGI worker 1 (pid: 12733, cores: 1000)
+spawned uWSGI worker 2 (pid: 12734, cores: 1000)
+spawned uWSGI worker 3 (pid: 12735, cores: 1000)
+spawned uWSGI worker 4 (pid: 12736, cores: 1000)
+*** running gevent loop engine [addr:0x49cde0] ***
+Sun Jun 29 07:07:36 2014 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 287] during GET /json (127.0.0.1)
+IOError: write error
+Sun Jun 29 07:07:36 2014 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 287] during GET /json (127.0.0.1)
+IOError: write error
+Sun Jun 29 07:07:36 2014 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 287] during GET /json (127.0.0.1)
+IOError: write error
+Sun Jun 29 07:07:36 2014 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 287] during GET /json (127.0.0.1)
+Sun Jun 29 07:07:36 2014 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 287] during GET /json (127.0.0.1)
+IOError: write error
+IOError: write error
+Sun Jun 29 07:07:36 2014 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 287] during GET /json (127.0.0.1)
+IOError: write error
+Sun Jun 29 07:07:36 2014 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 287] during GET /json (127.0.0.1)
+IOError: write error
+IOError: write error
+Sun Jun 29 07:07:36 2014 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 287] during GET /json (127.0.0.1)
+IOError: write error
+Sun Jun 29 07:07:36 2014 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 287] during GET /json (127.0.0.1)
+IOErrorSuwrite error
+IOError: write error
+Sun Jun 29 07:07:36 2014 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 287] during GET /json (127.0.0.1)
+IOError: write error
+IOErrorSun Jun 29 07:07:36 2014 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 287] during GET /json (127.0.0.1)
+write error
+IOError: write error
+Sun Jun 29 07:07:36 2014 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 287] during GET /json (127.0.0.1)
+IOError: write error
+Sun Jun 29 07:07:36 2014 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 287] during GET /json (127.0.0.1)
+IOError: write error
+IOError: write error
+Sun Jun 29 07:07:36 2014 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 287] during GET /json (127.0.0.1)
+IOError: write error
+Sun Jun 29 07:07:36 2014 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 287] during GET /json (127.0.0.1)
+IOError: write error
+014 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 287] during GET /json (127.0.0.1)
+IOError: write error: write error
+Sun Jun 29 07:07:36 2014 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 287] during GET /json (127.0.0.1)
+IOError: write error
+Sun Jun 29 07:07:36 2014 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 287] during GET /json (127.0.0.1)
+IOError: write error
+IOError: write error
+Sun Jun 29 07:07:36 2014 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 287] during GET /json (127.0.0.1)
+IOError: write error
+Sun Jun 29 07:07:36 2014 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 287] during GET /json (127.0.0.1)
+IOError: write errorSun Jun 29 07:07:36 2014 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 287] during GET /json (127.0.0.1)
+IOError: write error
+Sun Jun 29 07:07:36 2014 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 287] during GET /json (127.0.0.1)
+IOError: write error
+Sun Jun 29 07:07:36 2014 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 287] during GET /json (127.0.0.1)
+IOError: write ewr
+rite error
+Sun Jun 29 07:07:36 2014 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 287] during GET /json (127.0.0.1)
+IOError: write error
+Sun Jun 29 07:07:36 2014 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 287] during GET /json (127.0.0.1)
+IOError: write error
+Sun Jun 29 07:07:36 2014 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 287] during GET /json (127.0.0.1)
+IOError: write error
+Sun Jun 29 07:07:36 2014 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 287] during GET /json (127.0.0.1)
+IOError: write error
+IOError: write error
+Sun Jun 29 07:08:30 2014 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 287] during GET /json (127.0.0.1)
+IOError: write error
+Sun Jun 29 07:08:47 2014 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 287] during GET /json (127.0.0.1)
+IOError: write error
+Sun Jun 29 07:08:47 2014 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 287] during GET /json (127.0.0.1)
+IOError: write error
+Sun Jun 29 07:09:04 2014 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 287] during GET /json (127.0.0.1)
+IOError: write error
+Sun Jun 29 07:09:04 2014 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 287] during GET /json (127.0.0.1)
+IOError: write error
+IOError: write error
+Sun Jun 29 07:09:21 2014 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 287] during GET /json (127.0.0.1)
+IOError: write error
+IOError: write error
+Sun Jun 29 07:09:21 2014 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 287] during GET /json (127.0.0.1)
+IOError: write error
+Sun Jun 29 07:09:21 2014 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 287] during GET /json (127.0.0.1)
+IOError: write error
+Sun Jun 29 07:09:21 2014 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 287] during GET /json (127.0.0.1)
+IOError: write error
+Sun Jun 29 07:09:21 2014 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 287] during GET /json (127.0.0.1)
+IOError: write error
+Sun Jun 29 07:09:21 2014 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 287] during GET /json (127.0.0.1)
+IOError: write error
+Sun Jun 29 07:09:21 2014 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 287] during GET /json (127.0.0.1)
+IOError: write e: write error
+Sun Jun 29 07:09:21 2014 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 287] during GET /json (127.0.0.1)
+IOError: write error
+Sun Jun 29 07:09:21 2014 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 287] during GET /json (127.0.0.1)
+IOError: Sun Jun 29 
+IOError: write error
+Sun Jun 29 07:09:21 2014 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 287] during GET /json (127.0.0.1)
+IOError: write error
+Sun Jun 29 07:09:21 2014 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 287] during GET /json (127.0.0.1)
+IOError: write error
+IOError: write error
+Sun Jun 29 07:09:21 2014 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 287] during GET /json (127.0.0.1)
+Sun Jun 29 07:09:21 2014 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 287] during GET /json (127.0.0.1)
+IOErrorSun Jun 2write error
+IOError: write error
+Sun Jun 29 07:09:21 2014 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 287] during GET /json (127.0.0.1)
+IOError: write error
+Sun Jun 29 07:09:21 2014 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 287] during GET /json (127.0.0.1)
+IOError: write eIOEr
+writwrite error
+Sun Jun 29 07:09:21 2014 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 287] during GET /json (127.0.0.1)
+IOError: write error
+Sun Jun 29 07:09:21 2014 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 287] during GET /json (127.0.0.1)
+Sun Jun 29 07:09:21 2014 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 287] during GET /json (127.0.0.1)
+IOError: IOError: write error
+Sun Jun 29 07:09:21 2014 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 287] during GET /json (127.0.0.1)
+IOError: write error
+Sun Jun 29 07:09:21 2014 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 287] during GET /json (127.0.0.1)
+Sun Jun: write error
+IOError: write error
+Sun Jun 29 07:09:21 2014 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 287] during GET /json (127.0.0.1)
+IOError: write error
+[uWSGI] getting INI configuration from /home/ubuntu/FrameworkBenchmarks/config/uwsgi_stop.ini
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.

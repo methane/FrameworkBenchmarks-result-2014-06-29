@@ -1,0 +1,103 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Sat Jun 28 19:37:24 UTC 2014
+
+  System load:  1.93               Processes:           144
+  Usage of /:   67.5% of 19.55GB   Users logged in:     0
+  Memory usage: 24%                IP address for eth0: 10.227.136.45
+  Swap usage:   0%
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer cpoll_cppsp
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:16969/plaintext
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:16969/plaintext
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    61.76us  123.13us   8.92ms   95.76%
+    Req/Sec    10.41k     4.62k   23.00k    80.96%
+  393244 requests in 5.00s, 60.00MB read
+Requests/sec:  78664.42
+Transfer/sec:     12.00MB
+
+---------------------------------------------------------
+ Running Warmup cpoll_cppsp
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:16969/plaintext
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:16969/plaintext
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.55ms    1.17ms  21.09ms   84.96%
+    Req/Sec    36.38k     7.50k   74.89k    79.98%
+  2052554 requests in 15.00s, 313.19MB read
+Requests/sec: 136837.33
+Transfer/sec:     20.88MB
+
+---------------------------------------------------------
+ Concurrency: 256 for cpoll_cppsp
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:16969/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:16969/plaintext
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    39.71ms  554.32us  45.43ms   84.13%
+    Req/Sec    25.75k   427.99    29.73k    96.26%
+  1535392 requests in 15.00s, 234.28MB read
+Requests/sec: 102359.62
+Transfer/sec:     15.62MB
+
+---------------------------------------------------------
+ Concurrency: 1024 for cpoll_cppsp
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 1024 --timeout 1024 -t 4 http://127.0.0.1:16969/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:16969/plaintext
+  4 threads and 1024 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    41.13ms    2.53ms  62.98ms   76.78%
+    Req/Sec    98.49k     3.52k  107.57k    71.25%
+  5855179 requests in 15.00s, 0.87GB read
+Requests/sec: 390394.90
+Transfer/sec:     59.57MB
+
+---------------------------------------------------------
+ Concurrency: 4096 for cpoll_cppsp
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 4096 --timeout 4096 -t 4 http://127.0.0.1:16969/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:16969/plaintext
+  4 threads and 4096 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   131.46ms   35.25ms 291.12ms   71.88%
+    Req/Sec   117.91k     7.73k  143.17k    67.26%
+  6964672 requests in 15.01s, 1.04GB read
+Requests/sec: 463942.63
+Transfer/sec:     70.79MB
+
+---------------------------------------------------------
+ Concurrency: 16384 for cpoll_cppsp
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16384 --timeout 16384 -t 4 http://127.0.0.1:16969/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:16969/plaintext
+  4 threads and 16384 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   546.12ms  122.90ms   1.95s    72.11%
+    Req/Sec   103.49k    10.20k  124.86k    63.24%
+  6083074 requests in 15.01s, 0.91GB read
+  Socket errors: connect 0, read 0, write 0, timeout 13591
+Requests/sec: 405287.53
+Transfer/sec:     61.84MB

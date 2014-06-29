@@ -1,0 +1,95 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer compojure
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/compojure/plaintext
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/compojure/plaintext
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   260.60us  349.35us  11.81ms   99.67%
+    Req/Sec     4.61k     2.02k   10.11k    81.59%
+  173840 requests in 4.99s, 25.20MB read
+Requests/sec:  34845.63
+Transfer/sec:      5.05MB
+
+---------------------------------------------------------
+ Running Warmup compojure
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/compojure/plaintext
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/compojure/plaintext
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    24.11ms  106.59ms 666.46ms   94.91%
+    Req/Sec     8.22k     3.76k   28.67k    70.13%
+  467102 requests in 15.00s, 67.71MB read
+Requests/sec:  31145.31
+Transfer/sec:      4.51MB
+
+---------------------------------------------------------
+ Concurrency: 256 for compojure
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/compojure/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/compojure/plaintext
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   104.19ms  179.93ms   1.33s    84.36%
+    Req/Sec     9.31k     1.14k   12.23k    70.00%
+  558060 requests in 15.00s, 80.90MB read
+Requests/sec:  37210.00
+Transfer/sec:      5.39MB
+
+---------------------------------------------------------
+ Concurrency: 1024 for compojure
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 1024 --timeout 1024 -t 4 http://127.0.0.1:8080/compojure/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/compojure/plaintext
+  4 threads and 1024 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   402.19ms  841.84ms  12.01s    93.61%
+    Req/Sec    10.24k     2.55k   16.74k    63.86%
+  507844 requests in 15.00s, 73.62MB read
+Requests/sec:  33853.48
+Transfer/sec:      4.91MB
+
+---------------------------------------------------------
+ Concurrency: 4096 for compojure
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 4096 --timeout 4096 -t 4 http://127.0.0.1:8080/compojure/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/compojure/plaintext
+  4 threads and 4096 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   786.54ms    1.57s   14.77s    94.63%
+    Req/Sec     9.37k     2.39k   16.98k    64.29%
+  502388 requests in 15.00s, 72.83MB read
+Requests/sec:  33492.60
+Transfer/sec:      4.86MB
+
+---------------------------------------------------------
+ Concurrency: 16384 for compojure
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16384 --timeout 16384 -t 4 http://127.0.0.1:8080/compojure/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/compojure/plaintext
+  4 threads and 16384 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     8.97s     6.97s   14.87s    62.08%
+    Req/Sec     9.89k     2.53k   16.71k    70.73%
+  495405 requests in 15.00s, 71.81MB read
+  Socket errors: connect 0, read 2863, write 0, timeout 43891
+Requests/sec:  33022.44
+Transfer/sec:      4.79MB

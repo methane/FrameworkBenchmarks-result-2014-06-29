@@ -1,0 +1,14 @@
+/bin/sh: 1: fastcgi-mono-server4: not found
+/bin/sh: 1: fastcgi-mono-server4: not found
+/bin/sh: 1: fastcgi-mono-server4: not found
+/bin/sh: 1: fastcgi-mono-server4: not found
+2014/06/28 18:07:35 [error] 29588#0: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 127.0.0.1, server: , request: "GET /json/default HTTP/1.1", upstream: "fastcgi://127.0.0.1:9001", host: "127.0.0.1:8080"
+2014/06/28 18:07:35 [error] 29588#0: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 127.0.0.1, server: , request: "GET /json/default HTTP/1.1", upstream: "fastcgi://127.0.0.1:9002", host: "127.0.0.1:8080"
+2014/06/28 18:07:35 [error] 29588#0: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 127.0.0.1, server: , request: "GET /json/default HTTP/1.1", upstream: "fastcgi://127.0.0.1:9003", host: "127.0.0.1:8080"
+2014/06/28 18:07:35 [error] 29588#0: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 127.0.0.1, server: , request: "GET /json/default HTTP/1.1", upstream: "fastcgi://127.0.0.1:9004", host: "127.0.0.1:8080"
+2014/06/28 18:07:35 [error] 29588#0: *6 no live upstreams while connecting to upstream, client: 127.0.0.1, server: , request: "GET /json/default HTTP/1.1", upstream: "fastcgi://mono", host: "127.0.0.1:8080"
+2014/06/28 18:07:35 [error] 29588#0: *7 connect() failed (111: Connection refused) while connecting to upstream, client: 127.0.0.1, server: , request: "GET /plaintext HTTP/1.1", upstream: "fastcgi://127.0.0.1:9004", host: "127.0.0.1:8080"
+2014/06/28 18:07:35 [error] 29588#0: *7 connect() failed (111: Connection refused) while connecting to upstream, client: 127.0.0.1, server: , request: "GET /plaintext HTTP/1.1", upstream: "fastcgi://127.0.0.1:9003", host: "127.0.0.1:8080"
+2014/06/28 18:07:35 [error] 29588#0: *7 connect() failed (111: Connection refused) while connecting to upstream, client: 127.0.0.1, server: , request: "GET /plaintext HTTP/1.1", upstream: "fastcgi://127.0.0.1:9002", host: "127.0.0.1:8080"
+2014/06/28 18:07:35 [error] 29588#0: *7 connect() failed (111: Connection refused) while connecting to upstream, client: 127.0.0.1, server: , request: "GET /plaintext HTTP/1.1", upstream: "fastcgi://127.0.0.1:9001", host: "127.0.0.1:8080"
+2014/06/28 18:07:35 [error] 29588#0: *12 no live upstreams while connecting to upstream, client: 127.0.0.1, server: , request: "GET /plaintext HTTP/1.1", upstream: "fastcgi://mono", host: "127.0.0.1:8080"

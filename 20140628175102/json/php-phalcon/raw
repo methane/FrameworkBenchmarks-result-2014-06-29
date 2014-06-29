@@ -1,0 +1,122 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer php-phalcon
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/json
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/json
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.97ms    3.01ms  28.07ms   96.05%
+    Req/Sec   740.34    287.68     2.11k    71.88%
+  28115 requests in 5.00s, 6.03MB read
+Requests/sec:   5627.22
+Transfer/sec:      1.21MB
+
+---------------------------------------------------------
+ Running Warmup php-phalcon
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/json
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    52.81ms  105.45ms   4.35s    98.99%
+    Req/Sec     1.24k   154.38     1.53k    73.66%
+  74655 requests in 15.00s, 16.02MB read
+Requests/sec:   4977.03
+Transfer/sec:      1.07MB
+
+---------------------------------------------------------
+ Concurrency: 8 for php-phalcon
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.60ms    2.17ms  36.26ms   97.25%
+    Req/Sec     1.49k   404.08     3.22k    73.94%
+  84612 requests in 15.00s, 18.15MB read
+Requests/sec:   5641.04
+Transfer/sec:      1.21MB
+
+---------------------------------------------------------
+ Concurrency: 16 for php-phalcon
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     3.08ms    4.06ms  76.93ms   95.82%
+    Req/Sec     1.54k   461.06     3.78k    72.12%
+  87489 requests in 15.00s, 18.77MB read
+Requests/sec:   5832.83
+Transfer/sec:      1.25MB
+
+---------------------------------------------------------
+ Concurrency: 32 for php-phalcon
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     5.76ms    5.13ms  72.67ms   89.75%
+    Req/Sec     1.52k   358.71     3.43k    73.05%
+  87841 requests in 15.00s, 18.84MB read
+Requests/sec:   5855.77
+Transfer/sec:      1.26MB
+
+---------------------------------------------------------
+ Concurrency: 64 for php-phalcon
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    11.29ms    8.78ms 221.37ms   80.30%
+    Req/Sec     1.47k   243.31     2.59k    72.83%
+  87067 requests in 15.00s, 18.68MB read
+Requests/sec:   5804.16
+Transfer/sec:      1.25MB
+
+---------------------------------------------------------
+ Concurrency: 128 for php-phalcon
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    23.64ms   19.65ms 527.59ms   79.44%
+    Req/Sec     1.37k   173.43     2.04k    73.41%
+  81963 requests in 15.00s, 17.58MB read
+Requests/sec:   5464.66
+Transfer/sec:      1.17MB
+
+---------------------------------------------------------
+ Concurrency: 256 for php-phalcon
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    51.30ms   30.32ms 784.06ms   71.84%
+    Req/Sec     1.26k   126.85     1.74k    72.33%
+  74156 requests in 15.00s, 15.91MB read
+Requests/sec:   4944.81
+Transfer/sec:      1.06MB

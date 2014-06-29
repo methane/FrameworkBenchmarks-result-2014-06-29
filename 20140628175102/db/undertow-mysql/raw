@@ -1,0 +1,124 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer undertow-mysql
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/db/mysql
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/db/mysql
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.64ms    2.15ms  19.50ms   91.11%
+    Req/Sec     0.92k   488.32     2.20k    62.18%
+  33187 requests in 5.00s, 5.34MB read
+Requests/sec:   6639.34
+Transfer/sec:      1.07MB
+
+---------------------------------------------------------
+ Running Warmup undertow-mysql
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/db/mysql
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db/mysql
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    18.01ms   32.14ms 705.05ms   93.76%
+    Req/Sec     3.45k     1.18k    8.37k    81.79%
+  201063 requests in 15.00s, 32.36MB read
+  Socket errors: connect 0, read 0, write 0, timeout 112
+Requests/sec:  13404.40
+Transfer/sec:      2.16MB
+
+---------------------------------------------------------
+ Concurrency: 8 for undertow-mysql
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:8080/db/mysql -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db/mysql
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   636.66us  349.67us   7.28ms   84.67%
+    Req/Sec     3.22k   341.84     4.33k    74.90%
+  182980 requests in 15.00s, 29.45MB read
+Requests/sec:  12199.22
+Transfer/sec:      1.96MB
+
+---------------------------------------------------------
+ Concurrency: 16 for undertow-mysql
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:8080/db/mysql -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db/mysql
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.20ms    1.15ms  33.22ms   91.26%
+    Req/Sec     3.56k   586.67     6.00k    72.46%
+  201986 requests in 15.00s, 32.51MB read
+Requests/sec:  13466.19
+Transfer/sec:      2.17MB
+
+---------------------------------------------------------
+ Concurrency: 32 for undertow-mysql
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:8080/db/mysql -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db/mysql
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     2.21ms    2.14ms  37.42ms   89.79%
+    Req/Sec     3.82k   683.33     6.44k    70.70%
+  217191 requests in 15.00s, 34.96MB read
+Requests/sec:  14481.52
+Transfer/sec:      2.33MB
+
+---------------------------------------------------------
+ Concurrency: 64 for undertow-mysql
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:8080/db/mysql -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db/mysql
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     4.38ms    4.36ms  55.17ms   88.67%
+    Req/Sec     3.85k   450.39     6.57k    75.28%
+  223234 requests in 15.00s, 35.93MB read
+Requests/sec:  14882.65
+Transfer/sec:      2.40MB
+
+---------------------------------------------------------
+ Concurrency: 128 for undertow-mysql
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:8080/db/mysql -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db/mysql
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     8.55ms    8.47ms 231.05ms   88.75%
+    Req/Sec     3.84k   677.94     9.60k    81.79%
+  223215 requests in 15.00s, 35.93MB read
+Requests/sec:  14881.76
+Transfer/sec:      2.40MB
+
+---------------------------------------------------------
+ Concurrency: 256 for undertow-mysql
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/db/mysql -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db/mysql
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    21.41ms   39.08ms 494.40ms   95.33%
+    Req/Sec     3.82k     1.01k    7.72k    82.05%
+  223357 requests in 15.00s, 35.95MB read
+  Socket errors: connect 0, read 0, write 0, timeout 60
+Requests/sec:  14892.77
+Transfer/sec:      2.40MB

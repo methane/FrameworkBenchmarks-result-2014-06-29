@@ -1,0 +1,87 @@
+test.os.lower() = linux  test.database_os.lower() = linux
+self.results['frameworks'] != None: True
+test.name: symfony2-stripped-php-templates
+self.results['completed']: {}
+
+=====================================================
+  Beginning symfony2-stripped-php-templates
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Starting symfony2-stripped-php-templates
+-----------------------------------------------------
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+mysql start/running, process 9451
+ * Restarting PostgreSQL 9.3 database server
+   ...done.
+Loading composer repositories with package information
+Installing dependencies (including require-dev) from lock file
+Nothing to install or update
+Generating optimized autoload files
+Clearing the cache for the dev environment with debug true
+Installing assets using the hard copy option
+Installing assets for Symfony\Bundle\FrameworkBundle into web/bundles/framework
+Installing assets for Acme\DemoBundle into web/bundles/acmedemo
+Installing assets for Sensio\Bundle\DistributionBundle into web/bundles/sensiodistribution
+Clearing the cache for the prod environment with debug false
+Warming up the cache for the prod environment with debug false
+
+-----------------------------------------------------
+  VERIFYING FORTUNE (/fortunes-php)
+-----------------------------------------------------
+HTTP/1.1 500 Internal Server Error
+Server: nginx/1.4.1
+Content-Type: text/html; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: PHP/5.4.13
+Cache-Control: no-cache
+Date: Sun, 29 Jun 2014 05:02:52 GMT
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>An Error Occurred: Internal Server Error</title>
+    </head>
+    <body>
+        <h1>Oops! An Error Occurred</h1>
+        <h2>The server returned a "500 Internal Server Error".</h2>
+
+        <div>
+            Something is broken. Please e-mail us at [email] and let us know
+            what you were doing when this error occurred. We will fix it as soon
+            as possible. Sorry for any inconvenience caused.
+        </div>
+    </body>
+</html>
+
+
+VALIDATING FORTUNE ... FAIL
+
+
+-----------------------------------------------------
+  Benchmarking symfony2-stripped-php-templates ...
+-----------------------------------------------------
+BENCHMARKING Fortune ... Complete
+
+-----------------------------------------------------
+  Stopping symfony2-stripped-php-templates
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Stopped symfony2-stripped-php-templates
+-----------------------------------------------------
+
+----------------------------------------------------
+Saving results through symfony2-stripped-php-templates
+----------------------------------------------------

@@ -1,0 +1,192 @@
+test.os.lower() = linux  test.database_os.lower() = linux
+self.results['frameworks'] != None: True
+test.name: slim
+self.results['completed']: {}
+
+=====================================================
+  Beginning slim
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Starting slim
+-----------------------------------------------------
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Sun Jun 29 04:21:15 UTC 2014
+
+  System load:  3.61               Processes:           157
+  Usage of /:   68.9% of 19.55GB   Users logged in:     1
+  Memory usage: 31%                IP address for eth0: 10.227.136.45
+  Swap usage:   0%
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+mysql start/running, process 30156
+ * Restarting PostgreSQL 9.3 database server
+   ...done.
+
+-----------------------------------------------------
+  VERIFYING JSON (/json)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Server: nginx/1.4.1
+Date: Sun, 29 Jun 2014 04:23:30 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: PHP/5.4.13
+
+{"message":"Hello, World!"}
+
+VALIDATING JSON ... PASS
+
+
+-----------------------------------------------------
+  VERIFYING DB (/db)
+-----------------------------------------------------
+HTTP/1.1 500 Internal Server Error
+Server: nginx/1.4.1
+Date: Sun, 29 Jun 2014 04:23:30 GMT
+Content-Type: text/html
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: PHP/5.4.13
+
+<html><head><title>Slim Application Error</title><style>body{margin:0;padding:30px;font:12px/1.5 Helvetica,Arial,Verdana,sans-serif;}h1{margin:0;font-size:48px;font-weight:normal;line-height:48px;}strong{display:inline-block;width:65px;}</style></head><body><h1>Slim Application Error</h1><p>The application could not run because of the following error:</p><h2>Details</h2><div><strong>Type:</strong> PDOException</div><div><strong>Message:</strong> Could not connect to database.</div><div><strong>File:</strong> /home/ubuntu/FrameworkBenchmarks/php-slim/Slim/RedBean/rb.php</div><div><strong>Line:</strong> 194</div><h2>Trace</h2><pre>#0 /home/ubuntu/FrameworkBenchmarks/php-slim/Slim/RedBean/rb.php(241): RedBean_Driver_PDO->connect()
+#1 /home/ubuntu/FrameworkBenchmarks/php-slim/Slim/RedBean/rb.php(274): RedBean_Driver_PDO->runQuery('SELECT * FROM `...', Array)
+#2 /home/ubuntu/FrameworkBenchmarks/php-slim/Slim/RedBean/rb.php(1406): RedBean_Driver_PDO->GetAll('SELECT * FROM `...', Array)
+#3 /home/ubuntu/FrameworkBenchmarks/php-slim/Slim/RedBean/rb.php(1913): RedBean_Adapter_DBAdapter->get('SELECT * FROM `...', Array)
+#4 /home/ubuntu/FrameworkBenchmarks/php-slim/Slim/RedBean/rb.php(3919): RedBean_QueryWriter_AQueryWriter->selectRecord('World', Array)
+#5 /home/ubuntu/FrameworkBenchmarks/php-slim/Slim/RedBean/rb.php(5719): RedBean_OODB->load('World', 7560)
+#6 /home/ubuntu/FrameworkBenchmarks/php-slim/index.php(49): RedBean_Facade::load('World', 7560)
+#7 [internal function]: {closure}()
+#8 /home/ubuntu/FrameworkBenchmarks/php-slim/Slim/Router.php(172): call_user_func_array(Object(Closure), Array)
+#9 /home/ubuntu/FrameworkBenchmarks/php-slim/Slim/Slim.php(1222): Slim\Router->dispatch(Object(Slim\Route))
+#10 /home/ubuntu/FrameworkBenchmarks/php-slim/Slim/Middleware/Flash.php(86): Slim\Slim->call()
+#11 /home/ubuntu/FrameworkBenchmarks/php-slim/Slim/Middleware/MethodOverride.php(94): Slim\Middleware\Flash->call()
+#12 /home/ubuntu/FrameworkBenchmarks/php-slim/Slim/Middleware/PrettyExceptions.php(67): Slim\Middleware\MethodOverride->call()
+#13 /home/ubuntu/FrameworkBenchmarks/php-slim/Slim/Slim.php(1174): Slim\Middleware\PrettyExceptions->call()
+#14 /home/ubuntu/FrameworkBenchmarks/php-slim/index.php(62): Slim\Slim->run()
+#15 {main}</pre></body></html>
+
+VALIDATING DB ... FAIL
+
+
+-----------------------------------------------------
+  VERIFYING QUERY (/db?queries=2)
+-----------------------------------------------------
+HTTP/1.1 500 Internal Server Error
+Server: nginx/1.4.1
+Date: Sun, 29 Jun 2014 04:23:30 GMT
+Content-Type: text/html
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: PHP/5.4.13
+
+<html><head><title>Slim Application Error</title><style>body{margin:0;padding:30px;font:12px/1.5 Helvetica,Arial,Verdana,sans-serif;}h1{margin:0;font-size:48px;font-weight:normal;line-height:48px;}strong{display:inline-block;width:65px;}</style></head><body><h1>Slim Application Error</h1><p>The application could not run because of the following error:</p><h2>Details</h2><div><strong>Type:</strong> PDOException</div><div><strong>Message:</strong> Could not connect to database.</div><div><strong>File:</strong> /home/ubuntu/FrameworkBenchmarks/php-slim/Slim/RedBean/rb.php</div><div><strong>Line:</strong> 194</div><h2>Trace</h2><pre>#0 /home/ubuntu/FrameworkBenchmarks/php-slim/Slim/RedBean/rb.php(241): RedBean_Driver_PDO->connect()
+#1 /home/ubuntu/FrameworkBenchmarks/php-slim/Slim/RedBean/rb.php(274): RedBean_Driver_PDO->runQuery('SELECT * FROM `...', Array)
+#2 /home/ubuntu/FrameworkBenchmarks/php-slim/Slim/RedBean/rb.php(1406): RedBean_Driver_PDO->GetAll('SELECT * FROM `...', Array)
+#3 /home/ubuntu/FrameworkBenchmarks/php-slim/Slim/RedBean/rb.php(1913): RedBean_Adapter_DBAdapter->get('SELECT * FROM `...', Array)
+#4 /home/ubuntu/FrameworkBenchmarks/php-slim/Slim/RedBean/rb.php(3919): RedBean_QueryWriter_AQueryWriter->selectRecord('World', Array)
+#5 /home/ubuntu/FrameworkBenchmarks/php-slim/Slim/RedBean/rb.php(5719): RedBean_OODB->load('World', 483)
+#6 /home/ubuntu/FrameworkBenchmarks/php-slim/index.php(49): RedBean_Facade::load('World', 483)
+#7 [internal function]: {closure}()
+#8 /home/ubuntu/FrameworkBenchmarks/php-slim/Slim/Router.php(172): call_user_func_array(Object(Closure), Array)
+#9 /home/ubuntu/FrameworkBenchmarks/php-slim/Slim/Slim.php(1222): Slim\Router->dispatch(Object(Slim\Route))
+#10 /home/ubuntu/FrameworkBenchmarks/php-slim/Slim/Middleware/Flash.php(86): Slim\Slim->call()
+#11 /home/ubuntu/FrameworkBenchmarks/php-slim/Slim/Middleware/MethodOverride.php(94): Slim\Middleware\Flash->call()
+#12 /home/ubuntu/FrameworkBenchmarks/php-slim/Slim/Middleware/PrettyExceptions.php(67): Slim\Middleware\MethodOverride->call()
+#13 /home/ubuntu/FrameworkBenchmarks/php-slim/Slim/Slim.php(1174): Slim\Middleware\PrettyExceptions->call()
+#14 /home/ubuntu/FrameworkBenchmarks/php-slim/index.php(62): Slim\Slim->run()
+#15 {main}</pre></body></html>
+
+/db?queries=2 - FAIL
+
+-----------------------------------------------------
+
+HTTP/1.1 200 OK
+Server: nginx/1.4.1
+Date: Sun, 29 Jun 2014 04:23:30 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: PHP/5.4.13
+
+[]
+
+/db?queries=0 - WARNING
+
+-----------------------------------------------------
+
+HTTP/1.1 200 OK
+Server: nginx/1.4.1
+Date: Sun, 29 Jun 2014 04:23:30 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: PHP/5.4.13
+
+[]
+
+/db?queries=foo - WARNING
+
+-----------------------------------------------------
+
+HTTP/1.1 500 Internal Server Error
+Server: nginx/1.4.1
+Date: Sun, 29 Jun 2014 04:23:30 GMT
+Content-Type: text/html
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: PHP/5.4.13
+
+<html><head><title>Slim Application Error</title><style>body{margin:0;padding:30px;font:12px/1.5 Helvetica,Arial,Verdana,sans-serif;}h1{margin:0;font-size:48px;font-weight:normal;line-height:48px;}strong{display:inline-block;width:65px;}</style></head><body><h1>Slim Application Error</h1><p>The application could not run because of the following error:</p><h2>Details</h2><div><strong>Type:</strong> PDOException</div><div><strong>Message:</strong> Could not connect to database.</div><div><strong>File:</strong> /home/ubuntu/FrameworkBenchmarks/php-slim/Slim/RedBean/rb.php</div><div><strong>Line:</strong> 194</div><h2>Trace</h2><pre>#0 /home/ubuntu/FrameworkBenchmarks/php-slim/Slim/RedBean/rb.php(241): RedBean_Driver_PDO->connect()
+#1 /home/ubuntu/FrameworkBenchmarks/php-slim/Slim/RedBean/rb.php(274): RedBean_Driver_PDO->runQuery('SELECT * FROM `...', Array)
+#2 /home/ubuntu/FrameworkBenchmarks/php-slim/Slim/RedBean/rb.php(1406): RedBean_Driver_PDO->GetAll('SELECT * FROM `...', Array)
+#3 /home/ubuntu/FrameworkBenchmarks/php-slim/Slim/RedBean/rb.php(1913): RedBean_Adapter_DBAdapter->get('SELECT * FROM `...', Array)
+#4 /home/ubuntu/FrameworkBenchmarks/php-slim/Slim/RedBean/rb.php(3919): RedBean_QueryWriter_AQueryWriter->selectRecord('World', Array)
+#5 /home/ubuntu/FrameworkBenchmarks/php-slim/Slim/RedBean/rb.php(5719): RedBean_OODB->load('World', 5672)
+#6 /home/ubuntu/FrameworkBenchmarks/php-slim/index.php(49): RedBean_Facade::load('World', 5672)
+#7 [internal function]: {closure}()
+#8 /home/ubuntu/FrameworkBenchmarks/php-slim/Slim/Router.php(172): call_user_func_array(Object(Closure), Array)
+#9 /home/ubuntu/FrameworkBenchmarks/php-slim/Slim/Slim.php(1222): Slim\Router->dispatch(Object(Slim\Route))
+#10 /home/ubuntu/FrameworkBenchmarks/php-slim/Slim/Middleware/Flash.php(86): Slim\Slim->call()
+#11 /home/ubuntu/FrameworkBenchmarks/php-slim/Slim/Middleware/MethodOverride.php(94): Slim\Middleware\Flash->call()
+#12 /home/ubuntu/FrameworkBenchmarks/php-slim/Slim/Middleware/PrettyExceptions.php(67): Slim\Middleware\MethodOverride->call()
+#13 /home/ubuntu/FrameworkBenchmarks/php-slim/Slim/Slim.php(1174): Slim\Middleware\PrettyExceptions->call()
+#14 /home/ubuntu/FrameworkBenchmarks/php-slim/index.php(62): Slim\Slim->run()
+#15 {main}</pre></body></html>
+
+/db?queries=501 - WARNING
+
+-----------------------------------------------------
+
+
+VALIDATING QUERY ... FAIL
+
+
+-----------------------------------------------------
+  Benchmarking slim ...
+-----------------------------------------------------
+BENCHMARKING JSON ... Complete
+BENCHMARKING DB ... Complete
+BENCHMARKING Query ... Complete
+
+-----------------------------------------------------
+  Stopping slim
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Stopped slim
+-----------------------------------------------------
+
+----------------------------------------------------
+Saving results through slim
+----------------------------------------------------

@@ -1,0 +1,126 @@
+test.os.lower() = linux  test.database_os.lower() = linux
+self.results['frameworks'] != None: True
+test.name: undertow-edge
+self.results['completed']: {}
+
+=====================================================
+  Beginning undertow-edge
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Starting undertow-edge
+-----------------------------------------------------
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building undertow-edge 0.1
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ undertow-edge ---
+[INFO] Deleting /home/ubuntu/FrameworkBenchmarks/undertow-edge/target
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.3.1:enforce (enforce-java-version) @ undertow-edge ---
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.3.1:enforce (enforce-maven-version) @ undertow-edge ---
+[INFO] 
+[INFO] --- buildnumber-maven-plugin:1.2:create-timestamp (get-build-timestamp) @ undertow-edge ---
+[INFO] 
+[INFO] --- buildnumber-maven-plugin:1.2:create (get-scm-revision) @ undertow-edge ---
+[INFO] Checking for local modifications: skipped.
+[INFO] Updating project files from SCM: skipped.
+[INFO] Executing: /bin/sh -c cd /home/ubuntu/FrameworkBenchmarks/undertow-edge && git rev-parse --verify HEAD
+[INFO] Working directory: /home/ubuntu/FrameworkBenchmarks/undertow-edge
+[INFO] Storing buildNumber: 9904d7d26977ead5607985a2eef613d4bf166f59 at timestamp: 1404021265949
+[INFO] Executing: /bin/sh -c cd /home/ubuntu/FrameworkBenchmarks/undertow-edge && git rev-parse --verify HEAD
+[INFO] Working directory: /home/ubuntu/FrameworkBenchmarks/undertow-edge
+[INFO] Storing buildScmBranch: UNKNOWN
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ undertow-edge ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 2 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ undertow-edge ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 13 source files to /home/ubuntu/FrameworkBenchmarks/undertow-edge/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ undertow-edge ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/ubuntu/FrameworkBenchmarks/undertow-edge/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ undertow-edge ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.16:test (default-test) @ undertow-edge ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-download-plugin:1.1.0:wget (install-xnio-native) @ undertow-edge ---
+[INFO] Got from cache: /home/ubuntu/.m2/repository/.cache/maven-download-plugin/xnio-native-1.0.0.Beta1.zip
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ undertow-edge ---
+[INFO] Building jar: /home/ubuntu/FrameworkBenchmarks/undertow-edge/target/undertow-edge-0.1.jar
+[INFO] 
+[INFO] --- maven-source-plugin:2.2.1:jar-no-fork (attach-sources) @ undertow-edge ---
+[INFO] Building jar: /home/ubuntu/FrameworkBenchmarks/undertow-edge/target/undertow-edge-0.1-sources.jar
+[INFO] 
+[INFO] --- maven-antrun-plugin:1.7:run (default) @ undertow-edge ---
+[INFO] Executing tasks
+
+main:
+     [copy] Copying 1 file to /home/ubuntu/FrameworkBenchmarks/undertow-edge/target
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- maven-assembly-plugin:2.4:single (make-assembly) @ undertow-edge ---
+[INFO] Building jar: /home/ubuntu/FrameworkBenchmarks/undertow-edge/target/undertow-edge-0.1-jar-with-dependencies.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 7.352s
+[INFO] Finished at: Sun Jun 29 05:54:31 UTC 2014
+[INFO] Final Memory: 31M/392M
+[INFO] ------------------------------------------------------------------------
+
+-----------------------------------------------------
+  VERIFYING JSON (/json)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Server: U-tow
+Content-Type: application/json; charset=utf-8
+Content-Length: 27
+Date: Sun, 29 Jun 2014 05:54:41 GMT
+
+{"message":"Hello, World!"}
+
+VALIDATING JSON ... PASS
+
+
+-----------------------------------------------------
+  VERIFYING PLAINTEXT (/plaintext)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Server: U-tow
+Content-Type: text/plain; charset=utf-8
+Content-Length: 13
+Date: Sun, 29 Jun 2014 05:54:41 GMT
+
+Hello, World!
+
+VALIDATING PLAINTEXT ... PASS
+
+
+-----------------------------------------------------
+  Benchmarking undertow-edge ...
+-----------------------------------------------------
+BENCHMARKING JSON ... Complete
+BENCHMARKING Plaintext ... Complete
+
+-----------------------------------------------------
+  Stopping undertow-edge
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Stopped undertow-edge
+-----------------------------------------------------
+
+----------------------------------------------------
+Saving results through undertow-edge
+----------------------------------------------------

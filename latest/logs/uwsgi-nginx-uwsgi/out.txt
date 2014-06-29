@@ -1,0 +1,44 @@
+test.os.lower() = linux  test.database_os.lower() = linux
+self.results['frameworks'] != None: True
+test.name: uwsgi-nginx-uwsgi
+self.results['completed']: {}
+
+=====================================================
+  Beginning uwsgi-nginx-uwsgi
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Starting uwsgi-nginx-uwsgi
+-----------------------------------------------------
+
+-----------------------------------------------------
+  VERIFYING JSON (/json)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Server: nginx/1.4.1
+Date: Sun, 29 Jun 2014 07:07:11 GMT
+Content-Type: application/json
+Content-Length: 27
+Connection: keep-alive
+
+{"message":"Hello, World!"}
+
+VALIDATING JSON ... PASS
+
+
+-----------------------------------------------------
+  Benchmarking uwsgi-nginx-uwsgi ...
+-----------------------------------------------------
+BENCHMARKING JSON ... Complete
+
+-----------------------------------------------------
+  Stopping uwsgi-nginx-uwsgi
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Stopped uwsgi-nginx-uwsgi
+-----------------------------------------------------
+
+----------------------------------------------------
+Saving results through uwsgi-nginx-uwsgi
+----------------------------------------------------

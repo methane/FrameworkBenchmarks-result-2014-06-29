@@ -1,0 +1,94 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer bottle-nginx-uwsgi
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/plaintext
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/plaintext
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   523.96us  612.21us  13.09ms   95.30%
+    Req/Sec     2.09k   407.84     3.56k    76.47%
+  78443 requests in 5.00s, 11.97MB read
+Requests/sec:  15693.99
+Transfer/sec:      2.39MB
+
+---------------------------------------------------------
+ Running Warmup bottle-nginx-uwsgi
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/plaintext
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/plaintext
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    12.58ms    4.52ms  73.92ms   80.06%
+    Req/Sec     5.19k   521.41     9.69k    72.84%
+  305113 requests in 15.00s, 46.54MB read
+Requests/sec:  20341.62
+Transfer/sec:      3.10MB
+
+---------------------------------------------------------
+ Concurrency: 256 for bottle-nginx-uwsgi
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/plaintext
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   185.86ms   29.27ms 332.19ms   76.21%
+    Req/Sec     5.53k   208.24     6.07k    74.42%
+  324407 requests in 15.00s, 49.49MB read
+Requests/sec:  21627.64
+Transfer/sec:      3.30MB
+
+---------------------------------------------------------
+ Concurrency: 1024 for bottle-nginx-uwsgi
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 1024 --timeout 1024 -t 4 http://127.0.0.1:8080/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/plaintext
+  4 threads and 1024 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   769.62ms  146.30ms   1.27s    71.84%
+    Req/Sec     5.28k    88.41     5.44k    69.05%
+  316673 requests in 15.00s, 48.31MB read
+Requests/sec:  21118.43
+Transfer/sec:      3.22MB
+
+---------------------------------------------------------
+ Concurrency: 4096 for bottle-nginx-uwsgi
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 4096 --timeout 4096 -t 4 http://127.0.0.1:8080/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/plaintext
+  4 threads and 4096 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     3.85s   610.66ms   4.27s    84.28%
+    Req/Sec     5.04k   431.50     6.05k    71.15%
+  305468 requests in 15.00s, 46.61MB read
+Requests/sec:  20365.43
+Transfer/sec:      3.11MB
+
+---------------------------------------------------------
+ Concurrency: 16384 for bottle-nginx-uwsgi
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16384 --timeout 16384 -t 4 http://127.0.0.1:8080/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/plaintext
+  4 threads and 16384 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    14.06s     2.38s   14.81s    92.87%
+    Req/Sec     5.07k     1.55k    8.34k    78.38%
+  292766 requests in 15.00s, 44.67MB read
+Requests/sec:  19514.55
+Transfer/sec:      2.98MB

@@ -1,0 +1,122 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer pyramid-py2
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:6543/json
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:6543/json
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     2.00ms    2.43ms  20.24ms   90.90%
+    Req/Sec   631.39    229.99     1.44k    63.90%
+  23899 requests in 5.00s, 4.40MB read
+Requests/sec:   4780.48
+Transfer/sec:      0.88MB
+
+---------------------------------------------------------
+ Running Warmup pyramid-py2
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:6543/json
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:6543/json
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    53.60ms    2.72ms 100.86ms   89.41%
+    Req/Sec     1.20k    27.22     1.29k    77.88%
+  71523 requests in 15.01s, 13.16MB read
+Requests/sec:   4766.15
+Transfer/sec:      0.88MB
+
+---------------------------------------------------------
+ Concurrency: 8 for pyramid-py2
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:6543/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:6543/json
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.94ms    2.58ms  35.76ms   90.27%
+    Req/Sec     1.21k   433.96     3.11k    67.32%
+  68876 requests in 15.01s, 12.68MB read
+Requests/sec:   4589.99
+Transfer/sec:    865.12KB
+
+---------------------------------------------------------
+ Concurrency: 16 for pyramid-py2
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:6543/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:6543/json
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     3.46ms    3.11ms  41.42ms   93.54%
+    Req/Sec     1.25k   253.48     2.33k    75.16%
+  71432 requests in 15.00s, 13.15MB read
+Requests/sec:   4762.04
+Transfer/sec:      0.88MB
+
+---------------------------------------------------------
+ Concurrency: 32 for pyramid-py2
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:6543/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:6543/json
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     6.66ms    3.03ms  37.51ms   92.67%
+    Req/Sec     1.23k   124.90     1.56k    70.30%
+  71567 requests in 15.00s, 13.17MB read
+Requests/sec:   4772.32
+Transfer/sec:      0.88MB
+
+---------------------------------------------------------
+ Concurrency: 64 for pyramid-py2
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:6543/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:6543/json
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    13.36ms    2.95ms  47.57ms   91.14%
+    Req/Sec     1.21k    75.13     1.45k    68.30%
+  71585 requests in 15.00s, 13.18MB read
+Requests/sec:   4772.08
+Transfer/sec:      0.88MB
+
+---------------------------------------------------------
+ Concurrency: 128 for pyramid-py2
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:6543/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:6543/json
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    26.82ms    2.94ms  57.69ms   90.79%
+    Req/Sec     1.20k    48.84     1.34k    77.82%
+  71509 requests in 15.00s, 13.16MB read
+Requests/sec:   4767.42
+Transfer/sec:      0.88MB
+
+---------------------------------------------------------
+ Concurrency: 256 for pyramid-py2
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:6543/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:6543/json
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    53.75ms    2.71ms  85.20ms   88.92%
+    Req/Sec     1.19k    28.21     1.29k    79.42%
+  71355 requests in 15.00s, 13.13MB read
+Requests/sec:   4756.42
+Transfer/sec:      0.88MB

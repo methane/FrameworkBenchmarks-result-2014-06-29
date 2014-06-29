@@ -1,0 +1,3 @@
+2014-06-28 23:05:17.739:INFO:oejs.Server:main: jetty-9.1.z-SNAPSHOT
+2014-06-28 23:05:17.764:INFO:oejsh.ContextHandler:main: Started o.e.j.s.ServletContextHandler@3a79a40e{/,null,AVAILABLE}
+2014-06-28 23:05:17.781:INFO:oejs.ServerConnector:main: Started ServerConnector@27d16a7f{HTTP/1.1}{0.0.0.0:8080}

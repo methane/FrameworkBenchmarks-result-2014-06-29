@@ -1,0 +1,130 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Sun Jun 29 05:59:27 UTC 2014
+
+  System load:  3.6                Processes:           135
+  Usage of /:   69.2% of 19.55GB   Users logged in:     0
+  Memory usage: 25%                IP address for eth0: 10.227.136.45
+  Swap usage:   0%
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer undertow-edge-mysql
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/db/mysql
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/db/mysql
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.81ms    2.77ms  23.61ms   91.87%
+    Req/Sec     0.93k   514.48     3.56k    62.48%
+  32970 requests in 5.00s, 5.31MB read
+Requests/sec:   6595.49
+Transfer/sec:      1.06MB
+
+---------------------------------------------------------
+ Running Warmup undertow-edge-mysql
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/db/mysql
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db/mysql
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    19.53ms   28.64ms 998.10ms   91.21%
+    Req/Sec     3.32k   530.42     4.16k    80.00%
+  194836 requests in 15.00s, 31.36MB read
+Requests/sec:  12989.22
+Transfer/sec:      2.09MB
+
+---------------------------------------------------------
+ Concurrency: 8 for undertow-edge-mysql
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:8080/db/mysql -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db/mysql
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   807.65us    1.50ms  27.55ms   98.01%
+    Req/Sec     2.92k   556.56     4.89k    80.98%
+  165566 requests in 15.00s, 26.65MB read
+Requests/sec:  11038.02
+Transfer/sec:      1.78MB
+
+---------------------------------------------------------
+ Concurrency: 16 for undertow-edge-mysql
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:8080/db/mysql -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db/mysql
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.36ms    1.87ms  33.37ms   94.72%
+    Req/Sec     3.37k   686.70     6.67k    73.52%
+  191520 requests in 15.00s, 30.83MB read
+Requests/sec:  12769.61
+Transfer/sec:      2.06MB
+
+---------------------------------------------------------
+ Concurrency: 32 for undertow-edge-mysql
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:8080/db/mysql -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db/mysql
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     2.34ms    2.24ms  46.90ms   89.64%
+    Req/Sec     3.63k   545.88     5.80k    76.24%
+  206207 requests in 15.00s, 33.19MB read
+Requests/sec:  13747.62
+Transfer/sec:      2.21MB
+
+---------------------------------------------------------
+ Concurrency: 64 for undertow-edge-mysql
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:8080/db/mysql -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db/mysql
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     4.41ms    3.86ms  55.35ms   86.98%
+    Req/Sec     3.70k   472.23     5.88k    73.82%
+  214937 requests in 15.00s, 34.60MB read
+Requests/sec:  14329.47
+Transfer/sec:      2.31MB
+
+---------------------------------------------------------
+ Concurrency: 128 for undertow-edge-mysql
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:8080/db/mysql -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db/mysql
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     9.03ms    8.61ms  78.24ms   88.94%
+    Req/Sec     3.64k   359.47     5.70k    74.99%
+  215192 requests in 15.00s, 34.64MB read
+Requests/sec:  14348.33
+Transfer/sec:      2.31MB
+
+---------------------------------------------------------
+ Concurrency: 256 for undertow-edge-mysql
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/db/mysql -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db/mysql
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    17.76ms   17.86ms 235.26ms   87.78%
+    Req/Sec     3.64k   436.27     5.45k    80.56%
+  215418 requests in 15.00s, 34.67MB read
+Requests/sec:  14361.05
+Transfer/sec:      2.31MB

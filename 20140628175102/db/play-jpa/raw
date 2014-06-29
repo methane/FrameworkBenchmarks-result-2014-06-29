@@ -1,0 +1,123 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer play-jpa
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:9000/db
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:9000/db
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     5.24ms    2.28ms  21.21ms   76.43%
+    Req/Sec   198.76     48.06   352.00     66.63%
+  7439 requests in 5.01s, 862.96KB read
+Requests/sec:   1486.21
+Transfer/sec:    172.41KB
+
+---------------------------------------------------------
+ Running Warmup play-jpa
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:9000/db
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:9000/db
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    75.12ms   53.29ms 572.01ms   80.24%
+    Req/Sec     0.88k   224.25     2.16k    82.75%
+  51246 requests in 15.00s, 5.81MB read
+  Socket errors: connect 0, read 0, write 0, timeout 8
+Requests/sec:   3416.50
+Transfer/sec:    396.31KB
+
+---------------------------------------------------------
+ Concurrency: 8 for play-jpa
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:9000/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:9000/db
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.30ms    0.90ms  17.17ms   95.53%
+    Req/Sec     1.67k   242.58     2.44k    82.46%
+  94267 requests in 15.00s, 10.68MB read
+Requests/sec:   6284.81
+Transfer/sec:    729.01KB
+
+---------------------------------------------------------
+ Concurrency: 16 for play-jpa
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:9000/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:9000/db
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     2.26ms    1.28ms  17.81ms   86.64%
+    Req/Sec     1.89k   289.98     2.78k    71.92%
+  107477 requests in 15.00s, 12.18MB read
+Requests/sec:   7165.53
+Transfer/sec:    831.20KB
+
+---------------------------------------------------------
+ Concurrency: 32 for play-jpa
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:9000/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:9000/db
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     4.11ms    2.28ms  23.21ms   77.60%
+    Req/Sec     2.06k   274.36     2.75k    76.72%
+  118354 requests in 15.00s, 13.41MB read
+Requests/sec:   7890.49
+Transfer/sec:      0.89MB
+
+---------------------------------------------------------
+ Concurrency: 64 for play-jpa
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:9000/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:9000/db
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     7.44ms    4.08ms  38.33ms   72.66%
+    Req/Sec     2.19k   211.68     2.73k    73.19%
+  128587 requests in 15.00s, 14.57MB read
+Requests/sec:   8573.11
+Transfer/sec:      0.97MB
+
+---------------------------------------------------------
+ Concurrency: 128 for play-jpa
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:9000/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:9000/db
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    13.98ms    7.61ms  69.14ms   71.45%
+    Req/Sec     2.31k   183.69     2.92k    71.15%
+  136617 requests in 15.00s, 15.48MB read
+Requests/sec:   9107.89
+Transfer/sec:      1.03MB
+
+---------------------------------------------------------
+ Concurrency: 256 for play-jpa
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:9000/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:9000/db
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    27.19ms   16.39ms 461.85ms   77.47%
+    Req/Sec     2.34k   337.74     3.56k    72.05%
+  138281 requests in 15.00s, 15.66MB read
+Requests/sec:   9218.52
+Transfer/sec:      1.04MB

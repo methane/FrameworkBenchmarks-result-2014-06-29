@@ -1,0 +1,122 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer grizzly-jersey
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/fortunes
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/fortunes
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     3.56ms    3.23ms  31.19ms   91.11%
+    Req/Sec   345.50    125.49     0.91k    67.35%
+  12794 requests in 5.00s, 17.61MB read
+Requests/sec:   2558.90
+Transfer/sec:      3.52MB
+
+---------------------------------------------------------
+ Running Warmup grizzly-jersey
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/fortunes
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortunes
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    56.63ms    2.95ms  78.10ms   86.69%
+    Req/Sec     1.14k    44.35     1.25k    68.43%
+  67720 requests in 15.00s, 93.20MB read
+Requests/sec:   4514.91
+Transfer/sec:      6.21MB
+
+---------------------------------------------------------
+ Concurrency: 8 for grizzly-jersey
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:8080/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortunes
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.83ms  767.21us  17.01ms   82.93%
+    Req/Sec     1.16k   162.66     1.78k    61.63%
+  66117 requests in 15.00s, 90.99MB read
+Requests/sec:   4407.92
+Transfer/sec:      6.07MB
+
+---------------------------------------------------------
+ Concurrency: 16 for grizzly-jersey
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:8080/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortunes
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     3.76ms    3.38ms  61.16ms   98.72%
+    Req/Sec     1.19k   159.67     1.55k    82.78%
+  67408 requests in 15.00s, 92.77MB read
+Requests/sec:   4493.88
+Transfer/sec:      6.18MB
+
+---------------------------------------------------------
+ Concurrency: 32 for grizzly-jersey
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:8080/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortunes
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     7.09ms    1.02ms  16.50ms   86.45%
+    Req/Sec     1.16k   110.98     1.47k    83.40%
+  67653 requests in 15.00s, 93.11MB read
+Requests/sec:   4510.28
+Transfer/sec:      6.21MB
+
+---------------------------------------------------------
+ Concurrency: 64 for grizzly-jersey
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:8080/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortunes
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    14.42ms    3.39ms  67.21ms   97.03%
+    Req/Sec     1.14k    99.28     1.33k    83.03%
+  67290 requests in 15.00s, 92.61MB read
+Requests/sec:   4485.92
+Transfer/sec:      6.17MB
+
+---------------------------------------------------------
+ Concurrency: 128 for grizzly-jersey
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:8080/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortunes
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    28.58ms    4.27ms  82.96ms   95.52%
+    Req/Sec     1.14k    86.89     1.32k    85.68%
+  67532 requests in 14.99s, 92.94MB read
+Requests/sec:   4503.92
+Transfer/sec:      6.20MB
+
+---------------------------------------------------------
+ Concurrency: 256 for grizzly-jersey
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortunes
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    56.81ms    4.48ms 116.33ms   90.73%
+    Req/Sec     1.13k    83.91     1.36k    79.09%
+  67519 requests in 15.00s, 92.92MB read
+Requests/sec:   4501.44
+Transfer/sec:      6.19MB

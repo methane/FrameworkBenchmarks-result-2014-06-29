@@ -1,0 +1,122 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer treefrog-thread
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/json/json
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/json/json
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   354.59us  506.74us  11.21ms   98.36%
+    Req/Sec     3.26k     1.45k    7.00k    84.13%
+  123711 requests in 5.00s, 23.48MB read
+Requests/sec:  24750.99
+Transfer/sec:      4.70MB
+
+---------------------------------------------------------
+ Running Warmup treefrog-thread
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/json/json
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json/json
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    11.83ms   11.00ms 338.33ms   84.31%
+    Req/Sec     5.45k   752.87    11.81k    86.00%
+  321070 requests in 15.00s, 60.93MB read
+Requests/sec:  21407.22
+Transfer/sec:      4.06MB
+
+---------------------------------------------------------
+ Concurrency: 8 for treefrog-thread
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:8080/json/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json/json
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   307.07us   40.85us   2.97ms   97.84%
+    Req/Sec     6.52k   334.39     7.00k    62.32%
+  371167 requests in 15.00s, 70.44MB read
+Requests/sec:  24745.93
+Transfer/sec:      4.70MB
+
+---------------------------------------------------------
+ Concurrency: 16 for treefrog-thread
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:8080/json/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json/json
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   724.49us    1.01ms  20.05ms   92.07%
+    Req/Sec     5.78k     2.42k   14.00k    75.33%
+  328606 requests in 15.00s, 62.36MB read
+Requests/sec:  21908.94
+Transfer/sec:      4.16MB
+
+---------------------------------------------------------
+ Concurrency: 32 for treefrog-thread
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:8080/json/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json/json
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.56ms    2.04ms  56.06ms   92.26%
+    Req/Sec     5.58k     1.56k   13.89k    72.36%
+  316257 requests in 15.00s, 60.02MB read
+Requests/sec:  21086.04
+Transfer/sec:      4.00MB
+
+---------------------------------------------------------
+ Concurrency: 64 for treefrog-thread
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:8080/json/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json/json
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     2.88ms    2.88ms  73.19ms   92.48%
+    Req/Sec     5.85k     0.91k   11.44k    71.26%
+  333624 requests in 15.00s, 63.32MB read
+Requests/sec:  22243.01
+Transfer/sec:      4.22MB
+
+---------------------------------------------------------
+ Concurrency: 128 for treefrog-thread
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:8080/json/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json/json
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     5.93ms    5.90ms 155.91ms   92.53%
+    Req/Sec     5.55k   646.69     9.79k    76.87%
+  324263 requests in 15.00s, 61.54MB read
+Requests/sec:  21619.00
+Transfer/sec:      4.10MB
+
+---------------------------------------------------------
+ Concurrency: 256 for treefrog-thread
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/json/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json/json
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    12.44ms   15.91ms 540.27ms   91.04%
+    Req/Sec     5.21k     1.00k   11.95k    82.65%
+  304665 requests in 15.00s, 57.82MB read
+Requests/sec:  20314.23
+Transfer/sec:      3.86MB

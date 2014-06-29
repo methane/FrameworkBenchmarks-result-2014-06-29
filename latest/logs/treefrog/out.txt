@@ -1,0 +1,403 @@
+test.os.lower() = linux  test.database_os.lower() = linux
+self.results['frameworks'] != None: True
+test.name: treefrog
+self.results['completed']: {}
+
+=====================================================
+  Beginning treefrog
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Starting treefrog
+-----------------------------------------------------
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+mysql start/running, process 14214
+ * Restarting PostgreSQL 9.3 database server
+   ...done.
+Reading /home/ubuntu/FrameworkBenchmarks/treefrog/helpers/helpers.pro
+Reading /home/ubuntu/FrameworkBenchmarks/treefrog/models/models.pro
+Reading /home/ubuntu/FrameworkBenchmarks/treefrog/views/views.pro
+ Reading /home/ubuntu/FrameworkBenchmarks/treefrog/views/_src/_src.pro
+Reading /home/ubuntu/FrameworkBenchmarks/treefrog/controllers/controllers.pro
+cd helpers/ && make -f Makefile clean
+make[1]: Entering directory `/home/ubuntu/FrameworkBenchmarks/treefrog/helpers'
+rm -f applicationhelper.o
+rm -f *~ core *.core
+make[1]: Leaving directory `/home/ubuntu/FrameworkBenchmarks/treefrog/helpers'
+cd models/ && make -f Makefile clean
+make[1]: Entering directory `/home/ubuntu/FrameworkBenchmarks/treefrog/models'
+rm -f moc_fortuneobject.cpp moc_worldobject.cpp
+rm -f fortune.o world.o moc_fortuneobject.o moc_worldobject.o
+rm -f *~ core *.core
+make[1]: Leaving directory `/home/ubuntu/FrameworkBenchmarks/treefrog/models'
+cd views/ && make -f Makefile clean
+make[1]: Entering directory `/home/ubuntu/FrameworkBenchmarks/treefrog/views'
+cd _src/ && make -f Makefile clean
+make[2]: Entering directory `/home/ubuntu/FrameworkBenchmarks/treefrog/views/_src'
+tmake -f ../../config/application.ini -v .. -d . -P
+Erb.DefaultTrimMode: 1
+  removed  ./fortune_editView.cpp
+  created  ./fortune_editView.cpp
+  removed  ./fortune_entryView.cpp
+  created  ./fortune_entryView.cpp
+  removed  ./fortune_indexView.cpp
+  created  ./fortune_indexView.cpp
+  removed  ./fortune_showView.cpp
+  created  ./fortune_showView.cpp
+  removed  ./world_editView.cpp
+  created  ./world_editView.cpp
+  removed  ./world_entryView.cpp
+  created  ./world_entryView.cpp
+  removed  ./world_indexView.cpp
+  created  ./world_indexView.cpp
+  removed  ./world_showView.cpp
+  created  ./world_showView.cpp
+rm -f fortune_editView.moc fortune_entryView.moc fortune_indexView.moc fortune_showView.moc world_editView.moc world_entryView.moc world_indexView.moc world_showView.moc
+rm -f fortune_editView.o fortune_entryView.o fortune_indexView.o fortune_showView.o world_editView.o world_entryView.o world_indexView.o world_showView.o
+rm -f *.cpp source.list
+rm -f *~ core *.core
+make[2]: Leaving directory `/home/ubuntu/FrameworkBenchmarks/treefrog/views/_src'
+make[1]: Leaving directory `/home/ubuntu/FrameworkBenchmarks/treefrog/views'
+cd controllers/ && make -f Makefile clean
+make[1]: Entering directory `/home/ubuntu/FrameworkBenchmarks/treefrog/controllers'
+rm -f moc_applicationcontroller.cpp moc_fortunecontroller.cpp moc_worldcontroller.cpp moc_jsoncontroller.cpp
+rm -f applicationcontroller.o fortunecontroller.o worldcontroller.o jsoncontroller.o moc_applicationcontroller.o moc_fortunecontroller.o moc_worldcontroller.o moc_jsoncontroller.o
+rm -f *~ core *.core
+make[1]: Leaving directory `/home/ubuntu/FrameworkBenchmarks/treefrog/controllers'
+cd helpers/ && make -f Makefile 
+cd models/ && make -f Makefile 
+cd views/ && make -f Makefile 
+cd controllers/ && make -f Makefile 
+make[1]: Entering directory `/home/ubuntu/FrameworkBenchmarks/treefrog/helpers'
+g++ -c -m64 -pipe -O2 -Wall -W -D_REENTRANT -fPIC -DTF_DLL -DQT_NO_DEBUG -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++-64 -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4 -I/usr/include/treefrog -I. -o applicationhelper.o applicationhelper.cpp
+make[1]: Entering directory `/home/ubuntu/FrameworkBenchmarks/treefrog/views'
+cd _src/ && make -f Makefile 
+make[1]: Entering directory `/home/ubuntu/FrameworkBenchmarks/treefrog/models'
+g++ -c -m64 -pipe -O2 -Wall -W -D_REENTRANT -fPIC -DTF_DLL -DQT_NO_DEBUG -DQT_SQL_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++-64 -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtSql -I/usr/include/qt4 -I../helpers -Isqlobjects -I/usr/include/treefrog -I. -o fortune.o fortune.cpp
+make[1]: Entering directory `/home/ubuntu/FrameworkBenchmarks/treefrog/controllers'
+g++ -c -m64 -pipe -O2 -Wall -W -D_REENTRANT -fPIC -DTF_DLL -DQT_NO_DEBUG -DQT_SQL_LIB -DQT_XML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++-64 -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtNetwork -I/usr/include/qt4/QtXml -I/usr/include/qt4/QtSql -I/usr/include/qt4 -I../helpers -I../models -I/usr/include/treefrog -I. -o applicationcontroller.o applicationcontroller.cpp
+g++ -c -m64 -pipe -O2 -Wall -W -D_REENTRANT -fPIC -DTF_DLL -DQT_NO_DEBUG -DQT_SQL_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++-64 -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtSql -I/usr/include/qt4 -I../helpers -Isqlobjects -I/usr/include/treefrog -I. -o world.o world.cpp
+g++ -c -m64 -pipe -O2 -Wall -W -D_REENTRANT -fPIC -DTF_DLL -DQT_NO_DEBUG -DQT_SQL_LIB -DQT_XML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++-64 -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtNetwork -I/usr/include/qt4/QtXml -I/usr/include/qt4/QtSql -I/usr/include/qt4 -I../helpers -I../models -I/usr/include/treefrog -I. -o fortunecontroller.o fortunecontroller.cpp
+make[2]: Entering directory `/home/ubuntu/FrameworkBenchmarks/treefrog/views/_src'
+/usr/lib/x86_64-linux-gnu/qt4/bin/moc -DTF_DLL -DQT_NO_DEBUG -DQT_SQL_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++-64 -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtSql -I/usr/include/qt4 -I../helpers -Isqlobjects -I/usr/include/treefrog -I. sqlobjects/fortuneobject.h -o moc_fortuneobject.cpp
+Erb.DefaultTrimMode: 1
+  created  ./fortune_editView.cpp
+  created  ./fortune_entryView.cpp
+  created  ./fortune_indexView.cpp
+  created  ./fortune_showView.cpp
+  created  ./world_editView.cpp
+  created  ./world_entryView.cpp
+  created  ./world_indexView.cpp
+  created  ./world_showView.cpp
+  created  ./source.list
+tmake -f ../../config/application.ini -v .. -d . -P
+Erb.DefaultTrimMode: 1
+/usr/lib/x86_64-linux-gnu/qt4/bin/qmake CONFIG+=release -o Makefile _src.pro
+make[2]: Leaving directory `/home/ubuntu/FrameworkBenchmarks/treefrog/views/_src'
+make[2]: Entering directory `/home/ubuntu/FrameworkBenchmarks/treefrog/views/_src'
+tmake -f ../../config/application.ini -v .. -d . -P
+Erb.DefaultTrimMode: 1
+/usr/lib/x86_64-linux-gnu/qt4/bin/moc -DTF_DLL -DQT_NO_DEBUG -DQT_XML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++-64 -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtNetwork -I/usr/include/qt4/QtXml -I/usr/include/qt4 -I../../helpers -I../../models -I/usr/include/treefrog -I. fortune_editView.cpp -o fortune_editView.moc
+/usr/lib/x86_64-linux-gnu/qt4/bin/moc -DTF_DLL -DQT_NO_DEBUG -DQT_XML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++-64 -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtNetwork -I/usr/include/qt4/QtXml -I/usr/include/qt4 -I../../helpers -I../../models -I/usr/include/treefrog -I. fortune_entryView.cpp -o fortune_entryView.moc
+g++ -c -m64 -pipe -O2 -Wall -W -D_REENTRANT -fPIC -DTF_DLL -DQT_NO_DEBUG -DQT_SQL_LIB -DQT_XML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++-64 -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtNetwork -I/usr/include/qt4/QtXml -I/usr/include/qt4/QtSql -I/usr/include/qt4 -I../helpers -I../models -I/usr/include/treefrog -I. -o jsoncontroller.o jsoncontroller.cpp
+/usr/lib/x86_64-linux-gnu/qt4/bin/moc -DTF_DLL -DQT_NO_DEBUG -DQT_XML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++-64 -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtNetwork -I/usr/include/qt4/QtXml -I/usr/include/qt4 -I../../helpers -I../../models -I/usr/include/treefrog -I. fortune_showView.cpp -o fortune_showView.moc
+/usr/lib/x86_64-linux-gnu/qt4/bin/moc -DTF_DLL -DQT_NO_DEBUG -DQT_XML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++-64 -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtNetwork -I/usr/include/qt4/QtXml -I/usr/include/qt4 -I../../helpers -I../../models -I/usr/include/treefrog -I. world_editView.cpp -o world_editView.moc
+/usr/lib/x86_64-linux-gnu/qt4/bin/moc -DTF_DLL -DQT_NO_DEBUG -DQT_XML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++-64 -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtNetwork -I/usr/include/qt4/QtXml -I/usr/include/qt4 -I../../helpers -I../../models -I/usr/include/treefrog -I. world_entryView.cpp -o world_entryView.moc
+/usr/lib/x86_64-linux-gnu/qt4/bin/moc -DTF_DLL -DQT_NO_DEBUG -DQT_XML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++-64 -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtNetwork -I/usr/include/qt4/QtXml -I/usr/include/qt4 -I../../helpers -I../../models -I/usr/include/treefrog -I. world_indexView.cpp -o world_indexView.moc
+/usr/lib/x86_64-linux-gnu/qt4/bin/moc -DTF_DLL -DQT_NO_DEBUG -DQT_XML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++-64 -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtNetwork -I/usr/include/qt4/QtXml -I/usr/include/qt4 -I../../helpers -I../../models -I/usr/include/treefrog -I. world_showView.cpp -o world_showView.moc
+g++ -c -m64 -pipe -O2 -Wall -W -D_REENTRANT -fPIC -DTF_DLL -DQT_NO_DEBUG -DQT_XML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++-64 -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtNetwork -I/usr/include/qt4/QtXml -I/usr/include/qt4 -I../../helpers -I../../models -I/usr/include/treefrog -I. -o fortune_editView.o fortune_editView.cpp
+rm -f libhelper.so.1.0.0 libhelper.so libhelper.so.1 libhelper.so.1.0
+g++ -m64 -Wl,-O1 -shared -Wl,-soname,libhelper.so.1 -o libhelper.so.1.0.0 applicationhelper.o   -L/usr/lib/x86_64-linux-gnu -ltreefrog -lQtCore -lpthread  
+ln -s libhelper.so.1.0.0 libhelper.so
+ln -s libhelper.so.1.0.0 libhelper.so.1
+ln -s libhelper.so.1.0.0 libhelper.so.1.0
+rm -f ../lib/libhelper.so.1.0.0
+rm -f ../lib/libhelper.so
+rm -f ../lib/libhelper.so.1
+rm -f ../lib/libhelper.so.1.0
+mv -f libhelper.so.1.0.0 libhelper.so libhelper.so.1 libhelper.so.1.0 ../lib/
+make[1]: Leaving directory `/home/ubuntu/FrameworkBenchmarks/treefrog/helpers'
+/usr/lib/x86_64-linux-gnu/qt4/bin/moc -DTF_DLL -DQT_NO_DEBUG -DQT_SQL_LIB -DQT_XML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++-64 -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtNetwork -I/usr/include/qt4/QtXml -I/usr/include/qt4/QtSql -I/usr/include/qt4 -I../helpers -I../models -I/usr/include/treefrog -I. applicationcontroller.h -o moc_applicationcontroller.cpp
+/usr/lib/x86_64-linux-gnu/qt4/bin/moc -DTF_DLL -DQT_NO_DEBUG -DQT_SQL_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++-64 -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtSql -I/usr/include/qt4 -I../helpers -Isqlobjects -I/usr/include/treefrog -I. sqlobjects/worldobject.h -o moc_worldobject.cpp
+g++ -c -m64 -pipe -O2 -Wall -W -D_REENTRANT -fPIC -DTF_DLL -DQT_NO_DEBUG -DQT_SQL_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++-64 -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtSql -I/usr/include/qt4 -I../helpers -Isqlobjects -I/usr/include/treefrog -I. -o moc_fortuneobject.o moc_fortuneobject.cpp
+/usr/lib/x86_64-linux-gnu/qt4/bin/moc -DTF_DLL -DQT_NO_DEBUG -DQT_SQL_LIB -DQT_XML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++-64 -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtNetwork -I/usr/include/qt4/QtXml -I/usr/include/qt4/QtSql -I/usr/include/qt4 -I../helpers -I../models -I/usr/include/treefrog -I. fortunecontroller.h -o moc_fortunecontroller.cpp
+/usr/lib/x86_64-linux-gnu/qt4/bin/moc -DTF_DLL -DQT_NO_DEBUG -DQT_SQL_LIB -DQT_XML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++-64 -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtNetwork -I/usr/include/qt4/QtXml -I/usr/include/qt4/QtSql -I/usr/include/qt4 -I../helpers -I../models -I/usr/include/treefrog -I. worldcontroller.h -o moc_worldcontroller.cpp
+/usr/lib/x86_64-linux-gnu/qt4/bin/moc -DTF_DLL -DQT_NO_DEBUG -DQT_SQL_LIB -DQT_XML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++-64 -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtNetwork -I/usr/include/qt4/QtXml -I/usr/include/qt4/QtSql -I/usr/include/qt4 -I../helpers -I../models -I/usr/include/treefrog -I. jsoncontroller.h -o moc_jsoncontroller.cpp
+g++ -c -m64 -pipe -O2 -Wall -W -D_REENTRANT -fPIC -DTF_DLL -DQT_NO_DEBUG -DQT_SQL_LIB -DQT_XML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++-64 -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtNetwork -I/usr/include/qt4/QtXml -I/usr/include/qt4/QtSql -I/usr/include/qt4 -I../helpers -I../models -I/usr/include/treefrog -I. -o moc_applicationcontroller.o moc_applicationcontroller.cpp
+g++ -c -m64 -pipe -O2 -Wall -W -D_REENTRANT -fPIC -DTF_DLL -DQT_NO_DEBUG -DQT_SQL_LIB -DQT_XML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++-64 -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtNetwork -I/usr/include/qt4/QtXml -I/usr/include/qt4/QtSql -I/usr/include/qt4 -I../helpers -I../models -I/usr/include/treefrog -I. -o moc_fortunecontroller.o moc_fortunecontroller.cpp
+g++ -c -m64 -pipe -O2 -Wall -W -D_REENTRANT -fPIC -DTF_DLL -DQT_NO_DEBUG -DQT_SQL_LIB -DQT_XML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++-64 -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtNetwork -I/usr/include/qt4/QtXml -I/usr/include/qt4/QtSql -I/usr/include/qt4 -I../helpers -I../models -I/usr/include/treefrog -I. -o moc_worldcontroller.o moc_worldcontroller.cpp
+g++ -c -m64 -pipe -O2 -Wall -W -D_REENTRANT -fPIC -DTF_DLL -DQT_NO_DEBUG -DQT_SQL_LIB -DQT_XML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++-64 -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtNetwork -I/usr/include/qt4/QtXml -I/usr/include/qt4/QtSql -I/usr/include/qt4 -I../helpers -I../models -I/usr/include/treefrog -I. -o moc_jsoncontroller.o moc_jsoncontroller.cpp
+g++ -c -m64 -pipe -O2 -Wall -W -D_REENTRANT -fPIC -DTF_DLL -DQT_NO_DEBUG -DQT_SQL_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++-64 -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtSql -I/usr/include/qt4 -I../helpers -Isqlobjects -I/usr/include/treefrog -I. -o moc_worldobject.o moc_worldobject.cpp
+g++ -c -m64 -pipe -O2 -Wall -W -D_REENTRANT -fPIC -DTF_DLL -DQT_NO_DEBUG -DQT_XML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++-64 -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtNetwork -I/usr/include/qt4/QtXml -I/usr/include/qt4 -I../../helpers -I../../models -I/usr/include/treefrog -I. -o fortune_entryView.o fortune_entryView.cpp
+g++ -c -m64 -pipe -O2 -Wall -W -D_REENTRANT -fPIC -DTF_DLL -DQT_NO_DEBUG -DQT_XML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++-64 -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtNetwork -I/usr/include/qt4/QtXml -I/usr/include/qt4 -I../../helpers -I../../models -I/usr/include/treefrog -I. -o fortune_indexView.o fortune_indexView.cpp
+g++ -c -m64 -pipe -O2 -Wall -W -D_REENTRANT -fPIC -DTF_DLL -DQT_NO_DEBUG -DQT_XML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++-64 -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtNetwork -I/usr/include/qt4/QtXml -I/usr/include/qt4 -I../../helpers -I../../models -I/usr/include/treefrog -I. -o fortune_showView.o fortune_showView.cpp
+g++ -c -m64 -pipe -O2 -Wall -W -D_REENTRANT -fPIC -DTF_DLL -DQT_NO_DEBUG -DQT_XML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++-64 -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtNetwork -I/usr/include/qt4/QtXml -I/usr/include/qt4 -I../../helpers -I../../models -I/usr/include/treefrog -I. -o world_editView.o world_editView.cpp
+g++ -c -m64 -pipe -O2 -Wall -W -D_REENTRANT -fPIC -DTF_DLL -DQT_NO_DEBUG -DQT_XML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++-64 -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtNetwork -I/usr/include/qt4/QtXml -I/usr/include/qt4 -I../../helpers -I../../models -I/usr/include/treefrog -I. -o world_entryView.o world_entryView.cpp
+g++ -c -m64 -pipe -O2 -Wall -W -D_REENTRANT -fPIC -DTF_DLL -DQT_NO_DEBUG -DQT_XML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++-64 -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtNetwork -I/usr/include/qt4/QtXml -I/usr/include/qt4 -I../../helpers -I../../models -I/usr/include/treefrog -I. -o world_indexView.o world_indexView.cpp
+rm -f libmodel.so.1.0.0 libmodel.so libmodel.so.1 libmodel.so.1.0
+g++ -m64 -Wl,-O1 -shared -Wl,-soname,libmodel.so.1 -o libmodel.so.1.0.0 fortune.o world.o moc_fortuneobject.o moc_worldobject.o   -L/usr/lib/x86_64-linux-gnu -L../lib -lhelper -ltreefrog -lQtSql -lQtCore -lpthread  
+rm -f libcontroller.so.1.0.0 libcontroller.so libcontroller.so.1 libcontroller.so.1.0
+g++ -m64 -Wl,-O1 -shared -Wl,-soname,libcontroller.so.1 -o libcontroller.so.1.0.0 applicationcontroller.o fortunecontroller.o worldcontroller.o jsoncontroller.o moc_applicationcontroller.o moc_fortunecontroller.o moc_worldcontroller.o moc_jsoncontroller.o   -L/usr/lib/x86_64-linux-gnu -L../lib -lhelper -lmodel -ltreefrog -lQtSql -lQtXml -lQtNetwork -lQtCore -lpthread  
+ln -s libmodel.so.1.0.0 libmodel.so
+ln -s libmodel.so.1.0.0 libmodel.so.1
+ln -s libmodel.so.1.0.0 libmodel.so.1.0
+rm -f ../lib/libmodel.so.1.0.0
+rm -f ../lib/libmodel.so
+rm -f ../lib/libmodel.so.1
+rm -f ../lib/libmodel.so.1.0
+mv -f libmodel.so.1.0.0 libmodel.so libmodel.so.1 libmodel.so.1.0 ../lib/
+make[1]: Leaving directory `/home/ubuntu/FrameworkBenchmarks/treefrog/models'
+g++ -c -m64 -pipe -O2 -Wall -W -D_REENTRANT -fPIC -DTF_DLL -DQT_NO_DEBUG -DQT_XML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++-64 -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtNetwork -I/usr/include/qt4/QtXml -I/usr/include/qt4 -I../../helpers -I../../models -I/usr/include/treefrog -I. -o world_showView.o world_showView.cpp
+ln -s libcontroller.so.1.0.0 libcontroller.so
+ln -s libcontroller.so.1.0.0 libcontroller.so.1
+ln -s libcontroller.so.1.0.0 libcontroller.so.1.0
+rm -f ../lib/libcontroller.so.1.0.0
+rm -f ../lib/libcontroller.so
+rm -f ../lib/libcontroller.so.1
+rm -f ../lib/libcontroller.so.1.0
+mv -f libcontroller.so.1.0.0 libcontroller.so libcontroller.so.1 libcontroller.so.1.0 ../lib/
+make[1]: Leaving directory `/home/ubuntu/FrameworkBenchmarks/treefrog/controllers'
+rm -f libview.so.1.0.0 libview.so libview.so.1 libview.so.1.0
+g++ -m64 -Wl,-O1 -shared -Wl,-soname,libview.so.1 -o libview.so.1.0.0 fortune_editView.o fortune_entryView.o fortune_indexView.o fortune_showView.o world_editView.o world_entryView.o world_indexView.o world_showView.o   -L/usr/lib/x86_64-linux-gnu -L../../lib -lhelper -lmodel -ltreefrog -lQtXml -lQtNetwork -lQtCore -lpthread  
+ln -s libview.so.1.0.0 libview.so
+ln -s libview.so.1.0.0 libview.so.1
+ln -s libview.so.1.0.0 libview.so.1.0
+rm -f ../../lib/libview.so.1.0.0
+rm -f ../../lib/libview.so
+rm -f ../../lib/libview.so.1
+rm -f ../../lib/libview.so.1.0
+mv -f libview.so.1.0.0 libview.so libview.so.1 libview.so.1.0 ../../lib/
+make[2]: Leaving directory `/home/ubuntu/FrameworkBenchmarks/treefrog/views/_src'
+make[1]: Leaving directory `/home/ubuntu/FrameworkBenchmarks/treefrog/views'
+
+-----------------------------------------------------
+  VERIFYING JSON (/json/json)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=UTF-8
+Content-Length: 27
+Server: TreeFrog server
+Date: Sun, 29 Jun 2014 05:24:51 GMT
+Connection: Keep-Alive
+
+{"message":"Hello, World!"}
+
+VALIDATING JSON ... PASS
+
+
+-----------------------------------------------------
+  VERIFYING DB (/world/random)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=UTF-8
+Content-Length: 32
+Server: TreeFrog server
+Date: Sun, 29 Jun 2014 05:24:51 GMT
+Connection: Keep-Alive
+
+{"id":9644, "randomNumber":3200}
+
+VALIDATING DB ... PASS
+
+
+-----------------------------------------------------
+  VERIFYING QUERY (/world/queries/2)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=UTF-8
+Content-Length: 68
+Server: TreeFrog server
+Date: Sun, 29 Jun 2014 05:24:51 GMT
+Connection: Keep-Alive
+
+[{"id":1921, "randomNumber":3118}, {"id":9644, "randomNumber":3200}]
+
+/world/queries/2 - PASS
+
+-----------------------------------------------------
+
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=UTF-8
+Content-Length: 34
+Server: TreeFrog server
+Date: Sun, 29 Jun 2014 05:24:51 GMT
+Connection: Keep-Alive
+
+[{"id":8129, "randomNumber":8830}]
+
+/world/queries/0 - PASS
+
+-----------------------------------------------------
+
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=UTF-8
+Content-Length: 34
+Server: TreeFrog server
+Date: Sun, 29 Jun 2014 05:24:51 GMT
+Connection: Keep-Alive
+
+[{"id":5604, "randomNumber":2467}]
+
+/world/queries/foo - PASS
+
+-----------------------------------------------------
+
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=UTF-8
+Content-Length: 16885
+Server: TreeFrog server
+Date: Sun, 29 Jun 2014 05:24:51 GMT
+Connection: Keep-Alive
+
+[{"id":7020, "randomNumber":7545}, {"id":6857, "randomNumber":1358}, {"id":2313, "randomNumber":1011}, {"id":8563, "randomNumber":6226}, {"id":7750, "randomNumber":2311}, {"id":3390, "randomNumber":2153}, {"id":9172, "randomNumber":8130}, {"id":6073, "randomNumber":197}, {"id":4583, "randomNumber":3512}, {"id":985, "randomNumber":9238}, {"id":7493, "randomNumber":8565}, {"id":6607, "randomNumber":9892}, {"id":6964, "randomNumber":5640}, {"id":1444, "randomNumber":5941}, {"id":9362, "randomNumber":9156}, {"id":2629, "randomNumber":2385}, {"id":7554, "randomNumber":4440}, {"id":4550, "randomNumber":3851}, {"id":7419, "randomNumber":2360}, {"id":6527, "randomNumber":4410}, {"id":7402, "randomNumber":7437}, {"id":178, "randomNumber":6339}, {"id":8200, "randomNumber":5972}, {"id":8181, "randomNumber":1055}, {"id":5480, "randomNumber":6942}, {"id":8209, "randomNumber":9418}, {"id":2044, "randomNumber":6746}, {"id":7047, "randomNumber":1413}, {"id":4602, "randomNumber":4101}, {"id":5130, "randomNumber":7799}, {"id":8694, "randomNumber":6435}, {"id":2619, "randomNumber":7579}, {"id":4375, "randomNumber":3613}, {"id":4655, "randomNumber":8528}, {"id":9537, "randomNumber":749}, {"id":9414, "randomNumber":7362}, {"id":4569, "randomNumber":8987}, {"id":3194, "randomNumber":9399}, {"id":3548, "randomNumber":5456}, {"id":3784, "randomNumber":4845}, {"id":6249, "randomNumber":4464}, {"id":8142, "randomNumber":8572}, {"id":603, "randomNumber":3337}, {"id":6636, "randomNumber":5124}, {"id":9981, "randomNumber":8437}, {"id":3594, "randomNumber":4022}, {"id":1602, "randomNumber":3214}, {"id":4008, "randomNumber":9166}, {"id":6079, "randomNumber":3268}, {"id":2137, "randomNumber":6589}, {"id":9266, "randomNumber":3797}, {"id":2527, "randomNumber":749}, {"id":1660, "randomNumber":5266}, {"id":4215, "randomNumber":8961}, {"id":359, "randomNumber":223}, {"id":918, "randomNumber":7521}, {"id":9937, "randomNumber":599}, {"id":5302, "randomNumber":7793}, {"id":8660, "randomNumber":9819}, {"id":2077, "randomNumber":9340}, {"id":7649, "randomNumber":122}, {"id":9169, "randomNumber":1341}, {"id":2723, "randomNumber":6430}, {"id":3588, "randomNumber":9326}, {"id":9066, "randomNumber":1981}, {"id":6550, "randomNumber":7538}, {"id":4168, "randomNumber":3474}, {"id":6240, "randomNumber":4390}, {"id":8736, "randomNumber":1688}, {"id":2094, "randomNumber":2738}, {"id":2221, "randomNumber":4581}, {"id":4387, "randomNumber":5689}, {"id":7415, "randomNumber":4355}, {"id":2634, "randomNumber":6155}, {"id":6783, "randomNumber":8755}, {"id":5672, "randomNumber":7059}, {"id":7485, "randomNumber":5160}, {"id":7099, "randomNumber":1880}, {"id":721, "randomNumber":5456}, {"id":9336, "randomNumber":2285}, {"id":6066, "randomNumber":6929}, {"id":9590, "randomNumber":9983}, {"id":4255, "randomNumber":8357}, {"id":3150, "randomNumber":1683}, {"id":9734, "randomNumber":1189}, {"id":8915, "randomNumber":8251}, {"id":7764, "randomNumber":5775}, {"id":6046, "randomNumber":4466}, {"id":8990, "randomNumber":4869}, {"id":6169, "randomNumber":9107}, {"id":7451, "randomNumber":5745}, {"id":681, "randomNumber":5094}, {"id":9257, "randomNumber":7247}, {"id":1471, "randomNumber":4954}, {"id":2581, "randomNumber":5670}, {"id":2018, "randomNumber":55}, {"id":4555, "randomNumber":3799}, {"id":4666, "randomNumber":4368}, {"id":3026, "randomNumber":2824}, {"id":2756, "randomNumber":532}, {"id":5188, "randomNumber":5011}, {"id":6231, "randomNumber":182}, {"id":3805, "randomNumber":1453}, {"id":2997, "randomNumber":4489}, {"id":5758, "randomNumber":845}, {"id":968, "randomNumber":824}, {"id":4190, "randomNumber":6114}, {"id":6193, "randomNumber":5139}, {"id":2208, "randomNumber":8947}, {"id":149, "randomNumber":7028}, {"id":5875, "randomNumber":3892}, {"id":2187, "randomNumber":4404}, {"id":339, "randomNumber":9957}, {"id":4439, "randomNumber":1547}, {"id":8330, "randomNumber":643}, {"id":1867, "randomNumber":9892}, {"id":4891, "randomNumber":5123}, {"id":9817, "randomNumber":7104}, {"id":8742, "randomNumber":750}, {"id":7734, "randomNumber":5365}, {"id":1654, "randomNumber":6597}, {"id":5445, "randomNumber":2345}, {"id":4999, "randomNumber":2929}, {"id":222, "randomNumber":5323}, {"id":5419, "randomNumber":7567}, {"id":968, "randomNumber":824}, {"id":7728, "randomNumber":7015}, {"id":6187, "randomNumber":7195}, {"id":8505, "randomNumber":6014}, {"id":9615, "randomNumber":1302}, {"id":5830, "randomNumber":4717}, {"id":9603, "randomNumber":9007}, {"id":8795, "randomNumber":1693}, {"id":1180, "randomNumber":9306}, {"id":3432, "randomNumber":4619}, {"id":1690, "randomNumber":1164}, {"id":7811, "randomNumber":2163}, {"id":2501, "randomNumber":4757}, {"id":8403, "randomNumber":621}, {"id":914, "randomNumber":1851}, {"id":3045, "randomNumber":9321}, {"id":1150, "randomNumber":5336}, {"id":658, "randomNumber":4522}, {"id":274, "randomNumber":9450}, {"id":7897, "randomNumber":9687}, {"id":6809, "randomNumber":4805}, {"id":1067, "randomNumber":2348}, {"id":968, "randomNumber":824}, {"id":8812, "randomNumber":1189}, {"id":284, "randomNumber":1703}, {"id":4503, "randomNumber":5758}, {"id":3341, "randomNumber":5473}, {"id":1248, "randomNumber":9780}, {"id":366, "randomNumber":2121}, {"id":4145, "randomNumber":2580}, {"id":708, "randomNumber":8420}, {"id":5207, "randomNumber":2059}, {"id":4111, "randomNumber":2801}, {"id":7505, "randomNumber":5397}, {"id":1636, "randomNumber":1048}, {"id":9025, "randomNumber":1079}, {"id":2096, "randomNumber":6895}, {"id":1806, "randomNumber":2064}, {"id":8709, "randomNumber":9462}, {"id":583, "randomNumber":8362}, {"id":419, "randomNumber":5356}, {"id":9936, "randomNumber":8890}, {"id":6291, "randomNumber":4530}, {"id":9494, "randomNumber":8227}, {"id":4007, "randomNumber":8557}, {"id":3207, "randomNumber":12}, {"id":8008, "randomNumber":5445}, {"id":296, "randomNumber":1313}, {"id":619, "randomNumber":1257}, {"id":9174, "randomNumber":9131}, {"id":9940, "randomNumber":4994}, {"id":5382, "randomNumber":8712}, {"id":1162, "randomNumber":4543}, {"id":3163, "randomNumber":7314}, {"id":2, "randomNumber":4928}, {"id":6201, "randomNumber":1713}, {"id":4178, "randomNumber":7883}, {"id":6059, "randomNumber":5818}, {"id":8382, "randomNumber":421}, {"id":6198, "randomNumber":1451}, {"id":3372, "randomNumber":5683}, {"id":733, "randomNumber":5032}, {"id":3914, "randomNumber":7384}, {"id":7405, "randomNumber":7070}, {"id":4786, "randomNumber":1436}, {"id":6044, "randomNumber":7537}, {"id":5507, "randomNumber":2568}, {"id":7198, "randomNumber":3685}, {"id":9118, "randomNumber":81}, {"id":7422, "randomNumber":7774}, {"id":5836, "randomNumber":4270}, {"id":8507, "randomNumber":9667}, {"id":1195, "randomNumber":5846}, {"id":2596, "randomNumber":6904}, {"id":7993, "randomNumber":5814}, {"id":1289, "randomNumber":1122}, {"id":5415, "randomNumber":4096}, {"id":3076, "randomNumber":3012}, {"id":3293, "randomNumber":9601}, {"id":5687, "randomNumber":4473}, {"id":7848, "randomNumber":3810}, {"id":3547, "randomNumber":5177}, {"id":2908, "randomNumber":9306}, {"id":4572, "randomNumber":7452}, {"id":9909, "randomNumber":9376}, {"id":8758, "randomNumber":371}, {"id":9424, "randomNumber":8829}, {"id":7737, "randomNumber":5916}, {"id":4400, "randomNumber":1663}, {"id":9037, "randomNumber":1541}, {"id":8814, "randomNumber":5629}, {"id":4730, "randomNumber":3549}, {"id":1074, "randomNumber":6847}, {"id":4130, "randomNumber":5581}, {"id":5306, "randomNumber":4838}, {"id":3999, "randomNumber":3951}, {"id":5513, "randomNumber":6767}, {"id":3145, "randomNumber":6852}, {"id":3132, "randomNumber":4104}, {"id":8452, "randomNumber":6796}, {"id":5465, "randomNumber":681}, {"id":8382, "randomNumber":421}, {"id":7350, "randomNumber":4928}, {"id":5919, "randomNumber":9712}, {"id":469, "randomNumber":5000}, {"id":6315, "randomNumber":100}, {"id":1343, "randomNumber":7793}, {"id":6098, "randomNumber":1361}, {"id":2932, "randomNumber":3725}, {"id":8567, "randomNumber":8458}, {"id":1185, "randomNumber":5497}, {"id":2788, "randomNumber":7171}, {"id":4690, "randomNumber":3588}, {"id":9891, "randomNumber":859}, {"id":4791, "randomNumber":2595}, {"id":8857, "randomNumber":8983}, {"id":8040, "randomNumber":719}, {"id":7096, "randomNumber":4030}, {"id":8205, "randomNumber":9290}, {"id":8302, "randomNumber":2323}, {"id":5717, "randomNumber":1007}, {"id":2099, "randomNumber":6256}, {"id":8545, "randomNumber":919}, {"id":1880, "randomNumber":7324}, {"id":432, "randomNumber":337}, {"id":9255, "randomNumber":1862}, {"id":8487, "randomNumber":7972}, {"id":9098, "randomNumber":4051}, {"id":5098, "randomNumber":7142}, {"id":2380, "randomNumber":3820}, {"id":9083, "randomNumber":634}, {"id":1479, "randomNumber":4269}, {"id":2811, "randomNumber":7251}, {"id":762, "randomNumber":4799}, {"id":9480, "randomNumber":5408}, {"id":885, "randomNumber":4652}, {"id":7759, "randomNumber":3588}, {"id":8747, "randomNumber":2828}, {"id":4746, "randomNumber":6860}, {"id":3766, "randomNumber":96}, {"id":6744, "randomNumber":531}, {"id":1364, "randomNumber":7550}, {"id":6948, "randomNumber":522}, {"id":9365, "randomNumber":2965}, {"id":7256, "randomNumber":7523}, {"id":7844, "randomNumber":5789}, {"id":6552, "randomNumber":4808}, {"id":6121, "randomNumber":9727}, {"id":9785, "randomNumber":7456}, {"id":4238, "randomNumber":1197}, {"id":169, "randomNumber":1354}, {"id":9950, "randomNumber":1750}, {"id":8624, "randomNumber":8589}, {"id":556, "randomNumber":551}, {"id":5326, "randomNumber":2000}, {"id":9300, "randomNumber":9267}, {"id":1290, "randomNumber":5597}, {"id":6239, "randomNumber":7911}, {"id":7341, "randomNumber":8941}, {"id":1270, "randomNumber":8188}, {"id":722, "randomNumber":1216}, {"id":1616, "randomNumber":7180}, {"id":8118, "randomNumber":3302}, {"id":995, "randomNumber":3343}, {"id":7682, "randomNumber":7452}, {"id":1477, "randomNumber":8210}, {"id":4339, "randomNumber":1664}, {"id":8381, "randomNumber":1727}, {"id":405, "randomNumber":4941}, {"id":4985, "randomNumber":6350}, {"id":5117, "randomNumber":3889}, {"id":657, "randomNumber":5063}, {"id":7820, "randomNumber":3479}, {"id":4918, "randomNumber":3915}, {"id":1316, "randomNumber":9174}, {"id":4296, "randomNumber":1393}, {"id":8317, "randomNumber":141}, {"id":5997, "randomNumber":3025}, {"id":7677, "randomNumber":5680}, {"id":3830, "randomNumber":1948}, {"id":5920, "randomNumber":6975}, {"id":706, "randomNumber":5827}, {"id":7591, "randomNumber":9903}, {"id":9097, "randomNumber":9319}, {"id":1045, "randomNumber":4495}, {"id":5982, "randomNumber":5712}, {"id":8747, "randomNumber":2828}, {"id":7568, "randomNumber":1819}, {"id":2114, "randomNumber":7999}, {"id":7498, "randomNumber":1370}, {"id":1715, "randomNumber":6012}, {"id":582, "randomNumber":8345}, {"id":9566, "randomNumber":8580}, {"id":1583, "randomNumber":6494}, {"id":1556, "randomNumber":2310}, {"id":8438, "randomNumber":7740}, {"id":1976, "randomNumber":1397}, {"id":1192, "randomNumber":8897}, {"id":7292, "randomNumber":3814}, {"id":5850, "randomNumber":9474}, {"id":1582, "randomNumber":2218}, {"id":1434, "randomNumber":1001}, {"id":6527, "randomNumber":4410}, {"id":8197, "randomNumber":1861}, {"id":547, "randomNumber":9410}, {"id":3345, "randomNumber":3014}, {"id":3316, "randomNumber":5030}, {"id":1160, "randomNumber":5116}, {"id":7917, "randomNumber":1298}, {"id":3763, "randomNumber":4709}, {"id":2242, "randomNumber":4216}, {"id":6655, "randomNumber":8697}, {"id":1650, "randomNumber":8201}, {"id":8540, "randomNumber":1455}, {"id":9949, "randomNumber":4873}, {"id":7415, "randomNumber":4355}, {"id":2850, "randomNumber":5098}, {"id":2763, "randomNumber":5054}, {"id":2029, "randomNumber":2945}, {"id":9417, "randomNumber":4779}, {"id":704, "randomNumber":2329}, {"id":9695, "randomNumber":3763}, {"id":6792, "randomNumber":9852}, {"id":1515, "randomNumber":6581}, {"id":733, "randomNumber":5032}, {"id":5731, "randomNumber":748}, {"id":9267, "randomNumber":8719}, {"id":8596, "randomNumber":7342}, {"id":7715, "randomNumber":1583}, {"id":7968, "randomNumber":8334}, {"id":9036, "randomNumber":7307}, {"id":3382, "randomNumber":4466}, {"id":3091, "randomNumber":3884}, {"id":2464, "randomNumber":6901}, {"id":7239, "randomNumber":9717}, {"id":4286, "randomNumber":5293}, {"id":9607, "randomNumber":3834}, {"id":3478, "randomNumber":707}, {"id":5437, "randomNumber":9319}, {"id":4825, "randomNumber":4217}, {"id":9184, "randomNumber":6526}, {"id":9513, "randomNumber":1347}, {"id":2173, "randomNumber":9293}, {"id":2998, "randomNumber":358}, {"id":3938, "randomNumber":3672}, {"id":7338, "randomNumber":6231}, {"id":3318, "randomNumber":2481}, {"id":8983, "randomNumber":7899}, {"id":8981, "randomNumber":2570}, {"id":6101, "randomNumber":1885}, {"id":2822, "randomNumber":6752}, {"id":256, "randomNumber":9964}, {"id":8128, "randomNumber":1526}, {"id":1045, "randomNumber":4495}, {"id":5805, "randomNumber":2806}, {"id":9540, "randomNumber":2276}, {"id":6672, "randomNumber":7563}, {"id":3208, "randomNumber":5957}, {"id":1040, "randomNumber":5205}, {"id":3468, "randomNumber":8475}, {"id":7395, "randomNumber":2740}, {"id":883, "randomNumber":8517}, {"id":9923, "randomNumber":9704}, {"id":6618, "randomNumber":1854}, {"id":3935, "randomNumber":8548}, {"id":7533, "randomNumber":2974}, {"id":1902, "randomNumber":2778}, {"id":8002, "randomNumber":9973}, {"id":4405, "randomNumber":4373}, {"id":1671, "randomNumber":7759}, {"id":6113, "randomNumber":1033}, {"id":9991, "randomNumber":4466}, {"id":4626, "randomNumber":5797}, {"id":3186, "randomNumber":6268}, {"id":997, "randomNumber":463}, {"id":1088, "randomNumber":1374}, {"id":1946, "randomNumber":7394}, {"id":394, "randomNumber":7529}, {"id":973, "randomNumber":8109}, {"id":7955, "randomNumber":1598}, {"id":6300, "randomNumber":450}, {"id":1847, "randomNumber":7}, {"id":1451, "randomNumber":1468}, {"id":8022, "randomNumber":4598}, {"id":4524, "randomNumber":3036}, {"id":3892, "randomNumber":5826}, {"id":7289, "randomNumber":2936}, {"id":6430, "randomNumber":9092}, {"id":5456, "randomNumber":1362}, {"id":886, "randomNumber":6196}, {"id":542, "randomNumber":3302}, {"id":4424, "randomNumber":3673}, {"id":6507, "randomNumber":4997}, {"id":8566, "randomNumber":5890}, {"id":1059, "randomNumber":9144}, {"id":5302, "randomNumber":7793}, {"id":3436, "randomNumber":3920}, {"id":6409, "randomNumber":761}, {"id":272, "randomNumber":666}, {"id":2289, "randomNumber":7650}, {"id":8643, "randomNumber":3783}, {"id":9634, "randomNumber":9924}, {"id":4507, "randomNumber":4287}, {"id":9720, "randomNumber":2155}, {"id":7956, "randomNumber":57}, {"id":8589, "randomNumber":2242}, {"id":3117, "randomNumber":9625}, {"id":7926, "randomNumber":6971}, {"id":3413, "randomNumber":4087}, {"id":4472, "randomNumber":4065}, {"id":556, "randomNumber":551}, {"id":8149, "randomNumber":666}, {"id":3094, "randomNumber":8648}, {"id":5527, "randomNumber":7904}, {"id":3249, "randomNumber":5965}, {"id":3678, "randomNumber":6966}, {"id":5463, "randomNumber":6971}, {"id":8693, "randomNumber":8637}, {"id":7318, "randomNumber":2382}, {"id":7565, "randomNumber":807}, {"id":9964, "randomNumber":4469}, {"id":4168, "randomNumber":3474}, {"id":4894, "randomNumber":8136}, {"id":9472, "randomNumber":8500}, {"id":5280, "randomNumber":6452}, {"id":3805, "randomNumber":1453}, {"id":2477, "randomNumber":4323}, {"id":940, "randomNumber":1374}, {"id":6355, "randomNumber":85}, {"id":9182, "randomNumber":2263}, {"id":9209, "randomNumber":773}, {"id":5809, "randomNumber":9738}, {"id":3676, "randomNumber":7443}, {"id":8046, "randomNumber":9749}, {"id":9390, "randomNumber":2237}, {"id":8805, "randomNumber":6193}, {"id":917, "randomNumber":6069}, {"id":1219, "randomNumber":1775}, {"id":408, "randomNumber":4748}, {"id":8044, "randomNumber":5677}, {"id":4217, "randomNumber":9945}, {"id":119, "randomNumber":9395}, {"id":3752, "randomNumber":6695}, {"id":5640, "randomNumber":8099}, {"id":5344, "randomNumber":8741}, {"id":8619, "randomNumber":3245}, {"id":5254, "randomNumber":3152}, {"id":8804, "randomNumber":5141}, {"id":1466, "randomNumber":5475}, {"id":225, "randomNumber":6274}, {"id":4016, "randomNumber":6401}, {"id":4087, "randomNumber":8645}, {"id":4942, "randomNumber":2926}, {"id":5143, "randomNumber":9856}, {"id":6334, "randomNumber":2904}, {"id":1287, "randomNumber":1974}, {"id":3497, "randomNumber":1937}, {"id":8995, "randomNumber":3005}, {"id":3046, "randomNumber":6384}, {"id":1169, "randomNumber":5621}, {"id":7328, "randomNumber":4709}, {"id":3260, "randomNumber":4852}, {"id":8400, "randomNumber":8368}, {"id":6770, "randomNumber":8099}, {"id":6538, "randomNumber":5998}, {"id":5145, "randomNumber":5611}, {"id":940, "randomNumber":1374}, {"id":7974, "randomNumber":4834}, {"id":5215, "randomNumber":8510}, {"id":6707, "randomNumber":7295}, {"id":1921, "randomNumber":3118}, {"id":225, "randomNumber":6274}, {"id":3533, "randomNumber":3817}, {"id":4513, "randomNumber":720}, {"id":239, "randomNumber":3159}]
+
+/world/queries/501 - PASS
+
+-----------------------------------------------------
+
+
+VALIDATING QUERY ... PASS
+
+
+-----------------------------------------------------
+  VERIFYING FORTUNE (/fortune/index)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Content-Type: text/html; charset=UTF-8
+Content-Length: 1293
+Server: TreeFrog server
+Date: Sun, 29 Jun 2014 05:24:51 GMT
+Connection: Keep-Alive
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Fortunes</title>
+</head>
+<body>
+<table>
+<tr>
+<th>id</th>
+<th>message</th>
+</tr>
+<tr>
+<td>11</td>
+<td>&lt;script&gt;alert(&quot;This should not be displayed in a browser alert box.&quot;);&lt;/script&gt;</td>
+</tr>
+<tr>
+<td>4</td>
+<td>A bad random number generator: 1, 1, 1, 1, 1, 4.33e+67, 1, 1, 1</td>
+</tr>
+<tr>
+<td>5</td>
+<td>A computer program does what you tell it to do, not what you want it to do.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>A computer scientist is someone who fixes things that aren&#039;t broken.</td>
+</tr>
+<tr>
+<td>8</td>
+<td>A list is only as strong as its weakest link. — Donald Knuth</td>
+</tr>
+<tr>
+<td>0</td>
+<td>Additional fortune added at request time.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>After enough decimal places, nobody gives a damn.</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Any program that runs right is obsolete.</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Computers make very fast, very accurate mistakes.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Emacs is a nice operating system, but I prefer UNIX. — Tom Christaensen</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Feature: A bug with seniority.</td>
+</tr>
+<tr>
+<td>1</td>
+<td>fortune: No such file or directory</td>
+</tr>
+<tr>
+<td>12</td>
+<td>フレームワークのベンチマーク</td>
+</tr>
+</table>
+</body>
+</html>
+
+
+VALIDATING FORTUNE ... PASS
+
+
+-----------------------------------------------------
+  VERIFYING UPDATE (/world/updates/)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=UTF-8
+Content-Length: 68
+Server: TreeFrog server
+Date: Sun, 29 Jun 2014 05:24:51 GMT
+Connection: Keep-Alive
+
+[{"id":2820, "randomNumber":2163}, {"id":2136, "randomNumber":9448}]
+
+VALIDATING UPDATE ... PASS
+
+
+-----------------------------------------------------
+  VERIFYING PLAINTEXT (/world/plain)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Content-Type: text/html; charset=UTF-8
+Content-Length: 13
+Server: TreeFrog server
+Date: Sun, 29 Jun 2014 05:24:51 GMT
+Connection: Keep-Alive
+
+Hello, World!
+
+VALIDATING PLAINTEXT ... PASS
+
+
+-----------------------------------------------------
+  Benchmarking treefrog ...
+-----------------------------------------------------
+BENCHMARKING JSON ... Complete
+BENCHMARKING DB ... Complete
+BENCHMARKING Query ... Complete
+BENCHMARKING Fortune ... Complete
+BENCHMARKING Update ... Complete
+BENCHMARKING Plaintext ... Complete
+
+-----------------------------------------------------
+  Stopping treefrog
+-----------------------------------------------------
+Killed TreeFrog application server processes
+
+-----------------------------------------------------
+  Stopped treefrog
+-----------------------------------------------------
+
+----------------------------------------------------
+Saving results through treefrog
+----------------------------------------------------

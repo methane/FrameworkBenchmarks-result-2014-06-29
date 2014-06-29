@@ -1,0 +1,12 @@
+restart: Unknown instance: 
+[0;32m2014/06/29 02:56:10 run.go:57: Running benchmark (benchmark) in prod mode
+[0m[0;35m2014/06/29 02:56:10 run.go:58: Base path: /home/ubuntu/FrameworkBenchmarks/revel/src/benchmark
+[0m[0;35m2014/06/29 02:56:11 build.go:127: Exec: [/usr/bin/git describe --always --dirty]
+[0m[0;35m2014/06/29 02:56:14 build.go:77: Exec: [/home/ubuntu/FrameworkBenchmarks/installs/go/bin/go build -ldflags -X benchmark/app.APP_VERSION "git-9904d7d-dirty" -tags  -o /home/ubuntu/FrameworkBenchmarks/revel/bin/benchmark benchmark/app/tmp]
+[0m[0;35m2014/06/29 02:56:15 app.go:77: Exec app: /home/ubuntu/FrameworkBenchmarks/revel/bin/benchmark [/home/ubuntu/FrameworkBenchmarks/revel/bin/benchmark -port=8080 -importPath=benchmark -runMode=prod]
+[0m[0;32m2014/06/29 02:56:15 main.go:25: Running revel server
+[0m[0;35m2014/06/29 02:56:15 controller.go:375: Registered controller: App
+[0m[0;35m2014/06/29 02:56:15 template.go:174: Refreshing templates from [/home/ubuntu/FrameworkBenchmarks/revel/src/benchmark/app/views /home/ubuntu/FrameworkBenchmarks/revel/src/github.com/robfig/revel/templates]
+[0m[0;33m2014/06/29 02:56:20 binder.go:78: strconv.ParseInt: parsing "foo": invalid syntax
+[0m[0;33m2014/06/29 02:56:20 binder.go:78: strconv.ParseInt: parsing "foo": invalid syntax
+[0m

@@ -1,0 +1,123 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer racket-ws
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8000/json
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8000/json
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    46.94ms   87.70ms 233.54ms   81.56%
+    Req/Sec   194.64    123.21   555.00     65.20%
+  7710 requests in 5.12s, 1.75MB read
+Requests/sec:   1504.83
+Transfer/sec:    349.76KB
+
+---------------------------------------------------------
+ Running Warmup racket-ws
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8000/json
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8000/json
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   364.31ms  435.58ms   1.89s    89.96%
+    Req/Sec   267.21    117.00   550.00     75.00%
+  16187 requests in 15.00s, 3.67MB read
+Requests/sec:   1078.78
+Transfer/sec:    250.74KB
+
+---------------------------------------------------------
+ Concurrency: 8 for racket-ws
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:8000/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8000/json
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   138.07ms  299.08ms 817.60ms   83.60%
+    Req/Sec   389.81    219.06     0.90k    68.37%
+  22610 requests in 15.00s, 5.13MB read
+Requests/sec:   1507.29
+Transfer/sec:    350.33KB
+
+---------------------------------------------------------
+ Concurrency: 16 for racket-ws
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:8000/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8000/json
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   223.60ms  476.02ms   1.30s    83.40%
+    Req/Sec   339.23    201.84   703.00     65.50%
+  20157 requests in 15.01s, 4.58MB read
+Requests/sec:   1343.21
+Transfer/sec:    312.20KB
+
+---------------------------------------------------------
+ Concurrency: 32 for racket-ws
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:8000/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8000/json
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   305.61ms  590.01ms   1.54s    81.23%
+    Req/Sec   305.81    167.19   559.00     66.26%
+  17692 requests in 15.00s, 4.02MB read
+Requests/sec:   1179.50
+Transfer/sec:    274.14KB
+
+---------------------------------------------------------
+ Concurrency: 64 for racket-ws
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:8000/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8000/json
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   334.91ms  560.35ms   1.43s    78.76%
+    Req/Sec   263.26    147.00   421.00     76.69%
+  15997 requests in 15.51s, 3.63MB read
+Requests/sec:   1031.45
+Transfer/sec:    239.74KB
+
+---------------------------------------------------------
+ Concurrency: 128 for racket-ws
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:8000/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8000/json
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   356.14ms  586.95ms   1.76s    84.26%
+    Req/Sec   241.44    115.76   364.00     77.55%
+  14433 requests in 15.00s, 3.28MB read
+Requests/sec:    962.06
+Transfer/sec:    223.61KB
+
+---------------------------------------------------------
+ Concurrency: 256 for racket-ws
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8000/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8000/json
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   506.63ms  727.01ms   2.46s    84.08%
+    Req/Sec   253.39    182.89     1.26k    80.70%
+  13641 requests in 15.01s, 3.10MB read
+  Socket errors: connect 0, read 9, write 0, timeout 0
+Requests/sec:    909.03
+Transfer/sec:    211.28KB

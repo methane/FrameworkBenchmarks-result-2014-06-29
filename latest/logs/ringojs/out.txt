@@ -1,0 +1,68 @@
+test.os.lower() = linux  test.database_os.lower() = linux
+self.results['frameworks'] != None: True
+test.name: ringojs
+self.results['completed']: {}
+
+=====================================================
+  Beginning ringojs
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Starting ringojs
+-----------------------------------------------------
+Downloading http://github.com/oberhamsi/sql-ringojs-client/zipball/master
+Installing package 'sql-ringojs-client' in /usr/share/ringojs//packages/sql-ringojs-client
+ + /usr/share/ringojs//packages/sql-ringojs-client/README.textile
+ + /usr/share/ringojs//packages/sql-ringojs-client/examples/query.js
+ + /usr/share/ringojs//packages/sql-ringojs-client/jars/commons-dbcp-1.4.jar
+ + /usr/share/ringojs//packages/sql-ringojs-client/jars/commons-pool-1.6.jar
+ + /usr/share/ringojs//packages/sql-ringojs-client/jars/mysql.jar
+ + /usr/share/ringojs//packages/sql-ringojs-client/lib/ngv/sql.js
+ + /usr/share/ringojs//packages/sql-ringojs-client/package.json
+Done
+
+-----------------------------------------------------
+  VERIFYING JSON (/json)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Date: Sun, 29 Jun 2014 03:17:49 GMT
+Content-Type: application/json; charset=UTF-8
+Content-Length: 27
+Server: Jetty(7.5.4.v20111024)
+
+{"message":"Hello, World!"}
+
+VALIDATING JSON ... PASS
+
+
+-----------------------------------------------------
+  VERIFYING PLAINTEXT (/plaintext)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Date: Sun, 29 Jun 2014 03:17:49 GMT
+Content-Type: text/plain
+Content-Length: 13
+Server: Jetty(7.5.4.v20111024)
+
+Hello, World!
+
+VALIDATING PLAINTEXT ... PASS
+
+
+-----------------------------------------------------
+  Benchmarking ringojs ...
+-----------------------------------------------------
+BENCHMARKING JSON ... Complete
+BENCHMARKING Plaintext ... Complete
+
+-----------------------------------------------------
+  Stopping ringojs
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Stopped ringojs
+-----------------------------------------------------
+
+----------------------------------------------------
+Saving results through ringojs
+----------------------------------------------------

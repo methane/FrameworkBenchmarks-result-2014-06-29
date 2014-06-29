@@ -1,0 +1,122 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer netty
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/json
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/json
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   663.30us    2.64ms  37.56ms   98.38%
+    Req/Sec     3.04k     1.74k   14.33k    74.22%
+  108768 requests in 5.00s, 17.12MB read
+Requests/sec:  21759.21
+Transfer/sec:      3.42MB
+
+---------------------------------------------------------
+ Running Warmup netty
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/json
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     2.35ms    3.81ms  52.32ms   90.18%
+    Req/Sec    29.50k     8.49k   67.54k    70.98%
+  1666354 requests in 15.00s, 262.21MB read
+Requests/sec: 111103.34
+Transfer/sec:     17.48MB
+
+---------------------------------------------------------
+ Concurrency: 8 for netty
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   107.77us  140.91us  10.17ms   97.72%
+    Req/Sec    17.28k     3.67k   35.44k    73.66%
+  977583 requests in 15.00s, 153.83MB read
+Requests/sec:  65175.02
+Transfer/sec:     10.26MB
+
+---------------------------------------------------------
+ Concurrency: 16 for netty
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   202.38us  265.58us  15.33ms   92.90%
+    Req/Sec    20.99k     6.11k   40.67k    71.67%
+  1190126 requests in 15.00s, 187.27MB read
+Requests/sec:  79344.91
+Transfer/sec:     12.49MB
+
+---------------------------------------------------------
+ Concurrency: 32 for netty
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   397.52us  579.75us  15.92ms   90.18%
+    Req/Sec    23.99k     9.38k   51.56k    62.82%
+  1357607 requests in 15.00s, 213.63MB read
+Requests/sec:  90511.20
+Transfer/sec:     14.24MB
+
+---------------------------------------------------------
+ Concurrency: 64 for netty
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   793.84us    1.91ms  36.19ms   91.24%
+    Req/Sec    26.39k    11.33k   54.78k    67.01%
+  1469655 requests in 15.00s, 231.26MB read
+Requests/sec:  97994.67
+Transfer/sec:     15.42MB
+
+---------------------------------------------------------
+ Concurrency: 128 for netty
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.27ms    2.26ms  40.18ms   90.47%
+    Req/Sec    28.52k    10.31k   62.89k    67.14%
+  1596956 requests in 15.00s, 251.29MB read
+Requests/sec: 106466.21
+Transfer/sec:     16.75MB
+
+---------------------------------------------------------
+ Concurrency: 256 for netty
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/json -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/json
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     2.28ms    3.23ms  40.63ms   88.52%
+    Req/Sec    29.23k     8.32k   70.00k    71.13%
+  1658542 requests in 15.00s, 260.98MB read
+Requests/sec: 110572.57
+Transfer/sec:     17.40MB

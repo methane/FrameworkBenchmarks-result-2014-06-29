@@ -1,0 +1,23 @@
+restart: Unknown instance: 
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   314    0   314    0     0    651      0 --:--:-- --:--:-- --:--:--   652
+ 92  262k   92  241k    0     0   263k      0 --:--:-- --:--:-- --:--:--  263k100  262k  100  262k    0     0   285k      0 --:--:-- --:--:-- --:--:-- 20.1M
+DBD::mysql::st execute failed: MySQL server has gone away at /home/ubuntu/FrameworkBenchmarks/plack/app.psgi line 18.
+DBD::mysql::st execute failed: MySQL server has gone away at /home/ubuntu/FrameworkBenchmarks/plack/app.psgi line 18.
+DBD::mysql::st execute failed: MySQL server has gone away at /home/ubuntu/FrameworkBenchmarks/plack/app.psgi line 18.
+DBD::mysql::st execute failed: MySQL server has gone away at /home/ubuntu/FrameworkBenchmarks/plack/app.psgi line 18.
+DBD::mysql::st execute failed: MySQL server has gone away at /home/ubuntu/FrameworkBenchmarks/plack/app.psgi line 18.
+DBD::mysql::st execute failed: MySQL server has gone away at /home/ubuntu/FrameworkBenchmarks/plack/app.psgi line 18.
+DBD::mysql::st execute failed: MySQL server has gone away at /home/ubuntu/FrameworkBenchmarks/plack/app.psgi line 18.
+DBD::mysql::st execute failed: MySQL server has gone away at /home/ubuntu/FrameworkBenchmarks/plack/app.psgi line 18.
+DBD::mysql::st execute failed: MySQL server has gone away at /home/ubuntu/FrameworkBenchmarks/plack/app.psgi line 18.
+DBD::mysql::st execute failed: MySQL server has gone away at /home/ubuntu/FrameworkBenchmarks/plack/app.psgi line 18.
+DBD::mysql::st execute failed: MySQL server has gone away at /home/ubuntu/FrameworkBenchmarks/plack/app.psgi line 18.
+DBD::mysql::st execute failed: MySQL server has gone away at /home/ubuntu/FrameworkBenchmarks/plack/app.psgi line 18.
+DBD::mysql::st execute failed: MySQL server has gone away at /home/ubuntu/FrameworkBenchmarks/plack/app.psgi line 18.
+DBD::mysql::st execute failed: MySQL server has gone away at /home/ubuntu/FrameworkBenchmarks/plack/app.psgi line 18.
+...
+DBD::mysql::st execute failed: MySQL server has gone away at /home/ubuntu/FrameworkBenchmarks/plack/app.psgi line 18.
+DBD::mysql::st execute failed: MySQL server has gone away at /home/ubuntu/FrameworkBenchmarks/plack/app.psgi line 18.
+DBD::mysql::st execute failed: MySQL server has gone away at /home/ubuntu/FrameworkBenchmarks/plack/app.psgi line 18.

@@ -1,0 +1,125 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+0 packages can be updated.
+0 updates are security updates.
+
+
+
+---------------------------------------------------------
+ Running Primer urweb-postgres
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/db
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/db
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   804.20us  226.66us   1.72ms   67.95%
+    Req/Sec     1.40k   471.74     3.00k    78.81%
+  52786 requests in 5.00s, 7.79MB read
+Requests/sec:  10559.40
+Transfer/sec:      1.56MB
+
+---------------------------------------------------------
+ Running Warmup urweb-postgres
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/db
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    24.00ms  307.74us  26.16ms   68.80%
+    Req/Sec     2.69k    31.23     2.79k    81.91%
+  159865 requests in 15.00s, 23.60MB read
+Requests/sec:  10657.75
+Transfer/sec:      1.57MB
+
+---------------------------------------------------------
+ Concurrency: 8 for urweb-postgres
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:8080/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   804.46us  301.65us   2.88ms   67.02%
+    Req/Sec     2.71k   634.63     5.44k    68.23%
+  154057 requests in 15.00s, 22.74MB read
+Requests/sec:  10271.34
+Transfer/sec:      1.52MB
+
+---------------------------------------------------------
+ Concurrency: 16 for urweb-postgres
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:8080/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.49ms  267.68us   3.37ms   70.07%
+    Req/Sec     2.80k   154.67     3.33k    65.20%
+  159325 requests in 15.00s, 23.52MB read
+Requests/sec:  10622.83
+Transfer/sec:      1.57MB
+
+---------------------------------------------------------
+ Concurrency: 32 for urweb-postgres
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:8080/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     3.00ms  285.64us   5.52ms   69.66%
+    Req/Sec     2.79k   163.48     3.33k    62.93%
+  158960 requests in 15.00s, 23.46MB read
+Requests/sec:  10598.49
+Transfer/sec:      1.56MB
+
+---------------------------------------------------------
+ Concurrency: 64 for urweb-postgres
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:8080/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     6.02ms  283.07us   7.69ms   68.39%
+    Req/Sec     2.76k   131.84     3.42k    59.84%
+  159034 requests in 15.00s, 23.48MB read
+Requests/sec:  10602.80
+Transfer/sec:      1.57MB
+
+---------------------------------------------------------
+ Concurrency: 128 for urweb-postgres
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:8080/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    12.06ms  313.36us  13.65ms   67.85%
+    Req/Sec     2.71k    66.60     2.96k    75.09%
+  158996 requests in 15.00s, 23.47MB read
+Requests/sec:  10600.15
+Transfer/sec:      1.56MB
+
+---------------------------------------------------------
+ Concurrency: 256 for urweb-postgres
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    23.77ms    1.83ms  26.38ms   96.39%
+    Req/Sec     2.70k   194.98     4.00k    77.81%
+  159039 requests in 15.00s, 23.48MB read
+Requests/sec:  10602.95
+Transfer/sec:      1.57MB

@@ -1,0 +1,75 @@
+test.os.lower() = linux  test.database_os.lower() = linux
+self.results['frameworks'] != None: True
+test.name: plack
+self.results['completed']: {}
+
+=====================================================
+  Beginning plack
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Starting plack
+-----------------------------------------------------
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+mysql start/running, process 19574
+ * Restarting PostgreSQL 9.3 database server
+   ...done.
+App::cpanminus is up to date. (1.7004)
+--> Working on .
+Configuring /home/ubuntu/FrameworkBenchmarks/plack ... OK
+<== Installed dependencies for .. Finishing.
+
+-----------------------------------------------------
+  VERIFYING JSON (/json)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Date: Sun, 29 Jun 2014 01:01:49 GMT
+Server: Plack::Handler::Monoceros
+Content-Type: application/json
+Transfer-Encoding: chunked
+
+{"message":"Hello, World!"}
+
+VALIDATING JSON ... PASS
+
+
+-----------------------------------------------------
+  VERIFYING DB (/db)
+-----------------------------------------------------
+HTTP/1.1 200 OK
+Date: Sun, 29 Jun 2014 01:01:49 GMT
+Server: Plack::Handler::Monoceros
+Content-Type: application/json
+Transfer-Encoding: chunked
+
+{"randomNumber":"527910075","id":9384}
+
+VALIDATING DB ... PASS
+
+
+-----------------------------------------------------
+  Benchmarking plack ...
+-----------------------------------------------------
+BENCHMARKING JSON ... Complete
+BENCHMARKING DB ... Complete
+
+-----------------------------------------------------
+  Stopping plack
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Stopped plack
+-----------------------------------------------------
+
+----------------------------------------------------
+Saving results through plack
+----------------------------------------------------

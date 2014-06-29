@@ -1,0 +1,109 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer treefrog-thread
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/world/updates/2
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/world/updates/2
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     3.40ms    1.31ms  16.73ms   80.13%
+    Req/Sec   333.09    112.20     0.89k    77.37%
+  12649 requests in 5.00s, 2.89MB read
+Requests/sec:   2529.83
+Transfer/sec:    591.80KB
+
+---------------------------------------------------------
+ Running Warmup treefrog-thread
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/world/updates/2
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/world/updates/2
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    98.15ms   42.60ms 440.80ms   72.52%
+    Req/Sec   655.53     91.93     1.00k    82.35%
+  38124 requests in 15.00s, 8.71MB read
+  Socket errors: connect 0, read 0, write 0, timeout 25
+Requests/sec:   2541.15
+Transfer/sec:    594.49KB
+
+---------------------------------------------------------
+ Queries: 1 for treefrog-thread
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/world/updates/1
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/world/updates/1
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    59.17ms   38.19ms 509.93ms   76.21%
+    Req/Sec     1.06k    94.70     1.50k    75.47%
+  63405 requests in 15.00s, 12.44MB read
+Requests/sec:   4227.55
+Transfer/sec:    849.54KB
+
+---------------------------------------------------------
+ Queries: 5 for treefrog-thread
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/world/updates/5
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/world/updates/5
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   213.22ms   61.91ms 898.70ms   75.19%
+    Req/Sec   294.12     33.41   517.00     89.02%
+  17571 requests in 15.00s, 5.73MB read
+Requests/sec:   1171.07
+Transfer/sec:    390.98KB
+
+---------------------------------------------------------
+ Queries: 10 for treefrog-thread
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/world/updates/10
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/world/updates/10
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   397.26ms  103.85ms   1.26s    74.57%
+    Req/Sec   158.52     20.09   275.00     91.84%
+  9293 requests in 15.01s, 4.53MB read
+Requests/sec:    619.29
+Transfer/sec:    308.90KB
+
+---------------------------------------------------------
+ Queries: 15 for treefrog-thread
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/world/updates/15
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/world/updates/15
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   587.34ms  119.73ms   1.17s    72.35%
+    Req/Sec   104.84     10.16   133.00     86.49%
+  6250 requests in 15.01s, 4.05MB read
+Requests/sec:    416.48
+Transfer/sec:    276.45KB
+
+---------------------------------------------------------
+ Queries: 20 for treefrog-thread
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/world/updates/20
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/world/updates/20
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   776.54ms  140.64ms   1.21s    69.37%
+    Req/Sec    79.12      9.79   102.00     87.50%
+  4671 requests in 15.04s, 3.78MB read
+Requests/sec:    310.67
+Transfer/sec:    257.46KB

@@ -1,0 +1,76 @@
+test.os.lower() = linux  test.database_os.lower() = linux
+self.results['frameworks'] != None: True
+test.name: nodejs-mongodb
+self.results['completed']: {}
+
+=====================================================
+  Beginning nodejs-mongodb
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Starting nodejs-mongodb
+-----------------------------------------------------
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+mysql start/running, process 8507
+ * Restarting PostgreSQL 9.3 database server
+   ...done.
+worker undefined died
+worker undefined died
+worker undefined died
+worker undefined died
+
+-----------------------------------------------------
+  VERIFYING DB (/mongoose)
+-----------------------------------------------------
+VALIDATING DB ... FAIL
+
+
+-----------------------------------------------------
+  VERIFYING QUERY (/mongoose?queries=2)
+-----------------------------------------------------
+/mongoose?queries=2 - FAIL
+
+-----------------------------------------------------
+
+/mongoose?queries=0 - WARNING
+
+-----------------------------------------------------
+
+/mongoose?queries=foo - WARNING
+
+-----------------------------------------------------
+
+/mongoose?queries=501 - WARNING
+
+-----------------------------------------------------
+
+
+VALIDATING QUERY ... FAIL
+
+
+-----------------------------------------------------
+  Benchmarking nodejs-mongodb ...
+-----------------------------------------------------
+BENCHMARKING DB ... Complete
+BENCHMARKING Query ... Complete
+
+-----------------------------------------------------
+  Stopping nodejs-mongodb
+-----------------------------------------------------
+
+-----------------------------------------------------
+  Stopped nodejs-mongodb
+-----------------------------------------------------
+
+----------------------------------------------------
+Saving results through nodejs-mongodb
+----------------------------------------------------

@@ -1,0 +1,95 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer falcon-py3
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/plaintext
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/plaintext
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.37ms    4.39ms  30.09ms   95.67%
+    Req/Sec     1.89k     1.04k    4.67k    70.44%
+  71550 requests in 5.00s, 11.12MB read
+Requests/sec:  14321.49
+Transfer/sec:      2.23MB
+
+---------------------------------------------------------
+ Running Warmup falcon-py3
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/plaintext
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/plaintext
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    18.61ms   10.55ms  62.18ms   62.32%
+    Req/Sec     3.84k     1.37k    7.74k    71.70%
+  224643 requests in 15.00s, 34.92MB read
+Requests/sec:  14976.35
+Transfer/sec:      2.33MB
+
+---------------------------------------------------------
+ Concurrency: 256 for falcon-py3
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/plaintext
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   244.13ms   76.97ms 605.17ms   75.02%
+    Req/Sec     4.14k   271.30     4.78k    62.86%
+  248137 requests in 15.00s, 38.57MB read
+Requests/sec:  16543.02
+Transfer/sec:      2.57MB
+
+---------------------------------------------------------
+ Concurrency: 1024 for falcon-py3
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 1024 --timeout 1024 -t 4 http://127.0.0.1:8080/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/plaintext
+  4 threads and 1024 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   955.47ms  484.93ms   5.23s    91.41%
+    Req/Sec     4.38k   597.60     6.14k    73.33%
+  246949 requests in 15.02s, 38.39MB read
+Requests/sec:  16445.68
+Transfer/sec:      2.56MB
+
+---------------------------------------------------------
+ Concurrency: 4096 for falcon-py3
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 4096 --timeout 4096 -t 4 http://127.0.0.1:8080/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/plaintext
+  4 threads and 4096 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.57s     1.73s   14.54s    95.42%
+    Req/Sec     5.20k     1.84k    7.15k    67.24%
+  243418 requests in 15.00s, 37.84MB read
+Requests/sec:  16228.25
+Transfer/sec:      2.52MB
+
+---------------------------------------------------------
+ Concurrency: 16384 for falcon-py3
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16384 --timeout 16384 -t 4 http://127.0.0.1:8080/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/plaintext
+  4 threads and 16384 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     3.50s     4.72s   13.54s    80.45%
+    Req/Sec     4.33k     2.87k    9.19k    54.55%
+  212835 requests in 15.03s, 33.08MB read
+  Socket errors: connect 0, read 5865, write 0, timeout 38835
+Requests/sec:  14156.13
+Transfer/sec:      2.20MB

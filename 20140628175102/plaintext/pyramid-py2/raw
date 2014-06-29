@@ -1,0 +1,96 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer pyramid-py2
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:6543/plaintext
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:6543/plaintext
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.96ms    2.48ms  25.33ms   91.58%
+    Req/Sec   662.90    244.18     1.70k    70.37%
+  25080 requests in 5.00s, 4.11MB read
+Requests/sec:   5016.48
+Transfer/sec:    842.61KB
+
+---------------------------------------------------------
+ Running Warmup pyramid-py2
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:6543/plaintext
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:6543/plaintext
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    51.09ms    2.87ms  81.43ms   91.89%
+    Req/Sec     1.26k    29.45     1.34k    76.09%
+  75063 requests in 15.00s, 12.31MB read
+Requests/sec:   5003.93
+Transfer/sec:    840.50KB
+
+---------------------------------------------------------
+ Concurrency: 256 for pyramid-py2
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:6543/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:6543/plaintext
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     0.00us    0.00us   0.00us    -nan%
+    Req/Sec     0.00      0.00     0.00      -nan%
+  74141 requests in 15.01s, 12.16MB read
+Requests/sec:   4938.26
+Transfer/sec:    829.49KB
+
+---------------------------------------------------------
+ Concurrency: 1024 for pyramid-py2
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 1024 --timeout 1024 -t 4 http://127.0.0.1:6543/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:6543/plaintext
+  4 threads and 1024 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     0.00us    0.00us   0.00us    -nan%
+    Req/Sec     0.00      0.00     0.00      -nan%
+  73796 requests in 15.00s, 12.10MB read
+Requests/sec:   4919.52
+Transfer/sec:    826.33KB
+
+---------------------------------------------------------
+ Concurrency: 4096 for pyramid-py2
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 4096 --timeout 4096 -t 4 http://127.0.0.1:6543/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:6543/plaintext
+  4 threads and 4096 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     0.00us    0.00us   0.00us    -nan%
+    Req/Sec     0.00      0.00     0.00      -nan%
+  73138 requests in 15.00s, 12.00MB read
+  Socket errors: connect 0, read 0, write 0, timeout 2834
+Requests/sec:   4875.92
+Transfer/sec:    819.01KB
+
+---------------------------------------------------------
+ Concurrency: 16384 for pyramid-py2
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16384 --timeout 16384 -t 4 http://127.0.0.1:6543/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:6543/plaintext
+  4 threads and 16384 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     0.00us    0.00us   0.00us    -nan%
+    Req/Sec     0.00      0.00     0.00      -nan%
+  23083 requests in 15.01s, 3.79MB read
+  Socket errors: connect 0, read 0, write 0, timeout 108097
+Requests/sec:   1537.83
+Transfer/sec:    258.31KB

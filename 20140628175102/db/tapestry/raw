@@ -1,0 +1,122 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer tapestry
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/tapestry/hellodb
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/tapestry/hellodb
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     3.12ms    2.54ms  20.99ms   93.45%
+    Req/Sec   404.99    150.04     1.33k    75.66%
+  15052 requests in 5.00s, 2.82MB read
+Requests/sec:   3009.98
+Transfer/sec:    578.42KB
+
+---------------------------------------------------------
+ Running Warmup tapestry
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/tapestry/hellodb
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/tapestry/hellodb
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    48.88ms  112.41ms   1.64s    95.04%
+    Req/Sec     1.27k   152.48     1.65k    72.68%
+  75039 requests in 15.00s, 14.10MB read
+Requests/sec:   5003.85
+Transfer/sec:      0.94MB
+
+---------------------------------------------------------
+ Concurrency: 8 for tapestry
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:8080/tapestry/hellodb -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/tapestry/hellodb
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.48ms    1.11ms  19.95ms   94.77%
+    Req/Sec     1.48k   205.23     2.20k    78.12%
+  84004 requests in 15.00s, 15.76MB read
+Requests/sec:   5600.34
+Transfer/sec:      1.05MB
+
+---------------------------------------------------------
+ Concurrency: 16 for tapestry
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:8080/tapestry/hellodb -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/tapestry/hellodb
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     2.83ms    2.41ms  55.77ms   91.33%
+    Req/Sec     1.53k   259.75     2.67k    75.01%
+  87276 requests in 15.00s, 16.38MB read
+Requests/sec:   5818.78
+Transfer/sec:      1.09MB
+
+---------------------------------------------------------
+ Concurrency: 32 for tapestry
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:8080/tapestry/hellodb -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/tapestry/hellodb
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     5.54ms    3.64ms  67.11ms   78.12%
+    Req/Sec     1.53k   216.03     2.44k    75.49%
+  88603 requests in 15.00s, 16.63MB read
+Requests/sec:   5907.95
+Transfer/sec:      1.11MB
+
+---------------------------------------------------------
+ Concurrency: 64 for tapestry
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:8080/tapestry/hellodb -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/tapestry/hellodb
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    10.92ms    6.71ms  70.34ms   72.43%
+    Req/Sec     1.49k   159.98     2.22k    72.57%
+  87976 requests in 15.00s, 16.51MB read
+Requests/sec:   5865.07
+Transfer/sec:      1.10MB
+
+---------------------------------------------------------
+ Concurrency: 128 for tapestry
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:8080/tapestry/hellodb -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/tapestry/hellodb
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    22.35ms   12.65ms 130.32ms   78.56%
+    Req/Sec     1.45k    98.82     1.73k    73.12%
+  86360 requests in 15.00s, 16.22MB read
+Requests/sec:   5757.25
+Transfer/sec:      1.08MB
+
+---------------------------------------------------------
+ Concurrency: 256 for tapestry
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/tapestry/hellodb -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/tapestry/hellodb
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    45.64ms   32.85ms 462.71ms   85.31%
+    Req/Sec     1.41k   110.40     2.08k    79.66%
+  83495 requests in 15.00s, 15.69MB read
+Requests/sec:   5566.45
+Transfer/sec:      1.05MB

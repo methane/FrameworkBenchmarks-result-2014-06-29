@@ -1,0 +1,122 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer pyramid-py2
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:6543/fortunes
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:6543/fortunes
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     5.66ms    3.13ms  24.36ms   67.97%
+    Req/Sec   202.05     76.33   470.00     63.68%
+  7683 requests in 5.00s, 13.09MB read
+Requests/sec:   1536.11
+Transfer/sec:      2.62MB
+
+---------------------------------------------------------
+ Running Warmup pyramid-py2
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:6543/fortunes
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:6543/fortunes
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   158.45ms    4.14ms 184.70ms   68.93%
+    Req/Sec   403.98      7.47   425.00     75.56%
+  24228 requests in 15.01s, 41.27MB read
+Requests/sec:   1614.37
+Transfer/sec:      2.75MB
+
+---------------------------------------------------------
+ Concurrency: 8 for pyramid-py2
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:6543/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:6543/fortunes
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     5.33ms    3.13ms  50.69ms   80.70%
+    Req/Sec   403.63    109.79     0.88k    71.24%
+  23514 requests in 15.01s, 40.05MB read
+Requests/sec:   1566.37
+Transfer/sec:      2.67MB
+
+---------------------------------------------------------
+ Concurrency: 16 for pyramid-py2
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:6543/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:6543/fortunes
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     9.90ms    4.48ms  34.51ms   55.97%
+    Req/Sec   410.87     59.42   677.00     73.28%
+  24295 requests in 15.00s, 41.38MB read
+Requests/sec:   1619.80
+Transfer/sec:      2.76MB
+
+---------------------------------------------------------
+ Concurrency: 32 for pyramid-py2
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:6543/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:6543/fortunes
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    19.70ms    3.19ms  39.23ms   67.96%
+    Req/Sec   407.98     29.77   500.00     67.20%
+  24238 requests in 15.00s, 41.28MB read
+Requests/sec:   1615.66
+Transfer/sec:      2.75MB
+
+---------------------------------------------------------
+ Concurrency: 64 for pyramid-py2
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:6543/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:6543/fortunes
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    39.44ms    3.14ms  55.28ms   70.64%
+    Req/Sec   406.55     18.07   464.00     69.21%
+  24283 requests in 15.01s, 41.36MB read
+Requests/sec:   1617.85
+Transfer/sec:      2.76MB
+
+---------------------------------------------------------
+ Concurrency: 128 for pyramid-py2
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:6543/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:6543/fortunes
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    79.35ms    3.72ms 135.68ms   76.35%
+    Req/Sec   403.63     11.24   435.00     74.79%
+  24175 requests in 15.00s, 41.18MB read
+Requests/sec:   1611.26
+Transfer/sec:      2.74MB
+
+---------------------------------------------------------
+ Concurrency: 256 for pyramid-py2
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:6543/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:6543/fortunes
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   158.55ms    4.10ms 235.98ms   73.21%
+    Req/Sec   403.53      6.40   425.00     67.78%
+  24219 requests in 15.00s, 41.25MB read
+Requests/sec:   1614.11
+Transfer/sec:      2.75MB

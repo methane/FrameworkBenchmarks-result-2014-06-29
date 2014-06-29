@@ -1,0 +1,130 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Sun Jun 29 02:02:39 UTC 2014
+
+  System load:  2.92               Processes:           139
+  Usage of /:   68.7% of 19.55GB   Users logged in:     0
+  Memory usage: 33%                IP address for eth0: 10.227.136.45
+  Swap usage:   0%
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer play1siena
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/play1/db
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/play1/db
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     4.59ms    2.68ms  21.78ms   78.45%
+    Req/Sec   242.34     78.04   590.00     72.69%
+  9208 requests in 5.00s, 3.86MB read
+Requests/sec:   1841.57
+Transfer/sec:    790.91KB
+
+---------------------------------------------------------
+ Running Warmup play1siena
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/play1/db
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/play1/db
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    60.07ms   10.44ms 129.44ms   89.36%
+    Req/Sec     1.09k   119.33     1.18k    89.60%
+  64325 requests in 15.00s, 26.98MB read
+Requests/sec:   4287.98
+Transfer/sec:      1.80MB
+
+---------------------------------------------------------
+ Concurrency: 8 for play1siena
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:8080/play1/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/play1/db
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.71ms    0.93ms  30.36ms   88.91%
+    Req/Sec     1.24k   180.06     1.89k    71.89%
+  70843 requests in 15.00s, 29.71MB read
+Requests/sec:   4722.97
+Transfer/sec:      1.98MB
+
+---------------------------------------------------------
+ Concurrency: 16 for play1siena
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:8080/play1/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/play1/db
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     3.55ms    2.56ms  24.11ms   85.47%
+    Req/Sec     1.19k   213.59     1.92k    69.99%
+  68345 requests in 15.00s, 28.66MB read
+Requests/sec:   4556.56
+Transfer/sec:      1.91MB
+
+---------------------------------------------------------
+ Concurrency: 32 for play1siena
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:8080/play1/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/play1/db
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     6.95ms    2.28ms  25.76ms   84.77%
+    Req/Sec     1.16k    94.39     1.43k    71.14%
+  67868 requests in 15.00s, 28.46MB read
+Requests/sec:   4524.71
+Transfer/sec:      1.90MB
+
+---------------------------------------------------------
+ Concurrency: 64 for play1siena
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:8080/play1/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/play1/db
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    13.90ms    2.47ms  39.51ms   85.35%
+    Req/Sec     1.17k    68.84     1.39k    71.82%
+  69025 requests in 15.00s, 28.95MB read
+Requests/sec:   4602.03
+Transfer/sec:      1.93MB
+
+---------------------------------------------------------
+ Concurrency: 128 for play1siena
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:8080/play1/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/play1/db
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    28.02ms    2.58ms  45.56ms   82.81%
+    Req/Sec     1.15k    47.33     1.29k    71.10%
+  68481 requests in 15.00s, 28.72MB read
+Requests/sec:   4565.92
+Transfer/sec:      1.91MB
+
+---------------------------------------------------------
+ Concurrency: 256 for play1siena
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/play1/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/play1/db
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    56.93ms    2.92ms  84.09ms   79.96%
+    Req/Sec     1.13k    37.91     1.24k    71.50%
+  67338 requests in 14.99s, 28.24MB read
+Requests/sec:   4491.97
+Transfer/sec:      1.88MB

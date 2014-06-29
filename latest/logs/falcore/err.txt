@@ -1,0 +1,22 @@
+restart: Unknown instance: 
+# framework_benchmarks
+src/framework_benchmarks/falcore.go:160: undefined: falcore.JSONResponse
+src/framework_benchmarks/falcore.go:175: undefined: falcore.JSONResponse
+src/framework_benchmarks/falcore.go:200: undefined: falcore.JSONResponse
+src/framework_benchmarks/falcore.go:250: undefined: falcore.JSONResponse
+src/framework_benchmarks/falcore.go:263: undefined: falcore.JSONResponse
+# command-line-arguments
+src/framework_benchmarks/falcore.go:160: undefined: falcore.JSONResponse
+src/framework_benchmarks/falcore.go:175: undefined: falcore.JSONResponse
+src/framework_benchmarks/falcore.go:200: undefined: falcore.JSONResponse
+src/framework_benchmarks/falcore.go:250: undefined: falcore.JSONResponse
+src/framework_benchmarks/falcore.go:263: undefined: falcore.JSONResponse
+curl: (7) Failed to connect to 127.0.0.1 port 8080: Connection refused
+curl: (7) Failed to connect to 127.0.0.1 port 8080: Connection refused
+curl: (7) Failed to connect to 127.0.0.1 port 8080: Connection refused
+curl: (7) Failed to connect to 127.0.0.1 port 8080: Connection refused
+curl: (7) Failed to connect to 127.0.0.1 port 8080: Connection refused
+curl: (7) Failed to connect to 127.0.0.1 port 8080: Connection refused
+curl: (7) Failed to connect to 127.0.0.1 port 8080: Connection refused
+curl: (7) Failed to connect to 127.0.0.1 port 8080: Connection refused
+curl: (7) Failed to connect to 127.0.0.1 port 8080: Connection refused

@@ -1,0 +1,122 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer lapis
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   691.12us    2.64ms  31.32ms   96.47%
+    Req/Sec     3.39k     1.37k    7.89k    67.53%
+  124494 requests in 5.00s, 24.33MB read
+Requests/sec:  24903.87
+Transfer/sec:      4.87MB
+
+---------------------------------------------------------
+ Running Warmup lapis
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     9.95ms   24.98ms 593.90ms   96.71%
+    Req/Sec     7.08k     1.97k   15.97k    69.16%
+  415717 requests in 15.00s, 81.25MB read
+Requests/sec:  27715.83
+Transfer/sec:      5.42MB
+
+---------------------------------------------------------
+ Concurrency: 8 for lapis
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:8080/ -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   375.04us    1.32ms  41.97ms   99.38%
+    Req/Sec     6.49k     1.80k   12.89k    68.65%
+  366927 requests in 15.00s, 71.72MB read
+Requests/sec:  24463.12
+Transfer/sec:      4.78MB
+
+---------------------------------------------------------
+ Concurrency: 16 for lapis
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:8080/ -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   772.53us    3.32ms  97.37ms   98.54%
+    Req/Sec     7.05k     2.33k   16.44k    67.73%
+  397742 requests in 15.00s, 77.74MB read
+Requests/sec:  26517.70
+Transfer/sec:      5.18MB
+
+---------------------------------------------------------
+ Concurrency: 32 for lapis
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:8080/ -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.70ms    6.92ms 135.41ms   95.79%
+    Req/Sec     7.37k     2.65k   15.67k    67.54%
+  412796 requests in 15.00s, 80.68MB read
+Requests/sec:  27520.69
+Transfer/sec:      5.38MB
+
+---------------------------------------------------------
+ Concurrency: 64 for lapis
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:8080/ -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     2.93ms    6.91ms 183.51ms   92.30%
+    Req/Sec     7.11k     2.68k   15.58k    63.20%
+  403431 requests in 15.00s, 78.85MB read
+Requests/sec:  26896.57
+Transfer/sec:      5.26MB
+
+---------------------------------------------------------
+ Concurrency: 128 for lapis
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:8080/ -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     5.27ms   11.07ms 302.93ms   91.48%
+    Req/Sec     7.01k     2.35k   13.26k    62.56%
+  406337 requests in 15.00s, 79.42MB read
+Requests/sec:  27090.27
+Transfer/sec:      5.29MB
+
+---------------------------------------------------------
+ Concurrency: 256 for lapis
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/ -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     9.85ms   21.54ms 442.08ms   95.51%
+    Req/Sec     6.96k     1.83k   12.45k    65.49%
+  408533 requests in 15.00s, 79.85MB read
+Requests/sec:  27237.61
+Transfer/sec:      5.32MB

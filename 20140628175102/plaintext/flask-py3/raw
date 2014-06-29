@@ -1,0 +1,97 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer flask-py3
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/plaintext
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/plaintext
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     2.33ms    5.11ms  33.78ms   95.44%
+    Req/Sec   823.72    456.49     1.89k    69.05%
+  31328 requests in 5.00s, 4.87MB read
+Requests/sec:   6267.10
+Transfer/sec:      0.97MB
+
+---------------------------------------------------------
+ Running Warmup flask-py3
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/plaintext
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/plaintext
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    41.21ms   13.39ms 125.86ms   66.61%
+    Req/Sec     1.57k    80.59     1.93k    66.32%
+  94104 requests in 15.00s, 14.63MB read
+Requests/sec:   6273.71
+Transfer/sec:      0.98MB
+
+---------------------------------------------------------
+ Concurrency: 256 for flask-py3
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/plaintext
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   615.96ms  105.04ms   1.21s    75.64%
+    Req/Sec     1.68k   139.23     2.30k    77.27%
+  100363 requests in 15.00s, 15.60MB read
+Requests/sec:   6691.02
+Transfer/sec:      1.04MB
+
+---------------------------------------------------------
+ Concurrency: 1024 for flask-py3
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 1024 --timeout 1024 -t 4 http://127.0.0.1:8080/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/plaintext
+  4 threads and 1024 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     3.38s     3.21s   12.43s    84.02%
+    Req/Sec     1.75k     1.35k    5.91k    72.73%
+  101430 requests in 15.00s, 15.91MB read
+  Socket errors: connect 0, read 840, write 0, timeout 0
+Requests/sec:   6761.37
+Transfer/sec:      1.06MB
+
+---------------------------------------------------------
+ Concurrency: 4096 for flask-py3
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 4096 --timeout 4096 -t 4 http://127.0.0.1:8080/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/plaintext
+  4 threads and 4096 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     2.45s     2.48s   14.90s    90.81%
+    Req/Sec     4.47k     1.60k    6.32k    68.42%
+  99977 requests in 16.09s, 15.61MB read
+  Socket errors: connect 0, read 416, write 0, timeout 0
+Requests/sec:   6214.43
+Transfer/sec:      0.97MB
+
+---------------------------------------------------------
+ Concurrency: 16384 for flask-py3
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16384 --timeout 16384 -t 4 http://127.0.0.1:8080/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/plaintext
+  4 threads and 16384 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     3.25s     3.60s   12.08s    83.94%
+    Req/Sec     2.23k   643.70     2.74k    66.67%
+  78936 requests in 14.98s, 12.28MB read
+  Socket errors: connect 0, read 6032, write 0, timeout 17744
+Requests/sec:   5269.24
+Transfer/sec:    839.61KB

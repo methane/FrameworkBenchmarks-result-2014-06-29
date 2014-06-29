@@ -1,0 +1,130 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Sat Jun 28 20:34:29 UTC 2014
+
+  System load:  3.39               Processes:           149
+  Usage of /:   67.6% of 19.55GB   Users logged in:     0
+  Memory usage: 27%                IP address for eth0: 10.227.136.45
+  Swap usage:   0%
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer django-py3
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/db
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/db
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     4.97ms    2.36ms  43.27ms   84.75%
+    Req/Sec   233.55     88.68   555.00     74.43%
+  8882 requests in 5.00s, 1.74MB read
+Requests/sec:   1776.67
+Transfer/sec:    357.04KB
+
+---------------------------------------------------------
+ Running Warmup django-py3
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/db
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   142.88ms   41.61ms 349.74ms   77.23%
+    Req/Sec   446.70     29.93   517.00     63.58%
+  26935 requests in 15.00s, 5.29MB read
+Requests/sec:   1795.30
+Transfer/sec:    360.81KB
+
+---------------------------------------------------------
+ Concurrency: 8 for django-py3
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:8080/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     4.62ms    1.88ms  19.25ms   69.59%
+    Req/Sec   484.38    141.96     1.11k    71.07%
+  26987 requests in 15.00s, 5.30MB read
+Requests/sec:   1798.94
+Transfer/sec:    361.52KB
+
+---------------------------------------------------------
+ Concurrency: 16 for django-py3
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:8080/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     9.14ms    4.38ms  29.84ms   63.30%
+    Req/Sec   463.98     94.02   800.00     69.07%
+  26972 requests in 15.00s, 5.29MB read
+Requests/sec:   1798.41
+Transfer/sec:    361.43KB
+
+---------------------------------------------------------
+ Concurrency: 32 for django-py3
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:8080/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    18.40ms   15.04ms 100.20ms   87.17%
+    Req/Sec   461.95    105.06   666.00     64.92%
+  26884 requests in 15.00s, 5.28MB read
+Requests/sec:   1791.88
+Transfer/sec:    360.10KB
+
+---------------------------------------------------------
+ Concurrency: 64 for django-py3
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:8080/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    36.24ms   21.08ms 115.04ms   64.54%
+    Req/Sec   453.57     88.87   790.00     62.93%
+  26985 requests in 15.00s, 5.30MB read
+Requests/sec:   1798.77
+Transfer/sec:    361.49KB
+
+---------------------------------------------------------
+ Concurrency: 128 for django-py3
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:8080/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    70.47ms   21.82ms 144.13ms   60.66%
+    Req/Sec   452.44     34.10   514.00     65.67%
+  27094 requests in 15.00s, 5.32MB read
+Requests/sec:   1806.07
+Transfer/sec:    362.95KB
+
+---------------------------------------------------------
+ Concurrency: 256 for django-py3
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   143.72ms   36.66ms 256.48ms   70.64%
+    Req/Sec   445.46     25.01   497.00     61.22%
+  26898 requests in 15.00s, 5.28MB read
+Requests/sec:   1792.68
+Transfer/sec:    360.27KB

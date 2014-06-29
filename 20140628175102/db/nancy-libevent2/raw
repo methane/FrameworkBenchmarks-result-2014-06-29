@@ -1,0 +1,130 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer nancy-libevent2
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/db
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/db
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     5.96ms    4.73ms  47.81ms   92.52%
+    Req/Sec   196.99     61.94   400.00     65.53%
+  7466 requests in 5.00s, 155.98MB read
+  Non-2xx or 3xx responses: 7466
+Requests/sec:   1493.04
+Transfer/sec:     31.19MB
+
+---------------------------------------------------------
+ Running Warmup nancy-libevent2
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/db
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   145.55ms  103.56ms 595.22ms   68.68%
+    Req/Sec   445.04     27.90   519.00     72.16%
+  26337 requests in 15.02s, 550.41MB read
+  Non-2xx or 3xx responses: 26337
+Requests/sec:   1753.27
+Transfer/sec:     36.64MB
+
+---------------------------------------------------------
+ Concurrency: 8 for nancy-libevent2
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:8080/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     5.34ms    3.61ms  33.22ms   91.78%
+    Req/Sec   416.97    100.17   714.00     71.49%
+  24201 requests in 15.00s, 505.63MB read
+  Non-2xx or 3xx responses: 24201
+Requests/sec:   1613.26
+Transfer/sec:     33.71MB
+
+---------------------------------------------------------
+ Concurrency: 16 for nancy-libevent2
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:8080/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     9.59ms    6.34ms  44.61ms   79.44%
+    Req/Sec   427.50     77.95   677.00     71.63%
+  25299 requests in 15.00s, 528.65MB read
+  Non-2xx or 3xx responses: 25299
+Requests/sec:   1686.91
+Transfer/sec:     35.25MB
+
+---------------------------------------------------------
+ Concurrency: 32 for nancy-libevent2
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:8080/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    19.32ms   13.24ms  89.98ms   73.41%
+    Req/Sec   435.61     53.63   635.00     70.50%
+  25981 requests in 15.00s, 542.87MB read
+  Non-2xx or 3xx responses: 25981
+Requests/sec:   1732.04
+Transfer/sec:     36.19MB
+
+---------------------------------------------------------
+ Concurrency: 64 for nancy-libevent2
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:8080/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    36.68ms   26.38ms 154.15ms   70.81%
+    Req/Sec   442.96     45.09   593.00     70.00%
+  26477 requests in 15.00s, 553.26MB read
+  Non-2xx or 3xx responses: 26477
+Requests/sec:   1765.19
+Transfer/sec:     36.89MB
+
+---------------------------------------------------------
+ Concurrency: 128 for nancy-libevent2
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:8080/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    74.92ms   55.29ms 299.30ms   69.76%
+    Req/Sec   450.68     34.57   543.00     69.01%
+  26971 requests in 15.01s, 563.57MB read
+  Non-2xx or 3xx responses: 26971
+Requests/sec:   1797.23
+Transfer/sec:     37.55MB
+
+---------------------------------------------------------
+ Concurrency: 256 for nancy-libevent2
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   141.89ms   89.33ms 503.43ms   65.62%
+    Req/Sec   457.50     37.10   557.00     69.23%
+  27336 requests in 15.01s, 571.24MB read
+  Non-2xx or 3xx responses: 27336
+Requests/sec:   1821.39
+Transfer/sec:     38.06MB

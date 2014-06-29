@@ -1,0 +1,108 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer bottle-mysql-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/dbraw?queries=2
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/dbraw?queries=2
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     2.33ms    1.19ms  21.85ms   90.47%
+    Req/Sec   493.46    166.69     1.11k    80.96%
+  18761 requests in 5.00s, 3.95MB read
+Requests/sec:   3751.76
+Transfer/sec:    808.05KB
+
+---------------------------------------------------------
+ Running Warmup bottle-mysql-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/dbraw?queries=2
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/dbraw?queries=2
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    67.12ms   14.69ms 118.28ms   80.03%
+    Req/Sec     0.95k    54.49     1.11k    70.61%
+  57017 requests in 15.00s, 11.99MB read
+Requests/sec:   3801.13
+Transfer/sec:    818.72KB
+
+---------------------------------------------------------
+ Queries: 1 for bottle-mysql-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/dbraw?queries=1
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/dbraw?queries=1
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    50.38ms   19.82ms 138.25ms   87.25%
+    Req/Sec     1.28k    61.28     1.46k    66.21%
+  76471 requests in 15.00s, 13.77MB read
+Requests/sec:   5097.90
+Transfer/sec:      0.92MB
+
+---------------------------------------------------------
+ Queries: 5 for bottle-mysql-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/dbraw?queries=5
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/dbraw?queries=5
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   117.11ms   23.70ms 249.43ms   64.97%
+    Req/Sec   545.38     20.85   592.00     68.93%
+  32804 requests in 15.00s, 9.91MB read
+Requests/sec:   2186.63
+Transfer/sec:    676.73KB
+
+---------------------------------------------------------
+ Queries: 10 for bottle-mysql-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/dbraw?queries=10
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/dbraw?queries=10
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   200.17ms   42.32ms 466.33ms   72.19%
+    Req/Sec   320.39     12.31   350.00     69.23%
+  19261 requests in 15.01s, 8.74MB read
+Requests/sec:   1283.57
+Transfer/sec:    596.41KB
+
+---------------------------------------------------------
+ Queries: 15 for bottle-mysql-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/dbraw?queries=15
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/dbraw?queries=15
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   280.57ms   54.16ms 619.33ms   67.19%
+    Req/Sec   228.13     14.58   272.00     73.47%
+  13625 requests in 15.00s, 8.25MB read
+Requests/sec:    908.12
+Transfer/sec:    562.84KB
+
+---------------------------------------------------------
+ Queries: 20 for bottle-mysql-raw
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/dbraw?queries=20
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/dbraw?queries=20
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   360.25ms   72.87ms 674.46ms   73.88%
+    Req/Sec   177.23     13.23   208.00     74.07%
+  10566 requests in 15.01s, 8.00MB read
+Requests/sec:    704.12
+Transfer/sec:    545.70KB

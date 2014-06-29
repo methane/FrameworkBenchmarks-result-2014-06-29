@@ -1,0 +1,130 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Sat Jun 28 22:44:33 UTC 2014
+
+  System load:  3.58               Processes:           137
+  Usage of /:   67.3% of 19.55GB   Users logged in:     0
+  Memory usage: 26%                IP address for eth0: 10.227.136.45
+  Swap usage:   0%
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer grizzly-jersey
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/db
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/db
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     3.63ms    3.60ms  31.49ms   92.32%
+    Req/Sec   380.40    161.31     1.11k    64.89%
+  14160 requests in 5.00s, 2.29MB read
+Requests/sec:   2833.58
+Transfer/sec:    469.99KB
+
+---------------------------------------------------------
+ Running Warmup grizzly-jersey
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/db
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    47.39ms    3.63ms  80.10ms   89.87%
+    Req/Sec     1.36k    97.54     1.63k    74.59%
+  81006 requests in 15.00s, 13.12MB read
+Requests/sec:   5399.11
+Transfer/sec:      0.87MB
+
+---------------------------------------------------------
+ Concurrency: 8 for grizzly-jersey
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:8080/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.53ms  632.66us  10.51ms   82.93%
+    Req/Sec     1.39k   182.93     2.11k    73.18%
+  79261 requests in 15.00s, 12.84MB read
+Requests/sec:   5284.44
+Transfer/sec:      0.86MB
+
+---------------------------------------------------------
+ Concurrency: 16 for grizzly-jersey
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:8080/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     3.17ms    3.05ms  52.94ms   98.41%
+    Req/Sec     1.41k   199.54     1.89k    80.15%
+  80465 requests in 15.00s, 13.03MB read
+Requests/sec:   5364.72
+Transfer/sec:      0.87MB
+
+---------------------------------------------------------
+ Concurrency: 32 for grizzly-jersey
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:8080/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     5.95ms    1.04ms  15.31ms   90.61%
+    Req/Sec     1.41k   152.66     1.92k    74.42%
+  80939 requests in 15.00s, 13.11MB read
+Requests/sec:   5396.17
+Transfer/sec:      0.87MB
+
+---------------------------------------------------------
+ Concurrency: 64 for grizzly-jersey
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:8080/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    12.39ms    6.86ms 101.03ms   98.12%
+    Req/Sec     1.37k   150.01     1.62k    89.06%
+  80643 requests in 15.00s, 13.06MB read
+Requests/sec:   5376.42
+Transfer/sec:      0.87MB
+
+---------------------------------------------------------
+ Concurrency: 128 for grizzly-jersey
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:8080/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    23.83ms    3.95ms  82.47ms   96.68%
+    Req/Sec     1.36k   103.36     1.57k    83.85%
+  81024 requests in 15.00s, 13.12MB read
+Requests/sec:   5401.63
+Transfer/sec:      0.87MB
+
+---------------------------------------------------------
+ Concurrency: 256 for grizzly-jersey
+ wrk -H 'Host: localhost' -H 'Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/db -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/db
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    47.49ms    6.22ms 118.66ms   94.71%
+    Req/Sec     1.36k   116.44     1.63k    80.63%
+  81241 requests in 15.00s, 13.16MB read
+Requests/sec:   5416.08
+Transfer/sec:      0.88MB

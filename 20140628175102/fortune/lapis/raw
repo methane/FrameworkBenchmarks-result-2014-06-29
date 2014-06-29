@@ -1,0 +1,122 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer lapis
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/fortunes
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/fortunes
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.62ms    1.01ms  12.80ms   82.89%
+    Req/Sec   784.19    343.61     2.22k    71.68%
+  28915 requests in 5.00s, 38.99MB read
+Requests/sec:   5783.78
+Transfer/sec:      7.80MB
+
+---------------------------------------------------------
+ Running Warmup lapis
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/fortunes
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortunes
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    62.13ms   63.22ms 542.23ms   88.10%
+    Req/Sec     1.04k   294.83     2.18k    72.38%
+  63830 requests in 15.00s, 86.07MB read
+Requests/sec:   4256.39
+Transfer/sec:      5.74MB
+
+---------------------------------------------------------
+ Concurrency: 8 for lapis
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 8 --timeout 8 -t 4 http://127.0.0.1:8080/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortunes
+  4 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.44ms    0.93ms  14.24ms   87.73%
+    Req/Sec     1.60k   481.52     3.56k    64.11%
+  89993 requests in 15.00s, 121.35MB read
+Requests/sec:   5999.58
+Transfer/sec:      8.09MB
+
+---------------------------------------------------------
+ Concurrency: 16 for lapis
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 16 --timeout 16 -t 4 http://127.0.0.1:8080/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortunes
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     2.61ms    1.72ms  25.61ms   75.64%
+    Req/Sec     1.63k   394.06     2.96k    69.79%
+  93263 requests in 15.00s, 125.76MB read
+Requests/sec:   6218.00
+Transfer/sec:      8.38MB
+
+---------------------------------------------------------
+ Concurrency: 32 for lapis
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 32 --timeout 32 -t 4 http://127.0.0.1:8080/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortunes
+  4 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     6.06ms    5.69ms  71.17ms   93.14%
+    Req/Sec     1.54k   416.72     3.16k    77.26%
+  89450 requests in 15.00s, 120.62MB read
+Requests/sec:   5963.13
+Transfer/sec:      8.04MB
+
+---------------------------------------------------------
+ Concurrency: 64 for lapis
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 64 --timeout 64 -t 4 http://127.0.0.1:8080/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortunes
+  4 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    13.43ms   13.37ms 129.52ms   91.72%
+    Req/Sec     1.39k   379.82     2.64k    76.82%
+  81289 requests in 15.00s, 109.61MB read
+Requests/sec:   5419.38
+Transfer/sec:      7.31MB
+
+---------------------------------------------------------
+ Concurrency: 128 for lapis
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 128 --timeout 128 -t 4 http://127.0.0.1:8080/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortunes
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    38.42ms   43.98ms 389.15ms   89.20%
+    Req/Sec     1.12k   458.33     2.04k    62.19%
+  66561 requests in 15.00s, 89.75MB read
+Requests/sec:   4436.81
+Transfer/sec:      5.98MB
+
+---------------------------------------------------------
+ Concurrency: 256 for lapis
+ wrk -H 'Host: localhost' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/fortunes -s ~/pipeline.lua -- 
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/fortunes
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    64.32ms   63.35ms 873.93ms   75.48%
+    Req/Sec     1.05k   209.76     1.76k    68.42%
+  62213 requests in 15.00s, 83.89MB read
+Requests/sec:   4147.09
+Transfer/sec:      5.59MB

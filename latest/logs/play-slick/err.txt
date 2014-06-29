@@ -1,0 +1,5 @@
+restart: Unknown instance: 
+
+---------------------------------------------------------
+  Error: Port 9000 is not available before start play-slick
+---------------------------------------------------------

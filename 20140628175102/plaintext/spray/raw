@@ -1,0 +1,97 @@
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-30-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 4.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+
+---------------------------------------------------------
+ Running Primer spray
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 5 -c 8 --timeout 8 -t 8 http://127.0.0.1:8080/plaintext
+---------------------------------------------------------
+
+Running 5s test @ http://127.0.0.1:8080/plaintext
+  8 threads and 8 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   151.41us   82.12us   6.26ms   95.35%
+    Req/Sec     6.40k   496.55     8.11k    71.11%
+  240405 requests in 5.00s, 33.70MB read
+Requests/sec:  48091.67
+Transfer/sec:      6.74MB
+
+---------------------------------------------------------
+ Running Warmup spray
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/plaintext
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/plaintext
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     2.61ms    1.16ms  29.24ms   80.70%
+    Req/Sec    23.44k     4.48k   43.70k    76.33%
+  1320705 requests in 14.99s, 185.15MB read
+Requests/sec:  88124.97
+Transfer/sec:     12.35MB
+
+---------------------------------------------------------
+ Concurrency: 256 for spray
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 256 --timeout 256 -t 4 http://127.0.0.1:8080/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/plaintext
+  4 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    22.32ms   11.62ms 317.88ms   79.52%
+    Req/Sec    45.88k     5.60k   60.40k    70.06%
+  2693051 requests in 15.00s, 377.54MB read
+Requests/sec: 179534.71
+Transfer/sec:     25.17MB
+
+---------------------------------------------------------
+ Concurrency: 1024 for spray
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 1024 --timeout 1024 -t 4 http://127.0.0.1:8080/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/plaintext
+  4 threads and 1024 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    91.91ms   87.69ms   1.96s    95.28%
+    Req/Sec    44.92k     9.28k   98.61k    79.51%
+  2456316 requests in 15.00s, 344.35MB read
+  Socket errors: connect 0, read 0, write 0, timeout 450
+Requests/sec: 163774.83
+Transfer/sec:     22.96MB
+
+---------------------------------------------------------
+ Concurrency: 4096 for spray
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 4096 --timeout 4096 -t 4 http://127.0.0.1:8080/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/plaintext
+  4 threads and 4096 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   271.78ms  938.41ms   8.89s    97.92%
+    Req/Sec    43.12k    15.31k   69.37k    68.97%
+  2232460 requests in 15.00s, 312.97MB read
+  Socket errors: connect 0, read 859, write 0, timeout 8319
+Requests/sec: 148838.35
+Transfer/sec:     20.87MB
+
+---------------------------------------------------------
+ Concurrency: 16384 for spray
+ wrk -H 'Host: localhost' -H 'Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7' -H 'Connection: keep-alive' -d 15 -c 16384 --timeout 16384 -t 4 http://127.0.0.1:8080/plaintext -s ~/pipeline.lua -- 16
+---------------------------------------------------------
+
+Running 15s test @ http://127.0.0.1:8080/plaintext
+  4 threads and 16384 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     4.46s     4.84s   10.03s    56.08%
+    Req/Sec    36.16k     8.89k   57.53k    70.25%
+  2122592 requests in 15.01s, 297.57MB read
+  Socket errors: connect 0, read 2453, write 0, timeout 51634
+Requests/sec: 141458.61
+Transfer/sec:     19.83MB
